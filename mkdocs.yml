@@ -1,4 +1,9 @@
 site_name: User Guide
+nav:
+  - index.md
+  - quick.md
+  - glossary.md
+
 theme:
   palette:
     - primary: white
@@ -17,3 +22,15 @@ theme:
   logo: assets/Logo.png
   favicon: assets/Q_sm_logo.png
   name: material
+features:
+  - navigation.instant
+  - navigation.tracking
+  - navigation.sections
+  - navigation.expand
+  - navigation.top
+markdown_extensions:
+  - admonition
+  - pymdownx.snippets
+
+
+
