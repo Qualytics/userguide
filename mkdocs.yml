@@ -3,23 +3,22 @@ nav:
   - index.md
   - quick.md
   - glossary.md
-  - Add New Datastores:
-    - datastores/amazon-s3.md
-    - datastores/azure-blob-storage.md
-    - datastores/azure-datalake-storage.md
-    - datastores/bigquery.md
-    - datastores/databricks.md
-    - datastores/google-cloud-storage.md
-    - datastores/kafka.md
-    - datastores/maria-db.md
-    - datastores/microsoft-sql-server.md
-    - datastores/mysql.md
-    - datastores/postgresql.md
-    - datastores/qfs.md
-    - datastores/redshift.md
-
-
-  
+  - Datastores:
+    - datastores/what-is.md
+    - Add new datastores:
+      - datastores/amazon-s3.md
+      - datastores/azure-blob-storage.md
+      - datastores/azure-datalake-storage.md
+      - datastores/bigquery.md
+      - datastores/databricks.md
+      - datastores/google-cloud-storage.md
+      - datastores/kafka.md
+      - datastores/maria-db.md
+      - datastores/microsoft-sql-server.md
+      - datastores/mysql.md
+      - datastores/postgresql.md
+      - datastores/qfs.md
+      - datastores/redshift.md
 
 theme:
   palette:
@@ -48,6 +47,5 @@ features:
 markdown_extensions:
   - admonition
   - pymdownx.snippets
-
-
-
+  - attr_list
+  - def_list
