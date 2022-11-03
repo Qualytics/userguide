@@ -20,24 +20,31 @@ nav:
       - datastores/qfs.md
       - datastores/redshift.md
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   palette:
-    - primary: white
     # Palette toggle for light mode
+    # - media: "(prefers-color-scheme: light)"
     - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
+      primary: white
       toggle:
         icon: material/brightness-4
+        name: Switch to dark mode 
+
+    # Palette toggle for dark mode
+    # - media: "(prefers-color-scheme: --md-primary-fg-color--dark)"
+    - scheme: slate
+      primary: white
+      toggle:
+        icon: material/brightness-7
         name: Switch to light mode
 
   logo: assets/Logo.png
   favicon: assets/Q_sm_logo.png
   name: material
+
 features:
   - navigation.instant
   - navigation.tracking
