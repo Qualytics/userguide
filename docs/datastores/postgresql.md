@@ -1,18 +1,43 @@
-# PostgreSQL DataStore!
+# PostgreSQL
+
+## Steps to setup PostgreSQL
+
+---
+
 ![Screenshot](../assets/datastores/postgresql/create-datastore.png){: style="height:450px;width:450px"}
 
-### `Name`
+### `Name` <spam id='required'>`required`</spam>
 
-* Is the name to be created in Qualytics App
+* The datastore name  to be created in Qualytics App
 
-### `Host`
-​
-### `Port`
-​
-### `Database`
+### `Host` <spam id='required'>`required`</spam>
 
-### `Schema`
+* The PostgreSQL hostname that defines the location of your PostgreSQL server and database.
+### `Port` <spam id='required'>`required`</spam>
 
-### `User`
+* The PostgreSQL server `port` that connects to the server.
+* The default `port` is `5432​`.
 
-### `Password`
+### `Database` <spam id='required'>`required`</spam>
+
+* The `database` name to be connected.
+
+### `Schema` <spam id='required'>`required`</spam>
+
+* The `schema` name to be connected.
+
+### `User` <spam id='required'>`required`</spam>
+
+* The PostgreSQL user name to use when connecting to the server.
+### `Password` <spam id='required'>`required`</spam>
+
+* The password of the PostgreSQL server.
+
+
+## More information on how to connect with PostgreSQL
+
+---
+
+
+[PostgreSQL configuration](https://jdbc.postgresql.org/documentation/use/)
+[PostgreSQL Connection String](https://www.connectionstrings.com/postgresql/)

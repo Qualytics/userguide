@@ -4,8 +4,9 @@ nav:
   - quick.md
   - glossary.md
   - Datastores:
-    - datastores/what-is.md
-    - Add new datastores:
+    - datastores/what-is-datastore.md
+    - datastores/what-is-qfs.md
+    - Creating new datastores:
       - datastores/amazon-s3.md
       - datastores/azure-blob-storage.md
       - datastores/azure-datalake-storage.md
@@ -16,6 +17,7 @@ nav:
       - datastores/maria-db.md
       - datastores/microsoft-sql-server.md
       - datastores/mysql.md
+      - datastores/oracle.md
       - datastores/postgresql.md
       - datastores/qfs.md
       - datastores/redshift.md
@@ -56,3 +58,8 @@ markdown_extensions:
   - pymdownx.snippets
   - attr_list
   - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

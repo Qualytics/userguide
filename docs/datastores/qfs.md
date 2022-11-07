@@ -1,7 +1,11 @@
-# QFS DataStore!
+# Qualytics File System (QFS)
 
-![Screenshot](../assets/datastores/qfs/create-datastore.png){: style="height:450px;width:450px"}
+## Steps to setup QFS
 
-### `Name`
+---
 
-* Is the name to be created in Qualytics App
+![Screenshot](../assets/datastores/qfs/create-datastore.png)
+
+### `Name` <spam id='required'>`required`</spam>
+
+* The datastore name to be created in Qualytics App
