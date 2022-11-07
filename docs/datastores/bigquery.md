@@ -28,7 +28,7 @@
     3. Using the bq ls command in the bq `command-line tool`.
     4. Calling the `datasets.list` API method.
     5. Using the client libraries.
-### `Temp Dataset ID` <spam id='not-required'>`not required`</spam>
+### `Temp Dataset ID` <spam id='not-required'>`optional`</spam>
 
 * Default value: `_simba_jdbc` if the dataset for storing query results when using Legacy SQL are enabled.
 

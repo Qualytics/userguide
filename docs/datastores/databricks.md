@@ -18,7 +18,7 @@
 ### `Http Path` <spam id='required'>`required`</spam>
 
 * The Databricks compute resources URL.
-### `Catalog` <spam id='not-required'>`not required`</spam>
+### `Catalog` <spam id='not-required'>`optional`</spam>
 
 * The `Catalog` name to be accessed.
 
@@ -28,7 +28,7 @@
     SHOW CATALOGS [ LIKE regex_pattern ]
 ```
 
-### `Database` <spam id='not-required'>`not required`</spam>
+### `Database` <spam id='not-required'>`optional`</spam>
 
 * The `database` name to be accessed.
 
