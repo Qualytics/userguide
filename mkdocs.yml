@@ -3,25 +3,50 @@ nav:
   - index.md
   - quick.md
   - glossary.md
+  - Datastores:
+    - datastores/what-is-datastore.md
+    - datastores/what-is-qfs.md
+    - Creating new datastores:
+      - datastores/amazon-s3.md
+      - datastores/azure-blob-storage.md
+      - datastores/azure-datalake-storage.md
+      - datastores/bigquery.md
+      - datastores/databricks.md
+      - datastores/google-cloud-storage.md
+      - datastores/kafka.md
+      - datastores/maria-db.md
+      - datastores/microsoft-sql-server.md
+      - datastores/mysql.md
+      - datastores/oracle.md
+      - datastores/postgresql.md
+      - datastores/qfs.md
+      - datastores/redshift.md
+
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   palette:
-    - primary: white
     # Palette toggle for light mode
+    # - media: "(prefers-color-scheme: light)"
     - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
+      primary: white
       toggle:
         icon: material/brightness-4
+        name: Switch to dark mode 
+
+    # Palette toggle for dark mode
+    # - media: "(prefers-color-scheme: --md-primary-fg-color--dark)"
+    - scheme: slate
+      primary: white
+      toggle:
+        icon: material/brightness-7
         name: Switch to light mode
 
   logo: assets/Logo.png
   favicon: assets/Q_sm_logo.png
   name: material
+
 features:
   - navigation.instant
   - navigation.tracking
@@ -31,6 +56,10 @@ features:
 markdown_extensions:
   - admonition
   - pymdownx.snippets
-
-
-
+  - attr_list
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
