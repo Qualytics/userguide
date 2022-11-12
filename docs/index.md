@@ -1,6 +1,43 @@
 # Welcome to Qualytics!
 
-Qualytics is the complete solution to install trust and confidence in your enterprise data ecosystem. With automated data profiling, data quality rule inference, anomaly detection & remediation, Qualytics enables your data teams to address data issues faster. Qualytics automates workflows that are currently manual or simply not performed.
+## What Qualytics is?
+
+* The complete solution to install `trust` and `confidence` in your enterprise data ecosystem. 
+    1. With automated `data profiling`, `data quality rule inference`, `anomaly detection` & `remediation`. 
+
+* The Active Data Quality Platform that enables teams to `manage data quality` at scale through advanced automation.
+## What Qualytics does?
+
+* Enables your data teams to `address data issues faster`. 
+* `Automates workflows` that are currently manual or simply not performed.
+* `Automates the discovery` and `maintenance of data quality` measures you need.
+* Your `historic data is analyzed for its shapes and patterns` in order to infer contextual data quality rules. These rules are asserted to find anomalies in new data (often in incremental loads). 
+    1. When an anomaly is found, along with traditional alerting, `a target datastore is enriched with the anomaly` along `with the metadata` that triggered it.
+    2. Enables your team to `take corrective actions` using their existing data tooling. 
+
+* We combine `data quality rules` with additional data such as:
+    1. Alerting `needs`, `tags` & `tolerances`.
+    2. `Manage the combination` as a set of data quality checks.
+
+
+## Using Qualytics involves a few operations post configuration:
+
+* `Catalog`
+    1. `Preps metadata` to be consumed by Qualytics.
+
+* `Profile`
+    1. `Generates metadata` by touching historic data.
+    2. `Generates and Updates` data quality checks.
+
+* `Scan`
+    1. Asserts data quality checks on full or incremental loads of data to generate anomalies.
+
+* `Enrich`
+    1. While this is automatic behind scenes, enrichment enables us to write anomalies to a destination of user’s choosing.
+
+* As a quick reference, here is a short video demonstrating the platform with a quick walkthrough:
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Focus areas
 

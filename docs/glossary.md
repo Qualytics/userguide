@@ -35,7 +35,7 @@
 
  <a href="check"></a>__Data Quality Check__: aka “Check” is an expression regarding the values of a Container that can be evaluated to determine whether the actual values are expected or not.
 
- <a href="datastore"></a>__Datastore__: Where data is persisted in a database, file system, or other connected retrieval systems.
+ <a href="datastore"></a>__Datastore__: Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Data store](/datastores/what-is-datastore).
 
  <a href="datawarehouse"></a>__Data Warehouse__: A system that aggregates data from different sources into a single, central, consistent data store to support data analysis, data mining, artificial intelligence (AI), and machine learning.
 
