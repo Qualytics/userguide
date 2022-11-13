@@ -1,61 +1,115 @@
 # Quick start
 
-Quickly get started by connecting your Qualytics deployment to a first [datastore](/glossary#datastore), generating a [profile](/glossary#profiling) for it, automatically [inferring](/glossary#inference) a set of data quality rules from it, and asserting those rules to detect data [anomalies](/glossary#anomaly).
+Setup your Qualytics App, create a datastore, generate a profile, scan for anomalies and monitor data freshness.
 
-## Connect a datastore
+---
 
-To add a Datastore via the Qualytics App, the user must first select the specific Datastore “Type” so that the appropriate form for collecting connection details can be rendered.
+# Prepare
 
-As the applicable connection details are collected, the App should verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
+* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. 
+* As such, the `URL` for the front-end for ACME would be:
+    1. `https://acme.qualytics.io`
 
-The add Datastore flow should prompt the user for an Enrichment Location with two options:
+* The API is available at:
+    1. `https://acme.qualytics.io/api/docs`
 
-* External - the enrichment data will be written to a separate datastore.
-* None - no enrichment data will be recorded for this datastore. This severely limits functionality.
+* Your credentials will be provided to you automatically from your instance:
 
-If option #1 is selected, then the User should be presented with a dropdown list of all configured Enrichment Datastores along with the ability to configure a new Enrichment Datastore to serve as this new datastore’s enrichment location. The flow to configure an Enrichment Datastore only differs from the non-Enrichment Datastore in that the user-specified connection details should be verified for the ability to write enrichment data.
+    !!!warning
+        Please check your spam folder if you don’t see the invite. 
 
-When the Datastore connection details are submitted, a synchronous ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Firewall. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as “connected” and initiate an asynchronous Catalog operation on success.  If any future Operation is unable to establish a connection to the Datastore - the connected property of the Datastore should be set false.  The app should warn/prompt users to address any such Datastore connectivity issues.
+* Quickly get started by connecting your Qualytics deployment to a first:
+    1. [Data Store](/Data Stores/what-is-Data Store)
+    2. Generating a [profile](/glossary#profiling) for it, 
+    3. Automatically [inferring](/glossary#inference) a set of data quality rules from it
+    4. Asserting those rules to detect data [anomalies](/glossary#anomaly).
 
+## Connect a `Data Store`
 
-## Generate a profile
+* The first step of configuring a Qualytics instance is to Add New Data Store
 
-80% of the job of today’s Data Scientist is the upfront curation of a set of data - including steps taken to determine what type of ML modeling might prove useful for that data.
+* To add a Data Store via the Qualytics App, the user must first select the specific Data Store "`Type`" so that the appropriate form for collecting connection details can be rendered.
 
-In the same way that a Data Scientist might begin a new modeling effort, our Data Firewall “profiles” customer data using systematic computational analysis in a fully automated/scalable manner.
+* As the applicable connection details are collected, the App should verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
 
-In addition to standard Field metadata like type, min/max, minlength/maxlength, completeness/sparsity, and histograms (ratios of values) - Firewall calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
+* The add Data Store flow should prompt the user for an Enrichment Location with two options:
 
-While these numerical analysis techniques are not strictly “Machine Learning” - this is prep work to facilitate ML in our system and certainly qualifies as an element of our Data Science backed approach.
+    1. External - the enrichment data will be written to a separate Data Store.
+    2. None - no enrichment data will be recorded for this Data Store. This severely limits functionality.
 
-An important part of profiling is identification of column data types. This task can become really tedious in large tables spanning tens to hundreds of data fields. A  machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
+    !!! info
+        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Data Stores along with the ability to configure a new Enrichment Data Store to serve as this new Data Store’s enrichment location. 
+        * The flow to configure an Enrichment Data Store only differs from the non-Enrichment Data Store in that the user-specified connection details should be verified for the ability to write enrichment data.
 
-After Firewall gathers all the metadata generated by the initial profiling step, it feeds that metadata into our Inference Engine.  The inference engine then initiates a “true machine learning” (specifically, this is referred to as Inductive Learning) process whereby the available customer data is partitioned into a training set and a testing set.  The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
-
-Two concrete examples of more sophisticated machine learning applied at this stage are:
-Firewall applies a sophisticated normality test to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
-Firewall uses a linear regression model to fit any highly correlated fields in the same table. If a good fit model is identified, it is recorded as a predicting model for those correlated fields and used to identify future anomalies.
-
-## Scan for anomalies
-
-Upon completion of the initial Profile Operation, but not before, the user should be able to initiate a Scan Operation.
-
-Our app should initiate a “Full” Scan for the initial Scan by default.  This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks. The user should be able to monitor the progress of the Scan Operation and be alerted to its completion. If the user signed out before completion, the user should be alerted to the completion upon next sign in.
-Presenting Scan Operation Results
-Upon completion of the Scan operation, the user should be able to review the following data points:
-
-* Start time and Finish Time of the Scan Operation
-* A listing of all the named Containers included in the Scan
-    * The number of records scanned in each listed Container
-    * The number of anomalies detected in each listed Container
-    * The total record count in each listed Container at the time of scanning
-    * The total record count in each listed Container at the time of scanning
-* Total counts (sum of all Container counts) of:
-    * Records scanned
-    * Anomalies detected
-    * Total Records
-
-The user should be alerted to any failure to scan any Container of the Datastore with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
+* When the Data Store connection details are submitted:
+    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Data Store can be accessed appropriately from Firewall. 
+    2. The result of that operation will either return an error message to the user on the new Data Store form view on failure, or mark the new Data Store as "`connected`" and initiate an asynchronous Catalog operation on success.  
+    3. If any future Operation is unable to establish a connection to the Data Store:
+        1. The connected property of the Data Store should be set `false`.  
+        2. The app should `warn`/`prompt` users to address any such Data Store connectivity issues.
 
 
-## Monitor data freshness
+## Generate a `Profile`
+
+* 80% of the job of today’s Data Scientist is the upfront curation of a set of data, including steps taken to determine what type of ML modeling might prove useful for that data.
+
+* In the same way that a Data Scientist might begin a new modeling effort, our Data Firewall “`profiles`” customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
+
+* In addition to standard Field metadata like:
+    1. `type`.
+    2. `min`/`max`.
+    3. `minlength`/`maxlength`.
+    4. `completeness`/`sparsity`.
+    5. `histograms` (ratios of values)
+        1. Firewall calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
+
+* While these numerical analysis techniques are not strictly “`Machine Learning`”
+    1. This is prep work to facilitate ML in our system and certainly qualifies as an element of our Data Science backed approach.
+
+* An important part of profiling is identification of column data types.
+    1. This task can become really tedious in large tables spanning tens to hundreds of data fields. 
+    2. A  machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
+
+* After Firewall gathers all the metadata generated by the initial profiling step
+    1. It feeds that metadata into our Inference Engine.  
+    2. The inference engine then initiates a “`true machine learning`” (specifically, this is referred to as Inductive Learning) process whereby the available customer data is partitioned into a training set and a testing set.  
+    3. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. 
+    4. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
+
+* Two concrete examples of more sophisticated machine learning applied at this stage are:
+    1. Firewall applies a sophisticated normality test to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
+    2. Firewall uses a linear regression model to fit any highly correlated fields in the same table. 
+    !!!info 
+        If a good fit model is identified, it is recorded as a predicting model for those correlated fields and used to identify future anomalies.
+
+## `Scan` for anomalies
+
+* Upon completion of the initial Profile Operation, but not before, the user should be able to initiate a `Scan Operation`.
+
+* Our app should initiate a “`Full`” `Scan` for the initial Scan by default.  
+
+    !!!info
+        * This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks. 
+        * The user should be able to monitor the progress of the Scan Operation and be alerted to its completion. 
+        * If the user signed out before completion, the user should be alerted to the completion upon next sign in.
+
+### Presenting Scan Operation Results
+
+* Upon completion of the Scan operation, the user should be able to review the following data points:
+
+    1. `Start time` and `Finish Time` of the Scan Operation.
+    2. A `listing of all the named Containers` included in the Scan.
+        1. The `number of records scanned` in each listed Container.
+        2. The `number of anomalies detected` in each listed Container.
+        3. The `total record count in each listed Container` at the time of scanning.
+        4. The `total record count in each listed Container` at the time of scanning.
+    3. `Total counts` (sum of all Container counts) of:
+        1. `Records scanned`.
+        2. `Anomalies detected`.
+        3. `Total Records`.
+
+    !!!info
+        The user should be alerted to any failure to scan any Container of the Data Store with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
+
+
+## Monitor `data freshness`

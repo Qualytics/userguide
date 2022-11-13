@@ -2,7 +2,6 @@ site_name: User Guide
 nav:
   - index.md
   - quick.md
-  - glossary.md
   - Datastores:
     - datastores/what-is-datastore.md
     - datastores/what-is-qfs.md
@@ -21,6 +20,8 @@ nav:
       - datastores/postgresql.md
       - datastores/qfs.md
       - datastores/redshift.md
+  - glossary.md
+  
 
 extra_css:
   - stylesheets/extra.css
