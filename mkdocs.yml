@@ -20,8 +20,12 @@ nav:
       - datastores/postgresql.md
       - datastores/qfs.md
       - datastores/redshift.md
+  - Operations:
+    - operations/catalog.md
+    - operations/profile.md
+    - operations/scan.md
   - glossary.md
-  
+
 
 extra_css:
   - stylesheets/extra.css
@@ -34,7 +38,7 @@ theme:
       primary: white
       toggle:
         icon: material/brightness-4
-        name: Switch to dark mode 
+        name: Switch to dark mode
 
     # Palette toggle for dark mode
     # - media: "(prefers-color-scheme: --md-primary-fg-color--dark)"
