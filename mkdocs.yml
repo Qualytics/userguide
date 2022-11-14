@@ -20,10 +20,14 @@ nav:
       - datastores/postgresql.md
       - datastores/qfs.md
       - datastores/redshift.md
+  - Operations:
+    - operations/catalog.md
+    - operations/profile.md
+    - operations/scan.md
   - Data Quality Checks:
     - checks/what-is.md
     - Ruled Type Checks:
-      - checks/after-date-check.md
+      - After Date: checks/after-date-check.md
       - checks/any-not-null-check.md
       - checks/before-date-time-check.md
       - checks/between-check.md
@@ -61,10 +65,6 @@ nav:
       - checks/unique-check.md
       - checks/url-checks.md
       - checks/user-defined-function-check.md
-  - Operations:
-    - operations/catalog.md
-    - operations/profile.md
-    - operations/scan.md
   - glossary.md
 
 
@@ -96,7 +96,6 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - content.tabs.link
   
