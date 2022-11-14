@@ -2,18 +2,18 @@
 
 ## What Qualytics is?
 
-* The complete solution to install `trust` and `confidence` in your enterprise data ecosystem. 
-    1. With automated `data profiling`, `data quality rule inference`, `anomaly detection` & `remediation`. 
+* The complete solution to install `trust` and `confidence` in your enterprise data ecosystem.
+    1. With automated `data profiling`, `data quality rule inference`, `anomaly detection` & `remediation`.
 
 * The Active Data Quality Platform that enables teams to `manage data quality` at scale through advanced automation.
 ## What Qualytics does?
 
-* Enables your data teams to `address data issues faster`. 
+* Enables your data teams to `address data issues faster`.
 * `Automates workflows` that are currently manual or simply not performed.
 * `Automates the discovery` and `maintenance of data quality` measures you need.
-* Your `historic data is analyzed for its shapes and patterns` in order to infer contextual data quality rules. These rules are asserted to find anomalies in new data (often in incremental loads). 
+* Your `historic data is analyzed for its shapes and patterns` in order to infer contextual data quality rules. These rules are asserted to find anomalies in new data (often in incremental loads).
     1. When an anomaly is found, along with traditional alerting, `a target datastore is enriched with the anomaly` along `with the metadata` that triggered it.
-    2. Enables your team to `take corrective actions` using their existing data tooling. 
+    2. Enables your team to `take corrective actions` using their existing data tooling.
 
 * We combine `data quality rules` with additional data such as:
     1. Alerting `needs`, `tags` & `tolerances`.
