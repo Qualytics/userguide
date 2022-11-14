@@ -1,7 +1,10 @@
-### Before Date Time <spam id='single-field'>`single field`</spam>
-* *Asserts that the field is a timestamp earlier than a specific date and time.*
+# Before Date Time <spam id='single-field'>`single field`</spam>
 
-    ![Screenshot](../assets/checks/rule-types/before-date-time-check.png){: style="height:450px"}
+---
+
+*Asserts that the field is a timestamp earlier than a specific date and time.*
+
+![Screenshot](../assets/checks/rule-types/before-date-time-check.png){: style="height:450px"}
 
 !!! example
     `order_time` is earlier than `2021-01-01`

@@ -1,8 +1,9 @@
-### Url <spam id='single-field'>`single field`</spam>
-* *Asserts that the values contain valid URLs.*
+# Url <spam id='single-field'>`single field`</spam>
 
-                                           record_anomaly_message="The {0.field_names} value of '{1}' does not contain a URL",
-                                           shape_anomaly_message="In {0.field_names}, {1:.3f}% do not contain a URL"),
+---
+
+*Asserts that the values contain valid URLs.*
+
 
 ![Screenshot](../assets/checks/rule-types/contains-url.png){: style="height:450px"}
 

@@ -1,7 +1,11 @@
-### Data Type <spam id='single-field'>`single field`</spam>
-* *Asserts that the data is of a specific type.*
+# Data Type <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the data is of a specific type.*
 
 ![Screenshot](../assets/checks/rule-types/data-type-check.png){: style="height:450px"}
+
 !!! example
     `Name_of_associated_Covered_Device` is a valid `String`
 

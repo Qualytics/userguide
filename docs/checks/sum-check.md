@@ -1,5 +1,8 @@
-### Sum <spam id='single-field'>`single field`</spam>
-* *Asserts that the sum of a field is a specific amount.*
+# Sum <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the sum of a field is a specific amount.*
 
 ![Screenshot](../assets/checks/rule-types/sum-check.png){: style="height:450px"}
 

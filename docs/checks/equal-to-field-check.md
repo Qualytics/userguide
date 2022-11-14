@@ -1,5 +1,8 @@
-### Equal To Field
-* *Asserts that this field is equal to another field.*
+# Equal To Field
+
+---
+
+*Asserts that this field is equal to another field.*
                                         
 ![Screenshot](../assets/checks/rule-types/equal-to-field-check.png){: style="height:450px"}
 

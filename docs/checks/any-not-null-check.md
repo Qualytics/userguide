@@ -1,8 +1,10 @@
+# Any Not Null <spam id='multiple-fields'>`multiple fields`</spam>
 
-### Any Not Null <spam id='multiple-fields'>`multiple fields`</spam>
-*  *Asserts that one of the fields must not be null*
+--- 
 
-    ![Screenshot](../assets/checks/rule-types/any-not-null-check.png){: style="height:450px"}
+*Asserts that one of the fields must not be null*
+
+![Screenshot](../assets/checks/rule-types/any-not-null-check.png){: style="height:450px"}
 
 !!! example
     At least one of the fields `order_time` is not null.

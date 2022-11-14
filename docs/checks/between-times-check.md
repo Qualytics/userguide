@@ -1,5 +1,8 @@
-### Between Times
-* *Asserts that values are equal to or between two dates or times.*
+# Between Times
+
+---
+
+*Asserts that values are equal to or between two dates or times.*
 
 ![Screenshot](../assets/checks/rule-types/between-times-check.png){: style="height:450px"}
 

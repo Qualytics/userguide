@@ -1,5 +1,8 @@
-### Not Negative <spam id='single-field'>`single field`</spam>
-* *Asserts that this is a non-negative number.*
+# Not Negative <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that this is a non-negative number.*
 
 ![Screenshot](../assets/checks/rule-types/not-negative-check.png){: style="height:450px"}
 

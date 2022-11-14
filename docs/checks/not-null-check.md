@@ -1,5 +1,8 @@
-### Not Null <spam id='multiple-fields'>`multiple fields`</spam>
-* *Asserts that the field's value is not explicitly set to nothing.*
+# Not Null <spam id='multiple-fields'>`multiple fields`</spam>
+
+---
+
+*Asserts that the field's value is not explicitly set to nothing.*
 
 ![Screenshot](../assets/checks/rule-types/not-null-check.png){: style="height:450px"}
 

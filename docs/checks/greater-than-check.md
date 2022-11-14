@@ -1,5 +1,8 @@
-### Greater Than <spam id='single-field'>`single field`</spam>
-* *Asserts that the field is a number greater than (or equal to) a value.*
+# Greater Than <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the field is a number greater than (or equal to) a value.*
 
 ![Screenshot](../assets/checks/rule-types/greater-than-check.png){: style="height:450px"}
 

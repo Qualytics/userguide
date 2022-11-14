@@ -1,6 +1,8 @@
-### Predicted By <spam id='single-field'>`single field`</spam>
-* *Asserts that the actual value of a field falls within the expected predicted range.*
+# Predicted By <spam id='single-field'>`single field`</spam>
 
+---
+
+*Asserts that the actual value of a field falls within the expected predicted range.*
 
 ![Screenshot](../assets/checks/rule-types/predicted-by-check.png){: style="height:450px"}
 

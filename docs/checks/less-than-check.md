@@ -1,5 +1,8 @@
-### Less Than <spam id='single-field'>`single field`</spam>
-* *Asserts that the field is a number less than (or equal to) a value.*
+# Less Than <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the field is a number less than (or equal to) a value.*
 
 ![Screenshot](../assets/checks/rule-types/less-than-check.png){: style="height:450px"}
 

@@ -1,6 +1,6 @@
-### Contains Email <spam id='single-field'>`single field`</spam>
-
-* *Asserts that the values are email addresses.*
+# Contains Email <spam id='single-field'>`single field`</spam>
+---
+*Asserts that the values are email addresses.*
 
 ![Screenshot](../assets/checks/rule-types/contains-email-check.png){: style="height:450px"}
 

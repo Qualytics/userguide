@@ -1,5 +1,8 @@
-### Less Than Field
-* *Asserts that this field is less than another field.*
+# Less Than Field
+
+---
+
+*Asserts that this field is less than another field.*
 
 ![Screenshot](../assets/checks/rule-types/less-than-field-check.png){: style="height:450px"}
 !!! example

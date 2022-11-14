@@ -1,6 +1,8 @@
-### Between <spam id='single-field'>`single field`</spam>
+# Between <spam id='single-field'>`single field`</spam>
 
-* *Asserts that values are equal to or between two numbers.*
+---
+
+*Asserts that values are equal to or between two numbers.*
 
 ![Screenshot](../assets/checks/rule-types/between-check.png){: style="height:450px"}
 

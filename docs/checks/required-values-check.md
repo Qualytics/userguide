@@ -1,5 +1,8 @@
-### Required Values <spam id='single-field'>`single field`</spam>
-* *Asserts that all of the defined values must be present at least once within a field.*
+# Required Values <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that all of the defined values must be present at least once within a field.*
 
 ![Screenshot](../assets/checks/rule-types/required-values-check.png){: style="height:450px"}
 

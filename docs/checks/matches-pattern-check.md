@@ -1,5 +1,8 @@
-### Matches Pattern <spam id='single-field'>`single field`</spam>
-* *Asserts that a field must match a pattern.*
+# Matches Pattern <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that a field must match a pattern.*
 
 ![Screenshot](../assets/checks/rule-types/matches-pattern-check.png){: style="height:450px"}
 

@@ -1,6 +1,8 @@
+# Max Length <spam id='single-field'>`single field`</spam>
 
-### Max Length <spam id='single-field'>`single field`</spam>
-* *Asserts that a string has a maximum length.*
+---
+
+*Asserts that a string has a maximum length.*
 
 ![Screenshot](../assets/checks/rule-types/max-length-check.png){: style="height:450px"}
 

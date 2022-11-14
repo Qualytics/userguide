@@ -1,5 +1,8 @@
-### Positive <spam id='single-field'>`single field`</spam>
-* *Asserts that the data should not be empty.*
+# Positive <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the data should not be empty.*
 
 ![Screenshot](../assets/checks/rule-types/positive-check.png){: style="height:450px"}
 

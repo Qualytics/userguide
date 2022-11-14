@@ -1,5 +1,8 @@
-### Greater Than Field
-* *Asserts that this field is greater than another field.*
+# Greater Than Field
+
+---
+
+*Asserts that this field is greater than another field.*
                                                
 ![Screenshot](../assets/checks/rule-types/greater-than-field-check.png){: style="height:450px"}
 !!! example

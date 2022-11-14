@@ -1,4 +1,4 @@
-# What is?
+# What is Check?
 
 ---
 Adding a Check means authoring a new data quality check from scratch. 

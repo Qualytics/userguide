@@ -1,5 +1,8 @@
-### Social Security Number <spam id='single-field'>`single field`</spam>
-* *Asserts that the values are social security numbers.*
+# Social Security Number <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the values are social security numbers.*
 
 ![Screenshot](../assets/checks/rule-types/contains-social-security-number-check.png){: style="height:450px"}
 

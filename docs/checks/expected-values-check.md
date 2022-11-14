@@ -1,5 +1,8 @@
-### Expected Values <spam id='single-field'>`single field`</spam>
-* *Asserts that values are contained within a list of expected values.*
+# Expected Values <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that values are contained within a list of expected values.*
 
 ![Screenshot](../assets/checks/rule-types/expected-values-check.png){: style="height:450px"}
 

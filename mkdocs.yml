@@ -28,43 +28,43 @@ nav:
     - checks/what-is.md
     - Ruled Type Checks:
       - After Date: checks/after-date-check.md
-      - checks/any-not-null-check.md
-      - checks/before-date-time-check.md
-      - checks/between-check.md
-      - checks/between-times-check.md
-      - checks/contains-credit-card-check.md
-      - checks/contains-email-check.md
-      - checks/contains-social-security-number-check.md
-      - checks/data-type-check.md
-      - checks/distinct-check.md
-      - checks/distinct-count-check.md
-      - checks/equal-to-field-check.md
-      - checks/expected-values-check.md
-      - checks/field-count-check.md
-      - checks/greater-than-check.md
-      - checks/greater-than-field-check.md
-      - checks/is-credit-card-check.md
-      - checks/less-than-check.md
-      - checks/less-than-field-check.md
-      - checks/matches-pattern-check.md
-      - checks/max-length-check.md
-      - checks/max-value-check.md
-      - checks/min-length-check.md
-      - checks/min-partition-size-check.md
-      - checks/min-value-check.md
-      - checks/not-future-check.md
-      - checks/not-negative-check.md
-      - checks/not-null-check.md
-      - checks/positive-check.md
-      - checks/predicted-by-check.md
-      - checks/required-fields-check.md
-      - checks/required-values-check.md
-      - checks/satisfies-equation-check.md
-      - checks/sum-check.md
-      - checks/time-distribution-size.md
-      - checks/unique-check.md
-      - checks/url-checks.md
-      - checks/user-defined-function-check.md
+      - Any Not Null: checks/any-not-null-check.md
+      - Before Date Time: checks/before-date-time-check.md
+      - Between: checks/between-check.md
+      - Between Times: checks/between-times-check.md
+      - Contains Credit Card: checks/contains-credit-card-check.md
+      - Contains Email: checks/contains-email-check.md
+      - Contains Social Security Number: checks/contains-social-security-number-check.md
+      - Data Type: checks/data-type-check.md
+      - Distinct: checks/distinct-check.md
+      - Distinct Count: checks/distinct-count-check.md
+      - Equal To Field: checks/equal-to-field-check.md
+      - Expected Values: checks/expected-values-check.md
+      - Field Count: checks/field-count-check.md
+      - Greater Than: checks/greater-than-check.md
+      - Greater Than Field: checks/greater-than-field-check.md
+      - Is Credit Card: checks/is-credit-card-check.md
+      - Less Than: checks/less-than-check.md
+      - Less Than Field: checks/less-than-field-check.md
+      - Matches Pattern: checks/matches-pattern-check.md
+      - Max Length: checks/max-length-check.md
+      - Max Value: checks/max-value-check.md
+      - Min Length: checks/min-length-check.md
+      - Min Partition Size: checks/min-partition-size-check.md
+      - Min Value: checks/min-value-check.md
+      - Not Future: checks/not-future-check.md
+      - Not Negative: checks/not-negative-check.md
+      - Not Null: checks/not-null-check.md
+      - Positive: checks/positive-check.md
+      - Predicted By: checks/predicted-by-check.md
+      - Required Fields: checks/required-fields-check.md
+      - Required Values: checks/required-values-check.md
+      - Satisfies Equation: checks/satisfies-equation-check.md
+      - Sum: checks/sum-check.md
+      - Time Distribution Size: checks/time-distribution-size-check.md
+      - Unique: checks/unique-check.md
+      - Url: checks/url-checks.md
+      - User Defined Function: checks/user-defined-function-check.md
   - glossary.md
 
 

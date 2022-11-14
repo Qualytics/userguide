@@ -1,5 +1,8 @@
-### Min Value <spam id='single-field'>`single field`</spam>
-* *Asserts that a field has a minimum value.*
+# Min Value <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that a field has a minimum value.*
 
 ![Screenshot](../assets/checks/rule-types/min-value-check.png){: style="height:450px"}
 
