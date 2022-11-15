@@ -1,5 +1,8 @@
-### Is Credit Card -- started here
-* *Asserts that the values are credit card numbers.*
+# Is Credit Card -- started here
+
+---
+
+*Asserts that the values are credit card numbers.*
 
 ![Screenshot](../assets/checks/rule-types/is-credit-card-check.png){: style="height:450px"}                                                 
 

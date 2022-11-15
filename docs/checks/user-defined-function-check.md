@@ -1,7 +1,9 @@
-### User Define Function
-* *Asserts that the given user-defined function (as scala script) evaluates to true over the field's value"*.
+# User Define Function
 
-                                      shape_anomaly_message="In {0.field_names}, {1:.3f}% of values to not evaluate true as a parameter to the given UDF")
+---
+
+*Asserts that the given user-defined function (as scala script) evaluates to true over the field's value"*.
+
 ![Screenshot](../assets/checks/rule-types/user-defined-function-check.png)
 
 !!! example

@@ -1,7 +1,11 @@
-### Min Length <spam id='single-field'>`single field`</spam>
-* *Asserts that a string has a minimum length.*
+# Min Length <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that a string has a minimum length.*
 
 ![Screenshot](../assets/checks/rule-types/min-length-check.png){: style="height:450px"}
+
 !!! example
     `units` has a minimum length `356`.
 

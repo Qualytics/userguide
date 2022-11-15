@@ -1,5 +1,8 @@
-### Contains Credit Card <spam id='single-field'>`single field`</spam>
-* *Asserts that the values are credit card numbers.*
+# Contains Credit Card <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that the values are credit card numbers.*
 
 ![Screenshot](../assets/checks/rule-types/contains-credit-card-check.png){: style="height:450px"}                                                  
 

@@ -1,5 +1,8 @@
-### Not Future
-* *Asserts that the field's value is not in the future.*
+# Not Future
+
+---
+
+*Asserts that the field's value is not in the future.*
 
 ![Screenshot](../assets/checks/rule-types/not-future-check.png){: style="height:450px"}
 

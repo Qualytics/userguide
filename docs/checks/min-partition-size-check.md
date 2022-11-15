@@ -1,5 +1,8 @@
-### Min Partition Size <spam id='none-field'>`none field`</spam>
-* *Asserts the minimum number of records that should be loaded from each file or table partition.*
+# Min Partition Size <spam id='none-field'>`none field`</spam>
+
+---
+
+*Asserts the minimum number of records that should be loaded from each file or table partition.*
 
 
 ![Screenshot](../assets/checks/rule-types/min-partition-size-check.png){: style="height:450px"}

@@ -1,5 +1,8 @@
-### Time Distribution Size
-* *Asserts that the count of records for each interval of a timestamp is between two numbers.*
+# Time Distribution Size
+
+---
+
+*Asserts that the count of records for each interval of a timestamp is between two numbers.*
 
 ![Screenshot](../assets/checks/rule-types/time-distribution-size-check.png){: style="height:450px"}
 

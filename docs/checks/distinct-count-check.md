@@ -1,5 +1,9 @@
-### Distinct Count <spam id='single-field'>`single field`</spam>
-* *Asserts on the approximate count distinct of the given column.*
+# Distinct Count <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts on the approximate count distinct of the given column.*
+
 ![Screenshot](../assets/checks/rule-types/distinct-count-check.png){: style="height:450px"}
 
 !!! example

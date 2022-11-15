@@ -1,5 +1,8 @@
-### Field Count <spam id='single-field'>`single field`</spam>
-* *Asserts that there must be exactly a specified number of fields.*
+# Field Count <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that there must be exactly a specified number of fields.*
 
 ![Screenshot](../assets/checks/rule-types/field-count-check.png){: style="height:450px"}
 

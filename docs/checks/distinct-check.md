@@ -1,5 +1,8 @@
-### Distinct <spam id='single-field'>`single field`</spam>
-* *The ratio of the count of distinct values (e.g. [a, a, b] is 2/3).*
+# Distinct <spam id='single-field'>`single field`</spam>
+
+---
+
+*The ratio of the count of distinct values (e.g. [a, a, b] is 2/3).*
 
 ![Screenshot](../assets/checks/rule-types/distinct-check.png){: style="height:450px"}
 

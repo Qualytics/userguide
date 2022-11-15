@@ -1,5 +1,8 @@
-### Max Value <spam id='single-field'>`single field`</spam>
-* *Asserts that a field has a maximum value.*
+# Max Value <spam id='single-field'>`single field`</spam>
+
+---
+
+*Asserts that a field has a maximum value.*
 
 ![Screenshot](../assets/checks/rule-types/max-value-check.png){: style="height:450px"}
 !!! example

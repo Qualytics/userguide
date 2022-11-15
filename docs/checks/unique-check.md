@@ -1,5 +1,8 @@
-### Unique <spam id='multiple-fields'>`multiple fields`</spam>
-* *Asserts that the field's value is unique*.
+# Unique <spam id='multiple-fields'>`multiple fields`</spam>
+
+---
+
+*Asserts that the field's value is unique*.
 
 ![Screenshot](../assets/checks/rule-types/unique-check.png)
 

@@ -1,5 +1,8 @@
 ### Satisfies Equation <spam id='multiple-fields'>`multiple fields`</spam>
-* *Evaluates the given equation (any valid Spark SQL) for each record.*
+
+---
+
+*Evaluates the given equation (any valid Spark SQL) for each record.*
 
 ![Screenshot](../assets/checks/rule-types/satisfies-equation-check.png){: style="height:450px"}
 
