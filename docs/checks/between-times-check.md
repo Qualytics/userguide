@@ -4,6 +4,11 @@
 
 *Asserts that values are equal to or between two dates or times.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/between-times-check.png){: style="height:450px"}
 
 !!! example

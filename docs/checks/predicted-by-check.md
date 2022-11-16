@@ -4,6 +4,13 @@
 
 *Asserts that the actual value of a field falls within the expected predicted range.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/predicted-by-check.png){: style="height:450px"}
 
 !!! example

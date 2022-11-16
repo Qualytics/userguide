@@ -4,6 +4,15 @@
 
 *Asserts that all of the selected fields must be present in the data store.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+| `String`               | :white_check_mark:   |
+| `Boolean`              | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/required-fields-check.png){: style="height:450px"}
 
 !!! example 

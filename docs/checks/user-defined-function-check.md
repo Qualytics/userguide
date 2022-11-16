@@ -4,6 +4,10 @@
 
 *Asserts that the given user-defined function (as scala script) evaluates to true over the field's value"*.
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `String`               | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/user-defined-function-check.png)
 
 !!! example

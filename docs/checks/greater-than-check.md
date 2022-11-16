@@ -4,6 +4,11 @@
 
 *Asserts that the field is a number greater than (or equal to) a value.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/greater-than-check.png){: style="height:450px"}
 
 !!! example

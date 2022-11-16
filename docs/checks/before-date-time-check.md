@@ -4,6 +4,11 @@
 
 *Asserts that the field is a timestamp earlier than a specific date and time.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/before-date-time-check.png){: style="height:450px"}
 
 !!! example

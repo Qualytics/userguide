@@ -4,6 +4,15 @@
 
 *Asserts on the approximate count distinct of the given column.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+| `String`               | :white_check_mark:   |
+| `Boolean`              | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/distinct-count-check.png){: style="height:450px"}
 
 !!! example

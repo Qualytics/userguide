@@ -4,6 +4,11 @@
 
 *Asserts that a field has a minimum value.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/min-value-check.png){: style="height:450px"}
 
 !!! example

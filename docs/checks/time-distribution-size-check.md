@@ -4,6 +4,11 @@
 
 *Asserts that the count of records for each interval of a timestamp is between two numbers.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/time-distribution-size-check.png){: style="height:450px"}
 
 !!! example

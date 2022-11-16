@@ -4,6 +4,10 @@
 
 *Asserts that a field must match a pattern.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `String`               | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/matches-pattern-check.png){: style="height:450px"}
 
 !!! example
