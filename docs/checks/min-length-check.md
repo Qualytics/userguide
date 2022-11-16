@@ -4,6 +4,10 @@
 
 *Asserts that a string has a minimum length.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `String`               | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/min-length-check.png){: style="height:450px"}
 
 !!! example

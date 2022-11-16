@@ -4,6 +4,11 @@
 
 *Asserts that a field has a maximum value.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/max-value-check.png){: style="height:450px"}
 !!! example
     `Period` has a maximum value of `900`.

@@ -3,7 +3,15 @@
 ---
 
 *Asserts that this field is equal to another field.*
-                                        
+
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
+
 ![Screenshot](../assets/checks/rule-types/equal-to-field-check.png){: style="height:450px"}
 
 !!! example

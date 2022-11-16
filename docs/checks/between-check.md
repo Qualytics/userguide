@@ -4,6 +4,11 @@
 
 *Asserts that values are equal to or between two numbers.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/between-check.png){: style="height:450px"}
 
 !!! example

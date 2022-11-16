@@ -4,6 +4,11 @@
 
 *Asserts that the sum of a field is a specific amount.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/sum-check.png){: style="height:450px"}
 
 !!! example

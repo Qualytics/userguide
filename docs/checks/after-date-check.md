@@ -3,6 +3,11 @@
 ---
 *Asserts that the field is a timestamp later than a specific date and time.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+
 ![Screenshot](../assets/checks/rule-types/after-date-time-check.png){: style="height:450px"}
 
 !!! example
