@@ -71,6 +71,8 @@ nav:
       - Time Distribution Size: checks/time-distribution-size-check.md
       - Unique: checks/unique-check.md
       - User Defined Function: checks/user-defined-function-check.md
+  - Anomalies:
+      - anomalies/anomaly-details.md
   - glossary.md
 
 
