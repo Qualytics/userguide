@@ -9,9 +9,17 @@ The Scan Operation is executed on a Datastore to assert the data quality checks 
 ---
 # Operation Configuration
 
+![Screenshot](../assets/operations/operation-scan.png)
+
 A Scan Operation can be configured with the following options:
 
-* Incremental - to scan only new data updated since the previous scan
-* Record limit - to limit the total number of records scanned
-* Target selection - to target only a subset of the available named collections
-* Remediation strategy - to specify how enrichment tables should be migrated to reflect changes in source tables
+* `Full` - To process all records ignoring the previous scan.
+* `Incremental` - To scan only new data updated since the previous scan.
+* `Record limit` - To limit the total number of records scanned.
+* `Remediation strategy` - To specify how enrichment tables should be migrated to reflect changes in source tables.
+* `Target selection` 
+    - You can select to all tables.
+    - To target only a subset of the available named collections.
+
+    ![Screenshot](../assets/operations/operation-scan-specific-tables.png)
+

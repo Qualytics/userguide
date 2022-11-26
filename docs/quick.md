@@ -19,8 +19,8 @@ Setup your Qualytics App, create a datastore, generate a profile, scan for anoma
         Please check your spam folder if you don’t see the invite. 
 
 * Quickly get started by connecting your Qualytics deployment to a first:
-    1. [Data Store](/Data Stores/what-is-Data Store)
-    2. Generating a [profile](/glossary#profiling) for it, 
+    1. [Data Store](/datastores/what-is-datastore)
+    2. Generating a [profile](/operations/profile) for it, 
     3. Automatically [inferring](/glossary#inference) a set of data quality rules from it
     4. Asserting those rules to detect data [anomalies](/glossary#anomaly).
 
