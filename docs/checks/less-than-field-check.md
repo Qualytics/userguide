@@ -4,6 +4,14 @@
 
 *Asserts that this field is less than another field.*
 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+
+
 ![Screenshot](../assets/checks/rule-types/less-than-field-check.png){: style="height:450px"}
 !!! example
     `discount` has a value less than `price`.
