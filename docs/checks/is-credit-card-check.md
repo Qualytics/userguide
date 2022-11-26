@@ -4,7 +4,17 @@
 
 *Asserts that the values are credit card numbers.*
 
-![Screenshot](../assets/checks/rule-types/is-credit-card-check.png){: style="height:450px"}                                                 
+| Accepted Field Types   |                      |
+| :--------------------: | :------------------: |
+| `Date`                 | :white_check_mark:   |
+| `Timestamp`            | :white_check_mark:   |
+| `Integral`             | :white_check_mark:   |
+| `Fractional`           | :white_check_mark:   |
+| `String`               | :white_check_mark:   |
+| `Boolean`              | :white_check_mark:   |
+
+![Screenshot](../assets/checks/rule-types/is-credit-card-check.png){: style="height:450px"}
+
 
 !!! example
     `payment_type` is formatted as a credit card number.
