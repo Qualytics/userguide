@@ -20,6 +20,12 @@ nav:
       - datastores/postgresql.md
       - datastores/qfs.md
       - datastores/redshift.md
+      - datastores/snowflake.md
+      - datastores/synapse.md
+  - Enrichment Stores:
+    - enrichment/what-is-enrichment.md
+    - enrichment/create-enrichment-store.md
+    - enrichment/attach-enrichment-store.md
   - Operations:
     - operations/catalog.md
     - operations/profile.md
@@ -35,6 +41,7 @@ nav:
       - Contains Credit Card: checks/contains-credit-card-check.md
       - Contains Email: checks/contains-email-check.md
       - Contains Social Security Number: checks/contains-social-security-number-check.md
+      - Contains Url: checks/contains-url.md
       - Data Type: checks/data-type-check.md
       - Distinct: checks/distinct-check.md
       - Distinct Count: checks/distinct-count-check.md
@@ -63,7 +70,6 @@ nav:
       - Sum: checks/sum-check.md
       - Time Distribution Size: checks/time-distribution-size-check.md
       - Unique: checks/unique-check.md
-      - Url: checks/url-checks.md
       - User Defined Function: checks/user-defined-function-check.md
   - glossary.md
 
