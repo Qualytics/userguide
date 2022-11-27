@@ -34,9 +34,9 @@
 * The `Anomaly Status` can be `Active`, `Acknowledged`, `Resolved` and `Invalid`.
 
     1. `Active`: When the anomaly is active, and you need to do some action.
-    2. `Acknowledged`: When you know the existence of this anomaly but you didn't solve yet.
-    3. `Resolved`: It's an anomaly which you already solved in a record perspective.
-    4. `Invalid`: When Qualytics creates an anomaly but you know that it's correct, so you can make it as an `invalid` anomaly.
+    2. `Acknowledged`: Means the user agrees that this anomaly is valid, but wants to keep the anomaly active in their worklist.
+    3. `Resolved`: Means that the user agrees that this anomaly is valid, has already resolved it, and no longer needs to keep the anomaly active in their worklist.
+    4. `Invalid`: Means that the user disagrees with the anomaly, the anomaly should be removed (and rules should be updated accordingly).
 
 ---
 

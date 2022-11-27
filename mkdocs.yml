@@ -32,6 +32,8 @@ nav:
     - operations/scan.md
   - Data Quality Checks:
     - checks/what-is.md
+    - checks/what-is-authored-check.md
+    - checks/what-is-infered-check.md
     - Ruled Type Checks:
       - After Date: checks/after-date-check.md
       - Any Not Null: checks/any-not-null-check.md
@@ -75,6 +77,9 @@ nav:
     - anomalies/what-is-anomaly.md
     - anomalies/anomaly-details.md
     - anomalies/universal-anomaly.md
+  - Compares:
+    - compares/what-is-compare.md
+    - compares/configuring-compare.md
   - Notifications:
     - notifications/what-is-notification.md
     - Type of Notification Services:
@@ -86,6 +91,8 @@ nav:
       - notifications/notification-services/webhook.md
   - Tags:
     - tags/what-is-tag.md
+  - Identifiers:
+    - identifiers/what-is-identifier.md
   - glossary.md
 
 

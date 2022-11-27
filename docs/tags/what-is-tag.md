@@ -1,6 +1,7 @@
 # What is Tag?
 
 * A tag is a label that you can add a color and a description of what it means.
+* Tags are utilized to drive `alerting` / `downstream notifications`. Users can configure `Tags` through Settings, associate Notifications based on Tags, and associate the Tag to a Check:
 
 
 ---

@@ -1,10 +1,18 @@
 # Scan Operation
 
+
 The Scan Operation is executed on a Datastore to assert the data quality checks defined for the named collections of data (e.g. tables, views, files, topics) within it. The operation will:
+
+
 
 * produce a record anomaly for any record where anomalous values are detected
 * produce a shape anomaly for anomalous values that span multiple records
 * record the anomaly data along with related analysis in the associated Enrichment Datastore
+
+!!! info
+    To assert data quality checks to find anomalies, a user needs to perform a Scan operation. 
+
+* Scan operation enables the user to assert the checks in incremental vs full loads, with options to limit the number of records, run a scan on a select list of tables / files, and to set schedules for future scans. 
 
 ---
 # Operation Configuration

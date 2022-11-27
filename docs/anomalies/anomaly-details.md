@@ -1,10 +1,13 @@
 # Anomaly Details
 
-* The `Anomaly Details` tab is shown as a separated section for a specific anomaly you want to see with more details.
+* The `Anomaly Details` tab is shown as a separated section as part of a Scan operation, for a specific anomaly you want to see with more details.
 
 ![Screenshot](../assets/anomalies/anomaly-details.png)
 
 * In `Anomaly Details` you can see all the detailed information on the specific anomaly.
+
+* You have the ability to provide feedback to the platform in a Supervised Learning fashion as well. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
+    *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
 
 * In the first section you can see:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1.png)

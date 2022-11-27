@@ -1,6 +1,9 @@
 # What is an Enrichment Store?
 
-* An `Enrichment Store` is also a `Datastore` and it is used for recording `e`nrichment data` for a `Datastore` as part of a Scan Operation. Any writable Datastore is a valid Enrichment Location, including the Datastore itself.
+* An `Enrichment Store` is also a `Datastore` and it is used for recording `enrichment data` for a `Datastore` as part of a Scan Operation. Any writable Datastore is a valid Enrichment Location, including the Datastore itself.
+
+!!! info
+    Before running a Scan Operation, the user needs to configure an Enrichment Store for each data store.
 
 *  An `Enrichment Store` is a medium holding structured data. Qualytics supports Spark-compatible Data Stores via the conceptual layers.
 

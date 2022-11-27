@@ -6,6 +6,14 @@
 
     - ![Screenshot](../assets/enrichment/create-new-enrichment.png){: style="height:350px"}
 
+* Configuring an Enrichment Store is a three-step process:
+
+    1. `Add an Enrichment store`:
+        1. *Ensure that the service account user has WRITE access to the data store*
+    2.  Navigate to the main Data Store
+    3.  Associate the Enrichment Data Store with it
+ 
+
 # List of supported Enrichment Stores
 
 *On the following links you can see how to setup each one of them.*

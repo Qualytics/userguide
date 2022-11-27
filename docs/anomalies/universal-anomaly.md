@@ -1,6 +1,10 @@
 # Universal Anomalies
 
+
+* The universal Anomalies enables users to interact with all Anomalies from all data stores. This page is available through the main navigation and includes high-level universal analytics as well.
+
 * The general `Anomalies` tab is shown as a separated section as an overview of the anomalies of your ecosystem. 
+
 
 * You can access this section in the menu:
 
