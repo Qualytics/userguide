@@ -4,7 +4,7 @@
 
 ---
 
-![Screenshot](/assets/notifications/services/email-notification.png){: style="width:550px;"}
+![Screenshot](../../assets/notifications/services/email-notification.png){: style="width:550px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
