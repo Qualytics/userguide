@@ -84,6 +84,8 @@ nav:
       - notifications/notification-services/pagerduty.md
       - notifications/notification-services/slack.md
       - notifications/notification-services/webhook.md
+  - Tags:
+    - tags/what-is-tag.md
   - glossary.md
 
 
