@@ -72,9 +72,18 @@ nav:
       - Unique: checks/unique-check.md
       - User Defined Function: checks/user-defined-function-check.md
   - Anomalies:
-      - anomalies/what-is-anomaly.md
-      - anomalies/anomaly-details.md
-      - anomalies/universal-anomaly.md
+    - anomalies/what-is-anomaly.md
+    - anomalies/anomaly-details.md
+    - anomalies/universal-anomaly.md
+  - Notifications:
+    - notifications/notifications-tab.md
+    - Type of Services:
+      - notifications/notification-services/email.md
+      - notifications/notification-services/http-action.md
+      - notifications/notification-services/microsoft-teams.md
+      - notifications/notification-services/pagerduty.md
+      - notifications/notification-services/slack.md
+      - notifications/notification-services/webhook.md
   - glossary.md
 
 
