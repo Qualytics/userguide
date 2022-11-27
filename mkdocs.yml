@@ -76,8 +76,8 @@ nav:
     - anomalies/anomaly-details.md
     - anomalies/universal-anomaly.md
   - Notifications:
-    - notifications/notifications-tab.md
-    - Type of Services:
+    - notifications/what-is-notification.md
+    - Type of Notification Services:
       - notifications/notification-services/email.md
       - notifications/notification-services/http-action.md
       - notifications/notification-services/microsoft-teams.md
