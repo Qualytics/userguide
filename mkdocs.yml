@@ -74,6 +74,7 @@ nav:
   - Anomalies:
       - anomalies/what-is-anomaly.md
       - anomalies/anomaly-details.md
+      - anomalies/universal-anomaly.md
   - glossary.md
 
 
