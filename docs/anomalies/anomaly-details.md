@@ -1,52 +1,55 @@
-# What is an Anomaly?
+# Anomaly Details
 
-* An `Anomaly` can be a single data, record or a batch of data, depending on what your data source is composed. Is something that deviates from the standard, normal, or expected. This can be in the form of a single data point, record, or a batch of data.
+* The `Anomaly Details` tab is shown as a separated section for a specific anomaly you want to see with more details.
 
-* An `Anomaly` works together with one or more Infered or Authored `Quality Checks`.
+![Screenshot](../assets/anomalies/anomaly-details.png)
 
-* The Anomalies tab shows all anomalies found as part of a Scan operation:
+* In `Anomaly Details` you can see all the detailed information on the specific anomaly.
 
-![Screenshot](../assets/anomalies/anomalies-tab.png)
+* In the first section you can see:
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-1.png)
+    1. The `Data Store` name
+    2. The `Location` where this data is stored.
+    3. The `Record Type` of the anomaly.
+    4. The `Date Time` of the anomaly creation.
 
-* Once you have your first [Scan](/operations/scan) executed, the Qualytics App will show the anomalies with the following information:
+* In the second section you can see:
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-2.png) 
 
-    ![Screenshot](../assets/anomalies/anomalies-fields.png)
+    * The `Status` of the selected Anomaly.   
+        *You can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
 
-    1. `Table`/`File`: The `Table` or `File` name where the anomaly it's located.
-    2. `Field`: The field(s) where Qualytics found an anomaly.
-    3. `Location`: Is the fully qualified name where the table and field is located.
-    4. `Rule`: Is the `Infered` or `Authored` check for this specific field.
-    5. `Description`: Is the description of what the `Scan` found as an `Anomaly` when executed.
+    * The `Tags` is a label that represent or inform the anomaly or the quality check.   
+        *You can create a tag just typing or you can select a new one.*
 
-    ![Screenshot](../assets/anomalies/anomalies-status.png)
+    * The `Field` shows all the fields of that specific anomaly found.   
+        *You can select the field that you want to filter.*   
+        *Shows the number of anomalies found.*
 
-    1. `Status`: The status of the anomaly. If it's `active`, `acknowledged`, `resolved` or `invalid`.
-    2. `Type`: The specification type can be `Record` or `Shape`.
-    3. `Tag`: Is the label you can add related to the anomaly.
-    4. `Date time`: Is the date time which the anomaly was generated.
+    * The `File`/`Table` is the name of the source.
+
+    * The `Rule` is the name of the Rule for this specific anomaly.   
+        *You can check all the Rule types [here.](/checks/what-is#the-definitive-list-of-rule-types)*
+    
+    * The `Violation` is what the anomaly violated according to the specified rule.   
+        *It specifies the field name, the percentage of anomalies found.*
+
+    * The `Frequency` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"} of the anomaly defines the percentage calculated for that sample of records.
+
+    * The type of the `Quality Check`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"} can be `Infered` or `Authored`.
+
+# Infered check details
+
+* If you click on the rule section, a new view is shown as `Infered check details`.
+![Screenshot](../assets/anomalies/infered-check-details-section.png)
+
+* You can archive an anomaly click in the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
+
+* If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Frequency` percentage for that anomaly.
 
 !!! note
-    When the <spam id='required'>`New`</spam> message is shown, means that this is a new active anomaly.
-    
----
-# Status
+    The `Filter` clause is a `Where` statement against your table. You can type like:   
+    `price != 33` or `price > discount + 20`
 
-* The `Anomaly Status` can be `Active`, `Acknowledged`, `Resolved` and `Invalid`.
-
-    1. `Active`: When the anomaly is active, and you need to do some action.
-    2. `Acknowledged`: When you know the existence of this anomaly but you didn't solve yet.
-    3. `Resolved`: It's an anomaly which you already solved in a record perspective.
-    4. `Invalid`: When Qualytics creates an anomaly but you know that it's correct, so you can make it as an `invalid` anomaly.
-
----
-
-# Type 
-
-* An anomaly type can be `Record` or `Shape`.
-
-* `Record anomaly` is an issue with exactly one record.
-    1. Should also present the source record if available or a note explaining why it is not available.
-
-* `Shape anomaly` is an issue with more than one record.
-
-    1. Should also present the number of records analyzed and the applicable anomalous frequency calculated for that sample of records.
+!!! info
+    You can create a computer table and use multiple fields from different tables in a filter clause

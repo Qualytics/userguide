@@ -43,6 +43,7 @@ There are multiple types of checks that can be authored through the UI, which in
 
 ---
 # The definitive list of rule types
+
  *  After Date Time: Asserts that the field is a timestamp later than a specific date and time.
                                            
 *   Any Not Null: Asserts that one of the fields must not be null.
