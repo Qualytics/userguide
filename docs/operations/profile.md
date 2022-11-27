@@ -1,11 +1,16 @@
 # Profile Operation
 
-The Profile Operation is executed on a Datastore to analyze the named collections of data (e.g. tables, views, files, topics) within it. The operation will:
+* A `Profile Operation` where no limits are explicitly set and an attempt is made to analyze every available record in all available Containers. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 
-* Identify the fields within the collection.
-* Gather statistical data about each field according to its declared or inferred type.
-* Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks.
-* Tested the inferred data quality checks against actual source data to tune desired sensitivities.
+* The Profile Operation is executed on a Datastore to analyze the named collections of data (e.g. tables, views, files, topics) within it. The operation will:
+
+    * Identify the fields within the collection.
+    * Gather statistical data about each field according to its declared or inferred type.
+    * Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks.
+    * Tested the inferred data quality checks against actual source data to tune desired sensitivities.
+
+
+
 
 !!! note
     * A new Profile Operation can be executed at any time to update the trained data quality checks produced by the Inference Engine.
