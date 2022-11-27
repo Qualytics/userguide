@@ -1,4 +1,4 @@
-# Notifications
+# What is Notification?
 
 * The notification configuration allows you to manage and add notifications
 
