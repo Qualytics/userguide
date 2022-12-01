@@ -77,9 +77,6 @@ nav:
     - anomalies/what-is-anomaly.md
     - anomalies/anomaly-details.md
     - anomalies/universal-anomaly.md
-  - Compares:
-    - compares/what-is-compare.md
-    - compares/configuring-compare.md
   - Notifications:
     - notifications/what-is-notification.md
     - Type of Notification Services:
