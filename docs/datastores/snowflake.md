@@ -1,6 +1,6 @@
-# Snowflake Data Warehouse
+# Snowflake
 
-## Steps to setup Snowflake Data Warehouse
+## Steps to setup Snowflake
 
 ---
 

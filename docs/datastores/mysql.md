@@ -1,6 +1,6 @@
-# MySql
+# MySQL
 
-## Steps to setup MySql
+## Steps to setup MySQL
 
 ---
 

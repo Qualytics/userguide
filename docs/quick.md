@@ -1,6 +1,6 @@
 # Quick start
 
-Setup your Qualytics App, create a datastore, generate a profile, scan for anomalies and monitor data freshness.
+Setup your Qualytics Deployment, create a datastore, generate a profile, infer data quality rules, scan for anomalies and monitor data freshness.
 
 ---
 
@@ -22,71 +22,64 @@ Setup your Qualytics App, create a datastore, generate a profile, scan for anoma
     1. [Data Store](/datastores/what-is-datastore)
     2. Generating a [profile](/operations/profile) for it, 
     3. Automatically [inferring](/glossary#inference) a set of data quality rules from it
-    4. Asserting those rules to detect data [anomalies](/glossary#anomaly).
+    4. Asserting those rules through a [scan](/operations/scan) to detect data [anomalies](/glossary#anomaly).
 
 ## Connect a `Data Store`
 
-* The first step of configuring a Qualytics instance is to Add New Data Store
+* The first step of configuring a Qualytics instance is to `Add New Data Store`
 
-* To add a Data Store via the Qualytics App, the user must first select the specific Data Store "`Type`" so that the appropriate form for collecting connection details can be rendered.
+* To add a Data Store via Qualytics, the user must first select the specific Data Store `Type` such that the appropriate form for collecting connection details can be rendered.
 
-* As the applicable connection details are collected, the App should verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
+* As the applicable connection details are collected, the UI will verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
 
-* The add Data Store flow should prompt the user for an Enrichment Location with two options:
+* The Add Data Store flow will then prompt the user for an Enrichment Location with two options:
 
-    1. External - the enrichment data will be written to a separate Data Store.
-    2. None - no enrichment data will be recorded for this Data Store. This severely limits functionality.
+    1. `External` - the enrichment data will be written to a separate Data Store.
+    2. `None` - no enrichment data will be recorded for this Data Store. This severely limits functionality for Qualytics to detect anomalies and is not recommended.
 
     !!! info
         * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Data Stores along with the ability to configure a new Enrichment Data Store to serve as this new Data Store’s enrichment location. 
-        * The flow to configure an Enrichment Data Store only differs from the non-Enrichment Data Store in that the user-specified connection details should be verified for the ability to write enrichment data.
+        * The flow to configure an Enrichment Data Store only differs from the non-Enrichment Data Store in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
 
 * When the Data Store connection details are submitted:
     1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Data Store can be accessed appropriately from Firewall. 
-    2. The result of that operation will either return an error message to the user on the new Data Store form view on failure, or mark the new Data Store as "`connected`" and initiate an asynchronous Catalog operation on success.  
+    2. The result of that operation will either return an error message to the user on the new Data Store form view on failure, or mark the new Data Store as `connected` and initiate an asynchronous Catalog operation on success.  
     3. If any future Operation is unable to establish a connection to the Data Store:
-        1. The connected property of the Data Store should be set `false`.  
-        2. The app should `warn`/`prompt` users to address any such Data Store connectivity issues.
+        1. The connected property of the Data Store will be set `false`.  
+        2. The UI will `warn`/`prompt` users to address any such Data Store connectivity issues.
 
 
 ## Generate a `Profile`
 
 * 80% of the job of today’s Data Scientist is the upfront curation of a set of data, including steps taken to determine what type of ML modeling might prove useful for that data.
 
-* In the same way that a Data Scientist might begin a new modeling effort, our Data Firewall “`profiles`” customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
+* In the same way that a Data Scientist might begin a new modeling effort, our Data Firewall `profiles` customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
 
-* In addition to standard Field metadata like:
+* In addition to standard Field metadata, we track other metadata such as:
     1. `type`.
     2. `min`/`max`.
-    3. `minlength`/`maxlength`.
+    3. `min_length`/`max_length`.
     4. `completeness`/`sparsity`.
     5. `histograms` (ratios of values)
         1. Firewall calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
 
-* While these numerical analysis techniques are not strictly “`Machine Learning`”
-    1. This is prep work to facilitate ML in our system and certainly qualifies as an element of our Data Science backed approach.
+* While these numerical analysis techniques are not strictly `Machine Learning`, the statistical analysis and prep work is necessary to facilitate Machine Learning in order to generate appropriate, statistically relevant data quality rules at scale.
 
-* An important part of profiling is identification of column data types.
-    1. This task can become really tedious in large tables spanning tens to hundreds of data fields. 
-    2. A  machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
+* An important part of profiling is identification of column data types, which is typically a tedious task in large tables. A machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
 
-* After Firewall gathers all the metadata generated by the initial profiling step
-    1. It feeds that metadata into our Inference Engine.  
-    2. The inference engine then initiates a “`true machine learning`” (specifically, this is referred to as Inductive Learning) process whereby the available customer data is partitioned into a training set and a testing set.  
-    3. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. 
-    4. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
+* After initial profiling generates metadata, the Qualytics Inference Engine carries out ML via various learning methods such as `inductive` and `unsupervised learning`. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. The inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
 
-* Two concrete examples of more sophisticated machine learning applied at this stage are:
-    1. Firewall applies a sophisticated normality test to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
-    2. Firewall uses a linear regression model to fit any highly correlated fields in the same table. 
+* Two concrete examples of sophisticated ruletypes automatically inferred at this stage are:
+    1. A sophisticated normality test is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
+    2. Linear regression models are automatically generated to fit any highly correlated fields in the same table. 
     !!!info 
         If a good fit model is identified, it is recorded as a predicting model for those correlated fields and used to identify future anomalies.
 
 ## `Scan` for anomalies
 
-* Upon completion of the initial Profile Operation, but not before, the user should be able to initiate a `Scan Operation`.
+* Upon completion of the initial Profile Operation the user is able to initiate a `Scan Operation`.
 
-* Our app should initiate a “`Full`” `Scan` for the initial Scan by default.  
+* Qualytics will initiate a “`Full`” `Scan` for the initial Scan by default.  
 
     !!!info
         * This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks. 
@@ -95,7 +88,7 @@ Setup your Qualytics App, create a datastore, generate a profile, scan for anoma
 
 ### Presenting Scan Operation Results
 
-* Upon completion of the Scan operation, the user should be able to review the following data points:
+* Upon completion of the Scan operation, the user will be able to review the following data points:
 
     1. `Start time` and `Finish Time` of the Scan Operation.
     2. A `listing of all the named Containers` included in the Scan.

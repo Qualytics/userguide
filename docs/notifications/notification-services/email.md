@@ -8,30 +8,30 @@
 
 ### `Name` <spam id='required'>`required`</spam>
 
-* The notification name to be created in Qualytics App.
+* freetext name of the Notification
 
 ### `When` <spam id='required'>`required`</spam>
 
-* Is `When` the notification will be triggered:
+* when the notification will be triggered:
     * `An Operation Completes`.
     * `Anomalies are Detected in a Table or File`.
     * `An Anomaly is Detected`.
     * `Freshness SLA Violation`.
 
-### `With the Tags` 
-* Is the tag that will be show during the notification.   
+### `With the Tags` <spam id='required'>`required`</spam>
+* tags that will drive the notification from an anomaly   
 !!! info
-    You can create any tags if necessary to be shown during the notification.
+    Refer to the tags page to add / edit tags and checks page for association of tags to checks / anomalies.
 
-### `Deliver a notification by`
-* You can select multiple services for the same `Notification` category.
+### `Deliver a notification by` <spam id='required'>`required`</spam>
+* Service to be utilized for the notification
 
 ### `Email Addresses` <spam id='required'>`required`</spam>
-* You can add the `email` of the group or a person who will receive the email notification. If you have more than one, you sould separate by comma.
+* The `email` of the group or a person who will receive the email notification. Separate by commas for multiple:
 
 ```text
-    boss@corporation.com, vice-president@corporation.com, dataengineering@corporation.com
+boss@corporation.com, vice-president@corporation.com, dataengineering@corporation.com
 ```
 
-### `Description`
-* You can add a detailed description of why this notification is being created or some additional information.
+### `Description` <spam id='required'>`optional`</spam>
+* Payload / description of the notification

@@ -1,26 +1,22 @@
-# Welcome to Qualytics!
+# Getting Started
 
-## What Qualytics is?
+## What is Qualytics?
 
-* The complete solution to install `trust` and `confidence` in your enterprise data ecosystem.
+* The complete solution to instill `trust` and `confidence` in your enterprise data ecosystem.
     1. With automated `data profiling`, `data quality rule inference`, `anomaly detection` & `remediation`.
 
 * The Active Data Quality Platform that enables teams to `manage data quality` at scale through advanced automation.
-## What Qualytics does?
+## What does Qualytics do?
 
-* Enables your data teams to `address data issues faster`.
-* `Automates workflows` that are currently manual or simply not performed.
-* `Automates the discovery` and `maintenance of data quality` measures you need.
-* Your `historic data is analyzed for its shapes and patterns` in order to infer contextual data quality rules. These rules are asserted to find anomalies in new data (often in incremental loads).
-    1. When an anomaly is found, along with traditional alerting, `a target datastore is enriched with the anomaly` along `with the metadata` that triggered it.
-    2. Enables your team to `take corrective actions` using their existing data tooling.
+* Qualytics enables your data teams to `address data issues faster` in a proactive manner by automating the `discovery` and `maintenance` of data quality measures you need.
+    1. Your `historic data` is analyzed for its shapes and patterns in order to infer contextual data quality rules. 
+    2. These rules are asserted to find anomalies in new data (often in incremental loads).
+    3. When an anomaly is found, along with traditional alerting, `a target datastore` is `enriched` with the anomaly along with the metadata that triggered it, enabling your team to `take corrective actions` using their existing data tooling.
 
-* We combine `data quality rules` with additional data such as:
-    1. Alerting `needs`, `tags` & `tolerances`.
-    2. `Manage the combination` as a set of data quality checks.
+* We combine `data quality rules` with additional context such as `alerts`, `tags` & `tolerances` as a set of data quality checks.
 
 
-## Using Qualytics involves a few operations post configuration:
+## Using Qualytics involves a few operations post initial Data Store configuration:
 
 * `Catalog`
     1. `Preps metadata` to be consumed by Qualytics.
@@ -37,7 +33,7 @@
 
 * As a quick reference, here is a short video demonstrating the platform with a quick walkthrough:
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="760" height="415" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Focus areas
 
@@ -57,4 +53,6 @@ On-premise, single-tenant cloud, or SaaS. We meet you where your data is.
 Snowflake from Oracle, S3 to MSSQL. Data Quality is important everywhere. Qualytics fits seamlessly into your data stack, with effortless integrations with any Spark-compatible data store.
 
 ## About this guide
-This Qualytics User's Guide is here to help you adopt our platform to achieve your data quality goals.
+This User Guide is here to help you adopt our platform to achieve your data quality goals.
+
+* TODO - ADD FRESHNESS SLA FUNCTIONALITY, INCLUDE DETAILS FROM API DOCUMENTATION

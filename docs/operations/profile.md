@@ -1,19 +1,17 @@
-# Profile Operation
+# Step 2. Profile Operation
 
-* A `Profile Operation` where no limits are explicitly set and an attempt is made to analyze every available record in all available Containers. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
+* A `Profile Operation` will analyze every available record in all available Containers in a data store. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 
-* The Profile Operation is executed on a Datastore to analyze the named collections of data (e.g. tables, views, files, topics) within it. The operation will:
+* The Profile Operation is executed on a Data Store to analyze the named collections of data (tables, files, etc.) within it. The operation will:
 
-    * Identify the fields within the collection.
-    * Gather statistical data about each field according to its declared or inferred type.
-    * Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks.
-    * Tested the inferred data quality checks against actual source data to tune desired sensitivities.
-
-
+    * Identify the fields within the collection
+    * Gather statistical data about each field according to its declared or inferred type
+    * Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks
+    * Test the inferred data quality checks against actual source data to tune with desired sensitivities
 
 
 !!! note
-    * A new Profile Operation can be executed at any time to update the trained data quality checks produced by the Inference Engine.
+    * Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Data Store. It's recommended to run Profile operations periodically to update inferred rules.
 
 ---
 # Operation Configuration
@@ -22,10 +20,13 @@
 
 A Profile Operation can be configured with the following options:
 
-* `Record limit` - To profile only a subset of the available data.
-* `Disable Check Inference` - To update field metadata without adjusting or infering data quality checks.
+* `Record limit` - Profile only a subset of the available data
+* `Disable Check Inference` - Update field metadata without adjusting or infering data quality checks
 * `Target selection`
-    - You can select to all tables.
-    - Or target only a subset of the available named collections.
+    - All tables
+    - Subset of available named collections (tables, files, etc.)
 
     ![Screenshot](../assets/operations/operation-profile-specific-tables.png)
+
+
+* TODO - ADD DETAILS ABOUT FRESHNESS SLA FUNCTIONALITY. ADD DETAILS OF HOW OFTEN ETC FROM API DOCUMENTATION AS WELL

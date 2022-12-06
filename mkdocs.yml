@@ -32,9 +32,9 @@ nav:
     - operations/scan.md
   - Data Quality Checks:
     - checks/what-is.md
-    - checks/what-is-authored-check.md
-    - checks/what-is-infered-check.md
-    - Ruled Type Checks:
+    - checks/what-is-an-authored-check.md
+    - checks/what-is-an-inferred-check.md
+    - Check Rule Types:
       - After Date: checks/after-date-check.md
       - Any Not Null: checks/any-not-null-check.md
       - Before Date Time: checks/before-date-time-check.md
@@ -74,11 +74,11 @@ nav:
       - Unique: checks/unique-check.md
       - User Defined Function: checks/user-defined-function-check.md
   - Anomalies:
-    - anomalies/what-is-anomaly.md
+    - anomalies/what-is-an-anomaly.md
     - anomalies/anomaly-details.md
     - anomalies/universal-anomaly.md
   - Notifications:
-    - notifications/what-is-notification.md
+    - notifications/what-is-a-notification.md
     - Type of Notification Services:
       - notifications/notification-services/email.md
       - notifications/notification-services/http-action.md
@@ -87,9 +87,9 @@ nav:
       - notifications/notification-services/slack.md
       - notifications/notification-services/webhook.md
   - Tags:
-    - tags/what-is-tag.md
+    - tags/what-is-a-tag.md
   - Identifiers:
-    - identifiers/what-is-identifier.md
+    - identifiers/what-is-an-identifier.md
   - glossary.md
 
 

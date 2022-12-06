@@ -1,58 +1,55 @@
 # Anomaly Details
 
-* The `Anomaly Details` tab is shown as a separated section as part of a Scan operation, for a specific anomaly you want to see with more details.
+* The `Anomaly Details` modal provides specific details about the Anomaly, including source record and checks that failed assertions, along with ability to take `Notes` and provide feedback to ML methods through updating `Status` of the anomaly.
 
 ![Screenshot](../assets/anomalies/anomaly-details.png)
 
-* In `Anomaly Details` you can see all the detailed information on the specific anomaly.
-
-* You have the ability to provide feedback to the platform in a Supervised Learning fashion as well. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
+* Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
     *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
 
-* In the first section you can see:
+* Data Store details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1.png)
     1. The `Data Store` name
     2. The `Location` where this data is stored.
     3. The `Record Type` of the anomaly.
     4. The `Date Time` of the anomaly creation.
 
-* In the second section you can see:
+* Failed Check details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-2.png) 
 
-    * The `Status` of the selected Anomaly.   
-        *You can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
+    * `Status` of the selected Anomaly   
+        *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
 
-    * The `Tags` is a label that represent or inform the anomaly or the quality check.   
-        *You can create a tag just typing or you can select a new one.*
+    * `Tags`: labels that serve the purpose of grouping anomalies and driving downstream workflows. For more details, see TODO hyperlink the tag   
+        *Users can create new or apply existing tags*
 
-    * The `Field` shows all the fields of that specific anomaly found.   
-        *You can select the field that you want to filter.*   
-        *Shows the number of anomalies found.*
+    * `Field`: all the fields of that specific anomaly found   
+        *Users can filter by Field in this view*   
 
-    * The `File`/`Table` is the name of the source.
+    * `File`/`Table`: data store in which anomaly was found
 
-    * The `Rule` is the name of the Rule for this specific anomaly.   
+    * `Rule`: rule type that failed the assertion(s)  
         *You can check all the Rule types [here.](/checks/what-is#the-definitive-list-of-rule-types)*
     
-    * The `Violation` is what the anomaly violated according to the specified rule.   
-        *It specifies the field name, the percentage of anomalies found.*
+    * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)   
 
-    * The `Frequency` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"} of the anomaly defines the percentage calculated for that sample of records.
+    * `Frequency` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
 
-    * The type of the `Quality Check`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"} can be `Infered` or `Authored`.
+    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
 
 # Infered check details
 
-* If you click on the rule section, a new view is shown as `Infered check details`.
+* Clicking into a `Rule` will highlight its details and enables users to edit the rule as well:
+
 ![Screenshot](../assets/anomalies/infered-check-details-section.png)
 
-* You can archive an anomaly click in the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
+* An anomaly can be archived via the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
 
 * If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Frequency` percentage for that anomaly.
 
 !!! note
-    The `Filter` clause is a `Where` statement against your table. You can type like:   
+    The `Filter` clause is a `WHERE` statement against your table. For example:   
     `price != 33` or `price > discount + 20`
 
 !!! info
-    You can create a computer table and use multiple fields from different tables in a filter clause
+    You can create a computed table and use multiple fields from different tables in a filter clause
