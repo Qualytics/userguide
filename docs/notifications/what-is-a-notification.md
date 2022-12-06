@@ -1,6 +1,6 @@
-# What is Notification?
+# What is a Notification?
 
-* The notification configuration allows users to manage and add notifications.
+* `Notifications` allow users to send alerts / notifications through a myriad of supported systems. Notifications can drive downstream workflows as well as alerts, and are utilized via `Tags`.
 
 ---
 
