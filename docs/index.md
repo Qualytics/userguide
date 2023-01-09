@@ -55,4 +55,4 @@ Snowflake from Oracle, S3 to MSSQL. Data Quality is important everywhere. Qualyt
 ## About this guide
 This User Guide is here to help you adopt our platform to achieve your data quality goals.
 
-* TODO - ADD FRESHNESS SLA FUNCTIONALITY, INCLUDE DETAILS FROM API DOCUMENTATION
+<!-- * TODO - ADD FRESHNESS SLA FUNCTIONALITY, INCLUDE DETAILS FROM API DOCUMENTATION -->
