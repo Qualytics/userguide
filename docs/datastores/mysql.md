@@ -4,7 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/mysql/create-datastore.png){: style="height:450px;width:450px"}
+![Screenshot](../assets/datastores/mysql/create-data-store-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/datastores/mysql/create-data-store-dark.png#only-dark){: style="height:auto;width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -31,4 +32,4 @@
 ## Information on how to connect with MySQL
 
 ---
-(MySQL connection)[https://www.connectionstrings.com/mysql/]
+[MySQL connection string](https://www.connectionstrings.com/mysql/)
