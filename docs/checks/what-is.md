@@ -13,9 +13,14 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 
 1.  Select a `Data Store`.
 2.  Click on `Checks` tab  <br><br>
-    ![Screenshot](../assets/checks/checks-tab.png)
+    ![Screenshot](../assets/checks/checks-tab-light.png#only-light)
+    ![Screenshot](../assets/checks/checks-tab-dark.png#only-dark)
 3. You are going to see all checks related to your `Data Store` <br><br>
-    ![Screenshot](../assets/checks/all-quality-checks.png)
+    ![Screenshot](../assets/checks/all-quality-checks-light.png#only-light)
+    ![Screenshot](../assets/checks/all-quality-checks-dark.png#only-dark)
+
+    ![Screenshot](../assets/checks/quality-checks-only-light.png#only-light)
+    ![Screenshot](../assets/checks/quality-checks-only-dark.png#only-dark)
 
 ---
 # List of rule types

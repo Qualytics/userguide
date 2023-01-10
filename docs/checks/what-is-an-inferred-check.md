@@ -18,4 +18,6 @@
 
 * Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true above a certain threshold are converted and exposed to users as `Inferred Checks`.
 
-# TODO - add screenshots of inferred rules
+
+    ![Screenshot](../assets/checks/infered-check-details-light.png#only-light)
+    ![Screenshot](../assets/checks/infered-check-details-dark.png#only-dark)

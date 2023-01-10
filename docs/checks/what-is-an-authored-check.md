@@ -11,10 +11,12 @@
 
 1.  After going to `Checks` tab
 2.  On the right top menu, click `Add`
-    ![Screenshot](../assets/checks/add-checks.png)
+    ![Screenshot](../assets/checks/add-checks-light.png#only-light)
+    ![Screenshot](../assets/checks/add-checks-dark.png#only-dark)
 3. Click `Check`
 4. You are going to see the `Authored Checks Details` modal:
-    ![Screenshot](../assets/checks/authored-check-details.png)
+    ![Screenshot](../assets/checks/authored-check-details-light.png#only-light)
+    ![Screenshot](../assets/checks/authored-check-details-dark.png#only-dark)
 
 * Through this modal, a user can create an `Authored Quality Check` based on the desired field and input specific details of a rule.
 
