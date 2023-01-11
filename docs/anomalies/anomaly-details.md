@@ -2,20 +2,24 @@
 
 * The `Anomaly Details` modal provides specific details about the Anomaly, including source record and checks that failed assertions, along with ability to take `Notes` and provide feedback to ML methods through updating `Status` of the anomaly.
 
-![Screenshot](../assets/anomalies/anomaly-details.png)
+![Screenshot](../assets/anomalies/anomaly-details-light.png#only-light)
+![Screenshot](../assets/anomalies/anomaly-details-dark.png#only-dark)
 
 * Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
     *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
 
 * Data Store details:
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-1.png)
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
     1. The `Data Store` name
     2. The `Location` where this data is stored.
     3. The `Record Type` of the anomaly.
     4. The `Date Time` of the anomaly creation.
 
 * Failed Check details:
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-2.png) 
+    <!-- ![Screenshot](../assets/anomalies/anomaly-details-tab-2.png) -->
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
 
     * `Status` of the selected Anomaly   
         *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
@@ -41,7 +45,8 @@
 
 * Clicking into a `Rule` will highlight its details and enables users to edit the rule as well:
 
-![Screenshot](../assets/anomalies/infered-check-details-section.png)
+![Screenshot](../assets/anomalies/infered-check-details-section-light.png#only-light)
+![Screenshot](../assets/anomalies/infered-check-details-section-dark.png#only-dark)
 
 * An anomaly can be archived via the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
 
