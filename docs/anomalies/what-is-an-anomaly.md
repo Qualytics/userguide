@@ -13,7 +13,16 @@ There are two types of anomalies in Qualytics: `Record` and `Shape`:
 !!! note
     In either anomaly type, source records are exposed as part of `Anomaly Details`. A Record anomaly will highlight the specific record, and a Shape anomaly will highlight 10 samples from underlying anomalous records.
 
-* TODO - ADD SCREENSHOT OF RECORD AND SHAPE ANOMALIES
+* Shape Anomaly view
+
+![Screenshot](../assets/anomalies/shape-anomaly-light.png#only-light)
+![Screenshot](../assets/anomalies/shape-anomaly-dark.png#only-dark)
+
+* Record Anomaly view
+
+![Screenshot](../assets/anomalies/record-anomaly-light.png#only-light)
+![Screenshot](../assets/anomalies/record-anomaly-dark.png#only-dark)
+
 
 
 * When a [Scan](/operations/scan) is run, Qualytics will highlight anomalies with the following information:

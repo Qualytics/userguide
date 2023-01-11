@@ -11,15 +11,17 @@ Since Partitions are required to support `Incremental` Operations, an Incrementa
 
 # Managing an Identifier
 
-* You can manage an identifier in the Tables view of a selected datastore:
+* You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`/`file`:
  
-    ![Screenshot](../assets/identifiers/identifiers.png)
+    ![Screenshot](../assets/identifiers/identifiers-light.png#only-light)
+    ![Screenshot](../assets/identifiers/identifiers-dark.png#only-dark)
 
 * In the pop-up modal, specific configuration is displayed and can be edited:
   
-    ![Screenshot](../assets/identifiers/identifier-screen.png){: style="height:450px"}
+    ![Screenshot](../assets/identifiers/identifier-screen-light.png#only-light)
+    ![Screenshot](../assets/identifiers/identifier-screen-dark.png#only-dark)
 
-    1. `Strategy` - TODO add details
+     1. `Strategy` <!-- - TODO add details -->
         * `None`
         * `Last modified`
         * `Batch value`
