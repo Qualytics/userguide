@@ -4,7 +4,8 @@
 
 ---
 
-![Screenshot](../../assets/notifications/services/slack-notification.png){: style="width:550px;"}
+![Screenshot](../../assets/notifications/services/slack-notification-light.png#only-light)
+![Screenshot](../../assets/notifications/services/slack-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 

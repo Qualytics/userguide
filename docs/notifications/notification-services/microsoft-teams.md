@@ -4,7 +4,8 @@
 
 ---
 
-![Screenshot](../../assets/notifications/services/microsoft-teams-notification.png){: style="width:550px;"}
+![Screenshot](../../assets/notifications/services/microsoft-teams-notification-light.png#only-light)
+![Screenshot](../../assets/notifications/services/microsoft-teams-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
