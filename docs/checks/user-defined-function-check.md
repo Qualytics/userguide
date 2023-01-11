@@ -6,9 +6,10 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `String`               | :white_check_mark:   |
+| `String`               | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/user-defined-function-check.png)
+![Screenshot](../assets/checks/rule-types/user-defined-function-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/user-defined-function-check-dark.png#only-dark)
 
 !!! example
     The given UDF evaluates to true over `status`. If the `length` is greater than `2`.

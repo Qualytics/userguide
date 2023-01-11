@@ -6,9 +6,10 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `String`               | :white_check_mark:   |
+| `String`               | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/matches-pattern-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/matches-pattern-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/matches-pattern-check-dark.png#only-dark)
 
 !!! example
     `Date_of_Payment` matches the pattern `\d{4}-\d{2}-\d{2}`.

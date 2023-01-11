@@ -6,10 +6,11 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Date`                 | :white_check_mark:   |
-| `Timestamp`            | :white_check_mark:   |
+| `Date`                 | :octicons-check-16:   |
+| `Timestamp`            | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/between-times-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/between-times-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/between-times-check-dark.png#only-dark)
 
 !!! example
     `order_time` is between `2021-01-01` and `2022-12-31`

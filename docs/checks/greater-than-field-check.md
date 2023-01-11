@@ -6,12 +6,13 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Date`                 | :white_check_mark:   |
-| `Timestamp`            | :white_check_mark:   |
-| `Integral`             | :white_check_mark:   |
-| `Fractional`           | :white_check_mark:   |
+| `Date`                 | :octicons-check-16:   |
+| `Timestamp`            | :octicons-check-16:   |
+| `Integral`             | :octicons-check-16:   |
+| `Fractional`           | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/greater-than-field-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/greater-than-field-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/greater-than-field-check-dark.png#only-dark)
 !!! example
     `price` has a value greater than `discount`.
 

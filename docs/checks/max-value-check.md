@@ -6,10 +6,11 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Integral`             | :white_check_mark:   |
-| `Fractional`           | :white_check_mark:   |
+| `Integral`             | :octicons-check-16:   |
+| `Fractional`           | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/max-value-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/max-value-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/max-value-check-dark.png#only-dark)
 !!! example
     `Period` has a maximum value of `900`.
 
