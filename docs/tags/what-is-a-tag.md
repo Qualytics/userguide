@@ -39,4 +39,4 @@
         * Select any color for the specific Tag
         * Use Hexadecimal number or select by clicking on the color picker
     
-* Once a tag is created, it's ready to be associated with a `Check`, `Notification` and ultimately an `Anomaly` in order to drive a Notification to a user. For more details of Tag association, please refer to TODO-need link to Tag association to a check.
+* Once a tag is created, it's ready to be associated with a `Check`, `Notification` and ultimately an `Anomaly` in order to drive a Notification to a user. For more details of Tag association, please refer to [tag association](/checks/what-is-an-authored-check/#add-a-new-data-quality-check).
