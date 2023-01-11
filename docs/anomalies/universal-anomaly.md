@@ -6,11 +6,13 @@
 
 * You can access the view through:
 
-    ![Screenshot](../assets/anomalies/universal-anomaly.png){: style="height:350px"}
+    ![Screenshot](../assets/anomalies/universal-anomaly-light.png#only-light)
+    ![Screenshot](../assets/anomalies/universal-anomaly-dark.png#only-dark)
 
 * In this view, you can see the details of all the grouped datastores or filter for a specific data store.
 
-    ![Screenshot](../assets/anomalies/anomalies-overviews.png)
+    ![Screenshot](../assets/anomalies/anomalies-overviews-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomalies-overviews-dark.png#only-dark)
 
 ---
 
@@ -18,7 +20,8 @@
 
 * Highlights a bar chart that shows all the records analyzed during the `timeframe`
 
-    ![Screenshot](../assets/anomalies/records-analyzed.png)
+    ![Screenshot](../assets/anomalies/records-analyzed-light.png#only-light)
+    ![Screenshot](../assets/anomalies/records-analyzed-dark.png#only-dark)
 
 ---
 
@@ -26,7 +29,8 @@
 
 * Highlights a detailed graph of `Anomalies Caught` during the `timeframe`.
 
-    ![Screenshot](../assets/anomalies/anomalies-caught.png)
+    ![Screenshot](../assets/anomalies/anomalies-caught-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomalies-caught-dark.png#only-dark)
 
 ---
 
@@ -34,4 +38,5 @@
 
 * List all anomalies from all Data Stores, with ability to filter to specifics
 
-    ![Screenshot](../assets/anomalies/list-of-all-anomalies.png)
+    ![Screenshot](../assets/anomalies/list-of-all-anomalies-light.png#only-light)
+    ![Screenshot](../assets/anomalies/list-of-all-anomalies-dark.png#only-dark)
