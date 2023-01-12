@@ -2,7 +2,8 @@
 
 * An `Anomaly` is an anomalous data set (record or column) that asserted false to applied data quality check(s). Both `Inferred` and `Authored` Checks generate Anomalies, and are batched together when applied through a `Scan Operation` to highlight anomalies:
 
-![Screenshot](../assets/anomalies/anomalies-tab.png)
+![Screenshot](../assets/anomalies/anomalies-tab-light.png#only-light)
+![Screenshot](../assets/anomalies/anomalies-tab-dark.png#only-dark)
 
 There are two types of anomalies in Qualytics: `Record` and `Shape`:
 
@@ -12,12 +13,22 @@ There are two types of anomalies in Qualytics: `Record` and `Shape`:
 !!! note
     In either anomaly type, source records are exposed as part of `Anomaly Details`. A Record anomaly will highlight the specific record, and a Shape anomaly will highlight 10 samples from underlying anomalous records.
 
-* TODO - ADD SCREENSHOT OF RECORD AND SHAPE ANOMALIES
+* Shape Anomaly view
+
+![Screenshot](../assets/anomalies/shape-anomaly-light.png#only-light)
+![Screenshot](../assets/anomalies/shape-anomaly-dark.png#only-dark)
+
+* Record Anomaly view
+
+![Screenshot](../assets/anomalies/record-anomaly-light.png#only-light)
+![Screenshot](../assets/anomalies/record-anomaly-dark.png#only-dark)
+
 
 
 * When a [Scan](/operations/scan) is run, Qualytics will highlight anomalies with the following information:
 
-    ![Screenshot](../assets/anomalies/anomalies-fields.png)
+    ![Screenshot](../assets/anomalies/anomalies-fields-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomalies-fields-dark.png#only-dark)
 
     1. `Table`/`File`: the `Table` or `File` of the anomaly
     2. `Field`: the field(s) of the anomaly
@@ -25,7 +36,8 @@ There are two types of anomalies in Qualytics: `Record` and `Shape`:
     4. `Rule`: `Infered` and/or `Authored` checks that failed assertions
     5. `Description`: human-readable, auto-generated description of the `Anomaly`
 
-    ![Screenshot](../assets/anomalies/anomalies-status.png)
+    ![Screenshot](../assets/anomalies/anomalies-status-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomalies-status-dark.png#only-dark)
 
     1. `Status`: The status of the anomaly. If it's `active`, `acknowledged`, `resolved` or `invalid`
     2. `Type`: `Record` or `Shape`

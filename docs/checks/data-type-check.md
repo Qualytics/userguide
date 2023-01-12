@@ -6,21 +6,23 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Date`                 | :white_check_mark:   |
-| `Timestamp`            | :white_check_mark:   |
-| `Integral`             | :white_check_mark:   |
-| `Fractional`           | :white_check_mark:   |
-| `String`               | :white_check_mark:   |
-| `Boolean`              | :white_check_mark:   |
+| `Date`                 | :octicons-check-16:   |
+| `Timestamp`            | :octicons-check-16:   |
+| `Integral`             | :octicons-check-16:   |
+| `Fractional`           | :octicons-check-16:   |
+| `String`               | :octicons-check-16:   |
+| `Boolean`              | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/data-type-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/data-type-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/data-type-check-dark.png#only-dark)
 
 !!! example
     `Name_of_associated_Covered_Device` is a valid `String`
 
 * You can list any of the following data types:
 
-![Screenshot](../assets/checks/rule-types/list-all-data-types-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/list-all-data-types-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/list-all-data-types-check-dark.png#only-dark)
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
 

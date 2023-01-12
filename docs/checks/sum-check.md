@@ -6,11 +6,11 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Integral`             | :white_check_mark:   |
-| `Fractional`           | :white_check_mark:   |
+| `Integral`             | :octicons-check-16:   |
+| `Fractional`           | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/sum-check.png){: style="height:450px"}
-
+![Screenshot](../assets/checks/rule-types/sum-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/sum-check-dark.png#only-dark)
 !!! example
     The `price` has a sum of `333,25`.
 

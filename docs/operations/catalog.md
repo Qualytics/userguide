@@ -19,4 +19,5 @@ A Catalog Operation can be configured with the following options:
 * `Recreate` - Restore any previously removed named collection that do currently appear in the database
 <br>
 
-![Screenshot](../assets/operations/operation-catalog.png)
+![Screenshot](../assets/operations/operation-catalog-light.png#only-light)
+![Screenshot](../assets/operations/operation-catalog-dark.png#only-dark)

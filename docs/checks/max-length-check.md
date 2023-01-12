@@ -6,9 +6,10 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `String`               | :white_check_mark:   |
+| `String`               | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/max-length-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/max-length-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/max-length-check-dark.png#only-dark)
 
 !!! example
     `units` has a maximum length of `75`.

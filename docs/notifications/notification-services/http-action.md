@@ -4,7 +4,8 @@
 
 ---
 
-![Screenshot](../../assets/notifications/services/http-action-notification.png){: style="width:550px;"}
+![Screenshot](../../assets/notifications/services/http-action-notification-light.png#only-light)
+![Screenshot](../../assets/notifications/services/http-action-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -26,7 +27,6 @@
 ### `Deliver a notification by` <spam id='required'>`required`</spam>
 * Service to be utilized for the notification
 
-### `URL` - TODO, SCREENSHOT DOESNT SHOW A WAY TO ADD A URL FOR AN HTTP ACTION
 
 ### `Description` <spam id='required'>`optional`</spam>
 * Payload / description of the notification

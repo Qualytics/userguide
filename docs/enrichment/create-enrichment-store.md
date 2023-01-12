@@ -4,12 +4,14 @@
 * You can create a new `Enrichment Store` on `Enrichment Stores` 
 ![Screenshot](../assets/enrichment/icons/enrichment.svg) tab 
 
-    - ![Screenshot](../assets/enrichment/create-new-enrichment.png){: style="height:350px"}
+    - ![Screenshot](../assets/enrichment/create-new-enrichment-light.png#only-light)![Screenshot](../assets/enrichment/create-new-enrichment-dark.png#only-dark)
+ 
 
 * Configuring an Enrichment Store is a three-step process:
 
-    1. `Add an Enrichment store`
-        1. *Ensure that the service account user has WRITE access to the data store*
+    ![Screenshot](../assets/enrichment/add-enrichment-store-light.png#only-light)![Screenshot](../assets/enrichment/add-enrichment-store-dark.png#only-dark)
+
+    1. *Ensure that the service account user has WRITE access to the data store*
     2.  Navigate to the Primary Data Store
     3.  Attach the Enrichment Data Store to the Primary Data Store
  
@@ -45,6 +47,7 @@
 
 * When an `Enrichment Store` is added, it’ll be populated in the main Enrichment Data Store listings along with other data stores:
 
- ![Screenshot](../assets/enrichment/main-page.png)
+ ![Screenshot](../assets/enrichment/main-page-light.png#only-light)
+ ![Screenshot](../assets/enrichment/main-page-dark.png#only-dark)
 
-* Clicking into an `Enrichment Store` will guide the user to the credentials page
+* Clicking into a specific `Enrichment Store` will guide the user to the credentials page

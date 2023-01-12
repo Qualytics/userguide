@@ -16,7 +16,8 @@
 ---
 # Operation Configuration
 
-![Screenshot](../assets/operations/operation-profile.png)
+![Screenshot](../assets/operations/operation-profile-light.png#only-light)
+![Screenshot](../assets/operations/operation-profile-dark.png#only-dark)
 
 A Profile Operation can be configured with the following options:
 
@@ -26,7 +27,18 @@ A Profile Operation can be configured with the following options:
     - All tables
     - Subset of available named collections (tables, files, etc.)
 
-    ![Screenshot](../assets/operations/operation-profile-specific-tables.png)
+    ![Screenshot](../assets/operations/operation-profile-specific-tables-light.png#only-light)
+    ![Screenshot](../assets/operations/operation-profile-specific-tables-dark.png#only-dark)
 
+* There's also an option to schedule the operation by:
+    - `Hourly`
+    - `Daily`
+    - `Weekly`
+    - `Monthly`
+    - `Advanced`
+        - Cron job expression
 
-* TODO - ADD DETAILS ABOUT FRESHNESS SLA FUNCTIONALITY. ADD DETAILS OF HOW OFTEN ETC FROM API DOCUMENTATION AS WELL
+![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
+![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)
+
+<!-- * TODO - ADD DETAILS ABOUT FRESHNESS SLA FUNCTIONALITY. ADD DETAILS OF HOW OFTEN ETC FROM API DOCUMENTATION AS WELL -->

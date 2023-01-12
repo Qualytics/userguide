@@ -17,17 +17,36 @@ The Scan Operation is executed on a Datastore to assert the data quality checks 
 ---
 # Operation Configuration
 
-![Screenshot](../assets/operations/operation-scan.png)
+![Screenshot](../assets/operations/operation-scan-light.png#only-light)
+![Screenshot](../assets/operations/operation-scan-dark.png#only-dark)
 
 A Scan Operation can be configured with the following options:
 
 * `Full` - To process all records ignoring the previous scan.
 * `Incremental` - To scan only new data updated since the previous scan.
 * `Record limit` - To limit the total number of records scanned.
-* `Remediation strategy` - To specify how enrichment tables should be migrated to reflect changes in source tables.
+
 * `Target selection` 
     - You can select to all tables.
     - To target only a subset of the available named collections.
 
-    ![Screenshot](../assets/operations/operation-scan-specific-tables.png)
+    ![Screenshot](../assets/operations/operation-scan-specific-tables-light.png#only-light)
+    ![Screenshot](../assets/operations/operation-scan-specific-tables-dark.png#only-dark)
 
+* `Remediation strategy`
+
+    - To specify how enrichment tables should be migrated to reflect changes in source tables.
+
+    ![Screenshot](../assets/operations/remediation-strategy-light.png#only-light)
+    ![Screenshot](../assets/operations/remediation-strategy-dark.png#only-dark)
+
+* There's also an option to schedule the operation by:
+    - `Hourly`
+    - `Daily`
+    - `Weekly`
+    - `Monthly`
+    - `Advanced`
+        - Cron job expression
+
+![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
+![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)

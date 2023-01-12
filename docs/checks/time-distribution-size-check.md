@@ -6,10 +6,11 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Date`                 | :white_check_mark:   |
-| `Timestamp`            | :white_check_mark:   |
+| `Date`                 | :octicons-check-16:   |
+| `Timestamp`            | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/time-distribution-size-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/time-distribution-size-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/time-distribution-size-check-dark.png#only-dark)
 
 !!! example
     The count of records in `[interval]` segments of `[field_name]` is between `[min_size]` and `[max_size]`.

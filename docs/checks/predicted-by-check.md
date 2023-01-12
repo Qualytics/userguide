@@ -6,12 +6,13 @@
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
-| `Date`                 | :white_check_mark:   |
-| `Timestamp`            | :white_check_mark:   |
-| `Integral`             | :white_check_mark:   |
-| `Fractional`           | :white_check_mark:   |
+| `Date`                 | :octicons-check-16:   |
+| `Timestamp`            | :octicons-check-16:   |
+| `Integral`             | :octicons-check-16:   |
+| `Fractional`           | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/predicted-by-check.png){: style="height:450px"}
+![Screenshot](../assets/checks/rule-types/predicted-by-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/predicted-by-check-dark.png#only-dark)
 
 !!! example
     The `price` is predicted by `[expression] profit *10 + cogs *-10` +/- `[tolerance] 100.0`

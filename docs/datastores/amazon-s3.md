@@ -4,7 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/amazon-s3/create-datastore.png){: style="height:450px;width:450px;"}
+![Screenshot](../assets/datastores/amazon-s3/create-data-store-light.png#only-light){: style="height:450px;width:450px;"}
+![Screenshot](../assets/datastores/amazon-s3/create-data-store-dark.png#only-dark){: style="height:450px;width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
