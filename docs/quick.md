@@ -1,28 +1,36 @@
 # Quick start
 
-Setup your Qualytics Deployment, create a datastore, generate a profile, infer data quality rules, scan for anomalies and monitor data freshness.
+Want to get started immediately with a high-level overview and typical defaults? This section is for you.
 
 ---
 
-# Prepare
+# Concepts
+Qualytics is the Active Data Quality Platform that enables teams to manage data quality at scale through advanced automation. Qualytics analyzes your historic data for its shapes and patterns in order to infer contextual data quality rules that are then asserted against new data (often in incremental loads) to identify anomalies. When an anomaly is identified, Qualytics provides your team with everything needed to take corrective actions using their existing data tooling & prefered monitoring solutions.
 
-* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. 
-* As such, the `URL` for the front-end for ACME would be:
+<iframe width="100%" height="460" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Accessing your Qualytics deployment
+
+* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. As such, you deployment will be accessible from a custom `URL` specific to your organization.
+
+* For example, ACME's Qualytics deployment might be published here:
     1. `https://acme.qualytics.io`
 
-* The API is available at:
+* The corresponding API documnetation would then be available here:
     1. `https://acme.qualytics.io/api/docs`
 
-* Your credentials will be provided to you automatically from your instance:
+* Your specific credentials and `URL` will be provided to you automatically by email.
 
-    !!!warning
-        Please check your spam folder if you don’t see the invite. 
+    !!!tip
+        Please check your spam folder if you don’t see the invite.
 
-* Quickly get started by connecting your Qualytics deployment to a first:
-    1. [Data Store](/datastores/what-is-datastore)
-    2. Generating a [profile](/operations/profile) for it, 
-    3. Automatically [inferring](/glossary#inference) a set of data quality rules from it
-    4. Asserting those rules through a [scan](/operations/scan) to detect data [anomalies](/glossary#anomaly).
+After you've obtained access to your deployment, you'll want to:
+
+1. [Connect a Datastore](/datastores/what-is-datastore)
+2. Generate a [profile](/glossary#profile) for the datastore by running a Profile Operation.
+    - This step will automatically infer a set of data quality checks from your data
+4. Assert those checks to detect data [anomalies](/glossary#anomaly).
+
 
 ## Connect a `Data Store`
 
