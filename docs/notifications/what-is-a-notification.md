@@ -38,6 +38,35 @@
         * `Freshness SLA Violation`
     - `Use custom message`: a custom message when the notification was triggered
         * ![Screenshot](../assets/notifications/notification-custom-messaging-light.png#only-light)![Screenshot](../assets/notifications/notification-custom-messaging-dark.png#only-dark)
+        * Qualytics App will use the `variables` to customize your messages.
+        * Variables available by `Operation` when:
+            - An operation Completes:
+                * `{{rule_name}}`
+                * `{{target_link}}`
+                * `{{data_store_name}}`
+                * `{{operation_message}}`
+                * `{{operation_type}}`
+                * `{{operation_result}}`
+            - Anomalies are detected in a Table or File:
+                * `{{rule_name}}`
+                * `{{target_link}}`
+                * `{{data_store_name}}`
+                * `{{anomaly_count}}`
+                * `{{scan_target_name}}`
+            - An Anomaly is Detected:
+                * `{{rule_name}}`
+                * `{{target_link}}`
+                * `{{data_store_name}}`
+                * `{{anomaly_message}}`
+                * `{{anomaly_type}}`
+            - Freshness SLA Violation:
+                * `{{rule_name}}`
+                * `{{target_link}}`
+                * `{{data_store_name}}`
+                * `{{container_name}}`
+                * `{{freshness_violation_started}}`
+                * `{{container_last_modified_time}}`
+        
     - `Notification channel`: how notification should be delivered:
         * `Email`.
         * `Http Action`.
