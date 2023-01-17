@@ -39,3 +39,39 @@
         7. Access key ID example: `AKIAIOSFODNN7EXAMPLE`.
         8. Secret access key example: `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`.
     9. Click Download Credentials, and store the keys in a secure location.
+
+###  `Data Store` S3 permissions <spam id='required'>`required`</spam>
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Action": [
+            "s3:Get*",
+            "s3:List*",
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::<resource>/*"
+        }
+    ]
+}
+```
+
+### `Enrich Store` S3 permissions <spam id='required'>`required`</spam>
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+          "s3:Get*",
+          "s3:Put*",
+          "s3:List*",
+          "s3:Delete*"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::<resource>/*"
+    }
+  ]
+}
+```
