@@ -41,6 +41,8 @@
     9. Click Download Credentials, and store the keys in a secure location.
 
 ###  `Data Store` S3 permissions <spam id='required'>`required`</spam>
+
+*Note: It's necessary to update the `<bucket/path>` to your specific resource*
 ```json
 {
     "Version": "2012-10-17",
@@ -51,7 +53,7 @@
             "s3:List*",
         ],
         "Effect": "Allow",
-        "Resource": "arn:aws:s3:::<resource>/*"
+        "Resource": "arn:aws:s3:::<bucket/path>/*"
         }
     ]
 }
@@ -70,7 +72,7 @@
           "s3:Delete*"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::<resource>/*"
+      "Resource": "arn:aws:s3:::<bucket/path>/*"
     }
   ]
 }

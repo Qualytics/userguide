@@ -20,20 +20,20 @@
 
 *On the following links you can see how to setup each one of them.*
 
-* [Amazon S3](/datastores/amazon-s3)
-* [Azure Blob Storage](/datastores/azure-blob-storage)
-* [Azure Datalake Storage](/datastores/azure-datalake-storage)
-* [BigQuery](/datastores/bigquery)
-* [Databricks](/datastores/databricks)
-* [MariaDB](/datastores/maria-db)
-* [Microsoft SQL Server](/datastores/microsoft-sql-server)
-* [MySQL](/datastores/mysql)
-* [Oracle](/datastores/oracle)
-* [PostgreSQL](/datastores/postgresql)
-* [QFS](/datastores/qfs)
-* [Redshift](/datastores/redshift)
-* [Snowflake](/datastores/snowflake)
-* [Synapse](/datastores/synapse)
+* [Amazon S3](/userguide/datastores/amazon-s3)
+* [Azure Blob Storage](/userguide/datastores/azure-blob-storage)
+* [Azure Datalake Storage](/userguide/datastores/azure-datalake-storage)
+* [BigQuery](/userguide/datastores/bigquery)
+* [Databricks](/userguide/datastores/databricks)
+* [MariaDB](/userguide/datastores/maria-db)
+* [Microsoft SQL Server](/userguide/datastores/microsoft-sql-server)
+* [MySQL](/userguide/datastores/mysql)
+* [Oracle](/userguide/datastores/oracle)
+* [PostgreSQL](/userguide/datastores/postgresql)
+* [QFS](/userguide/datastores/qfs)
+* [Redshift](/userguide/datastores/redshift)
+* [Snowflake](/userguide/datastores/snowflake)
+* [Synapse](/userguide/datastores/synapse)
 
 ---
 
