@@ -13,7 +13,6 @@ nav:
       - datastores/bigquery.md
       - datastores/databricks.md
       - datastores/google-cloud-storage.md
-      - datastores/kafka.md
       - datastores/maria-db.md
       - datastores/microsoft-sql-server.md
       - datastores/mysql.md
@@ -23,10 +22,10 @@ nav:
       - datastores/redshift.md
       - datastores/snowflake.md
       - datastores/synapse.md
-  - Enrichment Stores:
+  - Enrichment Datastores:
     - enrichment/what-is-enrichment.md
-    - enrichment/create-enrichment-store.md
-    - enrichment/attach-enrichment-store.md
+    - enrichment/create-enrichment-datastore.md
+    - enrichment/attach-enrichment-datastore.md
   - Operations:
     - operations/catalog.md
     - operations/profile.md

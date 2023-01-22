@@ -2,7 +2,7 @@
 
 ---
 
-*Asserts that all of the selected fields must be present in the data store.*
+*Asserts that all of the selected fields must be present in the datastore.*
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |

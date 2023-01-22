@@ -32,29 +32,29 @@ After you've obtained access to your deployment, you'll want to:
 4. Assert those checks to detect data [anomalies](/glossary#anomaly).
 
 
-## Connect a `Data Store`
+## Connect a `Datastore`
 
-* The first step of configuring a Qualytics instance is to `Add New Data Store`
+* The first step of configuring a Qualytics instance is to `Add New Datastore`
 
-* To add a Data Store via Qualytics, the user must first select the specific Data Store `Type` such that the appropriate form for collecting connection details can be rendered.
+* To add a Datastore via Qualytics, the user must first select the specific Datastore `Type` such that the appropriate form for collecting connection details can be rendered.
 
 * As the applicable connection details are collected, the UI will verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
 
-* The Add Data Store flow will then prompt the user for an Enrichment Location with two options:
+* The Add Datastore flow will then prompt the user for an Enrichment Location with two options:
 
-    1. `External` - the enrichment data will be written to a separate Data Store.
-    2. `None` - no enrichment data will be recorded for this Data Store. This severely limits functionality for Qualytics to detect anomalies and is not recommended.
+    1. `External` - the enrichment data will be written to a separate Datastore.
+    2. `None` - no enrichment data will be recorded for this Datastore. This severely limits functionality for Qualytics to detect anomalies and is not recommended.
 
     !!! info
-        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Data Stores along with the ability to configure a new Enrichment Data Store to serve as this new Data Store’s enrichment location. 
-        * The flow to configure an Enrichment Data Store only differs from the non-Enrichment Data Store in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
+        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Datastores along with the ability to configure a new Enrichment Datastore to serve as this new Datastore’s enrichment location. 
+        * The flow to configure an Enrichment Datastore only differs from the non-Enrichment Datastore in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
 
-* When the Data Store connection details are submitted:
-    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Data Store can be accessed appropriately from Firewall. 
-    2. The result of that operation will either return an error message to the user on the new Data Store form view on failure, or mark the new Data Store as `connected` and initiate an asynchronous Catalog operation on success.  
-    3. If any future Operation is unable to establish a connection to the Data Store:
-        1. The connected property of the Data Store will be set `false`.  
-        2. The UI will `warn`/`prompt` users to address any such Data Store connectivity issues.
+* When the Datastore connection details are submitted:
+    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Firewall. 
+    2. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as `connected` and initiate an asynchronous Catalog operation on success.  
+    3. If any future Operation is unable to establish a connection to the Datastore:
+        1. The connected property of the Datastore will be set `false`.  
+        2. The UI will `warn`/`prompt` users to address any such Datastore connectivity issues.
 
 
 ## Generate a `Profile`
@@ -77,7 +77,7 @@ After you've obtained access to your deployment, you'll want to:
 
 * After initial profiling generates metadata, the Qualytics Inference Engine carries out ML via various learning methods such as `inductive` and `unsupervised learning`. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. The inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
 
-* Two concrete examples of sophisticated ruletypes automatically inferred at this stage are:
+* Two concrete examples of sophisticated rule types automatically inferred at this stage are:
     1. A sophisticated normality test is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
     2. Linear regression models are automatically generated to fit any highly correlated fields in the same table. 
     !!!info 
@@ -110,7 +110,7 @@ After you've obtained access to your deployment, you'll want to:
         3. `Total Records`.
 
     !!!info
-        The user should be alerted to any failure to scan any Container of the Data Store with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
+        The user should be alerted to any failure to scan any Container of the Datastore with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
 
 
 ## Monitor `data freshness`

@@ -4,8 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/qfs/create-data-store-light.png#only-light){: style="height:auto;width:450px;"}
-![Screenshot](../assets/datastores/qfs/create-data-store-dark.png#only-dark){: style="height:auto;width:450px;"}
+![Screenshot](../assets/datastores/qfs/create-datastore-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/datastores/qfs/create-datastore-dark.png#only-dark){: style="height:auto;width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
