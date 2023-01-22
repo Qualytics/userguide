@@ -6,7 +6,7 @@
 
  <a name="catalog"></a>__Catalog Operation__: used to read fundamental metadata from a Datastore required for the proper functioning of subsequent Operations such as Profile, Hash and Scan
 
- <a name="comparison"></a>__Comparison__: An evaluation to determine if the structure and content of the source and target data stores match
+ <a name="comparison"></a>__Comparison__: An evaluation to determine if the structure and content of the source and target Datastores match
 
  <a name="comparison"></a>__Comparison Runs__: An action to perform a comparison
 

@@ -37,7 +37,7 @@
     
     * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)   
 
-    * `Coverage` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
+    * `Coverage` ![Screenshot](../assets/anomalies/coverage-dark.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
 
     * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
 
