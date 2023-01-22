@@ -17,13 +17,13 @@
  <a name="connectors"></a>__Connectors__: Components that can be easily connected to and used to integrate with other applications and databases. Common uses include sending and receiving data.
 
 !!! info
-    We can connect to any Apache Spark accessible datastore. If you have a data store we don’t yet support, talk to us! We currently support: Files (CSV, JSON, XLSX, Parquet) on Object Storage (S3, Azure Blob, GCS); ETL/ELT Providers (Fivetran, Stitch, Airbyte, Matillion – and any of their connectors!); Data Warehouses (BigQuery, Snowflake, Redshift); Data Pipelining (Airflow, DBT, Prefect), Databases (MySQL, PostgreSQL, MSSQL, SQLite, etc.) and any other JDBC source
+    We can connect to any Apache Spark accessible datastore. If you have a datastore we don’t yet support, talk to us! We currently support: Files (CSV, JSON, XLSX, Parquet) on Object Storage (S3, Azure Blob, GCS); ETL/ELT Providers (Fivetran, Stitch, Airbyte, Matillion – and any of their connectors!); Data Warehouses (BigQuery, Snowflake, Redshift); Data Pipelining (Airflow, DBT, Prefect), Databases (MySQL, PostgreSQL, MSSQL, SQLite, etc.) and any other JDBC source
 
  <a name="consistency"></a>__Consistency__: The value is the same across all datastores within the organization.
 
  <a name="container"></a>__Container (of a Datastore)__: the uniquely named abstractions within a Datastore that hold data adhering to a known schema.  The Containers within a RDBMS are tables, the containers in a filesystem are well formatted files, etc…
 
- <a name="dataatrest"></a>__Data-at-rest__: Data that is stored in a database, warehouse, file system, data lake, or other data store.
+ <a name="dataatrest"></a>__Data-at-rest__: Data that is stored in a database, warehouse, file system, data lake, or other datastore.
 
  <a name="drift"></a>__Data Drift__: Changes in a data set’s properties or characteristics over time.
 
@@ -35,9 +35,9 @@
 
  <a name="check"></a>__Data Quality Check__: aka “Check” is an expression regarding the values of a Container that can be evaluated to determine whether the actual values are expected or not.
 
- <a name="datastore"></a>__Datastore__: Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Data store](/datastores/what-is-datastore).
+ <a name="datastore"></a>__Datastore__: Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/datastores/what-is-datastore).
 
- <a name="datawarehouse"></a>__Data Warehouse__: A system that aggregates data from different sources into a single, central, consistent data store to support data analysis, data mining, artificial intelligence (AI), and machine learning.
+ <a name="datawarehouse"></a>__Data Warehouse__: A system that aggregates data from different sources into a single, central, consistent datastore to support data analysis, data mining, artificial intelligence (AI), and machine learning.
 
  <a name="distinctness"></a>__Distinctness (of a Field)__: the fraction of distinct values (appear at least once) to total values that appear in a Field
 
@@ -90,9 +90,9 @@
 
  <a name="record"></a>__Record (of a Container)__: a distinct set of values for all Fields defined for a Container (e.g. a row of a table)
 
- <a name="schema"></a>__Schema__: The organization of data in a data store. This could be the columns of a table, the header of a CSV file, the fields in a JSON file, or other structural constraints.
+ <a name="schema"></a>__Schema__: The organization of data in a datastore. This could be the columns of a table, the header of a CSV file, the fields in a JSON file, or other structural constraints.
 
- <a name="schema"></a>__Schema Differences__: Differences in the organization of information between two data stores that are supposed to hold the same content.
+ <a name="schema"></a>__Schema Differences__: Differences in the organization of information between two datastores that are supposed to hold the same content.
 
  <a name="source"></a>__Source__: The origin of data in a pipeline, migration, or other ELT/ETL process. It’s where data gets extracted.
 

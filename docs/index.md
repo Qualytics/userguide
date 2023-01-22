@@ -16,7 +16,7 @@
 * We combine `data quality rules` with additional context such as `alerts`, `tags` & `tolerances` as a set of data quality checks.
 
 
-## Using Qualytics involves a few operations post initial Data Store configuration:
+## Using Qualytics involves a few operations post initial Datastore configuration:
 
 * `Catalog`
     1. `Preps metadata` to be consumed by Qualytics.
@@ -50,7 +50,7 @@ Historic data’s shapes and patterns are crucial to infer data quality rules at
 On-premise, single-tenant cloud, or SaaS. We meet you where your data is.
 
 * __Support Modern & Legacy Data Stacks__:
-Snowflake from Oracle, S3 to MSSQL. Data Quality is important everywhere. Qualytics fits seamlessly into your data stack, with effortless integrations with any Spark-compatible data store.
+Snowflake from Oracle, S3 to MSSQL. Data Quality is important everywhere. Qualytics fits seamlessly into your data stack, with effortless integrations with any Spark-compatible datastore.
 
 ## About this guide
 This User Guide is here to help you adopt our platform to achieve your data quality goals.

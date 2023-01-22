@@ -8,10 +8,10 @@
 * Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
     *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
 
-* Data Store details:
+* Datastore details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
-    1. The `Data Store` name
+    1. The `Datastore` name
     2. The `Location` where this data is stored.
     3. The `Record Type` of the anomaly.
     4. The `Date Time` of the anomaly creation.
@@ -30,14 +30,14 @@
     * `Field`: all the fields of that specific anomaly found   
         *Users can filter by Field in this view*   
 
-    * `File`/`Table`: data store in which anomaly was found
+    * `File`/`Table`: datastore in which anomaly was found
 
     * `Rule`: rule type that failed the assertion(s)  
         *You can check all the Rule types [here.](/checks/what-is#the-definitive-list-of-rule-types)*
     
     * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)   
 
-    * `Frequency` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
+    * `Coverage` ![Screenshot](../assets/anomalies/frequency.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
 
     * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
 
@@ -50,7 +50,7 @@
 
 * An anomaly can be archived via the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
 
-* If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Frequency` percentage for that anomaly.
+* If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Coverage` percentage for that anomaly.
 
 !!! note
     The `Filter` clause is a `WHERE` statement against your table. For example:   

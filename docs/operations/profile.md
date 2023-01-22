@@ -1,8 +1,8 @@
 # Step 2. Profile Operation
 
-* A `Profile Operation` will analyze every available record in all available Containers in a data store. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
+* A `Profile Operation` will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 
-* The Profile Operation is executed on a Data Store to analyze the named collections of data (tables, files, etc.) within it. The operation will:
+* The Profile Operation is executed on a Datastore to analyze the named collections of data (tables, files, etc.) within it. The operation will:
 
     * Identify the fields within the collection
     * Gather statistical data about each field according to its declared or inferred type
@@ -11,7 +11,7 @@
 
 
 !!! note
-    * Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Data Store. It's recommended to run Profile operations periodically to update inferred rules.
+    * Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Datastore. It's recommended to run Profile operations periodically to update inferred rules.
 
 ---
 # Operation Configuration

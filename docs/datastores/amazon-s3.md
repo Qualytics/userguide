@@ -4,8 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/amazon-s3/create-data-store-light.png#only-light){: style="height:450px;width:450px;"}
-![Screenshot](../assets/datastores/amazon-s3/create-data-store-dark.png#only-dark){: style="height:450px;width:450px;"}
+![Screenshot](../assets/datastores/amazon-s3/create-datastore-light.png#only-light){: style="height:450px;width:450px;"}
+![Screenshot](../assets/datastores/amazon-s3/create-datastore-dark.png#only-dark){: style="height:450px;width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -40,7 +40,7 @@
         8. Secret access key example: `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`.
     9. Click Download Credentials, and store the keys in a secure location.
 
-###  `Data Store` S3 permissions <spam id='required'>`required`</spam>
+###  `Datastore` S3 permissions <spam id='required'>`required`</spam>
 
 *Note: It's necessary to update the `<bucket/path>` to your specific resource*
 ```json

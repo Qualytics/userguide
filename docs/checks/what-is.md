@@ -11,11 +11,11 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 --- 
 ## Checks Tab
 
-1.  Select a `Data Store`.
+1.  Select a `Datastore`.
 2.  Click on `Checks` tab  <br><br>
     ![Screenshot](../assets/checks/checks-tab-light.png#only-light)
     ![Screenshot](../assets/checks/checks-tab-dark.png#only-dark)
-3. You are going to see all checks related to your `Data Store` <br><br>
+3. You are going to see all checks related to your `Datastore` <br><br>
     ![Screenshot](../assets/checks/all-quality-checks-light.png#only-light)
     ![Screenshot](../assets/checks/all-quality-checks-dark.png#only-dark)
 
@@ -87,7 +87,7 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 
 *   `Predicted By`: Asserts that the actual value of a field falls within an expected predicted range.
 
-*   `Required Fields`: Asserts that all of the selected fields must be present in the data store.
+*   `Required Fields`: Asserts that all of the selected fields must be present in the datastore.
 
 *   `Required Values`: Asserts that all of the defined values must be present at least once within a field.
                                               
