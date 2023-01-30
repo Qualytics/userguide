@@ -44,9 +44,91 @@
 
 * The `password` that has access to the `Snowflake Data Warehouse` application.
 
+
+### Snowflake `Qualytics` Warehouse <spam id='required'>`required`</spam>
+
+#### Create a Warehouse
+
+1. To create a warehouse with minimum requirements, you can use the following command:
+
+    ```sql
+        CREATE WAREHOUSE qualytics_wh
+        WITH
+            WAREHOUSE_SIZE = 'XSMALL'
+            AUTO_SUSPEND = 60
+            AUTO_RESUME = TRUE;
+    ```
+
+2. To give a specific warehouse as the default for a user:
+
+    ```sql
+        ALTER USER <username> SET DEFAULT_WAREHOUSE = qualytics_wh;
+    ```
+
+### `Datastore` Snowflake privileges permissions <spam id='required'>`required`</spam>
+
+#### Creating a Custom Read-Only Role
+
+1. Create a new role called `qualytics_read_role` by running the following command:
+    
+    ```sql
+        CREATE ROLE qualytics_read_role;
+        GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_read_role;
+    ```
+
+2. Grant the `USAGE` privilege on the database, specific schema and table to the `qualytics_read_role` by running the following command:
+
+    ```sql
+        GRANT USAGE ON DATABASE <database_name> TO ROLE qualytics_read_role;
+        GRANT USAGE ON SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+        GRANT SELECT ON TABLE <database_name>.<schema_name>.<table_name> TO ROLE qualytics_read_role;
+
+        GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+        GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+
+        GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+        GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+    ```
+
+
+3. Assign the `qualytics_read_role` to the desired user by running the following command:
+
+    ```sql
+        GRANT ROLE qualytics_read_role TO USER <user_name>;
+    ```
+
+### `Enrichment Datastore` Snowflake privileges permissions <spam id='required'>`required`</spam>
+
+#### Creating a Custom Read-Write Role
+
+1. Create a new role called `qualytics_readwrite_role` by running the following command:
+
+    ```sql
+        CREATE ROLE qualytics_readwrite_role;
+        GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_readwrite_role;
+    ```
+
+2. Grant the `USAGE` and `MODIFY` privileges on the enrichment schema within the specific database and schema to the `qualytics_readwrite_role` by running the following command:
+
+    ```sql
+        GRANT USAGE, MODIFY ON DATABASE <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT USAGE, MODIFY ON SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT CREATE TABLE ON SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+    ```
+
+3. Assign the `qualytics_readwrite_role` to the desired user by running the following command:
+
+    ```sql
+        GRANT ROLE qualytics_readwrite_role TO USER <user_name>;
+    ```
+
 ## Information on how to connect with Snowflake Data Warehouse
 
 ---
 
 * [Configuring Snowflake Data Warehouse](https://docs.snowflake.com/en/user-guide/jdbc-configure.html)
-* [Connectin Snowflake](https://docs.snowflake.com/en/user-guide-connecting.html)
+* [Connecting Snowflake](https://docs.snowflake.com/en/user-guide-connecting.html)
