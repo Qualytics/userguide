@@ -111,13 +111,13 @@
 2. Grant the `USAGE` and `MODIFY` privileges on the enrichment schema within the specific database and schema to the `qualytics_readwrite_role` by running the following command:
 
     ```sql
-        GRANT USAGE, MODIFY ON DATABASE <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT USAGE, MODIFY ON SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT CREATE TABLE ON SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
-        GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<enrichment_schema> TO ROLE qualytics_readwrite_role;
+        GRANT USAGE, MODIFY ON DATABASE <database_name> TO ROLE qualytics_readwrite_role;
+        GRANT USAGE, MODIFY ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+        GRANT CREATE TABLE ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+        GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
     ```
 
 3. Assign the `qualytics_readwrite_role` to the desired user by running the following command:
