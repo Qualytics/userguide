@@ -48,32 +48,42 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-        "Action": [
-            "s3:Get*",
-            "s3:List*",
-        ],
-        "Effect": "Allow",
-        "Resource": "arn:aws:s3:::<bucket/path>/*"
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads",
+                "s3:Get*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket>/*",
+                "arn:aws:s3:::<bucket>"
+            ]
         }
     ]
 }
 ```
 
-### `Enrich Store` S3 permissions <spam id='required'>`required`</spam>
+### `Enrich Datastore` S3 permissions <spam id='required'>`required`</spam>
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-          "s3:Get*",
-          "s3:Put*",
-          "s3:List*",
-          "s3:Delete*"
-      ],
-      "Effect": "Allow",
-      "Resource": "arn:aws:s3:::<bucket/path>/*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket>/*",
+                "arn:aws:s3:::<bucket>"
+            ]
+        }
+    ]
 }
 ```
