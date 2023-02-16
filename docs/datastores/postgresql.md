@@ -4,8 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/postgresql/create-datastore-light.png#only-light){: style="height:auto;width:450px;"}
-![Screenshot](../assets/datastores/postgresql/create-datastore-dark.png#only-dark){: style="height:auto;width:450px;"}
+![Screenshot](../assets/datastores/postgresql/create-datastore-light.png#only-light){: style="width:450px;"}
+![Screenshot](../assets/datastores/postgresql/create-datastore-dark.png#only-dark){: style="width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 

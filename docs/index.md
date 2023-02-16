@@ -33,7 +33,7 @@
 
 * As a quick reference, here is a short video demonstrating the platform with a quick walkthrough:
 
-    <iframe width="760" height="415" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="760" height="415" src="https://www.loom.com/embed/6d40de8bb6784cf2933e78b4fc0b3d0a" title="Qualytics Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Focus areas
 

@@ -4,8 +4,8 @@
 
 ---
 
-![Screenshot](../assets/datastores/azure-datalake-storage/create-datastore-light.png#only-light){: style="height:450px;width:450px;"}
-![Screenshot](../assets/datastores/azure-datalake-storage/create-datastore-dark.png#only-dark){: style="height:450px;width:450px;"}
+![Screenshot](../assets/datastores/azure-datalake-storage/create-datastore-light.png#only-light){: style="width:450px;"}
+![Screenshot](../assets/datastores/azure-datalake-storage/create-datastore-dark.png#only-dark){: style="width:450px;"}
 
 ### `Name` <spam id='required'>`required`</spam>
 
