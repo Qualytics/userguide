@@ -41,7 +41,7 @@
 
  <a name="distinctness"></a>__Distinctness (of a Field)__: the fraction of distinct values (appear at least once) to total values that appear in a Field
 
- <a name="enrichment"></a>__Enrichment__: Additional properties that are added to a data set to enhance its meaning. Qualytics enrichment includes whether a record is anomalous, what caused it to be an anomaly, what characteristics it was expected to have, and flags that allow other systems to act upon the data.
+ <a name="enrichment"></a>__Enrichment Datastore__: Additional properties that are added to a data set to enhance its meaning. Qualytics enrichment includes whether a record is anomalous, what caused it to be an anomaly, what characteristics it was expected to have, and flags that allow other systems to act upon the data.
 
  <a name="favorite"></a>__Favorite __: users can mark instances of an abstraction (Field, Container, Datastore, Check, Anomaly, etc..) as a personalized favorite to ensure it ranks higher in default ordering and is prioritized in other personalized views & workflows.
 

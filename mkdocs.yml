@@ -1,5 +1,5 @@
 site_name: User Guide
-# site_url: http://localhost:8001/userguide/
+site_url: http://localhost:8001/userguide/
 nav:
   - index.md
   - quick.md
@@ -25,7 +25,7 @@ nav:
   - Enrichment Datastores:
     - enrichment/what-is-enrichment.md
     - enrichment/create-enrichment-datastore.md
-    - enrichment/attach-enrichment-datastore.md
+    - enrichment/associate-enrichment-datastore.md
   - Operations:
     - operations/catalog.md
     - operations/profile.md

@@ -13,7 +13,7 @@
 
     1. *Ensure that the service account user has WRITE access to the datastore*
     2.  Navigate to the Primary Datastore
-    3.  Attach the Enrichment Datastore to the Primary Datastore
+    3.  Associate the Enrichment Datastore to the Primary Datastore
  
 
 # List of supported Enrichment Datastores
