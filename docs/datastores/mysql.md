@@ -14,11 +14,11 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 ![Screenshot](../assets/datastores/test-connection/test-connection-dark.png#only-dark){: style="width:450px;"}
 
 !!! info 
-    We strongly recommend you to enforce an `Enrichment Datastore`
+    It is important to associate an `Enrichment Datastore` with your new Datastore
 
-    - The `Enrichment Datastore` will allow Qualytics App to record `enrichment data`, `anomalous data` and `metadata` for your `Datastore`
+    - The `Enrichment Datastore` will allow Qualytics to record `enrichment data`, copies of the source `anomalous data` and additional `metadata` for your `Datastore`
 
-    - To configure an Enrichment Datastore, please see more  [clicking here](/userguide/enrichment/associate-enrichment-datastore/)
+    - To configure an Enrichment Datastore, please refer [to this section](/userguide/enrichment/associate-enrichment-datastore/)
 
 ---
 ## Fields
