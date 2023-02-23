@@ -12,12 +12,35 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 ![Screenshot](../assets/datastores/test-connection/test-connection-light.png#only-light){: style="width:450px;"}
 ![Screenshot](../assets/datastores/test-connection/test-connection-dark.png#only-dark){: style="width:450px;"}
 
-!!! info 
+!!! warning 
+    By clicking on the `Finish` button, it will create the Datastore and skipping the configuration of an Enrichment Datastore.
+
+    - To configure an Enrichment Datastore in another moment, please refer [to this section](/userguide/enrichment/create-enrichment-datastore/)
+
+!!! note 
     It is important to associate an `Enrichment Datastore` with your new Datastore
 
     - The `Enrichment Datastore` will allow Qualytics to record `enrichment data`, copies of the source `anomalous data` and additional `metadata` for your `Datastore`
 
-    - To configure an Enrichment Datastore, please refer [to this section](/userguide/enrichment/associate-enrichment-datastore/)
+## Configuring an Enrichment Datastore
+
+- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore:
+
+    ![Screenshot](../assets/enrichment/amazon-s3/associate-enrichment-datastore-light.png#only-light){: style="width:450px"}
+    ![Screenshot](../assets/enrichment/amazon-s3/associate-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+
+- If you don't have an `Enrichment Datastore`, you can create one at the same page:
+
+    ![Screenshot](../assets/enrichment/amazon-s3/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
+    ![Screenshot](../assets/enrichment/amazon-s3/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+
+Once the form is completed, it's necessary to test the connection. A successful message will be shown:
+
+![Screenshot](../assets/enrichment/test-connection-light.png#only-light){: style="width:450px;"}
+![Screenshot](../assets/enrichment/test-connection-dark.png#only-dark){: style="width:450px;"}
+
+!!! warning 
+    By clicking on the `Finish` button, it will create the Datastore and link or create the Enrichment Datastore
 
 ---
 ## Fields

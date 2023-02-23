@@ -5,6 +5,7 @@ nav:
   - quick.md
   - Datastores:
     - datastores/what-is-datastore.md
+    - enrichment/what-is-enrichment.md
     - datastores/what-is-qfs.md
     - Creating new datastores:
       - datastores/amazon-s3.md
@@ -23,7 +24,7 @@ nav:
       - datastores/snowflake.md
       - datastores/synapse.md
   - Enrichment Datastores:
-    - enrichment/what-is-enrichment.md
+    
     - enrichment/create-enrichment-datastore.md
     - enrichment/associate-enrichment-datastore.md
   - Operations:
