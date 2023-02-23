@@ -5,11 +5,13 @@
      ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-light.png#only-light){: style="height:200px"}
      ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-dark.png#only-dark){: style="height:200px"}
 
-2. If you already have created an `Enrichment Datastore` in `Enrichment Datastores` section, a list of the available `Enrichment Datastore` will be shown to you:
+2. If you already have created an `Enrichment Datastore` in `Enrichment Datastores` section and enable to use an existing Enrichment Datastore
 <br>
     ![Screenshot](../assets/enrichment/attaching-new-enrichment-datastore-light.png#only-light){: style="height:350px"}
     ![Screenshot](../assets/enrichment/attaching-new-enrichment-datastore-dark.png#only-dark){: style="height:350px"}
 <br>
+a list will be shown:
+
     ![Screenshot](../assets/enrichment/enrichment-datastore-list-light.png#only-light){: style="height:350px"}
     ![Screenshot](../assets/enrichment/enrichment-datastore-list-dark.png#only-dark){: style="height:350px"}
     

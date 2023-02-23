@@ -50,7 +50,7 @@ After you've obtained access to your deployment, you'll want to:
         * The flow to configure an Enrichment Datastore only differs from the non-Enrichment Datastore in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
 
 * When the Datastore connection details are submitted:
-    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Firewall. 
+    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Compute Daemon. 
     2. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as `connected` and initiate an asynchronous Catalog operation on success.  
     3. If any future Operation is unable to establish a connection to the Datastore:
         1. The connected property of the Datastore will be set `false`.  
@@ -61,7 +61,7 @@ After you've obtained access to your deployment, you'll want to:
 
 * 80% of the job of today’s Data Scientist is the upfront curation of a set of data, including steps taken to determine what type of ML modeling might prove useful for that data.
 
-* In the same way that a Data Scientist might begin a new modeling effort, our Data Firewall `profiles` customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
+* In the same way that a Data Scientist might begin a new modeling effort, our Data Compute Daemon `profiles` customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
 
 * In addition to standard Field metadata, we track other metadata such as:
     1. `type`.
@@ -69,7 +69,7 @@ After you've obtained access to your deployment, you'll want to:
     3. `min_length`/`max_length`.
     4. `completeness`/`sparsity`.
     5. `histograms` (ratios of values)
-        1. Firewall calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
+        1. Compute Daemon calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
 
 * While these numerical analysis techniques are not strictly `Machine Learning`, the statistical analysis and prep work is necessary to facilitate Machine Learning in order to generate appropriate, statistically relevant data quality rules at scale.
 
