@@ -33,7 +33,7 @@
     * `File`/`Table`: datastore in which anomaly was found
 
     * `Rule`: rule type that failed the assertion(s)  
-        *You can check all the Rule types [here.](/checks/what-is#the-definitive-list-of-rule-types)*
+        *You can check all the Rule types [here.](/userguide/checks/what-is)*
     
     * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)   
 

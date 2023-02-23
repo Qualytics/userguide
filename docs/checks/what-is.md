@@ -50,6 +50,8 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 *   `Distinct Count`: Asserts on the approximate count distinct of the given column.
                                             
 *   `Equal To Field`: Asserts that this field is equal to another field.
+
+*   `Exists in`: Asserts if the rows of a compared table/field of a specific Datastore exists in the selected table/field.
                                             
 *   `Expected Values`: Asserts that values are contained within a list of expected values.
                                              

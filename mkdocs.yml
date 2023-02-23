@@ -1,10 +1,11 @@
 site_name: User Guide
-# site_url: http://localhost:8001/userguide/
+site_url: http://localhost:8001/userguide/
 nav:
   - index.md
   - quick.md
   - Datastores:
     - datastores/what-is-datastore.md
+    - enrichment/what-is-enrichment.md
     - datastores/what-is-qfs.md
     - Creating new datastores:
       - datastores/amazon-s3.md
@@ -23,9 +24,9 @@ nav:
       - datastores/snowflake.md
       - datastores/synapse.md
   - Enrichment Datastores:
-    - enrichment/what-is-enrichment.md
+    
     - enrichment/create-enrichment-datastore.md
-    - enrichment/attach-enrichment-datastore.md
+    - enrichment/associate-enrichment-datastore.md
   - Operations:
     - operations/catalog.md
     - operations/profile.md
@@ -48,6 +49,7 @@ nav:
       - Distinct: checks/distinct-check.md
       - Distinct Count: checks/distinct-count-check.md
       - Equal To Field: checks/equal-to-field-check.md
+      - Exists In: checks/exists-in-check.md
       - Expected Values: checks/expected-values-check.md
       - Field Count: checks/field-count-check.md
       - Greater Than: checks/greater-than-check.md
