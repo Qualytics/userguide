@@ -49,6 +49,7 @@ nav:
       - Distinct: checks/distinct-check.md
       - Distinct Count: checks/distinct-count-check.md
       - Equal To Field: checks/equal-to-field-check.md
+      - Exists In: checks/exists-in-check.md
       - Expected Values: checks/expected-values-check.md
       - Field Count: checks/field-count-check.md
       - Greater Than: checks/greater-than-check.md
