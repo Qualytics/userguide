@@ -25,15 +25,12 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 
 ## Configuring an Enrichment Datastore
 
-- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore:
-
-    ![Screenshot](../assets/enrichment/amazon-s3/associate-enrichment-datastore-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/enrichment/amazon-s3/associate-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list
 
 - If you don't have an `Enrichment Datastore`, you can create one at the same page:
 
-    ![Screenshot](../assets/enrichment/amazon-s3/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/enrichment/amazon-s3/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+    ![Screenshot](../assets/enrichment/azure-blob-storage/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
+    ![Screenshot](../assets/enrichment/azure-blob-storage/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
 
 Once the form is completed, it's necessary to test the connection. A successful message will be shown:
 
