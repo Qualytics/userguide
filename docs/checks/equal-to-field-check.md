@@ -23,6 +23,6 @@
     The `[field_name]` value of '`[x value]`' is not equal to the value of `[compared_field_name]`.
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% of the fiels are not equal.
+    In `[field_names]`, `[x]`% of the field are not equal.
 
 ---

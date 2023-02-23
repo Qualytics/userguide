@@ -23,10 +23,8 @@
     You can select the same or a different datastore to assert that the compared table/file exists in the source table/file.
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-
-    The `[field_name]` value of '`[x value]`' is not equal to the value of `[compared_field_name]`.
+    The `[field_name]` value of '`[x value]`' does not exist in `[compared_field_name]`.
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% of the fiels are not equal.
-
+    In `[field_names]`, `[x]`% of the filtered values do not exist in `[compared_field_name]`.
 ---
