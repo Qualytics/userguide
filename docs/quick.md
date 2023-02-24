@@ -7,8 +7,6 @@ Want to get started immediately with a high-level overview and typical defaults?
 # Concepts
 Qualytics is the Active Data Quality Platform that enables teams to manage data quality at scale through advanced automation. Qualytics analyzes your historic data for its shapes and patterns in order to infer contextual data quality rules that are then asserted against new data (often in incremental loads) to identify anomalies. When an anomaly is identified, Qualytics provides your team with everything needed to take corrective actions using their existing data tooling & prefered monitoring solutions.
 
-<iframe width="100%" height="460" src="https://www.youtube.com/embed/Dxzt4LRibIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Accessing your Qualytics deployment
 
 * Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. As such, you deployment will be accessible from a custom `URL` specific to your organization.
@@ -113,4 +111,4 @@ After you've obtained access to your deployment, you'll want to:
         The user should be alerted to any failure to scan any Container of the Datastore with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
 
 
-## Monitor `data freshness`
+<!-- ## Monitor `data freshness` -->
