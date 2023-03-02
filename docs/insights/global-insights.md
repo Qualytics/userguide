@@ -2,7 +2,7 @@
 
 - The `Insights` global view is the central hub for all your data monitoring needs. 
 
-- In `Insights` view, we provide a comprehensive monitoring and anomaly detection, giving you the peace of mind that comes with knowing your data is with good quality.
+- In `Insights` view, we provide a comprehensive dashboard monitoring and anomaly detection.
 
 - You can access the `Insights` global view in the main menu
 
@@ -19,8 +19,8 @@
   - Anomaly Detection & Anomaly Resolution
   - SLA Monitoring
 
-    ![Screenshot](../assets/insights/summary-light.png#only-light)
-    ![Screenshot](../assets/insights/summary-dark.png#only-dark)
+    ![Screenshot](../assets/insights/summary-light.png#only-light){: style="height:250px"}
+    ![Screenshot](../assets/insights/summary-dark.png#only-dark){: style="height:250px"}
 
 ## Report Period
 
@@ -34,27 +34,27 @@
 
 - The Profiles chart displays the number of Fields and Records profiled during the week
 
-    ![Screenshot](../assets/insights/profile-chart-light.png#only-light)
-    ![Screenshot](../assets/insights/profile-chart-dark.png#only-dark)
+    ![Screenshot](../assets/insights/profile-chart-light.png#only-light){: style="height:250px"}
+    ![Screenshot](../assets/insights/profile-chart-dark.png#only-dark){: style="height:250px"}
 
 ### Scans
 
 - The Scans chart shows the number of Records Scanned against Anomalies Identified performed over the week.
 
-    ![Screenshot](../assets/insights/scan-chart-light.png#only-light)
-    ![Screenshot](../assets/insights/scan-chart-dark.png#only-dark)
+    ![Screenshot](../assets/insights/scan-chart-light.png#only-light){: style="height:250px"}
+    ![Screenshot](../assets/insights/scan-chart-dark.png#only-dark){: style="height:250px"}
 
 ## SLA
 
 - The SLA chart provides an overview of SLA, including the total number of SLA monitoring that have been performed and any violations that have occurred. 
 
-    ![Screenshot](../assets/insights/sla-chart-light.png#only-light)
-    ![Screenshot](../assets/insights/sla-chart-dark.png#only-dark)
+    ![Screenshot](../assets/insights/sla-chart-light.png#only-light){: style="height:250px"}
+    ![Screenshot](../assets/insights/sla-chart-dark.png#only-dark){: style="height:250px"}
 
 # Anomalies
 
 - The Anomalies chart displays the number of data anomalies detected during the week.
 - This chart can help you identify areas of your data that may require further investigation or improvement.
 
-    ![Screenshot](../assets/insights/anomalies-chart-light.png#only-light)
-    ![Screenshot](../assets/insights/anomalies-chart-dark.png#only-dark)
+    ![Screenshot](../assets/insights/anomalies-chart-light.png#only-light){: style="height:250px"}
+    ![Screenshot](../assets/insights/anomalies-chart-dark.png#only-dark){: style="height:250px"}
