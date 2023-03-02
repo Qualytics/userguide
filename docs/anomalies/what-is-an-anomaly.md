@@ -5,6 +5,10 @@
 ![Screenshot](../assets/anomalies/anomalies-tab-light.png#only-light)
 ![Screenshot](../assets/anomalies/anomalies-tab-dark.png#only-dark)
 
+![Screenshot](../assets/anomalies/anomaly-table-light.png#only-light)
+![Screenshot](../assets/anomalies/anomaly-table-dark.png#only-dark)
+
+
 There are two types of anomalies in Qualytics: `Record` and `Shape`:
 
 * A `Record` Anomaly is at the record-level, where a specific field or a combination of fields are anomalous. 

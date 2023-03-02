@@ -11,35 +11,40 @@
 * Datastore details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
-    1. The `Datastore` name
-    2. The `Location` where this data is stored.
-    3. The `Record Type` of the anomaly.
-    4. The `Date Time` of the anomaly creation.
-
-* Failed Check details:
-    <!-- ![Screenshot](../assets/anomalies/anomaly-details-tab-2.png) -->
+    1. The `# ID` of the anomaly: *__69962__*
+    1. The `Datastore` name: *__AzureSQL - Consolidated Balance__*
+    2. The `Location` where this data is stored: *__qualytics.consolidated_balance.bank__*
+    3. The `Record Type` of the anomaly: *__Shape__*
+    4. The `Tags` are labels that serve the purpose of grouping anomalies and driving downstream workflows:
+        *__High__*
+    5. The `Status` of the selected Anomaly: *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
+    6. The `Detected at` of the anomaly creation time: *__02/21/23 5:40 PM__*
+    
+* Failed Fields details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
 
-    * `Status` of the selected Anomaly   
-        *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
+    * `Field`: all the fields of that specific anomaly found: *__currency__*
 
-    * `Tags`: labels that serve the purpose of grouping anomalies and driving downstream workflows. For more details, see TODO hyperlink the tag   
-        *Users can create new or apply existing tags*
-
-    * `Field`: all the fields of that specific anomaly found   
-        *Users can filter by Field in this view*   
-
-    * `File`/`Table`: datastore in which anomaly was found
-
-    * `Rule`: rule type that failed the assertion(s)  
+    * `Rule`: rule type that failed the assertion(s)
         *You can check all the Rule types [here.](/userguide/checks/what-is)*
     
-    * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)   
+    * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)
 
     * `Coverage` ![Screenshot](../assets/anomalies/coverage-dark.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
 
     * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
+
+     4. The rule type `Tag`
+
+* Source Records:
+
+    Show in a tabular view all the records and fields and highlight records with anomaly data based on the rule type
+
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-3-light.png#only-light)
+    ![Screenshot](../assets/anomalies/anomaly-details-tab-3-dark.png#only-dark)
+        *Users can filter by Field in this view*
+
 
 # Infered check details
 
@@ -58,3 +63,13 @@
 
 !!! info
     You can create a computed table and use multiple fields from different tables in a filter clause
+
+# Suggested remediation
+
+Qualytics can also provide you a suggested value
+
+![Screenshot](../assets/anomalies/suggested-remediation-value-light.png#only-light)
+![Screenshot](../assets/anomalies/suggested-remediation-value-dark.png#only-dark)
+
+![Screenshot](../assets/anomalies/suggested-value-light.png#only-light)
+![Screenshot](../assets/anomalies/suggested-value-dark.png#only-dark)

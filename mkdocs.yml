@@ -24,9 +24,10 @@ nav:
       - datastores/snowflake.md
       - datastores/synapse.md
   - Enrichment Datastores:
-    
     - enrichment/create-enrichment-datastore.md
     - enrichment/associate-enrichment-datastore.md
+  - Insights:
+    - insights/global-insights.md
   - Operations:
     - operations/catalog.md
     - operations/profile.md
