@@ -2,6 +2,7 @@
 
 ## What is Qualytics?
 
+
 * The complete solution to instill `trust` and `confidence` in your enterprise data ecosystem.
     1. With automated `data profiling`, `data quality rule inference`, `anomaly detection` & `remediation`.
 
