@@ -7,17 +7,18 @@
 
 * Find the `Tag` section by clicking on `Settings` in the menu bar:
  
- ![Screenshot](../assets/notifications/settings-tab-light.png#only-light)
- ![Screenshot](../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../assets/notifications/settings-tab-light.png#only-light)
+  ![Screenshot](../assets/notifications/settings-tab-dark.png#only-dark)
 
 * In `Settings` find the `Tag` tab:
  
- ![Screenshot](../assets/tags/tags-tab-light.png#only-light)
- ![Screenshot](../assets/tags/tags-tab-dark.png#only-dark)
+  ![Screenshot](../assets/tags/tags-tab-light.png#only-light)
+  ![Screenshot](../assets/tags/tags-tab-dark.png#only-dark)
 
 * View all the active `tags` or `add` a new one:
- ![Screenshot](../assets/tags/tags-light.png#only-light)
- ![Screenshot](../assets/tags/tags-dark.png#only-dark)
+
+  ![Screenshot](../assets/tags/tags-light.png#only-light)
+  ![Screenshot](../assets/tags/tags-dark.png#only-dark)
 
 ---
 

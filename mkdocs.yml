@@ -91,6 +91,8 @@ nav:
       - notifications/notification-services/webhook.md
   - Tags:
     - tags/what-is-a-tag.md
+  - Security:
+    - security/security-page.md
   - Identifiers:
     - identifiers/what-is-an-identifier.md
   - glossary.md
