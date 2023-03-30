@@ -53,21 +53,27 @@ As an `Admin` user, you can see the security page and navigate through the `User
 
 ### Managing Teams
 
-* In the `Teams` section you can see all the `teams` and also edit a specific one:
+* In the `Teams` section you can see all the `teams` 
 
   ![Screenshot](../assets/security/security-team-overview-light.png#only-light)
   ![Screenshot](../assets/security/security-team-overview-dark.png#only-dark)
 
+* and also edit a specific one:
+
+  ![Screenshot](../assets/security/edit-team-light.png#only-light){: style="height:400px;"}
+  ![Screenshot](../assets/security/edit-team-dark.png#only-dark){: style="height:400px;"}
+
 ### Managing Users
 
+#### Editing Role
 * In the `Users` section you can change the `Permission` to:
-    - Admin
-    - Member
+    - `Admin` or `Member`
 
   ![Screenshot](../assets/security/edit-user-permission-light.png#only-light){: style="height:300px;"}
   ![Screenshot](../assets/security/edit-user-permission-dark.png#only-dark){: style="height:300px;"}
 
-* And also, you can assign a `Team` to the `User`:
+#### Adding or Removing teams
+* You can add/remove a `Team` of an `User`:
 
   ![Screenshot](../assets/security/edit-user-team-light.png#only-light){: style="height:400px;"}
   ![Screenshot](../assets/security/edit-user-team-dark.png#only-dark){: style="height:400px;"}
