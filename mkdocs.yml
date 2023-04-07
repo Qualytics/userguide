@@ -1,5 +1,5 @@
 site_name: User Guide
-#site_url: http://localhost:8001/userguide/
+site_url: http://localhost:8001/userguide/
 nav:
   - index.md
   - quick.md
@@ -95,6 +95,7 @@ nav:
     - security/security-page.md
   - Identifiers:
     - identifiers/what-is-an-identifier.md
+  - changelog/changelog.md
   - glossary.md
 
 extra_css:
