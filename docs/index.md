@@ -1,6 +1,4 @@
-# Getting Started
-
-## What is Qualytics?
+# What is Qualytics?
 
 
 * The complete solution to instill `trust` and `confidence` in your enterprise data ecosystem.
