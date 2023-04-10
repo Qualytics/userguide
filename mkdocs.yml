@@ -1,5 +1,5 @@
 site_name: User Guide
-# site_url: http://localhost:8001/userguide/
+site_url: http://localhost:8001/userguide/
 nav:
   - Getting Started:
     - index.md
@@ -85,19 +85,19 @@ nav:
   - Insights:
     - insights/global-insights.md
   - Global Configurations:
-    - Notifications:  
-      - notifications/what-is-a-notification.md
-      - Type of Notification Services:
-        - notifications/notification-services/email.md
-        - notifications/notification-services/http-action.md
-        - notifications/notification-services/microsoft-teams.md
-        - notifications/notification-services/pagerduty.md
-        - notifications/notification-services/slack.md
-        - notifications/notification-services/webhook.md
-    - Tags:
-      - tags/what-is-a-tag.md
-    - Security:
-      - security/security-page.md
+      - Notifications: 
+        - notifications/what-is-a-notification.md
+        - Type of Notification Services:
+          - notifications/notification-services/email.md
+          - notifications/notification-services/http-action.md
+          - notifications/notification-services/microsoft-teams.md
+          - notifications/notification-services/pagerduty.md
+          - notifications/notification-services/slack.md
+          - notifications/notification-services/webhook.md
+      - Tags:
+        - tags/what-is-a-tag.md
+      - Security:
+        - security/security-page.md
 
   - changelog.md
   - glossary.md
@@ -132,7 +132,10 @@ theme:
     - navigation.sections
     - navigation.top
     - content.tabs.link
+    - navigation.indexes
     - navigation.tabs
+    - navigation.top
+    - navigation.path
   
 markdown_extensions:
   - pymdownx.tabbed:
