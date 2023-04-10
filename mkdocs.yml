@@ -95,7 +95,7 @@ nav:
     - security/security-page.md
   - Identifiers:
     - identifiers/what-is-an-identifier.md
-  - changelog/changelog.md
+  - changelog.md
   - glossary.md
 
 extra_css:
