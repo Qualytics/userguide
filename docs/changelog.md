@@ -1,6 +1,3 @@
-# Changelog
-
-
 ## Qualytics Release Notes
 
 ### 2023.04.07 <small>April 7, 2023</small> { id="2023.04.07" }
