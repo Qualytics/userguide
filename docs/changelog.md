@@ -1,6 +1,4 @@
-## Qualytics Release Notes
-
-### 2023.04.07 <small>April 7, 2023</small> { id="2023.04.07" }
+### 2023.04.07 { id="2023.04.07" }
 
 - We've just deployed an MVP version of the Freshness Dashboard! This feature lets you create, manage, and monitor all of the SLAs for each of your datastores and their child files/tables/containers, all in one place. It's like having a birds-eye view of how your datastores are doing in relation to their freshness.
     - To access the Freshness Dashboard, just locate and click on the clock icon in the top navigation between Insights and Anomalies. By default, you'll see a rollup of all the datastores in a list view with their child files/tables/containers collapsed. Simply click on a datastore row to expand the list.
