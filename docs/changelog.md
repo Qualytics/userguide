@@ -1,3 +1,22 @@
+### 2023.04.19 { id="2023.04.19" }
+
+We're pleased to announce the latest update that includes enhancements to UI for an overall better experience:
+
+- Redesigned Checks and Anomalies listing:
+    - Enjoy a cleaner, more organized layout with more information that makes navigating and managing checks and anomalies even easier.
+
+- Redesigned Anomaly Details view:
+    - The updated anomaly view provides a more thoughtful and organized layout.
+- Improved Filter components:
+    - With a streamlined layout and organized categories, filtering your data is now more intuitive. Dropdown options are now to the right to allow view of the Clear and Apply buttons
+- Updated Importance score to Weight & added SortBy support:
+    - Manage checks and anomalies more effectively with our updated ‘Weight' feature (formerly ‘Importance Score') and the new SortBy support function, allowing you to quickly identify high-priority issues.
+- Added Volumetric measurements to Freshness Dashboard:
+    - Gain valuable insights into your data's scale and storage requirements with our new volumetric measurements. SortBy Row Count or Data Size to make informed decisions about your data resources.
+- Added isReplicaOf check:
+    - The new isReplicaOf check allows you to easily compare data between two different tables or fields, helping you identify and resolve data inconsistencies across your datastores.
+- General fixes and performance improvements
+
 ### 2023.04.07 { id="2023.04.07" }
 
 - We've just deployed an MVP version of the Freshness Dashboard! This feature lets you create, manage, and monitor all of the SLAs for each of your datastores and their child files/tables/containers, all in one place. It's like having a birds-eye view of how your datastores are doing in relation to their freshness.
