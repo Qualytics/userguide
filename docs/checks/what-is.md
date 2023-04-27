@@ -19,8 +19,6 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
     ![Screenshot](../assets/checks/all-quality-checks-light.png#only-light)
     ![Screenshot](../assets/checks/all-quality-checks-dark.png#only-dark)
 
-    ![Screenshot](../assets/checks/quality-checks-only-light.png#only-light)
-    ![Screenshot](../assets/checks/quality-checks-only-dark.png#only-dark)
 
 ---
 # List of rule types
