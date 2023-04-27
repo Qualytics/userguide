@@ -14,12 +14,3 @@
     ![Screenshot](../assets/anomalies/anomalies-overviews-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomalies-overviews-dark.png#only-dark)
 
-
----
-
-# List of all the anomalies
-
-* List all anomalies from all Datastores, with ability to filter to specifics
-
-    ![Screenshot](../assets/anomalies/list-of-all-anomalies-light.png#only-light)
-    ![Screenshot](../assets/anomalies/list-of-all-anomalies-dark.png#only-dark)

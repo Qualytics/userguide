@@ -19,8 +19,6 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
     ![Screenshot](../assets/checks/all-quality-checks-light.png#only-light)
     ![Screenshot](../assets/checks/all-quality-checks-dark.png#only-dark)
 
-    ![Screenshot](../assets/checks/quality-checks-only-light.png#only-light)
-    ![Screenshot](../assets/checks/quality-checks-only-dark.png#only-dark)
 
 ---
 # List of rule types
@@ -62,6 +60,9 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 *   `Greater Than Field`: Asserts that this field is greater than another field.
                                                 
 *   `Is Credit Card`: Asserts that the values are credit card numbers.
+
+
+*   `Is Replica Of`: Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).
                                                   
 *   `Less Than`: Asserts that the field is a number less than (or equal to) a value.
                                         

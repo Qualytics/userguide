@@ -17,6 +17,14 @@ We're pleased to announce the latest update that includes enhancements to UI for
     - The new isReplicaOf check allows you to easily compare data between two different tables or fields, helping you identify and resolve data inconsistencies across your datastores.
 - General fixes and performance improvements
 
+#### Checks Listing Page
+
+<iframe width="760" height="415" src="https://www.loom.com/embed/22b561a7d4764e9d9876ba7515084c10" title="Checks Listing Page" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Anomalies Listing Page & Dialog
+
+<iframe width="760" height="415" src="https://www.loom.com/embed/6e975e5297bb4daa95ed4a1b52fd8648" title="Anomalies Listing Page & Dialog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### 2023.04.07 { id="2023.04.07" }
 
 - We've just deployed an MVP version of the Freshness Dashboard! This feature lets you create, manage, and monitor all of the SLAs for each of your datastores and their child files/tables/containers, all in one place. It's like having a birds-eye view of how your datastores are doing in relation to their freshness.
