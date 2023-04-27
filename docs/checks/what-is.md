@@ -60,6 +60,9 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 *   `Greater Than Field`: Asserts that this field is greater than another field.
                                                 
 *   `Is Credit Card`: Asserts that the values are credit card numbers.
+
+
+*   `Is Replica Of`: Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).
                                                   
 *   `Less Than`: Asserts that the field is a number less than (or equal to) a value.
                                         

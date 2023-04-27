@@ -21,3 +21,7 @@
 
     ![Screenshot](../assets/checks/infered-check-details-light.png#only-light)
     ![Screenshot](../assets/checks/infered-check-details-dark.png#only-dark)
+
+icon-anomalies-alert
+!!! note
+    * By clicking in the  ![Screenshot](../assets/checks/rule-types/icons/icon-anomalies-alert.svg) icon, you can bulk update all the anomalies of the related check
