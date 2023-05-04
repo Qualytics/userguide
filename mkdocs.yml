@@ -1,107 +1,115 @@
-site_name: User Guide
-# site_url: http://localhost:8001/userguide/
+site_name: Qualytics User Guide
+site_url: https://qualytics.github.io/userguide/
+site_description: User Guide for the Qualytics data quality platform
+site_author: Qualytics Team
+
+repo_url: https://github.com/Qualytics/userguide
+edit_uri: blob/main/docs/
+copyright: Copyright &copy; 2020 - 2023 Qualytics
+
 nav:
   - Getting Started:
     - index.md
     - quick.md
-  - Add Datastores:
-    - datastores/what-is-datastore.md
-    - enrichment/what-is-enrichment.md
-    - datastores/what-is-qfs.md
-    - Creating new datastores:
-      - datastores/amazon-s3.md
-      - datastores/azure-blob-storage.md
-      - datastores/azure-datalake-storage.md
-      - datastores/bigquery.md
-      - datastores/databricks.md
-      - datastores/google-cloud-storage.md
-      - datastores/maria-db.md
-      - datastores/microsoft-sql-server.md
-      - datastores/mysql.md
-      - datastores/oracle.md
-      - datastores/postgresql.md
-      - datastores/qfs.md
-      - datastores/redshift.md
-      - datastores/snowflake.md
-      - datastores/synapse.md
+  - Reference:
+    - Datastores:
+      - datastores/what-is-datastore.md
+      - Add a datastore:
+        - datastores/amazon-s3.md
+        - datastores/azure-blob-storage.md
+        - datastores/azure-datalake-storage.md
+        - datastores/bigquery.md
+        - datastores/databricks.md
+        - datastores/google-cloud-storage.md
+        - datastores/maria-db.md
+        - datastores/microsoft-sql-server.md
+        - datastores/mysql.md
+        - datastores/oracle.md
+        - datastores/postgresql.md
+        - datastores/qfs.md
+        - datastores/redshift.md
+        - datastores/snowflake.md
+        - datastores/synapse.md
+      - Data Quality Checks:
+        - checks/what-is.md
+        - checks/what-is-an-authored-check.md
+        - checks/what-is-an-inferred-check.md
+        - Check Rule Types:
+          - After Date: checks/after-date-check.md
+          - Any Not Null: checks/any-not-null-check.md
+          - Before Date Time: checks/before-date-time-check.md
+          - Between: checks/between-check.md
+          - Between Times: checks/between-times-check.md
+          - Contains Credit Card: checks/contains-credit-card-check.md
+          - Contains Email: checks/contains-email-check.md
+          - Contains Social Security Number: checks/contains-social-security-number-check.md
+          - Contains Url: checks/contains-url.md
+          - Data Type: checks/data-type-check.md
+          - Distinct: checks/distinct-check.md
+          - Distinct Count: checks/distinct-count-check.md
+          - Equal To Field: checks/equal-to-field-check.md
+          - Exists In: checks/exists-in-check.md
+          - Expected Values: checks/expected-values-check.md
+          - Field Count: checks/field-count-check.md
+          - Greater Than: checks/greater-than-check.md
+          - Greater Than Field: checks/greater-than-field-check.md
+          - Is Credit Card: checks/is-credit-card-check.md
+          - Is Replica Of: checks/is-replica-of-check.md
+          - Less Than: checks/less-than-check.md
+          - Less Than Field: checks/less-than-field-check.md
+          - Matches Pattern: checks/matches-pattern-check.md
+          - Max Length: checks/max-length-check.md
+          - Max Value: checks/max-value-check.md
+          - Min Length: checks/min-length-check.md
+          - Min Partition Size: checks/min-partition-size-check.md
+          - Min Value: checks/min-value-check.md
+          - Not Future: checks/not-future-check.md
+          - Not Negative: checks/not-negative-check.md
+          - Not Null: checks/not-null-check.md
+          - Positive: checks/positive-check.md
+          - Predicted By: checks/predicted-by-check.md
+          - Required Fields: checks/required-fields-check.md
+          - Required Values: checks/required-values-check.md
+          - Satisfies Equation: checks/satisfies-equation-check.md
+          - Sum: checks/sum-check.md
+          - Time Distribution Size: checks/time-distribution-size-check.md
+          - Unique: checks/unique-check.md
+          - User Defined Function: checks/user-defined-function-check.md
+      - Datastore Operations:
+        - operations/catalog.md
+        - operations/profile.md
+        - operations/scan.md
     - Enrichment Datastores:
-      - enrichment/create-enrichment-datastore.md
-      - enrichment/associate-enrichment-datastore.md
-    - Operations:
-      - operations/catalog.md
-      - operations/profile.md
-      - operations/scan.md
-    - Identifiers:
-      - identifiers/what-is-an-identifier.md
-  - Find Anomalies:
-    - Data Quality Checks:
-      - checks/what-is.md
-      - checks/what-is-an-authored-check.md
-      - checks/what-is-an-inferred-check.md
-      - Check Rule Types:
-        - After Date: checks/after-date-check.md
-        - Any Not Null: checks/any-not-null-check.md
-        - Before Date Time: checks/before-date-time-check.md
-        - Between: checks/between-check.md
-        - Between Times: checks/between-times-check.md
-        - Contains Credit Card: checks/contains-credit-card-check.md
-        - Contains Email: checks/contains-email-check.md
-        - Contains Social Security Number: checks/contains-social-security-number-check.md
-        - Contains Url: checks/contains-url.md
-        - Data Type: checks/data-type-check.md
-        - Distinct: checks/distinct-check.md
-        - Distinct Count: checks/distinct-count-check.md
-        - Equal To Field: checks/equal-to-field-check.md
-        - Exists In: checks/exists-in-check.md
-        - Expected Values: checks/expected-values-check.md
-        - Field Count: checks/field-count-check.md
-        - Greater Than: checks/greater-than-check.md
-        - Greater Than Field: checks/greater-than-field-check.md
-        - Is Credit Card: checks/is-credit-card-check.md
-        - Is Replica Of: checks/is-replica-of-check.md
-        - Less Than: checks/less-than-check.md
-        - Less Than Field: checks/less-than-field-check.md
-        - Matches Pattern: checks/matches-pattern-check.md
-        - Max Length: checks/max-length-check.md
-        - Max Value: checks/max-value-check.md
-        - Min Length: checks/min-length-check.md
-        - Min Partition Size: checks/min-partition-size-check.md
-        - Min Value: checks/min-value-check.md
-        - Not Future: checks/not-future-check.md
-        - Not Negative: checks/not-negative-check.md
-        - Not Null: checks/not-null-check.md
-        - Positive: checks/positive-check.md
-        - Predicted By: checks/predicted-by-check.md
-        - Required Fields: checks/required-fields-check.md
-        - Required Values: checks/required-values-check.md
-        - Satisfies Equation: checks/satisfies-equation-check.md
-        - Sum: checks/sum-check.md
-        - Time Distribution Size: checks/time-distribution-size-check.md
-        - Unique: checks/unique-check.md
-        - User Defined Function: checks/user-defined-function-check.md
+      - enrichment/what-is-enrichment.md
+      - Add an Enrichment Datastore:
+        - enrichment/create-enrichment-datastore.md
+        - enrichment/associate-enrichment-datastore.md
+    - Insights:
+      - insights/global-insights.md
+    - Freshness:
+      - freshness/global-freshness.md
     - Anomalies:
-      - anomalies/what-is-an-anomaly.md
-      - anomalies/anomaly-details.md
-      - anomalies/universal-anomaly.md
-  - Freshness:
-    - freshness/global-freshness.md
-  - Insights:
-    - insights/global-insights.md
-  - Global Configurations:
-      - Notifications: 
-        - notifications/what-is-a-notification.md
-        - Type of Notification Services:
-          - notifications/notification-services/email.md
-          - notifications/notification-services/http-action.md
-          - notifications/notification-services/microsoft-teams.md
-          - notifications/notification-services/pagerduty.md
-          - notifications/notification-services/slack.md
-          - notifications/notification-services/webhook.md
-      - Tags:
-        - tags/what-is-a-tag.md
-      - Security:
-        - security/security-page.md
-
+      - Anomalies:
+        - anomalies/what-is-an-anomaly.md
+        - anomalies/anomaly-details.md
+        - anomalies/universal-anomaly.md
+    - Global Configurations:
+        - Notifications:
+          - notifications/what-is-a-notification.md
+          - Type of Notification Services:
+            - notifications/notification-services/email.md
+            - notifications/notification-services/http-action.md
+            - notifications/notification-services/microsoft-teams.md
+            - notifications/notification-services/pagerduty.md
+            - notifications/notification-services/slack.md
+            - notifications/notification-services/webhook.md
+        - Tags:
+          - tags/what-is-a-tag.md
+        - Security:
+          - security/security-page.md
+    - FAQ:
+      - identifiers/what-is-an-identifier.md
+      - quality-scores/what-are-quality-scores.md
   - changelog.md
   - glossary.md
 
@@ -139,7 +147,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.path
-  
+
 markdown_extensions:
   - pymdownx.tabbed:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -147,7 +155,7 @@ markdown_extensions:
           case: lower
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - admonition
   - pymdownx.snippets
   - attr_list

@@ -68,13 +68,13 @@
 
  <a name="precision"></a>__Precision__: Your data is the resolution that is expected- How tightly can you define your data?
 
- <a name="profile"></a>__Profile Operation __: an operation that generates metadata describing the characteristics of your actual data values.
+ <a name="profile"></a>__Profile Operation__: an operation that generates metadata describing the characteristics of your actual data values.
 
  <a name="profiling"></a>__Profiling__: The process of collecting statistics on the characteristics of a dataset involving examining, analyzing, and reviewing the data.
 
  <a name="proprietary"></a>__Proprietary Algorithms__: A procedure utilizing a combination of processes, tools, or systems of interrelated connections that are the property of a business or individual in order to solve a problem. (**)
 
- <a name="quality"></a>__Quality Score__: a proprietary measure of data quality as measured at the Field, Container, Partition, and Datastore level.  Quality Scores include both a spot score that measure the ratio of anomalies in a set at a given time as well as a measure of the change of that ratio versus the average for the last 30 days.
+ <a name="quality"></a>__Quality Score__: a measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/quality-scores/quality-scoring).
 
  <a name="app"></a>__Qualytics App__: aka “App” this is the user interface for our Product delivered as a web application
 

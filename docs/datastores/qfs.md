@@ -1,5 +1,14 @@
 # Qualytics File System (QFS)
 
+## What is a QFS?
+
+* A `QFS` or `Qualytics FileSystem` is a datastore option that Qualytics manages & controls.
+
+* This is convenient for end-users who do not have or do not wish to configure their own datastores but would like to load data onto a datastore managed by Qualytics.
+
+* With a QFS datastore, end-users are able to upload Qualytics readable files (Excel, CSVs, Json) directly through the Qualytics user-interface.
+
+
 ## Steps to setup QFS
 
 ---
@@ -13,12 +22,12 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 ![Screenshot](../assets/datastores/test-connection/test-connection-light.png#only-light){: style="width:450px;"}
 ![Screenshot](../assets/datastores/test-connection/test-connection-dark.png#only-dark){: style="width:450px;"}
 
-!!! warning 
+!!! warning
     By clicking on the `Finish` button, it will create the Datastore and skipping the configuration of an Enrichment Datastore.
 
     - To configure an Enrichment Datastore in another moment, please refer [to this section](/userguide/enrichment/create-enrichment-datastore/)
 
-!!! note 
+!!! note
     It is important to associate an `Enrichment Datastore` with your new Datastore
 
     - The `Enrichment Datastore` will allow Qualytics to record `enrichment data`, copies of the source `anomalous data` and additional `metadata` for your `Datastore`
@@ -37,7 +46,7 @@ Once the form is completed, it's necessary to test the connection. A successful 
 ![Screenshot](../assets/enrichment/test-connection-light.png#only-light){: style="width:450px;"}
 ![Screenshot](../assets/enrichment/test-connection-dark.png#only-dark){: style="width:450px;"}
 
-!!! warning 
+!!! warning
     By clicking on the `Finish` button, it will create the Datastore and link or create the Enrichment Datastore
 
 ---
