@@ -10,7 +10,7 @@ copyright: Copyright &copy; 2020 - 2023 Qualytics
 
 nav:
   - Getting Started:
-    - getting-started.md
+    - index.md
     - quick-start-guide.md
     # - Common Usecases:
     #   - usecases/metadata-analysis.md
