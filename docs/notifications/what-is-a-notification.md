@@ -1,6 +1,6 @@
 # What is a Notification?
 
-* `Notifications` allow users to send alerts / notifications through a myriad of supported systems. Notifications can drive downstream workflows as well as alerts, and are utilized via `Tags`.
+* `Notifications` supports delivering messages in response to a specified event using any number of supported integrations. Notifications can drive downstream workflows as well as alert users in realtime to data quality concerns.
 
 ---
 

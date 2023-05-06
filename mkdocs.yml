@@ -1,16 +1,21 @@
-site_name: Qualytics User Guide
+site_name: User Guide
 site_url: https://qualytics.github.io/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
 repo_url: https://github.com/Qualytics/userguide
+repo_name: GitHub
 edit_uri: blob/main/docs/
 copyright: Copyright &copy; 2020 - 2023 Qualytics
 
 nav:
   - Getting Started:
-    - index.md
-    - quick.md
+    - getting-started.md
+    - quick-start-guide.md
+    # - Common Usecases:
+    #   - usecases/metadata-analysis.md
+    #   - usecases/automated-anomaly-detection.md
+    #   - usecases/initiate-corrective-action.md
   - Reference:
     - Datastores:
       - datastores/what-is-datastore.md
@@ -89,10 +94,9 @@ nav:
     - Freshness:
       - freshness/global-freshness.md
     - Anomalies:
-      - Anomalies:
-        - anomalies/what-is-an-anomaly.md
-        - anomalies/anomaly-details.md
-        - anomalies/universal-anomaly.md
+      - anomalies/what-is-an-anomaly.md
+      - anomalies/anomaly-details.md
+      - anomalies/universal-anomaly.md
     - Global Configurations:
         - Notifications:
           - notifications/what-is-a-notification.md
@@ -110,8 +114,9 @@ nav:
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
-  - changelog.md
   - glossary.md
+  - API Reference: https://demo.qualytics.io/api/docs
+  - changelog.md
 
 extra_css:
   - stylesheets/extra.css
@@ -142,6 +147,9 @@ theme:
     - navigation.tracking
     - navigation.sections
     - navigation.top
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
     - content.tabs.link
     - navigation.indexes
     - navigation.tabs

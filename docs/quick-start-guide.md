@@ -9,7 +9,7 @@ Qualytics is the Active Data Quality Platform that enables teams to manage data 
 
 ## Accessing your Qualytics deployment
 
-* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. As such, you deployment will be accessible from a custom `URL` specific to your organization.
+* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. As such, your deployment will be accessible from a custom `URL` specific to your organization.
 
 * For example, ACME's Qualytics deployment might be published here:
     1. `https://acme.qualytics.io`
@@ -44,14 +44,14 @@ After you've obtained access to your deployment, you'll want to:
     2. `None` - no enrichment data will be recorded for this Datastore. This severely limits functionality for Qualytics to detect anomalies and is not recommended.
 
     !!! info
-        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Datastores along with the ability to configure a new Enrichment Datastore to serve as this new Datastore’s enrichment location. 
+        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Datastores along with the ability to configure a new Enrichment Datastore to serve as this new Datastore’s enrichment location.
         * The flow to configure an Enrichment Datastore only differs from the non-Enrichment Datastore in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
 
 * When the Datastore connection details are submitted:
-    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Compute Daemon. 
-    2. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as `connected` and initiate an asynchronous Catalog operation on success.  
+    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Compute Daemon.
+    2. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as `connected` and initiate an asynchronous Catalog operation on success.
     3. If any future Operation is unable to establish a connection to the Datastore:
-        1. The connected property of the Datastore will be set `false`.  
+        1. The connected property of the Datastore will be set `false`.
         2. The UI will `warn`/`prompt` users to address any such Datastore connectivity issues.
 
 
@@ -77,19 +77,19 @@ After you've obtained access to your deployment, you'll want to:
 
 * Two concrete examples of sophisticated rule types automatically inferred at this stage are:
     1. A sophisticated normality test is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
-    2. Linear regression models are automatically generated to fit any highly correlated fields in the same table. 
-    !!!info 
+    2. Linear regression models are automatically generated to fit any highly correlated fields in the same table.
+    !!!info
         If a good fit model is identified, it is recorded as a predicting model for those correlated fields and used to identify future anomalies.
 
 ## `Scan` for anomalies
 
 * Upon completion of the initial Profile Operation the user is able to initiate a `Scan Operation`.
 
-* Qualytics will initiate a “`Full`” `Scan` for the initial Scan by default.  
+* Qualytics will initiate a “`Full`” `Scan` for the initial Scan by default.
 
     !!!info
-        * This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks. 
-        * The user should be able to monitor the progress of the Scan Operation and be alerted to its completion. 
+        * This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks.
+        * The user should be able to monitor the progress of the Scan Operation and be alerted to its completion.
         * If the user signed out before completion, the user should be alerted to the completion upon next sign in.
 
 ### Presenting Scan Operation Results
