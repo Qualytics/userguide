@@ -1,5 +1,6 @@
 # Qualytics Security page
-#### Introducing Role-based Access Control - a powerful new feature that lets you create teams and limit access to specific datastores. With this feature, you can ensure that only the right people have access to the right data, giving you peace of mind and better control over your information. Check out this section to learn how to set up and use Role-based Access Control in your account.
+Introducing Role-based Access Control - a powerful new feature that lets you create teams and limit access to specific datastores. With this feature, you can ensure that only the right people have access to the right data, giving you peace of mind and better control over your information. Check out this section to learn how to set up and use Role-based Access Control in your account.
+
 * By default, all users have access to all datastores. If you want to limit access, all you have to do is create a new team, add members, add datastores, and choose whether they should have read or write access. 
 * Please note that only admins have the ability to add new datastores, manage users/teams, and access API keys.
 * Speaking of API keys, we’ve also made it easier for you to access them. With this new update, you’ll need to update your API keys as soon as possible to avoid any interruption of service.
