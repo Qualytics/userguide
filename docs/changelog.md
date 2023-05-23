@@ -1,3 +1,24 @@
+### 2023.05.23 { id="2023.05.23" }
+#### Feature Enhancements
+- Scheduled operation editing
+    - Added the ability for users to edit a scheduled operation. This allows users to make changes to the schedule, the operation, or the target datastore.
+- Catalog include filters
+    - Added catalog include filters to only process tables, views, or both in JDBC datastores. This allows users to control which object types are processed in the datastore.
+- isReplicaOf check filters
+    - Added filter support to the isReplicaOf check. This allows users to control which tables are checked for replication.
+- Side panel updates
+    - Updated side panel design and added an enrichment redirect option.
+#### Added Support
+- IBM DB2 datastore
+    - Added support for the IBM DB2 datastore. This allows users to connect to and process data from IBM DB2 databases.
+- API support for tagging fields
+    - Added API support for tagging fields. This allows users to tag fields in the datastore with custom metadata.
+#### Bug Fixes
+- Freshness attempting to measure views
+    - Fixed an issue with freshness attempting to measure views.
+- Enrichment to Redshift and string data types
+    - Fixed an issue with enrichment to Redshift and string data types. This issue caused enrichment to fail for tables that contained string data types
+
 ### 2023.05.10 { id="2023.05.10" }
 #### Container Settings
 - Introducing the ability to Group fields for improved insights and profiling precision.
