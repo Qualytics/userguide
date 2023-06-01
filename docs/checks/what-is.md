@@ -94,7 +94,7 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 
 *   `Required Values`: Asserts that all of the defined values must be present at least once within a field.
 
-*   `Satisfies Equation`: Evaluates the given equation (any valid `Spark SQL`) for each record.
+*   `Satisfies Expression`: Evaluates the given expression (any valid `Spark SQL`) for each record.
 
 *   `Sum`: Asserts that the sum of a field is a specific amount.
 
