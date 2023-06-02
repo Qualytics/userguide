@@ -67,7 +67,7 @@
 
  - aka “Check” is an expression regarding the values of a Container that can be evaluated to determine whether the actual values are expected or not.
 
-### <a name="datastore"></a>__Datastore__:
+### <a name="datastore"></a>__Datastore__
 
  - Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/datastores/what-is-datastore).
 
