@@ -1,6 +1,6 @@
 # User Guide: Introduction to Qualytics
 
-Welcome to the user guide for Qualytics! This comprehensive platform empowers teams to ensure the accuracy and reliability of their data on a large scale. By leveraging advanced automation and cutting-edge features, Qualytics enables effective data quality management. With Qualytics, you can instill confidence in the quality of your enterprise data.
+Qualytics is the Active Data Quality Platform that enables teams to manage data quality at scale through advanced automation. Qualytics analyzes your historic data for its shapes and patterns in order to infer contextual data quality rules that are then asserted against new data (often in incremental loads) to identify anomalies. When an anomaly is identified, Qualytics provides your team with everything needed to take corrective actions using their existing data tooling & prefered monitoring solutions.
 
 ## Managing Data Quality
 
@@ -8,11 +8,11 @@ With Qualytics, your data teams can quickly address data issues in a proactive w
 
 Here's how it works:
 
-1. **Analyzing Historical Data**: Qualytics examines your past data to understand its patterns and characteristics, allowing it to create rules that define good data quality.
+1. **Analyzing Historical Data**: Qualytics examines your historical data to understand its patterns and characteristics, allowing it to create rules that define good data quality.
 
 2. **Finding Anomalies**: These rules, combined with any rules you create yourself, are used to identify any abnormalities or inconsistencies in your historical data or new data (even when new data is added incrementally).
 
-3. **Taking Corrective Actions**: When an anomaly is detected, Qualytics helps your team take appropriate actions. Utilzing tags, it can send notifications through the platforms you use (such as Teams, Slack, or PagerDuty), trigger workflows in tools like Airflow, Fivetran or Airbyte, provide additional information about the anomaly to your chosen datastore (compatible with SQL-based integrations like DBT), and even suggest the best course of action through its user interface and API.
+3. **Taking Corrective Actions**: When an anomaly is detected, Qualytics helps your team take appropriate actions. Utilzing tags, it can send notifications through the platforms you use (such as Teams, Slack, or PagerDuty), trigger workflows in tools (like Airflow, Fivetran or Airbyte), provide additional information about the anomaly to your chosen datastore (compatible with SQL-based integrations like DBT), and even suggest the best course of action through its user interface and API.
 
 4. **Continuous Monitoring and Improvement**: Qualytics continuously monitors and scores your data quality. It keeps your quality checks up to date, taking into account any changes in your actual data and your business needs. This ongoing process helps improve your overall data quality and boosts trust and confidence in your organization's data.
 
@@ -30,6 +30,10 @@ Qualytics offers a range of powerful features designed to enhance your data qual
 
 4. **Anomaly Remediation**: Once anomalies are detected, Qualytics provides the necessary tools to take corrective actions. It enables you to seamlessly integrate with your preferred data tooling and initiate remediation workflows. This ensures that data outliers are addressed promptly and efficiently.
 
+5. **Freshness Monitoring**: Qualytics includes functionality for monitoring data freshness Service Level Agreements (SLAs). It allows you to define and track SLAs for the timeliness of data updates, ensuring that your data remains up-to-date and meets the required service level agreements.
+
+6. **Insights Dashboard**: Qualytics provides an intuitive executive dashboard called Insights. This dashboard gives you a holistic view of the health and quality of your data. You can easily visualize key data quality metrics, track progress, and gain actionable insights. With the executive dashboard, you can make informed decisions and drive data-driven strategies for your organization.
+
 ## Seamless Integration and Deployment
 
 Qualytics offers flexible integration options to fit your data infrastructure seamlessly:
@@ -39,24 +43,12 @@ Qualytics offers flexible integration options to fit your data infrastructure se
 - **Support for Modern & Legacy Data Stacks**: Qualytics seamlessly integrates with a wide range of data platforms. From modern solutions like Snowflake and Amazon S3 to legacy systems like Oracle and MSSQL, Qualytics supports your data stack. This versatility ensures that data quality remains a priority across all your data sources.
 
 ## Demo
-As a quick reference, here is a short video demonstrating the platform with a quick walkthrough:
+Here is a short video demonstrating the platform with a quick walkthrough:
 <iframe width="760" height="415" src="https://www.loom.com/embed/788412013bd34366a1800fee54190379" title="Qualytics - Full Demo of Qualytics Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
-## Simple Implementation Steps
-
-To implement a robust data management process using Qualytics, follow these straightforward steps:
-
-1. **Add Your Datastores**: Use the intuitive web app or API provided by Qualytics to add your datastores. This allows the platform to connect and work with your data seamlessly. We recommend adding at least one Enrichment Datastore, which helps in identifying and addressing anomalous data more easily.
-
-2. **Run a Profile Operation**: Perform a Profile Operation on your chosen datastore. This operation generates valuable metadata insights for all the data assets within the store. It also automatically infers customized data quality checks based on the profiled data.
-
-3. **Scan and Assert Data Quality Checks**: Initiate a scan of your datastore to assert the automatically inferred checks (as well as any additional checks you create) against both historical and new data within the store. This step ensures that your data is thoroughly evaluated for any anomalies.
-
-4. **Review and Flag Anomalies**: After the scan, review the identified anomalies and flag them with the appropriate status. Qualytics learns from your business and preferences during this process, adapting its future operations to better suit your needs.
-
-By following these simple steps, you can leverage the power of Qualytics to implement a robust data management process tailored to your organization's requirements.
+<!-- moved Implementation to Quick Start -->
 
 ## Get Started
 
