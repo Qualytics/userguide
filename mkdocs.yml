@@ -115,6 +115,10 @@ nav:
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
+    - Misc:
+      - sso/sso.md
+      - deployments/deployments.md
+
   - glossary.md
   - API Reference: https://demo.qualytics.io/api/docs
   - changelog.md
@@ -150,7 +154,6 @@ theme:
     - navigation.path    
     - navigation.sections
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - content.action.edit

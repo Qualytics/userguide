@@ -1,3 +1,25 @@
+### 2023.06.02 { id="2023.06.02" }
+### General Fixes
+- Added GCS connector with Keyfile support:
+    - The GCS connector now supports Keyfile authentication, allowing users to securely connect to Google Cloud Storage.
+
+- Improved BigQuery connector by removing unnecessary inputs:
+    - Enhancements have been made to the BigQuery connector by streamlining the inputs, eliminating any unnecessary fields or options.
+    - This results in a more user-friendly and efficient experience.
+
+- Renamed satisfiesEquation to satisfiesExpression:
+    - The function "satisfiesEquation" has been renamed to "satisfiesExpression" to better reflect its functionality.
+    - This change makes it easier for users to understand and use the function.
+
+### Added Support
+- Added Check Description to Notification rule messages:
+    - Notification rule messages now include the Check Description.
+    - This allows users to add additional context and information about the specific rule triggering the notification and passing that information to downstream workflows.
+  
+- Added API support for tuning operations with a high correlation threshold for profiles and high count rollup threshold for anomalies in scan:
+    - The API now supports tuning operations by allowing users to set a higher correlation threshold for profiles.
+    - It also enables users to set a higher count rollup threshold for anomalies in scan.
+    - This customization capability helps users fine-tune the behavior of the system according to their specific needs and preferences.
 ### 2023.05.26 { id="2023.05.26" }
 #### Usability
 - Improved the navigation in the Activity tab’s side panel for easier and more intuitive browsing including exposing the ability to comment directly into an anomaly
