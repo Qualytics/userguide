@@ -1,12 +1,12 @@
-# DB2
+# Timescale DB
 
-## Steps to setup DB2
+## Steps to setup Timescale DB
 
 ---
 Fill the form with the credentials of your data source.
 
-![Screenshot](../assets/datastores/db2/create-datastore-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/datastores/db2/create-datastore-dark.png#only-dark){: style="width:450px;"}
+![Screenshot](../assets/datastores/timescale-db/create-datastore-light.png#only-light){: style="width:450px;"}
+![Screenshot](../assets/datastores/timescale-db/create-datastore-dark.png#only-dark){: style="width:450px;"}
 
 Once the form is completed, it's necessary to test the connection to verify if Qualytics is able to connect to your source of data. A successful message will be shown:
 
@@ -25,12 +25,15 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 
 ## Configuring an Enrichment Datastore
 
-- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list
 
-- If you don't have an `Enrichment Datastore`, you can create one at the same page:
+!!! warning 
+    Qualytics does not support `Timescale DB` connector as an enrichment datastore, but you can point to a different connector.
 
-    ![Screenshot](../assets/enrichment/db2/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/enrichment/db2/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+    - To configure an Enrichment Datastore in another moment, please refer [to this section](/userguide/enrichment/create-enrichment-datastore/)
+
+- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list.
+
+- If you don't have an `Enrichment Datastore`, you can create one at the same page.
 
 Once the form is completed, it's necessary to test the connection. A successful message will be shown:
 
@@ -46,19 +49,20 @@ Once the form is completed, it's necessary to test the connection. A successful 
 
 * The datastore name  to be created in Qualytics App
 
-### `Hostname` <spam id='required'>`required`</spam>
+### `Host` <spam id='required'>`required`</spam>
 
 * The address of the server to connect to. This address can be a DNS or IP address.
+
 ### `Port` <spam id='required'>`required`</spam>
 
 * The port to connect to on serverName. 
-* The default is `50000`. 
+* The default is `5432`. 
 
     `Note: If you're using the default, you don't have to specify the port`
 
 ### `Database` <spam id='required'>`required`</spam>
 
-* The `database` instance name to be connected.
+* The `database` name to be connected.
 
 ### `Schema` <spam id='required'>`required`</spam>
 
@@ -66,12 +70,8 @@ Once the form is completed, it's necessary to test the connection. A successful 
 
 ### `User` <spam id='required'>`required`</spam>
 
-* The `user` to connect in DB2.
+* The `user` to connect in Timescale DB.
 
 ### `Password` <spam id='required'>`required`</spam>
 
-* The `password` to connect in DB2.
-
-### `SSL Connection` <spam id='required'>`required`</spam>
-
-* Enables the `SSL Connection`. Default is disabled.
+* The `password` to connect in Timescale DB.
