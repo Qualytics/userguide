@@ -44,38 +44,38 @@
       * Qualytics App will use the `variables` to customize your messages.
       * Variables available by `Operation` when:
         * An operation Completes:
-          * `{{rule_name}}`
-          * `{{target_link}}`
-          * `{{datastore_name}}`
-          * `{{operation_message}}`
-          * `{{operation_type}}`
-          * `{{operation_result}}`
+            * `{{rule_name}}`
+            * `{{target_link}}`
+            * `{{datastore_name}}`
+            * `{{operation_message}}`
+            * `{{operation_type}}`
+            * `{{operation_result}}`
         * Anomalies are detected in a Table or File:
-          * `{{rule_name}}`
-          * `{{target_link}}`
-          * `{{datastore_name}}`
-          * `{{anomaly_count}}`
-          * `{{scan_target_name}}`
-          * `{{anomaly_message}}`
-          * `{{check_description}}`
+            * `{{rule_name}}`
+            * `{{target_link}}`
+            * `{{datastore_name}}`
+            * `{{anomaly_count}}`
+            * `{{scan_target_name}}`
+            * `{{anomaly_message}}`
+            * `{{check_description}}`
         * An Anomaly is Detected:
-          * `{{rule_name}}`
-          * `{{target_link}}`
-          * `{{datastore_name}}`
-          * `{{anomaly_message}}`
-          * `{{anomaly_type}}`
-          * `{{check_description}}`
+            * `{{rule_name}}`
+            * `{{target_link}}`
+            * `{{datastore_name}}`
+            * `{{anomaly_message}}`
+            * `{{anomaly_type}}`
+            * `{{check_description}}`
         * Freshness SLA Violation:
-          * `{{rule_name}}`
-          * `{{target_link}}`
-          * `{{datastore_name}}`
-          * `{{container_name}}`
-          * `{{freshness_violation_started}}`
-          * `{{container_last_modified_time}}`
-  * `Notification channel`: how notification should be delivered:
-    * `Email`.
-    * `Http Action`.
-    * `Microsoft Teams`.
-    * `PagerDuty`.
-    * `Slack`.
-    * `Webhook`.
+            * `{{rule_name}}`
+            * `{{target_link}}`
+            * `{{datastore_name}}`
+            * `{{container_name}}`
+            * `{{freshness_violation_started}}`
+            * `{{container_last_modified_time}}`
+    * `Notification channel`: how notification should be delivered:
+          * `Email`.
+          * `Http Action`.
+          * `Microsoft Teams`.
+          * `PagerDuty`.
+          * `Slack`.
+          * `Webhook`.
