@@ -57,14 +57,14 @@
           * `{{anomaly_count}}`
           * `{{scan_target_name}}`
           * `{{anomaly_message}}`
-          * `{{anomaly_description}}`
+          * `{{check_description}}`
         * An Anomaly is Detected:
           * `{{rule_name}}`
           * `{{target_link}}`
           * `{{datastore_name}}`
           * `{{anomaly_message}}`
           * `{{anomaly_type}}`
-          * `{{anomaly_description}}`
+          * `{{check_description}}`
         * Freshness SLA Violation:
           * `{{rule_name}}`
           * `{{target_link}}`
