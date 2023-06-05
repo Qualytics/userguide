@@ -26,7 +26,9 @@ nav:
         - datastores/azure-datalake-storage.md
         - datastores/bigquery.md
         - datastores/databricks.md
+        - datastores/db2.md
         - datastores/google-cloud-storage.md
+        - datastores/hive.md
         - datastores/maria-db.md
         - datastores/microsoft-sql-server.md
         - datastores/mysql.md
@@ -36,6 +38,7 @@ nav:
         - datastores/redshift.md
         - datastores/snowflake.md
         - datastores/synapse.md
+        - datastores/timescale-db.md
       - Data Quality Checks:
         - checks/what-is.md
         - checks/what-is-an-authored-check.md

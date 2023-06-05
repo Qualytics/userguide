@@ -13,8 +13,8 @@
 | `String`               | :octicons-check-16:   |
 | `Boolean`              | :octicons-check-16:   |
 
-![Screenshot](../assets/checks/rule-types/satisfies-equation-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/satisfies-equation-check-dark.png#only-dark)
+![Screenshot](../assets/checks/rule-types/satisfies-expression-check-light.png#only-light)
+![Screenshot](../assets/checks/rule-types/satisfies-expression-check-dark.png#only-dark)
 
 !!! example
     The record satisfies the give expression.

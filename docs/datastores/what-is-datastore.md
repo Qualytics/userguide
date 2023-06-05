@@ -53,12 +53,12 @@
 
 * Clicking into a datastore will guide the user through the capabilities and operations of the platform. 
 
-*When a user configures a datastore for the first time, they’ll see an empty Scan tab.*
+*When a user configures a datastore for the first time, they’ll see an empty Activity tab.*
 
 ![Screenshot](../assets/datastores/what-is/specific-datastore-light.png#only-light)
 ![Screenshot](../assets/datastores/what-is/specific-datastore-dark.png#only-dark)
 
-* Scans view
+* Heatmap view
 
 ![Screenshot](../assets/datastores/what-is/data-volume-light.png#only-light)
 ![Screenshot](../assets/datastores/what-is/data-volume-dark.png#only-dark)
@@ -66,7 +66,7 @@
 ![Screenshot](../assets/datastores/what-is/anomaly-count-dark.png#only-dark)
 
 # Running a Catalog of the Datastore
-* The first operation of Catalog will automatically kick off. You can see this through the Operations tab. 
+* The first operation of Catalog will automatically kick off. You can see this through the Activity tab. 
     * This operation typically takes a short amount of time to complete. 
     * After this is completed, they’ll need to run a Profile operation (under `Run` -> `Profile`) to generate metadata and infer data quality checks. 
 
