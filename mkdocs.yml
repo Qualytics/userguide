@@ -26,6 +26,7 @@ nav:
         - datastores/azure-datalake-storage.md
         - datastores/bigquery.md
         - datastores/databricks.md
+        - datastores/db2.md
         - datastores/google-cloud-storage.md
         - datastores/maria-db.md
         - datastores/microsoft-sql-server.md
