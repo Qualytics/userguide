@@ -28,6 +28,7 @@ nav:
         - datastores/databricks.md
         - datastores/db2.md
         - datastores/google-cloud-storage.md
+        - datastores/hive.md
         - datastores/maria-db.md
         - datastores/microsoft-sql-server.md
         - datastores/mysql.md
