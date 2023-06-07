@@ -93,6 +93,8 @@ nav:
       - Add an Enrichment Datastore:
         - enrichment/create-enrichment-datastore.md
         - enrichment/associate-enrichment-datastore.md
+    - Explore:
+      - explore/global-explore.md
     - Insights:
       - insights/global-insights.md
     - Freshness:

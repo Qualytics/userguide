@@ -2,25 +2,34 @@
 
 - The `Insights` global view is the central hub for all your data monitoring needs. 
 
-- In `Insights` view, we provide a comprehensive dashboard monitoring and anomaly detection.
+- You can access the `Insights` global view by clicking `Explore` from the main navigation menu.
 
-- You can access the `Insights` global view in the main menu
+    ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:80px"}
+    ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:80px"}
 
-    ![Screenshot](../assets/insights/insights-light.png#only-light){: style="height:110px"}
-    ![Screenshot](../assets/insights/insights-dark.png#only-dark){: style="height:110px"}
+-  Then select `Insights` from sub menu.
+
+    ![Screenshot](../assets/insights/explore-insights-light.png#only-light){: style="height:200px"}
+    ![Screenshot](../assets/insights/explore-insights-dark.png#only-dark){: style="height:200px"}
+
 
 ## Summary
 
+- In `Insights` view, we provide a comprehensive dashboard monitoring and anomaly detection.
+- You can filter the information in `Insights` by:
+      - Datastores
+    - Tags
+    - Specific Date
+
 - In the past seven days (based on your selected date), we've delivered key insights on the following topics:
 
-  - User Trends
-  - Datastore Monitoring
-  - Check Activity
-  - Anomaly Detection & Anomaly Resolution
-  - SLA Monitoring
+    - Datastore Monitoring
+    - Check Activity
+    - Anomaly Detection & Anomaly Resolution
+    - SLA Monitoring
 
-    ![Screenshot](../assets/insights/summary-light.png#only-light){: style="height:250px"}
-    ![Screenshot](../assets/insights/summary-dark.png#only-dark){: style="height:250px"}
+    ![Screenshot](../assets/insights/summary-light-3.png#only-light){: style="height:500px"}
+    ![Screenshot](../assets/insights/summary-dark-3.png#only-dark){: style="height:500px"}
 
 ## Report Period
 
