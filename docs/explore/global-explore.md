@@ -11,12 +11,13 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
 ## Summary
 
 `Explore` - Brings together a global view of all Activities, Insights, Profiles (Files, Tables, Computed Tables), Checks, & Anomalies.
+
 - `Explore` - Replaces `Insights` on the top navigation.
 
-![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:80px"}
+    ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:80px"}
     ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:80px"}
 
-- Main Filter for `Datastores` and `Tags`
+- Filter by `Datastores` or by `Tags` for focused insights.
 
     ![Screenshot](../assets/explore/explore-datastores-tags-light.png#only-light){: style="height:100px"}
     ![Screenshot](../assets/explore/explore-datastores-tags-dark.png#only-dark){: style="height:100px"}
@@ -38,8 +39,12 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
 
  - [`Insights`](/userguide/insights/global-insights/) was relocated from main navigation to the submenu of `Explore`. 
     
-    ![Screenshot](../assets/insights/explore-insights-light.png#only-light){: style="height:200px"}
-    ![Screenshot](../assets/insights/explore-insights-dark.png#only-dark){: style="height:200px"}
+    ![Screenshot](../assets/explore/explore-insights-submenu-light.png#only-light){: style="height:200px"}
+    ![Screenshot](../assets/explore/explore-insights-submenu-dark.png#only-dark){: style="height:200px"}
+
+    ![Screenshot](../assets/explore/global-insights-light.gif#only-light){: style="height:400px"}
+    ![Screenshot](../assets/explore/global-insights-dark.gif#only-dark){: style="height:400px"}
+
     
 ### Profiles
 
