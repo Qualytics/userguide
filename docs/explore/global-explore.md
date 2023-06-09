@@ -35,16 +35,6 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
      ![Screenshot](../assets/explore/global-activities-light.gif#only-light){: style="height:400px"}
     ![Screenshot](../assets/explore/global-activities-dark.gif#only-dark){: style="height:400px"}
 
-### Insights
-
- - [`Insights`](/userguide/insights/global-insights/) was relocated from main navigation to the submenu of `Explore`. 
-    
-    ![Screenshot](../assets/explore/explore-insights-submenu-light.png#only-light){: style="height:200px"}
-    ![Screenshot](../assets/explore/explore-insights-submenu-dark.png#only-dark){: style="height:200px"}
-
-    ![Screenshot](../assets/explore/global-insights-light.gif#only-light){: style="height:400px"}
-    ![Screenshot](../assets/explore/global-insights-dark.gif#only-dark){: style="height:400px"}
-
     
 ### Profiles
 
@@ -83,3 +73,12 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
      ![Screenshot](../assets/explore/global-anomalies-light.gif#only-light){: style="height:400px"}
     ![Screenshot](../assets/explore/global-anomalies-dark.gif#only-dark){: style="height:400px"}
 
+### Insights
+
+ - [`Insights`](/userguide/insights/global-insights/) was relocated from main navigation to the submenu of `Explore`. 
+    
+    ![Screenshot](../assets/explore/explore-insights-submenu-light.png#only-light){: style="height:200px"}
+    ![Screenshot](../assets/explore/explore-insights-submenu-dark.png#only-dark){: style="height:200px"}
+
+    ![Screenshot](../assets/explore/global-insights-light.gif#only-light){: style="height:400px"}
+    ![Screenshot](../assets/explore/global-insights-dark.gif#only-dark){: style="height:400px"}
