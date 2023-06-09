@@ -16,8 +16,8 @@
 
     - ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
     ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
-    - The `Absolute Change Limit` check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
-    - The `Relative Change Limit` check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
+    - The [`Absolute Change Limit`](/userguide/checks/absolute-change-limit-check) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
+    - The [`Relative Change Limit`](/userguide/checks/relative-change-limit-check) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
 
 #### General Fixes
 

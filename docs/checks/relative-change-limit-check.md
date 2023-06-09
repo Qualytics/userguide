@@ -1,4 +1,9 @@
 # Relative Change Limit <spam id='single-field'>`single field`</spam>
+---
+
+The `Relative Change Limit` check operates by tracking changes in a numeric field's value relative to its previous value. If the change exceeds the predefined percentage (%) limit since the last relevant scan, an anomaly is generated.
+
+- This tool is crucial for maintaining data consistency, especially when dealing with large datasets where relative changes might be more informative than absolute ones. Join us as we explore the workings of the `Relative Change Limit` check to help you better manage your data.
 
 ---
 *Asserts that the field has not changed by more than a relative amount since the last applicable scan.*
