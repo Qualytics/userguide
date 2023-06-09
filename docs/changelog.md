@@ -14,8 +14,8 @@
 
 - We're thrilled to introduce two new checks, the `Absolute Change Limit` and the `Relative Change Limit`, tailored to augment data change monitoring. These checks enable users to set thresholds on their numeric data fields and monitor fluctuations from one scan to the next. If the changes breach the predefined limits, an anomaly is generated. 
 
-    - ![Screenshot](../assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
-    ![Screenshot](../assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
+    - ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
+    ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
     - The `Absolute Change Limit` check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
     - The `Relative Change Limit` check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
 
