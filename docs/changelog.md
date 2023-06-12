@@ -1,4 +1,4 @@
-### 2023.06.09 { id="2023.06.09" }
+### 2023.06.12 { id="2023.06.12" }
 
 #### Feature Enhancements
 
@@ -52,6 +52,7 @@
     - The API now supports tuning operations by allowing users to set a higher correlation threshold for profiles.
     - It also enables users to set a higher count rollup threshold for anomalies in scan.
     - This customization capability helps users fine-tune the behavior of the system according to their specific needs and preferences.
+    
 ### 2023.05.26 { id="2023.05.26" }
 #### Usability
 
