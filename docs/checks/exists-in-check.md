@@ -1,7 +1,11 @@
 # Exists In <spam id='single-field'>`single field`</spam>
 
 ---
+The `ExistsIn` feature is crucial in situations where you need to confirm that key information from your reference table in the source datastore exists in the corresponding table in your destination datastore. In data migration and replication tasks, this can be extremely valuable to ensure that all important reference data has been successfully transferred.
 
+When working with reference tables, these checks are vital to maintain data integrity and to ensure that foreign key relationships remain consistent. `ExistsIn` enables you to verify that all corresponding records in your tables align correctly, ensuring no orphaned records or missing relationships.
+
+---
 *Asserts if the rows of a compared table/field of a specific Datastore exists in the selected table/field.*
 
 | Accepted Field Types   |                      |
