@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # User Guide: Introduction to Qualytics
 
 Qualytics is the Active Data Quality Platform that enables teams to manage data quality at scale through advanced automation. Qualytics analyzes your historic data for its shapes and patterns in order to infer contextual data quality rules that are then asserted against new data (often in incremental loads) to identify anomalies. When an anomaly is identified, Qualytics provides your team with everything needed to take corrective actions using their existing data tooling & prefered monitoring solutions.

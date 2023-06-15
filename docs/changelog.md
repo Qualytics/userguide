@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 ### 2023.06.12 { id="2023.06.12" }
 
 #### Feature Enhancements
@@ -25,9 +30,6 @@
 - Resolved an issue when creating a computed table
 - Incorporated functionality to execute delete operations and their related results.
 - Renamed "Rerun" button to "Retry" in the operation list
-
-
-
 
 ### 2023.06.02 { id="2023.06.02" }
 #### General Fixes

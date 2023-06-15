@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Glossary
 
 ### <a name="anomaly"></a>__Anomaly__
