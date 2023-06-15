@@ -8,9 +8,10 @@ repo_name: GitHub
 edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2020 - 2023 Qualytics
 
+# Page tree
 nav:
+  - Introduction: index.md
   - Getting Started:
-    - index.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
     # - Common Usecases:
@@ -133,6 +134,7 @@ nav:
 extra_css:
   - stylesheets/extra.css
 
+# Configuration
 theme:
   palette:
     # Palette toggle for light mode
