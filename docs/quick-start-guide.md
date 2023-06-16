@@ -23,15 +23,15 @@ Want to get started immediately with a high-level overview and typical defaults?
 
 - Initiate a scan of your datastore to assert the automatically inferred checks (as well as any additional checks you create) against both historical and new data within the store. This step ensures that your data is thoroughly evaluated for any anomalies.
 
-![Run a Scan](assets/operations/operation-scan-light.png#only-light)
-![Run a Scan](assets/operations/operation-scan-dark.png#only-dark)
+    ![Run a Scan](assets/operations/operation-scan-light.png#only-light)
+    ![Run a Scan](assets/operations/operation-scan-dark.png#only-dark)
 
 #### Step 4: [**Review and Flag Anomalies**](/userguide/anomalies/what-is-an-anomaly)
 
 - After the scan, review the identified anomalies and flag them with the appropriate status. Qualytics learns from your business and preferences during this process, adapting its future operations to better suit your needs.
 
-![Anonamlies](assets/anomalies/anomaly-table-light.png#only-light)
-![Anomalies](assets/anomalies/anomaly-table-dark.png#only-dark)
+    ![Anonamlies](assets/anomalies/anomaly-table-light.png#only-light)
+    ![Anomalies](assets/anomalies/anomaly-table-dark.png#only-dark)
 
 
 <!-- moved body of Concepts to index -->

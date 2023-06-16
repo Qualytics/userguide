@@ -1,5 +1,5 @@
 site_name: User Guide
-site_url: https://qualytics.github.io/userguide/
+site_url: http://localhost:8001/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
@@ -17,6 +17,8 @@ nav:
     #   - usecases/metadata-analysis.md
     #   - usecases/automated-anomaly-detection.md
     #   - usecases/initiate-corrective-action.md
+    #   - usecases/entity-management.md
+    #   - usecases/maintaining-data-consistency-across-multiple-datastores.md
   - Reference:
     - Datastores:
       - datastores/what-is-datastore.md
