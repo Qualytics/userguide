@@ -55,7 +55,7 @@ Here is a short video demonstrating the platform with a quick walkthrough:
 
 <!-- moved Implementation to Quick Start -->
 
-## Get Started
+## Embarking on Your Journey
 
 This user guide will walk you through the key functionalities of Qualytics and provide step-by-step instructions to help you make the most of this powerful platform. Whether you are new to Qualytics or looking to deepen your understanding, this guide will be your companion in optimizing your data quality management.
 
