@@ -13,6 +13,8 @@ Use the intuitive web app or API provided by Qualytics to connect your datastore
 ![Add a Datastore](assets/datastores/what-is/listing-datastores-light.png#only-light){: style="width:450px"}
 ![Add a Datastore](assets/datastores/what-is/listing-datastores-dark.png#only-dark){: style="width:450px"}
 
+After you've created a datastore, the platform will automatically trigger a [Catalog operation](userguide/operations/catalog). This operation analyzes the datastore's metadata and is an essential preparation for the upcoming Profile and Scan operations.
+
 <br>
 
 #### Step 2: [**Generate a Profile**](/userguide/operations/profile)
