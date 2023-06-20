@@ -188,7 +188,7 @@
 
 ### <a name="tag"></a>__Tag__
 
- - users can assign Tags Datastores, Profiles (Files, Tables, Containers), Checks and Anomalies. Add a Description and Assign a Weight #. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
+ - Users can assign Tags Datastores, Profiles (Files, Tables, Containers), Checks and Anomalies. Add a Description and Assign a Weight #. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
 
 ### <a name="target"></a>__Target__
 
