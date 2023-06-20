@@ -13,6 +13,7 @@ nav:
     - index.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
+    - use-cases/use-cases.md
     # - Common Usecases:
     #   - usecases/metadata-analysis.md
     #   - usecases/automated-anomaly-detection.md
@@ -160,7 +161,7 @@ theme:
     - navigation.footer
     - navigation.indexes
     - navigation.instant
-    - navigation.path    
+    - navigation.path
     - navigation.sections
     - navigation.tabs
     - navigation.top
@@ -169,7 +170,7 @@ theme:
     - content.action.view
     - content.code.copy
     - content.tabs.link
-    
+
 
 markdown_extensions:
   - pymdownx.tabbed:
