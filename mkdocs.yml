@@ -13,7 +13,7 @@ nav:
     - index.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
-    - use-cases/use-cases.md
+    # - use-cases/use-cases.md
     # - Common Usecases:
     #   - usecases/metadata-analysis.md
     #   - usecases/automated-anomaly-detection.md
