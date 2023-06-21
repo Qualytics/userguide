@@ -17,7 +17,7 @@ Here's how it works:
 
 2. **Finding Anomalies**: These rules, combined with any rules you create yourself, are used to identify any abnormalities or inconsistencies in your historical data or new data (even when new data is added incrementally).
 
-3. **Taking Corrective Actions**: When an anomaly is detected, Qualytics helps your team take appropriate actions. Utilzing tags, it can send notifications through the platforms you use (such as Teams, Slack, or PagerDuty), trigger workflows in tools (like Airflow, Fivetran or Airbyte), provide additional information about the anomaly to your chosen datastore (compatible with SQL-based integrations like DBT), and even suggest the best course of action through its user interface and API.
+3. **Taking Corrective Actions**: When an anomaly is detected, Qualytics helps your team take appropriate actions. Utilzing tags, it can send notifications through the platforms you use (such as Teams, Slack, or PagerDuty), trigger workflows in tools (like Airflow, Fivetran or Airbyte), provide additional information about the anomaly to your chosen datastore (compatible with SQL-based integrations like dbt), and even suggest the best course of action through its user interface and API.
 
 4. **Continuous Monitoring and Improvement**: Qualytics continuously monitors and scores your data quality. It keeps your quality checks up to date, taking into account any changes in your actual data and your business needs. This ongoing process helps improve your overall data quality and boosts trust and confidence in your organization's data.
 
