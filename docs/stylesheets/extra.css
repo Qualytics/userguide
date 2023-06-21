@@ -38,3 +38,38 @@
   font-weight: bold;
   font-size: 10px;
 }
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-weight: 600;
+}
+
+.md-typeset h1, .md-nav__title {
+  color: var(--md-default-fg-color);
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item>[for], .md-nav__item--section>.md-nav__link[for] { 
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  height: 100%;
+}
+
+.md-tabs__link--active {
+  position: relative;
+}
+
+.md-tabs__link--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--md-accent-fg-color);
+}
