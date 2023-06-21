@@ -1,6 +1,6 @@
 # What are Quality Scores?
 
-Quality Scores are measures of data quality calculated at the field, [container](/glossary#container), and [datastore](/glossary#datastore) level and recorded as time-series enabling you to track movement over time. A quality score ranges from 0-100 with higher scores indicating higher quality. We'll look at how quality scores are measured for each of those data assets in turn:
+Quality Scores are measures of data quality calculated at the field, [container](/userguide/glossary#container), and [datastore](/userguide/glossary#datastore) level and recorded as time-series enabling you to track movement over time. A quality score ranges from 0-100 with higher scores indicating higher quality. We'll look at how quality scores are measured for each of those data assets in turn:
 
 ## Quality Scoring a Field
 

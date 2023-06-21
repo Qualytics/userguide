@@ -72,7 +72,7 @@ Two concrete examples of sophisticated rule types automatically inferred at this
 
 Now that you have a deeper understanding of how our profiling operation works, you're ready to take action. To initiate a Profile Operation, navigate to the details of the specific datastore you've created. There, you'll find a step to start the Profile Operation.
 
-## Initiating and Reviewing a [Scan](userguide/glossary/#incremental-scan-operation) for [Anomalies](/userguide/glossary/#anomaly)
+## Initiating and Reviewing a [Scan](/userguide/glossary/#incremental-scan-operation) for [Anomalies](/userguide/glossary/#anomaly)
 
 After the initial Profile Operation is complete, you can start a Scan Operation. By default, Qualytics initiates a `Full` Scan for the first operation. This comprehensive scan establishes a baseline for generating Quality Scores and facilitates the validation of all defined checks.
 
