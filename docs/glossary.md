@@ -191,6 +191,10 @@ hide:
 
  - The origin of data in a pipeline, migration, or other ELT/ETL process. It’s where data gets extracted.
 
+### <a name="tag"></a>__Tag__
+
+ - Users can assign Tags Datastores, Profiles (Files, Tables, Containers), Checks and Anomalies. Add a Description and Assign a Weight #. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
+
 ### <a name="target"></a>__Target__
 
  - The destination of data in a pipeline, migration, or other ELT/ETL process. It’s where data gets loaded.
@@ -207,3 +211,6 @@ hide:
  
  - Data has the same size and shape across similar cycles. It includes statistics about the size of a data set including calculations or predictions on the rate of change over time.
 
+### <a name="weight"></a>__Weight__
+ 
+ - The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.

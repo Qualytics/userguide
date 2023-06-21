@@ -3,6 +3,43 @@ hide:
   - navigation
 ---
 
+### 2023.06.20 { id="2023.06.20 }
+
+#### Feature Enhancements
+
+- Reworked Tags View
+    - Improved the usability and visual appeal of the tags view. Added new properties like description and weight modifier to provide more detailed information and assign relative importance to tags. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
+
+- Inherited Tags Support
+    - Implemented support for inherited tags in taggable entities. Now tags can be inherited from parent entities, streamlining the tagging process and ensuring consistency across related items. Inherited Tags will be applied to anomalies AFTER a Scan operation.
+
+- Added Total Data Under Management to Insights
+    - Introduced a new metric under Insights that displays the total data under management. This provides users with valuable insights into the overall data volume being managed within the system.
+
+#### Added Support
+
+- Bulk Update Support
+    - Introduced bulk update functionality for tables, files, and fields. Users can now efficiently Tag multiple items simultaneously, saving time and reducing repetitive tasks.
+
+- Smart Partitioning of BigQuery
+    - Enabled smart partitioning in BigQuery using cluster keys. Optimized data organization within BigQuery for improved query performance and cost savings.
+
+#### Bug Fixes
+
+- Fixed Scheduling Operation Issues
+    - Addressed a bug causing scheduling operations to fail with invalid days in crontabs. Users can now rely on accurate scheduling for time-based tasks without encountering errors.
+
+#### General Fixes
+
+- Improved Backend Performance
+    - Implemented various internal fixes to optimize backend performance. This results in faster response times, smoother operations, and an overall better user experience.
+
+- Enhanced Tag Input:
+    - Improved tag input functionality in the Check form dialog. Users can now input tags more efficiently with enhanced suggestions and auto-complete features, streamlining the tagging process.
+
+- Enhanced File Input Component
+    - Upgraded the file input component in the Datastore form dialog, providing a more intuitive and user-friendly interface for uploading files. Simplifies attaching files to data entries and improves overall usability.
+
 ### 2023.06.12 { id="2023.06.12" }
 
 #### Feature Enhancements
