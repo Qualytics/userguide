@@ -29,7 +29,7 @@ There are two types of anomalies in Qualytics: `Record` and `Shape`:
 
 
 
-* When a [Scan](/operations/scan) is run, Qualytics will highlight anomalies with the following information:
+* When a [Scan](/userguide/operations/scan) is run, Qualytics will highlight anomalies with the following information:
 
     ![Screenshot](../assets/anomalies/anomalies-fields-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomalies-fields-dark.png#only-dark)

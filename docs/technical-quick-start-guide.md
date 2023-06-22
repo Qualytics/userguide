@@ -2,108 +2,91 @@
 
 ## Accessing your Qualytics Deployment
 
-* Each Qualytics deployment is a single-tenant, dedicated cloud instance configured per requirements discussed with your organization. As such, your deployment will be accessible from a custom `URL` specific to your organization.
+Each Qualytics deployment is a single-tenant, dedicated cloud instance, configured per requirements discussed with your organization. Therefore, your deployment will be accessible from a custom `URL` specific to your organization.
 
-* For example, ACME's Qualytics deployment might be published here:
-    1. `https://acme.qualytics.io`
+For example, ACME's Qualytics deployment might be published at `https://acme.qualytics.io`, and the corresponding API documentation would be available at `https://acme.qualytics.io/api/docs`. Note that your specific credentials and `URL` will be provided to you automatically by email.
 
-* The corresponding API documnetation would then be available here:
-    1. `https://acme.qualytics.io/api/docs`
-
-* Your specific credentials and `URL` will be provided to you automatically by email.
-
-    !!!tip
-        Please check your spam folder if you don’t see the invite.
+!!!tip
+    Please check your spam folder if you don’t see the invite.
 
 After you've obtained access to your deployment, you'll want to:
 
-1. [Connect a Datastore](/datastores/what-is-datastore)
-2. Generate a [profile](/glossary#profile) for the datastore by running a Profile Operation.
-    - This step will automatically infer a set of data quality checks from your data
-4. Assert those checks to detect data [anomalies](/glossary#anomaly).
- 
+1. Connect a [Datastore](/userguide/glossary/#datastore)
+2. Initiate a [profiling](/userguide/glossary#profiling) on the datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
+3. Assert those checks to detect data [anomalies](/userguide/glossary/#anomaly)
 
+## Connecting a [Datastore](/userguide/glossary/#datastore)
 
-## Connect a <a id="1">`Datastore`</a>
+The first step of configuring a Qualytics instance is to `Add Source Datastore`. In order to add a Source Datastore via Qualytics, you need to select the specific `Connector`. This is necessary so that the appropriate form for collecting connection details can be rendered.
 
-* The first step of configuring a Qualytics instance is to `Add New Datastore`
+As you provide the required connection details, the UI verifies network connectivity and indicates whether the combination is accessible. This feature assists in diagnosing any network routing restrictions.
 
-* To add a Datastore via Qualytics, the user must first select the specific Datastore `Type` such that the appropriate form for collecting connection details can be rendered.
+Once the connection details are confirmed, the "Add Datastore" process moves to a second optional but **strongly recommended step: the configuration of an Enrichment Datastore**. 
 
-* As the applicable connection details are collected, the UI will verify network connectivity from the Qualytics Deployment to the user specified Host/Port or URI and indicate whether the combination is accessible. This is to assist in diagnosing any network routing restrictions.
+The Enrichment Datastore serves as a location to record enrichment data (anomalies and metadata for a Source Datastore). This is a crucial step as it significantly enhances Qualytics's ability to detect anomalies.
 
-* The Add Datastore flow will then prompt the user for an Enrichment Location with two options:
+!!!warning
+    While it is optional, not setting an Enrichment Datastore may limit the Qualytics's features.
 
-    1. `External` - the enrichment data will be written to a separate Datastore.
-    2. `None` - no enrichment data will be recorded for this Datastore. This severely limits functionality for Qualytics to detect anomalies and is not recommended.
+In this step, you'll have two options:
 
-    !!! info
-        * If `External` option is selected, then the User should be presented with a dropdown list of all configured Enrichment Datastores along with the ability to configure a new Enrichment Datastore to serve as this new Datastore’s enrichment location.
+1. Configure a new Enrichment Datastore
+2. Use the dropdown list to select an existing Enrichment Datastore that was previously configured
 
-        * The flow to configure an Enrichment Datastore only differs from the non-Enrichment Datastore in that the user-specified connection details should be verified for the ability to _write_ enrichment data.
+The process of configuring a new Enrichment Datastore is similar to that of a Source Datastore, with one key difference: the connection details you provide must have the ability to **write** enrichment data.
 
-* When the Datastore connection details are submitted:
-    1. A `synchronous` ConnectionVerification operation will be initiated to verify that the indicated Datastore can be accessed appropriately from Compute Daemon.
-    2. The result of that operation will either return an error message to the user on the new Datastore form view on failure, or mark the new Datastore as `connected` and initiate an asynchronous Catalog operation on success.
-    3. If any future Operation is unable to establish a connection to the Datastore:
-        1. The connected property of the Datastore will be set `false`.
-        2. The UI will `warn`/`prompt` users to address any such Datastore connectivity issues.
+!!!note
+    If you don't have a specific location to store these results, you can request the **QFS (Qualytics File System)** connector provided by Qualytics for this purpose.
 
+During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous `ConnectionVerification` operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](/userguide/glossary/#compute-daemon):
 
-## Generate a<a id="2"> `Profile`</a>
+1. If the operation is successful, you can proceed with the configuration. Any issues during this `Test Connection` process will result in an error message being displayed on the current step of the form, be it the Source Datastore or Enrichment Datastore step.
+2. After you've validated the connections and click `Finish`, the platform will automatically initiate an asynchronous [Catalog operation](/userguide/glossary/#catalog-operation) for the Source Datastore.
 
-* 80% of the job of today’s Data Scientist is the upfront curation of a set of data, including steps taken to determine what type of ML modeling might prove useful for that data.
+!!!note
+    If any future operation fails to establish a connection with the Datastore, the `connected` property of the Datastore will be set to `false`. When this happens, the UI will provide warnings to help you resolve the connectivity issues.
 
-* In the same way that a Data Scientist might begin a new modeling effort, our Data Compute Daemon `profiles` customer data using systematic computational analysis in a fully `automated`/`scalable` manner.
+## Generate a [Profile](/userguide/glossary/#profile-operation)
 
-* In addition to standard Field metadata, we track other metadata such as:
-    1. `type`.
-    2. `min`/`max`.
-    3. `min_length`/`max_length`.
-    4. `completeness`/`sparsity`.
-    5. `histograms` (ratios of values)
-        1. Compute Daemon calculates more sophisticated statistical measures like: skewness, kurtosis, pearson correlation coefficients.
+The majority of a data scientist's work revolves around upfront curation of data, which involves taking steps to determine which type of ML modeling might be beneficial for the given data. Our Data Compute Daemon begins this process much like a data scientist initiating a new modeling effort. It profiles customer data through systematic computational analysis, executed in a fully **automated** and **scalable** manner.
 
-* While these numerical analysis techniques are not strictly `Machine Learning`, the statistical analysis and prep work is necessary to facilitate Machine Learning in order to generate appropriate, statistically relevant data quality rules at scale.
+We track a wide range of metadata in addition to standard field metadata, which includes:
 
-* An important part of profiling is identification of column data types, which is typically a tedious task in large tables. A machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
+1. `type`
+2. `min` / `max`
+3. `min_length` / `max_length`
+4. `completeness` / `sparsity`
+5. `histograms` (ratios of values)
+    - Our Compute Daemon also calculates more sophisticated statistical measures such as `skewness`, `kurtosis`, and `pearson correlation coefficients`.
 
-* After initial profiling generates metadata, the Qualytics Inference Engine carries out ML via various learning methods such as `inductive` and `unsupervised learning`. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. The inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
+While these numerical analysis techniques do not strictly fall under `Machine Learning`, their role in statistical analysis and preparatory work is indispensable. They facilitate ML by generating appropriate and statistically relevant data quality rules at scale.
 
-* Two concrete examples of sophisticated rule types automatically inferred at this stage are:
-    1. A sophisticated normality test is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning
-    2. Linear regression models are automatically generated to fit any highly correlated fields in the same table.
-    !!!info
-        If a good fit model is identified, it is recorded as a predicting model for those correlated fields and used to identify future anomalies.
+One crucial part of profiling is identifying column data types, which is typically a tedious task in large tables. A machine learning model trained to infer the data types and properties can help accelerate this task by automatically identifying key phrases and linking them to commonly associated attributes.
 
-## `Scan` for <a id="3">Anomalies</a>
+Upon completing the initial profiling and metadata generation, the Qualytics Inference Engine carries out ML via various learning methods such as `inductive` and `unsupervised learning`. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. The inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to data quality Checks.
 
-* Upon completion of the initial Profile Operation the user is able to initiate a `Scan Operation`.
+Two concrete examples of sophisticated rule types automatically inferred at this stage are:
 
-* Qualytics will initiate a “`Full`” `Scan` for the initial Scan by default.
+1. **the application of a robust normality test:** this is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning.
+2. **the generation of linear regression models:** this is automatically generated to fit any highly correlated fields in the same table. If a good fit model is identified, it's recorded as a predicting model for those correlated fields and used to identify future anomalies.
 
-    !!!info
-        * This will produce a baseline from which Quality Scores will be generated and will help validate all defined Checks.
-        * The user should be able to monitor the progress of the Scan Operation and be alerted to its completion.
-        * If the user signed out before completion, the user should be alerted to the completion upon next sign in.
+Now that you have a deeper understanding of how our profiling operation works, you're ready to take action. To initiate a Profile Operation, navigate to the details of the specific datastore you've created. There, you'll find a step to start the Profile Operation.
 
-## Presenting Scan Operation <a id="4">Results</a>
+## Initiating and Reviewing a [Scan](/userguide/glossary/#incremental-scan-operation) for [Anomalies](/userguide/glossary/#anomaly)
 
-* Upon completion of the Scan operation, the user will be able to review the following data points:
+After the initial Profile Operation is complete, you can start a Scan Operation. By default, Qualytics initiates a `Full` Scan for the first operation. This comprehensive scan establishes a baseline for generating Quality Scores and facilitates the validation of all defined checks.
 
-    1. `Start time` and `Finish Time` of the Scan Operation.
-    2. A `listing of all the named Containers` included in the Scan.
-        1. The `number of records scanned` in each listed Container.
-        2. The `number of anomalies detected` in each listed Container.
-        3. The `total record count in each listed Container` at the time of scanning.
-        4. The `total record count in each listed Container` at the time of scanning.
-    3. `Total counts` (sum of all Container counts) of:
-        1. `Records scanned`.
-        2. `Anomalies detected`.
-        3. `Total Records`.
+As the Scan Operation progresses, you can monitor its status in real-time. If you choose, you can set up in-app [notifications](/userguide/notifications/what-is-a-notification/) to alert you when the operation is complete, whether you're currently signed in or you log back in later.
 
-    !!!info
-        The user should be alerted to any failure to scan any Container of the Datastore with some indication of how to address the issue (assign an identifier, set a record limit, etc..).
+Upon completion of the Scan operation, you can review the following data points:
 
+- `Start time` and `Finish Time` of operation
+- `Total counts` for all scanned Containers, including:
+    - Records scanned
+    - Anomalies detected
+    - Total Records
+
+!!!info
+    Any issues, such as the failure to scan any Container of the Datastore, will be indicated, along with suggestions on how to address the issue, such as assigning an identifier or setting a record limit.
 
 <!-- ## Monitor `data freshness` -->

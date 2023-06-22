@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Glossary
 
 ### <a name="anomaly"></a>__Anomaly__
@@ -69,7 +74,7 @@
 
 ### <a name="datastore"></a>__Datastore__
 
- - Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/datastores/what-is-datastore).
+ - Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/userguide/datastores/what-is-datastore).
 
 ### <a name="datawarehouse"></a>__Data Warehouse__
 
@@ -144,7 +149,7 @@
 
 ### <a name="quality"></a>__Quality Score__
 
- - a measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/quality-scores/quality-scoring).
+ - a measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/userguide/quality-scores/what-are-quality-scores).
 
 ### <a name="app"></a>__Qualytics App__
 

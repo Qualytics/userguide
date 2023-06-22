@@ -1,5 +1,9 @@
-### 2023.06.20 { id="2023.06.20 }
+---
+hide:
+  - navigation
+---
 
+### 2023.06.20 { id="2023.06.20 }
 
 #### Feature Enhancements
 
@@ -36,10 +40,6 @@
 - Enhanced File Input Component
     - Upgraded the file input component in the Datastore form dialog, providing a more intuitive and user-friendly interface for uploading files. Simplifies attaching files to data entries and improves overall usability.
 
-
-
-
-
 ### 2023.06.12 { id="2023.06.12" }
 
 #### Feature Enhancements
@@ -67,9 +67,6 @@
 - Resolved an issue when creating a computed table
 - Incorporated functionality to execute delete operations and their related results.
 - Renamed "Rerun" button to "Retry" in the operation list
-
-
-
 
 ### 2023.06.02 { id="2023.06.02" }
 #### General Fixes
