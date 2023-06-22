@@ -1,8 +1,8 @@
 # What is a Tag?
 
-* `Tags` in our system allow users to categorize and organize entities effectively, while also providing the ability to assign weights for prioritization. They can drive notifications and downstream workflows, and users can configure tags, associate notifications based on tags, and associate tags to specific properties.
+* `Tags` in our system allow users to categorize and organize entities effectively, while also providing the ability to assign weights for prioritization. They can drive notifications and downstream workflows, and users can configure tags, associate notifications based on `Tags`, and associate tags to specific properties.
 
-#### Key Points
+### Key Points
 
 
 * **Versatile Labeling**
@@ -10,11 +10,11 @@
 * **Notification and Workflow Integration**
     * `Tags` are utilized to drive notifications and downstream workflows, enabling users to stay informed and take appropriate actions.
 * **Weight Assignment**
-    * Users can assign weights to tags, allowing for prioritization and emphasis on specific `Tags`.
+    * Users can assign weights to `Tags`, allowing for prioritization and emphasis on specific `Tags`.
 * **Property Association**
     * `Tags` can be associated with specific properties, allowing for targeted actions and efficient management of entities across multiple datastores.
 ---
-#### View Tags
+### View Tags
 
 * Find the `Tag` section by clicking on `Settings` in the menu bar:
  
@@ -33,7 +33,7 @@
 
 ---
 
-#### Add a Tag
+### Add a Tag
 
 * To add a `Tag`, start with navigating to the top right and find the `Add Tag` button.
 
@@ -54,6 +54,22 @@
          * The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
          * Ranges from -10 to 10
 
-    
-    
-* Once a tag is created, it's ready to be associated with a `Datastore`, `Profile`, `Check`, `Notification` and ultimately an `Anomaly` in order to drive a Notification to a user. For more details of Tag association, please refer to [tag association](/userguide/checks/what-is-an-authored-check/#add-a-new-data-quality-check).
+### Applying a Tag
+
+* Once a `Tag` is created, it's ready to be associated with a `Datastore`, `Profile`, `Check`, `Notification` and ultimately an `Anomaly`.
+
+
+#### Tag Inheritance
+
+* When a `Tag` is applied to a data asset, all the descendents of that data asset also receive the `Tag`. 
+    * For example, if a `Tag` named **Critical** is applied to a Datastore then all the Tables, Fields, and Checks under that Datastore also receive the `Tag`. 
+* Likewise, if the **Critical** `Tag` is subsequently removed from one of the Tables in that Datastore, then all the Fields and Checks belonging to that Table will have the **Critical**  `Tag` removed as well.
+
+* When a new data asset is created, it inherits the `Tags` from the owning data asset. For example, if a user creates a new Computed Table, it inherits all the `Tags` that are applied to the Datastore in which it is created.
+
+#### Tagging Anomales
+
+* Anomalies also inherit `Tags` at the time they are created. They inherit all the `Tags` of all the associated failed checks. 
+* However, anomalies are treated as metadata, not as data assets, for the purposes of tagging. 
+    * Thus Anomalies do not inherit subsequent tag changes from those checks. They only inherit checks one time - at creation time. 
+* `Tags` can be directly applied to or removed from Anomalies at any time after creation.
