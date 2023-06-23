@@ -3,6 +3,28 @@ hide:
   - navigation
 ---
 
+### 2023.06.23 { id="2023.06.23 }
+
+#### Feature Enhancements
+
+- Refactored Partiton Reads on JDBC 
+    - Refactored partitioned reads on JDBC to improve performance, resulting in faster and more efficient data retrieval.
+
+#### Bug Fixes
+
+- Fixed Inputs on Change Checks
+    - Refined inputs on change checks to differentiate between Absolute and Relative measurements, ensuring precise detection and handling of data modifications based on numeric values (Absolute) and percentage (Relative) variations.
+
+- Resolved Enum Type Ordering Bug for Paginated Views
+    - Fixed bug causing inconsistent and incorrect sorting of enum values across all paginated views, ensuring consistent and accurate sorting of enum types.
+#### General Fixes
+
+- Added Success Effect
+    - Added effect when a datastore is configured successfully, enhancing the user experience by providing visual confirmation of a successful configuration process.
+
+
+
+
 ### 2023.06.20 { id="2023.06.20 }
 
 #### Feature Enhancements
