@@ -14,13 +14,24 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
 
 - `Explore` - Replaces `Insights` on the top navigation.
 
-    ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:80px"}
-    ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:80px"}
+    ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:60px"}
+    ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:60px"}
 
 - Filter by `Datastores` or by `Tags` for focused insights.
 
     ![Screenshot](../assets/explore/explore-datastores-tags-light.png#only-light){: style="height:100px"}
     ![Screenshot](../assets/explore/explore-datastores-tags-dark.png#only-dark){: style="height:100px"}
+
+
+### Insights
+
+ - [`Insights`](/userguide/insights/global-insights/) was relocated from main navigation to the submenu of `Explore`. To learn more about `Insights`, click [HERE](/userguide/insights/global-insights/)!
+    
+    ![Screenshot](../assets/insights/explore-insights-light.png#only-light){: style="height:150px"}
+    ![Screenshot](../assets/insights/explore-insights-dark.png#only-dark){: style="height:150px"}
+
+    ![Screenshot](../assets/explore/global-insights-light.gif#only-light){: style="height:400px"}
+    ![Screenshot](../assets/explore/global-insights-dark.gif#only-dark){: style="height:400px"}
 
 ### Activity
 
@@ -73,12 +84,3 @@ Say goodbye to scattered information and hello to a streamlined experience. Take
      ![Screenshot](../assets/explore/global-anomalies-light.gif#only-light){: style="height:400px"}
     ![Screenshot](../assets/explore/global-anomalies-dark.gif#only-dark){: style="height:400px"}
 
-### Insights
-
- - [`Insights`](/userguide/insights/global-insights/) was relocated from main navigation to the submenu of `Explore`. 
-    
-    ![Screenshot](../assets/explore/explore-insights-submenu-light.png#only-light){: style="height:200px"}
-    ![Screenshot](../assets/explore/explore-insights-submenu-dark.png#only-dark){: style="height:200px"}
-
-    ![Screenshot](../assets/explore/global-insights-light.gif#only-light){: style="height:400px"}
-    ![Screenshot](../assets/explore/global-insights-dark.gif#only-dark){: style="height:400px"}
