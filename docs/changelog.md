@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2023.07.14 { id=2023.07.14}
+
+#### Feature Enhancements
+
+- API enhancements 
+    - Improved performance of our json validation through adoption of Pydantic 2.0
+      - Upgraded our API specification to OpenAPI 3.1.0 compatible, this uses JSON Schema 2020-12.
+- Upgraded to Spark 3.4
+     - Significant performance enhancements for long running tasks and shuffles
+- Added support for Kerberos authentication for Hive datastores
+- Enhanced processing for large dataframes with JDBC sources
+    - Handle arbitrarily large tables and views by chunking into sequentially processed dataframes
+- Improvements for Insights view when limited data is available
+- Various user experience enhancements
+
+#### Bug Fixes
+
+- Date Picker fix for Authored Checks
+- Allow tags with special characters to be edited
+
+
+
+
 ### 2023.07.03 { id=2023.07.03 }
 
 
