@@ -3,6 +3,14 @@ hide:
   - navigation
 ---
 
+### 2023.07.18 { id=2023.07.18}
+
+#### General Fixes
+
+- General fixes and improvements
+
+
+
 ### 2023.07.14 { id=2023.07.14}
 
 #### Feature Enhancements
