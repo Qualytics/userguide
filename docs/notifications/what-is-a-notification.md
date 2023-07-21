@@ -34,6 +34,7 @@
 * Details:
   * `Name`: freetext name of the notification
   * `Description`: description of the notification
+  * `Tags`: add Tags to be included
   * `TriggerWhen`: when the notification should be triggered
     * `An Operation Completes`
     * `Anomalies are Detected in a Table or File`
