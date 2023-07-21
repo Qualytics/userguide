@@ -3,6 +3,19 @@ hide:
   - navigation
 ---
 
+### 2023.07.21 { id=2023.07.21}
+
+#### Feature Enhancements
+
+- Notification Form: Enhanced the user interface and experience by transforming the Channel and Tag inputs into a more friendly format.
+- Checks & Anomalies: Updated the default Sort By criterion to be based on "Weight", enabling a more effective overview of checks and anomalies.
+- Profile Details (Side Panel): Introduced a tooltip to display the actual value of the records metric, providing clearer and instant information.
+- Freshness Page: Added a new navigation button that directly leads to the Profile Details page, making navigation more seamless.
+- Profile Details: Introduced a settings option for the user to perform actions identical to those from the Profile Card, such as changing profile settings and configuring Checks and SLAs.
+- SparkSQL Inputs: Implemented a new autocomplete feature to enhance user experience. Writing SQL queries is now more comfortable and less error-prone.
+
+
+
 ### 2023.07.19 { id=2023.07.19}
 
 #### General Fixes
