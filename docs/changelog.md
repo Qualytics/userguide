@@ -3,6 +3,15 @@ hide:
   - navigation
 ---
 
+
+### 2023.07.23 { id=2023.07.23}
+
+#### Bug Fixes
+
+-  Fix for total record counts when profiling large tables
+
+
+
 ### 2023.07.21 { id=2023.07.21}
 
 #### Feature Enhancements
