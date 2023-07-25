@@ -3,6 +3,26 @@ hide:
   - navigation
 ---
 
+### 2023.07.25 { id=2023.07.25}
+
+**Feature Enhancements:**
+
+- **Satisfies Expression Enhancement:** The Satisfies Expression feature has been upgraded to automatically bind fields referenced in the user-defined expressions, streamlining integration and improving usability.
+
+**Added Support:**
+
+- **Extended Support for ExistsIn Checks:** The ExistsIn checks now offer support for computed tables, empowering users to perform comprehensive data validation on computed data.
+
+**General Fixes:**
+
+- **Enhanced Check Referencing:** Checks can now efficiently reference the full dataframe by using the alias "qualytics_self," simplifying referencing and providing better context within checks.
+
+- **Improved Shape Anomaly Descriptions:** Shape anomaly descriptions now include totals alongside percentages, providing more comprehensive insights into data irregularities.
+
+- **Fix for Computed Table Record Calculation:** A fix has been implemented to ensure accurate calculation of the total number of records in computed tables, improving data accuracy and reporting.
+
+- **Enhanced Sampling Source Records Anomaly Detection:** For shape anomalies, sampling source records now explicitly exclude replacement, leading to more precise anomaly detection and preserving data integrity during analysis.
+
 
 ### 2023.07.23 { id=2023.07.23}
 
