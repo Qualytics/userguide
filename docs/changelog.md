@@ -6,6 +6,7 @@ hide:
 ### 2023.07.29 { id=2023.07.29}
 
 **Feature Enhancements:**
+
 - **Added a NotExistsIn Check Type:** Introducing a new rule type that asserts that values assigned to this field do not exist as values in another field.
 - **Check Authoring UI enhancements:** Improved user interface with larger edit surfaces and parenthesis highlighting for better usability.
 - **Container Details UI enhancement:** Improved presentation of container information in sidebars for easier accessibility and understanding.
