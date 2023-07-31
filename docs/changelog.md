@@ -3,6 +3,16 @@ hide:
   - navigation
 ---
 
+### 2023.07.31 { id=2023.07.31}
+
+**Maintenance Release:**
+- Change UX verbiage and iconography for Anomaly status updates
+- Fix intermittent notification template failure
+- Fix UI handling of certain rule types where unused properties were required
+- Improve error messages when containers are no longer accessible
+- Fix Hadoop authentication conflicts with ABFS 
+- Fix issue where a Profile operation run on an empty container threw a runtime exception
+
 ### 2023.07.29 { id=2023.07.29}
 
 **Feature Enhancements:**
