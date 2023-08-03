@@ -3,12 +3,12 @@ hide:
   - navigation
 ---
 
-### 2023.08.02 { id=2023.08.02}
+### 2023.08.03 { id=2023.08.03}
 
 #### Maintenance Release ####
 - Updated enrichment sidebar details design.
 - Tweaked SQL input dialog sizing.
-- Fixed filters components width bug.
+- Fixed filter components width bug.
 - Retain the start time of operation on restart.
 - Fixed exclude fields to throw exceptions on errors.
 - Improved performance when using DFS to load reference data.
@@ -21,7 +21,7 @@ hide:
 - Fixed UI handling of certain rule types where unused properties were required.
 - Improved error messages when containers are no longer accessible.
 - Fixed Hadoop authentication conflicts with ABFS.
-- Fixed issue where a Profile operation run on an empty container threw a runtime exception.
+- Fixed an issue where a Profile operation run on an empty container threw a runtime exception.
 
 ### 2023.07.29 { id=2023.07.29}
 
@@ -89,10 +89,10 @@ hide:
 #### Feature Enhancements
 
 - API enhancements 
-    - Improved performance of our json validation through adoption of Pydantic 2.0
+    - Improved performance of our json validation through the adoption of Pydantic 2.0
       - Upgraded our API specification to OpenAPI 3.1.0 compatible, this uses JSON Schema 2020-12.
 - Upgraded to Spark 3.4
-     - Significant performance enhancements for long running tasks and shuffles
+     - Significant performance enhancements for long-running tasks and shuffles
 - Added support for Kerberos authentication for Hive datastores
 - Enhanced processing for large dataframes with JDBC sources
     - Handle arbitrarily large tables and views by chunking into sequentially processed dataframes
@@ -141,7 +141,7 @@ hide:
 
 #### Feature Enhancements
 
-- Refactored Partiton Reads on JDBC 
+- Refactored Partition Reads on JDBC 
     - Refactored partitioned reads on JDBC to improve performance, resulting in faster and more efficient data retrieval.
 
 #### Bug Fixes
@@ -198,10 +198,10 @@ hide:
 
 #### Feature Enhancements
 
-- [**Explore**](/userguide/explore/global-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filtering out irrelevant information.
+- [**Explore**](/userguide/explore/global-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
 - Enhanced Navigation Features
     - The navigation tabs have been refined for increased user-friendliness.
-    - Enhanced the Profile View and added toggle between card and list views.
+    - Enhanced the Profile View and added a toggle between card and list views.
     - `Datastores` and `Enrichment Datastores` have been unified, with a tabular view introduced to distinguish between your Source Datastores and Enrichment Datastores.
     - `Explore` has been added to the main navigation, and `Insights` has been conveniently relocated into the Explore submenu.
     - Renamed `Tables/Files` to `Profiles` in the Datastore details page.
@@ -262,7 +262,7 @@ hide:
 
 - Scheduled operation editing
     - Added the ability for users to edit a scheduled operation. This allows users to make changes to the schedule of an operation.
-- Catalog include filters
+- Catalog includes filters
     - Added catalog include filters to only process tables, views, or both in JDBC datastores. This allows users to control which object types are processed in the datastore.
 - isReplicaOf check filters
     - Added filter support to the isReplicaOf check. This allows users to control which tables are checked for replication.
