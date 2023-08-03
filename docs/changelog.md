@@ -3,46 +3,56 @@ hide:
   - navigation
 ---
 
+### 2023.08.02 { id=2023.08.02}
+
+#### Maintenance Release ####
+- Updated enrichment sidebar details design.
+- Tweaked SQL input dialog sizing.
+- Fixed filters components width bug.
+- Retain the start time of operation on restart.
+- Fixed exclude fields to throw exceptions on errors.
+- Improved performance when using DFS to load reference data.
+
 ### 2023.07.31 { id=2023.07.31}
 
-**Maintenance Release:**
-- Change UX verbiage and iconography for Anomaly status updates
-- Fix intermittent notification template failure
-- Fix UI handling of certain rule types where unused properties were required
-- Improve error messages when containers are no longer accessible
-- Fix Hadoop authentication conflicts with ABFS 
-- Fix issue where a Profile operation run on an empty container threw a runtime exception
+#### Maintenance Release ####
+- Changed UX verbiage and iconography for Anomaly status updates.
+- Fixed intermittent notification template failure.
+- Fixed UI handling of certain rule types where unused properties were required.
+- Improved error messages when containers are no longer accessible.
+- Fixed Hadoop authentication conflicts with ABFS.
+- Fixed issue where a Profile operation run on an empty container threw a runtime exception.
 
 ### 2023.07.29 { id=2023.07.29}
 
-**Feature Enhancements:**
+#### Feature Enhancements ####
 
-- **Added a NotExistsIn Check Type:** Introducing a new rule type that asserts that values assigned to this field do not exist as values in another field.
-- **Check Authoring UI enhancements:** Improved user interface with larger edit surfaces and parenthesis highlighting for better usability.
-- **Container Details UI enhancement:** Improved presentation of container information in sidebars for easier accessibility and understanding.
-- **Added Check Authoring Validation:** Users can now perform a dry run of the proposed check against representative data to ensure accuracy and effectiveness.
-- **Change in default linkage between Checks and Anomalies:** Filters now default to "Active" status, providing more refined results and support for specific use cases.
+- Added a NotExistsIn Check Type: Introducing a new rule type that asserts that values assigned to this field do not exist as values in another field.
+- Check Authoring UI enhancements: Improved user interface with larger edit surfaces and parenthesis highlighting for better usability.
+- Container Details UI enhancement: Improved presentation of container information in sidebars for easier accessibility and understanding.
+- Added Check Authoring Validation: Users can now perform a dry run of the proposed check against representative data to ensure accuracy and effectiveness.
+- Change in default linkage between Checks and Anomalies: Filters now default to "Active" status, providing more refined results and support for specific use cases.
 
 
 ### 2023.07.25 { id=2023.07.25}
 
-**Feature Enhancements:**
+#### Feature Enhancements #####
 
-- **Satisfies Expression Enhancement:** The Satisfies Expression feature has been upgraded to automatically bind fields referenced in the user-defined expressions, streamlining integration and improving usability.
+- Satisfies Expression Enhancement: The Satisfies Expression feature has been upgraded to automatically bind fields referenced in the user-defined expressions, streamlining integration and improving usability.
 
-**Added Support:**
+#### Added Support ####
 
-- **Extended Support for ExistsIn Checks:** The ExistsIn checks now offer support for computed tables, empowering users to perform comprehensive data validation on computed data.
+- Extended Support for ExistsIn Checks: The ExistsIn checks now offer support for computed tables, empowering users to perform comprehensive data validation on computed data.
 
-**General Fixes:**
+#### General Fixes ####
 
-- **Enhanced Check Referencing:** Checks can now efficiently reference the full dataframe by using the alias "qualytics_self," simplifying referencing and providing better context within checks.
+- Enhanced Check Referencing: Checks can now efficiently reference the full dataframe by using the alias "qualytics_self," simplifying referencing and providing better context within checks.
 
-- **Improved Shape Anomaly Descriptions:** Shape anomaly descriptions now include totals alongside percentages, providing more comprehensive insights into data irregularities.
+- Improved Shape Anomaly Descriptions: Shape anomaly descriptions now include totals alongside percentages, providing more comprehensive insights into data irregularities.
 
-- **Fix for Computed Table Record Calculation:** A fix has been implemented to ensure accurate calculation of the total number of records in computed tables, improving data accuracy and reporting.
+- Fix for Computed Table Record Calculation: A fix has been implemented to ensure accurate calculation of the total number of records in computed tables, improving data accuracy and reporting.
 
-- **Enhanced Sampling Source Records Anomaly Detection:** For shape anomalies, sampling source records now explicitly exclude replacement, leading to more precise anomaly detection and preserving data integrity during analysis.
+- Enhanced Sampling Source Records Anomaly Detection: For shape anomalies, sampling source records now explicitly exclude replacement, leading to more precise anomaly detection and preserving data integrity during analysis.
 
 
 ### 2023.07.23 { id=2023.07.23}
@@ -93,9 +103,6 @@ hide:
 
 - Date Picker fix for Authored Checks
 - Allow tags with special characters to be edited
-
-
-
 
 ### 2023.07.03 { id=2023.07.03 }
 
@@ -148,8 +155,6 @@ hide:
 
 - Added Success Effect
     - Added effect when a datastore is configured successfully, enhancing the user experience by providing visual confirmation of a successful configuration process.
-
-
 
 
 ### 2023.06.20 { id="2023.06.20 }
