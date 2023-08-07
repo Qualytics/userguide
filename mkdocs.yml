@@ -77,6 +77,7 @@ nav:
           - Min Length: checks/min-length-check.md
           - Min Partition Size: checks/min-partition-size-check.md
           - Min Value: checks/min-value-check.md
+          - Not Exists In: checks/not-exists-in-check.md
           - Not Future: checks/not-future-check.md
           - Not Negative: checks/not-negative-check.md
           - Not Null: checks/not-null-check.md
