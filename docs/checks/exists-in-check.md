@@ -1,6 +1,7 @@
 # Exists In <spam id='single-field'>`single field`</spam>
 
 ---
+
 The `ExistsIn` rule type ensures that your fact table's values are valid where the valid values are maintained in a dimension table elsewhere (including in an entirely separate datastore). 
 Within the same OLTP this scenario would typically be enforced with a foreign key, but there are many scenarios where foreign key integrity constraints are unavailable such as:
 - the source (e.g. fact table) and reference (e.g. dimension table) are held in different databases or mediums
