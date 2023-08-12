@@ -3,6 +3,27 @@ hide:
   - navigation
 ---
 
+### 2023.08.11 { id=2023.08.11}
+
+#### Feature Enhancements
+
+- Insights Export: Added a new feature that allows users to export Insights directly to PDF, making it easier to share and review data insights.
+- Check Form UX: 
+    - Fields in the Check Form can now be updated if the check hasn't been used in a Scan operation, offering more flexibility to users.
+    - Enhanced visual cues in the form with boxed information to clarify the limitations certain properties have, depending on the state of the form.
+    - A new icon has been introduced to represent the number of scan operations that have utilized the check, providing users with a clearer overview.
+- SLA Form UX: 
+    - Revamped Date Time handling for enhanced time zone coverage, allowing for user-specified date time configurations based on their preferred time zone.
+- Filter and Sorting:
+    - Added Datastore Type filter and sorting for source datastores
+    - Added Profile Completeness sorting and type filtering and sorting
+    - Added Check search by identifier or description
+
+#### General Fixes
+
+- SparkSQL Expressions: Added support to field names with special characters to SparkSQL expressions using backticks
+- Pagination Adjustment: The pagination limit has been fine-tuned to support a maximum of 100 items per page, improving readability and navigation.
+
 ### 2023.08.03 { id=2023.08.03}
 
 #### Maintenance Release ####
