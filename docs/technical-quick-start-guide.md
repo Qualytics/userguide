@@ -12,7 +12,7 @@ For example, ACME's Qualytics deployment might be published at `https://acme.qua
 After you've obtained access to your deployment, you'll want to:
 
 1. Connect a [Datastore](/userguide/glossary/#datastore)
-2. Initiate a [profiling](/userguide/glossary#profiling) on the datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
+2. Initiate a [profiling](/userguide/glossary#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
 3. Assert those checks to detect data [anomalies](/userguide/glossary/#anomaly)
 
 ## Connecting a [Datastore](/userguide/glossary/#datastore)
@@ -38,13 +38,13 @@ The process of configuring a new Enrichment Datastore is similar to that of a So
 !!!note
     If you don't have a specific location to store these results, you can request the **QFS (Qualytics File System)** connector provided by Qualytics for this purpose.
 
-During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous `ConnectionVerification` operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](/userguide/glossary/#compute-daemon):
+During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](/userguide/glossary/#compute-daemon):
 
 1. If the operation is successful, you can proceed with the configuration. Any issues during this `Test Connection` process will result in an error message being displayed on the current step of the form, be it the Source Datastore or Enrichment Datastore step.
 2. After you've validated the connections and click `Finish`, the platform will automatically initiate an asynchronous [Catalog operation](/userguide/glossary/#catalog-operation) for the Source Datastore.
 
 !!!note
-    If any future operation fails to establish a connection with the Datastore, the `connected` property of the Datastore will be set to `false`. When this happens, the UI will provide warnings to help you resolve the connectivity issues.
+    If any future operation fails to establish a connection with the Datastore, the UI will provide warnings to guide you in resolving the connectivity issues.
 
 ## Generate a [Profile](/userguide/glossary/#profile-operation)
 
@@ -70,7 +70,7 @@ Two concrete examples of sophisticated rule types automatically inferred at this
 1. **the application of a robust normality test:** this is applied to each numeric field to discover whether certain types of anomaly checks are applicable & bases its quality check recommendations upon that learning.
 2. **the generation of linear regression models:** this is automatically generated to fit any highly correlated fields in the same table. If a good fit model is identified, it's recorded as a predicting model for those correlated fields and used to identify future anomalies.
 
-Now that you have a deeper understanding of how our profiling operation works, you're ready to take action. To initiate a Profile Operation, navigate to the details of the specific datastore you've created. There, you'll find a step to start the Profile Operation.
+Now that you have a deeper understanding of how our profiling operation works, you're ready to take action. To initiate a Profile Operation, navigate to the details of the specific source datastore you've created. There, you'll find a step to start the Profile Operation.
 
 ## Initiating and Reviewing a [Scan](/userguide/glossary/#incremental-scan-operation) for [Anomalies](/userguide/glossary/#anomaly)
 
@@ -87,6 +87,6 @@ Upon completion of the Scan operation, you can review the following data points:
     - Total Records
 
 !!!info
-    Any issues, such as the failure to scan any Container of the Datastore, will be indicated, along with suggestions on how to address the issue, such as assigning an identifier or setting a record limit.
+    Any issues, such as the failure to scan any Container of the source datastore, will be indicated, along with suggestions on how to address the issue, such as assigning an identifier or setting a record limit.
 
 <!-- ## Monitor `data freshness` -->

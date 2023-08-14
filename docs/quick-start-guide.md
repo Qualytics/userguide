@@ -24,7 +24,7 @@ After you've created a source datastore, the platform will automatically trigger
 
 #### Step 2: [Profiling](/userguide/glossary/#profiling) the Datastore
 
-Perform a Profile Operation on your chosen datastore. This operation generates valuable metadata insights for all the data assets within the datastore. It also automatically infers customized data quality checks based on the profiled data.
+Perform a Profile Operation on your chosen source datastore. This operation generates valuable metadata insights for all the data assets within the source datastore. It also automatically infers customized data quality checks based on the profiled data.
 
 ![Generate a Profile](assets/operations/operation-profile-light.png#only-light){: style="width:450px"}
 ![Generate a Profile](assets/operations/operation-profile-dark.png#only-dark){: style="width:450px"}
@@ -33,7 +33,7 @@ Perform a Profile Operation on your chosen datastore. This operation generates v
 
 #### Step 3: [Scan](/userguide/glossary/#incremental-scan-operation) and Assert [Data Quality Checks](/userguide/glossary/#data-quality-check)
 
-Initiate a scan of your datastore to assert the automatically inferred checks (as well as any additional checks you create) against both historical and new data within the datastore. This step ensures that your data is thoroughly evaluated for any anomalies.
+Initiate a scan of your source datastore to assert the automatically inferred checks (as well as any additional checks you create) against both historical and new data within the source datastore. This step ensures that your data is thoroughly evaluated for any anomalies.
 
 ![Run a Scan](assets/operations/operation-scan-light.png#only-light){: style="width:450px"}
 ![Run a Scan](assets/operations/operation-scan-dark.png#only-dark){: style="width:450px"}
