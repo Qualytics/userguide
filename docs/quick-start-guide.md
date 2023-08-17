@@ -13,12 +13,18 @@ Use the intuitive web app or API provided by Qualytics to connect your datastore
 ![Add a Datastore](assets/datastores/form-light.png#only-light){: style="width:450px"}
 ![Add a Datastore](assets/datastores/form-dark.png#only-dark){: style="width:450px"}
 
+In this Datastore step, you'll find an option to automatically trigger a [Catalog operation](/userguide/glossary/#catalog-operation). By selecting this option, the platform will analyze the source datastore's metadata, preparing it for subsequent Profile and Scan operations.
+
+![Screenshot](assets/datastores/form-initiate-cataloging-light.png#only-light){: style="width:450px"}
+![Screenshot](assets/datastores/form-initiate-cataloging-dark.png#only-dark){: style="width:450px"}
+
+!!!note
+    If you opt not to select this option during datastore creation, you can later initiate the Catalog operation from the Source Datastore details page, where you'll have enhanced customization options for the operation's parameters.
+
 We recommend adding at least one [Enrichment Datastore](/userguide/glossary/#enrichment-datastore), which helps in identifying and addressing anomalous data more easily.
 
 ![Screenshot](assets/enrichment/form-light.png#only-light){: style="width:450px"}
 ![Screenshot](assets/enrichment/form-dark.png#only-dark){: style="width:450px"}
-
-After you've created a source datastore, the platform will automatically trigger a [Catalog operation](/userguide/glossary/#catalog-operation). This operation analyzes the source datastore's metadata and is an essential preparation for the upcoming Profile and Scan operations.
 
 <br>
 

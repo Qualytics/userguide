@@ -21,6 +21,8 @@ The first step of configuring a Qualytics instance is to `Add Source Datastore`.
 
 As you provide the required connection details, the UI verifies network connectivity and indicates whether the combination is accessible. This feature assists in diagnosing any network routing restrictions.
 
+While configuring the connection, you'll also come across an option to automatically trigger an asynchronous [Catalog operation](/userguide/glossary/#catalog-operation) upon successful Datastore creation.
+
 Once the connection details are confirmed, the "Add Datastore" process moves to a second optional but **strongly recommended step: the configuration of an Enrichment Datastore**. 
 
 The Enrichment Datastore serves as a location to record enrichment data (anomalies and metadata for a Source Datastore). This is a crucial step as it significantly enhances Qualytics's ability to detect anomalies.
@@ -40,8 +42,7 @@ The process of configuring a new Enrichment Datastore is similar to that of a So
 
 During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](/userguide/glossary/#compute-daemon):
 
-1. If the operation is successful, you can proceed with the configuration. Any issues during this `Test Connection` process will result in an error message being displayed on the current step of the form, be it the Source Datastore or Enrichment Datastore step.
-2. After you've validated the connections and click `Finish`, the platform will automatically initiate an asynchronous [Catalog operation](/userguide/glossary/#catalog-operation) for the Source Datastore.
+- If the operation is successful, you can proceed with the configuration. Any issues during this `Test Connection` process will result in an error message being displayed on the current step of the form, be it the Source Datastore or Enrichment Datastore step.
 
 !!!note
     If any future operation fails to establish a connection with the Datastore, the UI will provide warnings to guide you in resolving the connectivity issues.
