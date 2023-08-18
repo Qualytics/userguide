@@ -11,7 +11,7 @@ hide:
     - Introduced significant enhancements to the auditing capabilities of the platform, designed to provide better insights and control over changes. The new auditing features empower users to keep track of change sets across all entities, offering transparency and accountability like never before. A new activity endpoint has been introduced, providing a log of user interactions across the application.
 
 - Search Enhancements:
-    - Profiles and Anomalies list can now be searched by both identifiers and description using the same search input.
+    - Profiles and Anomalies lists can now be searched by both identifiers and descriptions using the same search input.
 
 - Catalog Operation Flow Update:
     - Made a minor update to the datastore creation and catalog flow to enhance user flexibility and experience. Instead of automatically running a catalog operation post datastore creation, users now have a clearer, intuitive manual process. This change offers users the flexibility to set custom catalog configurations, like syncing only tables or views.
@@ -26,6 +26,9 @@ hide:
 
 - Datastore Connection Edit:
     - Improved the Datastore connection edit experience, especially for platforms like BigQuery. Resolved an issue where file inputs were previously obligatory for minor edits. For instance, renaming a BigQuery Datastore no longer requires a file input, addressing this past inconvenience.
+
+- Pagination issues:
+    - Resolved an issue with paginated endpoints returning 500 instead of 422 on requests with invalid parameters.
 
 ### 2023.08.11 { id=2023.08.11}
 
