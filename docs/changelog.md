@@ -3,6 +3,24 @@ hide:
   - navigation
 ---
 
+### 2023.08.22 { id=2023.08.22}
+
+#### Feature Enhancements
+
+- Profiles Page:
+    - Introduced two new sorting methods to provide users with more intuitive ways to explore their profiles: Sort by **last profiled** and Sort by **last scanned**.
+    - Updated the default sorting behavior. Profiles will now be ordered by name right from the start, rather than by their creation date.
+
+- Add New isNotReplicaOf Rule:
+    - With this rule, users can assert that certain datasets are distinct and don't contain matching data, enhancing the precision and reliability of data comparisons and assertions.
+
+#### General Fixes
+
+- Schema Validation:
+    - We've resolved an issue where the system was permitting the persistence of empty values under certain conditions for datastores and checks. This fix aims to prevent unintentional data inconsistencies, ensuring data integrity.
+
+- General fixes and improvements
+
 ### 2023.08.18 { id=2023.08.18}
 
 #### Feature Enhancements
