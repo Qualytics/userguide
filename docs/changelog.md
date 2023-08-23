@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-### 2023.08.22 { id=2023.08.22}
+### 2023.08.23 { id=2023.08.23}
 
 #### Feature Enhancements
 
@@ -11,8 +11,15 @@ hide:
     - Introduced two new sorting methods to provide users with more intuitive ways to explore their profiles: Sort by **last profiled** and Sort by **last scanned**.
     - Updated the default sorting behavior. Profiles will now be ordered by name right from the start, rather than by their creation date.
 
-- Add New isNotReplicaOf Rule:
+- Add New isNotReplicaOf Check:
     - With this rule, users can assert that certain datasets are distinct and don't contain matching data, enhancing the precision and reliability of data comparisons and assertions.
+
+- Introduce new Metric Check
+    - We've added a new Metric check tailored specifically for handling timeseries data. This new check is set to replace the previous Absolute and Relative Change Checks.
+    - To offer a more comprehensive and customizable checking mechanism, the Metric check comes with a comparison input:
+        - **Percentage Change**: Asserts that the field hasn't deviated by more than a certain percentage (inclusive) since the last scan.
+        - **Absolute Change**: Ensures the field hasn't shifted by more than a predetermined fixed amount (inclusive) from the previous scan.
+        - **Absolute Value**: During each scan, this option records the field value and asserts that it remains within a specified range (inclusive).
 
 #### General Fixes
 
