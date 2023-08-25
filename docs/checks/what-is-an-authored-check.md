@@ -29,4 +29,3 @@
 
     ![Screenshot](../assets/checks/quality-checks-doc.png)
 
---- 

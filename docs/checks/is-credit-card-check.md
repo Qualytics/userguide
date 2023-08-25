@@ -27,4 +27,3 @@
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% do not adhere to a credit card format.
 
----

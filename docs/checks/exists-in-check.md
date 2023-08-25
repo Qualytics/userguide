@@ -35,4 +35,4 @@ Within the same OLTP this scenario would typically be enforced with a foreign ke
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% of the filtered values do not exist in `[compared_field_name]`.
----
+

@@ -29,6 +29,3 @@ By using the `IsNotReplicaOf` feature, you're taking a proactive step in ensurin
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     For `[column_names]`, the referred fields do replicate the targeted fields
 
-
-
----

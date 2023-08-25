@@ -29,6 +29,3 @@ By using the `IsReplicaOf` feature, you're taking a significant step in maintain
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     For `[column_names]`, the referred fields do not replicate the targeted fields.
 
-
-
----

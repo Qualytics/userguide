@@ -64,4 +64,4 @@ The `Percentage Change` comparison operates by tracking changes in a numeric fie
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
     The absolute change of `[field_name]` from '`[min value]`' to `[max value]` falls outside the declared limits
---- 
+
