@@ -48,7 +48,6 @@ nav:
         - checks/what-is-an-authored-check.md
         - checks/what-is-an-inferred-check.md
         - Check Rule Types:
-          - Absolute Change Limit: checks/absolute-change-limit-check.md
           - After Date: checks/after-date-check.md
           - Any Not Null: checks/any-not-null-check.md
           - Before Date Time: checks/before-date-time-check.md
@@ -74,6 +73,7 @@ nav:
           - Matches Pattern: checks/matches-pattern-check.md
           - Max Length: checks/max-length-check.md
           - Max Value: checks/max-value-check.md
+          - Metric: checks/metric-check.md
           - Min Length: checks/min-length-check.md
           - Min Partition Size: checks/min-partition-size-check.md
           - Min Value: checks/min-value-check.md
@@ -84,7 +84,6 @@ nav:
           - Positive: checks/positive-check.md
           - Predicted By: checks/predicted-by-check.md
           - Required Fields: checks/required-fields-check.md
-          - Relative Change Limit: checks/relative-change-limit-check.md
           - Required Values: checks/required-values-check.md
           - Satisfies Expression: checks/satisfies-expression-check.md
           - Sum: checks/sum-check.md
