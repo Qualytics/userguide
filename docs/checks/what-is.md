@@ -61,6 +61,7 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 
 *   `Is Credit Card`: Asserts that the values are credit card numbers.
 
+*   `Is Not Replica Of`: Asserts that the dataset created by the targeted field(s) is not replicated by the referred field(s).
 
 *   `Is Replica Of`: Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).
 
@@ -74,11 +75,15 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 
 *   `Max Value`: Asserts that a field has a maximum value.
 
+*   `Metric`: Records the value of the selected field during each scan operation and asserts that the value is within a specified range (inclusive).
+
 *   `Min Length`: Asserts that a string has a minimum length.
 
 *   `Min Partition Size`: Asserts the minimum number of records that should be loaded from each file or table partition.
 
 *   `Min Value`: Asserts that a field has a minimum value.
+
+*   `Not Exist In`: Asserts that values assigned to this field do not exist as values in another field.
 
 *   `Not Future`: Asserts that the field's value is not in the future.
 

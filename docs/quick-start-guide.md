@@ -50,5 +50,5 @@ Initiate a scan of your source datastore to assert the automatically inferred ch
 
 After the scan, review the identified anomalies and flag them with the appropriate status. Qualytics learns from your business and preferences during this process, adapting its future operations to better suit your needs.
 
-![Anonamlies](assets/anomalies/anomaly-table-light.png#only-light)
+![Anomalies](assets/anomalies/anomaly-table-light.png#only-light)
 ![Anomalies](assets/anomalies/anomaly-table-dark.png#only-dark)

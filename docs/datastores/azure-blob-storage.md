@@ -62,6 +62,6 @@ wasb[s]://<container-name>@<storage-account-name>.blob.core.windows.net/<path>
 
 * To get the `account_name` and `access_key` you need to access your local storage in Azure.
 
-* Click in `Access Keys` tab and copy the values.
+* Click on `Access Keys` tab and copy the values.
 
 ![Screenshot](../assets/datastores/azure-blob-storage/where-to-find-keys.png)

@@ -17,7 +17,7 @@
 
 * The first step of configuring a Qualytics instance is to Add New Datastore:
     - In the `main` menu, select `Datastores` tab
-    - Click in `Add New Datastore` button:
+    - Click on `Add New Datastore` button:
     
     - ![Screenshot](../assets/datastores/what-is/add-new-datastore-button-light.png#only-light)
       ![Screenshot](../assets/datastores/what-is/add-new-datastore-button-dark.png#only-dark)

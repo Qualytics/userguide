@@ -11,7 +11,7 @@
 ![Screenshot](../assets/checks/rule-types/metric-check-dark.png#only-dark)
 
 
-## `Comparsion` options:
+## `Comparison` options:
 
 ![Screenshot](../assets/checks/rule-types/comparison-options-light.png#only-light)
 ![Screenshot](../assets/checks/rule-types/comparison-options-dark.png#only-dark)
