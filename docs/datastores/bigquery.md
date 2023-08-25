@@ -81,3 +81,27 @@ Once the form is completed, it's necessary to test the connection. A successful 
 
 * You can download the private key file from the GoogleAPI console web page.
 ​
+---
+
+### `Datastore` BigQuery privileges permissions <spam id='required'>`required`</spam>
+
+
+##### Read-Only Permission
+
+Assign the `roles/bigquery.dataViewer` role to a service account or user for read-only access.
+
+!!!role
+    `roles/bigquery.dataViewer`: *Provides permissions to view table data and metadata.*
+
+### `Enrichment Datastore` BigQuery privileges permissions <spam id='required'>`required`</spam>
+
+##### Read-Write Permissions
+
+Assign the combination of `roles/bigquery.dataEditor`, `roles/bigquery.dataViewer` and `roles/bigquery.jobUser` roles to a service account or user for read-write access.
+
+!!!roles
+    `roles/bigquery.dataEditor`: *Provides permissions to edit table data.*
+
+    `roles/bigquery.dataViewer`: *Provides permissions to view table data and metadata.*
+
+    `roles/bigquery.jobUser`: *Allows users to run jobs, including querying, loading data, exporting data, etc.*
