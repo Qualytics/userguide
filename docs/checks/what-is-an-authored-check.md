@@ -10,7 +10,7 @@
 ## Add a new Data Quality `Check`
 
 1.  After going to `Checks` tab
-2.  On the right top menu, click in `Add Check`
+2.  On the right top menu, click on `Add Check`
     ![Screenshot](../assets/checks/add-checks-light.png#only-light)
     ![Screenshot](../assets/checks/add-checks-dark.png#only-dark)
 3. You are going to see the `Authored Checks Details` modal:
@@ -29,4 +29,3 @@
 
     ![Screenshot](../assets/checks/quality-checks-doc.png)
 
---- 

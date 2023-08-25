@@ -30,4 +30,4 @@ The `NotExistIn` rule type serves to validate data integrity by ensuring that va
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% of the filtered values do exist in `[compared_field_name]`.
----
+

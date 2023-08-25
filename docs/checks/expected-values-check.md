@@ -27,4 +27,3 @@
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% of values do not appear in the list of expected values.
 
----

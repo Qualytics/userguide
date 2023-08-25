@@ -20,5 +20,3 @@
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% are not later than `[selected_date_time]`
-
---- 

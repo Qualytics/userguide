@@ -25,4 +25,3 @@
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     `[x]`% of records do not satisfy the give query expression.
 
----

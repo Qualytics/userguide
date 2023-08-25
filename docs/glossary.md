@@ -96,14 +96,14 @@ hide:
 
  - An application that protects a system from contamination due to inputs, reducing the likelihood of contamination from an outside source. The Compute Daemon will quarantine data that is problematic, allowing the user to act upon quarantined items.
 
-### <a name="incremental"></a>__Incremental Indentifier__
+### <a name="incremental"></a>__Incremental Identifier__
 
  - a Field that can be used to group the records in the Table Container into distinct ordered Qualytics Partitions in support of incremental operations upon those partitions__:
 
   * a whole number - then all records with the same partition_id value are considered part of the same partition
   * a float or timestamp - then all records between two defined values are considered part of the same partition (the defining values will be set by incremental scan/profile business logic) Since Qualytics Partitions are required to support Incremental Operations, an Incremental Identifier is required for a Table Container to support incremental Operations.
 
-### <a name="incremental"></a>__Incremental Scan Operation__
+### <a name="incremental-scan-operation"></a>__Incremental Scan Operation__
 
  - a Scan Operation where only new records (inserted since the last Scan Operation) are analyzed. The underlying Container must support determining which records are new for incremental scanning to be a valid option for it.
 

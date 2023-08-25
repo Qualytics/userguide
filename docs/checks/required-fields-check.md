@@ -22,4 +22,3 @@
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     One of the required fields `[field_names]`, are missing.
 
----

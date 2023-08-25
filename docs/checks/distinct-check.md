@@ -22,4 +22,3 @@
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly only` error message"
     In `[field_names]`, The distinct ratio of the `[field]` records is not `0.0`
 
----

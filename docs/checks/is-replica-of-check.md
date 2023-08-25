@@ -27,9 +27,5 @@ By using the `IsReplicaOf` feature, you're taking a significant step in maintain
 
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    There are `[x]` records that differ between 
-    `[target_table]` and `[reference_table]` in `[datastore_name]`
+    For `[column_names]`, the referred fields do not replicate the targeted fields.
 
-
-
----

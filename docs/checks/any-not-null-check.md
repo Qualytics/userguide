@@ -24,5 +24,3 @@
 
 === "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
     In `[field_names]`, `[x]`% have no value set for any of `[selected_field_name]`
-
---- 
