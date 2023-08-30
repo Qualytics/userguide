@@ -3,6 +3,24 @@ hide:
   - navigation
 ---
 
+### 2023.08.30 { id=2023.08.30}
+
+#### Feature Enhancements
+
+- Anomaly Dialog Updates:
+    - Optimized Source Data Columns Presentation: To facilitate faster identification of issues, anomalous fields are now presented first. This enhancement will prove particularly useful for data sources with a large number of columns.
+    - Enhanced Sorting Capabilities: Users can now sort the source record data by name, weight, and quality score, providing more flexible navigation and ease of use.
+    - Field Information at a Glance: A new menu box has been introduced to deliver quick insights about individual fields. Users can now view weight, quality score, and suggested remediation for each field directly from this menu box.
+
+- Syntax Highlighting Autocomplete Widget:
+    - Improved UX: The widget has been enhanced to better identify and display hint types, including distinctions between tables, keywords, views, and columns. This enhancement enriches the autocomplete experience.
+
+#### General Fixes
+
+- Check Dialog Accessibility:
+    - Addressed an issue where the check dialog was not opening as expected when accessed through a direct link from the profile page.
+- General fixes and improvements
+
 ### 2023.08.23 { id=2023.08.23}
 
 #### Feature Enhancements
