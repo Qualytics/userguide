@@ -3,6 +3,15 @@ hide:
   - navigation
 ---
 
+### 2023.08.31 { id=2023.08.31}
+
+#### General Fixes
+
+- Fixed an issue where the Source Record remediation was incorrectly displayed for all fields
+- Adjusted the display of field Quality Scores and Suggestion Scores within the Source Record
+- Fixed a bug in the Check Form where the field input wouldn’t display when cloning a check that hasn’t been part of a scan yet
+- Resolved an issue where failed checks for shape anomalies were not receiving violation messages
+
 ### 2023.08.30 { id=2023.08.30}
 
 #### Feature Enhancements
