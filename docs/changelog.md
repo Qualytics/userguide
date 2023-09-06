@@ -3,6 +3,30 @@ hide:
   - navigation
 ---
 
+### 2023.09.06 { id=2023.09.06 }
+
+#### Feature Enhancements
+
+- Concurrent Operations:
+    - Introduced the ability to run multiple operations of the same type concurrently within a single datastore, even if one is yet to finish. This brings more flexibility and efficiency in executing operations
+  
+- Autocomplete Widget:
+    - A hint for a shortcut has been added, allowing users to manually trigger the autocomplete widget and enhancing usability
+  
+- Source Record Display Enhancements:
+    - Added a new 'Hide Anomalous' option, providing users with the choice to hide anomalous records for clearer viewing
+    - Transitioned from hover-based tooltips to click-activated ones for better UX
+    - For a consistent data presentation, internal columns will now always be displayed first
+  
+- Check Form Improvements:
+    - Users now receive feedback directly within the form upon successful validation, replacing the previous toast notification method
+    - Additionally, for 504 validation timeouts, a more detailed and context-specific message is provided
+
+#### General Fixes
+
+- Addressed issues for 'Is Replica Of' failed checks in source record handling
+- General fixes and improvements
+
 ### 2023.08.31 { id=2023.08.31}
 
 #### General Fixes
