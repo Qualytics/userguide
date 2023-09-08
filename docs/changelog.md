@@ -3,6 +3,19 @@ hide:
   - navigation
 ---
 
+### 2023.09.08 { id=2023.09.08 }
+
+#### Feature Enhancements
+
+- Presto & Trino Connectors:
+    - We've enhanced our suite of JDBC connectors by introducing dedicated support for both Presto and Trino. Whether you're utilizing the well-established Presto or the emerging Trino, our platform ensures seamless compatibility to suit your data infrastructure needs.
+
+#### General Fixes
+
+- Incremental Scan: 
+    - Resolved an issue where the scan operation would fail during the "Exists In Check" if there were no records to be processed.
+- General fixes and improvements
+
 ### 2023.09.06 { id=2023.09.06 }
 
 #### Feature Enhancements
