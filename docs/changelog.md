@@ -3,6 +3,31 @@ hide:
   - navigation
 ---
 
+### 2023.09.14 { id=2023.09.14 }
+
+#### Feature Enhancements
+
+- Insights Improvements:
+    - Performance has been significantly optimized for smoother interactions.
+    - Introduced timeframe filters, allowing users to view insights data by week, month, quarter, or year.
+    - Introduced grouping capabilities, enabling users to segment visualizations within a timeframe, such as by days or weeks.
+
+- Metric Checks Enhancements:
+    - Introduced a new Metric Checks tab in both the datastore and explore perspectives.
+    - Added a Time Series Chart within the Metric Checks tab:
+        - Displays check measurements over time.
+        - Allows on-the-fly adjustments of min/max threshold values.
+        - Showcases enhanced check metadata including tags, active anomaly counts, and check weights.
+
+- Check Form Adjustments:
+    - Disabled the `Comparison Type` input for asserted checks
+
+#### General Fixes
+
+- Configuring Metric Checks through the Check Form:
+    - Resolved a bug where users were unable to clear optional inputs such as "min" or "max".
+- General fixes and improvements
+
 ### 2023.09.08 { id=2023.09.08 }
 
 #### Feature Enhancements
