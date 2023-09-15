@@ -3,6 +3,28 @@ hide:
   - navigation
 ---
 
+### 2023.09.15 { id=2023.09.15}
+
+#### Feature Enhancements
+
+- Insights Timeframe and Grouping:
+    - Trend tooltips have been refined to change responsively based on the selected timeframe and grouping, ensuring that users receive the most relevant information at a glance.
+
+- Enhanced PDF export for Insights:
+    - Incorporated the selected timeframe and grouping settings into the exported PDF, ensuring that users experience consistent detail and clarity both within the application and in the exported document.
+    - Added a "generated at" timestamp to the PDF exports, providing traceability and context to when the data was captured, further enhancing the comprehensiveness of exported insights.
+
+- Source Record Display Improvements:
+    - The internal columns' background color has been calibrated to offer a seamless appearance in both light and dark themes.
+
+#### General Fixes
+
+- Time Series Chart Rendering:
+    - Addressed an issue where the time series chart would not display data points despite having valid measurements. The core of the problem was pinpointed to how the system handled `0` values, especially when set as min and/or max thresholds.
+    - Resolved inconsistencies in how undefined min/max thresholds were displayed across different comparison types. While we previously had a UI indicator displaying for some comparison types, this was missing for "Absolute Change" and "Absolute Value".
+
+- General fixes and improvements
+
 ### 2023.09.14 { id=2023.09.14 }
 
 #### Feature Enhancements
