@@ -63,7 +63,7 @@ hide:
     - Resolved an issue where the scan operation would fail during the "Exists In Check" if there were no records to be processed.
 - General fixes and improvements
 
-### 2023.09.06 { id=2023.09.06 }
+### 2023.09.07 { id=2023.09.07 }
 
 #### Feature Enhancements
 
