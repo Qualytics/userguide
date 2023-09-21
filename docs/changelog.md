@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2023.09.21 { id=2023.09.21}
+
+#### Feature Enhancements
+
+- Anomalies Modal Redesign:
+    - Streamlined the presentation of Failed Checks by removing the Anomalous Fields grouping. The new layout focuses on a list of Failed Checks, each tagged with the associated field(s) name, if applicable. This eliminates redundancy and simplifies the UI, making it easier to compare failed checks directly against the highlighted anomalous fields in the Source Record.
+    - Added the ability to filter Failed Checks by anomalous fields.
+    - Introduced direct links to datastores and profiles for enhanced navigation.
+    - Updated the tag input component for better UX.
+    - Removed the 'Hide Anomalous' option and replaced it with an 'Only Anomalous' option for more focused analysis.
+    - Included a feature to display the number of failed checks a field has across the modal.
+    - Implemented a menu allowing users to copy Violation messages easily.
+
+- Bulk Operation for Profiles:
+    - Extended the profile selection functionality to allow initiating bulk operations like profiling and scanning directly from the selection interface.
+
+#### General Fixes
+
+- DFS Incremental Scans:
+    - Addressed an issue that caused incremental scans to fail when no new files were detected on globs. Scans will now proceed without failure or warning in such cases.
+- Improve performance of the Containers endpoint
+- General fixes and improvements
+
 ### 2023.09.16 { id=2023.09.16}
 
 #### Feature Enhancements
