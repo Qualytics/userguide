@@ -38,11 +38,13 @@ nav:
         - datastores/mysql.md
         - datastores/oracle.md
         - datastores/postgresql.md
+        - datastores/presto.md
         - datastores/qfs.md
         - datastores/redshift.md
         - datastores/snowflake.md
         - datastores/synapse.md
         - datastores/timescale-db.md
+        - datastores/trino.md
       - Data Quality Checks:
         - checks/what-is.md
         - checks/what-is-an-authored-check.md
