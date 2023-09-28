@@ -3,6 +3,35 @@ hide:
   - navigation
 ---
 
+### 2023.09.28 { id=2023.09.28}
+
+#### Feature Enhancements
+  
+- Operations & Schedules UI Update:
+    - Redesigned the UI for the operations and schedules lists for a more intuitive UX and to provide additional information.
+        - Introduced pagination, filtering, and sorting for the schedules list.
+        - Added a "Next Trigger" column to the schedules list to inform users of upcoming schedule triggers.
+    - Improved Profile List Modal:
+        - Enhanced the profile list modal accessible from operations and schedules.
+        - Users can now search by both ID and profile name.
+  
+- Check Navigation Enhancements:
+    - Enhanced navigation between Standard and Metric Cards by introducing direct links that allow users to access metric charts seamlessly from check forms.
+    - The checks page navigation state is now reflected in the URL, enhancing UX and enabling precise redirect capabilities.
+
+- Computed Table Enhancements:
+    - Upon the creation or update of a computed table, a minimalistic profile operation is now automatically triggered. This basic profile limits sampling to 1,000 and does not infer quality checks.
+    - This enhancement streamlines the process when working with computed tables. Users can now directly create checks after computed table creation without manually initiating a profile operation, as the system auto-fetches required field data types.
+
+- Improved Communication of Internal Services:
+    - Enhanced our AMQP-based inter-microservice communication, improving overall platform reliability and performance.
+
+#### General Fixes
+
+- Insights Filter Consistency:
+    - Fixed an inconsistency issue with the datastore filter that was affecting couple of charts in Insights
+- General fixes and improvements
+
 ### 2023.09.21 { id=2023.09.21}
 
 #### Feature Enhancements
