@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-### 2023.09.28 { id=2023.09.28}
+### 2023.09.29 { id=2023.09.29}
 
 #### Feature Enhancements
   
@@ -23,13 +23,13 @@ hide:
     - Upon the creation or update of a computed table, a minimalistic profile operation is now automatically triggered. This basic profile limits sampling to 1,000 and does not infer quality checks.
     - This enhancement streamlines the process when working with computed tables. Users can now directly create checks after computed table creation without manually initiating a profile operation, as the system auto-fetches required field data types.
 
-- Improved Communication of Internal Services:
-    - Enhanced our AMQP-based inter-microservice communication, improving overall platform reliability and performance.
+- Analytics Engine Enhancements:
+    - This release replaces our previous consistency model with a more robust one relying upon AMQP brokered durable messaging. The change dramatically improves Qualytics' internal fault tolerance with accompanying performance enhancements for common operations.
 
 #### General Fixes
 
 - Insights Filter Consistency:
-    - Fixed an inconsistency issue with the datastore filter that was affecting couple of charts in Insights
+    - Fixed an inconsistency issue with the datastore filter that was affecting a couple of charts in Insights
 - General fixes and improvements
 
 ### 2023.09.21 { id=2023.09.21}
