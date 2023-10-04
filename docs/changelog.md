@@ -3,6 +3,32 @@ hide:
   - navigation
 ---
 
+### 2023.10.04 { id=2023.10.04}
+
+#### Feature Enhancements
+
+- Anomalies Details User Experience:
+    - Implemented a "skeleton loading" feature in the Anomaly Details dialog, enhancing user feedback during data loading.
+
+- Enhanced Check Dialog:
+    - Added "Last Updated" date to the Check Dialog to provide users with additional insights regarding check modifications.
+
+- API Engine Control:
+    - Exposed a new endpoint allowing users to gracefully restart the analytics engine through the API.
+
+#### General Fixes
+
+- Timezone Handling on MacOS:
+    - Resolved an issue affecting timezone retrieval due to MacOS privacy updates, ensuring accurate timezone handling.
+- Notifications and Alerts:
+    - Pager Duty Integration: Resolved issues preventing message sending and improved UI for easier configuration.
+    - HTTP Action Notification: Fixed Anomaly meta-data serialization issues affecting successful delivery in some circumstances.
+- Scan Duration Accuracy:
+    - Adjusted scan duration calculations to accurately represent the actual processing time, excluding time between a failed scan and a successful retry.
+- Spark Partitioning:
+    - Certain datastores may fail to properly coerce types into Spark-compatible partition column values if that column itself contains anomalous values. When this occurs, an attempt will be made to load the data without a partition column and a warning will be generated for the user.
+- General fixes and improvements
+
 ### 2023.09.29 { id=2023.09.29}
 
 #### Feature Enhancements
