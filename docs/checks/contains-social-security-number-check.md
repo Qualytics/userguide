@@ -2,7 +2,7 @@
 
 ---
 
-*Asserts that the values are social security numbers.*
+*Asserts that the values contain a social security number.*
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
