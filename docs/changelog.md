@@ -3,6 +3,34 @@ hide:
   - navigation
 ---
 
+### 2023.10.09 { id=2023.10.09}
+
+#### Feature Enhancements
+
+- Check Categorization:
+    - Introduced new check categories on the checks page to streamline UX and prioritize viewing:
+        1. **Important**: Designed around a check's weight value, this category will by default comprise authored checks and inferred checks with active anomalies.
+        2. **Favorite**: Featuring all user-favorited checks
+        3. **Metrics**: Incorporating all metric checks
+        4. **All**: Displaying all checks, whether inferred, authored, or anomalous
+    - The default view is set to "Important" (if available) to highlight critical checks and avoid overwhelming users
+
+- Anomalies Page Update:
+    - Revamped the Anomalies page with a simplified status filter, adopting a design in alignment with the checks page:
+        - **Quick Status Filter**: Facilitates an effortless switch between anomaly statuses.
+        - The "Active" tab is presented as the default, providing immediate visibility into ongoing anomalies.
+
+- Notification Testing:
+    - Enhanced the Notification Form with a "Test Notification" button, enabling users to validate notification settings before saving
+
+- Metadata Export to Enrichment Stores:
+    - Enabled users to export metadata from their datastore directly into enrichment datastores, with initial options for quality checks and field profiles.
+    - Users can specify which profiles to include in the export operation, ensuring relevant data transfer.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2023.10.04 { id=2023.10.04}
 
 #### Feature Enhancements
