@@ -10,9 +10,9 @@ The Scan Operation is executed on a Datastore to assert the data quality checks 
 * record the anomaly data along with related analysis in the associated Enrichment Datastore
 
 !!! info
-    To assert data quality checks to find anomalies, a user needs to perform a Scan operation. 
+    To assert data quality checks to find anomalies, a user needs to perform a Scan operation.
 
-* Scan operation enables the user to assert the checks in incremental vs full loads, with options to limit the number of records, run a scan on a select list of tables / files, and to set schedules for future scans. 
+* Scan operation enables the user to assert the checks in incremental vs full loads, with options to limit the number of records, run a scan on a select list of tables / files, and to set schedules for future scans.
 
 ---
 # Operation Configuration
@@ -26,7 +26,7 @@ A Scan Operation can be configured with the following options:
 * `Incremental` - To scan only new data updated since the previous scan.
 * `Record limit` - To limit the total number of records scanned.
 
-* `Target selection` 
+* `Target selection`
     - You can select to all tables.
     - To target only a subset of the available named collections.
 
@@ -50,3 +50,29 @@ A Scan Operation can be configured with the following options:
 
 ![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
 ![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)
+
+## Advanced Options
+
+The advanced use cases described below require options that are not yet exposed in our user interface but possible through interation with our API.
+
+### Runtime variable assignment
+
+It is possible to reference a variable in a check definition (declared in double curly braces) and then assign that variable a value when a Scan operation is initiated. Variables are supported within any Spark SQL expression and most commonly used in a check's filter. If a Scan is meant to assert a check with a variable, a value for that variable must be supplied as part of the Scan operation's "check_variables" property.
+
+For example, a check might include a filter such as "transaction_date == `{{checked_date}}`" which will be asserted against any records where transaction_date is equal to the value supplied when the Scan operation is initiated. In this case that value would be assigned by passing the following payload when calling /api/operations/run
+```
+{
+  "type": "scan",
+  "datastore_id": 42,
+  "container_names": [
+    "my_container"
+  ],
+  "incremental": true,
+  "remediation": "none",
+  "max_records_analyzed_per_partition": 0,
+  "check_variables": {
+    "checked_date": "2023-10-15"
+  },
+  "high_count_rollup_threshold": 10
+}
+```

@@ -16,11 +16,11 @@ nav:
     - technical-quick-start-guide.md
     # - use-cases/use-cases.md
     # - Common Usecases:
-    #   - usecases/metadata-analysis.md
-    #   - usecases/automated-anomaly-detection.md
-    #   - usecases/initiate-corrective-action.md
-    #   - usecases/entity-management.md
-    #   - usecases/maintaining-data-consistency-across-multiple-datastores.md
+    #   - use-cases/maintaining-data-consistency-across-multiple-datastores.md
+    #   - use-cases/automated-anomaly-detection.md
+    #   - use-cases/metadata-analysis.md
+    #   - use-cases/initiate-corrective-action.md
+    #   - use-cases/entity-management.md
   - Reference:
     - Datastores:
       - datastores/what-is-datastore.md
@@ -221,6 +221,6 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="https://github.com/Qualytics/userguide/issues" target="_blank" rel="noopener">issue tracker for this user guide</a>.

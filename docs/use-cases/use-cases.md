@@ -1,6 +1,6 @@
-## Use Case Section Introduction
+## Introduction
 
-Welcome to the Use Case section of the Qualytics user guide! In this section, we present a variety of practical scenarios illustrating how Qualytics can be utilized to solve real-world problems and achieve specific goals.
+In this section, we present a variety of practical scenarios illustrating how Qualytics can be utilized to solve real-world problems and achieve specific goals.
 
 Each use case is designed to deepen your understanding of how Qualytics functions in different contexts and situations. By exploring these examples, you'll gain valuable insights into how to optimally use the various features and capabilities of Qualytics to meet your particular needs.
 
@@ -11,7 +11,7 @@ We've sought to include a diverse set of scenarios to cater to a wide array of u
     - [Click here to learn more about Maintaining Data Consistency](/docs/use-cases/maintaining-data-consistency-across-multiple-datastores.md)
 
 - **Resting Anomaly Detection - Enterprise Data Warehouse:**
-    - This use case involves a mixture of automated rule inference and notifications, with the potential inclusion of manually authored rules. The user establishes a connection between Qualytics and a chosen EDW, Data Lake, or Database (options include Snowflake, BigQuery, MSSQL, and more), then applies the platform's methodology to infer rules and detect anomalies. 
+    - This use case involves a mixture of automated rule inference and notifications, with the potential inclusion of manually authored rules. The user establishes a connection between Qualytics and a chosen EDW, Data Lake, or Database (options include Snowflake, BigQuery, MSSQL, and more), then applies the platform's methodology to infer rules and detect anomalies.
     - [Click here to learn more about Resting Anomaly Detection]()
 
 - **Entity Management with Metadata Analysis:**
