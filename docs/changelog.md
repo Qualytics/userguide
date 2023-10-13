@@ -3,6 +3,25 @@ hide:
   - navigation
 ---
 
+### 2023-10-13 { id=2023-10-13}
+
+#### Feature Enhancements
+
+- Export Metadata Enhancements:
+    - Added a "weight" property to the quality check asset
+    
+- New AWS Athena Connector:
+    - Introduced support for a new connector, AWS Athena, expanding the options and flexibility for users managing data connections.
+
+- Operations List:
+    - Introduced a multi-select filter to the operation list, enabling users to efficiently view operations based on their status such as running, success, failure, and warning, thereby streamlining navigation and issue tracking.
+
+#### General Fixes
+
+- Logging Adjustments:
+    - Enhanced logging for catalog operations, ensuring that logs are visible and accessible even for catalogs with a warning status, facilitating improved tracking and resolution of issues.
+- General fixes and improvements
+
 ### 2023.10.09 { id=2023.10.09}
 
 #### Feature Enhancements
