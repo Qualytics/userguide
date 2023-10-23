@@ -3,6 +3,33 @@ hide:
   - navigation
 ---
 
+### 2023.10.23 { id=2023.10.23}
+
+#### Feature Enhancements
+
+- Enhanced Data Asset Navigation:
+    - Tree View Implementation: Easily navigate through your data assets with our new organized tree view structure
+    - Context-Specific Actions: Access settings and actions that matter most depending on your current level of interaction.
+    - Simplified User Experience: This update is designed to streamline and simplify your data asset navigation and management.
+
+- Aggregation Comparison Check:
+    - New Rule Added: Ensure valid comparisons by checking the legitimacy of operators between two aggregation expressions. 
+    - Improved Monitoring: Conduct in-depth comparisons, such as verifying if total row counts match across different source assets.
+
+- Efficient Synchronization for Schema Changes:
+    - Seamless Integration: Our system now adeptly synchronizes schema changes in source datastores with Qualytics profiles. 
+    - Avoid Potential Errors: We reduced the risk of creating checks with fields that have been removed or altered in the source datastore.
+
+- Clarity in Quality Check Editors:
+    - Distinct Update Sources: Easily identify if an update was made manually by a user or automatically through the API.
+
+- Dynamic Quality Score Updates:
+    - Live Anomaly Status Integration: Quality Scores now reflect real-time changes based on anomaly status updates.
+
+#### General Fixes
+
+- Various bug fixes and system improvements for a smoother experience.
+
 ### 2023-10-13 { id=2023-10-13}
 
 #### Feature Enhancements
