@@ -3,6 +3,35 @@ hide:
   - navigation
 ---
 
+### 2023.10.27 { id=2023.10.27}
+
+#### Feature Enhancements
+
+- Check Creation through Field Details Page:
+    - Users can now initiate check creation directly from the Field Details page, streamlining the check creation process and improving usability.
+
+- Tree View Enhancements:
+    - Introduced a favorite group feature where favorite datastores are displayed in a specific section, making them quicker and easier to access.
+    - Added search functionalities at both Profile and Field levels to improve the navigation experience.
+    - Nodes now follow the default sorting of pages, creating consistency across various views.
+    - Enhanced the descriptions in tree view nodes for non-catalogued datastores and non-profiled profiles, providing a clearer explanation for the absence of sub-items.
+
+- Bulk Actions for Freshness & SLAs:
+    - Users can now perform bulk actions in Freshness & SLAs, enabling or disabling freshness tracking and setting or unsetting SLAs for profiles efficiently.
+
+- Archived Check Details Visualization:
+    - Enhanced the anomaly modal to allow users to view the details of archived checks in a read-only mode, improving the visibility and accessibility of archived checks’ information.
+
+- User Pictures as Avatars:
+    - User pictures have been incorporated across the application as avatars, enhancing the visual representation in user listings, teams, and anomaly comments.
+
+- Slide Navigation in Card Dialogs:
+    - Introduced a slide navigation feature in the Anomalies and Checks dialogs, enhancing user navigation. Users can now effortlessly navigate between items using navigational arrows, eliminating the need to close the dialog to view next or previous items.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2023.10.23 { id=2023.10.23}
 
 #### Feature Enhancements
