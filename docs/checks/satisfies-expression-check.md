@@ -5,7 +5,7 @@
 *Evaluates the given expression (any valid Spark SQL) for each record.*
 
 !!!note
-    The user-defined expression may include complex SQL and can make use of both Spark SQL functions as well as scan-time variables. To refer to the dataset being analyzed, use the following naming convention `_qualytics_${containerId}` where ${containerId} should be replace with the numeric identifier of the container upon which the check is asserted. For example `ENTITY_ID IN ( SELECT * FROM _qualytics_42 WHERE IS_PRIMARY=='Yes' )`
+    The user-defined expression may include complex SQL and can make use of both Spark SQL functions as well as scan-time variables. To refer to the dataset being analyzed, use the following naming convention `_qualytics_${containerId}` where ${containerId} should be replaced with the numeric identifier of the container upon which the check is asserted. For example `ENTITY_ID IN ( SELECT * FROM _qualytics_42 WHERE IS_PRIMARY=='Yes' )`
 
 | Accepted Field Types   |                      |
 | :--------------------: | :------------------: |
