@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-### 2023.11.01 { id=2023.11.01}
+### 2023.11.02 { id=2023.11.02}
 
 #### Feature Enhancements
 
