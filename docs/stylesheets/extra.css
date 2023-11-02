@@ -73,3 +73,15 @@
   height: 2px;
   background: var(--md-accent-fg-color);
 }
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.text-primary {
+  color: #357AE3;
+}
+
+.text-negative {
+  color: #E91E63;
+}
