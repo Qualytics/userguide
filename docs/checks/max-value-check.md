@@ -1,23 +1,89 @@
-# Max Value <spam id='single-field'>`single field`</spam>
+# Max Value
 
----
+### Definition
 
 *Asserts that a field has a maximum value.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/max-value-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/max-value-check-dark.png#only-dark)
-!!! example
-    `Period` has a maximum value of `900`.
+**Single:** The rule evaluates a single specified field.
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+**Accepted Types**
 
-    The `[field_name]` value of '`[x value]`' is greater than the max value of `[value]`
+| Type        |                          |
+|-------------|--------------------------|
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div> |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div> |
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are greater than the max value of `[value]`.
+### General Properties
 
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Specific Properties
+
+Determines the maximum allowable value for the field.
+
+| Name               | Description                              |
+|--------------------|------------------------------------------|
+| <div class="text-primary">Value</div> | Specifies the maximum value a field should have. |
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that the quantity of items (L_QUANTITY) in the LINEITEM table does not exceed a value of 50.*
+
+**Sample Data**
+
+| L_ORDERKEY | L_LINENUMBER | L_QUANTITY |
+|------------|--------------|------------|
+| 1          | 1            | 40         |
+| 1          | 2            | <span class="text-negative">55</span> |
+| 2          | 1            | 20         |
+| 3          | 1            | <span class="text-negative">60</span> |
+
+**Anomaly Explanation**
+
+In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not satisfy the rule because their `L_QUANTITY` values exceed the specified maximum value of 50.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve L_QUANTITY]
+    B --> C{Is L_QUANTITY <= 50?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        l_orderkey,
+        l_linenumber,
+        l_quantity
+    from lineitem 
+    where
+        l_quantity > 50;
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `L_QUANTITY` value of `55` is greater than the max value of `50`.
+
+=== "Shape Anomaly"
+    !!! example
+        In `L_QUANTITY`, 50.000% of 4 filtered records (2) are greater than the max value of `50`.

@@ -1,29 +1,91 @@
-# Expected Values <spam id='single-field'>`single field`</spam>
+# Expected Values
 
----
+### Definition
 
 *Asserts that values are contained within a list of expected values.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/expected-values-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/expected-values-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
+**Accepted Types**
 
-!!! example
-    `discount` is one of the expected values `[5, 10, 15]`
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>  |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>  |
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+### General Properties
 
-    The `[field_name]` value of '`[x value]`' does not appear in the list of expected values.
+{% 
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->' 
+%}
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% of values do not appear in the list of expected values.
+### Specific Properties
 
+Specify the list of expected values for the data in the field.
+
+| Name       | Description                                                   |
+|------------|---------------------------------------------------------------|
+| <div class="text-primary">List</div> | A predefined set of values against which the data is validated. |
+
+### Anomaly Types
+
+{% 
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->' 
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all O_ORDERSTATUS entries in the ORDERS table only contain expected order statuses: "O", "F", and "P".*
+
+**Sample Data**
+
+| O_ORDERKEY | O_ORDERSTATUS   |
+|------------|----------------|
+| 1          | F              |
+| 2          | O              |
+| 3          | P              |
+| 4          | <span class="text-negative">X</span> |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `O_ORDERKEY` **4** does not satisfy the rule because the `O_ORDERSTATUS` "X" is not on the list of expected order statuses ("O", "F", "P").
+
+=== "Flowchart"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[Retrieve O_ORDERSTATUS]
+    B --> C{Is O_ORDERSTATUS in 'O', 'F', 'P'?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        o_orderkey
+        , o_orderstatus
+    from orders 
+    where
+        o_orderstatus not in ('O', 'F', 'P')
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `O_ORDERSTATUS` value of `'X'` does not appear in the list of expected values
+=== "Shape Anomaly"
+    !!! example
+        In `O_ORDERSTATUS`, 25.000% of 4 filtered records (1) do not appear in the list of expected values

@@ -1,32 +1,91 @@
-# Data Type <spam id='single-field'>`single field`</spam>
+# Data Type
 
----
+### Definition
 
 *Asserts that the data is of a specific type.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/data-type-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/data-type-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-!!! example
-    `Name_of_associated_Covered_Device` is a valid `String`
+**Accepted Types**
 
-* You can list any of the following data types:
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>  |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>  |
 
-![Screenshot](../assets/checks/rule-types/list-all-data-types-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/list-all-data-types-check-dark.png#only-dark)
+### General Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
 
-    The `[field_name]` value of '`[x value]`' is not a valid `[data type]`.
+### Specific Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are not a valid `[data type]`.
+Specify the expected type for the data in the field.
+
+| Name           | Description                                                   |
+|----------------|---------------------------------------------------------------|
+| <div class="text-primary">Field Type</div> | The type that values in the selected field should conform to. |
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all L_QUANTITY entries in the LINEITEM table are of Integral type.*
+
+**Sample Data**
+
+| L_ORDERKEY | L_QUANTITY              |
+|------------|-------------------------|
+| 1          | 10                      |
+| 2          | <span class="text-negative">15.5</span>  |
+| 3          | <span class="text-negative">Ten</span> |
+
+**Anomaly Explanation**
+
+In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not satisfy the rule because their `L_QUANTITY` values are not of Integral type.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve L_QUANTITY]
+    B --> C{Is L_QUANTITY of Integral type?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        l_orderkey,
+        l_quantity
+    from lineitem 
+    where
+        typeof(l_quantity) != 'INTEGER'
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `L_QUANTITY` value of `Ten` is not a valid Integral.
+
+=== "Shape Anomaly"
+    !!! example
+        In `L_QUANTITY`, 66.667% of 3 filtered records (2) are not a valid Integral.

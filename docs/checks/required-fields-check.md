@@ -1,24 +1,95 @@
-# Required Fields <spam id='multiple-fields'>`multiple fields`</spam>
+# Required Fields
 
----
+### Definition
 
 *Asserts that all of the selected fields must be present in the datastore.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/required-fields-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/required-fields-check-dark.png#only-dark)
+**Multi:** The rule evaluates multiple specified fields.
 
-!!! example 
-    `SalesRecord` table has all of the defined fields `[Id, Order ID, Order Date, Total Cost]`
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    One of the required fields `[field_names]`, are missing.
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div> |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div> |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div> |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div> |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div> |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div> |
 
+### General Properties
+
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- none-props--start -->'
+    end='<!-- none-props--end -->' 
+%}
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- shape-only--start -->'
+    end='<!-- shape-only--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that required fields such as L_ORDERKEY, L_PARTKEY, and L_SUPPKEY are always present in the LINEITEM table.*
+
+**Sample Data**
+
+???+ success "Valid"
+    | FIELD_NAME      | FIELD_TYPE |
+    |-----------------|------------|
+    | L_ORDERKEY      | NUMBER     |
+    | L_PARTKEY       | NUMBER     |
+    | L_SUPPKEY       | NUMBER     |
+    | L_LINENUMBER    | NUMBER     |
+    | L_QUANTITY      | NUMBER     |
+    | L_EXTENDEDPRICE | NUMBER     |
+    | ...             | ...        |
+
+???+ failure "Invalid"
+    *L_SUPPKEY is missing from the schema*
+
+    | FIELD_NAME      | FIELD_TYPE |
+    |-----------------|------------|
+    | L_ORDERKEY      | NUMBER     |
+    | L_PARTKEY       | NUMBER     |
+    | L_LINENUMBER    | NUMBER     |
+    | L_QUANTITY      | NUMBER     |
+    | L_EXTENDEDPRICE | NUMBER     |
+    | ...             | ...        |
+
+**Anomaly Explanation**
+
+Among the presented sample schemas, the second one is missing one of the required fields. Only the first schema has the correct required fields.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B{Check for Field Presence}
+    B -.->|Field is missing| C[Mark as Shape Anomaly]
+    B -.->|All fields present| D[End]
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query to check the existence of columns.
+    select 
+        column_name 
+    from 
+        information_schema.columns 
+    where 
+        table_name = 'LINEITEM' and 
+        column_name in ('L_ORDERKEY', 'L_PARTKEY', 'L_SUPPKEY');
+    ```
+
+**Potential Violation Messages**
+
+=== "Shape Anomaly"
+    !!! example
+        One of the required fields (`L_SUPPKEY`) are missing.

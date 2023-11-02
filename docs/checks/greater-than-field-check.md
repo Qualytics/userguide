@@ -1,25 +1,91 @@
-# Greater Than Field <spam id='single-field'>`single field`</spam>
+# Greater Than Field
 
----
+### Definition
 
-*Asserts that this field is greater than another field.*
+*Asserts that the field is greater than another field.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/greater-than-field-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/greater-than-field-check-dark.png#only-dark)
-!!! example
-    `price` has a value greater than `discount`.
+**Single:** The rule evaluates a single specified field.
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+**Accepted Types**
 
-    The `[field_name]` value of '`[x value]`' is not greater than the value of `[value]`.
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>  |
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are not equal to `[compared_field_name]`.
+### General Properties
 
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Specific Properties
+
+Allows specifying another field against which the value comparison will be performed.
+
+| Name               | Description |
+|--------------------|-------------|
+| <div class="text-primary">Field to compare</div> | Specifies the name of the field against which the value will be compared. |
+| <div class="text-primary">Inclusive</div>        | If true, the comparison will also allow values equal to the value of the other field. Otherwise, it's exclusive. |
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all O_TOTALPRICE entries in the ORDERS table are greater than their respective O_DISCOUNT.*
+
+**Sample Data**
+
+| O_ORDERKEY | O_TOTALPRICE | O_DISCOUNT |
+|------------|--------------|------------|
+| 1          | 100          | <span class="text-negative">105</span> |
+| 2          | 500          | 10         |
+| 3          | 120          | <span class="text-negative">121</span> |
+
+**Anomaly Explanation**
+
+In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not satisfy the rule because their `O_TOTALPRICE` values are not greater than their respective `O_DISCOUNT` values.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve O_TOTALPRICE and O_DISCOUNT]
+    B --> C{Is O_TOTALPRICE > O_DISCOUNT?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        o_orderkey,
+        o_totalprice,
+        o_discount
+    from orders 
+    where
+        o_totalprice <= o_discount;
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `O_TOTALPRICE` value of `100` is not greater than the value of `O_DISCOUNT`.
+        
+=== "Shape Anomaly"
+    !!! example
+        In `O_TOTALPRICE`, 66.667% of 3 filtered records (2) are not greater than `O_DISCOUNT`.

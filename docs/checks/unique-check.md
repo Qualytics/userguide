@@ -1,27 +1,81 @@
-# Unique <spam id='multiple-fields'>`multiple fields`</spam>
+# Unique
 
----
+### Definition
 
-*Asserts that the field's value is unique*.
+*Asserts that the field's value is unique.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/unique-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/unique-check-dark.png#only-dark)
+**Multi:** The rule evaluates multiple specified fields.
 
-!!! example
-    The `id`, `price` are uniques.
-    
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    The `[field_name]` value of `['x']` exists more than once.
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are not unique.
+| Type        |                           |
+|-------------|---------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>       |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>       |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>       |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>       |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div>       |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>       |
 
+### General Properties
+
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- shape-only--start -->'
+    end='<!-- shape-only--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that each combination of C_NAME and C_ADDRESS in the CUSTOMER table is unique.*
+
+**Sample Data**
+
+| C_CUSTKEY | C_NAME      | C_ADDRESS            |
+|-----------|-------------|----------------------|
+| 1         | <span class="text-negative">Customer_A</span>  | <span class="text-negative">123 Main St</span> |
+| 2         | Customer_B  | 456 Oak Ave          |
+| 3         | <span class="text-negative">Customer_A</span>  | <span class="text-negative">123 Main St</span> |
+| 4         | Customer_C  | 789 Elm St           |
+
+**Anomaly Explanation**
+
+In the sample data above, the entries with `C_CUSTKEY` **1** and **3** have the same `C_NAME` and `C_ADDRESS`, which violates the rule because this combination of keys should be unique.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve C_NAME and C_ADDRESS]
+    B --> C{Is the combination unique?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query to find non-unique C_NAME and C_ADDRESS combinations.
+    select
+        c_custkey,
+        c_name,
+        c_address
+    from customer 
+    group by c_name, c_address
+    having count(*) > 1;
+    ```
+
+**Potential Violation Messages**
+
+=== "Shape Anomaly"
+    !!! example
+        In `C_NAME` and `C_ADDRESS`, 25.000% of 4 filtered records (1) are not unique.

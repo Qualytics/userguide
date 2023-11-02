@@ -1,26 +1,77 @@
-# Contains Email <spam id='single-field'>`single field`</spam>
----
-*Asserts that the values are email addresses.*
+# Contains Email
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Definition
 
-![Screenshot](../assets/checks/rule-types/contains-email-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/contains-email-check-dark.png#only-dark)
+*Asserts that the values contain email addresses.*
 
-!!! example
-    `id` contains an email address.
+### Field Scope
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+**Single:** The rule evaluates a single specified field.
 
-    The `[field_name]` value of '`[x value]`' does not contain an email address.
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% do not contain email addresses.
+| Type     |                          |
+|----------|--------------------------|
+| `String` | <div style="text-align:center">:octicons-check-16:</div> |
 
+### General Properties
+
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all C_CONTACT_DETAILS entries in the CUSTOMER table contain valid email addresses.*
+
+**Sample Data**
+
+| C_CUSTKEY | C_CONTACT_DETAILS                          |
+|-----------|----------------------------------|
+| 1         | {"name": "John Doe", "email": "john.doe@example.com"}             |
+| 2         | <span class="text-negative">{"name": "Amy Lu", "email": "amy.lu@"}</span> |
+| 3         | {"name": "Jane Smith", "email": "jane.smith@domain.org"}            |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the rule because its `C_CONTACT_DETAILS` value does not follow a typical email format.
+
+=== "Flowchart"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[Retrieve C_CONTACT_DETAILS]
+    B --> C{Does C_CONTACT_DETAILS contain an email address?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        c_custkey,
+        c_contact_details
+    from customer 
+    where
+        not regexp_like(c_contact_details, '^[a-za-z0-9._%-]+@[a-za-z0-9.-]+\.[a-za-z]{2,4}$')
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `C_CONTACT_DETAILS` value of `{"name": "Amy Lu", "email": "amy.lu@"}` does not contain an email address.
+=== "Shape Anomaly"
+    !!! example
+        In `C_CONTACT_DETAILS`, 33.333% of 3 filtered records (1) do not contain email addresses.
