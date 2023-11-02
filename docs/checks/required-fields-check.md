@@ -90,6 +90,5 @@ Among the presented sample schemas, the second one is missing one of the require
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        One of the required fields (`L_SUPPKEY`) are missing.
+!!! example "Shape Anomaly"
+    One of the required fields (`L_SUPPKEY`) are missing.

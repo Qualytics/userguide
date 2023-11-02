@@ -47,7 +47,7 @@ Facilitates the comparison between a `target` aggregate metric and a `reference`
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the total price of orders from the `ORDERS` table is always greater than the total discount given in the `LINEITEM` table.*
 
@@ -76,7 +76,7 @@ In the sample data above, the entries with `O_ORDERKEY` **2** and **4** do not s
 
 === "SQL"
     ```sql
-    -- This SQL script identifies orders where the total price is not greater than the total discount given.
+    -- An illustrative SQL query demonstrating the rule applied to example datasets
     with target as (
         select 
             o_orderkey, 
@@ -109,6 +109,5 @@ In the sample data above, the entries with `O_ORDERKEY` **2** and **4** do not s
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        `TOTAL_PRICE` is not greater than `TOTAL_DISCOUNT` for `O_ORDERKEY`.
+!!! example "Shape Anomaly"
+    `TOTAL_PRICE` is not greater than `TOTAL_DISCOUNT` for `O_ORDERKEY`.

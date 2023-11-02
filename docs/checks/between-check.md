@@ -82,10 +82,8 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 ### Potential Violation Messages
 
-=== "Record Anomaly"
-    !!! example
-        The value for `L_QUANTITY` of 4 is not between **5.000** and **20.000**.
+!!! example "Record Anomaly"
+    The value for `L_QUANTITY` of 4 is not between **5.000** and **20.000**.
         
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 66.67% of 3 filtered records (2) are not between **5.000** and **20.000**.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 66.67% of 3 filtered records (2) are not between **5.000** and **20.000**.

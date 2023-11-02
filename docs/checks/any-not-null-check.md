@@ -75,10 +75,8 @@ In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        There is no value set for any of `O_COMMENT, O_ORDERSTATUS`
+!!! example "Record Anomaly"
+    There is no value set for any of `O_COMMENT, O_ORDERSTATUS`
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_COMMENT, O_ORDERSTATUS`, 33.333% of 3 filtered records (1) have no value set for any of `O_COMMENT, O_ORDERSTATUS`
+!!! example "Shape Anomaly"
+    In `O_COMMENT, O_ORDERSTATUS`, 33.333% of 3 filtered records (1) have no value set for any of `O_COMMENT, O_ORDERSTATUS`

@@ -79,10 +79,8 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_PRICE` value of `23` is not less than the value of **20**.
-        
-=== "Shape Anomaly"
-    !!! example
-        In `L_PRICE`, 66.667% of 3 filtered records (2) are not less than **20**.
+!!! example "Record Anomaly"
+    The `L_PRICE` value of `23` is not less than the value of **20**.
+    
+!!! example "Shape Anomaly"
+    In `L_PRICE`, 66.667% of 3 filtered records (2) are not less than **20**.

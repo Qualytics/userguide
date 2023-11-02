@@ -69,10 +69,8 @@ In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `C_CREDIT_CARD` value of `ABC12345XYZ` is not a valid credit card number.
+!!! example "Record Anomaly"
+    The `C_CREDIT_CARD` value of `ABC12345XYZ` is not a valid credit card number.
 
-=== "Shape Anomaly"
-    !!! example
-        In `C_CREDIT_CARD`, 33.33% of 3 filtered records (1) are not valid credit card numbers.
+!!! example "Shape Anomaly"
+    In `C_CREDIT_CARD`, 33.33% of 3 filtered records (1) are not valid credit card numbers.

@@ -79,6 +79,5 @@ In the sample data above, the total of the `L_DISCOUNT_VALUE` column is (500 + 8
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_DISCOUNT_VALUE`, the sum of the 4 records is not 2000.000
+!!! example "Shape Anomaly"
+    In `L_DISCOUNT_VALUE`, the sum of the 4 records is not 2000.000

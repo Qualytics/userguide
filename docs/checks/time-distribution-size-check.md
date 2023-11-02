@@ -89,6 +89,5 @@ In the sample data above, the January segment fails the rule because there are o
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        50.000% of the monthly segments of `O_ORDERDATE` have record counts not between 5 and 10.
+!!! example "Shape Anomaly"
+    50.000% of the monthly segments of `O_ORDERDATE` have record counts not between 5 and 10.

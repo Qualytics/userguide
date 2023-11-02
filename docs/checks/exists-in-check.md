@@ -108,9 +108,8 @@ In the sample data above, the entry with `N_NATIONKEY` **3** does not satisfy th
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `N_NATIONNAME` value of `'Atlantida'` does not exist in `COUNTRY_NAME`.
-=== "Shape Anomaly"
-    !!! example
-        In `N_NATIONNAME`, 33.333% of 3 filtered records (1) do not match any `COUNTRY_NAME`.
+!!! example "Record Anomaly"
+    The `N_NATIONNAME` value of `'Atlantida'` does not exist in `COUNTRY_NAME`.
+
+!!! example "Shape Anomaly"
+    In `N_NATIONNAME`, 33.333% of 3 filtered records (1) do not match any `COUNTRY_NAME`.

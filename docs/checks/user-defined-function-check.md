@@ -103,10 +103,8 @@ In the sample data above, the entries with `L_ORDERKEY` **2**, **3**, and **4** 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_ATTRIBUTES` value of `{"color": "blue", "weight": 20}` does not evaluate true as a parameter to the given UDF.
+!!! example "Record Anomaly"
+    The `L_ATTRIBUTES` value of `{"color": "blue", "weight": 20}` does not evaluate true as a parameter to the given UDF.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_ATTRIBUTES`, 75.000% of 4 filtered records (3) do not evaluate true as a parameter to the given UDF.
+!!! example "Shape Anomaly"
+    In `L_ATTRIBUTES`, 75.000% of 4 filtered records (3) do not evaluate true as a parameter to the given UDF.

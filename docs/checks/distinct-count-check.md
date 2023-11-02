@@ -81,6 +81,5 @@ In the sample data above, the rule is violated because the `O_ORDERSTATUS` conta
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_ORDERSTATUS`, the distinct count of the records is not **3**.
+!!! example "Shape Anomaly"
+    In `O_ORDERSTATUS`, the distinct count of the records is not **3**.

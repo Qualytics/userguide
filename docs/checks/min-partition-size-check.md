@@ -72,6 +72,5 @@ The sample data above does not satisfy the rule because it contains only 900 rec
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `LINEITEM`, fewer than 900 records were loaded.
+!!! example "Shape Anomaly"
+    In `LINEITEM`, fewer than 900 records were loaded.

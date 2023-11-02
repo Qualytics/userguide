@@ -69,9 +69,8 @@ In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `C_CONTACT_DETAILS` value of `{"name": "Amy Lu", "email": "amy.lu@"}` does not contain an email address.
-=== "Shape Anomaly"
-    !!! example
-        In `C_CONTACT_DETAILS`, 33.333% of 3 filtered records (1) do not contain email addresses.
+!!! example "Record Anomaly"
+    The `C_CONTACT_DETAILS` value of `{"name": "Amy Lu", "email": "amy.lu@"}` does not contain an email address.
+
+!!! example "Shape Anomaly"
+    In `C_CONTACT_DETAILS`, 33.333% of 3 filtered records (1) do not contain email addresses.

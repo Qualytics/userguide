@@ -80,9 +80,8 @@ In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The value for `O_ORDERDATE` of `1990-12-31 10:30:00` is not between **1991-01-01 10:30:00** and **1991-12-31 15:00:00**.
-=== "Shape Anomaly"
-    !!! example
-        In `O_ORDERDATE`, 66.667% of 3 filtered records (2) are not between **1991-01-01 10:30:00** and **1991-12-31 15:00:00**.
+!!! example "Record Anomaly"
+    The value for `O_ORDERDATE` of `1990-12-31 10:30:00` is not between **1991-01-01 10:30:00** and **1991-12-31 15:00:00**.
+
+!!! example "Shape Anomaly"
+    In `O_ORDERDATE`, 66.667% of 3 filtered records (2) are not between **1991-01-01 10:30:00** and **1991-12-31 15:00:00**.

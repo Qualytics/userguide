@@ -100,6 +100,5 @@ The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the ori
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        There is 1 record that differ between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`
+!!! example "Shape Anomaly"
+    There is 1 record that differ between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`

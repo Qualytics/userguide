@@ -72,6 +72,5 @@ In the sample data above, the rule is violated because partition P3 contains 10,
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `LINEITEM`, more than 10,000 records were loaded.
+!!! example "Shape Anomaly"
+    In `LINEITEM`, more than 10,000 records were loaded.

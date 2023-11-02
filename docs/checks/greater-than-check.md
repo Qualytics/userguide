@@ -79,10 +79,8 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_QUANTITY` value of `5` is not greater than the value of **10**.
+!!! example "Record Anomaly"
+    The `L_QUANTITY` value of `5` is not greater than the value of **10**.
         
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 66.667% of 3 filtered records (2) are not greater than **10**.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 66.667% of 3 filtered records (2) are not greater than **10**.

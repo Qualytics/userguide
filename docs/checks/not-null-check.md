@@ -76,10 +76,8 @@ In the sample data above, the entries with `C_CUSTKEY` **2** and **4** do not sa
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        There is no assigned value for `C_NAME`.
+!!! example "Record Anomaly"
+    There is no assigned value for `C_NAME`.
 
-=== "Shape Anomaly"
-    !!! example
-        In `C_NAME` and `C_ADDRESS`, 50.000% of 4 filtered records (2) are not assigned values.
+!!! example "Shape Anomaly"
+    In `C_NAME` and `C_ADDRESS`, 50.000% of 4 filtered records (2) are not assigned values.

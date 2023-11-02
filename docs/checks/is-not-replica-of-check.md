@@ -100,7 +100,6 @@ The datasets defined by `PRODUCT_NAME` and `SALE_DATE` in `SALES` and `SALES_ARC
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        `SALES` and `SALES_ARCHIVE` are replicas with 3 records each
+!!! example "Shape Anomaly"
+    `SALES` and `SALES_ARCHIVE` are replicas with 3 records each
 

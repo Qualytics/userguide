@@ -151,19 +151,16 @@ In the sample scan history above, anomalies are identified in scans #3 and #4. T
 
 **Potential Violation Messages**
 
-=== "Record Anomaly (Percentage Change)"
-    !!! example
-        The percentage change of `O_TOTALPRICE` from '110' to '200' falls outside the declared limits
+!!! example "Record Anomaly (Percentage Change)"
+    The percentage change of `O_TOTALPRICE` from '110' to '200' falls outside the declared limits
 
-=== "Record Anomaly (Absolute Change)"
-    !!! example
-        _using hypothetical numbers_
+!!! example "Record Anomaly (Absolute Change)"
+    _using hypothetical numbers_
 
-        The absolute change of `O_TOTALPRICE` from '150' to '300' falls outside the declared limits
+    The absolute change of `O_TOTALPRICE` from '150' to '300' falls outside the declared limits
 
-=== "Record Anomaly (Absolute Value)"
-    !!! example
-        _using hypothetical numbers_
+!!! example "Record Anomaly (Absolute Value)"
+    _using hypothetical numbers_
 
-        The value for `O_TOTALPRICE` of '50' is not between the declared limits
+    The value for `O_TOTALPRICE` of '50' is not between the declared limits
 
