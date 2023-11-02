@@ -104,6 +104,13 @@ Determines the evaluation method and allowable limits for field value comparison
 
     - Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
         
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- record-only--start -->'
+    end='<!-- record-only--end -->'
+%}
 
 ### Example
 

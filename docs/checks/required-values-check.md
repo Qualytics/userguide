@@ -35,6 +35,14 @@ Ensures that a specific set of values is present within a field.
 |----------|-----------------------------------------------------------|
 | <div class="text-primary">Values</div> | Specifies the list of values that must exist in the field. |
 
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- shape-only--start -->'
+    end='<!-- shape-only--end -->'
+%}
+
 ### Example
 
 **Objective**: *Ensure that orders have priorities labeled as '1-URGENT', '2-HIGH', '3-MEDIUM', '4-LOW', and '5-NOT URGENT'.*
