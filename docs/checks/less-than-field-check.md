@@ -42,7 +42,7 @@ Allows specifying another field against which the value comparison will be perfo
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all O_DISCOUNT entries in the ORDERS table are less than their respective O_TOTALPRICE.*
 
@@ -70,7 +70,7 @@ In the sample data above, the entry with `O_ORDERKEY` **3** does not satisfy the
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         o_orderkey,
         o_totalprice,

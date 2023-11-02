@@ -35,7 +35,7 @@
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that required fields such as L_ORDERKEY, L_PARTKEY, and L_SUPPKEY are always present in the LINEITEM table.*
 

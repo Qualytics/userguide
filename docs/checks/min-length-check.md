@@ -38,7 +38,7 @@ Determines the minimum allowable length for the field.
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all C_COMMENT entries in the CUSTOMER table have a minimum length of 5 characters.*
 
@@ -66,7 +66,7 @@ In the sample data above, the entry with `C_CUSTKEY` **1** does not satisfy the 
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         c_custkey,
         c_comment

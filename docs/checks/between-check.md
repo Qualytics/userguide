@@ -42,7 +42,7 @@ Specify both minimum and maximum boundaries, and determine if these boundaries s
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all L_QUANTITY entries in the LINEITEM table are between 5 and 20 (inclusive).*
 
@@ -70,7 +70,7 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         l_orderkey
         , l_quantity

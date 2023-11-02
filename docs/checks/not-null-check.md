@@ -35,7 +35,7 @@
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that every record in the CUSTOMER table has an assigned value for the C_NAME and C_ADDRESS fields.*
 
@@ -64,7 +64,7 @@ In the sample data above, the entries with `C_CUSTKEY` **2** and **4** do not sa
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         c_custkey,
         c_name,

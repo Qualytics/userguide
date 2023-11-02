@@ -40,7 +40,7 @@ Specify a particular date and time to act as the threshold for the rule.
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all L_SHIPDATE entries in the LINEITEM table are earlier than 3:00 PM on December 1st, 1998.*
 
@@ -68,7 +68,7 @@ In the sample data above, the entry with `L_ORDERKEY` **1** does not satisfy the
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         l_orderkey
         , l_shipdate

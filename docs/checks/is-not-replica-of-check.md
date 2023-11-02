@@ -45,7 +45,7 @@ Specify the datastore and table/file to compare against the targeted fields to e
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Scenario**: *Consider these 2 datasets: SALES and SALES_ARCHIVE. The SALES dataset contains transactions from the current year based on PRODUCT_NAME and SALE_DATE, while the SALES_ARCHIVE dataset contains archived transactions from previous years. Due to the nature of archiving, while some records from SALES might eventually move to SALES_ARCHIVE at the end of the year, the data subsets defined by the PRODUCT_NAME and SALE_DATE fields in the SALES dataset should never be an exact replica of the corresponding data in the SALES_ARCHIVE dataset at any given time.*
 

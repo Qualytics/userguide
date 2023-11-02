@@ -43,7 +43,7 @@ Specify the distinct count expectation for the values in the field.
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that there are exactly 3 distinct O_ORDERSTATUS in the ORDERS table: 'O' (Open), 'F' (Finished), and 'P' (In Progress).*
 
@@ -72,7 +72,7 @@ In the sample data above, the rule is violated because the `O_ORDERSTATUS` conta
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         count(distinct o_orderstatus)
     from orders

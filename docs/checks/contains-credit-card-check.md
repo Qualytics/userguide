@@ -30,7 +30,7 @@
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that every O_PAYMENT_DETAILS in the ORDERS table contains a credit card number to confirm the payment method used for each order.*
 

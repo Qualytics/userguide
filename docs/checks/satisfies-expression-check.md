@@ -42,7 +42,7 @@ Evaluates each record against a specified Spark SQL expression to ensure it meet
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the total tax applied to each item in the LINEITEM table is not more than 10% of the extended price.*
 
@@ -74,7 +74,7 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **4** do not s
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         l_orderkey,
         l_linenumber,

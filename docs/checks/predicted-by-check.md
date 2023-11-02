@@ -55,7 +55,7 @@ Determines if the actual value of a field falls within an expected predicted ran
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the discount (L_DISCOUNT) in the LINEITEM table is calculated correctly based on the actual price (L_EXTENDEDPRICE). A correct discount should be approximately 8% less than the actual price, within a tolerance of ±2.*
 
@@ -87,7 +87,7 @@ For the entry with `L_ORDERKEY` **2**, the discount is 12, which is outside of t
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         l_orderkey,
         l_linenumber,

@@ -37,7 +37,7 @@ For instance, in a retail context, it could ensure that there’s a consistent n
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the number of orders for each month is consistently between 5 and 10.*
 
@@ -74,7 +74,7 @@ In the sample data above, the January segment fails the rule because there are o
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select 
         extract(month from o_orderdate) as month,
         count(*) as order_count

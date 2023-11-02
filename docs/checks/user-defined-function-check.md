@@ -53,7 +53,7 @@ Implements a user-defined scala script.
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Validate that each record in the LINEITEM table has a well-structured JSON in the L_ATTRIBUTES column by ensuring the presence of essential keys: "color", "weight", and "dimensions".*
 

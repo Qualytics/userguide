@@ -45,7 +45,7 @@ Specify the datastore and table/file where the replica of the targeted fields is
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Scenario**: *Consider that the fields N_NATIONKEY and N_NATIONNAME in the NATION table are being replicated to a backup database for disaster recovery purposes. The data engineering team wants to ensure that both fields in the replica in the backup accurately reflect the original.*
 

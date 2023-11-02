@@ -34,7 +34,7 @@ Specifies the maximum allowable record count for each data partition
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that no partition of the LINEITEM table contains more than 10,000 records to prevent data processing bottlenecks.*
 
@@ -61,7 +61,7 @@ In the sample data above, the rule is violated because partition P3 contains 10,
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables. 
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s). 
     select
         subset_name, -- or any column indicating the partition or subset
         count(*)

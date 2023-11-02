@@ -41,7 +41,7 @@ Specify the field to compare for equality with the selected field.
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Scenario**: *An e-commerce platform sells digital products. The shipping date (when the digital product link is sent) should always be the same as the delivery date (when the customer acknowledges receiving the product).*
 
@@ -71,7 +71,7 @@ In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         o_orderkey,
         o_shipdate,

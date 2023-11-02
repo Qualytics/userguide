@@ -34,7 +34,7 @@ Sets the required minimum record count for each data partition
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that each partition of the LINEITEM table has at least 1000 records.*
 
@@ -61,7 +61,7 @@ The sample data above does not satisfy the rule because it contains only 900 rec
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables. 
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s). 
     select
         subset_name, -- or any column indicating the partition or subset
         count(*)
