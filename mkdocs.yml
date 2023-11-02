@@ -51,6 +51,7 @@ nav:
         - checks/what-is-an-inferred-check.md
         - Check Rule Types:
           - After Date: checks/after-date-check.md
+          - Aggregation Comparison: checks/aggregation-comparison-check.md
           - Any Not Null: checks/any-not-null-check.md
           - Before Date Time: checks/before-date-time-check.md
           - Between: checks/between-check.md
