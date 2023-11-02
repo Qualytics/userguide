@@ -77,7 +77,7 @@ In the sample data above, the entry with `L_ORDERKEY` **1** does not satisfy the
         l_shipdate >= '1998-12-01 15:00:00'
     ```
 
-### Potential Violation Messages
+**Potential Violation Messages**
 
 !!! example "Record Anomaly"
     The `L_SHIPDATE` value of `1998-12-01 15:30:00` is not earlier than **1998-12-01 15:00:00**.
