@@ -88,10 +88,8 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **4** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The record does not satisfy the expression: `L_TAX <= L_EXTENDEDPRICE * 0.10`
+!!! example "Record Anomaly"
+    The record does not satisfy the expression: `L_TAX <= L_EXTENDEDPRICE * 0.10`
 
-=== "Shape Anomaly"
-    !!! example
-        50.000% of 4 filtered records (2) do not satisfy the expression: `L_TAX <= L_EXTENDEDPRICE * 0.10`
+!!! example "Shape Anomaly"
+    50.000% of 4 filtered records (2) do not satisfy the expression: `L_TAX <= L_EXTENDEDPRICE * 0.10`

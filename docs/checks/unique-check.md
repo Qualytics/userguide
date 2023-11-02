@@ -76,6 +76,5 @@ In the sample data above, the entries with `C_CUSTKEY` **1** and **3** have the 
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `C_NAME` and `C_ADDRESS`, 25.000% of 4 filtered records (1) are not unique.
+!!! example "Shape Anomaly"
+    In `C_NAME` and `C_ADDRESS`, 25.000% of 4 filtered records (1) are not unique.

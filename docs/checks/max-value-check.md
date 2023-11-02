@@ -80,10 +80,8 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_QUANTITY` value of `55` is greater than the max value of `50`.
+!!! example "Record Anomaly"
+    The `L_QUANTITY` value of `55` is greater than the max value of `50`.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 50.000% of 4 filtered records (2) are greater than the max value of `50`.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 50.000% of 4 filtered records (2) are greater than the max value of `50`.

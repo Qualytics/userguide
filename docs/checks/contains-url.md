@@ -69,10 +69,8 @@ In the sample data above, the entries with `S_SUPPKEY` **1** and **3** do not sa
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `S_DETAILS` value of `{"name": "Tech Parts", "website": "www.techparts.com"}` does not contain a valid URL.
+!!! example "Record Anomaly"
+    The `S_DETAILS` value of `{"name": "Tech Parts", "website": "www.techparts.com"}` does not contain a valid URL.
 
-=== "Shape Anomaly"
-    !!! example
-        In `S_DETAILS`, 66.667% of 3 filtered records (2) do not contain a valid URL.
+!!! example "Shape Anomaly"
+    In `S_DETAILS`, 66.667% of 3 filtered records (2) do not contain a valid URL.

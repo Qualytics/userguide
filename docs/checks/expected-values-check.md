@@ -83,9 +83,8 @@ In the sample data above, the entry with `O_ORDERKEY` **4** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `O_ORDERSTATUS` value of `'X'` does not appear in the list of expected values
-=== "Shape Anomaly"
-    !!! example
-        In `O_ORDERSTATUS`, 25.000% of 4 filtered records (1) do not appear in the list of expected values
+!!! example "Record Anomaly"
+    The `O_ORDERSTATUS` value of `'X'` does not appear in the list of expected values
+
+!!! example "Shape Anomaly"
+    In `O_ORDERSTATUS`, 25.000% of 4 filtered records (1) do not appear in the list of expected values

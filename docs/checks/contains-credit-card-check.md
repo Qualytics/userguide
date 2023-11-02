@@ -70,10 +70,8 @@ In the sample data above, the entry with `O_ORDERKEY` **2** violates the rule as
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `O_PAYMENT_DETAILS` value of `{"date": "2023-09-25", "amount": 150.75, "credit_card": "ABC12345XYZ"}` does not contains a credit card number.
+!!! example "Record Anomaly"
+    The `O_PAYMENT_DETAILS` value of `{"date": "2023-09-25", "amount": 150.75, "credit_card": "ABC12345XYZ"}` does not contains a credit card number.
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_PAYMENT_DETAILS`, 33.33% of 3 order records (1) do not contain a credit card number.
+!!! example "Shape Anomaly"
+    In `O_PAYMENT_DETAILS`, 33.33% of 3 order records (1) do not contain a credit card number.

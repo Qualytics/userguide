@@ -82,10 +82,8 @@ In the sample data above, the entry with `O_ORDERKEY` **3** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `O_DISCOUNT` value of `125` is not less than the value of `O_TOTALPRICE`.
+!!! example "Record Anomaly"
+    The `O_DISCOUNT` value of `125` is not less than the value of `O_TOTALPRICE`.
         
-=== "Shape Anomaly"
-    !!! example
-        In `O_DISCOUNT`, 33.333% of 3 filtered records (1) is not less than `O_TOTALPRICE`.
+!!! example "Shape Anomaly"
+    In `O_DISCOUNT`, 33.333% of 3 filtered records (1) is not less than `O_TOTALPRICE`.

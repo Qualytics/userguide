@@ -83,10 +83,8 @@ In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `O_SHIPDATE` value of 1998-01-14 is not equal to the value of O_DELIVERYDATE which is 1998-01-15.
+!!! example "Record Anomaly"
+    The `O_SHIPDATE` value of 1998-01-14 is not equal to the value of O_DELIVERYDATE which is 1998-01-15.
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_SHIPDATE`, 33.333% of the filtered fields are not equal.
+!!! example "Shape Anomaly"
+    In `O_SHIPDATE`, 33.333% of the filtered fields are not equal.

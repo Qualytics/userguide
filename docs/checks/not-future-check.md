@@ -70,10 +70,8 @@ In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The value for `O_DELIVERYDATE` of `2023-10-25` is in the future.
+!!! example "Record Anomaly"
+    The value for `O_DELIVERYDATE` of `2023-10-25` is in the future.
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_DELIVERYDATE`, 33.333% of 3 filtered records (1) are future times.
+!!! example "Shape Anomaly"
+    In `O_DELIVERYDATE`, 33.333% of 3 filtered records (1) are future times.

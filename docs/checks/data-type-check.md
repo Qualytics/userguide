@@ -82,10 +82,8 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_QUANTITY` value of `Ten` is not a valid Integral.
+!!! example "Record Anomaly"
+    The `L_QUANTITY` value of `Ten` is not a valid Integral.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 66.667% of 3 filtered records (2) are not a valid Integral.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 66.667% of 3 filtered records (2) are not a valid Integral.

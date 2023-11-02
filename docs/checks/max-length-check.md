@@ -77,10 +77,8 @@ In the sample data above, the entry with `P_PARTKEY` **2** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `P_DESCRIPTION` length of `A product description that clearly goes way beyond the specified fifty characters limit.` is greater than the max length of 50.
+!!! example "Record Anomaly"
+    The `P_DESCRIPTION` length of `A product description that clearly goes way beyond the specified fifty characters limit.` is greater than the max length of 50.
         
-=== "Shape Anomaly"
-    !!! example
-        In `P_DESCRIPTION`, 33.333% of 3 filtered records (1) have a length greater than 50.
+!!! example "Shape Anomaly"
+    In `P_DESCRIPTION`, 33.333% of 3 filtered records (1) have a length greater than 50.

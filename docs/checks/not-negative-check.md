@@ -71,10 +71,8 @@ In the sample data above, the entry with `L_ORDERKEY` **2** does not satisfy the
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The value for `L_QUANTITY` of `-5` is a negative number.
+!!! example "Record Anomaly"
+    The value for `L_QUANTITY` of `-5` is a negative number.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 33.333% of 3 filtered records (1) are negative numbers.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 33.333% of 3 filtered records (1) are negative numbers.

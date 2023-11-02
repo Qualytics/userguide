@@ -102,7 +102,6 @@ Among the presented sample profiles, the second one is missing a field, while th
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `ORDERS`, the field count is not `9`.
+!!! example "Shape Anomaly"
+    In `ORDERS`, the field count is not `9`.
 

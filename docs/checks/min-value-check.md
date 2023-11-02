@@ -80,10 +80,8 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_QUANTITY` value of `5` is less than the min value of `10`.
+!!! example "Record Anomaly"
+    The `L_QUANTITY` value of `5` is less than the min value of `10`.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 50.000% of 4 filtered records (2) are less than the min value of `10`.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 50.000% of 4 filtered records (2) are less than the min value of `10`.

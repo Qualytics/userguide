@@ -81,10 +81,8 @@ In the sample data above, the entry with `P_PARTKEY` **2** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `P_SERIAL` value of `TPCH-1234-ABCD` does not match the pattern `TPCH-XXXX-####`.
-        
-=== "Shape Anomaly"
-    !!! example
-        In `P_SERIAL`, 33.333% of 3 filtered records (1) do not match the pattern `TPCH-XXXX-####`.
+!!! example "Record Anomaly"
+    The `P_SERIAL` value of `TPCH-1234-ABCD` does not match the pattern `TPCH-XXXX-####`.
+    
+!!! example "Shape Anomaly"
+    In `P_SERIAL`, 33.333% of 3 filtered records (1) do not match the pattern `TPCH-XXXX-####`.

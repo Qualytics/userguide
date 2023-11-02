@@ -100,10 +100,8 @@ For the entry with `L_ORDERKEY` **2**, the discount is 12, which is outside of t
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `L_DISCOUNT` value of '12' is not within the predicted range defined by L_EXTENDEDPRICE * 0.08 +/- 2.0
+!!! example "Record Anomaly"
+    The `L_DISCOUNT` value of '12' is not within the predicted range defined by L_EXTENDEDPRICE * 0.08 +/- 2.0
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_DISCOUNT`, 33.333% of 3 filtered records (1) are not within the predicted range defined by L_EXTENDEDPRICE * 0.08 +/- 2.0
+!!! example "Shape Anomaly"
+    In `L_DISCOUNT`, 33.333% of 3 filtered records (1) are not within the predicted range defined by L_EXTENDEDPRICE * 0.08 +/- 2.0

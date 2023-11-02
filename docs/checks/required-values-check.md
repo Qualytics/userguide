@@ -72,6 +72,5 @@ In the sample data above, the rule is violated because the values '4-LOW' and '5
 
 **Potential Violation Messages**
 
-=== "Shape Anomaly"
-    !!! example
-        In `O_ORDERPRIORITY`, required values are missing in 40.000% of filtered records.
+!!! example "Shape Anomaly"
+    In `O_ORDERPRIORITY`, required values are missing in 40.000% of filtered records.

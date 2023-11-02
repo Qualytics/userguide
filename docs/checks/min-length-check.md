@@ -77,10 +77,8 @@ In the sample data above, the entry with `C_CUSTKEY` **1** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `C_COMMENT` length of `Ok` is less than the min length of 5.
-        
-=== "Shape Anomaly"
-    !!! example
-        In `C_COMMENT`, 33.333% of 3 filtered records (1) have a length less than 5.
+!!! example "Record Anomaly"
+    The `C_COMMENT` length of `Ok` is less than the min length of 5.
+    
+!!! example "Shape Anomaly"
+    In `C_COMMENT`, 33.333% of 3 filtered records (1) have a length less than 5.

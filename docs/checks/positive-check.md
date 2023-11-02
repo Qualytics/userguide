@@ -72,10 +72,8 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not s
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The value for `L_QUANTITY` of `-5` is not a positive number.
+!!! example "Record Anomaly"
+    The value for `L_QUANTITY` of `-5` is not a positive number.
 
-=== "Shape Anomaly"
-    !!! example
-        In `L_QUANTITY`, 50.000% of 4 filtered records (2) are not positive numbers.
+!!! example "Shape Anomaly"
+    In `L_QUANTITY`, 50.000% of 4 filtered records (2) are not positive numbers.

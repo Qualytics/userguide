@@ -69,9 +69,8 @@ In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the 
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `C_CONTACT_DETAILS` value of `{"name": "Amy Lu", "ssn": "666-12-3456"}` does not contain a social security number.
-=== "Shape Anomaly"
-    !!! example
-        In `C_CONTACT_DETAILS`, 33.333% of 3 filtered records (1) do not contain social security numbers.
+!!! example "Record Anomaly"
+    The `C_CONTACT_DETAILS` value of `{"name": "Amy Lu", "ssn": "666-12-3456"}` does not contain a social security number.
+
+!!! example "Shape Anomaly"
+    In `C_CONTACT_DETAILS`, 33.333% of 3 filtered records (1) do not contain social security numbers.

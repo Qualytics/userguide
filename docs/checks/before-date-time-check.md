@@ -79,10 +79,8 @@ In the sample data above, the entry with `L_ORDERKEY` **1** does not satisfy the
 
 ### Potential Violation Messages
 
-=== "Record Anomaly"
-    !!! example
-        The `L_SHIPDATE` value of `1998-12-01 15:30:00` is not earlier than **1998-12-01 15:00:00**.
+!!! example "Record Anomaly"
+    The `L_SHIPDATE` value of `1998-12-01 15:30:00` is not earlier than **1998-12-01 15:00:00**.
         
-=== "Shape Anomaly"
-    !!! example
-        In `L_SHIPDATE`, 33.33% of 3 filtered records (1) are not earlier than **1998-12-01 15:00:00**.
+!!! example "Shape Anomaly"
+    In `L_SHIPDATE`, 33.33% of 3 filtered records (1) are not earlier than **1998-12-01 15:00:00**.

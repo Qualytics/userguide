@@ -96,9 +96,8 @@ In the sample data above, the entry with `N_NATIONKEY` **1** does not satisfy th
 
 **Potential Violation Messages**
 
-=== "Record Anomaly"
-    !!! example
-        The `N_NATIONNAME` value of '`Antarctica`' is an `UNSUPPORTED_REGION`.
-=== "Shape Anomaly"
-    !!! example
-        In `N_NATIONNAME`, 33.333% of 3 filtered records (1) do exist in `UNSUPPORTED_REGION`.
+!!! example "Record Anomaly"
+    The `N_NATIONNAME` value of '`Antarctica`' is an `UNSUPPORTED_REGION`.
+
+!!! example "Shape Anomaly"
+    In `N_NATIONNAME`, 33.333% of 3 filtered records (1) do exist in `UNSUPPORTED_REGION`.
