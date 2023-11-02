@@ -3,6 +3,35 @@ hide:
   - navigation
 ---
 
+### 2023.11.02 { id=2023.11.02}
+
+#### Feature Enhancements
+
+- Auto Selection of All Fields in Check Form:
+    - Improved the user experience in the Check Form by introducing a "select all" option for fields. Users can now auto-select all fields when applying rules that expects a multi select input, streamlining the process especially for profiles with a large number of fields.
+
+- Enhanced Profile Operations with User-Defined Starting Points for Profiling:
+    - Users can now specify a value for the incremental identifier, to determine the comprehensive set that will be analyzed.
+    - Two new options have been added:
+        - Greater Than Time: Targets profiles with incremental timestamp strategies, allowing the inclusion of rows where the incremental field's value surpasses a specified time threshold.
+        - Greater Than Batch: Tailored for profiles employing an incremental batch strategy, focusing the analysis on rows where the incremental field’s value is beyond a certain numeric threshold.
+
+- Configurable Enrichment Source Record Limit in Scan Operations:
+    - Users can now configure the `enrichment_source_record_limit` to dictate the number of anomalous records retained for analysis, adapting to various use case necessities beyond the default sample limit of 10 per anomaly. This improvement allows for a more tailored and comprehensive analysis based on user requirements.
+
+- Introduction of Passed Status in Check Card:
+    - A new indicative icon has been added to the Check Card to assure users of a "passed" status based on the last scan. This icon will be displayed only when there are no active anomalies.
+
+- Inclusion of Last Asserted Time in Check Card:
+    - Enhanced the Check Card by including the last asserted time, offering users more detailed and up-to-date information regarding the checks.
+
+- Enhanced Anomaly Search with UUID Support:
+    - Improved the anomaly search functionality by enabling users to search anomalies using the UUID of the anomaly, making the search process more flexible and comprehensive.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2023.10.27 { id=2023.10.27}
 
 #### Feature Enhancements
