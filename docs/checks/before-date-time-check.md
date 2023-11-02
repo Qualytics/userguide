@@ -1,23 +1,88 @@
-# Before Date Time <spam id='single-field'>`single field`</spam>
+# Before Date Time
 
----
+### Definition
 
 *Asserts that the field is a timestamp earlier than a specific date and time.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/before-date-time-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/before-date-time-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-!!! example
-    `order_time` is earlier than `2021-01-01`
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+| Type       |                          |
+|------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
 
-    The `[field_name]` value of '`[x date time]`' is not earlier than `[selected_date_time]`
+### General Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are not earlier than `[selected_field_name]`
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Specific Properties
+
+Specify a particular date and time to act as the threshold for the rule.
+
+| Name           | Description                                                   |
+|----------------|---------------------------------------------------------------|
+| <div class="text-primary">Date</div>  | The timestamp used as the upper boundary. Values in the selected field should be before this timestamp. |
+
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all L_SHIPDATE entries in the LINEITEM table are earlier than 3:00 PM on December 1st, 1998.*
+
+**Sample Data**
+
+| L_ORDERKEY | L_SHIPDATE           |
+|------------|-----------------------|
+| 1          | <span style="color: #E91E63">1998-12-01 15:30:00</span> |
+| 2          | 1998-11-02 12:45:00   |
+| 3          | 1998-08-01 10:20:00   |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `L_ORDERKEY` **1** does not satisfy the rule because its `L_SHIPDATE` value is not before **1998-12-01 15:00:00**.
+
+=== "Flowcharts"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[Retrieve L_SHIPDATE]
+    B --> C{Is L_SHIPDATE < '1998-12-01 15:00:00'?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        l_orderkey
+        , l_shipdate
+    from lineitem 
+    where
+        l_shipdate >= '1998-12-01 15:00:00'
+    ```
+
+### Potential Violation Messages
+
+=== "Record Anomaly"
+    !!! example
+        The `L_SHIPDATE` value of `1998-12-01 15:30:00` is not earlier than **1998-12-01 15:00:00**.
+        
+=== "Shape Anomaly"
+    !!! example
+        In `L_SHIPDATE`, 33.33% of 3 filtered records (1) are not earlier than **1998-12-01 15:00:00**.

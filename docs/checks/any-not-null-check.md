@@ -1,26 +1,84 @@
-# Any Not Null <spam id='multiple-fields'>`multiple fields`</spam>
+# Any Not Null
 
---- 
+### Definition
 
-*Asserts that one of the fields must not be null*
+*Asserts that at least one of the selected fields must hold a value.*
 
-| Accepted Field Types   |                          |
-| :--------------------: |   :------------------:   |
-| `Date`                 |   :octicons-check-16:     |
-| `Timestamp`            |   :octicons-check-16:     |
-| `Integral`             |   :octicons-check-16:     |
-| `Fractional`           |   :octicons-check-16:     |
-| `String`               |   :octicons-check-16:     |
-| `Boolean`              |   :octicons-check-16:     |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/any-not-null-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/any-not-null-check-dark.png#only-dark)
+**Multiple:** The rule evaluates multiple specified fields.
 
-!!! example
-    At least one of the fields `order_time` is not null.
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    There is no value set for any of '`[field_name]`'
+| Type          |                          |
+|---------------|--------------------------|
+| `Date`        | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp`   | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Integral`    | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Fractional`  | <div style="text-align:center">:octicons-check-16:</div>  |
+| `String`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Boolean`     | <div style="text-align:center">:octicons-check-16:</div>  |
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% have no value set for any of `[selected_field_name]`
+### General Properties
+
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that for every record in the ORDERS table, at least one of the fields (O_COMMENT, O_ORDERSTATUS) isn't null.*
+
+**Sample Data**
+
+| O_ORDERKEY | O_COMMENT          | O_ORDERSTATUS |
+|------------|--------------------|---------------|
+| 1          | <span class="text-negative">NULL</span> | <span class="text-negative">NULL</span> |
+| 2          | Good product      | NULL          |
+| 3          | NULL               | Shipped       |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the rule because both `O_COMMENT` and `O_ORDERSTATUS` does not hold a value.
+
+=== "Flowchart"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[Retrieve O_COMMENT and O_ORDERSTATUS]
+    B --> C{Is Either Field Not Null?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        o_orderkey
+        , o_comment
+        , o_orderstatus
+    from orders 
+    where
+        o_comment is null
+        and o_orderstatus is null
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        There is no value set for any of `O_COMMENT, O_ORDERSTATUS`
+
+=== "Shape Anomaly"
+    !!! example
+        In `O_COMMENT, O_ORDERSTATUS`, 33.333% of 3 filtered records (1) have no value set for any of `O_COMMENT, O_ORDERSTATUS`

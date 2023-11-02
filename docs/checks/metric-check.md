@@ -1,67 +1,169 @@
-# Metric <spam id='single-field'>`single field`</spam>
+# Metric
 
----
+### Definition
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
+*Records the value of the selected field during each scan operation and asserts limits based upon an expected change or absolute range (inclusive).*
 
-![Screenshot](../assets/checks/rule-types/metric-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/metric-check-dark.png#only-dark)
+### In-Depth Overview
 
+The `Metric` rule is designed to monitor the values of a selected field over time. It is particularly useful in a time-series context where values are expected to evolve within certain bounds or limits. This rule allows for tracking absolute values or changes, ensuring they remain within predefined thresholds.
 
-## `Comparison` options:
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/comparison-options-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/comparison-options-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-### Absolute Change
+**Accepted Types**
 
-The `Absolute Change` comparison works by comparing the change in a numeric field's value to a pre-set limit (Min or Max). If the field's value changes by more than this specified limit since the last relevant scan, an anomaly is identified.
+| Type        |                          |
+|-------------|--------------------------|
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div> |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div> |
 
-- This feature plays a critical role in maintaining data integrity and ensuring no significant changes go unnoticed.
+### General Properties
 
----
-*Asserts that the field has not changed by more than a fixed amount (inclusive) since the last applicable scan*
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
 
-!!!example
-    `balance` has min `0` and max `200`
+### Specific Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    The absolute change of `[field_name]` from '`[min value]`' to `[max value]` falls outside the declared limits
---- 
+Determines the evaluation method and allowable limits for field value comparisons over time.
 
-### Absolute Value
+| Name               | Description                                                        |
+|--------------------|--------------------------------------------------------------------|
+| <div class="text-primary">Comparison</div> | Specifies the type of comparison: Absolute Change, Absolute Value, or Percentage Change. |
+| <div class="text-primary">Min Value</div> | Indicates the minimum allowable increase in value. Use a negative value to represent an allowable decrease. |
+| <div class="text-primary">Max Value</div> | Indicates the maximum allowable increase in value. |
 
-The `Absolute Value` comparison works by comparing the change in a numeric field's value to a pre-set limit `between` Min and Max values. If the field's value changes by more than this specified range since the last relevant scan, an anomaly is identified.
+!!! note "Details"
+    ### Comparison Options
 
-- This feature plays a critical role in maintaining data integrity and ensuring no significant changes go unnoticed
+    **Absolute Change**
 
----
-*Records the value of the selected field during each scan operation and asserts that the value is within a specified range (inclusive)*
+    The `Absolute Change` comparison works by comparing the change in a numeric field's value to a pre-set limit (Min / Max). If the field's value changes by more than this specified limit since the last relevant scan, an anomaly is identified.
 
-!!!example
-    `price` is between `200` and `865`
+    ??? example "Illustration"
+        _Any record with a value change smaller than 30 or greater than 70 compared to the last scan should be flagged as anomalous_
+        
+        **Thresholds**: Min Change = 30, Max Change = 70
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    The value for {0.field_names} of {1} is not between '`[min value]`' and `[max value]`
---- 
+        | Scan | Previous Value | Current Value | Absolute Change | Anomaly Detected |
+        |------|----------------|---------------|-----------------|------------------|
+        | #1    | -              | 100           | -               | No               |
+        | #2    | 100            | 150           | 50              | No               |
+        | #3    | 150            | 220           | 70              | No               |
+        | #4    | 220            | <div class="text-negative">300</div> | <div class="text-negative">80</div>  | <div class="text-negative">Yes</div> |
 
+    **Absolute Value**
 
-### Percentage Change
+    The `Absolute Value` comparison works by comparing the change in a numeric field's value to a pre-set limit `between` Min and Max values. If the field's value changes by more than this specified range since the last relevant scan, an anomaly is identified.
 
-The `Percentage Change` comparison operates by tracking changes in a numeric field's value relative to its previous value. If the change exceeds the predefined percentage (%) limit since the last relevant scan, an anomaly is generated.
+    ??? example "Illustration"
+        _The value of the record in each scan should be within 100 and 300 to be considered normal_
 
-- This tool is crucial for maintaining data consistency, especially when dealing with large datasets where percentage changes might be more informative than absolute ones.
+        **Thresholds**: Min Value = 100, Max Value = 300
 
----
-*Asserts that the field has not changed by more than a percentage amount (inclusive) since the last applicable scan*
+        | Scan | Current Value | Anomaly Detected |
+        |------|---------------|------------------|
+        | #1    | 150           | No              |
+        | #2    | <div class="text-negative">90</div> | <div class="text-negative">Yes</div> |
+        | #3    | 250           | No               |
+        | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
 
+    **Percentage Change**
 
-!!!example
-    `balance` has min `0` and max `200`
+    The `Percentage Change` comparison operates by tracking changes in a numeric field's value relative to its previous value. If the change exceeds the predefined percentage (%) limit since the last relevant scan, an anomaly is generated.
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    The absolute change of `[field_name]` from '`[min value]`' to `[max value]` falls outside the declared limits
+    ??? example "Illustration"
+        _An anomaly is identified if the record's value decreases by more than 20% or increases by more than 50% compared to the last scan._
+
+        **Thresholds**: Min Percentage Change = -20%, Max Percentage Change = 50%
+
+        **Percentage Change Formula**: ( (current_value - previous_value) / previous_value ) * 100
+
+        | Scan | Previous Value | Current Value | Percentage Change           | Anomaly Detected |
+        |------|----------------|---------------|-----------------------------|------------------|
+        | 1    | -              | 100           | -                           | No               |
+        | 2    | 100            | 150           | 50%                         | No               |
+        | 3    | 150            | 120           | -20%                        | No               |
+        | 4    | 120            | 65            | <div class="text-negative">-45.83%</div> | <div class="text-negative">Yes</div> |
+        | 5    | 65             | 110           | <div class="text-negative">69.23%</div>  | <div class="text-negative">Yes</div>  |
+
+    ### Thresholds
+
+    At least the Min or Max value must be specified, and including both is optional. These values determine the acceptable range or limit of change in the field's value.
+
+    **Min Value**
+
+    - Represents the minimum allowable increase in the field's value.
+    - A negative Min Value signifies an allowable decrease, determining the minimum value the field can drop to be considered valid.
+
+    ** Max Value**
+
+    - Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
+        
+
+### TPC-H Example
+
+**Objective**: *Ensure that the total price in the ORDERS table does not fluctuate beyond a predefined percentage limit between scans.*
+
+**Thresholds**: Min Percentage Change = -30%, Max Percentage Change = 30%
+
+**Sample Scan History**
+
+| Scan | O_ORDERKEY | Previous O_TOTALPRICE | Current O_TOTALPRICE | Percentage Change | Anomaly Detected |
+|------|------------|-----------------------|----------------------|-------------------|------------------|
+| #1    | 1          | -                     | 100                  | -                 | No               |
+| #2    | 1          | 100                   | 110                  | 10%               | No               |
+| #3    | 1          | 110                   | <span class="text-negative">200</span> | <span class="text-negative">81.8%</span> | <span class="text-negative">Yes</span> |
+| #4    | 1          | 200                   | <span class="text-negative">105</span> | <span class="text-negative">-47.5%</span> | <span class="text-negative">Yes</span> |
+
+**Anomaly Explanation**
+
+In the sample scan history above, anomalies are identified in scans #3 and #4. The `O_TOTALPRICE` values in these scans fall outside the declared percentage change limits of -30% and 30%, indicating that something unusual might be happening and further investigation is needed.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve O_TOTALPRICE]
+    B --> C{Is Percentage Change in O_TOTALPRICE within -30% and 30%?}
+    C -->|Yes| D[End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query representing the rule using TPC-H tables.
+    select 
+        o_orderkey,
+        o_totalprice,
+        lag(o_totalprice) over (order by o_orderkey) as previous_o_totalprice
+    from
+        orders
+    having
+        abs((o_totalprice - previous_o_totalprice) / previous_o_totalprice) * 100 > 30
+        or
+        abs((o_totalprice - previous_o_totalprice) / previous_o_totalprice) * 100 < -30;
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly (Percentage Change)"
+    !!! example
+        The percentage change of `O_TOTALPRICE` from '110' to '200' falls outside the declared limits
+
+=== "Record Anomaly (Absolute Change)"
+    !!! example
+        _using hypothetical numbers_
+
+        The absolute change of `O_TOTALPRICE` from '150' to '300' falls outside the declared limits
+
+=== "Record Anomaly (Absolute Value)"
+    !!! example
+        _using hypothetical numbers_
+
+        The value for `O_TOTALPRICE` of '50' is not between the declared limits
 

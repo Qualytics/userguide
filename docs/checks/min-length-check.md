@@ -1,23 +1,86 @@
-# Min Length <spam id='single-field'>`single field`</spam>
+# Min Length
 
----
+### Definition
 
 *Asserts that a string has a minimum length.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `String`               | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/min-length-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/min-length-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-!!! example
-    `units` has a minimum length `356`.
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+| Type       |                          |
+|------------|--------------------------|
+| `String`   | <div style="text-align:center">:octicons-check-16:</div>  |
 
-    The `[field_name]` length of '`[x value]`' is less than the min length of `[value]`
+### General Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% have a length less than `[value]`.
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
 
+### Specific Properties
+
+Determines the minimum allowable length for the field.
+
+| Name               | Description |
+|--------------------|-------------|
+| <div class="text-primary">Value</div> | Specifies the minimum length that the string field should have. |
+
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all C_COMMENT entries in the CUSTOMER table have a minimum length of 5 characters.*
+
+**Sample Data**
+
+| C_CUSTKEY | C_COMMENT                                       |
+|-----------|------------------------------------------------|
+| 1         | <span class="text-negative">Ok</span>       |
+| 2         | Excellent customer service, very satisfied!    |
+| 3         | Nice staff          |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `C_CUSTKEY` **1** does not satisfy the rule because the length of its `C_COMMENT` values is below the required minimum length of 5 characters.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve C_COMMENT]
+    B --> C{Is C_COMMENT length >= 5?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        c_custkey,
+        c_comment
+    from customer 
+    where
+        length(c_comment) < 5;
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The `C_COMMENT` length of `Ok` is less than the min length of 5.
+        
+=== "Shape Anomaly"
+    !!! example
+        In `C_COMMENT`, 33.333% of 3 filtered records (1) have a length less than 5.

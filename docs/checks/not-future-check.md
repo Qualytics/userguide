@@ -1,28 +1,79 @@
-# Not Future <spam id='single-field'>`single field`</spam>
+# Not Future
 
----
+### Definition
 
 *Asserts that the field's value is not in the future.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/not-future-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/not-future-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-!!! example
-    `order_time` is a time in the past.
+**Accepted Fields**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
+| Field       |                             |
+|-------------|-----------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>         |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>         |
 
-    The value for `[field_name]` of '`[x value]`' is in the future.
+### General Properties
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% are future times.
+{%
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->'
+%}
 
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that the delivery dates (O_DELIVERYDATE) in the ORDERS table are not set in the future.*
+
+**Sample Data**
+
+| O_ORDERKEY | O_DELIVERYDATE              |
+|------------|-----------------------------|
+| 1          | 2023-09-20                  |
+| 2          | <span class="text-negative">2023-10-25 (Future Date)</span>    |
+| 3          | 2023-10-10                  |
+
+**Anomaly Explanation**
+
+In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the rule because its `O_DELIVERYDATE` is set in the future.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B[Retrieve O_DELIVERYDATE]
+    B --> C{Is O_DELIVERYDATE <= Current Date?}
+    C -->|Yes| D[Move to Next Record/End]
+    C -->|No| E[Mark as Anomalous]
+    E --> D
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        o_orderkey,
+        o_deliverydate
+    from orders 
+    where
+        o_deliverydate > current_date;
+    ```
+
+**Potential Violation Messages**
+
+=== "Record Anomaly"
+    !!! example
+        The value for `O_DELIVERYDATE` of `2023-10-25` is in the future.
+
+=== "Shape Anomaly"
+    !!! example
+        In `O_DELIVERYDATE`, 33.333% of 3 filtered records (1) are future times.

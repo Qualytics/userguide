@@ -1,24 +1,77 @@
-# Required Values <spam id='single-field'>`single field`</spam>
+# Required Values
 
----
+### Definition
 
 *Asserts that all of the defined values must be present at least once within a field.*
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+### Field Scope
 
-![Screenshot](../assets/checks/rule-types/required-values-check-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/required-values-check-dark.png#only-dark)
+**Single:** The rule evaluates a single specified field.
 
-!!! example
-    `Ship Date` is assigned all of the listed values at least once `[2022-10-15, 2022-11-12, 2022-12-12]`.
+**Accepted Types**
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, required values are missing in the sample of `[x]` records.
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>      |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>      |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>      |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>      |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div>      |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>      |
 
+### General Properties
+
+{% 
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->' 
+%}
+
+### Specific Properties
+
+Ensures that a specific set of values is present within a field.
+
+| Name     | Description                                               |
+|----------|-----------------------------------------------------------|
+| <div class="text-primary">Values</div> | Specifies the list of values that must exist in the field. |
+
+### TPC-H Example
+
+**Objective**: *Ensure that orders have priorities labeled as '1-URGENT', '2-HIGH', '3-MEDIUM', '4-LOW', and '5-NOT URGENT'.*
+
+**Sample Data**
+
+| O_ORDERKEY | O_ORDERPRIORITY |
+|------------|-----------------|
+| 1          | 1-URGENT        |
+| 2          | 2-HIGH          |
+| 3          | 3-MEDIUM        |
+| 4          | 3-MEDIUM        |
+
+**Anomaly Explanation**
+
+In the sample data above, the rule is violated because the values '4-LOW' and '5-NOT URGENT' are not present in the `O_ORDERPRIORITY` field of the ORDERS table.
+
+=== "Flowchart"
+    ```mermaid
+    graph TD
+    A[Start] --> B{Check if all specified values exist in the field}
+    B -->|Yes| C[End: No Anomalies]
+    B -->|No| D[Mark as Anomalous: Missing Values]
+    D --> C
+    ```
+
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select distinct
+        o_orderpriority
+    from orders
+    where o_orderpriority in ('1-URGENT', '2-HIGH', '3-MEDIUM', '4-LOW', '5-NOT URGENT');
+    ```
+
+**Potential Violation Messages**
+
+=== "Shape Anomaly"
+    !!! example
+        In `O_ORDERPRIORITY`, required values are missing in 40.000% of filtered records.

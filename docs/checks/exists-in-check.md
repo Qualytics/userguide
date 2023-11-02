@@ -1,38 +1,116 @@
-# Exists In <spam id='single-field'>`single field`</spam>
+# Exists In
 
----
+### Definition
 
-The `ExistsIn` rule type ensures that your fact table's values are valid where the valid values are maintained in a dimension table elsewhere (including in an entirely separate datastore). 
-Within the same OLTP this scenario would typically be enforced with a foreign key, but there are many scenarios where foreign key integrity constraints are unavailable such as:
-- the source (e.g. fact table) and reference (e.g. dimension table) are held in different databases or mediums
-- the datastore technology does not enforce foreign key integrity constraints
-  
-`ExistsIn` enables you to verify that all corresponding records in your source hold valid values, even in extreme examples such as source data in a spreadsheet in object storage. 
+*Asserts that values assigned to a field exist as values in another field.*
 
----
-*Asserts if the rows of a compared table/field of a specific Datastore exists in the selected table/field.*
+#### In-Depth Overview
 
-| Accepted Field Types   |                      |
-| :--------------------: | :------------------: |
-| `Date`                 | :octicons-check-16:   |
-| `Timestamp`            | :octicons-check-16:   |
-| `Integral`             | :octicons-check-16:   |
-| `Fractional`           | :octicons-check-16:   |
-| `String`               | :octicons-check-16:   |
-| `Boolean`              | :octicons-check-16:   |
+The `ExistsIn` rule allows you to cross-validate data between different sources, whether it’s object storage systems or databases.
+
+Traditionally, databases might utilize foreign key constraints (if available) to enforce data integrity between related tables. The `ExistsIn` rule extends this concept in two powerful ways:
+
+1. **Cross-System Integrity**: it allows for integrity checks to span across different databases or even entirely separate systems. This is particularly advantageous in scenarios where data sources are fragmented across diverse platforms.
+2. **Flexible Data Formats**: Beyond just databases, this rule can validate values against various data formats, such as ensuring values in a file align with those in a table.
+
+These enhancements enable businesses to maintain data integrity even in complex, multi-system environments.
+
+### Field Scope
+
+**Single:** The rule evaluates a single specified field.
+
+**Accepted Types**
+
+| Type        |                          |
+|-------------|--------------------------|
+| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>  |
+| `String`    | <div style="text-align:center">:octicons-check-16:</div>  |
+| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>  |
+
+### General Properties
+
+{% 
+    include-markdown "components/general-props/index.md"
+    start='<!-- all-props--start -->'
+    end='<!-- all-props--end -->' 
+%}
+
+### Specific Properties
+
+Define the datastore, table/file, and field where the rule should look for matching values.
+
+| Name                            | Description                                                   |
+|---------------------------------|---------------------------------------------------------------|
+| <div class="text-primary">Datastore</div>   | The source datastore where the profile of the reference field is located. |
+| <div class="text-primary">Table/file</div>   | The profile (e.g. table, view or file) containing the reference field. |
+| <div class="text-primary">Field</div>       | The field name whose values should match those of the selected field.  |
+
+### Anomaly Types
+
+{% 
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->' 
+%}
+
+### TPC-H Example
+
+**Objective**: *Ensure that all NATION_NAME entries in the NATION table match entries under the COUNTRY_NAME column in an external lookup file listing official country names.*
+
+**Sample Data**
+
+| N_NATIONKEY | N_NATIONNAME       |
+|-------------|--------------------|
+| 1           | Algeria            |
+| 2           | Argentina          |
+| 3           | <span class="text-negative">Atlantida</span>   |
+
+**Lookup File Sample**
+
+| COUNTRY_NAME       |
+|--------------------|
+| Algeria            |
+| Argentina          |
+| Brazil             |
+| Canada             |
+| ...                |
+| Zimbabwe           |
 
 
-![Screenshot](../assets/checks/rule-types/exists-in-light.png#only-light)
-![Screenshot](../assets/checks/rule-types/exists-in-dark.png#only-dark)
+**Anomaly Explanation**
 
-!!! example
-    `Account_fk` exists in `Account_id`.
+In the sample data above, the entry with `N_NATIONKEY` **3** does not satisfy the rule because the `N_NATIONNAME` "Atlantida" does not match any `COUNTRY_NAME` in the official country names lookup file.
 
-    You can select the same or a different datastore to assert that the compared table/file exists in the source table/file.
+=== "Flowchart"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[Retrieve COUNTRY_NAME]
+    B --> C[Retrieve N_NATIONNAME]
+    C --> D{Does N_NATIONNAME exists in COUNTRY_NAME?}
+    D -->|Yes| E[Move to Next Record/End]
+    D -->|No| F[Mark as Anomalous]
+    F --> E
+    ```
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-record-anomaly-dark.svg)`Record Anomaly` error message"
-    The `[field_name]` value of '`[x value]`' does not exist in `[compared_field_name]`.
+=== "SQL"
+    ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    select
+        n_nationkey
+        , n_nationname
+    from nation 
+    where
+        n_nationname not in ('Algeria', 'Argentina', ... /* other valid countries */)
+    ```
 
-=== "![Screenshot](../assets/checks/rule-types/icons/icon-shape-anomaly-dark.svg)`Shape Anomaly` error message"
-    In `[field_names]`, `[x]`% of the filtered values do not exist in `[compared_field_name]`.
+**Potential Violation Messages**
 
+=== "Record Anomaly"
+    !!! example
+        The `N_NATIONNAME` value of `'Atlantida'` does not exist in `COUNTRY_NAME`.
+=== "Shape Anomaly"
+    !!! example
+        In `N_NATIONNAME`, 33.333% of 3 filtered records (1) do not match any `COUNTRY_NAME`.
