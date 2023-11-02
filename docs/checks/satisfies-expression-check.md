@@ -34,6 +34,14 @@ Evaluates each record against a specified Spark SQL expression to ensure it meet
 
     Refers to the **Filter Guide** in the [**General Properties**](#general-properties) topic for examples of valid Spark SQL expressions.
 
+### Anomaly Types
+
+{%
+    include-markdown "components/anomaly-support/index.md"
+    start='<!-- all-types--start -->'
+    end='<!-- all-types--end -->'
+%}
+
 ### TPC-H Example
 
 **Objective**: *Ensure that the total tax applied to each item in the LINEITEM table is not more than 10% of the extended price.*
@@ -66,6 +74,7 @@ In the sample data above, the entries with `L_ORDERKEY` **2** and **4** do not s
 
 === "SQL"
     ```sql
+    -- An illustrative SQL query related to the rule using TPC-H tables.
     select
         l_orderkey,
         l_linenumber,
