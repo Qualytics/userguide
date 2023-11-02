@@ -30,7 +30,7 @@
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all S_DETAILS entries in the SUPPLIER table contain valid URLs.*
 
@@ -58,7 +58,7 @@ In the sample data above, the entries with `S_SUPPKEY` **1** and **3** do not sa
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         s_suppkey,
         s_details

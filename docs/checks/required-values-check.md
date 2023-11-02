@@ -35,7 +35,7 @@ Ensures that a specific set of values is present within a field.
 |----------|-----------------------------------------------------------|
 | <div class="text-primary">Values</div> | Specifies the list of values that must exist in the field. |
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that orders have priorities labeled as '1-URGENT', '2-HIGH', '3-MEDIUM', '4-LOW', and '5-NOT URGENT'.*
 
@@ -63,7 +63,7 @@ In the sample data above, the rule is violated because the values '4-LOW' and '5
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select distinct
         o_orderpriority
     from orders

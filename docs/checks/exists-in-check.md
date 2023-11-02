@@ -56,7 +56,7 @@ Define the datastore, table/file, and field where the rule should look for match
     end='<!-- all-types--end -->' 
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all NATION_NAME entries in the NATION table match entries under the COUNTRY_NAME column in an external lookup file listing official country names.*
 
@@ -97,7 +97,7 @@ In the sample data above, the entry with `N_NATIONKEY` **3** does not satisfy th
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         n_nationkey
         , n_nationname

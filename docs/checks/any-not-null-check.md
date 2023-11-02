@@ -35,7 +35,7 @@
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that for every record in the ORDERS table, at least one of the fields (O_COMMENT, O_ORDERSTATUS) isn't null.*
 
@@ -62,7 +62,7 @@ In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the
     ```
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         o_orderkey
         , o_comment

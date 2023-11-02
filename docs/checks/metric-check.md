@@ -105,7 +105,7 @@ Determines the evaluation method and allowable limits for field value comparison
     - Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
         
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the total price in the ORDERS table does not fluctuate beyond a predefined percentage limit between scans.*
 
@@ -136,7 +136,7 @@ In the sample scan history above, anomalies are identified in scans #3 and #4. T
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query representing the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s)
     select 
         o_orderkey,
         o_totalprice,

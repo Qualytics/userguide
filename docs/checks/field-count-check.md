@@ -28,7 +28,7 @@ Specify the exact number of fields expected in the profile.
     end='<!-- shape-only--end -->' 
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the ORDERS profile contains exactly 9 fields.*
 

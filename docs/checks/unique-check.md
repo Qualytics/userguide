@@ -35,7 +35,7 @@
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that each combination of C_NAME and C_ADDRESS in the CUSTOMER table is unique.*
 

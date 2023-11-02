@@ -40,7 +40,7 @@ Specify the range of dates or times that values in the selected field should fal
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all O_ORDERDATE entries in the ORDERS table are between 10:30 AM on January 1st, 1991 and 3:00 PM on December 31st, 1991.*
 
@@ -68,7 +68,7 @@ In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not s
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         o_orderkey
         , o_orderdate

@@ -43,7 +43,7 @@ Specify the list of expected values for the data in the field.
     end='<!-- all-types--end -->' 
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that all O_ORDERSTATUS entries in the ORDERS table only contain expected order statuses: "O", "F", and "P".*
 
@@ -72,7 +72,7 @@ In the sample data above, the entry with `O_ORDERKEY` **4** does not satisfy the
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         o_orderkey
         , o_orderstatus

@@ -39,7 +39,7 @@ Ensures that the total sum of values in a specified field matches a defined amou
     end='<!-- shape-only--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the total discount value in the LINEITEM table does not exceed $2000.*
 
@@ -68,7 +68,7 @@ In the sample data above, the total of the `L_DISCOUNT_VALUE` column is (500 + 8
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select 
         sum(l_discount_value) as total_discount_value
     from 

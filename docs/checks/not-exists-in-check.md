@@ -48,7 +48,7 @@ Define the datastore, table/file, and field where the rule should look for non-m
     end='<!-- all-types--end -->' 
 %}
 
-### TPC-H Example
+### Example
 
 **Scenario**: *A shipping company needs to ensure that all NATION_NAME entries in the NATION table aren't listed in an external unsupported regions file, which lists countries they don't ship to.*
 
@@ -85,7 +85,7 @@ In the sample data above, the entry with `N_NATIONKEY` **1** does not satisfy th
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         n_nationkey
         , n_nationname

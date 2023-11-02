@@ -39,7 +39,7 @@ Determines the maximum allowable value for the field.
     end='<!-- all-types--end -->'
 %}
 
-### TPC-H Example
+### Example
 
 **Objective**: *Ensure that the quantity of items (L_QUANTITY) in the LINEITEM table does not exceed a value of 50.*
 
@@ -68,7 +68,7 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query related to the rule using TPC-H tables.
+    -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
     select
         l_orderkey,
         l_linenumber,
