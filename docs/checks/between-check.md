@@ -80,7 +80,7 @@ In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not s
         or l_quantity > 20
     ```
 
-### Potential Violation Messages
+**Potential Violation Messages**
 
 !!! example "Record Anomaly"
     The value for `L_QUANTITY` of 4 is not between **5.000** and **20.000**.
