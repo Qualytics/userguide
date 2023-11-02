@@ -22,7 +22,7 @@
     end='<!-- all-props--end -->'
 %}
 
-### Anomaly Types Supported
+### Anomaly Types
 
 {%
     include-markdown "components/anomaly-support/index.md"
