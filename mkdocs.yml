@@ -60,7 +60,6 @@ nav:
           - Contains Social Security Number: checks/contains-social-security-number-check.md
           - Contains Url: checks/contains-url.md
           - Data Type: checks/data-type-check.md
-          - Distinct: checks/distinct-check.md
           - Distinct Count: checks/distinct-count-check.md
           - Equal To Field: checks/equal-to-field-check.md
           - Exists In: checks/exists-in-check.md
@@ -75,6 +74,7 @@ nav:
           - Less Than Field: checks/less-than-field-check.md
           - Matches Pattern: checks/matches-pattern-check.md
           - Max Length: checks/max-length-check.md
+          - Max Partition Size: checks/max-partition-size-check.md
           - Max Value: checks/max-value-check.md
           - Metric: checks/metric-check.md
           - Min Length: checks/min-length-check.md
