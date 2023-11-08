@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2023.11.08 { id=2023.11.08}
+
+#### Feature Enhancements
+
+- Is Address Check:
+    - Introduced a new check for address conformity that ensures the presence of required components such as road, city, and state, enhancing data quality controls for address fields. This check leverages machine learning to support multilingual street address parsing/normalization trained on over 1.2 billion records of data from over 230 countries, in 100+ languages. It achieves 99.45% full-parse accuracy on held-out addresses (i.e. addresses from the training set that were purposefully removed so we could evaluate the parser on addresses it hasn’t seen before).
+
+- Revamped Heatmap Flow in Activity Tab:
+    - Improved the user interaction with the heatmap by filtering the operation list upon selecting a date. A new feature has been added to operation details allowing users to view comprehensive information about the profiles scanned, with the ability to drill down to partitions and anomalies.
+
+- Link to Schedule in Operation List:
+    - Enhanced the operation list with a new “Schedule” column, providing direct links to the schedules triggering the operations, thus improving traceability and scheduling visibility.
+
+- Insights Tag Filtering Improvement:
+    - Enhanced the tag filtering capability on the Insights page to now include table/file-level analysis. This ensures a more granular and accurate reflection of data when using tags to filter insights.
+
+- Support for Incremental Scanning of Partitioned Files:
+    - Optimized the incremental scanning process by tracking changes at the record level rather than the last modified timestamp of the folder. This enhancement prevents the unnecessary scanning of all records and focuses on newly added data.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2023.11.02 { id=2023.11.02}
 
 #### Feature Enhancements
