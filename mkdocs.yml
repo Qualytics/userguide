@@ -45,6 +45,9 @@ nav:
         - datastores/synapse.md
         - datastores/timescale-db.md
         - datastores/trino.md
+      - Container:
+        - container/what-is-container.md
+        - container/export-metadata.md
       - Data Quality Checks:
         - checks/what-is.md
         - checks/what-is-an-authored-check.md
