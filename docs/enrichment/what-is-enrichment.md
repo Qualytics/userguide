@@ -191,6 +191,14 @@ Contains metadata from field profiles.
 | TYPE_DECLARED             | BOOLEAN            | Indicator of whether the field type is explicitly declared.      |
 | UNIQUE_DISTINCT_RATIO     | FLOAT              | Ratio of unique distinct values to the total distinct values.    |
 
+## Diagram
+
+The diagram below provides a visual representation of the associations between various tables in the Enrichment Datastore. It illustrates how tables can be joined to track and analyze data across different processes.
+
+![Screenshot](../assets/enrichment/diagram-light.png#only-light)
+
+![Screenshot](../assets/enrichment/diagram-dark.png#only-dark)
+
 ## Usage Notes
 
 - Both **metadata tables** and **remediation tables**, are designed to be **ephemeral** and thus are recommended to be used as temporary datasets. Users are advised to move this data to a more permanent dataset for long-term storage and reporting.
