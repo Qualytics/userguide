@@ -66,12 +66,12 @@ This check allows the user to define any combination of these labels as required
 | O_ORDERKEY | O_MAILING_ADDRESS          |
 |------------|--------------------|
 | 1          | One-hundred twenty E 96th St, new york NY 14925 |
-| 2          | Quatre vingt douze R. de l'Église, 75196 cedex 04 |
+| 2          | <div class="text-negative">Quatre vingt douze R. de l'Église, 75196 cedex 04</div> |
 | 3          | 781 Franklin Ave Crown Heights Brooklyn NYC NY 11216 USA |
 
 **Anomaly Explanation**
 
-In the sample data above, the entry with `O_MAILING_ADDRESS` **2** does not satisfy the rule because only a road and postcode appear in the value which violates the business logic that city and state also be present.
+In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the rule because the `O_MAILING_ADDRESS` value includes only a road and postcode which violates the business logic that city and state also be present.
 
 === "Flowchart"
     ``` mermaid
