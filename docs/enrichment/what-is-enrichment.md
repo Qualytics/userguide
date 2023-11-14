@@ -79,6 +79,8 @@ Captures and stores the results of every scan operation conducted on the Qualyti
 | Name                              | Data Type          | Description                                                            |
 |-----------------------------------|--------------------|------------------------------------------------------------------------|
 |  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.                              |
+|  DATASTORE_ID      			    |   NUMBER         	 | Identifier for the source datastore associated with the operation.     |
+|  CONTAINER_ID      			    |   NUMBER         	 | Identifier for the container associated with the operation.            |
 |  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.       |
 |  PARTITION_NAME         			|   STRING           | Name of the source partition on which the scan operation is performed. |
 |  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.     |
@@ -171,6 +173,8 @@ Contains metadata from quality checks.
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
 | RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
+| DATASTORE_ID         | NUMBER         	 | Identifier of the datastore used in the check.                  |
+| CONTAINER_ID         | NUMBER         	 | Identifier of the container used in the check.                  |
 | SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
