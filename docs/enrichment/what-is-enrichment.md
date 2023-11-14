@@ -61,12 +61,12 @@ Stores source records in JSON format, primarily to enable the preview source rec
 
 **Columns**
 
-| Name               | Data Type          | Description                            |
-|--------------------|--------------------|----------------------------------------|
-| SOURCE_CONTAINER   | STRING             | Name of the source data container.     |
-| SOURCE_PARTITION   | STRING             | Partition of the source data.          |
-| ANOMALY_UUID       | STRING             | UUID for the associated anomaly.       |
-| CONTEXT            | STRING             | Contextual information for the anomaly.|
+| Name               | Data Type          | Description                               |
+|--------------------|--------------------|-------------------------------------------|
+| SOURCE_CONTAINER   | STRING             | Name of the source data container.        |
+| SOURCE_PARTITION   | STRING             | Partition of the source data.             |
+| ANOMALY_UUID       | STRING             | UUID for the associated anomaly.          |
+| CONTEXT            | STRING             | Contextual information for the anomaly.   |
 | RECORD             | STRING             | JSON representation of the source record. |
 
 
@@ -76,20 +76,20 @@ Captures and stores the results of every scan operation conducted on the Qualyti
 
 **Columns**
 
-| Name                              | Data Type          | Description                               |
-|-----------------------------------|--------------------|-------------------------------------------|
-|  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.        |
-|  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.           |
+| Name                              | Data Type          | Description                                                            |
+|-----------------------------------|--------------------|------------------------------------------------------------------------|
+|  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.                              |
+|  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.       |
 |  PARTITION_NAME         			|   STRING           | Name of the source partition on which the scan operation is performed. |
-|  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.   |
-|  RECORDS_PROCESSED                |   NUMBER           | Total number of records processed during the scan operation. |
+|  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.     |
+|  RECORDS_PROCESSED                |   NUMBER           | Total number of records processed during the scan operation.           |
 |  ENRICHMENT_SOURCE_RECORD_LIMIT   |   NUMBER           | Maximum number of records written to the enrichment for each anomaly detected. |
-|  MAX_RECORDS_ANALYZED        		|   NUMBER           | Maximum number of records analyzed in the scan operation. |
-|  ANOMALY_COUNT        			|   NUMBER           | Total number of anomalies identified in the scan operation. |
-|  START_TIME        				|   TIMESTAMP        | Timestamp marking the start of the scan operation. |
-|  END_TIME        					|   TIMESTAMP        | Timestamp marking the end of the scan operation. |
-|  RESULT        					|   STRING           | Textual representation of the scan operation's status. |
-|  MESSAGE        					|   STRING           | Detailed message regarding the process of the scan operation. |
+|  MAX_RECORDS_ANALYZED        		|   NUMBER           | Maximum number of records analyzed in the scan operation.              |
+|  ANOMALY_COUNT        			|   NUMBER           | Total number of anomalies identified in the scan operation.            |
+|  START_TIME        				|   TIMESTAMP        | Timestamp marking the start of the scan operation.                     |
+|  END_TIME        					|   TIMESTAMP        | Timestamp marking the end of the scan operation.                       |
+|  RESULT        					|   STRING           | Textual representation of the scan operation's status.                 |
+|  MESSAGE        					|   STRING           | Detailed message regarding the process of the scan operation.          |
 
 ### Remediation Tables
 
@@ -111,17 +111,17 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 | Name                       | Data Type          | Description                                                         |
 |----------------------------|--------------------|---------------------------------------------------------------------|
 | <span class="text-primary">_QUALYTICS_SOURCE_PARTITION</span> | STRING            | The partition from the source data container.                      |
-| <span class="text-primary">ANOMALY_UUID</span>               | STRING             | Unique identifier of the anomaly.                                  |
-| <span class="text-primary">_QUALYTICS_APPEARS_IN</span>      | STRING             | Indicates whether the record came from the target or reference container in relation to the check definition. |
+| <span class="text-primary">ANOMALY_UUID</span>                | STRING            | Unique identifier of the anomaly.                                  |
+| <span class="text-primary">_QUALYTICS_APPEARS_IN</span>       | STRING            | Indicates whether the record came from the target or reference container in relation to the check definition. |
 | ORDERKEY                   | NUMBER       | Unique identifier of the order.                                    |
 | CUSTKEY                    | NUMBER       | The customer key related to the order.                             |
-| ORDERSTATUS                | CHAR           | The status of the order (e.g., 'F' for 'finished').                |
-| TOTALPRICE                 | FLOAT      | The total price of the order.                                      |
-| ORDERDATE                  | DATE               | The date when the order was placed.                                |
-| ORDERPRIORITY              | STRING           | Priority of the order (e.g., 'urgent').                            |
-| CLERK                      | STRING           | The clerk who took the order.                                      |
-| SHIPPRIORITY               | INTEGER            | The priority given to the order for shipping.                      |
-| COMMENT                    | STRING        | Comments related to the order.                                     |
+| ORDERSTATUS                | CHAR         | The status of the order (e.g., 'F' for 'finished').                |
+| TOTALPRICE                 | FLOAT        | The total price of the order.                                      |
+| ORDERDATE                  | DATE         | The date when the order was placed.                                |
+| ORDERPRIORITY              | STRING       | Priority of the order (e.g., 'urgent').                            |
+| CLERK                      | STRING       | The clerk who took the order.                                      |
+| SHIPPRIORITY               | INTEGER      | The priority given to the order for shipping.                      |
+| COMMENT                    | STRING       | Comments related to the order.                                     |
 
 !!! Note
 	In addition to capturing the original container fields, the platform includes three metadata columns designed to assist in the analysis and remediation process.
