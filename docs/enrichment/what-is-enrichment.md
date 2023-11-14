@@ -144,6 +144,9 @@ Contains metadata from quality checks.
 | NUM_CONTAINER_SCANS   | NUMBER             | Number of containers scanned.                          |
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
 | RULE_TYPE             | STRING             | Type of rule applied in the check.                            |
+| SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                            |
+| SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                            |
+
 
 
 #### _FIELD_PROFILES Table
@@ -157,11 +160,11 @@ Contains metadata from field profiles.
 | APPROXIMATE_DISTINCT_VALUES | FLOAT            | Estimated number of distinct values in the field.                |
 | COMPLETENESS              | FLOAT              | Ratio of non-null entries to total entries in the field.         |
 | CONTAINER_ID              | NUMBER             | Identifier for the container holding the field.                  |
-| CONTAINER_NAME            | STRING             | Name of the container holding the field.                         |
+| SOURCE_CONTAINER          | STRING             | Name of the container holding the field.                         |
 | CONTAINER_STORE_TYPE      | STRING             | Storage type of the container.                                   |
 | CREATED                   | STRING             | Date when the field profile was created.                         |
 | DATASTORE_ID              | NUMBER             | Identifier for the datastore containing the field.               |
-| DATASTORE_NAME            | STRING             | Name of the datastore containing the field.                      |
+| SOURCE_DATASTORE          | STRING             | Name of the datastore containing the field.                      |
 | DATASTORE_TYPE            | STRING             | Type of datastore.                                               |
 | ENTROPY                   | FLOAT              | Measure of randomness in the information being processed.        |
 | FIELD_GLOBAL_TAGS         | STRING             | Global tags associated with the field.                           |
