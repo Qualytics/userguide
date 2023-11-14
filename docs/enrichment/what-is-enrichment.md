@@ -26,6 +26,7 @@ When anomalies are detected, the platform writes metadata into two primary enric
 
 - <enrichment_prefix\>_anomalies
 - <enrichment_prefix\>_source_records
+- <enrichment_prefix\>_scan_operations
 
 #### _ANOMALIES Table
 
@@ -67,6 +68,28 @@ Stores source records in JSON format, primarily to enable the preview source rec
 | ANOMALY_UUID       | STRING             | UUID for the associated anomaly.       |
 | CONTEXT            | STRING             | Contextual information for the anomaly.|
 | RECORD             | STRING             | JSON representation of the source record. |
+
+
+#### _SCAN_OPERATIONS Table
+
+Captures and stores the results of every scan operation conducted on the Qualytics Platform.
+
+**Columns**
+
+| Name                              | Data Type          | Description                               |
+|-----------------------------------|--------------------|-------------------------------------------|
+|  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.        |
+|  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.           |
+|  PARTITION_NAME         			|   STRING           | Name of the source partition on which the scan operation is performed. |
+|  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.   |
+|  RECORDS_PROCESSED                |   NUMBER           | Total number of records processed during the scan operation. |
+|  ENRICHMENT_SOURCE_RECORD_LIMIT   |   NUMBER           | Maximum number of records written to the enrichment for each anomaly detected. |
+|  MAX_RECORDS_ANALYZED        		|   NUMBER           | Maximum number of records analyzed in the scan operation. |
+|  ANOMALY_COUNT        			|   NUMBER           | Total number of anomalies identified in the scan operation. |
+|  START_TIME        				|   TIMESTAMP        | Timestamp marking the start of the scan operation. |
+|  END_TIME        					|   TIMESTAMP        | Timestamp marking the end of the scan operation. |
+|  RESULT        					|   STRING           | Textual representation of the scan operation's status. |
+|  MESSAGE        					|   STRING           | Detailed message regarding the process of the scan operation. |
 
 ### Remediation Tables
 
@@ -112,8 +135,8 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 
 Users can manually export metadata into the enrichment datastore. Currently, the platform supports the export of two assets:
 
-- <datastore_name\>_checks
-- <datastore_name\>_field_profiles
+- _<datastore_name\>_checks
+- _<datastore_name\>_field_profiles
 
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
@@ -126,27 +149,30 @@ Contains metadata from quality checks.
 
 **Columns**
 
-| Name                  | Data Type          | Description                                                            |
-|-----------------------|--------------------|------------------------------------------------------------------------|
-| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule. |
+| Name                  | Data Type          | Description                                                     |
+|-----------------------|--------------------|-----------------------------------------------------------------|
+| ADDITIONAL_METADATA   | STRING             | JSON-formatted string containing additional metadata for the check. |
+| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule.                  |
 | CREATED               | STRING             | Created timestamp of the check.                                 |
 | DELETED_AT            | STRING             | Deleted timestamp of the check.                                 |
-| DESCRIPTION           | STRING             | Description of the check.                                |
-| FIELDS                | STRING             | Fields involved in the check separated by comma.        |
-| FILTER                | STRING             | Criteria used to filter data when asserting the check.     |
-| GENERATED_AT          | STRING             | Indicates when the export was generated.         |
-| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.               |
-| ID                    | NUMBER             | Unique identifier for the check.                              |
-| INFERRED              | BOOLEAN            | Indicates whether the check was inferred by the platform.               |
-| IS_NEW                | BOOLEAN            | Flags if the check is new.                         |
-| LAST_EDITOR           | STRING             | Represents the last editor of the check.                           |
-| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.               |
-| NUM_CONTAINER_SCANS   | NUMBER             | Number of containers scanned.                          |
+| DESCRIPTION           | STRING             | Description of the check.                                       |
+| FIELDS                | STRING             | Fields involved in the check separated by comma.                |
+| FILTER                | STRING             | Criteria used to filter data when asserting the check.          |
+| GENERATED_AT          | STRING             | Indicates when the export was generated.                        |
+| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.     |
+| HAS_PASSED            | BOOLEAN            | Boolean indicator of whether the check has passed its last assertion . |
+| ID                    | NUMBER             | Unique identifier for the check.                                |
+| INFERRED              | BOOLEAN            | Indicates whether the check was inferred by the platform.       |
+| IS_NEW                | BOOLEAN            | Flags if the check is new.                                      |
+| LAST_ASSERTED         | STRING             | Timestamp of the last assertion performed on the check.         |
+| LAST_EDITOR           | STRING             | Represents the last editor of the check.                        |
+| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.             |
+| NUM_CONTAINER_SCANS   | NUMBER             | Number of containers scanned.                                   |
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
-| RULE_TYPE             | STRING             | Type of rule applied in the check.                            |
-| SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                            |
-| SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                            |
-
+| RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
+| WEIGHT                | FLOAT              | Represents the weight of the check.                             |
+| SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
+| SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
 
 #### _FIELD_PROFILES Table
