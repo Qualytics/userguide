@@ -38,7 +38,7 @@ hide:
     - Improved the user interaction with the heatmap by filtering the operation list upon selecting a date. A new feature has been added to operation details allowing users to view comprehensive information about the profiles scanned, with the ability to drill down to partitions and anomalies.
 
 - Link to Schedule in Operation List:
-    - Enhanced the operation list with a new “Schedule” column, providing direct links to the schedules triggering the operations, thus improving traceability and scheduling visibility.
+    - Enhanced the operation list with a new "Schedule" column, providing direct links to the schedules triggering the operations, thus improving traceability and scheduling visibility.
 
 - Insights Tag Filtering Improvement:
     - Enhanced the tag filtering capability on the Insights page to now include table/file-level analysis. This ensures a more granular and accurate reflection of data when using tags to filter insights.

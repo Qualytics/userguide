@@ -26,6 +26,7 @@ When anomalies are detected, the platform writes metadata into two primary enric
 
 - <enrichment_prefix\>_anomalies
 - <enrichment_prefix\>_source_records
+- <enrichment_prefix\>_scan_operations
 
 #### _ANOMALIES Table
 
@@ -60,13 +61,37 @@ Stores source records in JSON format, primarily to enable the preview source rec
 
 **Columns**
 
-| Name               | Data Type          | Description                            |
-|--------------------|--------------------|----------------------------------------|
-| SOURCE_CONTAINER   | STRING             | Name of the source data container.     |
-| SOURCE_PARTITION   | STRING             | Partition of the source data.          |
-| ANOMALY_UUID       | STRING             | UUID for the associated anomaly.       |
-| CONTEXT            | STRING             | Contextual information for the anomaly.|
+| Name               | Data Type          | Description                               |
+|--------------------|--------------------|-------------------------------------------|
+| SOURCE_CONTAINER   | STRING             | Name of the source data container.        |
+| SOURCE_PARTITION   | STRING             | Partition of the source data.             |
+| ANOMALY_UUID       | STRING             | UUID for the associated anomaly.          |
+| CONTEXT            | STRING             | Contextual information for the anomaly.   |
 | RECORD             | STRING             | JSON representation of the source record. |
+
+
+#### _SCAN_OPERATIONS Table
+
+Captures and stores the results of every scan operation conducted on the Qualytics Platform.
+
+**Columns**
+
+| Name                              | Data Type          | Description                                                            |
+|-----------------------------------|--------------------|------------------------------------------------------------------------|
+|  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.                              |
+|  DATASTORE_ID      			    |   NUMBER         	 | Identifier for the source datastore associated with the operation.     |
+|  CONTAINER_ID      			    |   NUMBER         	 | Identifier for the container associated with the operation.            |
+|  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.       |
+|  PARTITION_NAME         			|   STRING           | Name of the source partition on which the scan operation is performed. |
+|  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.     |
+|  RECORDS_PROCESSED                |   NUMBER           | Total number of records processed during the scan operation.           |
+|  ENRICHMENT_SOURCE_RECORD_LIMIT   |   NUMBER           | Maximum number of records written to the enrichment for each anomaly detected. |
+|  MAX_RECORDS_ANALYZED        		|   NUMBER           | Maximum number of records analyzed in the scan operation.              |
+|  ANOMALY_COUNT        			|   NUMBER           | Total number of anomalies identified in the scan operation.            |
+|  START_TIME        				|   TIMESTAMP        | Timestamp marking the start of the scan operation.                     |
+|  END_TIME        					|   TIMESTAMP        | Timestamp marking the end of the scan operation.                       |
+|  RESULT        					|   STRING           | Textual representation of the scan operation's status.                 |
+|  MESSAGE        					|   STRING           | Detailed message regarding the process of the scan operation.          |
 
 ### Remediation Tables
 
@@ -88,17 +113,17 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 | Name                       | Data Type          | Description                                                         |
 |----------------------------|--------------------|---------------------------------------------------------------------|
 | <span class="text-primary">_QUALYTICS_SOURCE_PARTITION</span> | STRING            | The partition from the source data container.                      |
-| <span class="text-primary">ANOMALY_UUID</span>               | STRING             | Unique identifier of the anomaly.                                  |
-| <span class="text-primary">_QUALYTICS_APPEARS_IN</span>      | STRING             | Indicates whether the record came from the target or reference container in relation to the check definition. |
+| <span class="text-primary">ANOMALY_UUID</span>                | STRING            | Unique identifier of the anomaly.                                  |
+| <span class="text-primary">_QUALYTICS_APPEARS_IN</span>       | STRING            | Indicates whether the record came from the target or reference container in relation to the check definition. |
 | ORDERKEY                   | NUMBER       | Unique identifier of the order.                                    |
 | CUSTKEY                    | NUMBER       | The customer key related to the order.                             |
-| ORDERSTATUS                | CHAR           | The status of the order (e.g., 'F' for 'finished').                |
-| TOTALPRICE                 | FLOAT      | The total price of the order.                                      |
-| ORDERDATE                  | DATE               | The date when the order was placed.                                |
-| ORDERPRIORITY              | STRING           | Priority of the order (e.g., 'urgent').                            |
-| CLERK                      | STRING           | The clerk who took the order.                                      |
-| SHIPPRIORITY               | INTEGER            | The priority given to the order for shipping.                      |
-| COMMENT                    | STRING        | Comments related to the order.                                     |
+| ORDERSTATUS                | CHAR         | The status of the order (e.g., 'F' for 'finished').                |
+| TOTALPRICE                 | FLOAT        | The total price of the order.                                      |
+| ORDERDATE                  | DATE         | The date when the order was placed.                                |
+| ORDERPRIORITY              | STRING       | Priority of the order (e.g., 'urgent').                            |
+| CLERK                      | STRING       | The clerk who took the order.                                      |
+| SHIPPRIORITY               | INTEGER      | The priority given to the order for shipping.                      |
+| COMMENT                    | STRING       | Comments related to the order.                                     |
 
 !!! Note
 	In addition to capturing the original container fields, the platform includes three metadata columns designed to assist in the analysis and remediation process.
@@ -148,6 +173,10 @@ Contains metadata from quality checks.
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
 | RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
+| DATASTORE_ID         | NUMBER         	 | Identifier of the datastore used in the check.                  |
+| CONTAINER_ID         | NUMBER         	 | Identifier of the container used in the check.                  |
+| SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
+| SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
 
 #### _FIELD_PROFILES Table
@@ -161,11 +190,11 @@ Contains metadata from field profiles.
 | APPROXIMATE_DISTINCT_VALUES | FLOAT            | Estimated number of distinct values in the field.                |
 | COMPLETENESS              | FLOAT              | Ratio of non-null entries to total entries in the field.         |
 | CONTAINER_ID              | NUMBER             | Identifier for the container holding the field.                  |
-| CONTAINER_NAME            | STRING             | Name of the container holding the field.                         |
+| SOURCE_CONTAINER          | STRING             | Name of the container holding the field.                         |
 | CONTAINER_STORE_TYPE      | STRING             | Storage type of the container.                                   |
 | CREATED                   | STRING             | Date when the field profile was created.                         |
 | DATASTORE_ID              | NUMBER             | Identifier for the datastore containing the field.               |
-| DATASTORE_NAME            | STRING             | Name of the datastore containing the field.                      |
+| SOURCE_DATASTORE          | STRING             | Name of the datastore containing the field.                      |
 | DATASTORE_TYPE            | STRING             | Type of datastore.                                               |
 | ENTROPY                   | FLOAT              | Measure of randomness in the information being processed.        |
 | FIELD_GLOBAL_TAGS         | STRING             | Global tags associated with the field.                           |
