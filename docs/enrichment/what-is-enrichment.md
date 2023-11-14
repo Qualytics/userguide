@@ -112,8 +112,8 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 
 Users can manually export metadata into the enrichment datastore. Currently, the platform supports the export of two assets:
 
-- <datastore_name\>_checks
-- <datastore_name\>_field_profiles
+- _<datastore_name\>_checks
+- _<datastore_name\>_field_profiles
 
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
@@ -126,24 +126,28 @@ Contains metadata from quality checks.
 
 **Columns**
 
-| Name                  | Data Type          | Description                                                            |
-|-----------------------|--------------------|------------------------------------------------------------------------|
-| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule. |
+| Name                  | Data Type          | Description                                                     |
+|-----------------------|--------------------|-----------------------------------------------------------------|
+| ADDITIONAL_METADATA   | STRING             | JSON-formatted string containing additional metadata for the check. |
+| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule.                  |
 | CREATED               | STRING             | Created timestamp of the check.                                 |
 | DELETED_AT            | STRING             | Deleted timestamp of the check.                                 |
-| DESCRIPTION           | STRING             | Description of the check.                                |
-| FIELDS                | STRING             | Fields involved in the check separated by comma.        |
-| FILTER                | STRING             | Criteria used to filter data when asserting the check.     |
-| GENERATED_AT          | STRING             | Indicates when the export was generated.         |
-| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.               |
-| ID                    | NUMBER             | Unique identifier for the check.                              |
-| INFERRED              | BOOLEAN            | Indicates whether the check was inferred by the platform.               |
-| IS_NEW                | BOOLEAN            | Flags if the check is new.                         |
-| LAST_EDITOR           | STRING             | Represents the last editor of the check.                           |
-| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.               |
-| NUM_CONTAINER_SCANS   | NUMBER             | Number of containers scanned.                          |
+| DESCRIPTION           | STRING             | Description of the check.                                       |
+| FIELDS                | STRING             | Fields involved in the check separated by comma.                |
+| FILTER                | STRING             | Criteria used to filter data when asserting the check.          |
+| GENERATED_AT          | STRING             | Indicates when the export was generated.                        |
+| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.     |
+| HAS_PASSED            | BOOLEAN            | Boolean indicator of whether the check has passed its last assertion . |
+| ID                    | NUMBER             | Unique identifier for the check.                                |
+| INFERRED              | BOOLEAN            | Indicates whether the check was inferred by the platform.       |
+| IS_NEW                | BOOLEAN            | Flags if the check is new.                                      |
+| LAST_ASSERTED         | STRING             | Timestamp of the last assertion performed on the check.         |
+| LAST_EDITOR           | STRING             | Represents the last editor of the check.                        |
+| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.             |
+| NUM_CONTAINER_SCANS   | NUMBER             | Number of containers scanned.                                   |
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
-| RULE_TYPE             | STRING             | Type of rule applied in the check.                            |
+| RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
+| WEIGHT                | FLOAT              | Represents the weight of the check.                             |
 
 
 #### _FIELD_PROFILES Table
