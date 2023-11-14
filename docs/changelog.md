@@ -3,6 +3,30 @@ hide:
   - navigation
 ---
 
+### 2023-11-14 { id=2023-11-14}
+
+#### Feature Enhancements
+
+- Qualytics App Color Palette and Design Update:
+    - Implemented a comprehensive design update across the Qualytics App, introducing a new color palette for a refreshed and modern look. This update includes a significant change to the anomalies color, transitioning from red to orange for a more distinct visual cue. Additionally, the font-family has been updated to enhance readability and provide a more cohesive aesthetic experience across the application.
+- System Health Readout:
+    - A new `Health` tab has been added to the Admin menu, offering a comprehensive view of each deployment's operational status. This feature encompasses critical details such as the status of app services, current app version, and analytics engine information, enabling better control over system health.
+- Enhanced Check with Metadata Input:
+    - The Check form now includes a new input field for custom metadata. This enhancement allows users to add key-value pairs for tailored metadata, significantly increasing the flexibility and customization of the Check definition.
+- Responsiveness Improvement in Cards Layout:
+    - The Cards layout has been refined to improve responsiveness and compactness. This adjustment addresses previous UI inconsistencies and ensures a consistent visual experience across different devices, enhancing overall usability and aesthetic appeal.
+- Source Record Enrichment for 'isUnique' Checks:
+    - The `isUnique` check has been enhanced to support source record enrichment. This significant update allows users to view specific records that fail to meet the 'isUnique' condition. This feature adds a layer of transparency and detail to data validation processes, enabling users to easily identify and address data uniqueness issues.
+- New Enrichment Data:
+    - Scan operations now record operation metadata in a new enrichment table with the suffix `scan_operations` including an entry for each table/file scanned with the number of records processed and anomalies identified as well as start/stop time and other relevant details. 
+- Insights Enhancement with Check Pass/Fail Metrics:
+    - Insights now features the checks section with new metrics indicating the total number of checks passed and failed. This enhancement also offers a visual representation through a chart, detailing the passed and failed checks over a specified reporting period.
+
+#### General Fixes
+
+- `isAddress` now supports defining multiple checks against the same field with different required label permutations
+- General fixes and improvements
+
 ### 2023.11.08 { id=2023.11.08}
 
 #### Feature Enhancements
