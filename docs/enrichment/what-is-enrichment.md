@@ -156,17 +156,17 @@ Contains metadata from anomalies in a distinct normalized format. This table is 
 
 | Name             | Data Type | Description                                     |
 |------------------|-----------|-------------------------------------------------|
-| ID               | NUMBER    | Unique identifier for the anomaly               |
-| CREATED          | TIMESTAMP | Timestamp of anomaly creation                   |
-| UUID             | UUID      | Universal Unique Identifier of the anomaly      |
-| TYPE             | STRING    | Type of the anomaly (e.g., 'shape')             |
-| STATUS           | STRING    | Current status of the anomaly (e.g., 'Active')  |
-| GLOBAL_TAGS      | STRING    | Tags associated globally with the anomaly       |
-| CONTAINER_ID     | NUMBER    | Identifier for the associated container         |
-| SOURCE_CONTAINER | STRING    | Name of the source container                    |
-| DATASTORE_ID     | NUMBER    | Identifier for the associated datastore         |
-| SOURCE_DATASTORE | STRING    | Name of the source datastore                    |
-| GENERATED_AT     | TIMESTAMP | Timestamp when the export was generated         |
+| ID               | NUMBER    | Unique identifier for the anomaly.              |
+| CREATED          | TIMESTAMP | Timestamp of anomaly creation.                  |
+| UUID             | UUID      | Universal Unique Identifier of the anomaly.     |
+| TYPE             | STRING    | Type of the anomaly (e.g., 'shape').            |
+| STATUS           | STRING    | Current status of the anomaly (e.g., 'Active'). |
+| GLOBAL_TAGS      | STRING    | Tags associated globally with the anomaly.      |
+| CONTAINER_ID     | NUMBER    | Identifier for the associated container.        |
+| SOURCE_CONTAINER | STRING    | Name of the source container.                   |
+| DATASTORE_ID     | NUMBER    | Identifier for the associated datastore.        |
+| SOURCE_DATASTORE | STRING    | Name of the source datastore.                   |
+| GENERATED_AT     | TIMESTAMP | Timestamp when the export was generated.        |
 
 #### _CHECKS Table
 
