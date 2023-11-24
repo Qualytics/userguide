@@ -139,9 +139,9 @@ The Qualytics platform enables users to manually export metadata into the enrich
 
 Currently, the following assets are available for exporting:
 
-- _<datastore_name\>_anomalies
-- _<datastore_name\>_checks
-- _<datastore_name\>_field_profiles
+- _<enrichment_prefix\>_anomalies_export
+- _<enrichment_prefix\>_checks_export
+- _<enrichment_prefix\>_field_profiles_export
 
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
