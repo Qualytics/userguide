@@ -3,6 +3,41 @@ hide:
   - navigation
 ---
 
+### 2023-11-28 { id=2023-11-28}
+
+#### Feature Enhancements
+
+- Operations with Tag Selectors:
+    - Users can now configure operations (including schedules) with multiple tags, enabling dynamic profile evaluation based on tags at the operation's trigger time.
+
+- Asserted State Filter for Checks:
+    - Introduced a new filter in the checks list, allowing users to filter checks by those that have passed or identified active anomalies.
+
+- Bulk Delete for Profiles:
+    - Enhanced the system to allow bulk deletion of multiple profiles, streamlining the management process where previously only individual deletions were possible.
+
+- Resizable Columns in Source Records Table:
+    - Columns in the anomaly dialog source records can now be manually resized, improving visibility and preventing content truncation.
+
+- Automated Partition Field Setting for BigQuery:
+    - For BigQuery tables constrained by a required partition filter, the profile partition field setting is now automatically populated during the Catalog operation.
+
+#### General Fixes
+
+- Sharable Link Authentication Flow:
+    - Fixed an issue where direct links did not work if the user was not signed in. Now, users are redirected to the intended page post-authentication.
+
+- Clarified Violation Messages for 'isUnique' Check:
+    - Updated the violation message for the 'isUnique' check to clearly describe the anomaly, reducing misinterpretation.
+
+- Access Restriction and Loading Fix for Health Page:
+    - Corrected the health page visibility so that only admin users can view it, and improved loading behavior for Qualytics services.
+
+- Availability of Requested Tables During Operations:
+    - The dialog displaying requested tables/files is now accessible immediately after an operation starts, enhancing transparency for both Profile and Scan operations.
+
+- General fixes and improvements
+
 ### 2023-11-14 { id=2023-11-14}
 
 #### Feature Enhancements
