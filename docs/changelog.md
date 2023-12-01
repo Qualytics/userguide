@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2023-12-01 { id=2023-12-01}
+
+#### Feature Enhancements
+
+- List View Layout Support:
+    - Introduced list view layouts for Datastores, Profiles, Checks, and Anomalies, providing users with an alternative way to display and navigate through their data.
+
+- Bulk Acknowledgement Performance:
+    - Improved the performance of bulk acknowledging in-app notifications, streamlining the user experience and enhancing the application's responsiveness.
+
+#### General Fixes
+
+- Checks and Anomalies Dialog Navigation:
+    - Resolved an issue with arrow key navigation in Checks and Anomalies dialogs where unintended slider movement occurred when using keyboard navigation. This fix ensures that arrow keys will only trigger slider navigation when the dialog is the main focus.
+
+- Profiled Container Count Inconsistency
+    - Ensured that containers which fail to load data during profiling are not mistakenly counted as successfully profiled, improving the accuracy of the profiling process.
+
+- Histogram Field Selection Update:
+    - Fixed a bug where histograms were not updating correctly when navigating to a new field. Histograms now properly reflect the data of the newly selected field.
+
+- General fixes and improvements
+
 ### 2023-11-28 { id=2023-11-28}
 
 #### Feature Enhancements
