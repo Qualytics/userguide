@@ -3,6 +3,17 @@ hide:
   - navigation
 ---
 
+### 2023-12-04 { id=2023-12-04}
+
+#### Feature Enhancements
+
+- Navigation Improvements in Explore Profiles Page:
+    - Upgraded the Explore Profiles Page by adding direct link icons for more precise navigation. Users can now use these links on container and field cards/lists for a direct redirection to detailed views.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2023-12-01 { id=2023-12-01}
 
 #### Feature Enhancements
