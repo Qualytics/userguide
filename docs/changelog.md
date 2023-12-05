@@ -3,7 +3,18 @@ hide:
   - navigation
 ---
 
-### 2023-12-01 { id=2023-12-01}
+### 2023.12.05 { id=2023.12.05}
+
+#### Feature Enhancements
+
+- Navigation Improvements in Explore Profiles Page:
+    - Upgraded the Explore Profiles Page by adding direct link icons for more precise navigation. Users can now use these links on container and field cards/lists for a direct redirection to detailed views.
+
+#### General Fixes
+
+- General fixes and improvements
+
+### 2023.12.01 { id=2023.12.01}
 
 #### Feature Enhancements
 
@@ -19,14 +30,14 @@ hide:
     - Resolved an issue with arrow key navigation in Checks and Anomalies dialogs where unintended slider movement occurred when using keyboard navigation. This fix ensures that arrow keys will only trigger slider navigation when the dialog is the main focus.
 
 - Profiled Container Count Inconsistency
-    - Ensured that containers which fail to load data during profiling are not mistakenly counted as successfully profiled, improving the accuracy of the profiling process.
+    - Ensured that containers that fail to load data during profiling are not mistakenly counted as successfully profiled, improving the accuracy of the profiling process.
 
 - Histogram Field Selection Update:
     - Fixed a bug where histograms were not updating correctly when navigating to a new field. Histograms now properly reflect the data of the newly selected field.
 
 - General fixes and improvements
 
-### 2023-11-28 { id=2023-11-28}
+### 2023.11.28 { id=2023.11.28}
 
 #### Feature Enhancements
 
@@ -34,7 +45,7 @@ hide:
     - Users can now configure operations (including schedules) with multiple tags, enabling dynamic profile evaluation based on tags at the operation's trigger time.
 
 - Asserted State Filter for Checks:
-    - Introduced a new filter in the checks list, allowing users to filter checks by those that have passed or identified active anomalies.
+    - Introduced a new check list filter, allowing users to filter checks by those that have passed or identified active anomalies.
 
 - Bulk Delete for Profiles:
     - Enhanced the system to allow bulk deletion of multiple profiles, streamlining the management process where previously only individual deletions were possible.
@@ -51,17 +62,17 @@ hide:
     - Fixed an issue where direct links did not work if the user was not signed in. Now, users are redirected to the intended page post-authentication.
 
 - Clarified Violation Messages for 'isUnique' Check:
-    - Updated the violation message for the 'isUnique' check to clearly describe the anomaly, reducing misinterpretation.
+    - Updated the violation message for the 'isUnique' check to describe the anomaly, reducing misinterpretation clearly.
 
 - Access Restriction and Loading Fix for Health Page:
-    - Corrected the health page visibility so that only admin users can view it, and improved loading behavior for Qualytics services.
+    - Corrected the health page visibility so only admin users can view it, and improved loading behavior for Qualytics services.
 
 - Availability of Requested Tables During Operations:
     - The dialog displaying requested tables/files is now accessible immediately after an operation starts, enhancing transparency for both Profile and Scan operations.
 
 - General fixes and improvements
 
-### 2023-11-14 { id=2023-11-14}
+### 2023.11.14 { id=2023.11.14}
 
 #### Feature Enhancements
 
@@ -193,7 +204,7 @@ hide:
 
 - Various bug fixes and system improvements for a smoother experience.
 
-### 2023-10-13 { id=2023-10-13}
+### 2023.10.13 { id=2023.10.13}
 
 #### Feature Enhancements
 
@@ -636,7 +647,7 @@ hide:
     - The issue causing vertical misalignment between Check and Anomaly icons on the Field Profile page has been fixed, resulting in a visually pleasing and intuitive user interface.
 
 
-### 2023.06.24 { id="2023.06.24 }
+### 2023.06.24 { id=2023.06.24 }
 
 #### Feature Enhancements
 
@@ -656,7 +667,7 @@ hide:
     - Added effect when a datastore is configured successfully, enhancing the user experience by providing visual confirmation of a successful configuration process.
 
 
-### 2023.06.20 { id="2023.06.20 }
+### 2023.06.20 { id=2023.06.20 }
 
 #### Feature Enhancements
 
@@ -693,7 +704,7 @@ hide:
 - Enhanced File Input Component
     - Upgraded the file input component in the Datastore form dialog, providing a more intuitive and user-friendly interface for uploading files. Simplifies attaching files to data entries and improves overall usability.
 
-### 2023.06.12 { id="2023.06.12" }
+### 2023.06.12 { id=2023.06.12 }
 
 #### Feature Enhancements
 
@@ -721,7 +732,7 @@ hide:
 - Incorporated functionality to execute delete operations and their related results.
 - Renamed "Rerun" button to "Retry" in the operation list
 
-### 2023.06.02 { id="2023.06.02" }
+### 2023.06.02 { id=2023.06.02 }
 #### General Fixes
 - Added GCS connector with Keyfile support:
     - The GCS connector now supports Keyfile authentication, allowing users to securely connect to Google Cloud Storage.
@@ -745,7 +756,7 @@ hide:
     - It also enables users to set a higher count rollup threshold for anomalies in scan.
     - This customization capability helps users fine-tune the behavior of the system according to their specific needs and preferences.
     
-### 2023.05.26 { id="2023.05.26" }
+### 2023.05.26 { id=2023.05.26 }
 #### Usability
 
 - Improved the navigation in the Activity tab’s side panel for easier and more intuitive browsing including exposing the ability to comment directly into an anomaly
@@ -756,7 +767,7 @@ hide:
 - Fixed a problem with scheduled operations when the configured timing was corrupted.
 - Addressed an issue where filtered checks were causing unexpected errors outside of the intended dataset.
 
-### 2023.05.23 { id="2023.05.23" }
+### 2023.05.23 { id=2023.05.23 }
 #### Feature Enhancements
 
 - Scheduled operation editing
@@ -819,7 +830,7 @@ hide:
 - Implemented general bug fixes and made various improvements to enhance overall performance and user experience.
 
 
-### 2023.04.19 { id="2023.04.19" }
+### 2023.04.19 { id=2023.04.19 }
 
 We're pleased to announce the latest update that includes enhancements to UI for an overall better experience:
 #### Feature Enhancements
@@ -845,11 +856,11 @@ We're pleased to announce the latest update that includes enhancements to UI for
 - General fixes and performance improvements
 
 
-### 2023.04.07 { id="2023.04.07" }
+### 2023.04.07 { id=2023.04.07 }
 
 #### Feature Enhancements
 
 - We've just deployed an MVP version of the Freshness Dashboard! This feature lets you create, manage, and monitor all of the SLAs for each of your datastores and their child files/tables/containers, all in one place. It's like having a birds-eye view of how your datastores are doing in relation to their freshness.
     - To access the Freshness Dashboard, just locate and click on the clock icon in the top navigation between Insights and Anomalies. By default, you'll see a rollup of all the datastores in a list view with their child files/tables/containers collapsed. Simply click on a datastore row to expand the list.
 - We've also made some improvements to the UI, including more sorting and filtering options in Datastores, Files/Tables, Checks, and Anomalies. Plus, we've added the ability to search the description field in checks, making it easier to find what you're looking for.
-- And last but not least, we've added a cool new feature to checks - the ability to archive ALL anomalies generated by a check. Simply click on the anomaly warning icon at the top of the check details box to bring up the archive anomalies dialog box.
+- Last but not least, we've added a cool new feature to checks - the ability to archive ALL anomalies generated by a check. Simply click on the anomaly warning icon at the top of the check details box to bring up the archive anomalies dialog box.
