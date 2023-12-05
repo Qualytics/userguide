@@ -7,6 +7,11 @@
 
 Since Partitions are required to support `Incremental` Operations, an Incremental Identifier is required for every Table Container. 
 
+!!! info
+    * **Partition Field Selection**: When selecting a partition field for a table during catalog operation, we will attempt to select a field with no nulls. However, certain datastores (such as BigQuery) support partitioning on nullable fields and override our default preference for complete fields.
+    * **Potential Data Addition with Nulls**: There's always a possibility that records with null values in the partition field could be added to any database after initial cataloging. This scenario is important to consider for ongoing data management.
+    * **User-Specified Partition Fields**: Users are permitted to specify partition fields manually. While we enforce the data type of these fields, we do not currently enforce non-nullability or completeness. This flexibility requires careful consideration.
+    * **Spark's Handling of Nulls**: Critical - Apache Spark will ignore rows where the partition field is null. This means that any data with nulls in the partition column will not be processed by Spark. Qualytics will generate a warning for any operation where records are not processed due to the presence of nulls in the partition field. This scenario may be avoided by supplying the partition field a value for those rows or by unsetting the partition field for the table and running the operation without one.
 ---
 
 # Managing an Identifier
@@ -44,3 +49,4 @@ Since Partitions are required to support `Incremental` Operations, an Incrementa
     !!! info
         If no partition identifier can be identified, then repeatable ordering candidates (order by fields) are used for less efficient processing of containers with a very large number of rows.
 
+    
