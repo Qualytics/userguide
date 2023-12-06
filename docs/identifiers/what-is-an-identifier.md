@@ -1,3 +1,13 @@
+# What is an Identifier?
+
+The `Identifier` is a Field that can be used to help load the desired data from a Table in support of analysis. 
+
+There are two types of identifiers can be declared for a Table:
+
+1. `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
+
+2. `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
+
 # Managing an Identifier
 
 * You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`/`file`:
@@ -9,16 +19,6 @@
   
     ![Screenshot](../assets/identifiers/identifier-screen-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifier-screen-dark.png#only-dark)
-
-# What is an Identifier?
-
-The `Identifier` is a Field that can be used to help load the desired data from a Table in support of analysis. 
-
-There are two types of identifiers can be declared for a Table:
-
-1. `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
-
-2. `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
 
 ## Incremental Strategy
 
