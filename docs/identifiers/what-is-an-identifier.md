@@ -8,7 +8,7 @@ There are two types of identifiers can be declared for a Table:
 
 2. `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
 
-# Managing an Identifier
+## Managing an Identifier
 
 * You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`/`file`:
  
@@ -55,7 +55,6 @@ PostgreSQL databases in Qualytics offer various options for the incremental stra
 | Type                                    |                                                           |
 |-----------------------------------------|-----------------------------------------------------------|
 | `Postgres Commit Timestamp Tracking`    | <div style="text-align:center">:octicons-check-16:</div>  | 
-| `None`                                  | <div style="text-align:center">:octicons-check-16:</div>  |
 | `Last Modified`                         | <div style="text-align:center">:octicons-check-16:</div>  |
 | `Batch Value`                           | <div style="text-align:center">:octicons-check-16:</div>  |
 
@@ -65,7 +64,6 @@ Qualytics provides flexible incremental strategy options:
 
 | Type        |                          |
 |-------------|--------------------------|
-| `None`    | <div style="text-align:center">:octicons-check-16:</div>  |
 | `Last Modified`    | <div style="text-align:center">:octicons-check-16:</div>  |
 | `Batch Value`    | <div style="text-align:center">:octicons-check-16:</div>  |
 
@@ -81,7 +79,7 @@ Qualytics provides flexible incremental strategy options:
 | 2          | {"date": "2023-09-25", "amount": 150.75, "credit_card": "4111-1111-1111-1111"}   | 2023-09-25 10:30:00
 | 3          | {"date": "2023-09-25", "amount": 200.00, "credit_card": "1234-5678-9012-3456"}   | 2023-09-25 11:00:00
 | 4          | {"date": "2023-09-25", "amount": 175.00, "credit_card": "5555-5555-5555-4444"}   | 2023-09-26 09:00:00
-| 3          | {"date": "2023-09-25", "amount": 300.00, "credit_card": "2222-2222-2222-2222"}   | 2023-09-26 09:30:00
+| 5          | {"date": "2023-09-25", "amount": 300.00, "credit_card": "2222-2222-2222-2222"}   | 2023-09-26 09:30:00
 
 **Incremental Strategy Explanation**
 
