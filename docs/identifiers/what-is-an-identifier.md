@@ -17,8 +17,8 @@ There are two types of identifiers can be declared for a Table:
 
 * In the pop-up modal, specific configuration is displayed and can be edited:
   
-    ![Screenshot](../assets/identifiers/identifier-screen-light.png#only-light)
-    ![Screenshot](../assets/identifiers/identifier-screen-dark.png#only-dark)
+    ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light)
+    ![Screenshot](../assets/identifiers/identifiers-screen-dark.png#only-dark)
 
 ## Incremental Strategy
 
