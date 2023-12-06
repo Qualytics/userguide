@@ -35,9 +35,41 @@ Facilitates the comparison between a `target` aggregate metric and a `reference`
 | <div class="text-primary">Reference Aggregation</div> | Defines the reference aggregation expression to compare against |
 | <div class="text-primary">Reference Filter</div>      | Applies a filter to the reference aggregation if necessary |
 
-!!! info
+!!! note "Details"
 
-    Refers to the **Filter Guide** in the [**General Properties**](#general-properties) topic for examples of valid Spark SQL expressions.
+    It's important to understand that each aggregation must result in a **single row**. Also, similar to Spark expressions, the aggregation expressions must be written in a valid format for DataFrames.
+
+    !!! example "Examples"
+
+        **Simple Aggregations**
+        ```sql
+        SUM(O_TOTALPRICE)
+        ```
+
+        **Combining with SparkSQL Functions**
+        ```sql
+        ROUND(SUM(O_TOTALPRICE))
+        ```
+
+        **Complex Aggregations**
+        ```sql
+        ROUND(SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)))
+        ```
+
+        **Aggregation Expressions**
+        ```sql
+        COUNT(CATEGORY) * MAX(VALUE) - FIRST(VALUE)
+        ```
+
+    Here are some common aggregate functions used in SparkSQL:
+
+    - `SUM`: Calculates the sum of all values in a column.
+    - `AVG`: Calculates the average of all values in a column.
+    - `MAX`: Returns the maximum value in a column.
+    - `MIN`: Returns the minimum value in a column.
+    - `COUNT`: Counts the number of rows in a column.
+
+    For a detailed list of valid SparkSQL aggregation functions, refer to the [Apache Spark SQL documentation](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/functions.html#aggregate-functions).
 
 ### Anomaly Types
 
@@ -49,26 +81,39 @@ Facilitates the comparison between a `target` aggregate metric and a `reference`
 
 ### Example
 
-**Objective**: *Ensure that the total price of orders from the `ORDERS` table is always greater than the total discount given in the `LINEITEM` table.*
+**Objective**: *Ensure that the aggregated sum of `total_price` from the `ORDERS` table matches the aggregated and rounded sum of `calculated_price` from the `LINEITEM` table.*
 
+!!! info
+    The `calculated_price` in this example is represented by the sum of each product's extended price, adjusted for discount and tax.
+    
 **Sample Data**
 
-| O_ORDERKEY | TOTAL_PRICE (ORDERS) | TOTAL_DISCOUNT (LINEITEM) |
-|------------|----------------------|---------------------------|
-| 1          | 50000                | 1000                      |
-| 2          | <span class="text-negative">25000</span>                | <span class="text-negative">30000</span> |
-| 3          | 75000                | 2000                      |
-| 4          | <span class="text-negative">15000</span> | <span class="text-negative">500</span>                       |
+_Aggregated data from ORDERS (Target)_
+
+| TOTAL_PRICE |
+|-------------|
+| 5000000     |
+
+_Aggregated data from LINEITEM (Reference)_
+
+| CALCULATED_PRICE |
+|------------------|
+| 4999800          |
+
+??? example "Inputs"
+    - **Target Aggregation**: ROUND(SUM(O_TOTALPRICE))
+    - **Comparison**: eq (Equal To)
+    - **Reference Aggregation**: ROUND(SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)))
 
 **Anomaly Explanation**
 
-In the sample data above, the entries with `O_ORDERKEY` **2** and **4** do not satisfy the rule because the `TOTAL_PRICE` for these orders is not greater than the `TOTAL_DISCOUNT`, which violates the business logic that the total price should always exceed the total discount.
+In the sample data above, the aggregated `TOTAL_PRICE` from the `ORDERS` table is 5000000, while the aggregated and rounded `CALCULATED_PRICE` from the `LINEITEM` table is 4999800. The difference between these totals indicates a potential anomaly, suggesting issues in data calculation or recording methods.
 
 === "Flowchart"
     ```mermaid
     graph TD
     A[Start] --> B[Retrieve Aggregated Values]
-    B --> C{Does Target and Reference aggregations meet comparison criteria?}
+    B --> C{Do Aggregated Totals Match?}
     C -->|Yes| D[End]
     C -->|No| E[Mark as Anomalous]
     E --> D
@@ -76,38 +121,32 @@ In the sample data above, the entries with `O_ORDERKEY` **2** and **4** do not s
 
 === "SQL"
     ```sql
-    -- An illustrative SQL query demonstrating the rule applied to example datasets
-    with target as (
+    -- An illustrative SQL query related to the rule using TPC-H tables.
+    with orders_agg as (
         select 
-            o_orderkey, 
-            sum(o_totalprice) as totalorderprice
+            round(sum(o_totalprice)) as total_order_price
         from 
             orders
-        group by 
-            o_orderkey
     ),
-    reference as (
+    lineitem_agg as (
         select 
-            l_orderkey, 
-            sum(l_discount) as totaldiscount
+            round(sum(l_extendedprice * (1 - l_discount) * (1 + l_tax))) as calculated_price
         from 
             lineitem
-        group by 
-            l_orderkey
+    ),
+    comparison as (
+        select
+            o.total_order_price,
+            l.calculated_price
+        from
+            orders_agg o
+            cross join lineitem_agg l
     )
-    select 
-        o.o_orderkey, 
-        o.totalorderprice, 
-        l.totaldiscount
-    from 
-        target o
-    join 
-        reference l on o.o_orderkey = l.l_orderkey
-    where 
-        o.totalorderprice <= l.totaldiscount;
+    select * from comparison
+    where comparison.total_order_price != comparison.calculated_price;
     ```
 
 **Potential Violation Messages**
 
 !!! example "Shape Anomaly"
-    `TOTAL_PRICE` is not greater than `TOTAL_DISCOUNT` for `O_ORDERKEY`.
+    `ROUND(SUM(O_TOTALPRICE))` is not equal to `ROUND(SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)))`.
