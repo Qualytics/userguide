@@ -1,12 +1,15 @@
 # What is an Identifier?
 
-* `Identifier` is a Field that can be used to group records in a Table Container into distinct ordered partitions in support of incremental operations:
-    1. `A whole number` - all records with the same partition_id value are considered part of the same partition.
+* `Identifier` is a Field that can be used to help load the desired data from a Table in support of analysis. 
 
-    2. `A float or timestamp` - all records between two defined values are considered part of the same partition (the defining values will be set by incremental `Scan` / `Profile` business logic).
+Two types of identifiers can be declared for a Table:
+    1. `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel.
+    2. `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
-Since Partitions are required to support `Incremental` Operations, an Incremental Identifier is required for every Table Container. 
 
+!!! info
+    * **Partition Field Selection**: When selecting a partition field for a table during catalog operation, we will attempt to select a field with no nulls where possible. 
+    * **User-Specified Partition Fields**: Users are permitted to specify partition fields manually. While we ensure that the user selects a field of a supported data type, we do not currently enforce non-nullability or completeness. Care should be given to select partition fields with no or a low percentage of nulls in order to avoid unbalanced partitioning.
 ---
 
 # Managing an Identifier
@@ -21,7 +24,7 @@ Since Partitions are required to support `Incremental` Operations, an Incrementa
     ![Screenshot](../assets/identifiers/identifier-screen-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifier-screen-dark.png#only-dark)
 
-     1. `Strategy` <!-- - TODO add details -->
+     1. `Incremental Strategy` is the technique used to track which data from the table has already been scanned in support of incremental scan operations.
         * `None`
             - No incremental strategy, it will run full
         * `Last modified`
@@ -39,8 +42,9 @@ Since Partitions are required to support `Incremental` Operations, an Incrementa
             - Both options are useful for incremental strategy, it depends on the availability of the data and how it is modeled. 
             - Both options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
     2. `Partition Field`
-        * A Field that can be used by Apache Spark to group the records in a Dataframe into smaller sets that fit within Spark worker’s memory. The ideal Partition Identifier is an Incremental Identifier of type `datetime`, however alternatives are identified and exposed to the user.
+        * A Field that can be used to group the records in a Table into smaller sets that will be processed in parallel. The ideal Partition Identifier is an Incremental Identifier of type `datetime` such as a last-modified field, however alternatives are automatically identified and set during a Catalog operation.
 
     !!! info
-        If no partition identifier can be identified, then repeatable ordering candidates (order by fields) are used for less efficient processing of containers with a very large number of rows.
+        If no appropriate partition identifier can be selected, then repeatable ordering candidates (order by fields) are used for less efficient processing of containers with a very large number of rows.
 
+    
