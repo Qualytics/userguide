@@ -24,7 +24,7 @@ Two types of identifiers can be declared for a Table:
     ![Screenshot](../assets/identifiers/identifier-screen-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifier-screen-dark.png#only-dark)
 
-     1. `Strategy` <!-- - TODO add details -->
+     1. `Incremental Strategy` is the technique used to track which data from the table has already been scanned in support of incremental scan operations.
         * `None`
             - No incremental strategy, it will run full
         * `Last modified`
