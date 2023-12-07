@@ -20,6 +20,7 @@ There are two types of identifiers can be declared for a Table:
     ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifiers-screen-dark.png#only-dark)
 
+
 ## Incremental Strategy
 
 The `Incremental Strategy` configuration in Qualytics is crucial for tracking changes at the row level within tables.
