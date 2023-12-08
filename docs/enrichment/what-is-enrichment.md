@@ -24,11 +24,11 @@ The Enrichment Datastore contains several types of tables, each serving a specif
 
 When anomalies are detected, the platform writes metadata into two primary enrichment tables:
 
-- <enrichment_prefix\>_anomalies
+- <enrichment_prefix\>_failed_checks
 - <enrichment_prefix\>_source_records
 - <enrichment_prefix\>_scan_operations
 
-#### _ANOMALIES Table
+#### _FAILED_CHECKS Table
 
 Acts as an associative entity that consolidates information on failed checks, associating anomalies with their respective quality checks.
 
@@ -104,7 +104,7 @@ Currently, there are three types of remediation strategies:
 - **Overwrite**: Replicate source containers using an overwrite strategy.
 
 !!! Note
-	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_<container_name>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
+	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_remediation_<container_name>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
 
 #### Illustrative Table
 
@@ -139,16 +139,16 @@ The Qualytics platform enables users to manually export metadata into the enrich
 
 Currently, the following assets are available for exporting:
 
-- _<enrichment_prefix\>_anomalies_export
-- _<enrichment_prefix\>_checks_export
-- _<enrichment_prefix\>_field_profiles_export
+- _<enrichment_prefix\>_export_anomalies
+- _<enrichment_prefix\>_export_checks
+- _<enrichment_prefix\>_export_field_profiles
 
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
 	
 	For more detailed information on exporting metadata, please refer to the [export documentation](/userguide/container/export-metadata).
 
-#### _ANOMALIES Table
+#### _EXPORT_ANOMALIES Table
 
 Contains metadata from anomalies in a distinct normalized format. This table is specifically designed to capture the mutable states of anomalies, emphasizing their status changes.
 
@@ -168,7 +168,7 @@ Contains metadata from anomalies in a distinct normalized format. This table is 
 | SOURCE_DATASTORE | STRING    | Name of the source datastore.                   |
 | GENERATED_AT     | TIMESTAMP | Timestamp when the export was generated.        |
 
-#### _CHECKS Table
+#### _EXPORT_CHECKS Table
 
 Contains metadata from quality checks.
 
@@ -202,7 +202,7 @@ Contains metadata from quality checks.
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
 
-#### _FIELD_PROFILES Table
+#### _EXPORT_FIELD_PROFILES Table
 
 Contains metadata from field profiles.
 
