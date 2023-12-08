@@ -24,11 +24,11 @@ The Enrichment Datastore contains several types of tables, each serving a specif
 
 When anomalies are detected, the platform writes metadata into two primary enrichment tables:
 
-- <enrichment_prefix\>_anomalies
+- <enrichment_prefix\>_failed_checks
 - <enrichment_prefix\>_source_records
 - <enrichment_prefix\>_scan_operations
 
-#### _ANOMALIES Table
+#### _FAILED_CHECKS Table
 
 Acts as an associative entity that consolidates information on failed checks, associating anomalies with their respective quality checks.
 
@@ -104,7 +104,7 @@ Currently, there are three types of remediation strategies:
 - **Overwrite**: Replicate source containers using an overwrite strategy.
 
 !!! Note
-	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_<container_name>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
+	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_remediation_<container_name>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
 
 #### Illustrative Table
 
@@ -135,17 +135,40 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 
 ### Metadata Tables
 
-Users can manually export metadata into the enrichment datastore. Currently, the platform supports the export of two assets:
+The Qualytics platform enables users to manually export metadata into the enrichment datastore, providing a structured approach to data analysis and management. These metadata tables are structured to reflect the evolving characteristics of data entities, primarily focusing on aspects that are subject to changes.
 
-- _<datastore_name\>_checks
-- _<datastore_name\>_field_profiles
+Currently, the following assets are available for exporting:
+
+- _<enrichment_prefix\>_export_anomalies
+- _<enrichment_prefix\>_export_checks
+- _<enrichment_prefix\>_export_field_profiles
 
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
 	
 	For more detailed information on exporting metadata, please refer to the [export documentation](/userguide/container/export-metadata).
 
-#### _CHECKS Table
+#### _EXPORT_ANOMALIES Table
+
+Contains metadata from anomalies in a distinct normalized format. This table is specifically designed to capture the mutable states of anomalies, emphasizing their status changes.
+
+**Columns**
+
+| Name             | Data Type | Description                                     |
+|------------------|-----------|-------------------------------------------------|
+| ID               | NUMBER    | Unique identifier for the anomaly.              |
+| CREATED          | TIMESTAMP | Timestamp of anomaly creation.                  |
+| UUID             | UUID      | Universal Unique Identifier of the anomaly.     |
+| TYPE             | STRING    | Type of the anomaly (e.g., 'shape').            |
+| STATUS           | STRING    | Current status of the anomaly (e.g., 'Active'). |
+| GLOBAL_TAGS      | STRING    | Tags associated globally with the anomaly.      |
+| CONTAINER_ID     | NUMBER    | Identifier for the associated container.        |
+| SOURCE_CONTAINER | STRING    | Name of the source container.                   |
+| DATASTORE_ID     | NUMBER    | Identifier for the associated datastore.        |
+| SOURCE_DATASTORE | STRING    | Name of the source datastore.                   |
+| GENERATED_AT     | TIMESTAMP | Timestamp when the export was generated.        |
+
+#### _EXPORT_CHECKS Table
 
 Contains metadata from quality checks.
 
@@ -173,13 +196,13 @@ Contains metadata from quality checks.
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
 | RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
-| DATASTORE_ID         | NUMBER         	 | Identifier of the datastore used in the check.                  |
-| CONTAINER_ID         | NUMBER         	 | Identifier of the container used in the check.                  |
+| DATASTORE_ID          | NUMBER         	 | Identifier of the datastore used in the check.                  |
+| CONTAINER_ID          | NUMBER         	 | Identifier of the container used in the check.                  |
 | SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
 
-#### _FIELD_PROFILES Table
+#### _EXPORT_FIELD_PROFILES Table
 
 Contains metadata from field profiles.
 

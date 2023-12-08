@@ -1,35 +1,38 @@
-## Export Quality Checks and Field Profiles to an Enrichment Datastore
+# Export Metadata
 
-Qualytics enables the exportation of Quality Checks and Field Profiles metadata from selected containers. Upon initiating the export, this metadata is stored in the designated enrichment datastore. The stored metadata will be named using the pattern `_<datastore_name>_checks` for Quality Checks and `_<datastore_name>_field_profiles `for Field Profiles.
+Qualytics's metadata export feature is specifically designed to capture the mutable states of various data entities. This functionality enables the export of Quality Checks, Field Profiles, and Anomalies metadata from selected profiles into a designated enrichment datastore. For easy identification and organization, the exported metadata follows distinct naming patterns:
 
-## **Prerequisites**
+- **Anomalies**: stored as `_<enrichment_prefix>_anomalies_export`.
+- **Quality Checks**: stored as `_<enrichment_prefix>_checks_export`.
+- **Field Profiles**: stored as `_<enrichment_prefix>_field_profiles_export`.
 
-Before exporting quality checks and field profiles, ensure that you have the following:
+## Prerequisites
 
-* **An enrichment datastore already setup that can accommodate the exported data**
+Before exporting, ensure the following prerequisite is met:
 
-## **Exporting Quality Checks**
+- **Enrichment Datastore Configured**: Have an enrichment datastore already set up and configured, capable of accommodating the exported data. This setup is required to enable the export process of anomalies, quality checks, and field profiles.
 
-To export quality checks, follow these steps:
+## Exporting to an Enrichment Datastore
 
-1. **Navigate to the Datastore and select Profiles section**
-2. **Select the containers you want to export the data**
-3. **Click the "Export" button**
+Follow these steps to export the metadata:
 
-    ![Screenshot](../assets/container/export-metadata-light.png#only-light)
-    ![Screenshot](../assets/container/export-metadata-dark.png#only-dark)
+1. **Access the Datastore Page**: Go to the Datastore page and locate the 'Enrichment Datastore' section, which should be present right below the breadcrumbs.
+2. **Open Export Dialog**: In the Enrichment Datastore section, click on the 'Export Metadata' button to open the dialog.
 
-4. **You can choose if you want to export the checks and field profiles**
+    ![Screenshot](../assets/datastores/enrichment-datastore-export-icon-light.png#only-light){: style="width:676px"}
+    ![Screenshot](../assets/datastores/enrichment-datastore-export-icon-dark.png#only-dark){: style="width:676px"}
 
-    ![Screenshot](../assets/container/export-options-light.png#only-light)
-    ![Screenshot](../assets/container/export-options-dark.png#only-dark)
+3. **Choose Data to Export**: In the dialog, specify whether you want to export anomalies, quality checks, or field profiles.
 
-5. **You can select all or specific containers to export**
+    ![Screenshot](../assets/container/export-options-light.png#only-light){: style="width:676px"}
+    ![Screenshot](../assets/container/export-options-dark.png#only-dark){: style="width:676px"}
 
-    ![Screenshot](../assets/container/export-profiles-light.png#only-light)
-    ![Screenshot](../assets/container/export-profiles-dark.png#only-dark)
+4. **Profiles Selection**: Choose the profiles from which you wish to export data.
 
-6. **Click the "Export" button to export the data into the enrichment**
-    ![Screenshot](../assets/container/export-success-light.png#only-light)
-    ![Screenshot](../assets/container/export-success-dark.png#only-dark)
+    ![Screenshot](../assets/container/export-profiles-light.png#only-light){: style="width:676px"}
+    ![Screenshot](../assets/container/export-profiles-dark.png#only-dark){: style="width:676px"}
 
+6. **Confirm Export**: Click the "Export" button in the dialog to begin the export process into the enrichment datastore.
+
+    ![Screenshot](../assets/container/export-success-light.png#only-light){: style="width:676px"}
+    ![Screenshot](../assets/container/export-success-dark.png#only-dark){: style="width:676px"}
