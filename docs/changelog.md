@@ -5,6 +5,17 @@ hide:
 
 ### 2023.12.08 { id=2023.12.08}
 
+#### Breaking Changes
+
+- Renaming of Enrichment Datastore Tables
+
+	Due to lack of consistency and to avoid conflicts between different categories of Enrichments tables, changes were performed to the table name patterns:
+
+	- The Enrichment table previously named `<enrichment_prefix>_anomalies` has been renamed to `<enrichment_prefix>_failed_checks` due to its content and granularity.
+	- The terms `remediation` and `export` were added to distinguish Enrichment Remediation and Export tables from others, resulting in:
+	    -  `<enrichment_prefix>_remediation_<container_name>` for Remediation tables.
+	    -  `<enrichment_prefix>_export_<asset>` for Export tables.
+
 #### Feature Enhancements
 
 - Refactor Notifications Panel:
@@ -17,20 +28,6 @@ hide:
     - Displayed file count (number of partitions) in addition to existing file patterns count metric in profile operations for DFS datastores.
 - Improve Globing Logic:
     - Optimized support for multiple subgroups when globing files from DFS datastores during profile operations, enhancing efficiency.
-
-#### Breaking Changes
-
-- Rename Enrichment Datastore Tables
-
-	Due to lack of consistency and to avoid conflicts between different categories of Enrichments tables, changes were performed to the table name patterns.
-
-	- The Enrichment table previously named `<enrichment_prefix>_anomalies` has been renamed to `<enrichment_prefix>_failed_checks` due to its content and granularity.
-
-	- The terms `remediation` and `export` were added to distinguish Enrichment Remediation and Export tables from other tables resulting in:
-
-		-  <enrichment_prefix>\_remediation\_<container_name> for Remediation tables.
-
-		-  <datastore_name>\_export\_<asset> for Export tables (including the new available `Anomalies` export assert).
 
 #### General Fixes
 
