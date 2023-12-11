@@ -18,7 +18,7 @@ Depending on Customer’s cloud infrastructure, this option uses one of the foll
 
 The Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer’s choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.  This model requires that the provisioned VPC have the ability to access Customer’s datastore(s). In the case of publicly routable datastores such as Snowflake or S3, no extra configuration is required. In the case of private datastore(s) with no public IP address or route, the hosted VPC will require private peering, PrivateLink, Transit Gateway, point to point VPN, or similar support to enable network access to that private datastore.
 
-** Considerations **
+**Considerations**
 This is Qualytics’ preferred model of deployment. In this model, Qualytics is fully responsible for the provisioning and operation of the Qualytics platform. Customer is only responsible for granting the Qualytics platform necessary access.
 
 ### <a name="onpremise"></a>__On-Premises Deployment:__
@@ -32,5 +32,5 @@ This option supports deployments to any Kubernetes control plane that meets the 
 
 This option requires that the kubernetes nodes supporting Qualytics’ analytics engine have the ability to access Customer’s datastore(s). Because Customer hosts the Qualytics deployment, Customer is solely responsible for ensuring the necessary network configuration and support.
 
-** Considerations **
+**Considerations**
 This option supports organizations that due to regulatory or other restrictions cannot permit READ access to their datastore(s) from a third-party hosted product. This model requires Customer to manage and operate the appropriate infrastructure and ensure it is granted all necessary access to the targeted datastore(s). For deployments to supported commercial kubernetes control planes (EKS, AKE, GKE, OKE) and at the Customer’s discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer.  Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](https://github.com/Qualytics/qualytics-helm-public).
