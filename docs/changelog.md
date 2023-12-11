@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2023.12.12 { id=2023.12.12}
+
+#### Feature Enhancements
+
+- Incremental Catalog Results Posting:
+    - Enhanced the catalog operation to post results incrementally for each container catalogued. Previously, results were only available after the entire operation was completed. With this enhancement, results from successfully catalogued containers are now preserved and posted incrementally, ensuring containers identified are not lost even if the operation does not complete successfully.
+
+#### General Fixes
+
+- Aggregation Comparison Rule Filter:
+    - Resolved an issue where filters were not being applied to the Aggregation Comparison Check, affecting both the reference and target filters.
+
+- Case Sensitivity File Extension Support
+    - Addressed a limitation in handling file extensions, ensuring that uppercase formats like .TXT and .CSV are now correctly recognized and processed. This update enhances the system's ability to handle files consistently, irrespective of extension case.
+
+- SLA Violation Notification Adjustment:
+    - Modified the SLA violation notifications to trigger only once per violation, preventing a flood of repetitive alerts and improving the overall user experience.
+
+- Source record not Available for Max Length Rule
+    - Addressed a bug where the Max Length Rule was not producing source records in cases involving null values. The rule has been updated to correctly handle null values, ensuring accurate anomaly marking and data enrichment.
+
+- General fixes and improvements
+
 ### 2023.12.08 { id=2023.12.08}
 
 #### Breaking Changes
