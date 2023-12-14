@@ -3,6 +3,26 @@ hide:
   - navigation
 ---
 
+### 2023.12.14 { id=2023.12.14}
+
+#### Feature Enhancements
+
+- Auto-Detection of Partitioned Files:
+    - Improved file handling to automatically detect partitioned files like `*.delta` without the need for an explicit extension. This update resolves the issue of previously unrecognized delta tables.
+
+- Anomaly Weight Threshold for Notifications:
+    - Enhanced the notification system to support a minimum anomaly weight threshold for the trigger type "An anomaly is detected". Notifications will now be triggered only for anomalies that meet or exceed the defined weight threshold.
+
+- Team Assignment in Datastore Forms:
+    - Updated the Datastore Forms to enable users to manage teams. This enhancement provides Admins with the flexibility to assign or adjust teams right at the point of datastore setup, moving away from the default assignment to the Public team.
+
+#### General Fixes
+
+- Corrected Health Page Duplication:
+    - Addressed an issue on the Health Page where "Max Executors" information was being displayed twice. This duplication has been removed for clearer and more accurate reporting.
+
+- General fixes and improvements
+
 ### 2023.12.12 { id=2023.12.12}
 
 #### Feature Enhancements
