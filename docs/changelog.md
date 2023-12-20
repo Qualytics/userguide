@@ -3,6 +3,18 @@ hide:
   - navigation
 ---
 
+### 2023.12.20 { id=2023.12.20}
+
+#### General Fixes
+
+- Resolved Datastore Creation Issue with Databricks:
+    - Fixed an issue encountered when creating source datastores using Databricks with catalog names other than the default `hive_metastore`. This fix ensures a smoother and more flexible datastore creation process in Databricks environments.
+
+- Conflict Resolution for 'anomaly_uuid' Field in Source Container:
+    - Corrected a problem where source containers with a field named `anomaly_uuid` were unable to run scan operations. This fix eliminates the conflict with internal system columns, allowing for uninterrupted operation of these containers.
+
+- General fixes and improvements
+
 ### 2023.12.14 { id=2023.12.14}
 
 #### Feature Enhancements
