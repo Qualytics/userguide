@@ -131,6 +131,8 @@ nav:
           - tags/what-is-a-tag.md
         - Security:
           - security/security-page.md
+    - Operation Automation:
+      - operation-automation/automated-tasks-with-cron.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
