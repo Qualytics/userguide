@@ -133,6 +133,8 @@ nav:
           - security/security-page.md
     - Operation Automation:
       - operation-automation/automated-tasks-with-cron.md
+    - Upgrades:
+      - upgrades/qualytics-single-tenant-instance.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
