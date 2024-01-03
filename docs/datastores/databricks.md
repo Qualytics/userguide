@@ -85,15 +85,73 @@ Once the form is completed, it's necessary to test the connection. A successful 
 
 This section explains how to retrieve the connection details that you need to connect to Databricks.
 
-* Get connection details for a cluster
-    1. Click `Compute` in the sidebar.
-    2. Choose a cluster to connect to.
-    3. Navigate to `Advanced Options`.
-    4. Click on the `JDBC/ODBC` tab.
-    5. Copy the connection details.
+!!! info "Credentials to connect with Qualytics"
+    - `Host`: `<host-name>.cloud.databricks.com` or `<host-name>.azuredatabricks.net`
+    - `Http Path`: `sql/prodocolv1/o/xxxxx/xyz-xyz-xyz` or `/sql/1.0/warehouses/xyzpto`
+    - `Catalog`: Your available catalog in Databricks
+    - `Database`: Your available schema in Databricks
+    - `Personal Access Token`: Retrieved from User settings
 
-* Get connection details for a SQL warehouse
-    1. Click `SQL Warehouses` in the sidebar.
-    2. Choose a warehouse to connect to.
-    3. Navigate to the `Connection Details` tab.
-    4. Copy the connection details.
+## Get connection details for a cluster
+
+
+1. Click `Compute` in the sidebar.
+2. Choose a cluster to connect to.
+3. Navigate to `Advanced Options`.
+4. Click on the `JDBC/ODBC` tab.
+5. Copy the connection details.
+
+![Screenshot](../assets/datastores/databricks/compute-jdbc-url.png)
+
+
+## Get connection details for a SQL warehouse
+1. Click `SQL Warehouses` in the sidebar.
+2. Choose a warehouse to connect to.
+3. Navigate to the `Connection Details` tab.
+4. Copy the connection details.
+
+![Screenshot](../assets/datastores/databricks/sql-warehouse-jdbc-url.png)
+
+## Get the Access Token
+
+The token generation is documented as described in the [Databricks documentation](https://docs.databricks.com/en/dev-tools/auth/pat.html).
+
+### 1. In your Databricks workspace, click your Databricks username in the top bar, and then select User `Settings` from the drop down menu
+
+![Screenshot](../assets/datastores/databricks/user-settings.png)
+
+### 2. In `Settings` page, select the `Developer` option in `User` section
+
+![Screenshot](../assets/datastores/databricks/developer-in-user-section.png)
+
+### 3. In `Developer` page, you will se below the Developer divisor the `Manage` Access Tokens
+
+![Screenshot](../assets/datastores/databricks/developer-manage-access-tokens.png)
+
+### 4. In `Developer` page, click on the `Manage` in Access Tokens
+
+![Screenshot](../assets/datastores/databricks/developer-manage-access-tokens.png)
+
+### 5. In `Access Tokens` page, click in `Generate new token` button
+
+![Screenshot](../assets/datastores/databricks/generate-new-token-button.png)
+
+### 6. You will see a modal to add a description and validation time (in days) for the token:
+
+![Screenshot](../assets/datastores/databricks/generate-new-token-modal.png)
+
+### 7. After adding the contents, you can click in generate, it will show the `token`:
+
+![Screenshot](../assets/datastores/databricks/new-token.png)
+
+!!! warning
+    Once you click in `Done` the modal will close and you will never see the token again.
+    Please, save the Personal Access Token to a secure space.
+
+### 8. You can see the new `token` in `Access Tokens` page:
+
+![Screenshot](../assets/datastores/databricks/new-token-generated.png)
+
+### 9. You can also revoke a `token` on `Access Tokens` page by clicking on the `thresh` icon:
+
+![Screenshot](../assets/datastores/databricks/revoke-token.png)
