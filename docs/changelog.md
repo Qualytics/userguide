@@ -3,6 +3,20 @@ hide:
   - navigation
 ---
 
+### 2024.01.04 { id=2024.01.04}
+
+#### Feature Enhancements
+
+- Enhanced Warnings for Schema Inconsistencies in Files Profiled
+    - Improved the warning message for cases where the user profiles files with different schemas under a single glob pattern. This update ensures users receive clear, helpful information when files within a glob have inconsistent structures.
+
+#### General Fixes
+
+- Containers with 'Group By' settings Leading to Erroneous Profile Operation
+    - Fixed an issue affecting profile operations which included containers with 'Group By' settings. Previously, running a profile without inferring checks resulted in all fields being erroneously removed from the field list.
+
+- General fixes and improvements
+
 ### 2023.12.20 { id=2023.12.20}
 
 #### General Fixes
