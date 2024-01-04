@@ -6,6 +6,16 @@ Qualytics is a closed source container-native platform for assessing, monitoring
 
 Learn more [about our product and capabilities here.](https://qualytics.co/product/) 
 
+!!! warning "Important Note for Deployment Type"
+    Before proceeding with the installation of Helm for Qualytics Single-Tenant Instance, please note the following:
+
+    - This installation guide is specifically designed for on-premises customers who manage their own infrastructure.
+
+    - If you are a Qualytics Software as a Service (SaaS) customer, you do not need to perform this installation. The Helm setup is managed by Qualytics for SaaS deployments.
+
+    > If you are unsure about your deployment type or have any questions, please reach out to your Qualytics account manager for clarification.
+
+
 ## What is in this chart?
 
 This chart will deploy a single-tenant instance of the qualytics platform to a [CNCF compliant](https://www.cncf.io/certification/software-conformance/) kubernetes control plane.
