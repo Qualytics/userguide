@@ -3,6 +3,26 @@ hide:
   - navigation
 ---
 
+### 2024-01-11 { id=2024.01.11}
+
+#### Feature Enhancements
+
+- isType Rule Implementation:
+    - Replaced the previous dataType rule with the new isType rule for improved accuracy and understanding. The isType rule is now specifically tailored to assert only against string fields, enhancing its applicability and effectiveness.
+
+- Introduction of Check Templates:
+    - Implemented Check Templates to offer a balance between flexibility and consistency in quality check management. Checks can now be associated with templates in either a 'locked' or 'unlocked' state, allowing for synchronized properties or independent customization, respectively. This feature streamlines check management and enables efficient tracking and review of anomalies across all checks associated with a template.
+
+#### General Fixes
+
+- Safeguard Against Overlapping Scheduled Operations:
+    - Implemented a mechanism to prevent the overloading of deployments due to overlapping scheduled operations. If a scheduled operation doesn’t complete before its next scheduled run, the subsequent run will be skipped, thereby avoiding potential strain on system resources.
+
+- Correction of Group-by Field Display in Containers:
+    - Resolved an issue where selected grouping fields were not appearing in the list fields of a container. This fix ensures that user-specified fields for group-by operations are correctly displayed, maintaining the integrity of data organization and analysis.
+
+- General fixes and improvements
+
 ### 2024.01.04 { id=2024.01.04}
 
 #### Feature Enhancements
