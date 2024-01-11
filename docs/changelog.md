@@ -7,13 +7,19 @@ hide:
 
 #### Feature Enhancements
 
-- isType Rule Implementation:
-    - Replaced the previous dataType rule with the new isType rule for improved accuracy and understanding. The isType rule is now specifically tailored to assert only against string fields, enhancing its applicability and effectiveness.
-
 - Introduction of Check Templates:
     - Implemented Check Templates to offer a balance between flexibility and consistency in quality check management. Checks can now be associated with templates in either a 'locked' or 'unlocked' state, allowing for synchronized properties or independent customization, respectively. This feature streamlines check management and enables efficient tracking and review of anomalies across all checks associated with a template.
 
+- isType Rule Implementation:
+    - Replaced the previous dataType rule with the new isType rule for improved accuracy and understanding. The isType rule is now specifically tailored to assert only against string fields, enhancing its applicability and effectiveness.
+
+- Enhanced Container Details Page with Identifier Icons:
+    - Updated the Container Details page to display icons for key container identifiers, including Partition Field, Grouping Fields, and Exclude Fields. This enhancement provides a more intuitive and informative user interface, facilitating easier identification and understanding of container characteristics.
+
 #### General Fixes
+
+- Notification System Reliability Improvement:
+    - Fixed intermittent failures in the notifications system. Users will now receive reliable notifications for identified anomalies, ensuring timely awareness and response to data irregularities.
 
 - Safeguard Against Overlapping Scheduled Operations:
     - Implemented a mechanism to prevent the overloading of deployments due to overlapping scheduled operations. If a scheduled operation doesn’t complete before its next scheduled run, the subsequent run will be skipped, thereby avoiding potential strain on system resources.
