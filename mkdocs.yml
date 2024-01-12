@@ -23,28 +23,34 @@ nav:
     #   - use-cases/entity-management.md
   - Reference:
     - Datastores:
-      - datastores/what-is-datastore.md
-      - Add a datastore:
-        - datastores/amazon-s3.md
-        - datastores/azure-blob-storage.md
-        - datastores/azure-datalake-storage.md
-        - datastores/bigquery.md
-        - datastores/databricks.md
-        - datastores/db2.md
-        - datastores/google-cloud-storage.md
-        - datastores/hive.md
-        - datastores/maria-db.md
-        - datastores/microsoft-sql-server.md
-        - datastores/mysql.md
-        - datastores/oracle.md
-        - datastores/postgresql.md
-        - datastores/presto.md
-        - datastores/qfs.md
-        - datastores/redshift.md
-        - datastores/snowflake.md
-        - datastores/synapse.md
-        - datastores/timescale-db.md
-        - datastores/trino.md
+      - Overview of a Datastore:
+        - datastores/what-is-datastore.md
+        - JDBC Datastore:
+          - datastores/what-is-a-jdbc-datastore.md
+          - Creating a JDBC datastore:
+            - datastores/bigquery.md
+            - datastores/databricks.md
+            - datastores/db2.md
+            - datastores/hive.md
+            - datastores/maria-db.md
+            - datastores/microsoft-sql-server.md
+            - datastores/mysql.md
+            - datastores/oracle.md
+            - datastores/postgresql.md
+            - datastores/presto.md
+            - datastores/redshift.md
+            - datastores/snowflake.md
+            - datastores/synapse.md
+            - datastores/timescale-db.md
+            - datastores/trino.md
+        - DFS Datastore:
+            - datastores/what-is-a-dfs-datastore.md
+            - Creating a DFS Datastore:
+              - datastores/amazon-s3.md
+              - datastores/azure-blob-storage.md
+              - datastores/azure-datalake-storage.md
+              - datastores/google-cloud-storage.md
+              - datastores/qfs.md
       - Container:
         - container/what-is-container.md
         - container/export-metadata.md
@@ -132,16 +138,15 @@ nav:
           - tags/what-is-a-tag.md
         - Security:
           - security/security-page.md
-    - Operation Automation:
-      - operation-automation/automated-tasks-with-cron.md
-    - Upgrades:
-      - upgrades/qualytics-single-tenant-instance.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
     - Misc:
       - sso/sso.md
       - deployments/deployments.md
+      - upgrades/qualytics-single-tenant-instance.md
+      - operation-automation/automated-tasks-with-cron.md
+      - dfs-globbing/how-dfs-filename-globbing-works.md
 
   - glossary.md
   - API Reference: https://demo.qualytics.io/api/docs
