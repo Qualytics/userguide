@@ -69,7 +69,6 @@ nav:
           - Contains Email: checks/contains-email-check.md
           - Contains Social Security Number: checks/contains-social-security-number-check.md
           - Contains Url: checks/contains-url.md
-          - Data Type: checks/data-type-check.md
           - Distinct Count: checks/distinct-count-check.md
           - Equal To Field: checks/equal-to-field-check.md
           - Exists In: checks/exists-in-check.md
@@ -81,6 +80,7 @@ nav:
           - Is Credit Card: checks/is-credit-card-check.md
           - Is Not Replica Of: checks/is-not-replica-of-check.md
           - Is Replica Of: checks/is-replica-of-check.md
+          - Is Type: checks/is-type-check.md
           - Less Than: checks/less-than-check.md
           - Less Than Field: checks/less-than-field-check.md
           - Matches Pattern: checks/matches-pattern-check.md
