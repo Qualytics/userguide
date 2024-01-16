@@ -1,4 +1,4 @@
-# Data Type
+# Is Type
 
 ### Definition
 
@@ -12,12 +12,7 @@
 
 | Type        |                          |
 |-------------|--------------------------|
-| `Date`      | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>  |
 | `String`    | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>  |
 
 ### General Properties
 
@@ -51,9 +46,9 @@ Specify the expected type for the data in the field.
 
 | L_ORDERKEY | L_QUANTITY              |
 |------------|-------------------------|
-| 1          | 10                      |
-| 2          | <span class="text-negative">15.5</span>  |
-| 3          | <span class="text-negative">Ten</span> |
+| 1          | "10"                      |
+| 2          | <span class="text-negative">"15.5"</span>  |
+| 3          | <span class="text-negative">"Ten"</span> |
 
 **Anomaly Explanation**
 
