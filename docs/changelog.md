@@ -3,6 +3,32 @@ hide:
   - navigation
 ---
 
+### 2024.01.19 { id=2024.01.19}
+
+#### Feature Enhancements
+
+- Introduction of 'Expected Schema' Rule for Advanced Schema Validation:
+    - Introduced the 'Expected Schema' rule, replacing the 'Required Fields' rule. This new rule asserts that all selected fields are present and their data types match predefined expectations, offering more comprehensive schema validation. It also includes an option to validate additional fields added to the schema, allowing users to specify whether the presence of new fields should cause the check to fail.
+
+- Refined Tree Navigation Experience:
+    - Updated the tree navigation to prevent automatic expansion of nodes upon selection and eliminated the auto-reset behavior when re-selecting an active node. These changes provide a smoother and more user-friendly navigation experience, especially in tables/files with numerous fields.
+
+- Locked/Unlocked Status Filter in Library Page:
+    - Added a new filter feature to the Library page, enabling users to categorize and view check templates based on their Locked or Unlocked status. This enhancement simplifies the management and selection of templates.
+
+- Improved Messaging for Locked Template Properties in Check Form:
+    - Enhanced the Check Form UX by adding informative messages explaining why certain inputs are disabled when a check is associated with a locked template. This update enhances user understanding and interaction with the form.
+
+#### General Fixes
+
+- Corrected Insights Metrics for Check Templates:
+    - Fixed an issue where check templates were incorrectly counted as checks in related metrics and counts on the Insights page. Templates are now appropriately filtered out, ensuring accurate representation of check-related data.
+
+- Enabled Template Creation with Calculated Rules:
+    - Resolved a limitation that prevented the creation of templates using calculated rules like 'Satisfies Expression' and 'Aggregation Comparison'. This fix expands the capabilities and flexibility of template creation.
+
+- General fixes and improvements
+
 ### 2024-01-11 { id=2024.01.11}
 
 #### Feature Enhancements
