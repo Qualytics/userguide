@@ -1,8 +1,14 @@
-# Required Fields
+# Expected Schema
 
 ### Definition
 
 *Asserts that all of the selected fields must be present in the datastore.*
+
+### Behavior:
+
+The expected schema is the first check to be tested during a scan operation. If it fails, the scan operation will result as `Failure` with the following message:
+
+*`<container-name>`: Aborted because schema check anomalies were identified*.
 
 ### Field Scope
 
@@ -21,11 +27,13 @@
 
 ### General Properties
 
-{%
-    include-markdown "components/general-props/index.md"
-    start='<!-- none-props--start -->'
-    end='<!-- none-props--end -->' 
-%}
+<!-- none-props--start -->
+=== "Details"
+    | Name    | Supported                |
+    |---------|--------------------------|
+    | <div class="grayscale" style="color: #357AE3;">Allow other fields</div><div>Allows additional fields during a scan if it's enabled</div>      | <div style="text-align:center">:octicons-check-16:</div>  |
+<!-- none-props--end -->
+
 
 ### Anomaly Types
 
@@ -37,7 +45,7 @@
 
 ### Example
 
-**Objective**: *Ensure that required fields such as L_ORDERKEY, L_PARTKEY, and L_SUPPKEY are always present in the LINEITEM table.*
+**Objective**: *Ensure that expected fields such as L_ORDERKEY, L_PARTKEY, and L_SUPPKEY are always present in the LINEITEM table.*
 
 **Sample Data**
 
@@ -66,7 +74,7 @@
 
 **Anomaly Explanation**
 
-Among the presented sample schemas, the second one is missing one of the required fields. Only the first schema has the correct required fields.
+Among the presented sample schemas, the second one is missing one of the expected schema. Only the first schema has the correct expected schema.
 
 === "Flowchart"
     ```mermaid
@@ -91,4 +99,4 @@ Among the presented sample schemas, the second one is missing one of the require
 **Potential Violation Messages**
 
 !!! example "Shape Anomaly"
-    One of the required fields (`L_SUPPKEY`) are missing.
+    The required fields (`L_SUPPKEY`) are not present.
