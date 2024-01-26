@@ -1,8 +1,11 @@
 # External Scan Operation
 
-External Scan is a specialized Scan Operation that enables you to assert data quality checks against data residing outside of the platform's primary Datastore. It empowers you to assess the quality of external datasets while leveraging the defined checks and anomaly detection capabilities within the platform.
+External Scan is a specialized Scan Operation that enables you to assert data quality checks against data residing outside the platform. 
+
+It empowers you to assess the quality of external datasets while leveraging the defined checks and anomaly detection capabilities within the platform.
 
 ## Key Characteristics:
+
  - External Data Sources: Accepts CSV, XLSX, and XLS files as data sources.
  - Schema Requirement: Requires an existing schema or structure within the platform that aligns with the external data's format. This schema can be based on a view, computed table, file, or other compatible object.
  - Check Assertion: Uses the same data quality checks defined for the corresponding schema to identify anomalies within the external data.
