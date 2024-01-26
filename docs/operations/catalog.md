@@ -1,4 +1,4 @@
-# Step 1. Catalog Operation
+# Catalog Operation
 
 The Catalog Operation is run on a Datastore to import the named collections (e.g. tables, views, files, topics) of data available within it. The operation will also attempt to automatically identify the best way to support:
 

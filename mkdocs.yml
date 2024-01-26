@@ -109,6 +109,7 @@ nav:
         - operations/catalog.md
         - operations/profile.md
         - operations/scan.md
+        - operations/external-scan.md
     - Enrichment Datastores:
       - enrichment/what-is-enrichment.md
       - Add an Enrichment Datastore:
