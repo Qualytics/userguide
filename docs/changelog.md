@@ -3,6 +3,28 @@ hide:
   - navigation
 ---
 
+### 2024.01.26 { id=2024.01.26}
+
+#### Feature Enhancements
+
+- Incremental Scan Starting Threshold:
+    - Introduced a "Starting Threshold" option for incremental Scans. This feature allows users to manually set a starting value for the incremental field in large tables, bypassing the need to scan the entire dataset initially. It's handy for first-time scans of massive databases, facilitating more efficient and targeted data scanning.
+
+- Add Support for Archiving Anomalies:
+    - Implemented the capability of archiving anomalies. Users can now remove anomalies from view without permanently deleting them, providing greater control and flexibility in anomaly management.
+
+- External Scan Operation for Ad hoc Processes:
+    - Introduced 'External Scan Operation' as a new feature enabling ad hoc data validation for all containers. This operation allows users to validate ad hoc data, such as Excel or CSV files, against a container's existing checks and enrichment configuration. The provided file's structure must align with the container's schema, ensuring a seamless validation process.
+
+#### General Fixes
+
+- Preventing Unrelated Entity Selection in Check Form:
+    - Fixed an issue in the Check Form where users could inadvertently select unrelated entities. Selecting datastores, containers, and fields is restricted during any ongoing data loading, preventing mismatched entity selections.
+
+- Performance enhancements for BigQuery and Snowflake removing the need for count operations during full table analysis
+
+- General fixes and improvements
+
 ### 2024.01.23 { id=2024.01.23}
 
 #### Feature Enhancements
