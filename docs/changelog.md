@@ -3,6 +3,23 @@ hide:
   - navigation
 ---
 
+### 2024.01.29 { id=2024.01.29}
+
+#### Feature Enhancements
+
+- Enhanced External Scan Operations:
+    - Improved data handling in External Scans by applying type casting to uploaded data using Spark. This update is particularly significant for date-time fields, which now expect and conform to ISO 8601 standards.
+
+- Optimized DFS File Reading:
+    - Streamlined file reading in DFS by storing and utilizing the 'file_format' identified during the Catalog operation. This change eliminates the need for repeated format inspection on each read, significantly reducing overhead, especially for partitioned file types.
+
+#### General Fixes
+
+- Resolved DFS Reading Issues with Special Character Headers:
+    - Fixed a DFS reading issue where columns with headers containing special characters (like pipes |) adversely affected field profiling, including inaccuracies in histogram generation.
+
+- General fixes and improvements
+
 ### 2024.01.26 { id=2024.01.26}
 
 #### Feature Enhancements
