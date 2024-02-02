@@ -3,6 +3,38 @@ hide:
   - navigation
 ---
 
+### 2024.02.02 { id=2024.02.02}
+
+#### Feature Enhancements
+
+- Excluded Fields Inclusion in Drop-downs:
+    - Refined container settings to incorporate previously excluded fields in the dropdown list, enhancing user flexibility. In addition, a warning message has been added to notify users if a profile operation is required when deselecting excluded fields that were previously selected.
+
+#### General Fixes
+
+- Linkable Scan Results for Direct Access:
+    - Made Scan Results dialogs accessible via direct URL links, addressing previous issues with broken anomaly notification links. This enhancement provides users with a straightforward path to detailed scan outcomes.
+
+- Property Display Refinement for Various Field Types:
+    - Corrected illogical property displays for specific field types like Date/Timestamp. The system now intelligently displays only properties relevant to the selected data type, eliminating inappropriate options. This update also includes renaming 'Declared Type' to 'Inferred Type' and adjusting the logic for accurate representation.
+
+- Timezone Consistency in Insights and Activity Pages:
+    - Implemented improvements in timezone handling across Insights and Activity pages. These changes ensure that date aggregations are accurately aligned with the user's local time, eliminating previous inconsistencies compared to the Operations list results.
+
+- Fixed breadcrumb display in the datastore for members with restricted permissions
+    - Enhanced the datastore interface to address issues faced by members with limited permissions. This update also fixes misleading breadcrumb displays and ensures that correct datastore enhancement information is visible.
+
+- Resolved State Issue in Bulk Check Archive:
+    - Addressed a bug in the bulk selection process for archiving checks. The fix corrects an issue where the system recognized individual selections instead of the intended group selection due to an overlooked edge case.
+
+- Improved Operation Modal State Management:
+    - Tackled state management inconsistencies in Operation Modals. Fixes include resetting the remediation strategy to its default and ensuring 'include' options do not erroneously carry over previous states.
+
+- Eliminating Infinite Load for Non-Admin Enrichment Editing:
+    - Solved a persistent loading issue in the Enrichment form for non-admin users. Updates ensure a smoother, error-free interaction for these users, improving accessibility and functionality.
+
+- General fixes and improvements
+
 ### 2024.01.30 { id=2024.01.30}
 
 #### Feature Enhancements
