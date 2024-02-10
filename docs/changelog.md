@@ -3,6 +3,30 @@ hide:
   - navigation
 ---
 
+### 2024.02.10 { id=2024.02.10}
+
+#### Feature Enhancements
+
+- Immediate Execution Option for Scheduled Operations:
+    - Introduced a "Run Now" feature for scheduled operations, enabling users to execute operations immediately without waiting for the scheduled time. This addition provides flexibility in operation management, ensuring immediate execution as needed without altering the original schedule.
+
+- Simplified Customization of Notification Messages:
+    - Removed the "use custom message" toggle from the notification form, making the message input field always editable. This change simplifies the user interface and improves usability by allowing direct editing of notification messages.
+    - Enhanced default messages for each notification trigger type have also been implemented to improve clarity.
+
+- Performance Improvement in User Notifications Management:
+    - Implemented infinite scrolling pagination for the user notifications sidepanel. This update addresses performance issues with loading large numbers of notifications, ensuring a smoother and more responsive experience for users with extensive notification histories.
+
+- Enhanced Archive Template Confirmation:
+    - Updated the archive dialog for templates to include information on the number of checks associated with the template being archived. This enhancement ensures users are aware of the impact on checks linked to the template, promoting informed decision-making.
+
+- Improved Interaction with Computed Tables:
+    - Refined the Containers list UX to allow navigation to container details immediately after the creation of a computed table, addressing delays caused by background profiling. This improvement ensures users can access computed table details without waiting for the profile operation to complete, drawing inspiration from Tree View functionality for a more seamless experience.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2024.02.02 { id=2024.02.02}
 
 #### Feature Enhancements
