@@ -198,8 +198,40 @@ Contains metadata from quality checks.
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
 | DATASTORE_ID          | NUMBER         	 | Identifier of the datastore used in the check.                  |
 | CONTAINER_ID          | NUMBER         	 | Identifier of the container used in the check.                  |
+| TEMPLATE_ID           | NUMBER         	 | Identifier of the template id associated tothe check.           |
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                |
 | SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
+
+
+#### _EXPORT_CHECK_TEMPLATES Table
+
+Contains metadata from check templates.
+
+**Columns**
+
+| Name                  | Data Type          | Description                                                     |
+|-----------------------|--------------------|-----------------------------------------------------------------|
+| ADDITIONAL_METADATA   | STRING             | JSON-formatted string containing additional metadata for the check. |
+| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule.                  | 
+| CREATED               | STRING             | Created timestamp of the check.                                 |
+| DELETED_AT            | STRING             | Deleted timestamp of the check.                                 |
+| DESCRIPTION           | STRING             | Description of the check.                                       |
+| FIELDS                | STRING             | Fields involved in the check separated by comma.                |
+| FILTER                | STRING             | Criteria used to filter data when asserting the check.          |
+| GENERATED_AT          | STRING             | Indicates when the export was generated.                        | 
+| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.     |
+| ID                    | NUMBER             | Unique identifier for the check.                                |
+| IS_NEW                | BOOLEAN            | Flags if the check is new.                                      |
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                |
+| LAST_EDITOR           | STRING             | Represents the last editor of the check.                        |
+| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.             |
+| PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             |
+| RULE_TYPE             | STRING             | Type of rule applied in the check.                              |
+| TEMPLATE_CHECKS_COUNT | NUMBER             | The count of associated checks to the template.                 |
+| TEMPLATE_LOCKED       | BOOLEAN            | Indicates wheter the check template is locked or not.           |
+| WEIGHT                | FLOAT              | Represents the weight of the check.                             |
+
 
 
 #### _EXPORT_FIELD_PROFILES Table
