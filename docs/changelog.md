@@ -22,9 +22,6 @@ hide:
 - Improved Design for Field Identifiers in Tooltips:
     - The design of field identifiers within tooltips has been refined for greater clarity. Enhancements focus on displaying Grouping Fields, Excluded Fields, Incremental Fields, and Partition Fields, aiming to offer users a more intuitive experience.
 
-- Dynamic Scan Parameters from Profiling:
-    - Introduced the capability to utilize scan parameters, such as thresholds based on standard deviations from profiling results, in check creation.
-
 #### General Fixes
 
 - External Scan Rollup Threshold Correction:
