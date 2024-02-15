@@ -3,6 +3,41 @@ hide:
   - navigation
 ---
 
+### 2024.02.15 { id=2024.02.15}
+
+#### Feature Enhancements
+
+- UX Improvements for Profile and Scan Operation Dialogs:
+    - Implemented significant UX enhancements to Profile & Scan Operation Dialogs for improved clarity and user flow. Key improvements include:
+        - Visibility of incremental fields and their current starting positions in Scan Operation dialogs.
+        - Logical reordering of Profile and Scan Operation steps to align with user workflows, including prioritizing container selection and clarifying the distinction between "Starting Threshold" and "Limit" settings.
+    - Simplified operation initiation, allowing users to start operations directly before the final scheduling step, streamlining the process for immediate execution.
+
+- Naming for Scheduled Operations:
+    - Added a name field to scheduled operations, enabling users to assign descriptive names or aliases. This feature aids in distinguishing and managing multiple scheduled operations more effectively.
+
+- Container Name Filters for Operations:
+    - Provided filtering options for operations and scheduled operations by container name, improving the ability to quickly locate and manage specific operations.
+
+- Improved Design for Field Identifiers in Tooltips:
+    - The design of field identifiers within tooltips has been refined for greater clarity. Enhancements focus on displaying Grouping Fields, Excluded Fields, Incremental Fields, and Partition Fields, aiming to offer users a more intuitive experience.
+
+#### General Fixes
+
+- External Scan Rollup Threshold Correction:
+    - Fixed an issue in external scans where the rollup threshold was not applied as intended. This correction ensures that anomalies exceeding the threshold are now accurately consolidated into a single shape anomaly, rather than being reported as multiple individual record anomalies.
+
+- Repetitive Release Notification and Live Update Fixes:
+    - Resolved a recurring issue with release notifications continually prompting users to refresh despite acknowledgment. Additionally, restored the live update notifications' functionality, ensuring users are correctly alerted to new features while actively using the system, with suggestions for a hard refresh to access the latest version.
+
+- Corrected Field Input Logic in Check & Template Forms:
+    - Addressed a logic error that incorrectly disabled field inputs for certain rules in check and template forms. This correction re-enables the necessary field input, removing a significant barrier that previously prevented users from creating checks affected by this issue.
+
+- Addressed Absence of Feedback for No-Match Field Filters on Explore Page:
+    - Rectified the absence of feedback when field filters on the Explore Page yield no results, ensuring users receive a clear message indicating no items match the specified filter criteria.
+
+- General fixes and improvements
+
 ### 2024.02.10 { id=2024.02.10}
 
 #### Feature Enhancements
