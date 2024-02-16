@@ -77,13 +77,13 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
 
     **Using scan-time variables**
 
-    To refer to the current dataframe being analyzed, use the reserved word `_qualytics_${containerId}` where `${containerId}` should be replaced with the numeric identifier of the container.
+    To refer to the current dataframe being analyzed, use the reserved dynamic variable `{{_qualytics_self}}`.
 
     ???+ success "Correct usage"
         ```sql
         O_ORDERSTATUS IN (
             SELECT DISTINCT O_ORDERSTATUS
-            FROM qualytics_42
+            FROM {{_qualytics_self}}
             WHERE O_TOTALPRICE > 1000
         )
         ```
@@ -99,5 +99,5 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
     
     While subqueries can be useful, their application within filters in our context has limitations. For example, directly referencing other containers or the broader target container in such subqueries **is not supported**. Attempting to do so will result in an error.
 
-    !!! warning "Important Note on `_qualytics_${containerId}`"
-        The `_qualytics_${containerId}` keyword refers to the dataframe that's currently under examination. In the context of a full scan, this variable represents the entire target container. However, during incremental scans, it only reflects a subset of the target container, capturing just the incremental data. It's crucial to recognize that in such scenarios, using `_qualytics_${containerId}` may not encompass all entries from the target container.
+    !!! warning "Important Note on `{{_qualytics_self}}`"
+        The `{{_qualytics_self}}` keyword refers to the dataframe that's currently under examination. In the context of a full scan, this variable represents the entire target container. However, during incremental scans, it only reflects a subset of the target container, capturing just the incremental data. It's crucial to recognize that in such scenarios, using `{{_qualytics_self}}` may not encompass all entries from the target container.
