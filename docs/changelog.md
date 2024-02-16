@@ -3,6 +3,21 @@ hide:
   - navigation
 ---
 
+### 2024.02.16 { id=2024.02.16}
+
+#### General Fixes
+
+- Corrected Typing for Expected Values Check:
+    - Resolved an issue with the “Expected Values” rule, where numeric comparisons were inaccurately processed due to a misalignment between the API and the analytics engine. This fix ensures numeric values are correctly typed and compared, enhancing the reliability of validations.
+
+- Fixed Anomaly Filtering in Scan Results dialog:
+    - Addressed a flaw where scan results did not consistently filter anomalies based on the operation ID. The fix guarantees that anomalies are only displayed once the operation ID parameter is accurately defined in the URL, ensuring more precise and relevant scan outcome presentations.
+
+- Check Validation Sampling Behavior Adjustment:
+    - Fixed intermittent validation issues encountered in specific source datastore types (DB2, Microsoft SQL Server). The problem, where validation could unpredictably fail or succeed based on container size, was corrected by fine-tuning the sampling method for these technologies, leading to consistent validation performance.
+
+- General fixes and improvements
+
 ### 2024.02.15 { id=2024.02.15}
 
 #### Feature Enhancements
