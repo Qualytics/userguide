@@ -198,8 +198,40 @@ Contains metadata from quality checks.
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
 | DATASTORE_ID          | NUMBER         	 | Identifier of the datastore used in the check.                  |
 | CONTAINER_ID          | NUMBER         	 | Identifier of the container used in the check.                  |
+| TEMPLATE_ID           | NUMBER         	 | Identifier of the template id associated tothe check.           |
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                |
 | SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
+
+
+#### _EXPORT_CHECK_TEMPLATES Table
+
+Contains metadata from check templates.
+
+**Columns**
+
+| Name                  | Data Type          | Description                                                     |
+|-----------------------|--------------------|-----------------------------------------------------------------|
+| ADDITIONAL_METADATA   | STRING             | JSON-formatted string containing additional metadata for the check. |
+| COVERAGE              | FLOAT              | Represents the expected tolerance of the rule.                  | 
+| CREATED               | STRING             | Created timestamp of the check.                                 | ok
+| DELETED_AT            | STRING             | Deleted timestamp of the check.                                 | ok
+| DESCRIPTION           | STRING             | Description of the check.                                       | ok
+| FIELDS                | STRING             | Fields involved in the check separated by comma.                | ok
+| FILTER                | STRING             | Criteria used to filter data when asserting the check.          | ok
+| GENERATED_AT          | STRING             | Indicates when the export was generated.                        | ok 
+| GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.     | ok
+| ID                    | NUMBER             | Unique identifier for the check.                                | ok
+| IS_NEW                | BOOLEAN            | Flags if the check is new.                                      | ok
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                | ok
+| LAST_EDITOR           | STRING             | Represents the last editor of the check.                        | ok
+| LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.             | ok
+| PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             | ok
+| RULE_TYPE             | STRING             | Type of rule applied in the check.                              | ok
+| TEMPLATE_CHECKS_COUNT | NUMBER             | The count of associated checks to the template.                 | ok
+| TEMPLATE_LOCKED       | BOOLEAN            | Indicates wheter the check template is locked or not.           | ok
+| WEIGHT                | FLOAT              | Represents the weight of the check.                             |
+
 
 
 #### _EXPORT_FIELD_PROFILES Table
@@ -254,6 +286,131 @@ The diagram below provides a visual representation of the associations between v
 ![Screenshot](../assets/enrichment/diagram-light.png#only-light)
 
 ![Screenshot](../assets/enrichment/diagram-dark.png#only-dark)
+
+## Handling JSON and string splitting
+
+=== "Snowflake"
+    ```sql
+	SELECT
+		PARSE_JSON(ADDITIONAL_METADATA):metadata_1::string AS Metadata1_Key1,
+		PARSE_JSON(ADDITIONAL_METADATA):metadata_2::string AS Metadata2_Key1,
+		PARSE_JSON(ADDITIONAL_METADATA):metadata_3::string AS Metadata3_Key1,
+		-- Add more lines as needed up to MetadataN
+		CONTAINER_ID,
+		COVERAGE,
+		CREATED,
+		DATASTORE_ID,
+		DELETED_AT,
+		DESCRIPTION,
+		SPLIT_PART(FIELDS, ',', 1) AS Field1,
+		SPLIT_PART(FIELDS, ',', 2) AS Field2,
+		-- Add more lines as needed up to FieldN
+		FILTER,
+		GENERATED_AT,
+		SPLIT_PART(GLOBAL_TAGS, ',', 1) AS Tag1,
+		SPLIT_PART(GLOBAL_TAGS, ',', 2) AS Tag2,
+		-- Add more lines as needed up to TagN
+		HAS_PASSED,
+		ID,
+		INFERRED,
+		IS_NEW,
+		IS_TEMPLATE,
+		LAST_ASSERTED,
+		LAST_EDITOR,
+		LAST_UPDATED,
+		NUM_CONTAINER_SCANS,
+		PARSE_JSON(PROPERTIES):allow_other_fields::string AS Property_AllowOtherFields,
+		PARSE_JSON(PROPERTIES):assertion::string AS Property_Assertion,
+		PARSE_JSON(PROPERTIES):comparison::string AS Property_Comparison,
+		PARSE_JSON(PROPERTIES):datetime_::string AS Property_Datetime,
+		-- Add more lines as needed up to Property
+		RULE_TYPE,
+		SOURCE_CONTAINER,
+		SOURCE_DATASTORE,
+		TEMPLATE_ID,
+		WEIGHT
+	FROM "_EXPORT_CHECKS";
+    ```
+=== "PostgreSQL"
+    ```sql
+    SELECT
+		(ADDITIONAL_METADATA::json ->> 'metadata_1') AS Metadata1_Key1,
+		(ADDITIONAL_METADATA::json ->> 'metadata_2') AS Metadata2_Key1,
+		(ADDITIONAL_METADATA::json ->> 'metadata_3') AS Metadata3_Key1,
+		-- Add more lines as needed up to MetadataN
+		CONTAINER_ID,
+		COVERAGE,
+		CREATED,
+		DATASTORE_ID,
+		DELETED_AT,
+		DESCRIPTION,
+		(string_to_array(FIELDS, ','))[1] AS Field1,
+		(string_to_array(FIELDS, ','))[2] AS Field2,
+		-- Add more lines as needed up to FieldN
+		FILTER,
+		GENERATED_AT,
+		(string_to_array(GLOBAL_TAGS, ','))[1] AS Tag1,
+		(string_to_array(GLOBAL_TAGS, ','))[2] AS Tag2,
+		-- Add more lines as needed up to TagN
+		HAS_PASSED,
+		ID,
+		INFERRED,
+		IS_NEW,
+		IS_TEMPLATE,
+		LAST_ASSERTED,
+		LAST_EDITOR,
+		LAST_UPDATED,
+		NUM_CONTAINER_SCANS,
+		(PROPERTIES::json ->> 'allow_other_fields') AS Property_AllowOtherFields,
+		(PROPERTIES::json ->> 'assertion') AS Property_Assertion,
+		(PROPERTIES::json ->> 'comparison') AS Property_Comparison,
+		(PROPERTIES::json ->> 'datetime_') AS Property_Datetime,
+		-- Add more lines as needed up to PropertyN
+		RULE_TYPE,
+		SOURCE_CONTAINER,
+		SOURCE_DATASTORE,
+		TEMPLATE_ID,
+		WEIGHT
+	FROM "_EXPORT_CHECKS";
+    ```
+=== "MySQL"
+    ```sql
+    SELECT
+		(ADDITIONAL_METADATA->>'$.metadata_1') AS Metadata1_Key1,
+		(ADDITIONAL_METADATA->>'$.metadata_2') AS Metadata2_Key1,
+		(ADDITIONAL_METADATA->>'$.metadata_3') AS Metadata3_Key1,
+		-- Add more lines as needed up to MetadataN
+		CONTAINER_ID,
+		COVERAGE,
+		CREATED,
+		DATASTORE_ID,
+		DELETED_AT,
+		DESCRIPTION,
+		SUBSTRING_INDEX(FIELDS, ',', 1) AS Field1,
+		-- Add more lines as needed up to FieldN
+		SUBSTRING_INDEX(GLOBAL_TAGS, ',', 1) AS Tag1,
+		-- Add more lines as needed up to TagN
+		HAS_PASSED,
+		ID,
+		INFERRED,
+		IS_NEW,
+		IS_TEMPLATE,
+		LAST_ASSERTED,
+		LAST_EDITOR,
+		LAST_UPDATED,
+		NUM_CONTAINER_SCANS,
+		(PROPERTIES->>'$.allow_other_fields') AS Property_AllowOtherFields,
+		(PROPERTIES->>'$.assertion') AS Property_Assertion,
+		(PROPERTIES->>'$.comparison') AS Property_Comparison,
+		(PROPERTIES->>'$.datetime_') AS Property_Datetime,
+		-- Add more lines as needed up to PropertyN
+		RULE_TYPE,
+		SOURCE_CONTAINER,
+		SOURCE_DATASTORE,
+		TEMPLATE_ID,
+		WEIGHT
+	FROM "_EXPORT_CHECKS";
+    ```
 
 ## Usage Notes
 
