@@ -3,12 +3,12 @@ hide:
   - navigation
 ---
 
-### 2024.02.16 { id=2024.02.16}
+### 2024.02.17 { id=2024.02.17}
 
 #### General Fixes
 
 - Corrected Typing for Expected Values Check:
-    - Resolved an issue with the “Expected Values” rule, where numeric comparisons were inaccurately processed due to a misalignment between the API and the analytics engine. This fix ensures numeric values are correctly typed and compared, enhancing the reliability of validations.
+    - Resolved an issue with the expectedValues rule, where numeric comparisons were inaccurately processed due to a misalignment between the API and the analytics engine. This fix ensures numeric values are correctly typed and compared, enhancing the reliability of validations.
 
 - Fixed Anomaly Filtering in Scan Results dialog:
     - Addressed a flaw where scan results did not consistently filter anomalies based on the operation ID. The fix guarantees that anomalies are only displayed once the operation ID parameter is accurately defined in the URL, ensuring more precise and relevant scan outcome presentations.
@@ -43,7 +43,7 @@ hide:
     - Fixed an issue in external scans where the rollup threshold was not applied as intended. This correction ensures that anomalies exceeding the threshold are now accurately consolidated into a single shape anomaly, rather than being reported as multiple individual record anomalies.
 
 - Repetitive Release Notification and Live Update Fixes:
-    - Resolved a recurring issue with release notifications continually prompting users to refresh despite acknowledgment. Additionally, restored the live update notifications' functionality, ensuring users are correctly alerted to new features while actively using the system, with suggestions for a hard refresh to access the latest version.
+    - Resolved a recurring issue with release notifications continually prompting users to refresh despite acknowledgment. Additionally, it restored the live update notifications' functionality, ensuring users are correctly alerted to new features while actively using the system, with suggestions for a hard refresh to access the latest version.
 
 - Corrected Field Input Logic in Check & Template Forms:
     - Addressed a logic error that incorrectly disabled field inputs for certain rules in check and template forms. This correction re-enables the necessary field input, removing a significant barrier that previously prevented users from creating checks affected by this issue.
@@ -65,10 +65,10 @@ hide:
     - Enhanced default messages for each notification trigger type have also been implemented to improve clarity.
 
 - Performance Improvement in User Notifications Management:
-    - Implemented infinite scrolling pagination for the user notifications sidepanel. This update addresses performance issues with loading large numbers of notifications, ensuring a smoother and more responsive experience for users with extensive notification histories.
+    - Implemented infinite scrolling pagination for the user notifications side panel. This update addresses performance issues with loading large numbers of notifications, ensuring a smoother and more responsive experience for users with extensive notification histories.
 
 - Enhanced Archive Template Confirmation:
-    - Updated the archive dialog for templates to include information on the number of checks associated with the template being archived. This enhancement ensures users are aware of the impact on checks linked to the template, promoting informed decision-making.
+    - Updated the archive dialog for templates to include information on the number of checks associated with archiving the template. This enhancement ensures users are aware of the impact of checks linked to the template, promoting informed decision-making.
 
 - Improved Interaction with Computed Tables:
     - Refined the Containers list UX to allow navigation to container details immediately after the creation of a computed table, addressing delays caused by background profiling. This improvement ensures users can access computed table details without waiting for the profile operation to complete, drawing inspiration from Tree View functionality for a more seamless experience.
@@ -102,7 +102,7 @@ hide:
     - Addressed a bug in the bulk selection process for archiving checks. The fix corrects an issue where the system recognized individual selections instead of the intended group selection due to an overlooked edge case.
 
 - Improved Operation Modal State Management:
-    - Tackled state management inconsistencies in Operation Modals. Fixes include resetting the remediation strategy to its default and ensuring 'include' options do not erroneously carry over previous states.
+    - Tackled state management inconsistencies in Operation Modals. Fixes include resetting the remediation strategy to its default and ensuring 'include' options do not carry over previous states erroneously.
 
 - Eliminating Infinite Load for Non-Admin Enrichment Editing:
     - Solved a persistent loading issue in the Enrichment form for non-admin users. Updates ensure a smoother, error-free interaction for these users, improving accessibility and functionality.
