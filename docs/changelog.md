@@ -3,6 +3,23 @@ hide:
   - navigation
 ---
 
+### 2024.02.19 { id=2024.02.19 }
+
+#### Feature Enhancements
+
+- Support for exporting Check Templates to the Enrichment Datastore:
+    - Added the ability to export Check Library metadata to the enrichment datastore. This feature helps users export their Check Library, making it easier to share and analyze check templates.
+
+- File Upload Size Limit Handling:
+    - Implemented a user-friendly error message for file uploads that exceed the 20MB limit. This enhancement aims to improve user experience by providing clear feedback when the file size limit is breached, replacing the generic error message previously displayed.
+
+#### General Fixes
+
+- Resolved Parsing Errors in Expected Values Rule:
+    - Fixed an issue where single quotes in the list of expected values caused parsing errors in the Analytics Engine, preventing the Expected Values rule from asserting correctly. This correction ensures values, including those with quotes or special characters, are now accurately parsed and asserted.
+
+- General fixes and improvements
+
 ### 2024.02.17 { id=2024.02.17}
 
 #### General Fixes
