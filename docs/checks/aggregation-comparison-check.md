@@ -18,8 +18,8 @@ By setting a comparison between aggregates from potentially different tables or 
 
 {%
     include-markdown "components/general-props/index.md"
-    start='<!-- all-props--start -->'
-    end='<!-- all-props--end -->'
+    start='<!-- filter-only--start -->'
+    end='<!-- filter-only--end -->'
 %}
 
 ### Specific Properties
