@@ -21,6 +21,9 @@ hide:
 - Streamlined input display for Aggregation Comparison rule in Check/Template forms:
     - Removed the "Coverage" input for the "Aggregation Comparison" rule in Check/Template Forms, as the rule does not support coverage customization. This simplification helps avoid confusion during rule configuration.
 
+- Increased Backend Process Timeouts:
+    - In response to frequent timeout issues, the backend process timeouts have been adjusted. This change aims to reduce interruptions and improve service reliability by ensuring that processes have sufficient time to complete.
+
 - General fixes and improvements
 
 ### 2024.02.19 { id=2024.02.19 }
