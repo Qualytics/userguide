@@ -3,6 +3,29 @@ hide:
   - navigation
 ---
 
+### 2024.02.23 { id=2024.02.23 }
+
+#### Feature Enhancements
+
+- Introduction of Operations Management at the Table/File Level:
+    - The Activity tab has been added at the table/file level, extending its previous implementation at the source datastore level. This update provides users with the ability to view detailed information on operations for individual tables/files, including scan metrics, and histories of operation runs and schedules. It enhances the user's ability to monitor and analyze operations at a granular level.
+
+- Enhanced Breadcrumb Navigation UX:
+    - Breadcrumb navigation has been improved for better user interaction. Users can now click on the breadcrumb representing their current context, enabling more intuitive navigation. In addition, selecting the Source Datastore breadcrumb takes users directly to the Activity tab, streamlining the flow of user interactions.
+
+#### General Fixes
+
+- Improved Accuracy in Profile and Scan Metrics:
+    - Enhanced the accuracy of metrics for profiled and scanned operations by excluding failed containers from the count. Now, metrics accurately reflect only those containers that have been successfully processed.
+
+- Streamlined input display for Aggregation Comparison rule in Check/Template forms:
+    - Removed the "Coverage" input for the "Aggregation Comparison" rule in Check/Template Forms, as the rule does not support coverage customization. This simplification helps avoid confusion during rule configuration.
+
+- Increased Backend Process Timeouts:
+    - In response to frequent timeout issues, the backend process timeouts have been adjusted. This change aims to reduce interruptions and improve service reliability by ensuring that processes have sufficient time to complete.
+
+- General fixes and improvements
+
 ### 2024.02.19 { id=2024.02.19 }
 
 #### Feature Enhancements
