@@ -4,36 +4,28 @@
 
 *Asserts that all of the selected fields must be present in the datastore.*
 
-### Behavior:
+### Behavior
 
 The expected schema is the first check to be tested during a scan operation. If it fails, the scan operation will result as `Failure` with the following message:
 
 *`<container-name>`: Aborted because schema check anomalies were identified*.
 
-### Field Scope
-
-**Multi:** The rule evaluates multiple specified fields.
-
-**Accepted Types**
-
-| Type        |                          |
-|-------------|--------------------------|
-| `Date`      | <div style="text-align:center">:octicons-check-16:</div> |
-| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div> |
-| `Integral`  | <div style="text-align:center">:octicons-check-16:</div> |
-| `Fractional`| <div style="text-align:center">:octicons-check-16:</div> |
-| `String`    | <div style="text-align:center">:octicons-check-16:</div> |
-| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div> |
-
 ### General Properties
 
-<!-- none-props--start -->
-=== "Details"
-    | Name    | Supported                |
-    |---------|--------------------------|
-    | <div class="grayscale" style="color: #357AE3;">Allow other fields</div><div>Allows additional fields during a scan if it's enabled</div>      | <div style="text-align:center">:octicons-check-16:</div>  |
-<!-- none-props--end -->
+{% 
+    include-markdown "components/general-props/index.md"
+    start='<!-- none-props--start -->'
+    end='<!-- none-props--end -->' 
+%}
 
+### Specific Properties
+
+Specify the fields that must be present in the schema, and determine if a schema change caused by additional fields should fail or pass the assertion.
+
+| Name                      | Description                                                   |
+|---------------------------|---------------------------------------------------------------|
+| <div class="text-primary">Fields</div> | List of fields that must be presented in the schema. |
+| <div class="text-primary">Allow other fields</div> | If true, then new fields are allowed to be presented in the schema. Otherwise, the assertion will be stricter. |
 
 ### Anomaly Types
 
