@@ -3,6 +3,26 @@ hide:
   - navigation
 ---
 
+### 2024.02.28 { id=2024.02.28 }
+
+#### Feature Enhancements
+
+- User Token Management:
+    - Transitioned from Generic Tokens to a more robust User Token system accessible under Settings for all users. This enhancement includes features to list, create, revoke, and delete tokens, offering granular control of API access. User activities through the API are now attributable, aligning actions with user accounts for improved accountability and traceability.
+
+#### General Fixes
+
+- Datetime Validation in API Requests:
+    - Strict validation of datetime entries in API requests has been implemented to require the Zulu datetime format. This update addresses and resolves issues where incomplete datetime entries could disrupt Scan operations, enhancing API reliability.
+
+- Context-Aware Redirection Post-Operation:
+    - Enhanced the operation modal redirect functionality to be context-sensitive, ensuring that users are directed to the appropriate activity tab after an operation, whether at the container or datastore level. This enhancement ensures a logical and intuitive post-operation navigation experience.
+
+- Template Details Page Responsiveness:
+    - Addressed layout issues on the Template Details page caused by long descriptions. Adjustments ensure that the description section now accommodates larger text volumes without disrupting the page layout, maintaining a clean and accessible interface.
+
+- General fixes and improvements
+
 ### 2024.02.23 { id=2024.02.23 }
 
 #### Feature Enhancements
