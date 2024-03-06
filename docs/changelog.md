@@ -3,6 +3,20 @@ hide:
   - navigation
 ---
 
+### 2024.03.05 { id=2024.03.05}
+
+#### Feature Enhancements
+
+- Check Validation Improvement:
+    - Enhanced the validation process for the "Is Replica Of" check. Previously, the system did not validate the field name and type, potentially leading to undetected issues until a Scan Operation was executed. Now, the validation process includes checking the field name and type, providing users with immediate feedback on any issues.
+
+#### General Fixes
+
+- Matches Pattern Data Quality Check Handling White Space:
+    - Resolved a bug in the Matches Pattern data quality check that caused white space to be ignored during training. With this fix, the system now accounts for white space during training, ensuring accurate pattern inference even with data containing significant white space. If 1% or more of the training data contains blanks, the system will derive a pattern that includes blanks as a valid value, improving data quality assessment.
+
+- General fixes and improvements
+
 ### 2024.02.28 { id=2024.02.28 }
 
 #### Feature Enhancements
