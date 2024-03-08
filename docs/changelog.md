@@ -3,6 +3,19 @@ hide:
   - navigation
 ---
 
+### 2024.03.07 { id=2024.03.07}
+
+- Corrected MatchesPattern Checks Inference:
+    - Fixed an issue where the inference engine generated MatchesPattern checks that erroneously asserted false on more than 10% of training data. This resolution ensures all inferred checks now meet the 99% coverage criterion, aligning accurately with their training datasets.
+
+- Fixed Multi-Field Check Parsing Error in DFS:
+    - Addressed a bug in DFS environments that caused parsing errors for checks asserting against multiple fields, such as AnyNotNull and NotNull, when selected fields contained white spaces. This resolution ensures that checks involving multiple fields with spaces are now accurately parsed and executed.
+
+- Volumetrics Measurement Tracking Fix:
+    - Addressed a bug that prevented the recording of volumetrics measurements for containers without a last modified time. This fix corrects the problem by treating last_modification_time as nullable, ensuring that containers are now accurately tracked for volumetric measurements regardless of their modification date status.
+
+- General fixes and improvements
+
 ### 2024.03.05 { id=2024.03.05}
 
 #### Feature Enhancements
