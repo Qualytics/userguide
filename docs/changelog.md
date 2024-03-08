@@ -11,8 +11,8 @@ hide:
 - Fixed Multi-Field Check Parsing Error in DFS:
     - Addressed a bug in DFS environments that caused parsing errors for checks asserting against multiple fields, such as AnyNotNull and NotNull, when selected fields contained white spaces. This resolution ensures that checks involving multiple fields with spaces are now accurately parsed and executed.
 
-- Volumetrics Measurement Tracking Fix:
-    - Addressed a bug that prevented the recording of volumetrics measurements for containers without a last modified time. This fix corrects the problem by treating last_modification_time as nullable, ensuring that containers are now accurately tracked for volumetric measurements regardless of their modification date status.
+- Volumetric Measurements Tracking Fix:
+    - Addressed a bug that prevented the recording of volumetric measurements for containers without a last modified time. This fix corrects the problem by treating last_modification_time as nullable, ensuring that containers are now accurately tracked for volumetric measurements regardless of their modification date status.
 
 - General fixes and improvements
 
