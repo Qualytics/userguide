@@ -3,6 +3,50 @@ hide:
   - navigation
 ---
 
+## Release Notes
+
+### 2024.03.15 { id=2024.03.15}
+
+#### Feature Enhancements
+
+- Enhanced Observability
+    - Automated daily volumetric measurements for all tables and file patterns
+    - Time-series capture and visualizations for volume, freshness, and identified anomalies
+- Overview Tab:
+    - Introduced a new "Overview" tab with information related to monitoring at the datastore and container level.
+    - This dashboard interface is designed for monitoring and managing data related to qualytics for datastore and containers.
+    - Users can see:
+        - Totals: Quality Score, Tables, Records, Checks and Anomalies
+        - Total of Quality Checks grouped by Rule type
+        - Data Volume Over Time: A line graph that shows the total amount of data associated with the project over time.
+        - Anomalies Over Time: A line graph that shows the number of anomalies detected in the project over time.
+
+- Datastore Field List Update:
+    - The datastore field profiles list has been updated to match the existing list views design.
+    - All card-listed pages now display information in a column format, conditionally using scrolling for smaller and larger screens.
+    - Now the field details will show on a modal with Profiling and Histogram
+
+- Heatmap Simplification:
+    - Simplified the heatmap to consider only operations counted.
+
+- Datastore Metrics:
+    - Improved distinction between 0 and null values in the datastore metrics (total records, total fields, etc).
+
+- Explore Page Update:
+    - Added new metrics to the Explore page.
+    - We are now adding data volume over time (records and size).
+    - Improved distinction between 0 and null values in metrics (total records, total fields, etc).
+
+#### General Fixes
+
+- UI Wording and Display for Cataloged vs Profiled Fields:
+    - Addressed user confusion surrounding the display and wording used to differentiate between fields that have been cataloged versus those that have been profiled.
+    - Updated the messaging within the tree view and other relevant UI components to accurately reflect the state of fields post-catalog operation.
+    - Implemented a clear distinction between non-profiled and profiled fields in the field count indicators.
+    - Conducted a thorough review of the CTAs and descriptive text surrounding the Catalog, Profile, and Scan operations to improve clarity and user understanding.
+
+- General fixes and improvements
+
 ### 2024.03.07 { id=2024.03.07}
 
 - Corrected MatchesPattern Checks Inference:
