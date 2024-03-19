@@ -1,5 +1,7 @@
 Qualytics CLI is a command-line tool designed to interact with the Qualytics API. With this tool, users can manage configurations, export and import checks, run operations and more.
 
+You can check more the latest version in [Qualytics CLI](https://pypi.org/project/qualytics-cli/)
+
 ## Installation and Upgrading
 
 You can install `Qualytics CLI` via pip:
