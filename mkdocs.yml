@@ -139,6 +139,8 @@ nav:
           - tags/what-is-a-tag.md
         - Security:
           - security/security-page.md
+    - Qualytics CLI:
+      - Overview of Qualytics CLI: cli/overview-of-qualytics-cli.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
