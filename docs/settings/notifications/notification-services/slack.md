@@ -1,11 +1,11 @@
-# Microsoft Teams
+# Slack
 
-## Steps to setup Microsoft Teams Notifications
+## Steps to setup Slack Notifications
 
 ---
 
-![Screenshot](../../assets/notifications/services/microsoft-teams-notification-light.png#only-light)
-![Screenshot](../../assets/notifications/services/microsoft-teams-notification-dark.png#only-dark)
+![Screenshot](../../../assets/notifications/services/slack-notification-light.png#only-light)
+![Screenshot](../../../assets/notifications/services/slack-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -27,11 +27,11 @@
 ### `Deliver a notification by` <spam id='required'>`required`</spam>
 * Service to be utilized for the notification
 
-### `Microsoft Teams Webhook Config` <spam id='required'>`required`</spam>
-* the Microsoft Teams Webhook URL that links directly to user's channel
+### `Slack Webhook Config` <spam id='required'>`required`</spam>
+* Slack Webhook URL config that links directly to user's channel
 
 !!! info
-     Check [here](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) in the official documentation how to create or configure the URL.
+    Check [here](https://api.slack.com/messaging/webhooks) for the official Slack documentation how to create or configure the Slack webhook URL.
 
 ### `Description` <spam id='required'>`optional`</spam>
 * Payload / description of the notification

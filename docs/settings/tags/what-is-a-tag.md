@@ -18,18 +18,18 @@
 
 * Find the `Tag` section by clicking on `Settings` in the menu bar:
  
-  ![Screenshot](../assets/notifications/settings-tab-light.png#only-light)
-  ![Screenshot](../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light)
+  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark)
 
 * `Tags` is now the default tab:
  
-  ![Screenshot](../assets/tags/tags-tab-light.png#only-light)
-  ![Screenshot](../assets/tags/tags-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/tags/tags-tab-light.png#only-light)
+  ![Screenshot](../../assets/tags/tags-tab-dark.png#only-dark)
 
 * View all the active `Tags` or click `Add Tag` in the upper right corner:
 
-  ![Screenshot](../assets/tags/tags-light.png#only-light)
-  ![Screenshot](../assets/tags/tags-dark.png#only-dark)
+  ![Screenshot](../../assets/tags/tags-light.png#only-light)
+  ![Screenshot](../../assets/tags/tags-dark.png#only-dark)
 
 ---
 
@@ -37,13 +37,13 @@
 
 * To add a `Tag`, start with navigating to the top right and find the `Add Tag` button.
 
- ![Screenshot](../assets/tags/add-tag-light.png#only-light)
- ![Screenshot](../assets/tags/add-tag-dark.png#only-dark)
+ ![Screenshot](../../assets/tags/add-tag-light.png#only-light)
+ ![Screenshot](../../assets/tags/add-tag-dark.png#only-dark)
 
 * Clicking on the `Add` button will pop up a modal:
 
- ![Screenshot](../assets/tags/tag-screen-light.png#only-light)
- ![Screenshot](../assets/tags/tag-screen-dark.png#only-dark)
+ ![Screenshot](../../assets/tags/tag-screen-light.png#only-light)
+ ![Screenshot](../../assets/tags/tag-screen-dark.png#only-dark)
 
 * Details:
     * `Name` your `Tag`

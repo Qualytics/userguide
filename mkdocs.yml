@@ -127,20 +127,18 @@ nav:
       - anomalies/universal-anomaly.md
     - Global Configurations:
         - Notifications:
-          - notifications/what-is-a-notification.md
+          - Overview of Notifications: settings/notifications/what-is-a-notification.md
           - Type of Notification Services:
-            - notifications/notification-services/email.md
-            - notifications/notification-services/http-action.md
-            - notifications/notification-services/microsoft-teams.md
-            - notifications/notification-services/pagerduty.md
-            - notifications/notification-services/slack.md
-            - notifications/notification-services/webhook.md
-        - Tags:
-          - tags/what-is-a-tag.md
-        - Security:
-          - security/security-page.md
-    - Qualytics CLI:
-      - Overview of Qualytics CLI: cli/overview-of-qualytics-cli.md
+            - settings/notifications/notification-services/email.md
+            - settings/notifications/notification-services/http-action.md
+            - settings/notifications/notification-services/microsoft-teams.md
+            - settings/notifications/notification-services/pagerduty.md
+            - settings/notifications/notification-services/slack.md
+            - settings/notifications/notification-services/webhook.md
+        - Tags: settings/tags/what-is-a-tag.md
+        - Security: settings/security/security-page.md
+        - Tokens: settings/tokens/overview-of-tokens.md
+    - Qualytics CLI: cli/overview-of-qualytics-cli.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md

@@ -1,11 +1,11 @@
-# Slack
+# PagerDuty
 
-## Steps to setup Slack Notifications
+## Steps to setup PagerDuty Notifications
 
 ---
 
-![Screenshot](../../assets/notifications/services/slack-notification-light.png#only-light)
-![Screenshot](../../assets/notifications/services/slack-notification-dark.png#only-dark)
+![Screenshot](../../../assets/notifications/services/pagerduty-notification-light.png#only-light)
+![Screenshot](../../../assets/notifications/services/pagerduty-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -27,11 +27,14 @@
 ### `Deliver a notification by` <spam id='required'>`required`</spam>
 * Service to be utilized for the notification
 
-### `Slack Webhook Config` <spam id='required'>`required`</spam>
-* Slack Webhook URL config that links directly to user's channel
+### `PagerDuty Config` 
+* The PagerDuty configuration for connection to user's PagerDuty instance:
+
+    #### PagerDuty integration key <spam id='required'>`required`</spam>
+    #### PagerDuty Severity <spam id='required'>`required`</spam>
 
 !!! info
-    Check [here](https://api.slack.com/messaging/webhooks) for the official Slack documentation how to create or configure the Slack webhook URL.
-
+    Check [here](https://support.pagerduty.com/docs/services-and-integrations) for the official documentation from PagerDuty on how to create or configure the PagerDuty integration.
+ 
 ### `Description` <spam id='required'>`optional`</spam>
 * Payload / description of the notification

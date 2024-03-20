@@ -4,8 +4,8 @@
 
 ---
 
-![Screenshot](../../assets/notifications/services/http-action-notification-light.png#only-light)
-![Screenshot](../../assets/notifications/services/http-action-notification-dark.png#only-dark)
+![Screenshot](../../../assets/notifications/services/http-action-notification-light.png#only-light)
+![Screenshot](../../../assets/notifications/services/http-action-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
