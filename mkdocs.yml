@@ -138,6 +138,7 @@ nav:
         - Tags: settings/tags/what-is-a-tag.md
         - Security: settings/security/security-page.md
         - Tokens: settings/tokens/overview-of-tokens.md
+        - Health: settings/health/overview-of-health.md
     - Qualytics CLI: cli/overview-of-qualytics-cli.md
     - FAQ:
       - identifiers/what-is-an-identifier.md
