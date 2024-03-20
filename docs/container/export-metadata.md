@@ -1,4 +1,4 @@
-# Export Metadata
+# Export metadata
 
 Qualytics's metadata export feature is specifically designed to capture the mutable states of various data entities. This functionality enables the export of Quality Checks, Field Profiles, and Anomalies metadata from selected profiles into a designated enrichment datastore. For easy identification and organization, the exported metadata follows distinct naming patterns:
 

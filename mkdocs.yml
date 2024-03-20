@@ -51,9 +51,11 @@ nav:
               - datastores/azure-datalake-storage.md
               - datastores/google-cloud-storage.md
               - datastores/qfs.md
-      - Container:
-        - container/what-is-container.md
+      - Containers: 
+        - container/container.md
         - container/export-metadata.md
+        - container/overview-of-identifiers.md
+        - container/overview-of-grouping.md
       - Data Quality Checks:
         - checks/what-is.md
         - checks/what-is-an-authored-check.md
@@ -141,7 +143,6 @@ nav:
         - Health: settings/health/overview-of-health.md
     - Qualytics CLI: cli/overview-of-qualytics-cli.md
     - FAQ:
-      - identifiers/what-is-an-identifier.md
       - quality-scores/what-are-quality-scores.md
     - Misc:
       - sso/sso.md
