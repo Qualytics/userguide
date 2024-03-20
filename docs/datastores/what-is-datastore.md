@@ -62,8 +62,6 @@
 
 ![Screenshot](../assets/datastores/what-is/data-volume-light.png#only-light)
 ![Screenshot](../assets/datastores/what-is/data-volume-dark.png#only-dark)
-![Screenshot](../assets/datastores/what-is/anomaly-count-light.png#only-light)
-![Screenshot](../assets/datastores/what-is/anomaly-count-dark.png#only-dark)
 
 # Running a Catalog of the Datastore
 * The first operation of Catalog will automatically kick off. You can see this through the Activity tab. 
