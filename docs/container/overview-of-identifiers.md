@@ -1,6 +1,6 @@
-# What is an Identifier?
+# Overview of identifiers
 
-The `Identifier` is a Field that can be used to help load the desired data from a Table in support of analysis. 
+An `Identifier` is a field that can be used to help load the desired data from a Table in support of analysis. 
 
 There are two types of identifiers can be declared for a Table:
 
