@@ -1,11 +1,11 @@
-# Webhook
+# Microsoft Teams
 
-## Steps to setup Webhook Notifications
+## Steps to setup Microsoft Teams Notifications
 
 ---
 
-![Screenshot](../../assets/notifications/services/webhook-notification-light.png#only-light)
-![Screenshot](../../assets/notifications/services/webhook-notification-dark.png#only-dark)
+![Screenshot](../../../assets/notifications/services/microsoft-teams-notification-light.png#only-light)
+![Screenshot](../../../assets/notifications/services/microsoft-teams-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -27,11 +27,11 @@
 ### `Deliver a notification by` <spam id='required'>`required`</spam>
 * Service to be utilized for the notification
 
-### `Webhook` <spam id='required'>`required`</spam>
-* The Webhook URL that links directly to your channel.
+### `Microsoft Teams Webhook Config` <spam id='required'>`required`</spam>
+* the Microsoft Teams Webhook URL that links directly to user's channel
 
 !!! info
-    Check the official documentation of target system to find on how to create or configure the webhook URL.
+     Check [here](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) in the official documentation how to create or configure the URL.
 
 ### `Description` <spam id='required'>`optional`</spam>
 * Payload / description of the notification

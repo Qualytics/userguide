@@ -1,11 +1,11 @@
-# PagerDuty
+# Webhook
 
-## Steps to setup PagerDuty Notifications
+## Steps to setup Webhook Notifications
 
 ---
 
-![Screenshot](../../assets/notifications/services/pagerduty-notification-light.png#only-light)
-![Screenshot](../../assets/notifications/services/pagerduty-notification-dark.png#only-dark)
+![Screenshot](../../../assets/notifications/services/webhook-notification-light.png#only-light)
+![Screenshot](../../../assets/notifications/services/webhook-notification-dark.png#only-dark)
 
 ### `Name` <spam id='required'>`required`</spam>
 
@@ -27,14 +27,11 @@
 ### `Deliver a notification by` <spam id='required'>`required`</spam>
 * Service to be utilized for the notification
 
-### `PagerDuty Config` 
-* The PagerDuty configuration for connection to user's PagerDuty instance:
-
-    #### PagerDuty integration key <spam id='required'>`required`</spam>
-    #### PagerDuty Severity <spam id='required'>`required`</spam>
+### `Webhook` <spam id='required'>`required`</spam>
+* The Webhook URL that links directly to your channel.
 
 !!! info
-    Check [here](https://support.pagerduty.com/docs/services-and-integrations) for the official documentation from PagerDuty on how to create or configure the PagerDuty integration.
- 
+    Check the official documentation of target system to find on how to create or configure the webhook URL.
+
 ### `Description` <spam id='required'>`optional`</spam>
 * Payload / description of the notification

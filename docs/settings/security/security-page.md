@@ -20,13 +20,13 @@ Check out this section to learn how to set up and use Role-based Access Control 
 
 * Find the `Security` section by clicking on `Settings` in the menu bar:
 
-  ![Screenshot](../assets/notifications/settings-tab-light.png#only-light)
-  ![Screenshot](../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light)
+  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark)
 
 * In `Settings` find the `Security` tab:
 
-  ![Screenshot](../assets/security/security-tab-light.png#only-light)
-  ![Screenshot](../assets/security/security-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/security/security-tab-light.png#only-light)
+  ![Screenshot](../../assets/security/security-tab-dark.png#only-dark)
 
 ## Qualytics Supported roles
 
@@ -45,13 +45,13 @@ Check out this section to learn how to set up and use Role-based Access Control 
 
 As an `Admin` user, you can see the security page and navigate through the `Users`, `Teams` or `API Keys` tab:
 
-  ![Screenshot](../assets/security/security-overview-light.png#only-light)
-  ![Screenshot](../assets/security/security-overview-dark.png#only-dark)
+  ![Screenshot](../../assets/security/security-overview-light.png#only-light)
+  ![Screenshot](../../assets/security/security-overview-dark.png#only-dark)
 
 ### Creating Teams
   You can create a new team clicking in the `Add New Team` buttom:
 
-  - ![Screenshot](../assets/security/create-team.png){: style="height:50px;"}
+  - ![Screenshot](../../assets/security/create-team.png){: style="height:50px;"}
 
   - A modal will open with the fields you can add:
       * `Name`
@@ -61,21 +61,21 @@ As an `Admin` user, you can see the security page and navigate through the `User
       * `Datastores`
       * `Enrichment Datastores`
 
-      ![Screenshot](../assets/security/add-team-light.png#only-light){: style="height:400px;"}
-      ![Screenshot](../assets/security/add-team-dark.png#only-dark){: style="height:400px;"}
+      ![Screenshot](../../assets/security/add-team-light.png#only-light){: style="height:400px;"}
+      ![Screenshot](../../assets/security/add-team-dark.png#only-dark){: style="height:400px;"}
 
 
 ### Managing Teams
 
 * In the `Teams` section you can see all the `teams` 
 
-  ![Screenshot](../assets/security/security-team-overview-light.png#only-light)
-  ![Screenshot](../assets/security/security-team-overview-dark.png#only-dark)
+  ![Screenshot](../../assets/security/security-team-overview-light.png#only-light)
+  ![Screenshot](../../assets/security/security-team-overview-dark.png#only-dark)
 
 * and also edit a specific one:
 
-  ![Screenshot](../assets/security/edit-team-light.png#only-light){: style="height:400px;"}
-  ![Screenshot](../assets/security/edit-team-dark.png#only-dark){: style="height:400px;"}
+  ![Screenshot](../../assets/security/edit-team-light.png#only-light){: style="height:400px;"}
+  ![Screenshot](../../assets/security/edit-team-dark.png#only-dark){: style="height:400px;"}
 
 ### Managing Users
 
@@ -83,14 +83,14 @@ As an `Admin` user, you can see the security page and navigate through the `User
 * In the `Users` section you can change the `Permission` to:
     - `Admin` or `Member`
 
-  ![Screenshot](../assets/security/edit-user-permission-light.png#only-light){: style="height:300px;"}
-  ![Screenshot](../assets/security/edit-user-permission-dark.png#only-dark){: style="height:300px;"}
+  ![Screenshot](../../assets/security/edit-user-permission-light.png#only-light){: style="height:300px;"}
+  ![Screenshot](../../assets/security/edit-user-permission-dark.png#only-dark){: style="height:300px;"}
 
 #### Adding or Removing teams
 * You can add/remove a `Team` of an `User`:
 
-  ![Screenshot](../assets/security/edit-user-team-light.png#only-light){: style="height:400px;"}
-  ![Screenshot](../assets/security/edit-user-team-dark.png#only-dark){: style="height:400px;"}
+  ![Screenshot](../../assets/security/edit-user-team-light.png#only-light){: style="height:400px;"}
+  ![Screenshot](../../assets/security/edit-user-team-dark.png#only-dark){: style="height:400px;"}
 
 
 ### Retreiving API Keys
@@ -101,8 +101,8 @@ As an `Admin` user, you can see the security page and navigate through the `User
   * `Client Secret`
   * `Audience`
 
-  ![Screenshot](../assets/security/qualytics-api-keys-light.png#only-light)
-  ![Screenshot](../assets/security/qualytics-api-keys-dark.png#only-dark)
+  ![Screenshot](../../assets/security/qualytics-api-keys-light.png#only-light)
+  ![Screenshot](../../assets/security/qualytics-api-keys-dark.png#only-dark)
 
 
 
