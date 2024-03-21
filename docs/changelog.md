@@ -5,6 +5,32 @@ hide:
 
 ## Release Notes
 
+### 2024.03.22 { id=2024.03.22}
+
+#### Feature Enhancements
+
+- Support for Computed Files:
+    - Implemented support for computed files, empowering users to create computed files based on existing containers using SparkSQL, similar to Computed Tables. This enhancement expands data processing capabilities within the platform, providing users with more options for data manipulation and analysis.
+
+- Enhanced Platform Onboarding Experience:
+    - Improved the platform's fresh state user experience by providing brief information on how the platform works. This enhancement aims to enhance the onboarding experience for users before they create their first datastore, providing them with a better understanding of the platform's functionalities and workflows.
+
+- Inference Option in Container Settings:
+    - Introduced a new option in container settings, enabling users to customize inference behavior. This addition offers greater flexibility in data processing, allowing users to tailor inference settings according to their specific requirements.
+
+- Gradient Styling in Bar Charts:
+    - Implemented gradient styling to bar charts in the Overview tab (Datastore/Container context) and Profiles/Scans under the Insights tab in the Explore page. This enhancement enhances visual aesthetics and clarity, improving the overall user experience when visualizing data insights.
+
+- Improved Notification Rules List:
+    - Enhanced the notification rules list to display rows instead of cards. This improvement streamlines the presentation of notification rules, providing users with a clearer and more compact view of their configured rules.
+
+#### General Fixes
+
+- Prevented Watch Trigger for Chart Colors:
+    - Addressed an issue where a watch trigger caused chart colors to render as black upon navigating back with a global filter selected. This fix ensures consistent color rendering for better visualization, enhancing the overall user experience when interacting with charts and maintaining visual consistency across the platform.
+- General fixes and improvements
+
+
 ### 2024.03.15 { id=2024.03.15}
 
 #### Feature Enhancements
