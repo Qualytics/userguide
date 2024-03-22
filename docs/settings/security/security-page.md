@@ -20,8 +20,8 @@ Check out this section to learn how to set up and use Role-based Access Control 
 
 * Find the `Security` section by clicking on `Settings` in the menu bar:
 
-  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light)
-  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light){: style="width:300px;"}
+  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark){: style="width:300px;"}
 
 * In `Settings` find the `Security` tab:
 
