@@ -18,13 +18,13 @@
 
 * Find the `Tag` section by clicking on `Settings` in the menu bar:
  
-  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light)
-  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light){: style="width:300px;"}
+  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark){: style="width:300px;"}
 
 * `Tags` is now the default tab:
  
-  ![Screenshot](../../assets/tags/tags-tab-light.png#only-light)
-  ![Screenshot](../../assets/tags/tags-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/tags/tags-tab-light.png#only-light){: style="width:400px;"}
+  ![Screenshot](../../assets/tags/tags-tab-dark.png#only-dark){: style="width:400px;"}
 
 * View all the active `Tags` or click `Add Tag` in the upper right corner:
 
