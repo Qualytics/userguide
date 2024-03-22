@@ -54,9 +54,11 @@ nav:
       - enrichment/associate-enrichment-datastore.md
     - Containers: 
       - container/container.md
+      - container/overview-of-a-computed-table-and-file.md
       - container/export-metadata.md
       - container/overview-of-identifiers.md
       - container/overview-of-grouping.md
+      - container/overview-of-infer-data-type.md
     - Data quality checks:
       - checks/overview-of-a-check.md
       - checks/checks-template.md

@@ -92,21 +92,6 @@ As an `Admin` user, you can see the security page and navigate through the `User
   ![Screenshot](../../assets/security/edit-user-team-light.png#only-light){: style="height:400px;"}
   ![Screenshot](../../assets/security/edit-user-team-dark.png#only-dark){: style="height:400px;"}
 
-
-### Retreiving API Keys
-
-- In the `API Keys` section, you can get the:
-  * `Domain`
-  * `Client ID`
-  * `Client Secret`
-  * `Audience`
-
-  ![Screenshot](../../assets/security/qualytics-api-keys-light.png#only-light)
-  ![Screenshot](../../assets/security/qualytics-api-keys-dark.png#only-dark)
-
-
-
-
 !!! note
     - All users are inside the `Public` team by default and can't be changed. 
     - If you want to change the visibility of the `User` of a specific `Datastore`, you can update the default `Public` team of the `Datastore`.
