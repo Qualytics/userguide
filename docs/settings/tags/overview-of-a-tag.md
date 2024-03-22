@@ -1,4 +1,4 @@
-# What is a Tag?
+# Overview
 
 * `Tags` in our system allow users to categorize and organize entities effectively, while also providing the ability to assign weights for prioritization. They can drive notifications and downstream workflows, and users can configure tags, associate notifications based on `Tags`, and associate tags to specific properties.
 

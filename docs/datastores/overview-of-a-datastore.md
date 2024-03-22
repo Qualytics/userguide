@@ -1,4 +1,4 @@
-# What is a Datastore?
+# Overview of a datastore
 
 * A `Datastore` can be any Apache Spark-compatible data source, such as:
     1. Traditional `RDBMS`.

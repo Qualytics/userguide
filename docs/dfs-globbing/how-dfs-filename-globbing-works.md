@@ -1,4 +1,4 @@
-# DFS Multi-Token Filename Globbing
+# DFS multi-token filename globbing
 
 ## Overview
 

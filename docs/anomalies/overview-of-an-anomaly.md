@@ -1,4 +1,4 @@
-# What is an Anomaly?
+# Overview of an Anomaly
 
 * An `Anomaly` is an anomalous data set (record or column) that asserted false to applied data quality check(s). Both `Inferred` and `Authored` Checks generate Anomalies, and are batched together when applied through a `Scan Operation` to highlight anomalies:
 

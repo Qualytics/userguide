@@ -1,4 +1,4 @@
-# What is an Inferred Check?
+# Inferred check
 
 * Qualytics automatically generates and maintains `inferred` checks by Profiling the Datastore, performing statistical analysis followed by various machine learning methods. 
 

@@ -1,4 +1,4 @@
-# Global Freshness
+# Global freshness
 
 * The Freshness section of Qualytics is designed to provide you with real-time monitoring and assessment of the freshness of your data
     - You can access the freshness in the main menu:

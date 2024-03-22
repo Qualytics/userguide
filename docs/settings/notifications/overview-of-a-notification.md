@@ -1,4 +1,4 @@
-# What is a Notification?
+# Overview
 
 * `Notifications` supports delivering messages in response to a specified event using any number of supported integrations. Notifications can drive downstream workflows as well as alert users in realtime to data quality concerns.
 

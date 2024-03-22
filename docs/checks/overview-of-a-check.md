@@ -1,4 +1,4 @@
-# What is a Check?
+# Overview of a check
 
 ---
 A `Check` is an encapsulation of a data quality rule along with additional context such as associated `notifications`, `tags`, `filters` and `tolerances`.

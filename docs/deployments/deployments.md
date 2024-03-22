@@ -1,4 +1,4 @@
-# Deployment Options
+# Deployment options
 
 ## Overview
 The following two operations are supported for the Qualytics platform:

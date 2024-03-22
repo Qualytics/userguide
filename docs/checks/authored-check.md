@@ -1,4 +1,4 @@
-# What is an Authored Check?
+# Authored check
 
 ---
 

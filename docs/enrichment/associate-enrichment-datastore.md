@@ -1,5 +1,5 @@
 
-# Associate an Enrichment Datastore
+# Associate an enrichment datastore
 
 1. Once you have selected your `Datastore`, you can click on the gear icon and select `Enrichment`: <br>
      ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-light.png#only-light){: style="height:200px"}

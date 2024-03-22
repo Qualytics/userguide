@@ -1,4 +1,4 @@
-# Global Insights
+# Insights
 
 - The `Insights` global view is the central hub for all your data monitoring needs. 
 
@@ -6,7 +6,6 @@
 
     ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:60px"}
     ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:60px"}
-
 
     ![Screenshot](../assets/insights/explore-insights-light.png#only-light){: style="height:150px"}
     ![Screenshot](../assets/insights/explore-insights-dark.png#only-dark){: style="height:150px"}

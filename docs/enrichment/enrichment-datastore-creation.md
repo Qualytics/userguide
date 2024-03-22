@@ -1,5 +1,5 @@
 
-# Create a new Enrichment Datastore
+# Enrichment datastore creation
 
 * You can create a new `Enrichment Datastore` on `Enrichment` tab
 

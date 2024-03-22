@@ -1,4 +1,4 @@
-# Scan Operation
+# Scan operation
 
 
 The Scan Operation is executed on a Datastore to assert the data quality checks defined for the named collections of data (e.g. tables, views, files, topics) within it. The operation will:

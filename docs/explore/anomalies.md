@@ -1,4 +1,4 @@
-# General Anomalies View
+# Anomalies
 
 
 * The `General Anomalies View` enables users to interact with all Anomalies from all datastores. This page is available through the main navigation and includes high-level analytics as well.
@@ -13,4 +13,20 @@
 
     ![Screenshot](../assets/anomalies/anomalies-overviews-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomalies-overviews-dark.png#only-dark)
+
+
+
+### Anomalies
+
+ - ALL anomalies across ALL Datastores can be viewed here. 
+ - Anomaly Card displays:
+    - Datastore Name
+    - Container (Table, File)
+    - Field
+    - Description
+    - Tags
+
+     ![Screenshot](../assets/explore/global-anomalies-light.gif#only-light){: style="height:400px"}
+    ![Screenshot](../assets/explore/global-anomalies-dark.gif#only-dark){: style="height:400px"}
+
 
