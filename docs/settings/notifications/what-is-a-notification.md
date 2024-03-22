@@ -6,18 +6,18 @@
 
 * `Notifications` section can be found under `Settings` > `Notifications`:
 
-  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light)
-  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light){: style="width:300px;"}
+  ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark){: style="width:300px;"}
 
 * In `Settings` find the `Notification` tab:
 
-  ![Screenshot](../../assets/notifications/notification-tab-light.png#only-light)
-  ![Screenshot](../../assets/notifications/notification-tab-dark.png#only-dark)
+  ![Screenshot](../../assets/notifications/notification-tab-light.png#only-light){: style="width:400px;"}
+  ![Screenshot](../../assets/notifications/notification-tab-dark.png#only-dark){: style="width:400px;"}
 
 * All active `notifications` are highlighted with the ability to `add` new:
 
-  ![Screenshot](../../assets/notifications/all-notifications-light.png#only-light){: style="height:500px;"}
-  ![Screenshot](../../assets/notifications/all-notifications-dark.png#only-dark){: style="height:500px;"}
+  ![Screenshot](../../assets/notifications/all-notifications-light.png#only-light)
+  ![Screenshot](../../assets/notifications/all-notifications-dark.png#only-dark)
 
 ---
 
