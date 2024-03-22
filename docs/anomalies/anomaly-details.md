@@ -31,9 +31,9 @@
     
     * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)
 
-    * `Coverage` ![Screenshot](../assets/anomalies/coverage-dark.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
+    * `Coverage` ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: the expected tolerance of the rule
 
-    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
+    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/quality-check-type-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: `Infered` or `Authored`
 
      4. The rule type `Tag`
 
@@ -53,7 +53,10 @@
 ![Screenshot](../assets/anomalies/infered-check-details-section-light.png#only-light)
 ![Screenshot](../assets/anomalies/infered-check-details-section-dark.png#only-dark)
 
-* An anomaly can be archived via the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
+* An anomaly can be archived pressing the `Check Actions` menu and `Archive`.
+
+![Screenshot](../assets/anomalies/archive-light.png#only-light)
+![Screenshot](../assets/anomalies/archive-dark.png#only-dark)
 
 * If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Coverage` percentage for that anomaly.
 
