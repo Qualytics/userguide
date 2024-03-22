@@ -5,8 +5,6 @@
 ![Screenshot](../assets/anomalies/anomalies-tab-light.png#only-light)
 ![Screenshot](../assets/anomalies/anomalies-tab-dark.png#only-dark)
 
-![Screenshot](../assets/anomalies/anomaly-table-light.png#only-light)
-![Screenshot](../assets/anomalies/anomaly-table-dark.png#only-dark)
 
 
 There are two types of anomalies in Qualytics: `Record` and `Shape`:
