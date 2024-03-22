@@ -1,13 +1,29 @@
+Ensure data integrity with the Checks tab, where you'll find all checks, both inferred and authored.
 
-### Checks
+## Key Features
 
- - Each and every check, `Inferred` or `Authored` across ALL Datastores can be viewed from Checks. 
- - Check Card displays:
-    - Datastore Name
-    - Container (Table, File)
-    - Field
-    - Description
-    - Tags
+### Global Check View
+See checks from all your datastores.
 
-    ![Screenshot](../assets/explore/global-checks-light.gif#only-light){: style="height:400px"}
-    ![Screenshot](../assets/explore/global-checks-dark.gif#only-dark){: style="height:400px"}
+### Check Card
+
+Displays the following details for each check
+
+* Datastore
+* Container (Table, File)
+* Field
+* Description
+* Tags
+* Coverage
+* Last Editor
+* Weight
+* Created
+* Filter
+
+
+## How to Use the Checks Tab
+
+1. **Review All Checks:**  Gain a comprehensive picture of your data quality rules.
+2. **Search and Filter:**  Find specific checks or focus on checks with particular characteristics (e.g., tags, datastores).
+3. **Identify Potential Issues:**  Checks with high anomaly associations might need review or adjustment. 
+4. **Monitor Check Performance:** Track how checks are contributing to data quality over time.  

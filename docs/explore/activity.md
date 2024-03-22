@@ -1,13 +1,14 @@
+Monitor the pulse of your datastores with the Activity tab.
 
-### Activity
+## Key Sections
 
- - Provides an in-depth view of the daily operations across all Datastores.
- - Heatmap shows totals across all Datastores for  each day:
-    - Data Volume, or # of Records
-    - Partitions, or # of Containers
-    - Anomaly Count
- - Updated List View shows all Datastores and Containers along with Activity Details and Anomaly Count per Container
- - Updated Activity Details now include Datastore
+### Heatmap
 
-     ![Screenshot](../assets/explore/global-activities-light.gif#only-light){: style="height:400px"}
-    ![Screenshot](../assets/explore/global-activities-dark.gif#only-dark){: style="height:400px"}
+* **Daily Totals:**  See total of operations of a specific day
+* **Visual Cues:** Color intensity indicates higher activity levels.
+* **List View:** See datastore and container details alongside activity and anomalies.
+
+**How to Use the Activity Tab**
+
+1. **Identify Activity Hotspots:** The heatmap reveals periods of high volume of operations.
+2. **Filter by specific type and status:** The heat map will be updated according to the operation type and status

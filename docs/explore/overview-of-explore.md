@@ -1,26 +1,57 @@
-# Overview of explore
+## Explore Page Overview
 
-Introducing `Explore` - your revolutionary centralized view for all your data needs. 
+Your centralized hub for streamlined data management.
 
-- See Activities, Containers, Checks, and Anomalies across multiple datastores from one place.
-- Filter by `Datastores` or by `Tags` for focused insights.
-- With the ability to explore and tag Critical Data Elements (CDEs), you gain a deeper understanding of your data and ensure its accuracy and relevance.
+## Tabs and Features
 
-Say goodbye to scattered information and hello to a streamlined experience. Take control and unleash the power of centralized data visualization. Get ready for a new level of efficiency and clarity with Explore.
+### Insights
 
-## Summary
+* **Data Monitoring Central:** Your dashboard for anomaly detection and comprehensive data monitoring.
+* **Filtering Options** Fine-tune insights by datastores, tags, or dates.
+* **Key Metrics:**
+    * Datastore Monitoring Overview
+    * Data Under Management
+    * Quality Score
+    * Connected Datastores 
+    * Profile Data 
+    * Checks (Inferred & Authored)
+    * Records Scanned
+    * Anomalies Created & Status
+    * Rule Counts & Distributions 
 
-`Explore` - Brings together a global view of all Activities, Insights, Profiles (Files, Tables, Computed Tables), Checks, & Anomalies.
+* **Weekly Bar Charts:** 
+    * Profiles (Fields & Records Profiled)
+    * Scans (Records Scanned vs. Anomalies)
 
-- `Explore` - Replaces `Insights` on the top navigation.
+### Activity
 
-    ![Screenshot](../assets/insights/explore-light.png#only-light){: style="height:60px"}
-    ![Screenshot](../assets/insights/explore-dark.png#only-dark){: style="height:60px"}
+* **Daily Operations Insight:**  In-depth look at activity across datastores.
+* **Heatmap:** Visualize daily volume of operations.
+* **List View:** See datastore and container details alongside activity and anomalies.
 
-- Filter by `Datastores` or by `Tags` for focused insights.
+### Profiles
 
-    ![Screenshot](../assets/explore/explore-datastores-tags-light.png#only-light){: style="height:100px"}
-    ![Screenshot](../assets/explore/explore-datastores-tags-dark.png#only-dark){: style="height:100px"}
+* **Profile Central:** All files, tables, and computed tables in one place.
+* **Search, Sort, and Filter:** Find what you need efficiently.
+* **Card/List View Toggle:** Choose your preferred display.
+* **CDE Management:** Tag critical data elements and filter for analysis.
 
+### Checks
 
+* **Check Consolidation:**  View every check (Inferred & Authored) across all datastores.
+* **Check Card Details:**
+   * Datastore
+   * Container
+   * Field
+   * Description
+   * Tags
 
+### Anomalies
+
+* **Global Anomaly View:** Interact with all anomalies grouped or filtered by datastore.
+* **Anomaly Card Details:**
+    * Datastore
+    * Container
+    * Field
+    * Description
+    * Tags
