@@ -6,8 +6,8 @@
 
 * You can access the view through:
 
-    ![Screenshot](../assets/anomalies/universal-anomaly-light.png#only-light)
-    ![Screenshot](../assets/anomalies/universal-anomaly-dark.png#only-dark)
+    ![Screenshot](../assets/anomalies/universal-anomaly-light.png#only-light){: style="width:300px;"}
+    ![Screenshot](../assets/anomalies/universal-anomaly-dark.png#only-dark){: style="width:300px;"}
 
 * In this view, you can see the details of all the grouped datastores or filter for a specific datastore.
 
