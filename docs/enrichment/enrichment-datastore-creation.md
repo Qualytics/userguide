@@ -3,8 +3,10 @@
 
 * You can create a new `Enrichment Datastore` on `Enrichment` tab
 
-    ![Screenshot](../assets/enrichment/create-new-enrichment-light.png#only-light)![Screenshot](../assets/enrichment/create-new-enrichment-dark.png#only-dark)
-    ![Screenshot](../assets/enrichment/enrichment-tab-light.png#only-light)![Screenshot](../assets/enrichment/enrichment-tab-dark.png#only-dark)
+    ![Screenshot](../assets/enrichment/create-new-enrichment-light.png#only-light){: style="width:300px"} ![Screenshot](../assets/enrichment/create-new-enrichment-dark.png#only-dark){: style="width:300px"}
+
+    
+    ![Screenshot](../assets/enrichment/enrichment-tab-light.png#only-light){: style="width:300px"}![Screenshot](../assets/enrichment/enrichment-tab-dark.png#only-dark){: style="width:300px"}
  
 !!! info
     You can also create your `Enrichment Datastore` when you are creating your new `Datastore`

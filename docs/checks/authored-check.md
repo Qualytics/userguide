@@ -10,10 +10,22 @@
 ## Add a new Data Quality `Check`
 
 1.  After going to `Checks` tab
-2.  On the right top menu, click on `Add Check`
-    ![Screenshot](../assets/checks/add-checks-light.png#only-light)
-    ![Screenshot](../assets/checks/add-checks-dark.png#only-dark)
-3. You are going to see the `Authored Checks Details` modal:
+
+    ![Screenshot](../assets/checks/checks-tab-light.png#only-light){: style="width:300px"}
+    ![Screenshot](../assets/checks/checks-tab-dark.png#only-dark){: style="width:300px"}
+
+2.  On the right top menu, click on `Add`
+
+    ![Screenshot](../assets/checks/add-light.png#only-light){: style="width:300px"}
+    ![Screenshot](../assets/checks/add-dark.png#only-dark){: style="width:300px"}
+
+3.  Click on `Check`
+
+    ![Screenshot](../assets/checks/check-light.png#only-light){: style="width:300px"}
+    ![Screenshot](../assets/checks/check-dark.png#only-dark){: style="width:300px"}
+
+4. You are going to see the `Authored Checks Details` modal:
+
     ![Screenshot](../assets/checks/authored-check-details-light.png#only-light)
     ![Screenshot](../assets/checks/authored-check-details-dark.png#only-dark)
 

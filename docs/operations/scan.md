@@ -83,8 +83,8 @@ Users can set a beginning point by specifying a batch threshold. This ensures th
     - `Advanced`
         - Cron job expression
 
-![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
-![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)
+![Screenshot](../assets/operations/scheduling-a-scan-light.png#only-light)
+![Screenshot](../assets/operations/scheduling-a-scan-dark.png#only-dark)
 
 ## Advanced Options
 

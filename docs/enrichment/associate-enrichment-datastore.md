@@ -15,8 +15,6 @@ a list will be shown:
     ![Screenshot](../assets/enrichment/enrichment-datastore-list-light.png#only-light)
     ![Screenshot](../assets/enrichment/enrichment-datastore-list-dark.png#only-dark)
 
-    ![Screenshot](../assets/enrichment/tree-view-enrichment-light.png#only-light)
-    ![Screenshot](../assets/enrichment/tree-view-enrichment-dark.png#only-dark)
     
 * When an `Enrichment Datastore` is associated, you can see a `green` light showing that the connection between the `Datastore` and the `Enrichment Datastore` are stable or `red` if it's unstable:
 

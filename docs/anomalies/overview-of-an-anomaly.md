@@ -38,8 +38,7 @@ There are two types of anomalies in Qualytics: `Record` and `Shape`:
     4. `Rule`: `Infered` and/or `Authored` checks that failed assertions
     5. `Description`: human-readable, auto-generated description of the `Anomaly`
 
-    ![Screenshot](../assets/anomalies/anomalies-status-light.png#only-light)
-    ![Screenshot](../assets/anomalies/anomalies-status-dark.png#only-dark)
+    ![Screenshot](../assets/anomalies/active-anomalies-status-light.png#only-light){: style="height:30px"}![Screenshot](../assets/anomalies/active-anomalies-status-dark.png#only-dark){: style="height:30px"}![Screenshot](../assets/anomalies/type-anomalies-status-light.png#only-light){: style="height:30px"}![Screenshot](../assets/anomalies/type-anomalies-status-dark.png#only-dark){: style="height:30px"}![Screenshot](../assets/anomalies/source-anomalies-light.png#only-light){: style="height:30px"}![Screenshot](../assets/anomalies/source-anomalies-dark.png#only-dark){: style="height:30px"}
 
     1. `Status`: The status of the anomaly. If it's `active`, `acknowledged`, `resolved` or `invalid`
     2. `Type`: `Record` or `Shape`
