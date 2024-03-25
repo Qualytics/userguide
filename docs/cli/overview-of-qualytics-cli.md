@@ -217,7 +217,7 @@ _Note_: Errors during any of the three operations will be logged in `$HOME/.qual
 To check the status of operations:
 
 ```bash
-    qualytics check_status operation 
+    qualytics operation check_status 
                            --ids "OPERATION_IDS"
 ```
 
