@@ -2,8 +2,8 @@
 
 * The Freshness section of Qualytics is designed to provide you with real-time monitoring and assessment of the freshness of your data
     - You can access the freshness in the main menu:
-      ![Screenshot](../assets/freshness/freshness-tab-light.png#only-light)
-      ![Screenshot](../assets/freshness/freshness-tab-dark.png#only-dark)
+      ![Screenshot](../assets/freshness/freshness-tab-light.png#only-light){: style="height:50px"}
+      ![Screenshot](../assets/freshness/freshness-tab-dark.png#only-dark){: style="height:50px"}
 
 * The section presents a list of all the datastores and containers being monitored, along with their compliance status. 
 ### Datastore List
