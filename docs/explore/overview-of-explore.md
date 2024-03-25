@@ -2,6 +2,9 @@
 
 Your centralized hub for streamlined data management.
 
+![Screenshot](../assets/explore/overview-of-explore/explore-tab-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/explore/overview-of-explore/explore-tab-dark.png#only-dark){: style="height:auto;width:450px;"}
+
 ## Tabs and Features
 
 ### Insights

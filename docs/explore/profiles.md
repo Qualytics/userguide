@@ -1,6 +1,15 @@
 **Profiles Tab: Your Data Asset Inventory**
 
+![Screenshot](../assets/explore/profiles/profiles-tab-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/explore/profiles/profiles-tab-dark.png#only-dark){: style="height:auto;width:450px;"}
+
+
 This tab centralizes all your files, tables, and computed tables for easy management. 
+
+![Screenshot](../assets/explore/profiles/profiles-containers-light.png#only-light)
+![Screenshot](../assets/explore/profiles/profiles-containers-dark.png#only-dark)
+![Screenshot](../assets/explore/profiles/profiles-fields-light.png#only-light)
+![Screenshot](../assets/explore/profiles/profiles-fields-dark.png#only-dark)
 
 **Key Features:**
 

@@ -1,4 +1,11 @@
+![Screenshot](../assets/explore/anomalies/anomalies-tab-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/explore/anomalies/anomalies-tab-dark.png#only-dark){: style="height:auto;width:450px;"}
+
+
 Dive into potential data quality issues across all your datastores.
+
+![Screenshot](../assets/explore/anomalies/anomalies-light.png#only-light)
+![Screenshot](../assets/explore/anomalies/anomalies-dark.png#only-dark)
 
 ## Key Features
 

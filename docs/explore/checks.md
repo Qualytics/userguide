@@ -1,4 +1,11 @@
+![Screenshot](../assets/explore/checks/checks-tab-light.png#only-light){: style="height:auto;width:450px;"}
+![Screenshot](../assets/explore/checks/checks-tab-dark.png#only-dark){: style="height:auto;width:450px;"}
+
+
 Ensure data integrity with the Checks tab, where you'll find all checks, both inferred and authored.
+
+![Screenshot](../assets/explore/checks/checks-light.png#only-light)
+![Screenshot](../assets/explore/checks/checks-dark.png#only-dark)
 
 ## Key Features
 
