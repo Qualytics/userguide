@@ -1,4 +1,4 @@
-# Installing Helm for Qualytics Single-Tenant Instance
+# Installing helm for Qualytics single-tenant instance
 
 Welcome to the Installation Guide for setting up Helm for your Qualytics Single-Tenant Instance. 
 

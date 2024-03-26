@@ -1,4 +1,4 @@
-# Qualytics Scheduled Operations
+# Qualytics scheduled operations
 
 Users may want to create their own scheduled operations in Qualytics for various reasons, such as automating routine tasks, data exports, or running specific operations at regular intervals. This guide will walk you through the process of creating a scheduled task.
 

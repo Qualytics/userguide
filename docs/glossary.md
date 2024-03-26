@@ -74,7 +74,7 @@ hide:
 
 ### <a name="datastore"></a>__Datastore__
 
- - Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/userguide/datastores/what-is-datastore).
+ - Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [what is a Datastore](/userguide/datastores/overview-of-a-datastore/).
 
 ### <a name="datawarehouse"></a>__Data Warehouse__
 
