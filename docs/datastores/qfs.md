@@ -1,6 +1,6 @@
 # Qualytics File System (QFS)
 
-## What is a QFS?
+## Overview
 
 * A `QFS` or `Qualytics FileSystem` is a datastore option that Qualytics manages & controls.
 

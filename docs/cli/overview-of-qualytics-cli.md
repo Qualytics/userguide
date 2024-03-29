@@ -210,13 +210,14 @@ qualytics run scan
 | `--greater_than_batch`                 | FLOAT    | Only include rows where the incremental field's value is greater than this number                                                                | No       |
 | `--background`                         | BOOL     | Starts the catalog but does not wait for the operation to finish                                                                                 | No       |
 
+_Note_: Errors during any of the three operations will be logged in `$HOME/.qualytics/operation-error.log`.
 
 ### Check Operation Status
 
 To check the status of operations:
 
 ```bash
-    qualytics check_status operation 
+    qualytics operation check_status 
                            --ids "OPERATION_IDS"
 ```
 

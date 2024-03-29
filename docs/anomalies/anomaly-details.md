@@ -11,31 +11,32 @@
 * Datastore details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
-    1. The `# ID` of the anomaly: *__69962__*
-    1. The `Datastore` name: *__AzureSQL - Consolidated Balance__*
-    2. The `Location` where this data is stored: *__qualytics.consolidated_balance.bank__*
+    1. The `# ID` of the anomaly: *__32102__*
+    1. The `Datastore` name: *__SAP Financial Exports__*
+    2. The `Location` where this data is stored: *__s3a://qualytics-demo-data/orders/demo/customer-20220223.csv__*
     3. The `Record Type` of the anomaly: *__Shape__*
     4. The `Tags` are labels that serve the purpose of grouping anomalies and driving downstream workflows:
-        *__High__*
+        *__Migration__* *__Low__*
     5. The `Status` of the selected Anomaly: *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
-    6. The `Detected at` of the anomaly creation time: *__02/21/23 5:40 PM__*
+    6. The `Detected at` of the anomaly creation time: *__1 year ago__*
     
 * Failed Fields details:
     ![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
     ![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
 
-    * `Field`: all the fields of that specific anomaly found: *__currency__*
+    * `Field` ![Screenshot](../assets/anomalies/field-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/field-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: all the fields of that specific anomaly found: *__company_name__*
 
     * `Rule`: rule type that failed the assertion(s)
         *You can check all the Rule types [here.](/userguide/checks/what-is)*
     
     * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)
 
-    * `Coverage` ![Screenshot](../assets/anomalies/coverage-dark.png){: style="width:25px;height:25px;margin-bottom:-5px"}: the expected tolerance of the rule
+    * `Coverage` ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: the expected tolerance of the rule
 
-    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type.png){: style="width:20px;height:20px;margin-bottom:-5px"}: `Infered` or `Authored`
+    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/quality-check-type-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: `Infered` or `Authored`
 
-     4. The rule type `Tag`
+    * `Coverage` ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: the expected tolerance of the rule
+     4. The rule type `Tag` ![Screenshot](../assets/anomalies/tags-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/tags-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
 
 * Source Records:
 
@@ -50,10 +51,13 @@
 
 * Clicking into a `Rule` will highlight its details and enables users to edit the rule as well:
 
-![Screenshot](../assets/anomalies/infered-check-details-section-light.png#only-light)
-![Screenshot](../assets/anomalies/infered-check-details-section-dark.png#only-dark)
+![Screenshot](../assets/anomalies/infered-check-details-section-light.png#only-light){: style="width:500px"}
+![Screenshot](../assets/anomalies/infered-check-details-section-dark.png#only-dark){: style="width:500px"}
 
-* An anomaly can be archived via the ![Screenshot](../assets/anomalies/archive.png){: style="width:20px;height:20px;margin-bottom:-5px"} button.
+* An anomaly can be archived pressing the `Check Actions` menu and `Archive`.
+
+![Screenshot](../assets/anomalies/archive-light.png#only-light)
+![Screenshot](../assets/anomalies/archive-dark.png#only-dark)
 
 * If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Coverage` percentage for that anomaly.
 
@@ -68,8 +72,4 @@
 
 Qualytics can also provide you a suggested value
 
-![Screenshot](../assets/anomalies/suggested-remediation-value-light.png#only-light)
-![Screenshot](../assets/anomalies/suggested-remediation-value-dark.png#only-dark)
-
-![Screenshot](../assets/anomalies/suggested-value-light.png#only-light)
-![Screenshot](../assets/anomalies/suggested-value-dark.png#only-dark)
+![Screenshot](../assets/anomalies/suggested-remediation-value-light.png#only-light){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-remediation-value-dark.png#only-dark){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-value-light.png#only-light){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-value-dark.png#only-dark){: style="width:150px"}

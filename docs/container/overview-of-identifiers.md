@@ -15,6 +15,11 @@ There are two types of identifiers can be declared for a Table:
     ![Screenshot](../assets/identifiers/identifiers-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifiers-dark.png#only-dark)
 
+* Click on `Settings` button:
+
+    ![Screenshot](../assets/identifiers/identifier-menu-light.png#only-light)
+    ![Screenshot](../assets/identifiers/identifier-menu-dark.png#only-dark)
+
 * In the pop-up modal, specific configuration is displayed and can be edited:
   
     ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light)

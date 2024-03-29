@@ -1,4 +1,4 @@
-# Profile Operation
+# Profile operation
 
 * A `Profile Operation` will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 

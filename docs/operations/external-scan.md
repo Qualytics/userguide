@@ -1,4 +1,4 @@
-# External Scan Operation
+# External scan operation
 
 External Scan is a specialized Scan Operation that enables you to assert data quality checks against data residing outside the platform. 
 
