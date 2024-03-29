@@ -1,4 +1,4 @@
-# Scan Operation
+# Scan operation
 
 
 The Scan Operation is executed on a Datastore to assert the data quality checks defined for the named collections of data (e.g. tables, views, files, topics) within it. The operation will:
@@ -83,8 +83,8 @@ Users can set a beginning point by specifying a batch threshold. This ensures th
     - `Advanced`
         - Cron job expression
 
-![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
-![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)
+![Screenshot](../assets/operations/scheduling-a-scan-light.png#only-light)
+![Screenshot](../assets/operations/scheduling-a-scan-dark.png#only-dark)
 
 ## Advanced Options
 
