@@ -5,31 +5,40 @@ hide:
 
 ## Release Notes
 
-### 2024.03.22 { id=2024.03.22}
+### 2024.03.29 { id=2024.03.29}
 
 #### Feature Enhancements
 
-- Support for Computed Files:
-    - Implemented support for computed files, empowering users to create computed files based on existing containers using SparkSQL, similar to Computed Tables. This enhancement expands data processing capabilities within the platform, providing users with more options for data manipulation and analysis.
+- Data Preview
+    - Introducing the "Data Preview" tab, providing users with a streamlined preview of container data within the platform. This feature aims to enhance the user experience for tasks such as debugging checks, offering a grid view showcasing up to 100 rows from the container's source.
+        - Data Preview Tab: Implemented a new tab for viewing container data, limited to displaying a maximum of 100 rows for improved performance.
+        - Filter Support: Added functionality to apply filter clauses to the data preview, enabling users to refine displayed rows based on specific criteria.
+        - UI Caching: Implemented a caching layer within the UI to enhance performance and reduce unnecessary network requests, storing the latest refreshed data along with applied filters.
 
-- Enhanced Platform Onboarding Experience:
-    - Improved the platform's fresh state user experience by providing brief information on how the platform works. This enhancement aims to enhance the onboarding experience for users before they create their first datastore, providing them with a better understanding of the platform's functionalities and workflows.
+- Enhanced Syntax Highlight Inputs
+    - Improved the syntax highlight inputs for seamless inline editing, minimizing the friction of entering expressions. This feature includes a dual-mode capability, allowing users to type directly within the input field or utilize an expanded dialog for more complex entries, significantly improving user experience.
 
-- Inference Option in Container Settings:
-    - Introduced a new option in container settings, enabling users to customize inference behavior. This addition offers greater flexibility in data processing, allowing users to tailor inference settings according to their specific requirements.
+- Volumetric Measurements
+    - Periodically measure container volumetrics for a more robust approach. This update focuses on measuring only containers without a volume measure in the last 24 hours and scheduling multiple runs of the job daily.
 
-- Gradient Styling in Bar Charts:
-    - Implemented gradient styling to bar charts in the Overview tab (Datastore/Container context) and Profiles/Scans under the Insights tab in the Explore page. This enhancement enhances visual aesthetics and clarity, improving the overall user experience when visualizing data insights.
+- Sort Tags by Color
+    - Users can now sort tags by color, visually grouping similar colors for easier navigation and management.
 
-- Improved Notification Rules List:
-    - Enhanced the notification rules list to display rows instead of cards. This improvement streamlines the presentation of notification rules, providing users with a clearer and more compact view of their configured rules.
+- Download Source Records
+    - Added a "Download Source Records" feature to the Anomaly view in the UI, allowing users to export data held in the enrichment store for that anomaly in CSV format.
+
+- Check Templates Navigation
+    - Implemented a breadcrumb trail for the Check Template page to improve user navigation.
 
 #### General Fixes
 
-- Prevented Watch Trigger for Chart Colors:
-    - Addressed an issue where a watch trigger caused chart colors to render as black upon navigating back with a global filter selected. This fix ensures consistent color rendering for better visualization, enhancing the overall user experience when interacting with charts and maintaining visual consistency across the platform.
-- General fixes and improvements
+- Fix Scheduling Issues
+    - Resolved scheduling issues affecting specific sets of containers, particularly impacting scheduled profile and scan operations. Users must manually add new profiles after catalog operations or computed file/table creation for inclusion in existing scheduled operations.
 
+- Fix Notifications Loading Issue on Large Screens
+    - Fixed an issue where the infinity loading feature for the user notification list was not functioning properly on large screens. The fix ensures correct triggering of infinity loading regardless of screen size, allowing all notifications to be accessed properly.
+
+- General fixes and improvements
 
 ### 2024.03.15 { id=2024.03.15}
 
@@ -74,6 +83,8 @@ hide:
 - General fixes and improvements
 
 ### 2024.03.07 { id=2024.03.07}
+
+#### General Fixes
 
 - Corrected MatchesPattern Checks Inference:
     - Fixed an issue where the inference engine generated MatchesPattern checks that erroneously asserted false on more than 10% of training data. This resolution ensures all inferred checks now meet the 99% coverage criterion, aligning accurately with their training datasets.
