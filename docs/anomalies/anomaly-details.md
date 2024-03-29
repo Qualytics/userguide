@@ -1,4 +1,4 @@
-# Anomaly Details
+## Overview
 
 * The `Anomaly Details` modal provides specific details about the Anomaly, including source record and checks that failed assertions, along with ability to take `Notes` and provide feedback to ML methods through updating `Status` of the anomaly.
 
@@ -8,46 +8,64 @@
 * Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
     *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
 
-* Datastore details:
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
-    1. The `# ID` of the anomaly: *__32102__*
-    1. The `Datastore` name: *__SAP Financial Exports__*
-    2. The `Location` where this data is stored: *__s3a://qualytics-demo-data/orders/demo/customer-20220223.csv__*
-    3. The `Record Type` of the anomaly: *__Shape__*
-    4. The `Tags` are labels that serve the purpose of grouping anomalies and driving downstream workflows:
-        *__Migration__* *__Low__*
-    5. The `Status` of the selected Anomaly: *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
-    6. The `Detected at` of the anomaly creation time: *__1 year ago__*
+## Datastore details
+
+![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
+![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
+
+1. The `# ID` of the anomaly: *__32102__*
+2. The `Datastore` name: *__SAP Financial Exports__*
+3. The `Location` where this data is stored: *__s3a://qualytics-demo-data/orders/demo/customer-20220223.csv__*
+4. The `Record Type` of the anomaly: *__Shape__*
+5. The `Tags` are labels that serve the purpose of grouping anomalies and driving downstream workflows:
+    *__Migration__* *__Low__*
+6. The `Status` of the selected Anomaly: *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
+7. The `Detected at` of the anomaly creation time: *__1 year ago__*
     
-* Failed Fields details:
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
+## Failed Fields details:
 
-    * `Field` ![Screenshot](../assets/anomalies/field-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/field-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: all the fields of that specific anomaly found: *__company_name__*
+![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
+![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
 
-    * `Rule`: rule type that failed the assertion(s)
-        *You can check all the Rule types [here.](/userguide/checks/what-is)*
-    
-    * `Violation`: details of how the anomaly failed the assertion(s) of rule(s)
+### Field ![Screenshot](../assets/anomalies/field-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/field-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
 
-    * `Coverage` ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: the expected tolerance of the rule
+All the fields of that specific anomaly found: *__company_name__*
 
-    * `Type`  ![Screenshot](../assets/anomalies/quality-check-type-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/quality-check-type-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: `Infered` or `Authored`
+### Rule
 
-    * `Coverage` ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}: the expected tolerance of the rule
-     4. The rule type `Tag` ![Screenshot](../assets/anomalies/tags-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/tags-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
+Rule type that failed the assertion(s)
 
-* Source Records:
+*You can check all the Rule types [here.](/userguide/checks/what-is)*
 
-    Show in a tabular view all the records and fields and highlight records with anomaly data based on the rule type
+### Violation
 
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-3-light.png#only-light)
-    ![Screenshot](../assets/anomalies/anomaly-details-tab-3-dark.png#only-dark)
-        *Users can filter by Field in this view*
+Details of how the anomaly failed the assertion(s) of rule(s)
 
+### Coverage ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
 
-# Infered check details
+The expected tolerance of the rule
+
+### Type  ![Screenshot](../assets/anomalies/quality-check-type-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/quality-check-type-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
+
+`Infered` or `Authored`
+
+### Coverage ![Screenshot](../assets/anomalies/coverage-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/coverage-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"} 
+
+The expected tolerance of the rule
+
+### Tag
+
+The rule type `Tag` ![Screenshot](../assets/anomalies/tags-light.png#only-light){: style="height:35px;margin-bottom:-5px"} ![Screenshot](../assets/anomalies/tags-dark.png#only-dark){: style="height:35px;margin-bottom:-5px"}
+
+## Source Records
+
+Show in a tabular view all the records and fields and highlight records with anomaly data based on the rule type
+
+![Screenshot](../assets/anomalies/anomaly-details-tab-3-light.png#only-light)
+![Screenshot](../assets/anomalies/anomaly-details-tab-3-dark.png#only-dark)
+    *Users can filter by Field in this view*
+
+## Infered check details
 
 * Clicking into a `Rule` will highlight its details and enables users to edit the rule as well:
 
@@ -56,8 +74,8 @@
 
 * An anomaly can be archived pressing the `Check Actions` menu and `Archive`.
 
-![Screenshot](../assets/anomalies/archive-light.png#only-light)
-![Screenshot](../assets/anomalies/archive-dark.png#only-dark)
+![Screenshot](../assets/anomalies/archive-light.png#only-light){: style="width:150px"}
+![Screenshot](../assets/anomalies/archive-dark.png#only-dark){: style="width:150px"}
 
 * If you expand the section `Advanced Options` you can add a `Filter` clause and also change the `Coverage` percentage for that anomaly.
 
@@ -68,8 +86,15 @@
 !!! info
     You can create a computed table and use multiple fields from different tables in a filter clause
 
-# Suggested remediation
+## Suggested remediation
 
 Qualytics can also provide you a suggested value
 
 ![Screenshot](../assets/anomalies/suggested-remediation-value-light.png#only-light){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-remediation-value-dark.png#only-dark){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-value-light.png#only-light){: style="width:150px"}![Screenshot](../assets/anomalies/suggested-value-dark.png#only-dark){: style="width:150px"}
+
+## Download Source Records
+
+Download the source records for further analysis or external use.
+
+![Screenshot](../assets/container/data-preview/download-source-records-light.png#only-light){: style="width:440px"}
+![Screenshot](../assets/container/data-preview/download-source-records-dark.png#only-dark){: style="width:440px"}

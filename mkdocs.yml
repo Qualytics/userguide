@@ -54,6 +54,7 @@ nav:
       - enrichment/associate-enrichment-datastore.md
     - Containers: 
       - container/container.md
+      - container/data-preview.md
       - container/overview-of-a-computed-table-and-file.md
       - container/export-metadata.md
       - container/overview-of-identifiers.md
