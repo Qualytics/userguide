@@ -104,9 +104,11 @@ Currently, there are three types of remediation strategies:
 - **Overwrite**: Replicate source containers using an overwrite strategy.
 
 !!! Note
-	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_remediation_<container_name>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
+	The naming convention for the remediation tables follows the pattern of `<enrichment_prefix>_remediation_<container_id>`, where `<enrichment_prefix>` is user-defined during the Enrichment Datastore configuration and `<container_name>` corresponds to the original source container.
 
 #### Illustrative Table
+
+`_{ENRICHMENT_CONTAINER_PREFIX}_REMEDIATION_{CONTAINER_ID}`
 
 This remediation table is an illustrative snapshot of the "Orders" container for reference purposes.
 
