@@ -50,6 +50,7 @@ nav:
       - operations/external-scan.md
     - Enrichment Datastores:
       - enrichment/overview-of-an-enrichment-datastore.md
+      - enrichment/enrichment-datastore-preview.md
       - enrichment/enrichment-datastore-creation.md
       - enrichment/associate-enrichment-datastore.md
     - Containers: 
