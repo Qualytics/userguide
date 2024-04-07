@@ -2,8 +2,8 @@
 # Associate an enrichment datastore
 
 1. Once you have selected your `Datastore`, you can click on the gear icon and select `Enrichment`: <br>
-     ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-light.png#only-light)
-     ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-dark.png#only-dark)
+     ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-light.png#only-light){: style="width:450px"}
+     ![Screenshot](../assets/enrichment/create-new-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
 
 2. If you already have created an `Enrichment Datastore` in `Enrichment Datastores` section and enable to use an existing Enrichment Datastore
 <br>
