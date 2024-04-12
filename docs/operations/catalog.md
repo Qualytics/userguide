@@ -10,7 +10,7 @@ The Catalog Operation is run on a Datastore to import the named collections (e.g
     * The attributes of the named collection are recorded as special identifiers and can be manually overridden.
 
 ---
-# Operation Configuration
+## Operation Configuration
 
 
 A Catalog Operation can be configured with the following options:
