@@ -14,7 +14,7 @@
     * Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Datastore. It's recommended to run Profile operations periodically to update inferred rules.
 
 ---
-# Operation Configuration
+## Operation Configuration
 
 ![Screenshot](../assets/operations/operation-profile-light.png#only-light)
 ![Screenshot](../assets/operations/operation-profile-dark.png#only-dark)
@@ -24,7 +24,7 @@ A Profile Operation can be configured with the following options:
 * `Record limit` - Profile only a subset of the available data
 * `Disable Check Inference` - Update field metadata without adjusting or infering data quality checks
 * `Target selection`
-    - All tables
+    - All tables/files
     - Subset of available named collections (tables, files, etc.)
 
     ![Screenshot](../assets/operations/operation-profile-specific-tables-light.png#only-light)
@@ -40,5 +40,3 @@ A Profile Operation can be configured with the following options:
 
 ![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)
 ![Screenshot](../assets/operations/scheduling-a-profile-dark.png#only-dark)
-
-<!-- * TODO - ADD DETAILS ABOUT FRESHNESS SLA FUNCTIONALITY. ADD DETAILS OF HOW OFTEN ETC FROM API DOCUMENTATION AS WELL -->

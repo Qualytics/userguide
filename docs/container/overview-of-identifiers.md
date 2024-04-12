@@ -10,7 +10,7 @@ There are two types of identifiers can be declared for a Table:
 
 ## Managing an Identifier
 
-* You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`/`file`:
+* You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`:
  
     ![Screenshot](../assets/identifiers/identifiers-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifiers-dark.png#only-dark)
@@ -22,8 +22,8 @@ There are two types of identifiers can be declared for a Table:
 
 * In the pop-up modal, specific configuration is displayed and can be edited:
   
-    ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light)
-    ![Screenshot](../assets/identifiers/identifiers-screen-dark.png#only-dark)
+    ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light){: style="width:550px;"}
+    ![Screenshot](../assets/identifiers/identifiers-screen-dark.png#only-dark){: style="width:550px;"}
 
 
 ## Incremental Strategy
