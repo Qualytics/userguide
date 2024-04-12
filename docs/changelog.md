@@ -5,6 +5,26 @@ hide:
 
 ## Release Notes
 
+### 2024.04.12 { id=2024.04.12}
+
+#### Feature Enhancements
+
+- File Pattern Overrides:
+    - We have added support in the UI to override a file pattern. Now, a file pattern overwritten by a user will replace the one that the system generated during the first catalog. To have a new file pattern in the UI, users need to perform a new catalog operation without prune.
+- Batch Edit in the Check Templates Library::
+    - We are now supporting batch edits for check templates in the Library. This enhancement will allow filters and tags.
+- Improved Presentation of Incremental, Remediation, and Infer Constraints:
+    - We have improved the presentation of Incremental, Remediation, and Infer Constraints in the operation listing for catalog, profile, and scan operations. The Incremental, Remediation, and Infer Constraints icons have been added to the list of items, and the visualization of these items has been enhanced.
+- Default Placeholders for Computed File in UI:
+    - We are now automatically populating the form dialog with fields from the selected container. This improvement simplifies the process for users, especially in scenarios where they wish to select or cast specific fields directly from the source container.
+
+#### General Fixes
+
+- Tree View Default Ordering:
+    - We have updated the tree view default ordering. Datastore names are now grouped and presented in alphabetical order.
+
+- General fixes and improvements
+
 ### 2024.04.06 { id=2024.04.06 }
 
 #### Breaking Changes
