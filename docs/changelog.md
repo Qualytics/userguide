@@ -5,6 +5,39 @@ hide:
 
 ## Release Notes
 
+### 2024.04.23 { id=2024.04.23}
+
+#### Feature Enhancements
+
+- Introduction of Comparators for Quality Checks:
+    - Launched new Comparator properties across several rule types, enhancing the flexibility in defining quality checks. Comparators allow users to set margins of error, accommodating slight variations in data validation:
+        - Numeric Comparators: Enables numeric comparisons with a specified margin, which can be set as either a fixed absolute value or a percentage, accommodating datasets where minor numerical differences are acceptable.
+        - Duration Comparators: Supports time-based comparisons with flexibility in duration differences, essential for handling time-based data with variable precision.
+        - String Comparators: Facilitates string comparisons by allowing for variations in spacing, ideal for textual data where minor inconsistencies may occur.
+    - Applicable to rule types such as Equal To, Equal To Field, Greater Than, Greater Than Field, Less Than, Less Than Field, and Is Replica Of.
+
+- Introduced Row Comparison in the isReplicaOf Rule:
+    - Improved the rule to support row comparison by id, enabling more precise anomaly detection by allowing users to specify row identifiers for unique row comparison. Key updates include:
+        - Revamp of the source record presentation to highlight differences between the left and right containers at the cell level, enhancing visibility into anomalies.
+        - New input for specifying unique row identifiers, transitioning from symmetric difference to row comparison when set.
+        - The original behavior of symmetric comparison remains unchanged if no row identifiers are provided.
+
+- New equalTo Rule Type for Direct Value Comparisons
+    - Introduced the equalTo rule type, enabling precise assertions that selected fields match a specified value. This new rule not only simplifies the creation of checks for constant values across datasets but also supports the use of comparators, allowing for more flexible and nuanced data validation.
+
+- Redirect Links for Requested Containers in Operation Details:
+    - Introduced redirect links in the "Containers Requested" section of operation results. This enhancement provides direct links to the requested containers (such as tables or files), facilitating quicker navigation and streamlined access to relevant operational data.
+
+- Enhanced Description Input with Expandable Option:
+    - Implemented an expandable option for the Description input in the Check Form & Template Form. This enhancement allows users to more comfortably manage lengthy text entries, improving the usability of the form by accommodating extensive descriptions without compromising the interface's usability.
+
+#### General Fixes
+
+- Addressed Data Preview Timeout Issues:
+    - Tackled the timeout problems in the data preview feature, ensuring that data retrieval processes complete successfully within the new extended timeout limits.
+
+- General fixes and improvements
+
 ### 2024.04.12 { id=2024.04.12}
 
 #### Feature Enhancements
