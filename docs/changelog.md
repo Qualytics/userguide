@@ -5,7 +5,7 @@ hide:
 
 ## Release Notes
 
-### 2024.04.22 { id=2024.04.22}
+### 2024.04.23 { id=2024.04.23}
 
 #### Feature Enhancements
 
@@ -27,6 +27,9 @@ hide:
 
 - Redirect Links for Requested Containers in Operation Details:
     - Introduced redirect links in the "Containers Requested" section of operation results. This enhancement provides direct links to the requested containers (such as tables or files), facilitating quicker navigation and streamlined access to relevant operational data.
+
+- Enhanced Description Input with Expandable Option:
+    - Implemented an expandable option for the Description input in the Check Form & Template Form. This enhancement allows users to more comfortably manage lengthy text entries, improving the usability of the form by accommodating extensive descriptions without compromising the interface's usability.
 
 #### General Fixes
 
