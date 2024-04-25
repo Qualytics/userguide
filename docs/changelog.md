@@ -5,6 +5,20 @@ hide:
 
 ## Release Notes
 
+### 2024.04.25 { id=2024.04.25}
+
+#### Feature Enhancements
+
+- Profile Results Modal:
+    - Introducing a detailed Results Modal for each profile operation. Users can now view comprehensive statistics about the produced container profiles and their partitions, enhancing their ability to analyze data effectively.
+
+- Checks Synchronized Count:
+    - The operations list now includes the count of synchronized checks for datastore and explore operations. This addition streamlines the identification of operations, improving user experience.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2024.04.23 { id=2024.04.23}
 
 #### Feature Enhancements
