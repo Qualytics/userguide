@@ -10,6 +10,7 @@ copyright: Copyright &copy; 2020 - 2023 Qualytics
 
 # Page tree
 nav:
+  - Home: https://qualytics.ai
   - Introduction: index.md
   - Getting started:
     - quick-start-guide.md
@@ -53,7 +54,7 @@ nav:
       - enrichment/enrichment-datastore-preview.md
       - enrichment/enrichment-datastore-creation.md
       - enrichment/associate-enrichment-datastore.md
-    - Containers: 
+    - Containers:
       - container/container.md
       - container/data-preview.md
       - container/overview-of-a-computed-table-and-file.md
