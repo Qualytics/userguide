@@ -88,7 +88,6 @@ nav:
         - Greater than field: checks/greater-than-field-check.md
         - Is address: checks/is-address.md
         - Is credit card: checks/is-credit-card-check.md
-        - Is not replica of: checks/is-not-replica-of-check.md
         - Is replica of: checks/is-replica-of-check.md
         - Is type: checks/is-type-check.md
         - Less than: checks/less-than-check.md
