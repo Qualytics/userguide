@@ -21,7 +21,7 @@ hide:
 #### General Fixes
 
 - Locked Template Field Editing:
-    - Resolves an issue where selecting a new container in the check-form would reset check properties, causing problems for locked templates. The fix ensures that checks derived from templates retain their properties, allowing users to modify the field_to_compare field as needed.
+    - Resolves an issue where selecting a new container in the check form would reset check properties, causing problems for locked templates. The fix ensures that checks derived from templates retain their properties, allowing users to modify the field_to_compare field as needed.
 
 - General fixes and improvements
 
