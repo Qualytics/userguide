@@ -34,6 +34,7 @@ Specify the datastore and table/file where the replica of the targeted fields is
 
 | Name       | Description                                                   |
 |------------|---------------------------------------------------------------|
+| <div class="text-primary">Row Identifiers</div>  | The list of fields defining the compound key to identify rows in the comparison analysis. |
 | <div class="text-primary">Datastore</div>  | The source datastore where the replica of the targeted field(s) is located. |
 | <div class="text-primary">Table/file</div> | The table, view or file in the source datastore that should serve as the replica. |
 
