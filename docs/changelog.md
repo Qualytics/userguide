@@ -5,6 +5,26 @@ hide:
 
 ## Release Notes
 
+### 2024.05.02 { id=2024.05.02}
+
+#### Feature Enhancements
+
+- Datastore Connections:
+    - Users can now create connections that can be shared across different datastores. This introduces a more flexible approach to managing connections, allowing users to streamline their workflow and reduce duplication of effort. With shared connections, users can easily reuse common elements such as hostname and credentials across various datastores, enhancing efficiency and simplifying management.
+
+- File Container Header Configuration:
+    - Adds support for setting the hasHeader boolean property on File Containers, enabling users to specify whether their flat file data sources include a header row. This enhances compatibility and flexibility when working with different file formats.
+
+- Improved Error Handling in Delete Dialogs:
+    - Error handling within delete dialogs has been revamped across the application. Error messages will now be displayed directly within the dialog itself, providing clearer feedback and preventing misleading success messages in case of deletion issues.
+
+#### General Fixes
+
+- Locked Template Field Editing:
+    - Resolves an issue where selecting a new container in the check form would reset check properties, causing problems for locked templates. The fix ensures that checks derived from templates retain their properties, allowing users to modify the field_to_compare field as needed.
+
+- General fixes and improvements
+
 ### 2024.04.25 { id=2024.04.25}
 
 #### Feature Enhancements
