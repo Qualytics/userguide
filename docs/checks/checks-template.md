@@ -1,4 +1,4 @@
-# Check template
+# Check Templates
 
 The `Check Templates` empowers users to create, manage, and apply standardized checks across different datastores efficiently.
 
