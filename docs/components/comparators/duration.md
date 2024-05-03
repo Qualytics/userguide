@@ -14,14 +14,14 @@ The unit of time you select determines how granular the comparison is:
 
 Value sets the maximum acceptable difference in time to consider two values as equal. It serves to define the margin of error, accommodating small discrepancies that naturally occur over time.
 
-??? example "Illustration"
-    _TBD_
+??? example "Illustration using Duration Comparator"
 
-    **Thresholds**: Min Value = 100, Max Value = 300
+    | Unit      | Value A | Value B | Difference | Threshold | Are equal? |
+    |-----------|--------------------|------------------|------------|-------------------------------|------------------|
+    | Millis    | 500 ms             | 520 ms           | 20 ms      | 25 ms                         | True               |
+    | Seconds   | 30 sec             | 31 sec           | 1 sec      | 2 sec                         | True               |
+    | Days      | 5 days             | 7 days | 2 days   | 1 day                      | <div class="text-negative">False</div>               |
+    | Millis    | 1000 ms            | 1040 ms          | 40 ms      | 25 ms                         | <div class="text-negative">False</div> |
+    | Seconds   | 45 sec             | 48 sec           | 3 sec      | 2 sec                         | <div class="text-negative">False</div> |
 
-    | Scan | Current Value | Anomaly Detected |
-    |------|---------------|------------------|
-    | #1    | 150           | No              |
-    | #2    | <div class="text-negative">90</div> | <div class="text-negative">Yes</div> |
-    | #3    | 250           | No               |
-    | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
+

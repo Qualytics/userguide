@@ -15,28 +15,27 @@ The threshold is the value you set to define the margin of error:
 - For **Percentage Value**, the threshold is the percentage that describes how much a value can deviate from a reference value and still be considered equal.
 
 ??? example "Illustration using Absolute Value"
-    _TBD_
+    
+    In this example, it is being compared `Value A` and `Value B` according to the defined **Threshold** of **50**.
 
-    **Thresholds**: Min Value = 100, Max Value = 300
+    | Value A | Value B | Difference | Are equal? |
+    |---------|---------|------------|------------------|
+    | 100     | 150     | 50         | True               |
+    | 100     | 90      | 10         | True              |
+    | 100     | 155     | 55         | <div class="text-negative">False</div> |
+    | 100     | 49      | 51         | <div class="text-negative">False</div> |
 
-    | Scan | Current Value | Anomaly Detected |
-    |------|---------------|------------------|
-    | #1    | 150           | No              |
-    | #2    | <div class="text-negative">90</div> | <div class="text-negative">Yes</div> |
-    | #3    | 250           | No               |
-    | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
 
 ??? example "Illustration using Percentage Value"
-    _TBD_
 
-    **Thresholds**: Min Percentage Change = -20%, Max Percentage Change = 50%
+    In this example, it is being compared `Value A` and `Value B` according to the defined **Threshold** of **10%**.
 
-    **Percentage Change Formula**: ( (current_value - previous_value) / previous_value ) * 100
+    **Percentage Change Formula**: [ (`Value B` - `Value A`) / `Value A` ] * 100
 
-    | Scan | Previous Value | Current Value | Percentage Change           | Anomaly Detected |
-    |------|----------------|---------------|-----------------------------|------------------|
-    | 1    | -              | 100           | -                           | No               |
-    | 2    | 100            | 150           | 50%                         | No               |
-    | 3    | 150            | 120           | -20%                        | No               |
-    | 4    | 120            | 65            | <div class="text-negative">-45.83%</div> | <div class="text-negative">Yes</div> |
-    | 5    | 65             | 110           | <div class="text-negative">69.23%</div>  | <div class="text-negative">Yes</div>  |
+    | Value A | Value B | Percentage Change | Are equal? |
+    |-----------------|---------------|--------------------|------------------|
+    | 120             | 132           | 10%                | True               |
+    | 150             | 135           | 10%                | True               |
+    | 200             | 180           | 10%                | True               |
+    | 160             | 150           | 6.25%              | True               |
+    | 180             | 200           | 11.11%             | <div class="text-negative">False</div> |

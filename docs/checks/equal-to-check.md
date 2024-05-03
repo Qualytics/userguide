@@ -30,6 +30,15 @@ Specify the field to compare for equality with the selected field.
 | Name                 | Description                                                                   |
 |----------------------|-------------------------------------------------------------------------------|
 | <div class="text-primary">Value</div> | Specifies the value a field should be equal to. |
+| <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
+
+!!! note "Details"
+    {%
+        include-markdown "components/comparators/index.md"
+    %}
+    {%
+        include-markdown "components/comparators/numeric.md"
+    %}
 
 ### Anomaly Types
 
