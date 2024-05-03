@@ -225,6 +225,7 @@ plugins:
   - search
   - git-revision-date-localized
   - include-markdown
+  - macros
 
 extra:
   analytics:
@@ -244,3 +245,4 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="https://github.com/Qualytics/userguide/issues" target="_blank" rel="noopener">issue tracker for this user guide</a>.
+  comparator_short_desc: Specifies how variations are handled, allowing for slight deviations within a defined margin of error.

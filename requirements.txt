@@ -1,3 +1,4 @@
 mkdocs-material==9.1.9
 mkdocs-git-revision-date-localized-plugin
 mkdocs-include-markdown-plugin==6.0.1
+mkdocs-macros-plugin==1.0.5
