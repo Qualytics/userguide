@@ -68,50 +68,50 @@ nav:
       - checks/authored-check.md
       - checks/inferred-check.md
       - Rule types:
-        - After date: checks/after-date-check.md
-        - Aggregation comparison: checks/aggregation-comparison-check.md
-        - Any not null: checks/any-not-null-check.md
-        - Before date time: checks/before-date-time-check.md
+        - After Date: checks/after-date-check.md
+        - Aggregation Comparison: checks/aggregation-comparison-check.md
+        - Any Not Null: checks/any-not-null-check.md
+        - Before Date Time: checks/before-date-time-check.md
         - Between: checks/between-check.md
-        - Between times: checks/between-times-check.md
-        - Contains credit card: checks/contains-credit-card-check.md
-        - Contains email: checks/contains-email-check.md
-        - Contains social security number: checks/contains-social-security-number-check.md
-        - Contains url: checks/contains-url.md
-        - Distinct count: checks/distinct-count-check.md
-        - Equal to field: checks/equal-to-field-check.md
-        - Exists in: checks/exists-in-check.md
-        - Expected schema: checks/expected-schema-check.md
-        - Expected values: checks/expected-values-check.md
-        - Field count: checks/field-count-check.md
-        - Greater than: checks/greater-than-check.md
-        - Greater than field: checks/greater-than-field-check.md
-        - Is address: checks/is-address.md
-        - Is credit card: checks/is-credit-card-check.md
-        - Is replica of: checks/is-replica-of-check.md
-        - Is type: checks/is-type-check.md
-        - Less than: checks/less-than-check.md
-        - Less than field: checks/less-than-field-check.md
-        - Matches pattern: checks/matches-pattern-check.md
-        - Max length: checks/max-length-check.md
-        - Max partition size: checks/max-partition-size-check.md
-        - Max value: checks/max-value-check.md
+        - Between Times: checks/between-times-check.md
+        - Contains Credit Card: checks/contains-credit-card-check.md
+        - Contains Email: checks/contains-email-check.md
+        - Contains Social Security Number: checks/contains-social-security-number-check.md
+        - Contains Url: checks/contains-url.md
+        - Distinct Count: checks/distinct-count-check.md
+        - Equal to Field: checks/equal-to-field-check.md
+        - Exists In: checks/exists-in-check.md
+        - Expected Schema: checks/expected-schema-check.md
+        - Expected Values: checks/expected-values-check.md
+        - Field Count: checks/field-count-check.md
+        - Greater Than: checks/greater-than-check.md
+        - Greater Than Field: checks/greater-than-field-check.md
+        - Is Address: checks/is-address.md
+        - Is Credit Card: checks/is-credit-card-check.md
+        - Is Replica Of: checks/is-replica-of-check.md
+        - Is Type: checks/is-type-check.md
+        - Less Than: checks/less-than-check.md
+        - Less Than Field: checks/less-than-field-check.md
+        - Matches Pattern: checks/matches-pattern-check.md
+        - Max Length: checks/max-length-check.md
+        - Max Partition Size: checks/max-partition-size-check.md
+        - Max Value: checks/max-value-check.md
         - Metric: checks/metric-check.md
-        - Min length: checks/min-length-check.md
-        - Min partition size: checks/min-partition-size-check.md
-        - Min value: checks/min-value-check.md
-        - Not exists in: checks/not-exists-in-check.md
-        - Not future: checks/not-future-check.md
-        - Not negative: checks/not-negative-check.md
-        - Not null: checks/not-null-check.md
+        - Min Length: checks/min-length-check.md
+        - Min Partition Size: checks/min-partition-size-check.md
+        - Min Value: checks/min-value-check.md
+        - Not Exists In: checks/not-exists-in-check.md
+        - Not Future: checks/not-future-check.md
+        - Not Negative: checks/not-negative-check.md
+        - Not Null: checks/not-null-check.md
         - Positive: checks/positive-check.md
-        - Predicted by: checks/predicted-by-check.md
-        - Required values: checks/required-values-check.md
-        - Satisfies expression: checks/satisfies-expression-check.md
+        - Predicted By: checks/predicted-by-check.md
+        - Required Values: checks/required-values-check.md
+        - Satisfies Expression: checks/satisfies-expression-check.md
         - Sum: checks/sum-check.md
-        - Time distribution size: checks/time-distribution-size-check.md
+        - Time Distribution Size: checks/time-distribution-size-check.md
         - Unique: checks/unique-check.md
-        - User defined function: checks/user-defined-function-check.md
+        - User Defined Function: checks/user-defined-function-check.md
     - Anomalies:
       - anomalies/overview-of-an-anomaly.md
       - anomalies/anomaly-details.md
