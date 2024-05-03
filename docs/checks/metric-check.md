@@ -100,7 +100,7 @@ Determines the evaluation method and allowable limits for field value comparison
     - Represents the minimum allowable increase in the field's value.
     - A negative Min Value signifies an allowable decrease, determining the minimum value the field can drop to be considered valid.
 
-    ** Max Value**
+    **Max Value**
 
     - Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
         
