@@ -65,7 +65,7 @@ nav:
         - Identifiers: container/overview-of-identifiers.md
         - Grouping: container/overview-of-grouping.md
         - General: container/overview-of-infer-data-type.md
-    - Data Quality checks:
+    - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Check Templates: checks/checks-template.md
       - Authored: checks/authored-check.md
