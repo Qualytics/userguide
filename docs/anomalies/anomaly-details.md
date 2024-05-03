@@ -1,14 +1,13 @@
-## Overview
+# Anomaly Analysis
 
-* The `Anomaly Details` modal provides specific details about the Anomaly, including source record and checks that failed assertions, along with ability to take `Notes` and provide feedback to ML methods through updating `Status` of the anomaly.
+The `Anomaly Details` modal provides specific details about the Anomaly, including source record and checks that failed assertions, along with ability to take `Notes` and provide feedback to ML methods through updating `Status` of the anomaly.
 
 ![Screenshot](../assets/anomalies/anomaly-details-light.png#only-light)
 ![Screenshot](../assets/anomalies/anomaly-details-dark.png#only-dark)
 
-* Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. 
-    *Each of these actions will change the tolerances of the data quality checks behind the anomaly.*
+Users have the ability to provide feedback to the ML methods through Supervised Learning. Specifically, the user can `Acknowledge`, `Resolve` or `Invalidate` an anomaly. Each of these actions will change the tolerances of the data quality checks behind the anomaly.
 
-## Datastore details
+## Anomaly Header
 
 ![Screenshot](../assets/anomalies/anomaly-details-tab-1-light.png#only-light)
 ![Screenshot](../assets/anomalies/anomaly-details-tab-1-dark.png#only-dark)
@@ -22,7 +21,7 @@
 6. The `Status` of the selected Anomaly: *Users can edit the status to `Acknowledged`, `Resolved` or `Invalid`.*
 7. The `Detected at` of the anomaly creation time: *__1 year ago__*
     
-## Failed Fields details:
+## Failed Checks:
 
 ![Screenshot](../assets/anomalies/anomaly-details-tab-2-light.png#only-light)
 ![Screenshot](../assets/anomalies/anomaly-details-tab-2-dark.png#only-dark)
@@ -81,7 +80,7 @@ The `_qualytics_diff` column informs the status of each row, which can be one of
 | removed | Row found in the left side but *`missing`* in the right side. |
 | changed | Row found on both sides but there is at least one field value differing. |
 
-## Infered check details
+## Infered Check Details
 
 * Clicking into a `Rule` will highlight its details and enables users to edit the rule as well:
 
@@ -102,7 +101,7 @@ The `_qualytics_diff` column informs the status of each row, which can be one of
 !!! info
     You can create a computed table and use multiple fields from different tables in a filter clause
 
-## Suggested remediation
+## Suggested Remediation
 
 Qualytics can also provide you a suggested value
 
