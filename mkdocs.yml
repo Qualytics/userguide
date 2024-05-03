@@ -16,6 +16,8 @@ nav:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
+    - Connections:
+      - connections/overview-of-a-connection.md
     - Datastores:
       - datastores/overview-of-a-datastore.md
       - JDBC datastore:
