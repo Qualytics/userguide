@@ -16,6 +16,8 @@ nav:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
+    - Connections:
+      - connections/overview-of-a-connection.md
     - Datastores:
       - datastores/overview-of-a-datastore.md
       - JDBC datastore:
@@ -79,6 +81,7 @@ nav:
         - Contains Social Security Number: checks/contains-social-security-number-check.md
         - Contains Url: checks/contains-url.md
         - Distinct Count: checks/distinct-count-check.md
+        - Equal to: checks/equal-to-check.md
         - Equal to Field: checks/equal-to-field-check.md
         - Exists In: checks/exists-in-check.md
         - Expected Schema: checks/expected-schema-check.md
