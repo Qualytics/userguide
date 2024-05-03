@@ -1,5 +1,3 @@
-# Is Replica Of
-
 ### Definition
 
 *Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).*
@@ -34,8 +32,37 @@ Specify the datastore and table/file where the replica of the targeted fields is
 
 | Name       | Description                                                   |
 |------------|---------------------------------------------------------------|
+| <div class="text-primary">Row Identifiers</div>  | The list of fields defining the compound key to identify rows in the comparison analysis. |
 | <div class="text-primary">Datastore</div>  | The source datastore where the replica of the targeted field(s) is located. |
 | <div class="text-primary">Table/file</div> | The table, view or file in the source datastore that should serve as the replica. |
+| <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
+
+!!! note "Details"
+    <div style="margin-top: -12px;">
+    ### Row Identifiers
+    </div>
+
+    This optional input allows row comparison analysis by defining a list of fields as row identifiers, it enables a more detailed comparison between tables/files, where each row compound key is used to identify its presence or abscence in the reference table/file compared to the target table/file.  Qualytics can inform if the row exists or not and distinguish which field values differ in each row present in the reference table/file, helping to determine if it is a replica.
+
+    !!! info
+        Anomalies produced by a `IsReplicaOf` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
+        See more at: *[Comparison Source Records](/userguide/anomalies/anomaly-details/#comparison-source-records)*
+
+    {%
+        include-markdown "components/comparators/index.md"
+    %}
+    {%
+        include-markdown "components/comparators/numeric.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
+    {%
+        include-markdown "components/comparators/string.md"
+    %}
+
+
+
 
 ### Anomaly Types
 

@@ -31,6 +31,15 @@ Allows specifying a numeric value that acts as the threshold.
 |------------|-------------|
 | <div class="text-primary">Value</div>    | The number to use as the base comparison. |
 | <div class="text-primary">Inclusive</div> | If true, the comparison will also allow values equal to the threshold. Otherwise, it's exclusive. |
+| <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
+
+!!! note "Details"
+    {%
+        include-markdown "components/comparators/index.md"
+    %}
+    {%
+        include-markdown "components/comparators/numeric.md"
+    %}
 
 ### Anomaly Types
 

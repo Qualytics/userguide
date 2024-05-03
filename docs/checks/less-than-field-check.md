@@ -33,6 +33,18 @@ Allows specifying another field against which the value comparison will be perfo
 |--------------------|-------------|
 | <div class="text-primary">Field to compare</div> | Specifies the name of the field against which the value will be compared. |
 | <div class="text-primary">Inclusive</div>        | If true, the comparison will also allow values equal to the value of the other field. Otherwise, it's exclusive. |
+| <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
+
+!!! note "Details"
+    {%
+        include-markdown "components/comparators/index.md"
+    %}
+    {%
+        include-markdown "components/comparators/numeric.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
 
 ### Anomaly Types
 
