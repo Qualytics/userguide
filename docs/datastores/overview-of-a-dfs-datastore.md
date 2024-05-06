@@ -1,4 +1,4 @@
-# Overview of a DFS datastore
+# DFS Datastore Overview
 
 The DFS (Distributed File System) Datastore feature in Qualytics is designed to handle data stored in distributed file systems. 
 

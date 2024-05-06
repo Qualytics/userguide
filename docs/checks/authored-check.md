@@ -1,13 +1,8 @@
-# Authored check
-
----
+# Authored Check
 
 `Authored` checks are manually authored by a user from scratch via UI or API. There are many types of checks that can be authored through templates for common checks as well as more complex rules through `SQL` and `UDF` (in `Scala`).
 
-
----
-
-## Add a new Data Quality `Check`
+## Authoring Checks
 
 1.  After going to `Checks` tab
 
@@ -34,7 +29,6 @@
 !!! note
     * The UI will automatically adapt to a specific Check's input parameters.
 
----
 ## Authoring Checks via API
 
 * Users are able to author and interact with Checks through the API by passing JSON Payloads. Please refer to the API documentation on details: `acme.qualytics.io/api/docs`

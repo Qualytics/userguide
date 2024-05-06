@@ -3,20 +3,20 @@ Introducing Role-based Access Control - a powerful new feature that lets you cre
 
 Check out this section to learn how to set up and use Role-based Access Control in your account.
 
-* By default, all users have access to all `Public` Datastores. If you want to limit access,:
-    1. Create a new team,
-    2. Add members,
-    3. Add Datastores to new team, 
-    4. Choose whether they should have read or write access,
-    5. Remove Datastores from Step 3 from `Public`
+By default, all users have access to all `Public` Datastores. If you want to limit access:
+
+1. Create a new team,
+2. Add members,
+3. Add Datastores to new team, 
+4. Choose whether they should have read or write access,
+5. Remove Datastores from Step 3 from `Public`
 
 !!! note
     - Only Admins have the ability to add new datastores, manage users/teams, and access API keys.
----
-## Begin
-* The `Security` section allows users with `administrator` role to manage `Users`, `Teams`, `Datastores` and `API` credentials.
 
----
+## Access Security View
+
+The `Security` section allows users with `administrator` role to manage `Users`, `Teams`, `Datastores` and `API` credentials.
 
 * Find the `Security` section by clicking on `Settings` in the menu bar:
 
@@ -28,12 +28,13 @@ Check out this section to learn how to set up and use Role-based Access Control 
   ![Screenshot](../../assets/security/security-tab-light.png#only-light)
   ![Screenshot](../../assets/security/security-tab-dark.png#only-dark)
 
-## Qualytics Supported roles
+## Qualytics Supported Roles
 
-* The Qualytics Application supports 2 types of roles: `Admin` and `Member`.
-    * An `Admin` user has full access to everything in the system and can manage datastores, teams, and users. This means that an `Admin` has the ability to access everything in the application, as well as manage user accounts and team permissions.
+The Qualytics Application supports 2 types of roles: `Admin` and `Member`.
 
-    * On the other hand, a `Member` user has limited access to the system depending on the `Team` the user belongs to. 
+* An `Admin` user has full access to everything in the system and can manage datastores, teams, and users. This means that an `Admin` has the ability to access everything in the application, as well as manage user accounts and team permissions.
+
+* On the other hand, a `Member` user has limited access to the system depending on the `Team` the user belongs to. 
     
 ## Qualytics Supported permissions
 
@@ -48,7 +49,7 @@ As an `Admin` user, you can see the security page and navigate through the `User
   ![Screenshot](../../assets/security/security-overview-light.png#only-light)
   ![Screenshot](../../assets/security/security-overview-dark.png#only-dark)
 
-### Creating Teams
+### Adding Teams
   You can create a new team clicking in the `Add New Team` buttom:
 
   - ![Screenshot](../../assets/security/create-team.png){: style="height:50px;"}
@@ -79,14 +80,14 @@ As an `Admin` user, you can see the security page and navigate through the `User
 
 ### Managing Users
 
-#### Editing Role
+#### User Roles
 * In the `Users` section you can change the `Permission` to:
     - `Admin` or `Member`
 
   ![Screenshot](../../assets/security/edit-user-permission-light.png#only-light){: style="height:300px;"}
   ![Screenshot](../../assets/security/edit-user-permission-dark.png#only-dark){: style="height:300px;"}
 
-#### Adding or Removing teams
+#### User Teams
 * You can add/remove a `Team` of an `User`:
 
   ![Screenshot](../../assets/security/edit-user-team-light.png#only-light){: style="height:400px;"}

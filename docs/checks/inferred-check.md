@@ -1,12 +1,10 @@
-# Inferred check
+# Inferred Check
 
 * Qualytics automatically generates and maintains `inferred` checks by Profiling the Datastore, performing statistical analysis followed by various machine learning methods. 
 
 !!! info
      `Inferred checks` will be automatically updated with the next Profiling run.   
      `Manually` updating an inferred check will take it out of the automatic update workflow. 
-
----
 
 # Inference Engine
 
@@ -18,10 +16,5 @@
 
 * Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true above a certain threshold are converted and exposed to users as `Inferred Checks`.
 
-
     ![Screenshot](../assets/checks/infered-check-details-light.png#only-light)
     ![Screenshot](../assets/checks/infered-check-details-dark.png#only-dark)
-
-icon-anomalies-alert
-!!! note
-    * By clicking in the  ![Screenshot](../assets/checks/rule-types/icons/icon-anomalies-alert.svg) icon, you can bulk update all the anomalies of the related check

@@ -1,4 +1,4 @@
-# Overview of grouping
+# Grouping Overview
 
 The grouping is a fundamental aspect of data analysis, allowing users to organize data into meaningful categories for in-depth examination. With the ability to set grouping on Containers, users can define how data within a container should be grouped, facilitating more focused and efficient analysis.
 
@@ -18,7 +18,7 @@ By specifying different combinations of fields in the `grouping` parameter, user
 
 ## Impact on Data Profiles
 
-**The grouping has implications for various aspects of data profiling and analysis within Qualytics**
+The grouping has implications for various aspects of data profiling and analysis within Qualytics.
 
 ### Field Profiles
 

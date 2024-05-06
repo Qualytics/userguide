@@ -1,4 +1,4 @@
-# Overview of general configurations
+# General Configurations Overview
 
 ## Excluded Fields
 

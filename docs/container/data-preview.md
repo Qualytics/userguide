@@ -1,6 +1,6 @@
 # Data Preview
 
-The "Data Preview" section in the platform provides users with a streamlined preview of specific container data, offering direct insights into its structure and contents. This feature streamlines workflow processes and empowers users to make confident, data-driven decisions.
+The `Data Preview` section in the platform provides users with a streamlined preview of specific container data, offering direct insights into its structure and contents. This feature streamlines workflow processes and empowers users to make confident, data-driven decisions.
 
 `Data preview` is dedicated to displaying a concise yet comprehensive preview of container data, facilitating various tasks such as debugging quality checks and data analysis. It enhances the user experience by offering a grid view that showcases a maximum of 100 rows from the container's source records.
 

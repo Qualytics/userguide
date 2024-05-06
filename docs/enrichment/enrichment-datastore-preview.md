@@ -1,4 +1,4 @@
-## Data Preview
+# Data Preview
 
 The "Data Preview" in the Enrichment section provides users with a streamlined preview of the enrichment tables, remediation tables and metadata, offering a direct view into its structure and contents.
 
@@ -25,21 +25,21 @@ In the Data Preview tab, users can access various features to interact with the 
 
 ### Enrichment Data Tables
 
-Users are able to see the data visualization of `_FAILED_CHECKS`, `_SOURCE_RECORDS`, `_SCAN_OPERATIONS` tables
+Users are able to see the data visualization of `_FAILED_CHECKS`, `_SOURCE_RECORDS`, `_SCAN_OPERATIONS` tables.
 
 ![Screenshot](../assets/enrichment/data-preview/failed-checks-light.png#only-light)
 ![Screenshot](../assets/enrichment/data-preview/failed-checks-dark.png#only-dark)
 
 ### Remediation Data Tables
 
-Users are able to see the data visualization of remediation tables: **`_{ENRICHMENT_CONTAINER_PREFIX}_REMEDIATION_{CONTAINER_ID}`** 
+Users are able to see the data visualization of remediation tables: `_{ENRICHMENT_CONTAINER_PREFIX}_REMEDIATION_{CONTAINER_ID}`.
 
 ![Screenshot](../assets/enrichment/data-preview/remediation-table-light.png#only-light)
 ![Screenshot](../assets/enrichment/data-preview/remediation-table-dark.png#only-dark)
 
 ### Metadata 
 
-Users are able to see the metadata visualization from export containers
+Users are able to see the metadata visualization from export containers.
 
 ![Screenshot](../assets/enrichment/data-preview/metadata-light.png#only-light)
 ![Screenshot](../assets/enrichment/data-preview/metadata-dark.png#only-dark)

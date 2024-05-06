@@ -5,15 +5,14 @@ You can check more the latest version in [Qualytics CLI](https://pypi.org/projec
 ## Installation and Upgrading
 
 You can install `Qualytics CLI` via pip:
-
 ```bash
-    pip install qualytics-cli
+pip install qualytics-cli
 ```
 
 You can upgrade the `Qualytics CLI` via pip:
 
 ```bash
-    pip install qualytics-cli --upgrade
+pip install qualytics-cli --upgrade
 ```
 
 ## Usage
@@ -23,7 +22,7 @@ You can upgrade the `Qualytics CLI` via pip:
 To view available commands and their usage:
 
 ```bash
-    qualytics --help
+qualytics --help
 ```    
 
 ### Initializing Configuration
@@ -31,9 +30,9 @@ To view available commands and their usage:
 To set up your Qualytics URL and token:
 
 ```bash
-    qualytics init 
-              --url "https://your-qualytics.qualytics.io/" 
-              --token "YOUR_TOKEN_HERE"
+qualytics init 
+    --url "https://your-qualytics.qualytics.io/" 
+    --token "YOUR_TOKEN_HERE"
 ```
 
 #### Options:
@@ -49,7 +48,7 @@ To set up your Qualytics URL and token:
 To view the currently saved configuration:
 
 ```bash
-    qualytics show-config
+qualytics show-config
 ```
 
 ### Export Checks
@@ -57,10 +56,10 @@ To view the currently saved configuration:
 To export checks to a file:
 
 ```bash
-    qualytics checks export 
-                     --datastore DATASTORE_ID [--containers CONTAINER_IDS] 
-                     [--tags TAG_NAMES] 
-                     [--output LOCATION_TO_BE_EXPORTED]
+qualytics checks export 
+    --datastore DATASTORE_ID [--containers CONTAINER_IDS] 
+    [--tags TAG_NAMES] 
+    [--output LOCATION_TO_BE_EXPORTED]
 ```
 
 #### Options:
@@ -78,9 +77,9 @@ To export checks to a file:
 To export check templates:
 
 ```bash
-    qualytics checks export-templates 
-                     --enrichment_datastore_id ENRICHMENT_DATASTORE_ID 
-                     [--check_templates CHECK_TEMPLATE_IDS]
+qualytics checks export-templates 
+    --enrichment_datastore_id ENRICHMENT_DATASTORE_ID 
+    [--check_templates CHECK_TEMPLATE_IDS]
 ```
 
 #### Options:
@@ -97,9 +96,9 @@ To export check templates:
 To import checks from a file:
 
 ```bash
-    qualytics checks import 
-                     --datastore DATASTORE_ID_LIST 
-                     [--input LOCATION_FROM_THE_EXPORT]
+qualytics checks import 
+    --datastore DATASTORE_ID_LIST 
+    [--input LOCATION_FROM_THE_EXPORT]
 ```
 
 #### Options:
@@ -119,12 +118,12 @@ Allows you to trigger a catalog operation on any current datastore (datastore pe
 <!-- ![Screenshot](../assets/cli/qualytics-run-catalog.gif) -->
 
 ```bash
-    qualytics run catalog 
-                  --datastore "DATSTORE_ID_LIST" 
-                  --include "INCLUDE_LIST" 
-                  --prune 
-                  --recreate 
-                  --background
+qualytics run catalog 
+    --datastore "DATSTORE_ID_LIST" 
+    --include "INCLUDE_LIST" 
+    --prune 
+    --recreate 
+    --background
 ```
 
 #### Options:
@@ -143,19 +142,19 @@ Allows you to trigger a catalog operation on any current datastore (datastore pe
 Allows you to trigger a profile operation on any current datastore (datastore permission required by admin)
 
 ```bash
-    qualytics run profile 
-                  --datastore "DATSTORE_ID_LIST" 
-                  --container_names "CONTAINER_NAMES_LIST" 
-                  --container_tags "CONTAINER_TAGS_LIST"
-                  --infer_constraints 
-                  --max_records_analyzed_per_partition "MAX_RECORDS_ANALYZED_PER_PARTITION" 
-                  --max_count_testing_sample "MAX_COUNT_TESTING_SAMPLE"
-                  --percent_testing_threshold "PERCENT_TESTING_THRESHOLD" 
-                  --high_correlation_threshold "HIGH_CORRELATION_THRESHOLD" 
-                  --greater_then_date "GREATER_THAN_TIME"
-                  --greater_than_batch "GREATER_THAN_BATCH" 
-                  --histogram_max_distinct_values "HISTOGRAM_MAX_DISTINCT_VALUES" 
-                  --background
+qualytics run profile 
+    --datastore "DATSTORE_ID_LIST" 
+    --container_names "CONTAINER_NAMES_LIST" 
+    --container_tags "CONTAINER_TAGS_LIST"
+    --infer_constraints 
+    --max_records_analyzed_per_partition "MAX_RECORDS_ANALYZED_PER_PARTITION" 
+    --max_count_testing_sample "MAX_COUNT_TESTING_SAMPLE"
+    --percent_testing_threshold "PERCENT_TESTING_THRESHOLD" 
+    --high_correlation_threshold "HIGH_CORRELATION_THRESHOLD" 
+    --greater_then_date "GREATER_THAN_TIME"
+    --greater_than_batch "GREATER_THAN_BATCH" 
+    --histogram_max_distinct_values "HISTOGRAM_MAX_DISTINCT_VALUES" 
+    --background
 ```
 
 #### Options:
@@ -183,16 +182,16 @@ Allows you to trigger a scan operation on a datastore (datastore permission requ
 
 ```bash
 qualytics run scan 
-              --datastore "DATSTORE_ID_LIST"
-              --container_names "CONTAINER_NAMES_LIST" 
-              --container_tags "CONTAINER_TAGS_LIST"
-              --incremental 
-              --remediation 
-              --max_records_analyzed_per_partition "MAX_RECORDS_ANALYZED_PER_PARTITION" 
-              --enrichment_source_records_limit
-              --greater_then_date "GREATER_THAN_TIME" 
-              --greater_than_batch "GREATER_THAN_BATCH" 
-              --background
+    --datastore "DATSTORE_ID_LIST"
+    --container_names "CONTAINER_NAMES_LIST" 
+    --container_tags "CONTAINER_TAGS_LIST"
+    --incremental 
+    --remediation 
+    --max_records_analyzed_per_partition "MAX_RECORDS_ANALYZED_PER_PARTITION" 
+    --enrichment_source_records_limit
+    --greater_then_date "GREATER_THAN_TIME" 
+    --greater_than_batch "GREATER_THAN_BATCH" 
+    --background
 ```
 
 #### Options:
@@ -217,8 +216,8 @@ _Note_: Errors during any of the three operations will be logged in `$HOME/.qual
 To check the status of operations:
 
 ```bash
-    qualytics operation check_status 
-                           --ids "OPERATION_IDS"
+qualytics operation check_status 
+    --ids "OPERATION_IDS"
 ```
 
 <!-- ![Screenshot](../assets/cli/qualytics-operation-aborted.gif)

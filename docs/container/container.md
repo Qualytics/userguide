@@ -1,4 +1,4 @@
-# Overview of containers
+# Containers Overview
 
 Containers are fundamental entities representing structured data sets. These containers could manifest as tables in JDBC datastores or as files within DFS datastores. They play a pivotal role in data organization, profiling, and quality checks within the Qualytics application.
 

@@ -1,4 +1,4 @@
-# Overview of a JDBC datastore
+# JDBC Datastore Overview
 
 The JDBC Datastore in Qualytics facilitates seamless integration with relational databases using the Java Database Connectivity (JDBC) API. 
 This allows users to connect, analyze, and profile data stored in various relational databases. 

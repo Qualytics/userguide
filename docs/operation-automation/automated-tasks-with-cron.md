@@ -1,4 +1,4 @@
-# Qualytics scheduled operations
+# Qualytics Scheduled Operations
 
 Users may want to create their own scheduled operations in Qualytics for various reasons, such as automating routine tasks, data exports, or running specific operations at regular intervals. This guide will walk you through the process of creating a scheduled task.
 
@@ -19,7 +19,7 @@ Before proceeding, ensure that you have the following:
 Run the following command in your terminal to open the crontab editor:
 
 ```bash
-    crontab -e
+crontab -e
 ```
 
 #### 2. Add the Cron Job Entry
@@ -27,19 +27,19 @@ Run the following command in your terminal to open the crontab editor:
 In the crontab editor, add the following line to execute the curl command at your specified schedule:
 
 ```bash
-    <cronjob-expression> /usr/bin/curl --request POST --url 'https://<your-instance>.qualytics.io/api/export/<operation>?datastore=<datastore-id>&containers=<container-id-one>&containers=<container-id-two>' --header 'Authorization: Bearer <your-token>' >> <path-to-show-logs> 2>&1
+<cronjob-expression> /usr/bin/curl --request POST --url 'https://<your-instance>.qualytics.io/api/export/<operation>?datastore=<datastore-id>&containers=<container-id-one>&containers=<container-id-two>' --header 'Authorization: Bearer <your-token>' >> <path-to-show-logs> 2>&1
 ```
 
 #### 3. Example:
 For example, to run the command every 5 minutes:
 
 ```bash
-    */5 * * * * /usr/bin/curl --request POST --url 'https://your-instance.qualytics.io/api/export/anomalies?datastore=123&containers=14&containers=16' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' >> /path/to/show/logs.txt 2>&1
+*/5 * * * * /usr/bin/curl --request POST --url 'https://your-instance.qualytics.io/api/export/anomalies?datastore=123&containers=14&containers=16' --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' >> /path/to/show/logs.txt 2>&1
 ```
 #### 4. Verify or List Cron Jobs:
 
 ```bash
-    crontab -l
+crontab -l
 ```
 
 Customize the placeholders based on your specific details and requirements. Save the crontab file to activate the scheduled operation.
@@ -60,14 +60,14 @@ Before proceeding, ensure that you have the following:
 In the text editor, add the following line to execute the `Invoke-RestMethod` command:
 
 ```bash
-    Invoke-RestMethod -Method 'Post' -Uri https://<your-instance>/api/export/anomalies?datastore=<datastore-id>&containers=<container-id-one>&containers=<container-id-two> -Headers @{'Authorization' = 'Bearer <your-token>'; 'Content-Type' = 'application/json'}
+Invoke-RestMethod -Method 'Post' -Uri https://<your-instance>/api/export/anomalies?datastore=<datastore-id>&containers=<container-id-one>&containers=<container-id-two> -Headers @{'Authorization' = 'Bearer <your-token>'; 'Content-Type' = 'application/json'}
 ```
 
 #### 2. Example:
 For example, to run the command every 5 minutes:
 
 ```bash
-    Invoke-RestMethod -Method 'Post' -Uri https://your-instance.qualytics.io/api/export/anomalies?datastore=123&containers=44&containers=22 -Headers @{'Authorization' = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; 'Content-Type' = 'application/json'}
+Invoke-RestMethod -Method 'Post' -Uri https://your-instance.qualytics.io/api/export/anomalies?datastore=123&containers=44&containers=22 -Headers @{'Authorization' = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; 'Content-Type' = 'application/json'}
 ```
 
 Customize the placeholders based on your specific details and requirements. Save the script with the desired name with the extension `.ps1`.
@@ -120,13 +120,13 @@ Qualytics Account: Obtain your Qualytics API access token.
 Open a Terminal and Install Qualytics CLI:
 
 ```bash
-    pip install qualytics-cli
+pip install qualytics-cli
 ```
 
 ### Verify Installation:
 
 ```bash
-    qualytics --version
+qualytics --version
 ```
 
 ### Initialization:
@@ -134,7 +134,7 @@ Open a Terminal and Install Qualytics CLI:
 To use the Qualytics CLI, initialize it with your Qualytics instance details and API token:
 
 ```bash
-    qualytics init --url "your-domain.qualytics.io/api" --token "your-bearer-token"
+qualytics init --url "your-domain.qualytics.io/api" --token "your-bearer-token"
 ```
     
 _Replace placeholders with your Qualytics instance URL and API token._
@@ -147,7 +147,7 @@ _Replace placeholders with your Qualytics instance URL and API token._
 Use the Qualytics CLI to schedule a task automatically.
 
 ```bash
-    qualytics schedule export-metadata --crontab "<cronjob-expression>" --datastore <datastore-id> --containers <container-ids> --options <metadata-options>
+qualytics schedule export-metadata --crontab "<cronjob-expression>" --datastore <datastore-id> --containers <container-ids> --options <metadata-options>
 ```
 
 _Replace placeholders as needed._
@@ -169,20 +169,20 @@ The script files will be located in `home/user/.qualytics` with a pattern `task_
 
 ## Explanation of Placeholders:
 
-. `<cronjob-expression>`: Replace this with your desired cron expression. For example, `*/5 * * * *` means "every 5 minutes." You can check `crontab.guru` for more examples.
+* `<cronjob-expression>`: Replace this with your desired cron expression. For example, `*/5 * * * *` means "every 5 minutes." You can check `crontab.guru` for more examples.
 
-. `<your-instance>`: Replace with the actual Qualytics instance URL.
+* `<your-instance>`: Replace with the actual Qualytics instance URL.
 
-. `<operation>`: Replace with the specific operation (e.g., "anomalies", "checks" or "field-profiles").
+* `<operation>`: Replace with the specific operation (e.g., "anomalies", "checks" or "field-profiles").
 
-. `<datastore-id>`: Replace with the ID of the target datastore.
+* `<datastore-id>`: Replace with the ID of the target datastore.
 
-. `<container-id-one>` and `<container-id-two>`: Replace with the IDs of the containers. You can add more containers as needed.
+* `<container-id-one>` and `<container-id-two>`: Replace with the IDs of the containers. You can add more containers as needed.
 
-. `<container-ids>`: Comma-separated list of containers IDs or array-like format. Example: "1, 2, 3" or "[1,2,3]".
+* `<container-ids>`: Comma-separated list of containers IDs or array-like format. Example: "1, 2, 3" or "[1,2,3]".
 
-. `<options>`: Comma-separated list of op to export or all for everything. Example: anomalies, checks, field-profiles or all.
+* `<options>`: Comma-separated list of op to export or all for everything. Example: anomalies, checks, field-profiles or all.
 
-. `<your-token>`: Replace with the access token obtained from Qualytics (`Settings` -> `Security` -> `API Keys`).
+* `<your-token>`: Replace with the access token obtained from Qualytics (`Settings` -> `Security` -> `API Keys`).
 
-. `<path-to-show-logs>`: Replace with the file path where you want to store the logs.
+* `<path-to-show-logs>`: Replace with the file path where you want to store the logs.

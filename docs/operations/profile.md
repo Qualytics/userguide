@@ -1,20 +1,19 @@
-# Profile operation
+# Profile Operation
 
-* A `Profile Operation` will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
+A `Profile Operation` will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 
-* The Profile Operation is executed on a Datastore to analyze the named collections of data (tables, files, etc.) within it. The operation will:
+The Profile Operation is executed on a Datastore to analyze the named collections of data (tables, files, etc.) within it. The operation will:
 
-    * Identify the fields within the collection
-    * Gather statistical data about each field according to its declared or inferred type
-    * Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks
-    * Test the inferred data quality checks against actual source data to tune with desired sensitivities
+* Identify the fields within the collection
+* Gather statistical data about each field according to its declared or inferred type
+* Submit that metadata to the Qualytics Inference Engine to produce appropriate data quality checks
+* Test the inferred data quality checks against actual source data to tune with desired sensitivities
 
 
 !!! note
-    * Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Datastore. It's recommended to run Profile operations periodically to update inferred rules.
+    Profile Operations can be run at any time to update the inferred data quality checks automatically based on new data in the Datastore. It's recommended to run Profile operations periodically to update inferred rules.
 
----
-## Operation Configuration
+## Configuration
 
 ![Screenshot](../assets/operations/operation-profile-light.png#only-light)
 ![Screenshot](../assets/operations/operation-profile-dark.png#only-dark)
@@ -30,7 +29,7 @@ A Profile Operation can be configured with the following options:
     ![Screenshot](../assets/operations/operation-profile-specific-tables-light.png#only-light)
     ![Screenshot](../assets/operations/operation-profile-specific-tables-dark.png#only-dark)
 
-* There's also an option to schedule the operation by:
+* `Schedule Options` - There's also an option to schedule the operation by:
     - `Hourly`
     - `Daily`
     - `Weekly`
