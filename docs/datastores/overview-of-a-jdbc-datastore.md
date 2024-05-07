@@ -3,40 +3,40 @@
 The JDBC Datastore in Qualytics facilitates seamless integration with relational databases using the Java Database Connectivity (JDBC) API. 
 This allows users to connect, analyze, and profile data stored in various relational databases. 
 
-## Supported Databases:
+## Supported Databases
 
 Qualytics supports a range of relational databases, including but not limited to:
 
-- BigQuery
-- Databricks
-- DB2
-- Hive
-- MariaDB
-- Microsoft SQL Server
-- MySQL
-- Oracle
-- PostgreSQL
-- Presto
-- Amazon Redshift
-- Snowflake
-- Synapse
-- Timescale DB
-- Trino
-- Athena
+- [**BigQuery**](../datastores/bigquery.md)
+- [**Databricks**](../datastores/databricks.md.md)
+- [**DB2**](../datastores/db2.md.md)
+- [**Hive**](../datastores/hive.md.md)
+- [**MariaDB**](../datastores/maria-db.md.md)
+- [**Microsoft SQL Server**](../datastores/microsoft-sql-server.md.md)
+- [**MySQL**](../datastores/mysql.md.md)
+- [**Oracle**](../datastores/oracle.md.md)
+- [**PostgreSQL**](../datastores/postgresql.md.md)
+- [**Presto**](../datastores/presto.md.md)
+- [**Amazon Redshift**](../datastores/redshift.md.md)
+- [**Snowflake**](../datastores/snowflake.md.md)
+- [**Synapse**](../datastores/synapse.md.md)
+- [**Timescale DB**](../datastores/timescale-db.md.md)
+- [**Trino**](../datastores/trino.md.md)
+- **Athena**
 
 
-##  Connection Details:
+##  Connection Details
 
 Users are required to provide specific connection details such as Host/Port or URI for the JDBC Datastore.
 
 The connection details are used to establish a secure and reliable connection to the target database.
 
 
-## Catalog Operation:
+## Catalog Operation
 
 Upon successful verification, a Catalog operation can be initiated, providing metadata about the JDBC Datastore, including containers, field names, and record counts.
 
-## Field Types Inference:
+## Field Types Inference
 
 During the Catalog operation, Qualytics infers field types by weighted histogram analysis.
 This allows for automatic detection of data types within the JDBC Datastore, facilitating more accurate data profiling.

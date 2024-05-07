@@ -1,6 +1,6 @@
 # Profile Operation
 
-A `Profile Operation` will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
+A Profile Operation will analyze every available record in all available Containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute time.
 
 The Profile Operation is executed on a Datastore to analyze the named collections of data (tables, files, etc.) within it. The operation will:
 
@@ -20,21 +20,21 @@ The Profile Operation is executed on a Datastore to analyze the named collection
 
 A Profile Operation can be configured with the following options:
 
-* `Record limit` - Profile only a subset of the available data
-* `Disable Check Inference` - Update field metadata without adjusting or infering data quality checks
-* `Target selection`
+* **Record limit** - Profile only a subset of the available data
+* **Disable Check Inference** - Update field metadata without adjusting or infering data quality checks
+* **Target selection**
     - All tables/files
     - Subset of available named collections (tables, files, etc.)
 
     ![Screenshot](../assets/operations/operation-profile-specific-tables-light.png#only-light)
     ![Screenshot](../assets/operations/operation-profile-specific-tables-dark.png#only-dark)
 
-* `Schedule Options` - There's also an option to schedule the operation by:
-    - `Hourly`
-    - `Daily`
-    - `Weekly`
-    - `Monthly`
-    - `Advanced`
+* **Schedule Options** - There's also an option to schedule the operation by:
+    - **Hourly**
+    - **Daily**
+    - **Weekly**
+    - **Monthly**
+    - **Advanced**
         - Cron job expression
 
 ![Screenshot](../assets/operations/scheduling-a-profile-light.png#only-light)

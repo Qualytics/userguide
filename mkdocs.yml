@@ -12,12 +12,11 @@ copyright: Copyright &copy; 2020 - 2023 Qualytics
 nav:
   - Home: https://qualytics.ai
   - Introduction: index.md
-  - Getting started:
+  - Getting Started:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
-    - Connections:
-      - connections/overview-of-a-connection.md
+    
     - Datastores:
       - Overview: datastores/overview-of-a-datastore.md
       - JDBC Datastores:
@@ -46,6 +45,7 @@ nav:
             - datastores/azure-datalake-storage.md
             - datastores/google-cloud-storage.md
             - datastores/qfs.md
+      - Connections: connections/overview-of-a-connection.md
     - Datastore Operations:
       - Catalog: operations/catalog.md
       - Profile: operations/profile.md

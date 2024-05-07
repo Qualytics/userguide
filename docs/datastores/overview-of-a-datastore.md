@@ -1,12 +1,12 @@
-# Datastore Overview
+# Datastores Overview
 
 A `Datastore` can be any Apache Spark-compatible data source, such as:
 
-1. Traditional `RDBMS`.
-2. Raw files (`CSV`, `XLSX`, `JSON`, `Avro`, `Parquet`) on:
-    1. AWS S3.
-    2. Azure Blob Storage.
-    3. GCP Cloud Storage.
+* Traditional `RDBMS`.
+* Raw files (`CSV`, `XLSX`, `JSON`, `Avro`, `Parquet`) on:
+    * AWS S3.
+    * Azure Blob Storage.
+    * GCP Cloud Storage.
 
 A `Datastore` is a medium holding structured data. Qualytics supports Spark-compatible Datastores via the conceptual layers depicted below
 
@@ -17,7 +17,7 @@ A `Datastore` is a medium holding structured data. Qualytics supports Spark-comp
 
 The first step of configuring a Qualytics instance is to add a source datastore:
 
-* In the `main` menu, select `Datastores` tab
+1. In the `main` menu, select `Datastores` tab
 * Click on `Add Source Datastore` button:
 
     ![Screenshot](../assets/datastores/what-is/add-new-datastore-button-light.png#only-light)

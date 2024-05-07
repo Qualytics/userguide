@@ -15,8 +15,8 @@ The `Catalog Operation` is run on a Datastore to import the named collections (e
 
 A `Catalog Operation` can be configured with the following options:
 
-* `Prune` - Remove any existing named collections that no longer appear in the datastore
-* `Recreate` - Restore any previously removed named collection that do currently appear in the database
+* **Prune** - Remove any existing named collections that no longer appear in the datastore
+* **Recreate** - Restore any previously removed named collection that do currently appear in the database
 <br>
 
 ![Screenshot](../assets/operations/operation-catalog-light.png#only-light)
