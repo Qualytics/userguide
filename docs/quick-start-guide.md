@@ -28,7 +28,7 @@ We recommend adding at least one [Enrichment Datastore](/userguide/glossary/#enr
 
 <br>
 
-#### Step 2: [Profiling](/userguide/glossary/#profiling) the Datastore
+#### Step 2: [Profile](/userguide/glossary/#profiling) the Datastore
 
 Perform a Profile Operation on your chosen source datastore. This operation generates valuable metadata insights for all the data assets within the source datastore. It also automatically infers customized data quality checks based on the profiled data.
 

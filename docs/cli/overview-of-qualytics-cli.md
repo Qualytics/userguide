@@ -35,7 +35,7 @@ qualytics init
     --token "YOUR_TOKEN_HERE"
 ```
 
-#### Options:
+Options:
 
 | Option         | Type            | Description      | Default                          | Required |
 |----------------|-----------------|------------------|----------------------------------|----------|
@@ -62,7 +62,7 @@ qualytics checks export
     [--output LOCATION_TO_BE_EXPORTED]
 ```
 
-#### Options:
+Options:
 
 | Option         | Type            | Description      | Default                            | Required |
 |----------------|-----------------|------------------|------------------------------------|---------|
@@ -82,7 +82,7 @@ qualytics checks export-templates
     [--check_templates CHECK_TEMPLATE_IDS]
 ```
 
-#### Options:
+Options:
 
 | Option        | Type     | Description                                                                | Default                            | Required |
 |---------------|----------|----------------------------------------------------------------------------|------------------------------------|----------|
@@ -101,7 +101,7 @@ qualytics checks import
     [--input LOCATION_FROM_THE_EXPORT]
 ```
 
-#### Options:
+Options:
 
 | Option       | Type | Description                                                          | Default                       | Required |
 |--------------|------|----------------------------------------------------------------------|-------------------------------|----------|
@@ -126,7 +126,7 @@ qualytics run catalog
     --background
 ```
 
-#### Options:
+Options:
 
 | Option              | Type     | Description                                                                                                               | Required |
 |---------------------|----------|---------------------------------------------------------------------------------------------------------------------------|----------|
@@ -157,7 +157,7 @@ qualytics run profile
     --background
 ```
 
-#### Options:
+Options:
 
 | Option                                 | Type     | Description                                                                                                                                      | Required |
 |----------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -194,7 +194,7 @@ qualytics run scan
     --background
 ```
 
-#### Options:
+Options:
 
 | Option                                 | Type     | Description                                                                                                                                      | Required |
 |----------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -225,7 +225,7 @@ qualytics operation check_status
 ![Screenshot](../assets/cli/qualytics-operation-success.gif) -->
 
 
-#### Options:
+Options:
 
 | Option              | Type     | Description                                                                                                               | Required |
 |---------------------|----------|---------------------------------------------------------------------------------------------------------------------------|----------|

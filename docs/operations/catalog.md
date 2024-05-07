@@ -7,7 +7,7 @@ The `Catalog Operation` is run on a Datastore to import the named collections (e
 * Record identification
 
 !!! note
-    * The attributes of the named collection are recorded as special identifiers and can be manually overridden.
+    The attributes of the named collection are recorded as special identifiers and can be manually overridden.
 
 ---
 ## Configuration

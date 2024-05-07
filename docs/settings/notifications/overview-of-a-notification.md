@@ -21,15 +21,15 @@
   ![Screenshot](../../assets/notifications/notification-screen-light.png#only-light)
   ![Screenshot](../../assets/notifications/notification-screen-dark.png#only-dark)
 
-* `Name`: name of the notification
-* `Description`: description of the notification
-* `Tags`: add Tags to be included
-* `TriggerWhen`: when the notification should be triggered
-	* `An Operation Completes`
-	* `Anomalies are Detected in a Table or File`
-	* `An Anomaly is Detected`
-	* `Freshness SLA Violation`
-* `Use custom message`: a custom message when the notification was triggered
+* **Name**: name of the notification
+* **Description**: description of the notification
+* **Tags**: add Tags to be included
+* **TriggerWhen**: when the notification should be triggered
+	* **An Operation Completes**
+	* **Anomalies are Detected in a Table or File**
+	* **An Anomaly is Detected**
+	* **Freshness SLA Violation**
+* **Use custom message**: a custom message when the notification was triggered
 	![Screenshot](../../assets/notifications/notification-custom-messaging-light.png#only-light)![Screenshot](../../assets/notifications/notification-custom-messaging-dark.png#only-dark)
 	* Qualytics App will use the `variables` to customize your messages.
 	* Variables available by `Operation` when:
@@ -62,10 +62,10 @@
 		* `{{container_name}}`
 		* `{{freshness_violation_started}}`
 		* `{{container_last_modified_time}}`
-* `Notification channel`: how notification should be delivered:
-	* `Email`.
-	* `Http Action`.
-	* `Microsoft Teams`.
-	* `PagerDuty`.
-	* `Slack`.
-	* `Webhook`.
+* **Notification channel**: how notification should be delivered:
+	* **Email**.
+	* **Http Action**.
+	* **Microsoft Teams**.
+	* **PagerDuty**.
+	* **Slack**.
+	* **Webhook**.
