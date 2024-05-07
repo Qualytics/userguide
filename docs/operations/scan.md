@@ -103,3 +103,20 @@ For example, a check might include a filter such as `transaction_date == {{check
   "high_count_rollup_threshold": 10
 }
 ```
+
+## Scan Results
+
+When a Scan is run, Qualytics will highlight anomalies with the following information:
+
+![Screenshot](../assets/anomalies/anomalies-fields-light.png#only-light)
+![Screenshot](../assets/anomalies/anomalies-fields-dark.png#only-dark)
+
+* **Table**/**File**: the **Table** or **File** of the anomaly
+* **Field**: the field(s) of the anomaly
+* **Location**: fully qualified location of the anomaly
+* **Rule**: **Infered** and **Authored** checks that failed assertions
+* **Description**: human-readable, auto-generated description of the anomaly
+* **Status**: The status of the anomaly. If it's **Active**, **Acknowledged**, **Resolved** or **Invalid**
+* **Type**: **Record** or **Shape**
+* **Tag**: tag(s) / label(s) associated with an anomaly
+* **Date time**: date/time when the anomaly was found
