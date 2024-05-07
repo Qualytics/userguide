@@ -49,40 +49,40 @@ As an `Admin` user, you can see the security page and navigate through the `User
   ![Screenshot](../../assets/security/security-overview-light.png#only-light)
   ![Screenshot](../../assets/security/security-overview-dark.png#only-dark)
 
-### Adding Teams
-  You can create a new team clicking in the `Add New Team` buttom:
+### Add a Team
+  
+1. You can create a new team clicking in the `Add New Team` button:
 
-  - ![Screenshot](../../assets/security/create-team.png){: style="height:50px;"}
+	![Screenshot](../../assets/security/create-team.png){: style="height:50px;"}
 
-  - A modal will open with the fields you can add:
-      * `Name`
-      * `Description`
-      * `Permission` [`Read` or `Write`]
-      * `Users`
-      * `Datastores`
-      * `Enrichment Datastores`
+* A modal will open with the fields you can add:
+	* **Name**
+	* **Description**
+	* **Permission** (**Read** or **Write**)
+	* **Users**
+	* **Datastores**
+	* **Enrichment Datastores**
 
-      ![Screenshot](../../assets/security/add-team-light.png#only-light){: style="height:400px;"}
-      ![Screenshot](../../assets/security/add-team-dark.png#only-dark){: style="height:400px;"}
+	![Screenshot](../../assets/security/add-team-light.png#only-light){: style="height:400px;"}
+	![Screenshot](../../assets/security/add-team-dark.png#only-dark){: style="height:400px;"}
 
 
-### Managing Teams
+### Manage Teams
 
 * In the `Teams` section you can see all the `teams` 
 
-  ![Screenshot](../../assets/security/security-team-overview-light.png#only-light)
-  ![Screenshot](../../assets/security/security-team-overview-dark.png#only-dark)
+	![Screenshot](../../assets/security/security-team-overview-light.png#only-light)
+	![Screenshot](../../assets/security/security-team-overview-dark.png#only-dark)
 
 * and also edit a specific one:
 
-  ![Screenshot](../../assets/security/edit-team-light.png#only-light){: style="height:400px;"}
-  ![Screenshot](../../assets/security/edit-team-dark.png#only-dark){: style="height:400px;"}
+	![Screenshot](../../assets/security/edit-team-light.png#only-light){: style="height:400px;"}
+	![Screenshot](../../assets/security/edit-team-dark.png#only-dark){: style="height:400px;"}
 
-### Managing Users
+### Manage Users
 
 #### User Roles
-* In the `Users` section you can change the `Permission` to:
-    - `Admin` or `Member`
+* In the `Users` section you can change the `Permission` (`Admin` or `Member`) to:
 
   ![Screenshot](../../assets/security/edit-user-permission-light.png#only-light){: style="height:300px;"}
   ![Screenshot](../../assets/security/edit-user-permission-dark.png#only-dark){: style="height:300px;"}

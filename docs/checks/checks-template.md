@@ -2,7 +2,7 @@
 
 The `Check Templates` empowers users to create, manage, and apply standardized checks across different datastores efficiently, enabling check management independently of specific data assets such as datastores, containers, or fields, serving as check blueprints.
 
-## Adding a Check Template
+## Add a Check Template
 
 1. Navigate to the "`Library`" in the menu bar.
 
