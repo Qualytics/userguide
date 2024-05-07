@@ -33,7 +33,6 @@ There are two types of Checks in Qualytics: `inferred` and `authored`:
 | [Contains Social Security Number](../checks/contains-social-security-number-check.md)| Asserts that the values contain social security numbers.                                  |
 | [Contains Url](../checks/contains-url.md)        | Asserts that the values contain valid URLs.                                                         |
 | [Is Type](../checks/is-type-check.md)              | Asserts that the data is of a specific type.                                                        |
-| Distinct                | The ratio of the count of distinct values (e.g. [a, a, b] is 2/3).                                   |
 | [Distinct Count](../checks/distinct-count-check.md)    | Asserts on the approximate count distinct of the given column.                                       |
 | [Equal To Field](../checks/equal-to-field-check.md)    | Asserts that this field is equal to another field.                                                  |
 | [Exists in](../checks/exists-in-check.md)              | Asserts if the rows of a compared table/field of a specific Datastore exists in the selected table/field.|

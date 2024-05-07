@@ -70,7 +70,7 @@ nav:
       - Check Templates: checks/checks-template.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
-      - Rule types:
+      - Rule Types:
         - After Date: checks/after-date-check.md
         - Aggregation Comparison: checks/aggregation-comparison-check.md
         - Any Not Null: checks/any-not-null-check.md
