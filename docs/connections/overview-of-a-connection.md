@@ -2,7 +2,7 @@
 
 Connections facilitate the management of datastores by allowing you to share common connection parameters across multiple datastores.
 
-## Setting Up Connections
+## Setup a Connection
 
 When you create your first datastore, a Connection is automatically generated using the parameters you provide. This Connection can then be used for other datastores with similar configuration needs.
 

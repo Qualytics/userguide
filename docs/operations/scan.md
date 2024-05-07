@@ -21,9 +21,9 @@ Scan operation enables the user to assert the checks in incremental vs full load
 
 A Scan Operation can be configured with the following options:
 
-* **Full** - To process all records ignoring the previous scan.
+* **Full**: To process all records ignoring the previous scan.
 
-* **Incremental** - To scan only new data updated since the previous scan.
+* **Incremental**: To scan only new data updated since the previous scan.
 
 !!! info
 
@@ -35,12 +35,12 @@ A Scan Operation can be configured with the following options:
 
     - This approach optimizes the scanning process while maintaining data quality and consistency.
 
-* **Record limit** - To limit the total number of records scanned.
+* **Record limit**: To limit the total number of records scanned.
 
 * **Target selection**
     - All tables/files
     - Subset of available named collections (tables, files, etc.)
-
+    - Selection of collections based on tags
 
 * **Starting Thresholds**
 
@@ -55,14 +55,14 @@ A Scan Operation can be configured with the following options:
 ![Screenshot](../assets/operations/operation-scan-specific-tables-light.png#only-light)
 ![Screenshot](../assets/operations/operation-scan-specific-tables-dark.png#only-dark)
 
-* **Remediation strategy** - To specify how enrichment tables should be migrated to reflect changes in source tables.
+* **Remediation strategy**: To specify how enrichment tables should be migrated to reflect changes in source tables.
 
-* **Source Record Limit** -  Set a maximum limit on the number of records written to the enrichment for each detected anomaly.
+* **Source Record Limit**: Set a maximum limit on the number of records written to the enrichment for each detected anomaly.
 
 ![Screenshot](../assets/operations/remediation-strategy-light.png#only-light)
 ![Screenshot](../assets/operations/remediation-strategy-dark.png#only-dark)
 
-* **Schedule Options** - There's also an option to schedule the operation by:
+* **Schedule Options**: There's also an option to schedule the operation by:
     - **Hourly**
     - **Daily**
     - **Weekly**

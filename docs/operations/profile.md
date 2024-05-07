@@ -20,16 +20,17 @@ The Profile Operation is executed on a Datastore to analyze the named collection
 
 A Profile Operation can be configured with the following options:
 
-* **Record limit** - Profile only a subset of the available data
-* **Disable Check Inference** - Update field metadata without adjusting or infering data quality checks
+* **Record limit**: Profile only a subset of the available data
+* **Disable Check Inference**: Update field metadata without adjusting or infering data quality checks
 * **Target selection**
     - All tables/files
     - Subset of available named collections (tables, files, etc.)
+    - Selection of collections based on tags
 
     ![Screenshot](../assets/operations/operation-profile-specific-tables-light.png#only-light)
     ![Screenshot](../assets/operations/operation-profile-specific-tables-dark.png#only-dark)
 
-* **Schedule Options** - There's also an option to schedule the operation by:
+* **Schedule Options**: There's also an option to schedule the operation by:
     - **Hourly**
     - **Daily**
     - **Weekly**
