@@ -33,8 +33,8 @@ This tab is your command center for staying on top of data quality and anomalies
     * Total of Datastores
     * Total of Containers
 
-![Screenshot](../assets/explore/insights/insights-overview-light.png#only-light){: style="height:300px"}
-![Screenshot](../assets/explore/insights/insights-overview-dark.png#only-dark){: style="height:300px"}
+    ![Screenshot](../assets/explore/insights/insights-overview-light.png#only-light){: style="height:300px"}
+    ![Screenshot](../assets/explore/insights/insights-overview-dark.png#only-dark){: style="height:300px"}
 
 * **Profile and Scan Data**
     * Records Profiled
