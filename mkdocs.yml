@@ -39,7 +39,7 @@ nav:
           - datastores/trino.md
       - DFS Datastores:
           - Overview: datastores/overview-of-a-dfs-datastore.md
-          - Add DFS datastore:
+          - Add DFS Datastore:
             - datastores/amazon-s3.md
             - datastores/azure-blob-storage.md
             - datastores/azure-datalake-storage.md
