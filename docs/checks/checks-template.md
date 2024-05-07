@@ -1,21 +1,15 @@
 # Check Templates
 
-The `Check Templates` empowers users to create, manage, and apply standardized checks across different datastores efficiently.
+The `Check Templates` empowers users to create, manage, and apply standardized checks across different datastores efficiently, enabling check management independently of specific data assets such as datastores, containers, or fields, serving as check blueprints.
 
-## Overview of Check Templates
+## Add a Check Template
 
-Check Templates is a powerful feature that allows users to create standardized checks independently of specific data assets such as datastores, containers, or fields. 
-
-Templates serve as blueprints for creating checks and can be applied across different datastores.
-
-## Creating a Check Template
-
-1. Navigate to the "`Library`" in the menu bar.
+1. Navigate to the `Library` in the menu bar.
 
     ![Screenshot](../assets/checks/checks-template/library-dark.png#only-dark)
     ![Screenshot](../assets/checks/checks-template/library-light.png#only-light)
 
-2. Click on "`Add Check Template`" to initiate a new template.
+2. Click on `Add Check Template` to initiate a new template.
 
     ![Screenshot](../assets/checks/checks-template/add-check-template-dark.png#only-dark)
     ![Screenshot](../assets/checks/checks-template/add-check-template-light.png#only-light)
@@ -29,7 +23,7 @@ Templates serve as blueprints for creating checks and can be applied across diff
 
 ## Applying a Check Template to create Quality Checks
 
-1. Access the "`Library`" and select the desired template.
+1. Access the `Library` and select the desired template.
 2. Select the `Check` tab from the template and click in `Add`
 2. Choose the target datastore, table and fields for the check.
 3. Create a new Quality Check based on the selected template.
@@ -43,14 +37,19 @@ Templates serve as blueprints for creating checks and can be applied across diff
     ![Screenshot](../assets/checks/checks-template/creating-check-based-on-template-light.png#only-light)
 
 
-## Template States: Locked and Unlocked 
+## Template State
 
-| Template State   | Description                                                                   |
-|-------------------|-------------------------------------------------------------------------------|
-| Unlocked| `Quality Checks` can evolve independently of the template. Subsequent updates to an unlocked Check Template do not affect its related quality checks|
-| Locked  | `Quality Checks` from a locked `Check Template` will inherit changes made to the template. Subsequent updates to a locked Check Template do affect its related quality checks|
+The changes on a template can impact or not its related checks by managing the template state, which can be of the following:
 
-!!! warning
+* **Unlocked**
+    
+    Quality Checks can evolve independently of the template. Subsequent updates to an unlocked Check Template do not affect its related quality checks
+
+* **Locked** 
+
+    Quality Checks from a locked Check Template will inherit changes made to the template. Subsequent updates to a locked Check Template do affect its related quality checks
+
+!!! info
     Tags will be synced independently of unlocked and locked Check Templates, while `Description` and `Additional Metadata` will not be synced. 
     
     This behavior is general for Check Templates.
@@ -77,17 +76,17 @@ You need to perform regular data validation checks on customer data across diffe
 
 #### Solution with Check Template
 
-##### Step 1: Quality Check Template Creation
+##### Step 1: Add a Quality Check Template
 
-1. Navigate to the "`Library`" in Qualytics.
-2. Create a Checks Template named "`Customer Data Validation`".
+1. Navigate to the `Library` in Qualytics.
+2. Create a Checks Template named `Customer Data Validation`.
 3. Define the common properties of the template for customer data, such as verifying email formats, checking for missing addresses, and validating phone numbers.
 
-##### Step 2: Creating Quality Checks from the Template
+##### Step 2: Add a Quality Check from the Template
 
-1. Access the "Library" and select the "`Customer Data Validation`" template.
+1. Access the `Library` and select the `Customer Data Validation` template.
 2. In `Checks` tab of the template, click in `Add` to create a Quality Check based on this template
-3. The form will bring you all the information of the "`Customer Data Validation`" Quality Check Template .
+3. The form will bring you all the information of the `Customer Data Validation` Quality Check Template .
 4. If the `Template` is locked, you can only update specific fields, such as Datastore and Profile and Fields, and it will be maintaned in synchronization
 5. Confirm if the values are good. Click in `Validate` and then `Save`
 
@@ -112,4 +111,4 @@ You can define multiple customizations to a specific Quality Check if the templa
 
 ##### Centralized Monitoring
 
-The "`Library`" provides a centralized location for monitoring anomalies abnd updates, and the status of all Quality Checks.
+The `Library` provides a centralized location for monitoring anomalies abnd updates, and the status of all Quality Checks.

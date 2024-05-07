@@ -1,4 +1,4 @@
-# External scan operation
+# External Scan Operation
 
 External Scan is a specialized Scan Operation that enables you to assert data quality checks against data residing outside the platform. 
 
@@ -15,9 +15,7 @@ It empowers you to assess the quality of external datasets while leveraging the 
 !!! info
     To perform data quality checks on an External Scan operation, users need to have a pre-existing structure.
 
----
-
-## External Scan Configuration
+## Configuration
 
 1. Begin by selecting the existing profile that matches the external data's format.
 2. File Upload: Upload the external data file (CSV, XLSX, or XLS).
@@ -35,7 +33,7 @@ An External Scan Operation can be configured with the following file formats:
 | Empty Cells     | Represented as empty strings.                     | Allowed.                                        | Allowed.                                       |
 | Data Types      | Typically inferred by Spark.                      | May require explicit specification for complex types. | May require explicit specification for complex types. |
 | Nested Data     | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. |
-| Additional Considerations | - Ensure consistent delimiter usage (usually commas). - Avoid special characters or line breaks within fields. - Enclose text fields containing commas or delimiters in double quotes. | - Use a plain XLS format without macros or formatting. - Consider converting to CSV for simpler handling. | - Use a plain XLSX format without macros or formatting. - Consider converting to CSV for simpler handling. |
+| Additional Considerations | - Ensure consistent delimiter usage (usually commas).<br> - Avoid special characters or line breaks within fields.<br> - Enclose text fields containing commas or delimiters in double quotes. | - Use a plain XLS format without macros or formatting.<br> - Consider converting to CSV for simpler handling. | - Use a plain XLSX format without macros or formatting.<br> - Consider converting to CSV for simpler handling. |
 
 ## Scenario
 

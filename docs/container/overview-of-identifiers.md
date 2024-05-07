@@ -1,16 +1,16 @@
-# Overview of identifiers
+# Identifiers Overview
 
 An `Identifier` is a field that can be used to help load the desired data from a Table in support of analysis. 
 
 There are two types of identifiers can be declared for a Table:
 
-1. `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
+* `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
-2. `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
+* `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
 
 ## Managing an Identifier
 
-* You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`:
+1. You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`:
  
     ![Screenshot](../assets/identifiers/identifiers-light.png#only-light)
     ![Screenshot](../assets/identifiers/identifiers-dark.png#only-dark)
@@ -34,8 +34,6 @@ This approach is essential for efficient data processing, as it is specifically 
 
 This allows for scan operations to focus exclusively on new records that have not been previously scanned, thereby optimizing the scanning process and ensuring that only the most recent and relevant data is analyzed.
 
-## Options of `Incremental Strategy`
-
 | Strategy Option                    | Description |
 |------------------------------------|-------------|
 | `None`                             | - No incremental strategy, it will run full. |
@@ -43,35 +41,25 @@ This allows for scan operations to focus exclusively on new records that have no
 | `Batch value`                      | - Available types are `Integral` or `Fractional`.<br>- Uses a "batch value column" to track changes in the data set.<br>- This column typically contains an incremental value that increases as new data is added.<br>- The system compares the current "batch value" with the previous one, updating only records with a higher "batch value".<br>- Useful when data comes from a system without a modification timestamp. |
 | `Postgres Commit Timestamp Tracking` | - Utilizes commit timestamps for change tracking. |
 
+Availability based on technologies: 
+
+| Option                                  |  Availability |                                     
+|-----------------------------------------|---------------|
+| `Last Modified`                         | All           |
+| `Batch Value`                           | All           |
+| `Postgres Commit Timestamp Tracking`    | PostgreSQL    |
+
+
 !!! info
     - All options are useful for incremental strategy, it depends on the availability of the data and how it is modeled. 
     - The 3 options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
 
 
-#### DFS (Distributed File System) Configuration
+#### Incremental Strategy with DFS (Distributed File System)
 
 For DFS in Qualytics, the incremental strategy leverages the `last modified` timestamps from the file metadata. 
 
 This automated process means that DFS users do not need to manually configure their incremental strategy, as the system efficiently identifies and processes the most recent changes in the data.
-
-#### PostgreSQL Configuration
-
-PostgreSQL databases in Qualytics offer various options for the incremental strategy:
-
-| Type                                    |                                                           |
-|-----------------------------------------|-----------------------------------------------------------|
-| `Postgres Commit Timestamp Tracking`    | <div style="text-align:center">:octicons-check-16:</div>  | 
-| `Last Modified`                         | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Batch Value`                           | <div style="text-align:center">:octicons-check-16:</div>  |
-
-#### For other Datastore technologies:
-
-Qualytics provides flexible incremental strategy options:
-
-| Type        |                          |
-|-------------|--------------------------|
-| `Last Modified`    | <div style="text-align:center">:octicons-check-16:</div>  |
-| `Batch Value`    | <div style="text-align:center">:octicons-check-16:</div>  |
 
 ### Example
 

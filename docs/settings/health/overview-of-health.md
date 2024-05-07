@@ -6,9 +6,8 @@ This page gives you a real-time overview of your system's resources, helping you
 ![Screenshot](../../assets/health/health-light.png#only-light)
 ![Screenshot](../../assets/health/health-dark.png#only-dark)
 
-## Overall System Status
-
--  A simple indicator (e.g., green checkmark for "Healthy", red exclamation mark for "Critical").
+!!!info
+	A simple indicator (e.g., green checkmark for "Healthy", red exclamation mark for "Critical").
 
 ## Summary
 

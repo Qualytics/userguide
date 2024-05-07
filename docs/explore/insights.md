@@ -1,7 +1,3 @@
-![Screenshot](../assets/explore/insights/insights-tab-light.png#only-light){: style="height:auto;width:450px;"}
-![Screenshot](../assets/explore/insights/insights-tab-dark.png#only-dark){: style="height:auto;width:450px;"}
-
-
 This tab is your command center for staying on top of data quality and anomalies across your datastores.
 
 ![Screenshot](../assets/explore/insights/insights-1-light.png#only-light)
@@ -30,11 +26,12 @@ This tab is your command center for staying on top of data quality and anomalies
 
 ### Insights Summary
 
-* **Monitoring Overview** 
+
+* **Monitoring Overview**
     * Data Under Management 
     * Overall Quality Score
-    * Total Datastores
-    * Total Containers
+    * Total of Datastores
+    * Total of Containers
 
     ![Screenshot](../assets/explore/insights/insights-overview-light.png#only-light){: style="height:300px"}
     ![Screenshot](../assets/explore/insights/insights-overview-dark.png#only-dark){: style="height:300px"}
@@ -58,7 +55,7 @@ This tab is your command center for staying on top of data quality and anomalies
     ![Screenshot](../assets/explore/insights/insights-checks-dark.png#only-dark){: style="height:300px"}
 
 * **Anomalies Status**
-    * Total of Nomalies Identified
+    * Total of Anomalies Identified
     * Active
     * Acknowledged
     * Resolved

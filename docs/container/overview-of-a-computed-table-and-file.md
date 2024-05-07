@@ -1,6 +1,6 @@
-# Overview of computed tables and files
+# Computed Tables and Files Overview
 
-Computed tables and computed files are powerful virtual tables within the Qualytics platform
+Computed tables and computed files are powerful virtual tables within the Qualytics platform.
 
 ## Key Concepts
 

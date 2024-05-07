@@ -1,27 +1,27 @@
-# Overview of a DFS datastore
+# DFS Datastore Overview
 
 The DFS (Distributed File System) Datastore feature in Qualytics is designed to handle data stored in distributed file systems. 
 
 This includes file systems like Hadoop Distributed File System (HDFS) or similar distributed storage solutions.
 
-## Supported Distributed File Systems:
+## Supported Distributed File Systems
 
 Qualytics supports DFS Datastores, catering to distributed file systems like:
 
-- Amazon S3
-- Google Cloud Storage
-- Windows Azure Storage Blob
-- Azure Blob File System
+- [**Amazon S3**](../datastores/amazon-s3.md)
+- [**Google Cloud Storage**](../datastores/google-cloud-storage.md)
+- [**Windows Azure Storage Blob**](../datastores/azure-datalake-storage.md)
+- [**Azure Blob File System**](../datastores/azure-blob-storage.md)
 
-## Connection Details:
+## Connection Details
 
 Users provide connection details for DFS Datastores, allowing Qualytics to establish a connection to the distributed file system.
 
-## Catalog Operation:
+## Catalog Operation
 
 The Catalog operation involves walking the directory tree, reading files with supported filename extensions, and creating containers based on file metadata.
 
-## Data Quality and Profiling:
+## Data Quality and Profiling
 
 DFS Datastores support the initiation of Profile Operations, allowing users to understand the structure and characteristics of the data stored in the distributed file system.
 
@@ -31,7 +31,7 @@ For a more detailed understanding of how Qualytics manages and interacts with co
 
 This section covers topics such as container deletion, field deletion, and the initial profile of a Datastore's containers.
 
-## Multi-Token Filename Globbing and Container Formation:
+## Multi-Token Filename Globbing and Container Formation
 
 Filenames with similar structures in the same folder are automatically included in a single globbed container during the Catalog operation.
 
@@ -43,7 +43,7 @@ When all files in a folder share a common schema, it simplifies the process of g
 
 This approach ensures precise file grouping without relying on complex glob patterns.
 
-#### How to Use Folders for Shared Schema:
+#### How to Use Folders for Shared Schema
 
 ##### 1. **Create a Folder:**
 

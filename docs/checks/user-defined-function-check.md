@@ -18,7 +18,7 @@ The `User Defined Function` rule enables the application of a custom Scala funct
 |-------------|--------------------------|
 | `String`    | <div style="text-align:center">:octicons-check-16:</div> |
 
-### General Properties {#general-properties}
+### General Properties
 
 {%
     include-markdown "components/general-props/index.md"

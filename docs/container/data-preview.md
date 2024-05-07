@@ -1,29 +1,29 @@
 # Data Preview
 
-The "Data Preview" section in the platform provides users with a streamlined preview of specific container data, offering direct insights into its structure and contents. This feature streamlines workflow processes and empowers users to make confident, data-driven decisions.
+The `Data Preview` section in the platform provides users with a streamlined preview of specific container data, offering direct insights into its structure and contents. This feature streamlines workflow processes and empowers users to make confident, data-driven decisions.
 
 `Data preview` is dedicated to displaying a concise yet comprehensive preview of container data, facilitating various tasks such as debugging quality checks and data analysis. It enhances the user experience by offering a grid view that showcases a maximum of 100 rows from the container's source records.
 
 To access the Data Preview section and explore container data within the platform, follow these steps:
 
-## 1. Navigate to Your Datastore
+1. **Navigate to Your Datastore**
 
-Begin by navigating to your datastore within the platform.
+    Begin by navigating to your datastore within the platform.
 
-## 2. Select a Specific Container
+* **Select a Specific Container**
 
-From your datastore, select the specific container whose data you want to preview.
+    From your datastore, select the specific container whose data you want to preview.
 
-## 3. Ensure Profiling
+* **Ensure Profiling**
 
-Before accessing the Data Preview tab, ensure that the container has been profiled. If not, run a profile operation on the container. This operation gathers essential information about the table structure, such as column types and field names. Without profiling, the Data Preview section will display no data.
+    Before accessing the Data Preview tab, ensure that the container has been profiled. If not, run a profile operation on the container. This operation gathers essential information about the table structure, such as column types and field names. Without profiling, the Data Preview section will display no data.
 
-## 4. Access Data Preview Tab
+* **Access Data Preview Tab**
 
-Once the container is profiled, navigate to the Data Preview tab within the specific container.
+    Once the container is profiled, navigate to the Data Preview tab within the specific container.
 
-![Screenshot](../assets/container/data-preview/data-preview-tab-light.png#only-light){: style="width:640px"}
-![Screenshot](../assets/container/data-preview/data-preview-tab-dark.png#only-dark){: style="width:640px"}
+    ![Screenshot](../assets/container/data-preview/data-preview-tab-light.png#only-light){: style="width:640px"}
+    ![Screenshot](../assets/container/data-preview/data-preview-tab-dark.png#only-dark){: style="width:640px"}
 
 ## Explore Data Preview Features
 In the Data Preview tab, users can access various features to interact with the data:
@@ -66,20 +66,12 @@ Choose specific fields to display, focusing on relevant data for analysis.
 ![Screenshot](../assets/container/data-preview/fields-to-show-light.png#only-light){: style="width:540px"}
 ![Screenshot](../assets/container/data-preview/fields-to-show-dark.png#only-dark){: style="width:540px"}
 
-### Download Source Records
+### Download Records
 
-Download the source records for further analysis or external use.
+Download the data for further analysis or external use.
 
 ![Screenshot](../assets/container/data-preview/download-source-records-light.png#only-light){: style="width:440px"}
 ![Screenshot](../assets/container/data-preview/download-source-records-dark.png#only-dark){: style="width:440px"}
-
-### Sort Columns
-
-Sort the columns to organize the data in a way that best suits your analysis.
-
-![Screenshot](../assets/container/data-preview/filter-light.png#only-light){: style="width:340px"}
-![Screenshot](../assets/container/data-preview/filter-dark.png#only-dark){: style="width:340px"}
-
 
 ## Use Cases
 

@@ -12,12 +12,11 @@ copyright: Copyright &copy; 2020 - 2023 Qualytics
 nav:
   - Home: https://qualytics.ai
   - Introduction: index.md
-  - Getting started:
+  - Getting Started:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
-    - Connections:
-      - connections/overview-of-a-connection.md
+    
     - Datastores:
       - Overview: datastores/overview-of-a-datastore.md
       - JDBC Datastores:
@@ -40,12 +39,13 @@ nav:
           - datastores/trino.md
       - DFS Datastores:
           - Overview: datastores/overview-of-a-dfs-datastore.md
-          - Add DFS datastore:
+          - Add DFS Datastore:
             - datastores/amazon-s3.md
             - datastores/azure-blob-storage.md
             - datastores/azure-datalake-storage.md
             - datastores/google-cloud-storage.md
             - datastores/qfs.md
+      - Connections: connections/overview-of-a-connection.md
     - Datastore Operations:
       - Catalog: operations/catalog.md
       - Profile: operations/profile.md
@@ -70,7 +70,7 @@ nav:
       - Check Templates: checks/checks-template.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
-      - Rule types:
+      - Rule Types:
         - After Date: checks/after-date-check.md
         - Aggregation Comparison: checks/aggregation-comparison-check.md
         - Any Not Null: checks/any-not-null-check.md
@@ -142,7 +142,8 @@ nav:
         - Security: settings/security/security-page.md
         - Tokens: settings/tokens/overview-of-tokens.md
         - Health: settings/health/overview-of-health.md
-    - Qualytics CLI: cli/overview-of-qualytics-cli.md
+    - Qualytics CLI: 
+        - Overview: cli/overview-of-qualytics-cli.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
     - Misc:
