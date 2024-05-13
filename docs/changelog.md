@@ -5,24 +5,33 @@ hide:
 
 ## Release Notes
 
+### 2024.05.13 { id=2024.05.13}
+
+#### General Fixes
+
+- Enhanced Quality Score Factors Computation
+	- Addressed issues in quality score calculation and its associated factors ensuring accuracy
+
+- General fixes and improvements
+
 ### 2024.05.11 { id=2024.05.11}
 
 #### Feature Enhancements
 
 - Introducing Quality Score Factors
-  - This new feature allows users to control the quality score factor weights at the datastore and container levels.
-    - Quality Score Detail Expansion: Users can now click on the quality score number to expand its details, revealing the contribution of each factor to the overall score. This enhancement aids in understanding what drives the quality score.
-    - Insights Page Overhaul: The Insights page has been restructured to better showcase the quality score breakdown. This redesign aims to make the page more informative and focused on quality score metrics.
-    - Customization of Factor Weights: Users can now customize the weights of different factors at the Datastore and Container levels. This feature is essential for adapting the quality score to meet specific user needs, such as disregarding the Timeliness factor for dimensional tables where it might be irrelevant.
-    - Enhanced Inferred Checks: Introduced a new property in the Check Listing schema and a feature in the Check modal that displays validity metrics, which help quantify the accuracy of inferred checks. A timezone handling issue in the last_updated property of the Check model has also been addressed.
+	- This new feature allows users to control the quality score factor weights at the datastore and container levels.
+		- Quality Score Detail Expansion: Users can now click on the quality score number to expand its details, revealing the contribution of each factor to the overall score. This enhancement aids in understanding what drives the quality score.
+		- Insights Page Overhaul: The Insights page has been restructured to better showcase the quality score breakdown. This redesign aims to make the page more informative and focused on quality score metrics.
+		- Customization of Factor Weights: Users can now customize the weights of different factors at the Datastore and Container levels. This feature is essential for adapting the quality score to meet specific user needs, such as disregarding the Timeliness factor for dimensional tables where it might be irrelevant.
+		- Enhanced Inferred Checks: Introduced a new property in the Check Listing schema and a feature in the Check modal that displays validity metrics, which help quantify the accuracy of inferred checks. A timezone handling issue in the last_updated property of the Check model has also been addressed.
 
 - Quality Score UI Enhancements
-  - Enhancements have been made to the user interface to provide a clearer and more detailed view of the quality score metrics, including Completeness, Coverage, Conformity, Consistency, Precision, Timeliness, Volumetrics, and Accuracy. These changes aim to provide deeper insight into the components that contribute to the overall quality score.
+	- Enhancements have been made to the user interface to provide a clearer and more detailed view of the quality score metrics, including Completeness, Coverage, Conformity, Consistency, Precision, Timeliness, Volumetrics, and Accuracy. These changes aim to provide deeper insight into the components that contribute to the overall quality score.
 
 #### General Fixes
 
 - Fixes to JDBC Incremental Support
-  - Updated the conditional logic in the catalog operation for update tables to ensure the incremental identifier is preserved if already established.
+	- Updated the conditional logic in the catalog operation for update tables to ensure the incremental identifier is preserved if already established.
 
 - General fixes and improvements
 
