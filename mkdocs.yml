@@ -16,7 +16,7 @@ nav:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
-    
+
     - Datastores:
       - Overview: datastores/overview-of-a-datastore.md
       - JDBC Datastores:
@@ -61,7 +61,7 @@ nav:
       - Data Preview: container/data-preview.md
       - Computed Tables and Files: container/overview-of-a-computed-table-and-file.md
       - Export Metadata: container/export-metadata.md
-      - Settings: 
+      - Settings:
         - Identifiers: container/overview-of-identifiers.md
         - Grouping: container/overview-of-grouping.md
         - General: container/overview-of-infer-data-type.md
@@ -139,10 +139,10 @@ nav:
             - settings/notifications/notification-services/slack.md
             - settings/notifications/notification-services/webhook.md
         - Tags: settings/tags/overview-of-a-tag.md
-        - Security: settings/security/security-page.md
+        - Security: settings/security/teams-and-permissions.md
         - Tokens: settings/tokens/overview-of-tokens.md
         - Health: settings/health/overview-of-health.md
-    - Qualytics CLI: 
+    - Qualytics CLI:
         - Overview: cli/overview-of-qualytics-cli.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
