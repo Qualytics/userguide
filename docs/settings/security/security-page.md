@@ -96,4 +96,132 @@ As an `Admin` user, you can see the security page and navigate through the `User
     - All users are inside the `Public` team by default and can't be changed. 
     - If you want to change the visibility of the `User` of a specific `Datastore`, you can update the default `Public` team of the `Datastore`.
 
+### User Roles and Permissions
 
+In this section we are defining different user roles and their access levels, detailing what actions users can perform within Qualytics to ensure appropriate access.
+
+!!! info
+    A user with the member role can be assigned either write or read permissions.
+
+#### Datastore and Enrichment Datastore
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Create       |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>   |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Edit         |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>  |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Delete       |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>   |   <div style="text-align:left">:octicons-check-16:</div>    |
+
+
+#### Table and File
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Create       |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>   |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Edit         |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>  |   <div style="text-align:left">:octicons-check-16:</div>    |
+| Delete       |  <div style="text-align:left">:octicons-x-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>   |   <div style="text-align:left">:octicons-check-16:</div>    |
+
+#### Operation
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |  <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>    
+| Run Catalog  |  <div style="text-align:left">:octicons-x-16:</div>        |  <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Run Profile  |  <div style="text-align:left">:octicons-x-16:</div>        |  <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Run Scan     |  <div style="text-align:left">:octicons-x-16:</div>        |  <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Quality Score Factor Weights
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+
+#### Check
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Check Template
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Anomaly
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Computed File and Computed Table
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Tag
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+
+#### Notification
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |   <div style="text-align:left">:octicons-check-16:</div> | <div style="text-align:left">:octicons-check-16:</div> | <div style="text-align:left">:octicons-check-16:</div> 
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div> 
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>     |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>     |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+
+
+#### Connection
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Update      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Delete      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+
+#### User
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Update      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Delete      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+
+#### Team
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Update      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+| Delete      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
+
+
+#### Health
+
+| Action       | Read  | Write | Admin  |
+|--------------|-------|-------|--------|
+| Listing      |   <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-x-16:</div> | <div style="text-align:left">:octicons-check-16:</div>
