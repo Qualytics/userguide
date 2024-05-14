@@ -181,9 +181,9 @@ In this section we are defining different user roles and their access levels, de
 | Action       | Read  | Write | Admin  |
 |--------------|-------|-------|--------|
 | Listing      |  <div style="text-align:left">:octicons-check-16:</div>    |   <div style="text-align:left">:octicons-check-16:</div>    | <div style="text-align:left">:octicons-check-16:</div>
-| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
-| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
-| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-check-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Create       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Update       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
+| Delete       |   <div style="text-align:left">:octicons-x-16:</div>   |  <div style="text-align:left">:octicons-x-16:</div>     | <div style="text-align:left">:octicons-check-16:</div>
 
 
 #### Notification
