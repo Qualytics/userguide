@@ -9,8 +9,8 @@ hide:
 
 #### Feature Enhancements
 
-- Entity Resolution Data Quality Check
-    - Introduced a quality check to determine if multiple records reference the same real-world entity. This feature uses customizable fields and similarity settings to ensure accurate and tailored comparisons.
+- Entity Resolution Check
+    - Introduced rule entityResolution to determine if multiple records reference the same real-world entity. This feature uses customizable fields and similarity settings to ensure accurate and tailored comparisons.
 
 - Support for Rerunning Operations
     - Added an option to rerun operations from the operations listing, allowing users to reuse the configuration from previously executed operations.
