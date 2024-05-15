@@ -17,8 +17,8 @@ hide:
 
 #### General Fixes
 
-- Export Process
-    - Fixed issues in the export process to ensure correct and reliable exporting.
+- Export Operations
+    - Fixed metadata export operations silently failing on writing to the enrichment datastores.
 
 - Computed File/Table Creation
     - Resolved an issue that prevented the creation of computed files/tables with the same name as previously deleted ones, even though it is a valid action.
