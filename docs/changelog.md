@@ -5,6 +5,26 @@ hide:
 
 ## Release Notes
 
+### 2024.05.16 { id=2024.05.16 }
+
+#### Feature Enhancements
+
+- Entity Resolution Data Quality Check
+    - Introduced a quality check to determine if multiple records reference the same real-world entity. This feature uses customizable fields and similarity settings to ensure accurate and tailored comparisons.
+
+- Support for Rerunning Operations
+    - Added an option to rerun operations from the operations listing, allowing users to reuse the configuration from previously executed operations.
+
+#### General Fixes
+
+- Export Process
+    - Fixed issues in the export process to ensure correct and reliable exporting.
+
+- Computed File/Table Creation
+    - Resolved an issue that prevented the creation of computed files/tables with the same name as previously deleted ones, even though it is a valid action.
+
+- General fixes and improvements
+
 ### 2024.05.13 { id=2024.05.13}
 
 #### General Fixes
