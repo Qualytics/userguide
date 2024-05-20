@@ -93,6 +93,8 @@ Assign the `roles/bigquery.dataViewer` role to a service account or user for rea
 !!!role
     `roles/bigquery.dataViewer`: *Provides permissions to view table data and metadata.*
 
+    `roles/bigquery.jobUser`: *Allows users to run jobs, including querying, loading data, etc.*
+
 ### `Enrichment Datastore` BigQuery privileges permissions <spam id='required'>`required`</spam>
 
 ##### Read-Write Permissions
@@ -104,4 +106,4 @@ Assign the combination of `roles/bigquery.dataEditor`, `roles/bigquery.dataViewe
 
     `roles/bigquery.dataViewer`: *Provides permissions to view table data and metadata.*
 
-    `roles/bigquery.jobUser`: *Allows users to run jobs, including querying, loading data, exporting data, etc.*
+    `roles/bigquery.jobUser`: *Allows users to run jobs, including querying, loading data, etc.*
