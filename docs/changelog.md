@@ -5,6 +5,33 @@ hide:
 
 ## Release Notes
 
+### 2024.05.22 { id=2024.05.22 }
+
+#### Feature Enhancements
+
+- Datastore Connection Updates:
+    - Users can now update the connection on a datastore if the new one has the same type as the current one.
+
+- Enrichment Datastore Redirection:
+    - Enhanced the user interface to facilitate easier redirection to enrichment datastores, streamlining the process and improving user experience.
+
+- Label Enhancements for Data Completeness:
+    - Updated labels to better distinguish between completeness percentages and Factor Scores. The label for completeness percentage has been changed to provide clear context when viewed alongside.
+
+#### General Fixes
+
+- Rule Type Anomaly Corrections:
+    - Fixed an issue where the violation messages for record anomalies incorrectly included "None" for some rule types. This update ensures accurate messaging across all scenarios.
+
+- Shape Anomaly Logic Adjustment:
+    - Revised the logic for Shape Anomalies to prevent the combination of failed checks for high-count record checks on the same field. This change ensures that displayed sample rows have definitively failed the specific checks shown, enhancing the accuracy of anomaly reporting.
+
+- Entity Resolution Anomalies:
+    - Addressed an inconsistency where some Entity Resolution Checks did not return source records. Ongoing investigations and fixes have improved the reliability of finding source records for entity resolution checks across DFS and JDBC datastores.
+
+- General fixes and improvements
+
+
 ### 2024.05.16 { id=2024.05.16 }
 
 #### Feature Enhancements
