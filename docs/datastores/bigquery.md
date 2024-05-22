@@ -127,6 +127,7 @@ Assign the combination of `roles/bigquery.dataEditor`, `roles/bigquery.dataViewe
 
     `roles/bigquery.jobUser`: *Allows users to run jobs, including querying, loading data, etc.*
 
+    `roles/bigquery.readSessionUser`: *Grants permissions to create read sessions for the BigQuery Storage API, enabling efficient, high-throughput data reads without broader data management capabilities.*
 
 ## Recommendations: Create a Temporary Dataset
 
