@@ -71,16 +71,16 @@ Once the form is completed, it's necessary to test the connection. A successful 
 * Value: `None`, if QueryDialect is set to SQL and no value is provided for `LargeResultTable`.
 
 * For more information, see [here](https://usermanual.wiki/Document/Simba20JDBC20Driver20for20Google20BigQuery20Install20and20Configuration20Guide.1349395491/html#pf19).
-### `Service Account Email`​ <spam id='required'>`required`</spam>
+### `Service Account Email` <spam id='required'>`required`</spam>
 * A Google service account email address that has access to BigQuery application.
-​
+
 
 ### `Service Account Key` <spam id='required'>`required`</spam>
 
 * The service account key to access the Big Query application.
 
 * You can download the private key file from the GoogleAPI console web page.
-​
+
 ---
 
 
@@ -165,3 +165,4 @@ Click the "Create dataset" button to apply these settings and establish the temp
 ### Step 3: Configure JDBC Driver
 
 Configure the JDBC driver to utilize this temporary dataset. This typically involves modifying the JDBC URL or configuration settings to direct intermediate storage to this dataset.
+
