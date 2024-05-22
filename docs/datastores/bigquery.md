@@ -165,9 +165,3 @@ Click the "Create dataset" button to apply these settings and establish the temp
 ### Step 3: Configure JDBC Driver
 
 Configure the JDBC driver to utilize this temporary dataset. This typically involves modifying the JDBC URL or configuration settings to direct intermediate storage to this dataset.
-
-#### Example JDBC URL Configuration:
-
-```
-jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=your-project-id;DatasetId=temp_dataset;OAuthType=0;OAuthServiceAcctEmail=your-service-account-email;OAuthPvtKeyPath=your-private-key-path;
-```
