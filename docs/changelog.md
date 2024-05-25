@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-## Release Notes
+# Release Notes
 
 ### 2024.05.11 { id=2024.05.11}
 

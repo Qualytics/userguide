@@ -6,7 +6,7 @@ site_author: Qualytics Team
 repo_url: https://github.com/Qualytics/userguide
 repo_name: GitHub
 edit_uri: edit/main/docs/
-copyright: Copyright &copy; 2020 - 2023 Qualytics
+copyright: Copyright &copy; 2024 Qualytics
 
 # Page tree
 nav:
@@ -16,7 +16,6 @@ nav:
     - quick-start-guide.md
     - technical-quick-start-guide.md
   - Reference:
-
     - Datastores:
       - Overview: datastores/overview-of-a-datastore.md
       - JDBC Datastores:
@@ -146,6 +145,7 @@ nav:
         - Overview: cli/overview-of-qualytics-cli.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
+      - printing.md
     - Misc:
       - sso/sso.md
       - deployments/deployments.md
@@ -231,6 +231,24 @@ plugins:
   - git-revision-date-localized
   - include-markdown
   - macros
+  - print-site:
+      add_to_navigation: false
+      print_page_title: 'Print Site'
+      add_print_site_banner: false
+      # Table of contents
+      add_table_of_contents: false
+      toc_title: 'Table of Contents'
+      toc_depth: 6
+      # Content-related
+      add_full_urls: false
+      enumerate_headings: false
+      enumerate_figures: true
+      add_cover_page: true
+      cover_page_template: ""
+      path_to_pdf: ""
+      include_css: true
+      enabled: true
+      exclude:
 
 extra:
   analytics:
