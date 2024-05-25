@@ -1,42 +1,39 @@
 # Quality Scores
 
-Quality Scores are measures of data quality calculated at the field and [container](/userguide/glossary#container) level and recorded as time-series enabling you to track movement over time. A quality score ranges from 0-100 with higher scores indicating higher quality. 
-We'll look at how quality scores are measured for each of those data assets in turn:
+Quality Scores are measures of data quality calculated at the field and [container](/userguide/glossary#container) level 
+and recorded as time-series, enabling you to track movement over time. A quality score ranges from 0-100, with higher 
+scores indicating higher quality. Total quality scores are comprised of eight distinct factors in support of a more 
+understanding of the underlying quality aspects of your data.
 
 ## Quality Scoring a Field
 
-Contributions to field scores decay over time so that only relatively recent inputs directly influence a field's score.
-A field's total quality score is comprised of six constituent factors:
+A field's total quality score is comprised of eight constituent factors, each quantified on a 0-100 scale. 
+The total score is then calculated from these individual factors based on their relevance and impact as well as any
+configured custom weighting:
 
-- quality_score = db_field_qs.accuracy - 10 if db_field_qs.accuracy is not None else 65
-
-  quality_score *= _calculate_percentage_adjustment(score=db_field_qs.consistency, max_drop=0.8, max_boost=0.0)
-  quality_score *= _calculate_percentage_adjustment(score=db_field_qs.conformity, max_drop=0.30, max_boost=0.05)
-  quality_score *= _calculate_percentage_adjustment(score=db_field_qs.precision, max_drop=0.30, max_boost=0.05)
-  if db_field_qs.coverage:
-  quality_score *= _calculate_percentage_adjustment(score=db_field_qs.coverage, max_drop=0.50, max_boost=0.0)
-  else:
-  quality_score *= 0.5
-  quality_score *= _calculate_percentage_adjustment(score=db_field_qs.completeness, max_drop=0.0, max_boost=0.05)
-
-
-
-The following inputs contribute to a field's quality score:
-
-- its ratio of valid record anomalies to records
-- whether it is checked for expected completeness
-- the number other checks defined for it
-- its consistency
+- **Completeness**: A measure of the average completeness.
+- **Coverage**: Assesses whether sufficient data quality checks exist for the given field.
+- **Conformity**: Checks alignment of the content to the required standards.
+- **Consistency**: Ensures values are the same for all copies and representations.
+- **Precision**: Verifies that the data is of the expected defined resolution.
+- **Timeliness**: Evaluates if data is available when and where it is expected.
+- **Volumetrics**: Analyzes if data maintains the same size and shape across similar cycles.
+- **Accuracy**: Determines if the data accurately represents the real-world values.
 
 ## Quality Scoring a Container
 
-Contributions to container scores decay over time so that only relatively recent inputs directly influence a container's score. The following inputs contribute to a container's quality score:
+Container quality scoring also considers these eight factors, calculated as a weighted average from all the fields 
+within the container. Additionally, the following measures contribute to a container's quality score:
 
-- the mean of all its fields' scores
-- its ratio of valid shape anomalies to records
-- whether it is checked for expected volumetrics
-- the frequency with which it is scanned
-- whether it has a Freshness SLA defined
-- the duration of any Freshness SLA violations
+- **Weighted average of all its fields' factor scores**
+- **Shape anomaly adjustments**
+- **Volumetric checks**
+- **Scanning frequency**
+- **Timeliness assessments through Freshness SLA**
+- **Duration and impact of Freshness SLA violations**
 
 ## Customizing Quality Score Weights
+
+You can customize how each factor influences the total quality score by adjusting their weights according to their 
+significance in your data quality framework. This customization allows you to tailor the quality scoring to better 
+fit your organization’s data governance standards and operational needs.
