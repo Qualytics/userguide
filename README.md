@@ -7,6 +7,5 @@ Once setup - simply run `mkdocs serve` locally for a live preview. Another optio
 
 ## Rendering as a single PDF
 
-We are using: https://github.com/orzih/mkdocs-with-pdf which requires installation of [WeasyPrint](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation)
-
-Enable the PDF plugin in mkdocs.yml then run mkdocs build
+We are using the [mkdocs-print-site-plugin](https://github.com/timvink/mkdocs-print-site-plugin) plugin to add a 
+print page that combines all the docs, allowing for easy export to PDF and standalone HTML.
