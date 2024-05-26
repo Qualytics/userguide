@@ -28,6 +28,15 @@ In a distributed data ecosystem, replication often occurs to maintain high avail
 | `String`    | <div style="text-align:center">:octicons-check-16:</div>      |
 | `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>      |
 
+### General Properties
+
+{%
+include-markdown "components/general-props/index.md"
+start='<!-- filter-only--start -->'
+end='<!-- filter-only--end -->'
+%}
+
+
 ### Specific Properties
 
 Specify the datastore and table/file where the replica of the targeted fields is located for comparison.
