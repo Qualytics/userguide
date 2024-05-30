@@ -47,6 +47,24 @@ Specifies the maximum allowable record count for each data partition
 | ...        | ...    |
 | 10,050     | Data   |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that no partition of the LINEITEM table contains more than 10,000 records to prevent data processing bottlenecks",
+        "coverage": 1,
+        "properties": {
+            "value":10000
+        },
+        "tags": [],
+        "fields": null,
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "maxPartitionSize",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 In the sample data above, the rule is violated because partition P3 contains 10,050 records, which exceeds the set maximum of 10,000 records.
 
 === "Flowchart"

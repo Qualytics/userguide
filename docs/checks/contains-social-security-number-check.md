@@ -42,6 +42,22 @@
 | 2         | <span class="text-negative">{"name": "Amy Lu", "ssn": "666-12-3456"}</span> |
 | 3         | {"name": "Jane Smith", "ssn": "429-14-2216"}        |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all C_CONTACT_DETAILS entries in the CUSTOMER table contain valid social security numbers",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["C_CONTACT_DETAILS"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "containsSocialSecurityNumber",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the rule because its `C_CONTACT_DETAILS` value does not contain the typical social security number format.

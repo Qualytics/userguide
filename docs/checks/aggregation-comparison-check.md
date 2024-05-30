@@ -71,6 +71,23 @@ Facilitates the comparison between a `target` aggregate metric and a `reference`
 
     For a detailed list of valid SparkSQL aggregation functions, refer to the [Apache Spark SQL documentation](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/functions.html#aggregate-functions).
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Assert that O_ORDERDATE is after the defined date time",
+        "coverage": 1,
+        "properties":  {
+            "datetime": "1991-12-31 10:30:00"
+        },
+        "tags": [],
+        "fields": fields,
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "afterDateTime",
+        "container_id": {container_id},
+        "template_id": {template_id},
+    }
+    ```
+
 ### Anomaly Types
 
 {%
@@ -104,6 +121,29 @@ _Aggregated data from LINEITEM (Reference)_
     - **Target Aggregation**: ROUND(SUM(O_TOTALPRICE))
     - **Comparison**: eq (Equal To)
     - **Reference Aggregation**: ROUND(SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)))
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the aggregated sum of total_price from the ORDERS table matches the aggregated and sum of l_totalprice from the LINEITEM table",
+        "coverage": 1,
+        "properties": {
+            "comparison": ("lt", "lte", "eq", "gte", "gt"), --Select one of these options
+            "expression": f"SUM(O_TOTALPRICE)",
+            "ref_container_id": ref_container_id,
+            "ref_datastore_id": ref_datastore_id,
+            "ref_expression": f"SUM(L_TOTALPRICE)",
+            "ref_filter": "1=1",
+        },
+        "tags": [],
+        "fields": ["O_TOTALPRICE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "aggregationComparison",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
 
 **Anomaly Explanation**
 

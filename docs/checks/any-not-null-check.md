@@ -47,6 +47,22 @@
 | 2          | Good product      | NULL          |
 | 3          | NULL               | Shipped       |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that for every record in the ORDERS table, at least one of the fields (O_COMMENT, O_ORDERSTATUS) isn't null",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["O_ORDERSTATUS","O_COMMENT"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "anyNotNull",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "_PARITY = 'odd'"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the rule because both `O_COMMENT` and `O_ORDERSTATUS` does not hold a value.

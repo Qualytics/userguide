@@ -66,6 +66,25 @@ Allows specifying another field against which the value comparison will be perfo
 | 2          | 500          | 10         |
 | 3          | 120          | <span class="text-negative">121</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all O_TOTALPRICE entries in the ORDERS table are greater than their respective O_DISCOUNT",
+        "coverage": 1,
+        "properties": {
+            "field_name": "O_DISCOUNT",
+            "inclusive": true
+        },
+        "tags": [],
+        "fields": ["O_TOTALPRICE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "greaterThanField",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not satisfy the rule because their `O_TOTALPRICE` values are not greater than their respective `O_DISCOUNT` values.

@@ -64,6 +64,22 @@ Specify the field to compare for equality with the selected field.
 | 2          | <span class="text-negative">1998-01-14</span>  | 1998-01-15 |
 | 3          | 1998-01-12  | 1998-01-12     |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the O_SHIPDATE in the ORDERS table matches its delivery date O_DELIVERYDATE",
+        "coverage": 1,
+        "properties": {"field_name":"O_DELIVERYDATE"},
+        "tags": [],
+        "fields": ["O_SHIPDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "equalToField",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the rule because its `O_SHIPDATE` of 1998-01-14 does not match the `O_DELIVERYDATE` of 1998-01-15.

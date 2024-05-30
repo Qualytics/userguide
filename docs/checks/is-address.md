@@ -69,6 +69,24 @@ This check allows the user to define any combination of these labels as required
 | 2          | <div class="text-negative">Quatre vingt douze R. de l'Église, 75196 cedex 04</div> |
 | 3          | 781 Franklin Ave Crown Heights Brooklyn NYC NY 11216 USA |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all values in O_MAILING_ADDRESS include the labels "road", "city", "state", and "postcode"",
+        "coverage": 1,
+        "properties": {
+            "required_labels": ["road","city","state","country","postcode"]
+            },
+        "tags": [],
+        "fields": ["O_MAILING_ADDRESS"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "isAddress",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the rule because the `O_MAILING_ADDRESS` value includes only a road and postcode which violates the business logic that city and state also be present.

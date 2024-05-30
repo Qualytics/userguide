@@ -57,6 +57,24 @@ Specify the distinct count expectation for the values in the field.
 | 20         | X                      |
 | 21         | O                      |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that there are exactly 3 distinct O_ORDERSTATUS in the ORDERS table: 'O' (Open), 'F' (Finished), and 'P' (In Progress)",
+        "coverage": 1,
+        "properties": {
+            "value":3
+        },
+        "tags": [],
+        "fields": ["O_ORDERSTATUS"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "distinctCount",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the rule is violated because the `O_ORDERSTATUS` contains 4 distinct values and not 3: 'O' (Open), 'F' (Finished), and 'P' (In Progress).

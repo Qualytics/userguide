@@ -57,6 +57,26 @@ For instance, in a retail context, it could ensure that there’s a consistent n
 | 10         | 2023-02-25   |
 | 11         | 2023-02-28   |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the number of orders for each month is consistently between 5 and 10",
+        "coverage": 1,
+        "properties": {
+            "interval_name": "Monthly",
+            "min_size": 5,
+            "max_size": 10
+        },
+        "tags": [],
+        "fields": ["O_ORDERDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "timeDistributionSize",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the January segment fails the rule because there are only 4 orders, which is below the specified minimum count of 5.

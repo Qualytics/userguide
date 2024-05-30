@@ -52,6 +52,26 @@ Specify the range of dates or times that values in the selected field should fal
 | 2  | 1991-06-02 09:15:00 |
 | 3  | <span class="text-negative">1992-01-01 01:25:00</span> |
 
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all O_ORDERDATE entries in the ORDERS table are between 10:30 AM on January 1st, 1991 and 3:00 PM on December 31st, 1991",
+        "coverage": 1,
+        "properties": {
+            "min_time":"1991-01-01T10:30:00Z",
+            "max_time":"1991-12-31T15:00:00Z"
+        },
+        "tags": [],
+        "fields": ["O_ORDERDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "betweenTimes",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "_PARITY = 'odd'"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not satisfy the rule because their `O_ORDERDATE` values are not between **1991-01-01 10:30:00** and **1991-12-31 15:00:00**.

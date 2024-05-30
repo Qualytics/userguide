@@ -68,6 +68,26 @@ Define the datastore, table/file, and field where the rule should look for match
 | 2           | Argentina          |
 | 3           | <span class="text-negative">Atlantida</span>   |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all NATION_NAME entries in the NATION table match entries under the COUNTRY_NAME column in an external lookup file listing official country names",
+        "coverage": 1,
+        "properties": {
+            "field_name":"COUNTRY_NAME",
+            "ref_container_id": {ref_container_id},
+            "ref_datastore_id": {ref_datastore_id}
+        },
+        "tags": [],
+        "fields": ["NATION_NAME"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "existsIn",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Lookup File Sample**
 
 | COUNTRY_NAME       |

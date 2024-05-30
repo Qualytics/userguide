@@ -87,6 +87,22 @@ Implements a user-defined scala script.
     }
     ```
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Validate that each record in the LINEITEM table has a well-structured JSON in the L_ATTRIBUTES column by ensuring the presence of essential keys: "color", "weight", and "dimensions"",
+        "coverage": 1,
+        "properties": {"assertion":"(lAttributes: String) => {\n      import play.api.libs.json._\n\n      try {\n        val json = Json.parse(lAttributes)\n        \n        // Define the keys we expect to find in the JSON\n        val expectedKeys = List(\"color\", \"weight\", \"dimensions\")\n        \n        // Check if the expected keys are present in the JSON\n        expectedKeys.forall(key => (json \\ key).toOption.isDefined)\n      } catch {\n        case e: Exception => false // Return false if parsing fails\n      }\n    }"},
+        "tags": [],
+        "fields": ["L_ATTRIBUTES"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "userDefinedFunction",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2**, **3**, and **4** do not satisfy the rule because they lack at least one of the essential keys ("color", "weight", "dimensions") in the L_ATTRIBUTES column.

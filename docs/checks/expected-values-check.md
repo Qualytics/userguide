@@ -56,6 +56,24 @@ Specify the list of expected values for the data in the field.
 | 3          | P              |
 | 4          | <span class="text-negative">X</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all O_ORDERSTATUS entries in the ORDERS table only contain expected order statuses: "O", "F", and "P"",
+        "coverage": 1,
+        "properties": {
+            "list":["O","F","P"]
+        },
+        "tags": [],
+        "fields": ["O_ORDERSTATUS"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "expectedValues",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **4** does not satisfy the rule because the `O_ORDERSTATUS` "X" is not on the list of expected order statuses ("O", "F", "P").
