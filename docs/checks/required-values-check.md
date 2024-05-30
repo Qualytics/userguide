@@ -56,6 +56,24 @@ Ensures that a specific set of values is present within a field.
 | 3          | 3-MEDIUM        |
 | 4          | 3-MEDIUM        |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that orders have priorities labeled as '1-URGENT', '2-HIGH', '3-MEDIUM', '4-LOW', and '5-NOT URGENT'",
+        "coverage": 1,
+        "properties": {
+            "list":["1-URGENT","2-HIGH","3-MEDIUM","4-LOW","5-NOT URGENT"]
+        },
+        "tags": [],
+        "fields": ["O_ORDERPRIORITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "requiredValues",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the rule is violated because the values '4-LOW' and '5-NOT URGENT' are not present in the `O_ORDERPRIORITY` field of the ORDERS table.

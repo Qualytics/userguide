@@ -52,6 +52,26 @@ Specify a particular date and time to act as the threshold for the rule.
 | 2          | 1998-11-02 12:45:00   |
 | 3          | 1998-08-01 10:20:00   |
 
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Make sure datetime values are earlier than 3:00 PM, Dec 01, 1998",
+        "coverage": 1,
+        "properties": {
+            "datetime":"1998-12-01T15:00:00Z"
+        },
+        "tags": [],
+        "fields": ["L_SHIPDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "beforeDateTime",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `L_ORDERKEY` **1** does not satisfy the rule because its `L_SHIPDATE` value is not before **1998-12-01 15:00:00**.

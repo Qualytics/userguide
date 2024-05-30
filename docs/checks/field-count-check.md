@@ -75,6 +75,24 @@ Specify the exact number of fields expected in the profile.
     | O_COMMENT       | STRING     |
     | EXTRA_FIELD     | UNKOWN     |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the ORDERS profile contains exactly 9 fields",
+        "coverage": 1,
+        "properties": {
+            "value": 9
+        },
+        "tags": [],
+        "fields": null,
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "fieldCount",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 Among the presented sample profiles, the second one is missing a field, while the third one contains an extra field. Only the first profile has the correct number of fields, which is 9.

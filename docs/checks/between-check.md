@@ -54,6 +54,27 @@ Specify both minimum and maximum boundaries, and determine if these boundaries s
 | 2          | 15         |
 | 3          | <span class="text-negative">21<span>         |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all L_QUANTITY entries in the LINEITEM table are between 5 and 20 (inclusive)",
+        "coverage": 1,
+        "properties": {
+            "min":5
+            "inclusive_min":true,
+            "max":20,
+            "inclusive_max":true,
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "between",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not satisfy the rule because their `L_QUANTITY` values are not between **5** and **20** inclusive.

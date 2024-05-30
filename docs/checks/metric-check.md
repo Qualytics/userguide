@@ -127,6 +127,27 @@ Determines the evaluation method and allowable limits for field value comparison
 | #3    | 1          | 110                   | <span class="text-negative">200</span> | <span class="text-negative">81.8%</span> | <span class="text-negative">Yes</span> |
 | #4    | 1          | 200                   | <span class="text-negative">105</span> | <span class="text-negative">-47.5%</span> | <span class="text-negative">Yes</span> |
 
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the total price in the ORDERS table does not fluctuate beyond a predefined percentage limit between scans",
+        "coverage": 1,
+        "properties": {
+            "comparison":"Percentage Change",
+            "min":-0.3,
+            "max":0.3
+        },
+        "tags": [],
+        "fields": ["O_TOTALPRICE "],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "metric",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample scan history above, anomalies are identified in scans #3 and #4. The `O_TOTALPRICE` values in these scans fall outside the declared percentage change limits of -30% and 30%, indicating that something unusual might be happening and further investigation is needed.

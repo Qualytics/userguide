@@ -52,6 +52,24 @@ Determines the maximum allowable value for the field.
 | 2          | 1            | 20         |
 | 3          | 1            | <span class="text-negative">60</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the quantity of items (L_QUANTITY) in the LINEITEM table does not exceed a value of 50",
+        "coverage": 1,
+        "properties": {
+            "value": 50
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "maxValue",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not satisfy the rule because their `L_QUANTITY` values exceed the specified maximum value of 50.

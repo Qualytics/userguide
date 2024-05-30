@@ -68,6 +68,26 @@ Define the datastore, table/file, and field where the rule should look for non-m
 | Mars               |
 | ...                |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "A shipping company needs to ensure that all NATION_NAME entries in the NATION table aren't listed in an external unsupported regions file, which lists countries they don't ship to",
+        "coverage": 1,
+        "properties": {
+            "field_name":"UNSUPPORTED_REGION",
+            "ref_container_id": {ref_container_id},
+            "ref_datastore_id": {ref_datastore_id}
+        },
+        "tags": [],
+        "fields": ["NATION_NAME"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "notExistsIn",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `N_NATIONKEY` **1** does not satisfy the rule because the `N_NATIONNAME` "Antarctica" is listed as an `UNSUPPORTED_REGION` in the unsupported regions file, indicating the company doesn't ship there.

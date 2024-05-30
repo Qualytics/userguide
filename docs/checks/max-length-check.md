@@ -50,6 +50,24 @@ Determines the maximum acceptable length of the string.
 | 2         |  <span class="text-negative">A product description that clearly goes way beyond the specified fifty characters limit.</span> |
 | 3         | Basic office equipment             |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that P_DESCRIPTION in the PART table do not exceed 50 characters in length",
+        "coverage": 1,
+        "properties": {
+            "value": 3
+        },
+        "tags": [],
+        "fields": ["C_BLOOD_GROUP"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "maxLength",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `P_PARTKEY` **2** does not satisfy the rule because its `P_DESCRIPTION` exceeds 50 characters in length.

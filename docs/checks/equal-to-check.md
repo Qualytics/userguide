@@ -62,6 +62,25 @@ Specify the field to compare for equality with the selected field.
 | 3          | 3            | 10         |
 | 4          | 4            | <span class="text-negative">8</span>  |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the quantity of items (L_QUANTITY) in the LINEITEM table is equal to a value of 10",
+        "coverage": 1,
+        "properties": {
+            "value":"10",
+            "inclusive":true
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "equalTo",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2** and **4** do not satisfy the rule because their `L_QUANTITY` values are below the specified minimum value of 10.

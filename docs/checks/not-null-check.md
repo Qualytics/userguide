@@ -48,6 +48,22 @@
 | 3         | Charlie  | 789 Maple Ave   |
 | 4         | <span class="text-negative">NULL</span>     | 456 Pine Rd     |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that every record in the CUSTOMER table has an assigned value for the C_NAME and C_ADDRESS fields",
+        "coverage": 1,
+        "properties": null,
+        "tags": [],
+        "fields": ["C_ADDRESS","C_NAME"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "notNull",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `C_CUSTKEY` **2** and **4** do not satisfy the rule because they have `NULL` values in the `C_NAME` or `C_ADDRESS` fields.

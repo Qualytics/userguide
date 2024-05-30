@@ -32,7 +32,7 @@
 
 ### Example
 
-**Objective**: *Ensure that all C_CONTACT_DETAILS entries in the CUSTOMER table contain valid email addresses.*
+**Objective**: *.*
 
 **Sample Data**
 
@@ -41,6 +41,22 @@
 | 1         | {"name": "John Doe", "email": "john.doe@example.com"}             |
 | 2         | <span class="text-negative">{"name": "Amy Lu", "email": "amy.lu@"}</span> |
 | 3         | {"name": "Jane Smith", "email": "jane.smith@domain.org"}            |
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all C_CONTACT_DETAILS entries in the CUSTOMER table contain valid email addresses",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["C_EMAIL_JSON"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "containsEmail",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
 
 **Anomaly Explanation**
 

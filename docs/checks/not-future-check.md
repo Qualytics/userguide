@@ -43,6 +43,22 @@
 | 2          | <span class="text-negative">2023-10-25 (Future Date)</span>    |
 | 3          | 2023-10-10                  |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the delivery dates (O_DELIVERYDATE) in the ORDERS table are not set in the future",
+        "coverage": 1,
+        "properties": null,
+        "tags": [],
+        "fields": ["O_DELIVERYDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "notFuture",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **2** does not satisfy the rule because its `O_DELIVERYDATE` is set in the future.

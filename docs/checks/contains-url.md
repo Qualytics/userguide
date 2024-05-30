@@ -42,6 +42,24 @@
 | 2         | {"name": "Hardwarepro", "website": "https://www.hardwarepro.com"}   |
 | 3         | <span class="text-negative">{"name": "Smith's Tools", "website": "ftp:server:8080"}</span>     |
 
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all S_DETAILS entries in the SUPPLIER table contain valid URLs",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["S_DETAILS"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "containsUrl",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `S_SUPPKEY` **1** and **3** do not satisfy the rule because their `S_DETAILS` values do not contain a valid URL pattern.

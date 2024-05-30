@@ -64,6 +64,25 @@ Specify the fields that must be present in the schema, and determine if a schema
     | L_EXTENDEDPRICE | NUMBER     |
     | ...             | ...        |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that expected fields such as L_ORDERKEY, L_PARTKEY, and L_SUPPKEY are always present in the LINEITEM table",
+        "coverage": 1,
+        "properties": {
+            "allow_other_fields":false,
+            "list":["L_ORDERKEY","L_PARTKEY","L_SUPPKEY"]
+        },
+        "tags": [],
+        "fields": null,
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "expectedSchema",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 Among the presented sample schemas, the second one is missing one of the expected schema. Only the first schema has the correct expected schema.

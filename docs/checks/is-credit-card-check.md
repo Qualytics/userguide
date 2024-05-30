@@ -42,6 +42,22 @@
 | 2         | <span class="text-negative">ABC12345XYZ</span>        |
 | 3         | 4111111111111111                        |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all C_CREDIT_CARD entries in the CUSTOMER table are valid credit card numbers",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["C_CREDIT_CARD"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "isCreditCard",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the rule because its `C_CREDIT_CARD` value is not a valid credit card number.

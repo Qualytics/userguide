@@ -61,6 +61,28 @@ identified as anomalies.*
 | 2           | Frank's Flowers |
 | 3           | ACME Boxes      |
 
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure a `businesses` table with an `BUSINESS_ID` field and a `BUSINESS_NAME` field shares the same `entity identifier`",
+        "coverage": 1,
+        "properties": {
+            "distinct_field_name":"BUSINESS_ID",
+            "pair_substrings":true,
+            "pair_homophones":true,
+            "spelling_similarity_threshold":0.6
+        },
+        "tags": [],
+        "fields": ["BUSINESS_NAME"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "entityResolution",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `BUSINESS_ID` **1** and **3** do not satisfy the rule because their `BUSINESS_NAME`

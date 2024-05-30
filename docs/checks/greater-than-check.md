@@ -61,6 +61,25 @@ Allows specifying a numeric value that acts as the threshold.
 | 2          | 15 |
 | 3          | <span class="text-negative">5</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all L_QUANTITY entries in the LINEITEM table are greater than 10",
+        "coverage": 1,
+        "properties": {
+            "inclusive": true,
+            "value": 10
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "greaterThan",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **1** and **3** do not satisfy the rule because their `L_QUANTITY` values are not greater than **10**.
