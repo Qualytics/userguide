@@ -39,6 +39,12 @@ Specify the field to compare for equality with the selected field.
         include-markdown "components/comparators/index.md"
     %}
     {%
+        include-markdown "components/comparators/string.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
+    {%
         include-markdown "components/comparators/numeric.md"
     %}
     
