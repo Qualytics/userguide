@@ -44,6 +44,22 @@
 | 3          | 1            | <span class="text-negative">-5</span>         |
 | 4          | 1            | 20         |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the quantity of items (L_QUANTITY) in the LINEITEM table is a positive number",
+        "coverage": 1,
+        "properties": null,
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "positive",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not satisfy the rule because their `L_QUANTITY` values are not positive numbers.

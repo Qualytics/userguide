@@ -61,6 +61,25 @@ Allows specifying a numeric value that acts as the threshold.
 | 2          | <span class="text-negative">25</span> |
 | 3          | <span class="text-negative">23</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all L_PRICE entries in the LINEITEM table are less than 20",
+        "coverage": 1,
+        "properties": {
+            "inclusive": true,
+            "value": 20
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "lessThan",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not satisfy the rule because their `L_PRICE` values are not less than **20**.

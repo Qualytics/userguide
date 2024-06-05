@@ -48,6 +48,22 @@
 | 3         | <span class="text-negative">Customer_A</span>  | <span class="text-negative">123 Main St</span> |
 | 4         | Customer_C  | 789 Elm St           |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that each combination of C_NAME and C_ADDRESS in the CUSTOMER table is unique",
+        "coverage": 1,
+        "properties": null,
+        "tags": [],
+        "fields": ["C_NAME", "DEATH_RATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "unique",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `C_CUSTKEY` **1** and **3** have the same `C_NAME` and `C_ADDRESS`, which violates the rule because this combination of keys should be unique.

@@ -39,7 +39,6 @@ system to align with your organization’s data governance priorities. Additiona
 data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the
 most relevant data quality insights.
 
-
 ## Factor Impacting Rule Types
 
 Specific check rule types are considered for factor score calculations at the field level for the following factors.

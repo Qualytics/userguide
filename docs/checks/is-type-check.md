@@ -50,6 +50,24 @@ Specify the expected type for the data in the field.
 | 2          | <span class="text-negative">"15.5"</span>  |
 | 3          | <span class="text-negative">"Ten"</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all L_QUANTITY entries in the LINEITEM table are of Integral type",
+        "coverage": 1,
+        "properties": {
+            "field_type":"Integral"
+        },
+        "tags": [],
+        "fields": ["L_QUANTITY"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "isType",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2** and **3** do not satisfy the rule because their `L_QUANTITY` values are not of Integral type.

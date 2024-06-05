@@ -71,6 +71,25 @@ Determines if the actual value of a field falls within an expected predicted ran
     - **Expression**: L_EXTENDEDPRICE × 0.08
     - **Tolerance**: 2
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the discount (L_DISCOUNT) in the LINEITEM table is calculated correctly based on the actual price (L_EXTENDEDPRICE). A correct discount should be approximately 8% less than the actual price, within a tolerance of ±2",
+        "coverage": 1,
+        "properties": {
+            "expression": "L_EXTENDEDPRICE × 0.08",
+            "tolerance": 2
+        },
+        "tags": [],
+        "fields": ["L_DISCOUNT"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "predictedBy",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 For the entry with `L_ORDERKEY` **2**, the discount is 12, which is outside of the computed range. Based on an 8% expected discount with a tolerance of ±2, the discount should be between 6 and 10 (calculated from the actual price of 100). Therefore, this record is marked as anomalous.

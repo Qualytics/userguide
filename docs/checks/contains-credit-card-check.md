@@ -42,6 +42,22 @@
 | 2          | <span class="text-negative">{"date": "2023-09-25", "amount": 150.75, "credit_card": "ABC12345XYZ"}</span>      |
 | 3          | {"date": "2023-09-25", "amount": 200.00, "credit_card": "4111-1111-1111-1111"}  |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that every O_PAYMENT_DETAILS in the ORDERS table contains a credit card number to confirm the payment method used for each order",
+        "coverage": 1,
+        "properties": {},
+        "tags": [],
+        "fields": ["C_CCN_JSON"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "containsCreditCard",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `O_ORDERKEY` **2** violates the rule as the `O_PAYMENT_DETAILS` does not contain a credit card number, indicating an incomplete order record.

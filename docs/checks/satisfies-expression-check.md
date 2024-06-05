@@ -58,6 +58,24 @@ Evaluates each record against a specified Spark SQL expression to ensure it meet
 ??? example "Inputs"
     - **Expression**: L_TAX <= L_EXTENDEDPRICE * 0.10
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the total tax applied to each item in the LINEITEM table is not more than 10% of the extended price",
+        "coverage": 1,
+        "properties": {
+            "expression":"L_TAX <= L_EXTENDEDPRICE * 0.10"
+            },
+        "tags": [],
+        "fields": ["L_TAX", "L_EXTENDEDPRICE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "satisfiesExpression",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `L_ORDERKEY` **2** and **4** do not satisfy the rule because the `L_TAX` values are more than 10% of their respective `L_EXTENDEDPRICE` values.

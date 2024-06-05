@@ -54,6 +54,24 @@ Allows specifying a pattern against which the field will be checked.
 | 2         | <span class="text-negative">TPCH-1234-ABCD</span>  |
 | 3         | TPCH-WXYZ-9876              |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all P_SERIAL entries in the PART table match the pattern for product serial numbers: `TPCH-XXXX-####`, where `XXXX` are uppercase alphabetic characters and `####` are numbers",
+        "coverage": 1,
+        "properties": {
+            "pattern":"^tpch-[a-z]{4}-[0-9]{4}$"
+        },
+        "tags": [],
+        "fields": ["P_SERIAL"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "matchesPattern",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entry with `P_PARTKEY` **2** does not satisfy the rule because its `P_SERIAL` does not match the required pattern.

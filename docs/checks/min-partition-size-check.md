@@ -47,6 +47,24 @@ Sets the required minimum record count for each data partition
 | ...        | ...   |
 | 900        | Data  |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that each partition of the LINEITEM table has at least 1000 records",
+        "coverage": 1,
+        "properties": {
+            "value": 1000
+        },
+        "tags": [],
+        "fields": null,
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "minPartitionSize",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 The sample data above does not satisfy the rule because it contains only 900 records, which is less than the required minimum of 1000 records.
 
 === "Flowchart"

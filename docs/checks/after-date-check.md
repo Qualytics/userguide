@@ -51,6 +51,24 @@ Specify a particular date and time to act as the threshold for the rule.
 | 2  | 1992-01-02 09:15:00 |
 | 3  | <span class="text-negative">1991-12-14 10:25:00</span> |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that all O_ORDERDATE entries in the ORDERS table are later than 10:30 AM on December 31st, 1991.",
+        "coverage": 1,
+        "properties":  {
+            "datetime": "1991-12-31 10:30:00"
+        },
+        "tags": [],
+        "fields": ["O_ORDERDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "afterDateTime",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 In the sample data above, the entries with `O_ORDERKEY` **1** and **3** do not satisfy the rule because their `O_ORDERDATE` values are not after **1991-12-31 10:30:00**.

@@ -39,6 +39,12 @@ Specify the field to compare for equality with the selected field.
         include-markdown "components/comparators/index.md"
     %}
     {%
+        include-markdown "components/comparators/string.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
+    {%
         include-markdown "components/comparators/numeric.md"
     %}
     
@@ -63,6 +69,22 @@ Specify the field to compare for equality with the selected field.
 | 1          | 1998-01-04  | 1998-01-04     |
 | 2          | <span class="text-negative">1998-01-14</span>  | 1998-01-15 |
 | 3          | 1998-01-12  | 1998-01-12     |
+
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that the O_SHIPDATE in the ORDERS table matches its delivery date O_DELIVERYDATE",
+        "coverage": 1,
+        "properties": {"field_name":"O_DELIVERYDATE", "inclusive":false},
+        "tags": [],
+        "fields": ["O_SHIPDATE"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "equalToField",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
 
 **Anomaly Explanation**
 

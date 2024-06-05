@@ -5,6 +5,39 @@ hide:
 
 # Release Notes
 
+### 2024.06.04 { id=2024.06.04 }
+
+#### Feature Enhancements
+
+- Atlan Data Catalog Integration
+    - We're excited to introduce integration with Atlan, enabling users to synchronize and manage assets across both Qualytics and Atlan:
+        - Tag Sync: Sync tags assigned to data assets in Atlan with the corresponding assets in Qualytics, enabling tag-based quality score reporting, notifications, and bulk data quality operations using Atlan-managed tags.
+        - Metadata Sync: Automatically synchronize Atlan with Qualytics metadata, including asset URL, total score, and factor scores such as completeness, coverage, conformity, consistency, precision, timeliness, volume, and accuracy.
+
+- Entity Resolution Check
+    - We've removed the previous limitation on the maximum number of distinct entity names that could be resolved with the Entity Resolution rule type. This release includes various performance enhancements that support an unlimited number of entity names.
+
+- Enhancements to Catalog Operation Results
+    - We've improved the catalog operation results by now including detailed information on whether tables, views, or both were involved in each catalog operation.
+
+- Enhancements to 'Equal to Field' Rule Type
+    - The 'Equal to Field' rule now supports string values, allowing for direct comparisons between text-based data fields.
+
+- Enhancements to Enrichment
+    - Qualytics now includes a property for anomalousRecordCount on shape anomaly, which previously was neither populated nor persisted. This aims to accurately capture and record the total number of anomalous records identified in ShapeAnomaly, regardless of the max_source_records threshold.
+
+- Dynamic Meta Titles
+    - Pages such as Datastore Details, Container Details, and Field Details now feature dynamic meta titles that accurately describe the page content and are visible in browser tabs providing better searchability.
+
+#### General Fixes
+
+- Fix Trends of Quality Scores on the Insights Page
+    - Addressed issues with displaying trends on the Insights page. Trends now accurately reflect changes and comparisons to the previous report period, providing more reliable and insightful analytics.
+
+- Resolved a bug in Entity Resolution where the distinction constraint was only applied to entity names that differed.
+  
+- General fixes and improvements
+
 ### 2024.05.22 { id=2024.05.22 }
 
 #### Feature Enhancements

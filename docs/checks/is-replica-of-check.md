@@ -105,6 +105,25 @@ Specify the datastore and table/file where the replica of the targeted fields is
 | 2           | USA                |
 | 3           | Uruguay            |
 
+=== "Payload example"
+    ``` json
+    {
+        "description": "Ensure that N_NATIONKEY and N_NATIONNAME from the NATION table are replicas in the NATION_BACKUP table",
+        "coverage": 1,
+        "properties": {
+            "ref_container_id": {ref_container_id},
+            "ref_datastore_id": {ref_datastore_id}
+        },
+        "tags": [],
+        "fields": ["N_NATIONKEY", "N_NATIONNAME"],
+        "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
+        "rule": "isReplicaOf",
+        "container_id": {container_id},
+        "template_id": {template_id},
+        "filter": "1=1"
+    }
+    ```
+
 **Anomaly Explanation**
 
 The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the original and the replica are not completely identical, indicating a possible discrepancy in the replication process or an unintended change.
