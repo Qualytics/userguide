@@ -24,21 +24,21 @@ Configuring an Enrichment Datastore is a three-step process:
 
 On the following links you can see how to setup each one of them:
 
-* [Amazon S3](/userguide/datastores/amazon-s3/#configuring-an-enrichment-datastore)
-* [Azure Blob Storage](/userguide/datastores/azure-blob-storage/#configuring-an-enrichment-datastore)
-* [Azure Datalake Storage](/userguide/datastores/azure-datalake-storage/#configuring-an-enrichment-datastore)
-* [BigQuery](/userguide/datastores/bigquery/#configuring-an-enrichment-datastore)
-* [Databricks](/userguide/datastores/databricks/#configuring-an-enrichment-datastore)
-* [Google Cloud Storage](/userguide/datastores/google-cloud-storage/#configuring-an-enrichment-datastore)
-* [MariaDB](/userguide/datastores/maria-db/#configuring-an-enrichment-datastore)
-* [Microsoft SQL Server](/userguide/datastores/microsoft-sql-server/#configuring-an-enrichment-datastore)
-* [MySQL](/userguide/datastores/mysql/#configuring-an-enrichment-datastore)
-* [Oracle](/userguide/datastores/oracle/#configuring-an-enrichment-datastore)
-* [PostgreSQL](/userguide/datastores/postgresql/#configuring-an-enrichment-datastore)
-* [QFS](/userguide/datastores/qfs/#configuring-an-enrichment-datastore)
-* [Redshift](/userguide/datastores/redshift/#configuring-an-enrichment-datastore)
-* [Snowflake](/userguide/datastores/snowflake/#configuring-an-enrichment-datastore)
-* [Synapse](/userguide/datastores/synapse/#configuring-an-enrichment-datastore)
+* [Amazon S3](../../datastores/amazon-s3/#configuring-an-enrichment-datastore)
+* [Azure Blob Storage](../../datastores/azure-blob-storage/#configuring-an-enrichment-datastore)
+* [Azure Datalake Storage](../../datastores/azure-datalake-storage/#configuring-an-enrichment-datastore)
+* [BigQuery](../../datastores/bigquery/#configuring-an-enrichment-datastore)
+* [Databricks](../../datastores/databricks/#configuring-an-enrichment-datastore)
+* [Google Cloud Storage](../../datastores/google-cloud-storage/#configuring-an-enrichment-datastore)
+* [MariaDB](../../datastores/maria-db/#configuring-an-enrichment-datastore)
+* [Microsoft SQL Server](../../datastores/microsoft-sql-server/#configuring-an-enrichment-datastore)
+* [MySQL](../../datastores/mysql/#configuring-an-enrichment-datastore)
+* [Oracle](../../datastores/oracle/#configuring-an-enrichment-datastore)
+* [PostgreSQL](../../datastores/postgresql/#configuring-an-enrichment-datastore)
+* [QFS](../../datastores/qfs/#configuring-an-enrichment-datastore)
+* [Redshift](../../datastores/redshift/#configuring-an-enrichment-datastore)
+* [Snowflake](../../datastores/snowflake/#configuring-an-enrichment-datastore)
+* [Synapse](../../datastores/synapse/#configuring-an-enrichment-datastore)
 
 # Configuration
 
