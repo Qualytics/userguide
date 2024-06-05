@@ -15,15 +15,22 @@ There are two types of anomalies in Qualytics: **Record** and **Shape**:
 !!! note
     In either anomaly type, source records are exposed as part of `Anomaly Details`. A Record anomaly will highlight the specific record, and a Shape anomaly will highlight 10 samples from underlying anomalous records.
 
+## Record Anomaly View
+
+A record anomaly identifies a single record (row) as anomalous and provides details regarding why it is anomalous. The simplest record anomaly is a row that doesn't contain a value for a field where one is expected.
+
+![Screenshot](../assets/anomalies/record-anomaly-light.png#only-light)
+![Screenshot](../assets/anomalies/record-anomaly-dark.png#only-dark)
+
+
 ## Shape Anomaly View
+
+A shape anomaly identifies anomalous structure within the analyzed data. The simplest shape anomaly is a dataset that doesn't match the expected schema because it lacks one or more fields. Some shape anomalies only apply to a subset of the 
+data being analyzed and can therefore produce a count of the number of rows that reflect the anomalous concern. Where that is possible, the shape anomaly's `anomalous_record_count` is populated.
 
 ![Screenshot](../assets/anomalies/shape-anomaly-light.png#only-light)
 ![Screenshot](../assets/anomalies/shape-anomaly-dark.png#only-dark)
 
-## Record Anomaly View
-
-![Screenshot](../assets/anomalies/record-anomaly-light.png#only-light)
-![Screenshot](../assets/anomalies/record-anomaly-dark.png#only-dark)
 
 # Anomaly Status
 
