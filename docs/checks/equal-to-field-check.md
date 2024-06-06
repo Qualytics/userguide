@@ -39,6 +39,12 @@ Specify the field to compare for equality with the selected field.
         include-markdown "components/comparators/index.md"
     %}
     {%
+        include-markdown "components/comparators/string.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
+    {%
         include-markdown "components/comparators/numeric.md"
     %}
     
@@ -69,7 +75,7 @@ Specify the field to compare for equality with the selected field.
     {
         "description": "Ensure that the O_SHIPDATE in the ORDERS table matches its delivery date O_DELIVERYDATE",
         "coverage": 1,
-        "properties": {"field_name":"O_DELIVERYDATE"},
+        "properties": {"field_name":"O_DELIVERYDATE", "inclusive":false},
         "tags": [],
         "fields": ["O_SHIPDATE"],
         "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},

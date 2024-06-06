@@ -7,13 +7,12 @@ String comparators facilitate comparisons of textual data by allowing variations
 When enabled, this setting allows the comparator to ignore differences in whitespace. This means sequences of whitespace are collapsed into a single space, and any leading or trailing spaces are removed. This can be particularly useful in environments where data entry may vary in formatting but where those differences are not relevant to the data's integrity.
 
 ??? example "Illustration"
-    _TBD_
 
-    **Thresholds**: Min Value = 100, Max Value = 300
+    In this example, it is being compared `Value A` and `Value B` according to the defined string comparison to `ignore whitespace` as `True`.
 
-    | Scan | Current Value | Anomaly Detected |
-    |------|---------------|------------------|
-    | #1    | 150           | No              |
-    | #2    | <div class="text-negative">90</div> | <div class="text-negative">Yes</div> |
-    | #3    | 250           | No               |
-    | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
+    | Value A   | Value B   | Are equal?                              | Has whitespace?|
+    |-----------|-----------|-----------------------------------------|----------------|
+    | `Leonidas`| `Leonidas`|  True                                   | No             | 
+    | `Beth`    | ` Beth `  |  True                                   | Yes            |
+    | `Ana`     | ` Anna `  |  <div class="text-negative">False</div> | Yes            |
+    | `Joe`     | `Joel`    |  <div class="text-negative">False</div> | No             |

@@ -75,7 +75,6 @@ After creating the persona, you need to create a personal access token
     ![Screenshot](../../assets/integrations/qualytics-settings-section-light.png#only-light)
     ![Screenshot](../../assets/integrations/qualytics-settings-section-dark.png#only-dark)
     
-
 2. Click the `Add Integration` button
 
     ![Screenshot](../../assets/integrations/qualytics-add-integration.png)
@@ -166,6 +165,7 @@ After synchronization, Qualytics will issue Atlan `alerts` for tables where anom
 | **Quality Score Precision**    | Your data is of the expected defined resolution |
 | **Quality Score Timeliness**   | Data is available when and where you expect it |
 | **Quality Score Volumetrics**  | Data has the same size and shape across similar cycles |
+
 
 ### Alation Integration
 - **Coming Soon**: Details about the integration with Alation will be added soon

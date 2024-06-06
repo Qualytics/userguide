@@ -119,7 +119,7 @@ _Aggregated data from LINEITEM (Reference)_
 
 ??? example "Inputs"
     - **Target Aggregation**: ROUND(SUM(O_TOTALPRICE))
-    - **Comparison**: eq (Equal To)
+    - **Comparison**: eq (Equal To), lt (Less Than), lte (Less Than or Equal to), gte (Greater Than or Equal To), gt (Greater Than)
     - **Reference Aggregation**: ROUND(SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)))
 
 === "Payload example"
@@ -128,7 +128,7 @@ _Aggregated data from LINEITEM (Reference)_
         "description": "Ensure that the aggregated sum of total_price from the ORDERS table matches the aggregated and sum of l_totalprice from the LINEITEM table",
         "coverage": 1,
         "properties": {
-            "comparison": ("lt", "lte", "eq", "gte", "gt"), --Select one of these options
+            "comparison": "eq",
             "expression": f"SUM(O_TOTALPRICE)",
             "ref_container_id": ref_container_id,
             "ref_datastore_id": ref_datastore_id,
