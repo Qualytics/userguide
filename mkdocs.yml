@@ -250,7 +250,7 @@ plugins:
       cover_page_template: ""
       path_to_pdf: ""
       include_css: true
-      enabled: true
+      enabled: !ENV [MKDOCS_SERVE, false] # disable the print plugin when we are developing locally
       exclude:
 
 extra:
