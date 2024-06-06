@@ -22,7 +22,7 @@ The Enrichment Datastore contains several types of tables, each serving a specif
 
 ### Enrichment Tables
 
-When anomalies are detected, the platform writes metadata into two primary enrichment tables:
+When anomalies are detected, the platform writes metadata into three primary enrichment tables:
 
 - <enrichment_prefix\>_failed_checks
 - <enrichment_prefix\>_source_records
