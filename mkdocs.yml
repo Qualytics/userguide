@@ -129,6 +129,7 @@ nav:
     - Freshness:
       - Overview: freshness/global-freshness.md
     - Settings:
+        - Tags: settings/tags/overview-of-a-tag.md
         - Notifications:
           - Overview: settings/notifications/overview-of-a-notification.md
           - Channels:
@@ -138,7 +139,8 @@ nav:
             - settings/notifications/notification-services/pagerduty.md
             - settings/notifications/notification-services/slack.md
             - settings/notifications/notification-services/webhook.md
-        - Tags: settings/tags/overview-of-a-tag.md
+        - Connections: settings/connections/manage-connections.md
+        - Integrations: settings/integrations/overview-of-integrations.md
         - Security: settings/security/teams-and-permissions.md
         - Tokens: settings/tokens/overview-of-tokens.md
         - Health: settings/health/overview-of-health.md
