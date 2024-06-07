@@ -5,6 +5,33 @@ hide:
 
 # Release Notes
 
+### 2024.06.07 { id=2024.06.07 }
+
+#### Feature Enhancements
+
+- Atlan Integration Improvements
+    - Enhanced the Atlan assets fetch and external tags syncing. 
+    - Added support for external tags propagation to checks and anomalies. 
+    - Merged Global and External tags section for streamlined tag management.
+
+- Restart Button for Analytics Engine
+    - Introduced a new "Restart" button under the Settings - Health section, allowing admins to manually restart the Analytics Engine if it is offline or unresponsive.
+
+- Interactive Tooltip Component
+    - Added a new interactive tooltip component that remains visible upon hovering, enhancing user interaction across various modules of the application.
+    - Refactored existing tooltip usages to integrate this new component for a more consistent user experience.
+
+- Defaulting to Last-Used Enrichment Datastore for Check Template Exports
+    - Improved user experience by persisting the last selected enrichment datastore as the default option when exporting a check template.
+
+#### General Fixes
+
+- Shared Links Fixes
+    - Fixed issues with shared operation result links, ensuring that dialogs for scan/profile results and anomalies now open correctly.
+    - Addressed display inaccuracies in the "Field Profiles Updated" metrics.
+
+- General Fixes and Improvements
+
 ### 2024.06.04 { id=2024.06.04 }
 
 #### Feature Enhancements
