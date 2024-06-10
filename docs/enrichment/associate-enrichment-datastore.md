@@ -20,3 +20,9 @@ Perform the following steps to link an  existent enrichment to a datastore:
 
     ![Screenshot](../assets/enrichment/enrichment-datastore-green-light.png#only-light)
     ![Screenshot](../assets/enrichment/enrichment-datastore-green-dark.png#only-dark)
+
+## Linking Datastore to an Enrichment Datastore through API
+
+### Endpoint (Patch)
+
+`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_

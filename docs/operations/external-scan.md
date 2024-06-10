@@ -111,3 +111,99 @@ An External Scan is initiated to validate the integrity of the sales table.
 
   ```
 
+## API Payload Examples
+
+### Running an External Scan operation
+
+This section provides a sample payload for running an external scan operation. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/containers/{container-id}/scan` _(post)_
+
+=== "Running an external scan operation of a datastore"
+    ```json
+        {
+            "name":"file_name.csv",
+            "records": [{\"COLUMN_1\":\"VALUE 1\",\"COLUMN_2\":\"VALUE 1\"},{\"COLUMN_1\":\"VALUE_2\",\"COLUMN_2\":\"VALUE 2\"}]
+        }
+    ```
+
+### Retrieving an External Scan Operation Status
+
+#### Endpoint (Get)
+
+`/api/operations/{id}` _(get)_
+
+=== "Example result response"
+    ```json
+		{
+			"items": [
+				{
+					"id": 12345,
+					"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+					"type": "external_scan",
+					"start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+					"end_time": null,
+					"result": "running",
+					"message": null,
+					"triggered_by": "user@example.com",
+					"datastore": {
+						"id": 101,
+						"name": "Datastore-Sample",
+						"store_type": "jdbc",
+						"type": "db_type",
+						"enrich_only": false,
+						"enrich_container_prefix": "data_prefix",
+						"favorite": false
+					},
+					"schedule": null,
+					"incremental": false,
+					"remediation": "none",
+					"max_records_analyzed_per_partition": -1,
+					"greater_than_time": null,
+					"greater_than_batch": null,
+					"high_count_rollup_threshold": 10,
+					"enrichment_source_record_limit": 10,
+					"status": {
+						"total_containers": 1,
+						"containers_analyzed": 0,
+						"partitions_scanned": 0,
+						"records_processed": 0,
+						"anomalies_identified": 0
+					},
+					"containers": [
+							{
+							"id": 234,
+							"name": "Container1",
+							"container_type": "table",
+							"table_type": "table"
+							}
+						],
+						"container_scans": [
+							{
+							"id": 456,
+							"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+							"container": {
+								"id": 234,
+								"name": "Container1",
+								"container_type": "table",
+								"table_type": "table"
+							},
+							"start_time": null,
+							"end_time": null,
+							"records_processed": 0,
+							"anomaly_count": 0,
+							"result": "running",
+							"message": null
+							}
+						],
+						"tags": []
+				}
+			],
+			"total": 1,
+			"page": 1,
+			"size": 50,
+			"pages": 1
+		}
+    ```

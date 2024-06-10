@@ -120,3 +120,175 @@ When a Scan is run, Qualytics will highlight anomalies with the following inform
 * **Type**: **Record** or **Shape**
 * **Tag**: tag(s) / label(s) associated with an anomaly
 * **Date time**: date/time when the anomaly was found
+
+## API Payload Examples
+
+### Running a Scan operation
+
+This section provides a sample payload for running a scan operation. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/operations/run` _(post)_
+
+=== "Running a scan operation of all containers"
+    * **container_names**: `[]` means that it’s going to scan all containers
+    * **max_records_analyzed_per_partition**: `null` means that it’s going to scan all records of all containers
+    * **Remediation**: `append` Replicate source containers using an append-first strategy 
+
+    ```json
+        {
+            "type":"scan",
+            "name":null,
+            "datastore_id": datastore-id,
+            "container_names":[],
+            "remediation":"append",
+            "incremental":false,
+            "max_records_analyzed_per_partition":null,
+            "enrichment_source_record_limit":10
+        }
+    ```
+=== "Running a scan operation of specific containers"
+    * **container_names**: `["table_name_1", "table_name_2"]` means that it’s going to scan only the tables table_name_1 and table_name_2
+    * **max_records_analyzed_per_partition**: `1000000` means that it’s going to scan at maximum 1 million of the containers
+    * **Remediation**: `overwrite` Replicate source containers using an overwrite strategy
+
+    ```json
+        {
+            "type":"profile",
+            "name":null,
+            "datastore_id":datastore-id,
+            "container_names":[
+              "table_name_1",
+              "table_name_2"
+            ],
+            "max_records_analyzed_per_partition":1000000,
+            "enrichment_source_record_limit":10
+        }
+    ```
+
+### Scheduling a Scan operation
+
+This section provides a sample payload for scheduling a scan operation. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/operations/schedule` _(post)_
+
+This payload is to run a scheduled scan operation every day at 00:00
+
+=== "Scheduling scan operation of all containers"
+    ```json
+        {
+            "type":"scan",
+            "name":"My scheduled Scan operation",
+            "datastore_id":"datastore-id",
+            "container_names":[],
+            "remediation": "overwrite"
+            "incremental": false,
+            "max_records_analyzed_per_partition":null,
+            "enrichment_source_record_limit":10,
+            "crontab":"00 00 */2 * *"
+        }
+    ```
+
+### Retrieving Scan Operation Information
+
+#### Endpoint (Get)
+
+`/api/operations/{id}` _(get)_
+
+=== "Example result response"
+    ```json
+        {
+            "items": [
+                {
+                    "id": 12345,
+                    "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "type": "scan",
+                    "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "result": "success",
+                    "message": null,
+                    "triggered_by": "user@example.com",
+                    "datastore": {
+                        "id": 101,
+                        "name": "Datastore-Sample",
+                        "store_type": "jdbc",
+                        "type": "db_type",
+                        "enrich_only": false,
+                        "enrich_container_prefix": "data_prefix",
+                        "favorite": false
+                    },
+                    "schedule": null,
+                    "incremental": false,
+                    "remediation": "none",
+                    "max_records_analyzed_per_partition": -1,
+                    "greater_than_time": null,
+                    "greater_than_batch": null,
+                    "high_count_rollup_threshold": 10,
+                    "enrichment_source_record_limit": 10,
+                    "status": {
+                        "total_containers": 2,
+                        "containers_analyzed": 2,
+                        "partitions_scanned": 2,
+                        "records_processed": 28,
+                        "anomalies_identified": 2
+                    },
+                    "containers": [
+                        {
+                        "id": 234,
+                        "name": "Container1",
+                        "container_type": "table",
+                        "table_type": "table"
+                        },
+                        {
+                        "id": 235,
+                        "name": "Container2",
+                        "container_type": "table",
+                        "table_type": "table"
+                        }
+                    ],
+                    "container_scans": [
+                        {
+                        "id": 456,
+                        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "container": {
+                            "id": 235,
+                            "name": "Container2",
+                            "container_type": "table",
+                            "table_type": "table"
+                        },
+                        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "records_processed": 8,
+                        "anomaly_count": 1,
+                        "result": "success",
+                        "message": null
+                        },
+                        {
+                        "id": 457,
+                        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "container": {
+                            "id": 234,
+                            "name": "Container1",
+                            "container_type": "table",
+                            "table_type": "table"
+                        },
+                        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                        "records_processed": 20,
+                        "anomaly_count": 1,
+                        "result": "success",
+                        "message": null
+                        }
+                    ],
+                    "tags": []
+                }
+            ],
+            "total": 1,
+            "page": 1,
+            "size": 50,
+            "pages": 1
+        }
+    ```

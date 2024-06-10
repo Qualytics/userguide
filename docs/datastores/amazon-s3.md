@@ -122,3 +122,86 @@ Once the form is completed, it's necessary to test the connection. A successful 
     ]
 }
 ```
+
+
+## API Payload Examples
+
+### Creating a Datastore
+
+This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/datastores` _(post)_
+
+=== "Creating a datastore with a new connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "trigger_catalog": true,
+            "root_path": "/s3_root_path",
+            "enrich_only": false,
+            "connection": {
+                "name": "your_connection_name",
+                "type": "s3",
+                "uri": "s3://<bucket_name>",
+                "access_key": "s3_access_key",
+                "secret_key": "s3_secret_key"
+            }
+        }
+    ```
+=== "Creating a datastore with an existing connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "trigger_catalog": true,
+            "root_path": "/s3_root_path",
+            "enrich_only": false,
+            "connection_id": connection-id
+        }
+    ```
+
+### Creating an Enrichment Datastore
+
+#### Endpoint (Post)
+
+`/api/datastores` _(post)_
+
+This section provides a sample payload for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
+
+=== "Creating an enrichment datastore with a new connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "trigger_catalog": true,
+            "root_path": "/s3_root_path",
+            "enrich_only": true,
+            "connection": {
+                "name": "your_connection_name",
+                "type": "s3",
+                "uri": "s3://<bucket_name>",
+                "access_key": "s3_access_key",
+                "secret_key": "s3_secret_key"
+            }
+        }
+    ```
+=== "Creating an enrichment datastore with an existing connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "trigger_catalog": true,
+            "root_path": "/s3_root_path",
+            "enrich_only": true,
+            "connection_id": connection-id
+        }
+    ``` 
+
+### Linking Datastore to an Enrichment Datastore through API
+
+#### Endpoint (Patch)
+
+`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_
