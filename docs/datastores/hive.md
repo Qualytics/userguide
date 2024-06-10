@@ -70,3 +70,56 @@ Once the form is completed, it's necessary to test the connection. A successful 
 ### `Password` <spam id='required'>`required`</spam>
 
 * The `password` to connect in Hive.
+
+
+
+## API Payload Examples
+
+### Creating a Datastore
+
+This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/datastores` _(post)_
+
+=== "Creating a datastore with a new connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "hive_database",
+            "schema": "hive_schema",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection": {
+                "name": "your_connection_name",
+                "type": "hive",
+                "host": "hive_host",
+                "port": "hive_port",
+                "username": "hive_username",
+                "password": "hive_password",
+                "parameters": {
+                    "zookeeper": false
+                }
+            }
+        }
+    ```
+=== "Creating a datastore with an existing connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "hive_database",
+            "schema": "hive_schema",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection_id": connection-id
+        }
+    ```
+
+### Linking Datastore to an Enrichment Datastore through API
+
+#### Endpoint (Patch)
+
+`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_

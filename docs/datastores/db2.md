@@ -39,7 +39,7 @@ Once the form is completed, it's necessary to test the connection. A successful 
 
 !!! warning 
     By clicking on the `Finish` button, it will create the Datastore and link or create the Enrichment Datastore
-    
+
 ---
 ## Fields
 ### `Name` <spam id='required'>`required`</spam>
@@ -75,3 +75,95 @@ Once the form is completed, it's necessary to test the connection. A successful 
 ### `SSL Connection` <spam id='required'>`required`</spam>
 
 * Enables the `SSL Connection`. Default is disabled.
+
+## API Payload Examples
+
+### Creating a Datastore
+
+This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+
+#### Endpoint (Post)
+
+`/api/datastores` _(post)_
+
+=== "Creating a datastore with a new connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "db2_database",
+            "schema": "db2_schema",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection": {
+                "name": "your_connection_name",
+                "type": "db2",
+                "host": "db2_host",
+                "port": "db2_port",
+                "username": "db2_username",
+                "password": "db2_password",
+                "parameters": {
+                    "ssl": true
+                }
+            }
+        }
+    ```
+=== "Creating a datastore with an existing connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "db2_database",
+            "schema": "db2_schema",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection_id": connection-id
+        }
+    ```
+
+### Creating an Enrichment Datastore
+
+#### Endpoint (Post)
+
+`/api/datastores` _(post)_
+
+This section provides a sample payload for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
+
+=== "Creating an enrichment datastore with a new connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "db2_database",
+            "schema": "db2_enrichment_schema",
+            "enrich_only": true,
+            "connection": {
+                "name": "your_connection_name",
+                "type": "db2",
+                "host": "db2_host",
+                "port": "db2_port",
+                "username": "db2_username",
+                "password": "db2_password",
+                "parameters": {
+                    "ssl": true
+                }
+            }
+        }
+    ```
+=== "Creating an enrichment datastore with an existing connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "database": "db2_database",
+            "schema": "db2_enrichment_schema",
+            "enrich_only": true,
+            "connection_id": connection-id
+        }
+    ``` 
+
+### Linking Datastore to an Enrichment Datastore through API
+
+#### Endpoint (Patch)
+
+`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_
