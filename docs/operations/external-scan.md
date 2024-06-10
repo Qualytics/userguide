@@ -129,7 +129,7 @@ This section provides a sample payload for running an external scan operation. R
         }
     ```
 
-### Retrieving Catalog Operation Status
+### Retrieving an External Scan Operation Status
 
 #### Endpoint (Get)
 
