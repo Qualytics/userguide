@@ -419,3 +419,41 @@ The diagram below provides a visual representation of the associations between v
 - Both **metadata tables** and **remediation tables**, are designed to be **ephemeral** and thus are recommended to be used as temporary datasets. Users are advised to move this data to a more permanent dataset for long-term storage and reporting.
 - The anomaly UUID in the **remediation tables** acts as a link to the detailed data in the **_anomaly enrichment table**. This connection not only shows the number of failed checks but also provides insight into each one, such as the nature of the issue, the type of rule violated, and associated check tags. Additionally, when available, suggested remediation actions, including suggested field modifications and values, are presented alongside a score indicating the suggested action's potential effectiveness. This information helps users to better understand the specifics of each anomaly related to the remediation tables.
 - The Qualytics platform is configured to capture and write a maximum of 10 rows of data per anomaly by default for both the **_source_records enrichment table** and the **remediation tables**. To adjust this limit, users can utilize the `enrichment_source_record_limit` parameter within the Scan Operation settings. This parameter accepts a minimum value of 10 but allows the specification of a higher limit, up to an unrestricted number of rows per anomaly. It is important to note that if an anomaly is associated with fewer than 10 records, the platform will only write the actual number of records where the anomaly was detected.
+
+## API Payload Examples
+
+### Retrieving Enrichment Datastore Tables
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/listing` _(get)_
+
+### Retrieving Enrichment Datastore Source Records
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/source-records?path={_source-record-table-prefix}` _(get)_
+
+### Retrieving Enrichment Datastore Remediation
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/source-records?path={_remediation-table-prefix}` _(get)_
+
+### Retrieving Enrichment Datastore Failed Checks
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/source-records?path={_failed-checks-table-prefix}` _(get)_
+
+### Retrieving Enrichment Datastore Scan Operations
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/source-records?path={_scan-operations-table-prefix}` _(get)_
+
+### Retrieving Enrichment Datastore Exported Metadata
+
+#### Endpoint (Get)
+
+`/api/datastores/{enrichment-datastore-id}/source-records?path={_export-metadata-table-prefix}` _(get)_
