@@ -5,6 +5,59 @@ hide:
 
 # Release Notes
 
+### 2024.06.14 { id=2024.06.14 }
+
+#### Feature Enhancements
+
+- Improvements to Atlan Integration
+    - When syncing Qualytics with Atlan, badges now display the "Quality Score Total," increasing visibility and emphasizing key data quality indicators on Atlan assets.
+
+    - Improved performance of the synchronization operation.
+
+    - Implemented the propagation of external tags to checks, now automatically aligned with the container synchronization process, enabling better accuracy and relevance of data tagging.
+
+- Refactor Metric Check Creation
+     - Enhanced the encapsulated Metric Check creation flow to improve user experience and efficiency. Users can now seamlessly create computed tables and schedule operations simultaneously with the metric check creation.
+
+- Support Update of Weight Modifier for External Tags
+
+- Add Validation on Updated Connections
+    - Added support for testing the connection if there's at least one datastore attached to the connection, ensuring more reliable and accurate connection updates.
+
+- Standardize Inner Tabs under the Settings Page
+    - Tags and Notifications Improvements: The layout has been revamped for better consistency and clarity. General headers have been removed, and now each item features specific headers to enhance readability.
+
+    - Security Tab Improvements: The redesign features chip tabs for improved navigation and consistency. Filters have been updated to ensure they meet application standards.
+    
+    - Tokens Tab Accessibility: Moved the action button to the top of the page to make it more accessible.
+    
+    - Refine Connector Icons Display: Improved the display of connector icons for Datastores and Enrichments in the Connections Tab.
+
+- Streamlined Container Profiling and Scanning
+    - In the container context, the profile and scan modals have been updated to automatically display the datastore and container, eliminating the need for a selection step and streamlining the process.
+
+- Swap Order During Check Creation
+    - Rule Type Positioning: The Rule Type now appears before the container selection, making the form more intuitive.
+    
+    - Edit Mode Header: In edit mode, the Rule Type is prominently displayed in the modal header, immediately under the check ID.
+
+#### General Fixes
+
+- Address Minor Issues in the Datastore Activity Page
+    - Operation ID Auto-Search: Restored the auto-search feature by operation ID for URL access, enhancing navigation, especially for Catalog Operations.
+    
+    - Tree View Auto-Refresh: Implemented an auto-refresh feature for the tree view, which activates after any operation in the CTA flow (Catalog, Profile, Scan).
+
+- Fix "Greater Than Field" Quality Check
+    - Corrected the inclusive property of the greater than field quality check.
+- Fix Exporting Field Profiles for Non-Admin User with Write Permission
+    - Resolved issues for non-admin users with write permissions to allow proper exporting of field profiles metadata to enrichment.
+    
+- Fix "Is Replica Of" Quality Check validation on Field Names with Special Characters
+    - Improved validation logic to handle field names with special characters
+    
+- General Fixes and Improvements
+
 ### 2024.06.07 { id=2024.06.07 }
 
 #### Feature Enhancements
