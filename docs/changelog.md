@@ -18,6 +18,9 @@ hide:
 - Last Editor Information for Scheduled Operations
     - Added visibility of which users have created or last updated scheduled operations, enhancing traceability in scheduling management.
 
+- Display Total Anomalous Records for Anomalies
+     - Added the total count of anomalous records in the anomalies listing view.
+
 #### General Fixes
 
 - Performance Fixes on Computed Table Creation and Check Validation
