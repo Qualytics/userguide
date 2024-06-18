@@ -12,39 +12,38 @@ copyright: Copyright &copy; 2024 Qualytics
 nav:
   - Home: https://qualytics.ai
   - Introduction: index.md
+    # new page tree structure end 
   - Getting Started:
     - quick-start-guide.md
     - technical-quick-start-guide.md
-  - Reference:
-    - Datastores:
-      - Overview: datastores/overview-of-a-datastore.md
+    - glossary.md
+    - Add Datastores:
+      - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
-        - Overview: datastores/overview-of-a-jdbc-datastore.md
-        - Add JDBC Datastore:
-          - datastores/bigquery.md
-          - datastores/databricks.md
-          - datastores/db2.md
-          - datastores/hive.md
-          - datastores/maria-db.md
-          - datastores/microsoft-sql-server.md
-          - datastores/mysql.md
-          - datastores/oracle.md
-          - datastores/postgresql.md
-          - datastores/presto.md
-          - datastores/redshift.md
-          - datastores/snowflake.md
-          - datastores/synapse.md
-          - datastores/timescale-db.md
-          - datastores/trino.md
-      - DFS Datastores:
-          - Overview: datastores/overview-of-a-dfs-datastore.md
-          - Add DFS Datastore:
-            - datastores/amazon-s3.md
-            - datastores/azure-blob-storage.md
-            - datastores/azure-datalake-storage.md
-            - datastores/google-cloud-storage.md
-            - datastores/qfs.md
-      - Connections: connections/overview-of-a-connection.md
+        - add-datastores/bigquery.md
+        - add-datastores/databricks.md
+        - add-datastores/db2.md
+        - add-datastores/hive.md
+        - add-datastores/maria-db.md
+        - add-datastores/microsoft-sql-server.md
+        - add-datastores/mysql.md
+        - add-datastores/oracle.md
+        - add-datastores/postgresql.md
+        - add-datastores/presto.md
+        - add-datastores/redshift.md
+        - add-datastores/snowflake.md
+        - add-datastores/synapse.md
+        - add-datastores/timescale-db.md
+        - add-datastores/trino.md
+      - DFS Datastores: 
+        - add-datastores/overview-of-a-dfs-datastore.md
+        - add-datastores/amazon-s3.md
+        - add-datastores/azure-blob-storage.md
+        - add-datastores/azure-datalake-storage.md
+        - add-datastores/google-cloud-storage.md
+        - add-datastores/qfs.md
+      - connections/overview-of-a-connection.md
+    # new page tree structure end 
     - Datastore Operations:
       - Catalog: operations/catalog.md
       - Profile: operations/profile.md
@@ -156,7 +155,7 @@ nav:
       - operation-automation/automated-tasks-with-cron.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
 
-  - glossary.md
+  # - glossary.md
   - API reference: https://demo.qualytics.io/api/docs
   - changelog.md
 
@@ -272,3 +271,4 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="https://github.com/Qualytics/userguide/issues" target="_blank" rel="noopener">issue tracker for this user guide</a>.
   comparator_short_desc: Specifies how variations are handled, allowing for slight deviations within a defined margin of error.
+
