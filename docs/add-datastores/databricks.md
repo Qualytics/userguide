@@ -25,7 +25,7 @@ A Source Datastore is a storage location used to connect and access data from ex
 | REF. | FIELDS         | ACTIONS                                                                                        |
 |------|----------------|------------------------------------------------------------------------------------------------|
 | 1️.   | Name           | Specify the datastore name (e.g., This name will appear on the datastore cards) |
-| 2️.   | Toggle Button  | Toggle ON to link the source datastore to an existing enrichment datastore credentials.        |
+| 2️.   | Toggle Button  | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch.      |
 | 3️.   | Connector      | Select **Databricks** from the dropdown list.                                                  |                  
 
 ### Option I: Create a New Source Datastore Connection 
@@ -36,7 +36,6 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 ![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-dark.png#only-dark)
-
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -151,7 +150,6 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 ![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-light.png#only-light)
 ![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-dark.png#only-dark)
-
 
 | REF. | FIELDS                                          | ACTIONS                                                                                      |
 |------|-------------------------------------------------|----------------------------------------------------------------------------------------------|
