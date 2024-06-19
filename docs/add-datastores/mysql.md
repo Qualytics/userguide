@@ -65,7 +65,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 **Step 1**: Select a "**connection**" to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/mysql/use-exitsting-datastore-light.png#only-light)
+![use-existing-datastore](../assets/datastores/mysql/use-existing-datastore-light.png#only-light)
 ![use-existing-datastore](../assets/datastores/mysql/use-existing-datastore-dark.png#only-dark)
 
 !!! note
