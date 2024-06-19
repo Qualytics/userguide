@@ -195,7 +195,7 @@ The Checks section provides an overview of all applied checks, including both in
 
 The Anomalies section gives an overview of all detected anomalies across your source datastores. This helps in quickly identifying and addressing any issues.
 
-![explore-anomalies](./assets/quick-start-guide/explore-anomalies-light.png)
+![explore-anomalies](./assets/quick-start-guide/explore-anomalies-light.png#only-light)
 ![explore-anomalies](./assets/quick-start-guide/explore-anomalies-dark.png#only-dark)
 
 ## Library
