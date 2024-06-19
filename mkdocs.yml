@@ -12,7 +12,7 @@ copyright: Copyright &copy; 2024 Qualytics
 nav:
   - Home: https://qualytics.ai
   - Introduction: index.md
-    # new page tree structure end 
+    # new page tree structure start 
   - Getting Started:
     - quick-start-guide.md
     - technical-quick-start-guide.md
