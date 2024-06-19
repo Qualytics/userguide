@@ -69,7 +69,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/mysql/use-existing-datastore-dark.png#only-dark)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as **Catalog**, **Database**, and **Teams**.
+    If you are using existing credentials, you can only edit the details such as **Database** and **Teams**.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
@@ -91,7 +91,7 @@ Once you have successfully tested and verified your source datastore connection,
 ![next-button-for-enrichment](../assets/datastores/mysql/next-button-for-enrichment-light.png#only-light)
 ![next-button-for-enrichment](../assets/datastores/mysql/next-button-for-enrichment-dark.png#only-dark)
 
-**Step 2**: A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+**Step 2**: A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/mysql/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/mysql/select-enrichment-connector-dark.png#only-dark)

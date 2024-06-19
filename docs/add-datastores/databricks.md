@@ -91,7 +91,7 @@ Once you have successfully tested and verified your source datastore connection,
 ![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-light.png#only-light)
 ![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-dark.png#only-dark)
 
-**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-dark.png#only-dark)
