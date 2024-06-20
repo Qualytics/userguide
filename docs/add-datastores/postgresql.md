@@ -1,92 +1,201 @@
 # PostgreSQL
 
-## Steps to setup PostgreSQL
+Adding and configuring a PostgreSQL connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
 
----
-Fill the form with the credentials of your data source.
+This documentation provides a step-by-step guide on how to add PostgreSQL as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
-![Screenshot](../assets/datastores/postgresql/create-datastore-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/datastores/postgresql/create-datastore-dark.png#only-dark){: style="width:450px;"}
+By following these instructions, enterprises can ensure their PostgreSQL environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle
 
-Once the form is completed, it's necessary to test the connection to verify if Qualytics is able to connect to your source of data. A successful message will be shown:
+Let’s get started 🚀
 
-![Screenshot](../assets/datastores/test-connection/test-connection-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/datastores/test-connection/test-connection-dark.png#only-dark){: style="width:450px;"}
+## Add a Source Datastore
 
-!!! warning 
-    By clicking on the `Finish` button, it will create the Datastore and skipping the configuration of an Enrichment Datastore.
+A Source Datastore is a storage location used to connect and access data from external sources, and it can be of type JDBC or DFS. Configuring a source datastore enables Qualytics platform to access and perform operations on the data for generating valuable insights.
 
-    - To configure an Enrichment Datastore in another moment, please refer [to this section](/userguide/enrichment/create-enrichment-datastore/)
+**Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-!!! note 
-    It is important to associate an `Enrichment Datastore` with your new Datastore
+![add-datastore](../assets/datastores/postgresql/add-datastore-light.png#only-light)
+![add-datastore](../assets/datastores/postgresql/add-datastore-dark.png#only-dark)
 
-    - The `Enrichment Datastore` will allow Qualytics to record `enrichment data`, copies of the source `anomalous data` and additional `metadata` for your `Datastore`
+**Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-## Configuring an Enrichment Datastore
+![select-a-connector](../assets/datastores/postgresql/select-a-connector-light.png#only-light)
+![select-a-connector](../assets/datastores/postgresql/select-a-connector-dark.png#only-dark)
 
-- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list
+| REF. | FIELDS        | ACTIONS |
+|------|---------------|----------------------------|
+| 1️.  | Name          | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 2️.  | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 3️.  | Connector     | Select **PostgreSQL** from the dropdown list. |
 
-- If you don't have an `Enrichment Datastore`, you can create one at the same page:
+### Option I: Create a New Source Datastore Connection
 
-    ![Screenshot](../assets/enrichment/postgresql/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/enrichment/postgresql/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-Once the form is completed, it's necessary to test the connection. A successful message will be shown:
+**Step 1**: Select the **PostgreSQL** connector from the dropdown list and add connection details such as host, port, username, database, and schema.
 
-![Screenshot](../assets/enrichment/test-connection-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/enrichment/test-connection-dark.png#only-dark){: style="width:450px;"}
+![add-datastore-credentials](../assets/datastores/postgresql/add-datastore-credentials-light.png#only-light)
+![add-datastore-credentials](../assets/datastores/postgresql/add-datastore-credentials-dark.png#only-dark)
 
-!!! warning 
-    By clicking on the `Finish` button, it will create the Datastore and link or create the Enrichment Datastore
-    
----
-## Fields
-### `Name` <spam id='required'>`required`</spam>
+**Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-* The datastore name  to be created in Qualytics App
+![add-datastore-credentials-explain](../assets/datastores/postgresql/add-datastore-credentials-explain-light.png#only-light)
+![add-datastore-credentials-explain](../assets/datastores/postgresql/add-datastore-credentials-explain-dark.png#only-dark)
 
-### `Host` <spam id='required'>`required`</spam>
+| REF. | FIELDS            | ACTIONS |
+|------|-------------------|---------|
+| 1️.  | Host | Get **Hostname** from your PostgreSQL account and add it to this field. |
+| 2️.  | Port | Specify the **Port** number. |
+| 3️.  | User | Enter the **User ID** to connect. |
+| 4️.  | Password | Enter the **password** to connect to the database. |
+| 5️.  | Database | Specify the database name. |
+| 6️.  | Schema | Define the schema within the database that should be used. |
+| 7️.  | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
+| 8️.  | Initial Cataloging| Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
 
-* The PostgreSQL hostname that defines the location of your PostgreSQL server and database.
-### `Port` <spam id='required'>`required`</spam>
+**Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-* The PostgreSQL server `port` that connects to the server.
-* The default `port` is `5432​`.
+![test-datastore-connection](../assets/datastores/postgresql/test-datastore-connection-light.png#only-light)
+![test-datastore-connection](../assets/datastores/postgresql/test-datastore-connection-dark.png#only-dark)
 
-### `Database` <spam id='required'>`required`</spam>
+If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
-* The `database` name to be connected.
+### Option II: Use an Existing Connection
 
-### `Schema` <spam id='required'>`required`</spam>
+If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using the existing connection details.
 
-* The `schema` name to be connected.
+**Step 1**: Select a **connection** to reuse existing credentials.
 
-### `User` <spam id='required'>`required`</spam>
+![use-existing-datastore](../assets/datastores/postgresql/use-existing-datastore-light.png#only-light)
+![use-existing-datastore](../assets/datastores/postgresql/use-existing-datastore-dark.png#only-dark)
 
-* The PostgreSQL user name to use when connecting to the server.
-### `Password` <spam id='required'>`required`</spam>
+!!! note
+    If you are using existing credentials, you can only edit the details such as **Database**, **Schema**, and **Teams**.
 
-* The password of the PostgreSQL server.
+**Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
+![test-connection-for-existing-datastore](../assets/datastores/postgresql/test-connection-for-existing-datastore-light.png#only-light)
+![test-connection-for-existing-datastore](../assets/datastores/postgresql/test-connection-for-existing-datastore-dark.png#only-dark)
 
-## More information on how to connect with PostgreSQL
+!!! note
+    Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
----
+!!! info
+    It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
+## Add Enrichment Datastore
 
-[PostgreSQL configuration](https://jdbc.postgresql.org/documentation/use/)
-[PostgreSQL Connection String](https://www.connectionstrings.com/postgresql/)
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata, in files and tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively
+
+**Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
+
+![next-button-for-enrichment](../assets/datastores/postgresql/next-button-for-enrichment-light.png#only-light)
+![next-button-for-enrichment](../assets/datastores/postgresql/next-button-for-enrichment-dark.png#only-dark)
+
+**Step 2**: A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
+
+![select-enrichment-connector](../assets/datastores/postgresql/select-enrichment-connector-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/postgresql/select-enrichment-connector-dark.png#only-dark)
+
+| REF. | FIELDS| ACTIONS|
+|------|-------|--------|
+| 1️.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
+| 3️.   | Name | Give a name for the enrichment datastore. |
+| 4️.   | Toggle Button for using an existing connection  | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
+| 5️.   | Connector | Select a datastore connector as **PostgreSQL** from the dropdown list. |
+
+### Option I: Create a New Enrichment Datastore Connection
+
+If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+
+**Step 1**: Add connection details for your selected **enrichment datastore** connector.
+
+![enrichment-datastore-explain](../assets/datastores/postgresql/enrichment-datastore-explain-light.png#only-light)
+![enrichment-datastore-explain](../assets/datastores/postgresql/enrichment-datastore-explain-dark.png#only-dark)
+
+| REF. | FIELDS   | ACTIONS |
+|------|----------|---------|
+| 1️.   | Host | Get **Hostname** from your PostgreSQL account and add it to this field. |
+| 2️.   | Port | Specify the **Port** number. |
+| 3️.   | User | Enter the **User ID** to connect. |
+| 4️.   | Password | Enter the password associated with the Snowflake user account. |
+| 5️.   | Database | Specify the database name to be accessed. |
+| 6️.   | Schema | Define the schema within the database that should be used.                                        |
+| 7️.   | Teams | Select one or more teams from the dropdown to associate with this datastore. |
+
+**Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
+
+![test-connection-for-enrichment-datastore](../assets/datastores/postgresql/test-connection-for-enrichment-datastore-light.png#only-light)
+![test-connection-for-enrichment-datastore](../assets/datastores/postgresql/test-connection-for-enrichment-datastore-dark.png#only-dark)
+
+**Step 3**: Click on the **Finish** button to complete the configuration process.
+
+![finish-configuration](../assets/datastores/postgresql/finish-configuration-light.png#only-light)
+![finish-configuration](../assets/datastores/postgresql/finish-configuration-dark.png#only-dark)
+
+When the configuration process is finished, a modal will display a **success  message** indicating that **your datastore has been successfully added**.
+
+![success-message](../assets/datastores/postgresql/success-message-light.png#only-light)
+![success-message](../assets/datastores/postgresql/success-message-dark.png#only-dark)
+
+**Step 4**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+
+![data-operation-page](../assets/datastores/postgresql/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/postgresql/data-operation-page-dark.png#only-dark)
+
+### Option II: Use an Existing Connection
+
+If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+
+**Step 1**: Add a prefix name and select an existing enrichment datastore from the dropdown list.
+
+![select-existing-enrichment-datastore](../assets/datastores/postgresql/select-existing-enrichment-datastore-light.png#only-light)
+![select-existing-enrichment-datastore](../assets/datastores/postgresql/select-existing-enrichment-datastore-dark.png#only-dark)
+
+| REF. | FIELDS          | ACTIONS     |
+|------|-----------------|-------------|
+| 1️.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.  |
+| 2️.   | Toggle Button for existing enrichment datastore | Toggle **ON** to link the source datastore to an existing enrichment datastore. |
+| 3️.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
+
+**Step 2**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
+
+-   **Team**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users.
+
+-   **Host**: This is the server address where the PostgreSQL instance is hosted. It is the endpoint used to connect to the PostgreSQL environment.
+
+- **Database**: Refers to the specific database within the PostgreSQL environment where the data is stored.
+
+-   **Schema**: The schema used in the enrichment datastore. This schema defines the structure and organization of the data within the database.
+
+![use-existing-enrichment-datastore](../assets/datastores/postgresql/use-existing-enrichment-datastore-light.png#only-light)
+![use-existing-enrichment-datastore](../assets/datastores/postgresql/use-existing-enrichment-datastore-dark.png#only-dark)
+
+**Step 3**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
+
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/postgresql/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/postgresql/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
+
+When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
+
+![success-message](../assets/datastores/postgresql/success-message-light.png#only-light)
+![success-message](../assets/datastores/postgresql/success-message-dark.png#only-dark)
+
+Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+
+![data-operation-page](../assets/datastores/postgresql/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/postgresql/data-operation-page-dark.png#only-dark)
 
 ## API Payload Examples
 
+This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
+
 ### Creating a Datastore
 
-This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+This section provides sample payloads for creating a PostgreSQL datastore. Replace the placeholder values with actual data relevant to your setup.
 
-#### Endpoint (Post)
-
-`/api/datastores` _(post)_
+**Endpoint:** ```/api/datastores (post)```
 
 === "Creating a datastore with a new connection"
     ```json
@@ -122,11 +231,9 @@ This section provides a sample payload for creating a datastore. Replace the pla
 
 ### Creating an Enrichment Datastore
 
-#### Endpoint (Post)
+This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
 
-`/api/datastores` _(post)_
-
-This section provides a sample payload for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
+**Endpoint:**  ```/api/datastores (post)```
 
 === "Creating an enrichment datastore with a new connection"
     ```json
@@ -158,8 +265,9 @@ This section provides a sample payload for creating an enrichment datastore. Rep
         }
     ``` 
 
-### Linking Datastore to an Enrichment Datastore through API
 
-#### Endpoint (Patch)
+### Link an Enrichment Datastore to a Source Datastore through API
 
-`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_
+Use the provided endpoint to link an enrichment datastore to a source datastore:
+
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
