@@ -204,37 +204,37 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "db2_database",
-            "schema": "db2_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "db2",
-                "host": "db2_host",
-                "port": "db2_port",
-                "username": "db2_username",
-                "password": "db2_password",
-                "parameters": {
-                    "ssl": true
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "db2_database",
+        "schema": "db2_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "db2",
+            "host": "db2_host",
+            "port": "db2_port",
+            "username": "db2_username",
+            "password": "db2_password",
+            "parameters": {
+                "ssl": true
             }
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "db2_database",
-            "schema": "db2_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "db2_database",
+        "schema": "db2_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 
 ### Creating an Enrichment Datastore
@@ -245,35 +245,35 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "db2_database",
-            "schema": "db2_enrichment_schema",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "db2",
-                "host": "db2_host",
-                "port": "db2_port",
-                "username": "db2_username",
-                "password": "db2_password",
-                "parameters": {
-                    "ssl": true
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "db2_database",
+        "schema": "db2_enrichment_schema",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "db2",
+            "host": "db2_host",
+            "port": "db2_port",
+            "username": "db2_username",
+            "password": "db2_password",
+            "parameters": {
+                "ssl": true
             }
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "db2_database",
-            "schema": "db2_enrichment_schema",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "db2_database",
+        "schema": "db2_enrichment_schema",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ``` 
 
 ### Link Datastore to an Enrichment Datastore through API

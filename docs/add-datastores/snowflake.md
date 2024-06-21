@@ -196,11 +196,11 @@ This section provides instructions for configuring Snowflake warehouses and role
 Use the following command to create a warehouse with minimum requirements:
 
 ```sql
-    CREATE WAREHOUSE qualytics_wh
-    WITH
-        WAREHOUSE_SIZE = 'XSMALL'
-        AUTO_SUSPEND = 60
-        AUTO_RESUME = TRUE;
+CREATE WAREHOUSE qualytics_wh
+WITH
+    WAREHOUSE_SIZE = 'XSMALL'
+    AUTO_SUSPEND = 60
+    AUTO_RESUME = TRUE;
 ```
 
 Set a specific warehouse as the default for a user:
@@ -211,7 +211,7 @@ ALTER USER <username> SET DEFAULT_WAREHOUSE = qualytics_wh;
 
 ### Source Datastore Privileges and Permissions
 
-Create a new role called ```qualytics\_read\_role``` and grant it privileges:
+Create a new role called ```qualytics_read_role``` and grant it privileges:
 
 ```sql
 CREATE ROLE qualytics_read_role;
@@ -228,7 +228,7 @@ GRANT ROLE qualytics_read_role TO USER <user_name>;
 
 ### Enrichment Datastore Privileges and Permissions
 
-Create a new role called ```qualytics\_readwrite\_role``` and grant it privileges:
+Create a new role called ```qualytics_readwrite_role``` and grant it privileges:
 
 ```sql
 CREATE ROLE qualytics_readwrite_role;
@@ -255,37 +255,37 @@ This section provides sample payloads for creating a Snowflake datastore. Replac
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "snowflake_database",
-            "schema": "snowflake_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "snowflake",
-                "host": "snowflake_host",
-                "username": "snowflake_username",
-                "password": "snowflake_password",
-                "parameters": {
-                    "role": "snowflake_read_role",
-                    "warehouse": "qualytics_wh"
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "snowflake_database",
+        "schema": "snowflake_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "snowflake",
+            "host": "snowflake_host",
+            "username": "snowflake_username",
+            "password": "snowflake_password",
+            "parameters": {
+                "role": "snowflake_read_role",
+                "warehouse": "qualytics_wh"
             }
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "snowflake_database",
-            "schema": "snowflake_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "snowflake_database",
+        "schema": "snowflake_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 ### Creating an Enrichment Datastore
 
@@ -295,35 +295,35 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "snowflake_database",
-            "schema": "snowflake_schema",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "snowflake",
-                "host": "snowflake_host",
-                "username": "snowflake_username",
-                "password": "snowflake_password",
-                "parameters": {
-                    "role": "snowflake_readwrite_role",
-                    "warehouse": "qualytics_wh"
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "snowflake_database",
+        "schema": "snowflake_schema",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "snowflake",
+            "host": "snowflake_host",
+            "username": "snowflake_username",
+            "password": "snowflake_password",
+            "parameters": {
+                "role": "snowflake_readwrite_role",
+                "warehouse": "qualytics_wh"
             }
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "snowflake_database",
-            "schema": "snowflake_schema",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "snowflake_database",
+        "schema": "snowflake_schema",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ```
 
 ### Link an Enrichment Datastore to a Source Datastore through API

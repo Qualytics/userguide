@@ -199,34 +199,34 @@ This section provides sample payloads for creating a PostgreSQL datastore. Repla
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "postgresql_database",
-            "schema": "postgresql_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "postgresql",
-                "host": "postgresql_host",
-                "port": "postgresql_port",
-                "username": "postgresql_username",
-                "password": "postgresql_password"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "postgresql_database",
+        "schema": "postgresql_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "postgresql",
+            "host": "postgresql_host",
+            "port": "postgresql_port",
+            "username": "postgresql_username",
+            "password": "postgresql_password"
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "postgresql_database",
-            "schema": "postgresql_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "postgresql_database",
+        "schema": "postgresql_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 
 ### Creating an Enrichment Datastore
@@ -237,32 +237,32 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "postgresql_database",
-            "schema": "postgresql_schema",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "postgresql",
-                "host": "postgresql_host",
-                "port": "postgresql_port",
-                "username": "postgresql_username",
-                "password": "postgresql_password"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "postgresql_database",
+        "schema": "postgresql_schema",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "postgresql",
+            "host": "postgresql_host",
+            "port": "postgresql_port",
+            "username": "postgresql_username",
+            "password": "postgresql_password"
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "postgresql_database",
-            "schema": "postgresql_schema",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "postgresql_database",
+        "schema": "postgresql_schema",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ``` 
 
 

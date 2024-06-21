@@ -199,32 +199,32 @@ This section provides sample payloads for creating a MySQL datastore. Replace th
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "mysql_database",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "mysql",
-                "host": "mysql_host",
-                "port": "mysql_port",
-                "username": "mysql_username",
-                "password": "mysql_password"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "mysql_database",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "mysql",
+            "host": "mysql_host",
+            "port": "mysql_port",
+            "username": "mysql_username",
+            "password": "mysql_password"
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "mysql_database",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "mysql_database",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 ### Creating an Enrichment Datastore
 
@@ -234,30 +234,30 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "mysql_database",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "mysql",
-                "host": "mysql_host",
-                "port": "mysql_port",
-                "username": "mysql_username",
-                "password": "mysql_password",
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "mysql_database",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "mysql",
+            "host": "mysql_host",
+            "port": "mysql_port",
+            "username": "mysql_username",
+            "password": "mysql_password",
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "mysql_database",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "mysql_database",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ``` 
 ### Link an Enrichment Datastore to a Source Datastore through API
 
