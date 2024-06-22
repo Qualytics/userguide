@@ -144,7 +144,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/db2/success-message-light.png#only-light)
 ![success-message](../assets/datastores/db2/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/db2/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/db2/data-operation-page-dark.png#only-dark)
