@@ -136,7 +136,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/amazon-s3/success-message-light.png#only-light)
 ![success-message](../assets/datastores/amazon-s3/success-message-dark.png#only-dark)
 
-**Step 4**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-dark.png#only-dark)
@@ -196,31 +196,31 @@ This section provides sample payloads for creating the Amazon S3 datastore. Repl
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/s3_root_path",
-            "enrich_only": false,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "s3",
-                "uri": "s3://<bucket_name>",
-                "access_key": "s3_access_key",
-                "secret_key": "s3_secret_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/s3_root_path",
+        "enrich_only": false,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "s3",
+            "uri": "s3://<bucket_name>",
+            "access_key": "s3_access_key",
+            "secret_key": "s3_secret_key"
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/s3_root_path",
-            "enrich_only": false,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/s3_root_path",
+        "enrich_only": false,
+        "connection_id": connection-id
+    }
     ```
 
 ### Creating an Enrichment Datastore
@@ -231,31 +231,31 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/s3_root_path",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "s3",
-                "uri": "s3://<bucket_name>",
-                "access_key": "s3_access_key",
-                "secret_key": "s3_secret_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/s3_root_path",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "s3",
+            "uri": "s3://<bucket_name>",
+            "access_key": "s3_access_key",
+            "secret_key": "s3_secret_key"
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/s3_root_path",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/s3_root_path",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ``` 
 
 ### Link an Enrichment Datastore to a Source Datastore through API

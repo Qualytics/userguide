@@ -30,7 +30,7 @@ A Source Datastore is a storage location used to connect and access data from ex
 
 ### Option I: Create a New Source Datastore Connection
 
-If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the datastore from scratch without using existing connection details.
+If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
 **Step 1**: Select the **Azure Datalake Storage** connector from the dropdown list and add connection details such as URI, account name, access key, root path, and teams.
 
@@ -137,7 +137,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/azure-datalake-storage/success-message-light.png#only-light)
 ![success-message](../assets/datastores/azure-datalake-storage/success-message-dark.png#only-dark)
 
-**Step 4**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/azure-datalake-storage/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/azure-datalake-storage/data-operation-page-dark.png#only-dark)
@@ -195,31 +195,31 @@ This section provides sample payloads for creating the Azure Datalake Storage da
 
 === "Creating a datastore with a new connection"
     ``` json
-        {  
-            "name": "your\_datastore\_name",  
-            "teams": \["Public"\],  
-            "trigger_catalog": true,  
-            "root_path": "/azure\_root\_path",  
-            "enrich_only": false,  
-            "connection": {  
-                "name": "your\_connection\_name",  
-                "type": "abfs",  
-                "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
-                "access_key": "azure\_account\_nme",  
-                "secret_key": "azure\_access\_key" 
-            }  
-        }
+    {  
+        "name": "your\_datastore\_name",  
+        "teams": \["Public"\],  
+        "trigger_catalog": true,  
+        "root_path": "/azure\_root\_path",  
+        "enrich_only": false,  
+        "connection": {  
+            "name": "your\_connection\_name",  
+            "type": "abfs",  
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
+            "access_key": "azure\_account\_nme",  
+            "secret_key": "azure\_access\_key" 
+        }  
+    }
     ```
 === "Creating a datastore with an existing connection"
     ``` json 
-        {  
-            "name": "your\_datastore\_name",  
-            "teams": \["Public"\],  
-            "trigger_catalog": true,  
-            "root_path": "/azure\_root\_path",  
-            "enrich_only": false,  
-            "connection_id": connection-id  
-        }
+    {  
+        "name": "your\_datastore\_name",  
+        "teams": \["Public"\],  
+        "trigger_catalog": true,  
+        "root_path": "/azure\_root\_path",  
+        "enrich_only": false,  
+        "connection_id": connection-id  
+    }
     ```
 
 ### Creating an Enrichment Datastore
@@ -230,31 +230,31 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ``` json
-        {
-            "name": "your\_datastore\_name",  
-            "teams": \["Public"\],  
-            "trigger_catalog": true,  
-            "root_path": "/azure\_root\_path",  
-            "enrich_only": true,  
-            "connection": {  
-                "name": "your\_connection\_name",  
-                "type": "abfs",  
-                "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
-                "access_key": "azure\_account\_nme",  
-                "secret_key": "azure\_access\_key"  
-            }  
-        }
+    {
+        "name": "your\_datastore\_name",  
+        "teams": \["Public"\],  
+        "trigger_catalog": true,  
+        "root_path": "/azure\_root\_path",  
+        "enrich_only": true,  
+        "connection": {  
+            "name": "your\_connection\_name",  
+            "type": "abfs",  
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
+            "access_key": "azure\_account\_nme",  
+            "secret_key": "azure\_access\_key"  
+        }  
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your\_datastore\_name",  
-            "teams": \["Public"\],  
-            "trigger_catalog": true,  
-            "root_path": "/azure\_root\_path",  
-            "enrich_only": true,  
-            "connection_id": connection-id  
-        }
+    {
+        "name": "your\_datastore\_name",  
+        "teams": \["Public"\],  
+        "trigger_catalog": true,  
+        "root_path": "/azure\_root\_path",  
+        "enrich_only": true,  
+        "connection_id": connection-id  
+    }
     ```
 
 ### Link Datastore to an Enrichment Datastore through API

@@ -193,31 +193,31 @@ This section provides sample payloads for creating the Azure Blob Storage datast
 
 === "Creating a datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/azure_root_path",
-            "enrich_only": false,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "wasb",
-                "uri": "wasb://<container>@<account_name>.blob.core.windows.net",
-                "access_key": "azure_account_nme",
-                "secret_key": "azure_access_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": false,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "wasb",
+            "uri": "wasb://<container>@<account_name>.blob.core.windows.net",
+            "access_key": "azure_account_nme",
+            "secret_key": "azure_access_key"
         }
+    }
     ```
 === "Creating a datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/azure_root_path",
-            "enrich_only": false,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": false,
+        "connection_id": connection-id
+    }
     ```
 ### Creating an Enrichment Datastore
 
@@ -227,31 +227,31 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Creating an enrichment datastore with a new connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/azure_root_path",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "wasb",
-                "uri": "wasb://<container>@<account_name>.blob.core.windows.net",
-                "access_key": "azure_account_nme",
-                "secret_key": "azure_access_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "wasb",
+            "uri": "wasb://<container>@<account_name>.blob.core.windows.net",
+            "access_key": "azure_account_nme",
+            "secret_key": "azure_access_key"
         }
+    }
     ```
 === "Creating an enrichment datastore with an existing connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "trigger_catalog": true,
-            "root_path": "/azure_root_path",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ``` 
 ## Link Datastore to an Enrichment Datastore through API
 
