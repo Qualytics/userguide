@@ -4,13 +4,124 @@ Adding and configuring an Amazon S3 connection within Qualytics empowers the pla
 
 This documentation provides a step-by-step guide on how to add Amazon S3 as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
-By following these instructions, enterprises can ensure their Amazon S3 environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle
+By following these instructions, enterprises can ensure their Amazon S3 environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle.
 
 Let’s get started 🚀
 
+## Amazon S3 Setup Guide
+
+This section provides a simple walkthrough for setting up Amazon S3, including retrieving URIs. It also explains how to retrieve the Access Key and Secret Key to configure datastore permissions. 
+
+By following the Amazon S3 setup process, you will ensure secure and efficient access to your stored data, allowing seamless datastore integration and proper access management in Qualytics.
+
+### Retrieve the URI
+
+The S3 URI is the unique resource identifier within the context of the S3 protocol. They follow this naming convention: `S3://bucket-name/key-name`
+
+To retrieve the URL of an S3 object via the AWS Console, follow these steps:
+
+1. Navigate to the **AWS S3 console** and click on your bucket's name (use the search input to find the object if necessary).
+2. Click on the **checkbox** next to the object's name
+3. Click on the **Copy S3 URI** button
+
+![retrieve-the-uri](../assets/datastores/amazon-s3/retrieve-the-uri.png)
+
+### Retrieve the Access Key and Secret Key
+
+The access keys are long-term credentials for an IAM user or the AWS account root user. You can use these keys to sign programmatic requests to the AWS CLI or AWS API (directly or using the AWS SDK).
+
+To retrieve the Access Key and Secret Access Key, follow these steps:
+
+1. Open the **IAM console**.
+2. From the navigation menu, click on the **Users**.
+3. Select your **IAM user name**.
+4. Click on the **User Actions**, and then click on the **Manage Access Keys**.
+5. Click on the **Create Access Key**.
+6. Your keys will look something like this:
+    7. Access key ID example: `AKIAIOSFODNN7EXAMPLE`.
+    8. Secret access key example: `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`.
+9. Click on the **Download Credentials**, and store the keys in a secure location.
+
+!!! warning 
+    Your Secret Access Key will be visible only once at the time of creation. Please ensure you copy and securely store it for future use.
+
+### Datastore Privileges
+
+If you are using a private bucket, authentication is required for the connection.
+
+#### Source Datastore Permissions (Read-Only)
+
+To create a policy, follow these steps:
+
+1. Open the **IAM console**.
+2. Navigate to **Policies** in the IAM dashboard and select **Create Policy**.
+3. Go to the **JSON** tab and paste the provided **JSON** into the **Policy editor**.
+
+!!! tip
+    Ensure you replace `<bucket/path>` with your specific resource.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads",
+                "s3:Get*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket>/*",
+                "arn:aws:s3:::<bucket>"
+            ]
+        }
+    ]
+}
+```
+!!! warning 
+    Currently, object-level permissions alone are insufficient to authenticate the connection. Please ensure you also include bucket-level permissions as demonstrated in the example above.
+
+#### Enrichment Datastore Permissions (Read-Write)
+
+To create a policy, follow these steps:
+
+1. Open the IAM console.
+2. Navigate to **Policies** in the IAM dashboard and select **Create Policy**.
+3. Go to the **JSON tab** and paste the provided **JSON** into the **Policy editor**.
+
+!!! tip
+    Ensure you replace `<bucket/path>` with your specific resource.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket>/*",
+                "arn:aws:s3:::<bucket>"
+            ]
+        }
+    ]
+}
+```
+!!! warning 
+    Currently, object-level permissions alone are insufficient to authenticate the connection. Please ensure you also include bucket-level permissions as demonstrated in the example above.
+
 ## Add a Source Datastore
 
-A Source Datastore is a storage location used to connect and access data from external sources, and it can be of type JDBC or DFS. Configuring a source datastore enables Qualytics platform to access and perform operations on the data for generating valuable insights.
+A source datastore is a storage location used to connect and access data from external sources. Amazon S3 is an example of a source datastore, specifically a type of Distributed File System (DFS) datastore that is designed to handle data stored in distributed file systems. Configuring a DFS datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -28,7 +139,7 @@ A Source Datastore is a storage location used to connect and access data from ex
 | 2️.  | Toggle Button| Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
 | 3️.  | Connector    | Select **Amazon S3** from the dropdown list. |
 
-### Option I: Create a New Source Datastore Connection
+### Option I: Create a Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -68,7 +179,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/amazon-s3/use-existing-datastore-dark.png#only-dark)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Root Path, Teams and Catalog.
+    If you are using existing credentials, you can only edit the details such as Root Path, Teams and initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
@@ -83,7 +194,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata, in files and tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata in files. This setup provides full visibility into your data quality, helping you manage and improve it effectively
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -103,7 +214,7 @@ Once you have successfully tested and verified your source datastore connection,
 | 4️.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
 | 5️.  | Connector | Select a datastore connector as **Amazon S3** from the dropdown list. |
 
-### Option I: Create a New Enrichment Datastore Connection
+### Option I: Create a new Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
