@@ -29,7 +29,7 @@ Click on the **Create dataset** to set up a new dataset.
 
 !!! info 
     - **Dataset Location:** Select the location that aligns with where your other datasets reside to minimize data transfer delays.
-    - **Default Table Expiration:** Set the expiration to `1 day` to ensure any table created in this dataset is automatically deleted one hour after its creation.
+    - **Default Table Expiration:** Set the expiration to `1 day` to ensure any table created in this dataset is automatically deleted one day after its creation.
 
 ![configure-dataset-details](../assets/datastores/bigquery/configure-dataset-details.png)
  
