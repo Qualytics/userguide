@@ -28,7 +28,7 @@ A source datastore is a storage location used to connect to and access data from
 | 2.       | **Toggle Button** | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
 | 3.      | **Connector**   | Select **DB2** from the dropdown list.                                      |
 
-### Option I: Create a Datastore with a new Connection
+### Option I: Create a Source Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -106,7 +106,7 @@ Once you have successfully tested and verified your source datastore connection,
 | 4.       | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
 | 5.       | Connector                                    | Select a datastore connector as **DB2** from the dropdown list.                                |
 
-### Option I: Create a new Enrichment Datastore with a new Connection
+### Option I: Create an Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
@@ -201,7 +201,7 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating a datastore with a new connection"
+=== "Create a Source Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -223,7 +223,7 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
         }
     }
     ```
-=== "Creating a datastore with an existing connection"
+=== "Create a Source Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -242,7 +242,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:**  ```/api/datastores (post)```
 
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -263,7 +263,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -275,7 +275,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ``` 
 
-### Link Datastore to an Enrichment Datastore through API
+### Link Datastore to an Enrichment Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

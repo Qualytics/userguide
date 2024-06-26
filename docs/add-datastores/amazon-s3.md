@@ -139,7 +139,7 @@ A source datastore is a storage location used to connect and access data from ex
 | 2️.  | Toggle Button| Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
 | 3️.  | Connector    | Select **Amazon S3** from the dropdown list. |
 
-### Option I: Create a Datastore with a new Connection
+### Option I: Create a Source Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -194,7 +194,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata in files. This setup provides full visibility into your data quality, helping you manage and improve it effectively
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata in files. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -214,7 +214,7 @@ Once you have successfully tested and verified your source datastore connection,
 | 4️.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
 | 5️.  | Connector | Select a datastore connector as **Amazon S3** from the dropdown list. |
 
-### Option I: Create a new Enrichment Datastore with a new Connection
+### Option I: Create an Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
@@ -299,13 +299,16 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating the Amazon S3 datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating a datastore with a new connection"
+=== "Create a Source Datastore with a new Connection"
+
+    Use the API payload example to create a new datastore.
+    
     ```json
     {
         "name": "your_datastore_name",
@@ -322,7 +325,7 @@ This section provides sample payloads for creating the Amazon S3 datastore. Repl
         }
     }
     ```
-=== "Creating a datastore with an existing connection"
+=== "Create a Source Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -340,7 +343,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -357,7 +360,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -369,7 +372,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ``` 
 
-### Link an Enrichment Datastore to a Source Datastore through API
+### Link an Enrichment Datastore to a Source Datastore
 
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
