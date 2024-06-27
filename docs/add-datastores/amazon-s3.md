@@ -135,9 +135,9 @@ A source datastore is a storage location used to connect and access data from ex
 
 | REF. | FIELDS       | ACTIONS                                                                                           |
 |------|--------------|---------------------------------------------------------------------------------------------------|
-| 1️.  | Name         | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards.). |
+| 1️.  | Name (Required)         | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards.). |
 | 2️.  | Toggle Button| Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3️.  | Connector    | Select **Amazon S3** from the dropdown list. |
+| 3️.  | Connector (Required)    | Select **Amazon S3** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -155,12 +155,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF. | FIELDS           | ACTIONS                                                                                       |
 |------|------------------|-----------------------------------------------------------------------------------------------|
-| 1️.  | URI              | Enter the Uniform Resource Identifier (URI) of the Amazon S3.                                  |
-| 2️.  | Access Key       | Input the access key provided for secure access.                                               |
-| 3️.  | Secret Key       | Input the secret key associated with the access key for secure authentication.                 |
-| 4️.  | Root Path        | Specify the root path where the data is stored.                                                |
-| 5️.  | Teams            | Select one or more teams from the dropdown to associate with this source datastore.            |
-| 6️.  | Initial Cataloging| Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1️.  | URI (Required)             | Enter the Uniform Resource Identifier (URI) of the Amazon S3.                                  |
+| 2️.  | Access Key (Required)      | Input the access key provided for secure access.                                               |
+| 3️.  | Secret Key (Required)      | Input the secret key associated with the access key for secure authentication.                 |
+| 4️.  | Root Path (Required)       | Specify the root path where the data is stored.                                                |
+| 5️.  | Teams (Required)          | Select one or more teams from the dropdown to associate with this source datastore.            |
+| 6️.  | Initial Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -189,7 +189,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!info
+!!!tip
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
@@ -208,11 +208,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.|
+| 1️.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.|
 | 2️.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore.  |
-| 3️.  | Name | Give a name for the enrichment datastore |
+| 3️.  | Name (Required) | Give a name for the enrichment datastore |
 | 4️.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-| 5️.  | Connector | Select a datastore connector as **Amazon S3** from the dropdown list. |
+| 5️.  | Connector (Required) | Select a datastore connector as **Amazon S3** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -225,11 +225,11 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF. | FIELDS         | ACTIONS                                                                 |
 |------|----------------|-------------------------------------------------------------------------|
-| 1.   | URI            | Enter the Uniform Resource Identifier (URI) for the Amazon S3. |
-| 2.   | Access Key     | Input the access key provided for secure access. |
-| 3.   | Secret Key     | Input the secret key associated with the access key for secure authentication. |
-| 4.   | Root Path      | Specify the root path where the data is stored. |
-| 5.   | Teams          | Select one or more teams from the dropdown to associate with this source datastore. |
+| 1.   | URI (Required)           | Enter the Uniform Resource Identifier (URI) for the Amazon S3. |
+| 2.   | Access Key (Required)    | Input the access key provided for secure access. |
+| 3.   | Secret Key (Required)    | Input the secret key associated with the access key for secure authentication. |
+| 4.   | Root Path (Required)     | Specify the root path where the data is stored. |
+| 5.   | Teams (Required)         | Select one or more teams from the dropdown to associate with this source datastore. |
 
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
@@ -263,7 +263,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore. |
 | 3.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
@@ -275,7 +275,6 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 -   **Root Path**: Specify the root path where the data is stored. This path defines the base directory or folder from which all data operations will be performed.
 
-
 ![use-existing-enrichment-datastore](../assets/datastores/amazon-s3/use-existing-enrichment-datastore-light.png#only-light)
 ![use-existing-enrichment-datastore](../assets/datastores/amazon-s3/use-existing-enrichment-datastore-dark.png#only-dark)
 
@@ -285,7 +284,6 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/amazon-s3/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
-
 
 ![success-message](../assets/datastores/amazon-s3/success-message-light.png#only-light)
 ![success-message](../assets/datastores/amazon-s3/success-message-dark.png#only-dark)
@@ -306,9 +304,6 @@ This section provides sample payloads for creating the Amazon S3 datastore. Repl
 **Endpoint:** ```/api/datastores (post)```
 
 === "Create a Source Datastore with a new Connection"
-
-    Use the API payload example to create a new datastore.
-    
     ```json
     {
         "name": "your_datastore_name",
@@ -373,7 +368,6 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     ``` 
 
 ### Link an Enrichment Datastore to a Source Datastore
-
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
