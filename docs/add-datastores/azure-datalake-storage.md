@@ -8,9 +8,37 @@ By following these instructions, enterprises can ensure their Azure Datalake Sto
 
 Let’s get started 🚀
 
+## Azure Datalake Storage Setup Guide
+
+This setup guide details the process for retrieving the Account Name and Access Key of your Azure Datalake Storage account, essential for seamless configuration in Qualytics.
+
+### Azure Datalake Storage URI
+
+The Uniform Resource Identifier (URI) for Azure Datalake Storage is structured to uniquely identify resources within your storage account. The format of the URI is as follows:
+
+```abfs[s]://<file_system>@<account_name>.dfs.core.windows.net/<path>``
+
+ - `abfs[s]`: The `abfs` or `abfss` protocol is used as the scheme identifier.
+ - `\<file_system>`: The parent location that holds the files and folders. This is similar to containers in the Azure Storage Blobs service.
+ - `<account-name>`: The name assigned to your storage account during creation.
+ - `<path>`: A forward slash delimited (/) representation of the directory structure.
+
+## Retrieve the Account Name and Access Key
+
+To configure Azure Datalake Storage Datastore in Qualytics, you need the account name and access key. Follow these steps to retrieve them:
+
+1. To get the `account_name` and `access_key` you need to access your local storage in Azure.
+
+2. Click on **Access Keys** tab and copy the values.
+
+![get-azure-datalake-account-credentials](../assets/datastores/azure-datalake-storage/get-azure-datalake-account-credentials.png)
+
+!!! tip
+    Refer to the [**Azure Datalake Storage documentation**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal){:target="_blank"} for more information on how to retrieve the account name and access key of your storage account.
+
 ## Add a Source Datastore
 
-A Source Datastore is a storage location used to connect and access data from external sources, and it can be of type JDBC or DFS. Configuring a source datastore enables the Qualytics platform to access and perform operations on the data for generating valuable insights.
+A source datastore is a storage location used to connect and access data from external sources. Azure Datalake Storage is an example of a source datastore, specifically a type of Distributed File System (DFS) datastore that is designed to handle data stored in distributed file systems. Configuring a DFS datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -24,11 +52,11 @@ A Source Datastore is a storage location used to connect and access data from ex
 
 | REF     | FIELDS    | ACTIONS          |
 |---------|-----------|------------------|
-| 1.      | Name | Specify the name of the datastore.(e.g., The specified name will appear on the datastore cards.) |
+| 1.      | Name (Required) | Specify the name of the datastore.(e.g., The specified name will appear on the datastore cards.) |
 | 2.      | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3.      | Connector | Select **Azure Datalake Storage** from the dropdown list.|
+| 3.      | Connector (Required)| Select **Azure Datalake Storage** from the dropdown list.|
 
-### Option I: Create a New Source Datastore Connection
+### Option I: Create a Source Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -44,12 +72,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF | FIELDS | ACTIONS |
 |-----|--------|---------|
-| 1.  | URI | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
-| 2.  | Account Name | Input the account name to access the Azure Datalake Storage. |
-| 3.  | Access Key | Input the access key provided for secure access. |
-| 4.  | Root Path | Specify the root path where the data is stored. |
-| 5.  | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6.  | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1.  | URI (Required) | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
+| 2.  | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
+| 3.  | Access Key (Required) | Input the access key provided for secure access. |
+| 4.  | Root Path (Required) | Specify the root path where the data is stored. |
+| 5.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
+| 6.  | Initial Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -68,7 +96,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/azure-datalake-storage/use-existing-datastore-dark.png#only-dark)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Root Path, Teams and Catalog.
+     If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
@@ -78,12 +106,12 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 !!!note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!info
+!!!tip
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
 
-Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata, in files and tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata in files. This setup provides full visibility into your data quality, helping you manage and improve it effectively. 
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -95,16 +123,15 @@ Once you have successfully tested and verified your source datastore connection,
 ![select-enrichment-connector](../assets/datastores/azure-datalake-storage/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/azure-datalake-storage/select-enrichment-connector-dark.png#only-dark)
 
-
 | REF | FIELDS | ACTIONS |
 |-----|--------|---------|
-| 1.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore.  |
-| 3.  | Name | Give a name for the enrichment datastore. |
+| 3.  | Name (Required) | Give a name for the enrichment datastore. |
 | 4.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-| 5.  | Connector | Select a datastore connector as **Azure Datalake Storage** from the dropdown list. |
+| 5.  | Connector (Required)| Select a datastore connector as **Azure Datalake Storage** from the dropdown list. |
 
-### Option I: Create a New Enrichment Datastore Connection
+### Option I: Create an Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
@@ -116,11 +143,11 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF | FIELDS | ACTIONS |
 |------|-------|---------|
-| 1.   | URI          | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
-| 2.   | Account Name | Input the account name to access the Azure Datalake Storage. |
-| 3.   | Access Key   | Input the access key provided for secure access.         |
-| 4.   | Root Path    | Specify the root path where the data is stored.          |
-| 5.   | Teams        | Select one or more teams from the dropdown to associate with this source datastore. |
+| 1.   | URI (Required)        | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
+| 2.   | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
+| 3.   | Access Key (Required)  | Input the access key provided for secure access.         |
+| 4.   | Root Path (Required)   | Specify the root path where the data is stored.          |
+| 5.   | Teams (Required)       | Select one or more teams from the dropdown to associate with this source datastore. |
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -153,7 +180,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF | FIELDS | ACTIONS |
 |-----|--------|---------|
-| 1.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore. |
 | 3.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
@@ -187,13 +214,13 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating the Azure Datalake Storage datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating a datastore with a new connection"
+=== "Create a Source Datastore with a new Connection"
     ``` json
     {  
         "name": "your\_datastore\_name",  
@@ -210,7 +237,7 @@ This section provides sample payloads for creating the Azure Datalake Storage da
         }  
     }
     ```
-=== "Creating a datastore with an existing connection"
+=== "Create a Source Datastore with an existing Connection"
     ``` json 
     {  
         "name": "your\_datastore\_name",  
@@ -228,7 +255,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:**  ```/api/datastores (post)```
 
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ``` json
     {
         "name": "your\_datastore\_name",  
@@ -245,7 +272,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }  
     }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an Existing Connection"
     ```json
     {
         "name": "your\_datastore\_name",  
@@ -257,7 +284,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ```
 
-### Link Datastore to an Enrichment Datastore through API
+### Link an Enrichment Datastore to a Source Datastore
 
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
