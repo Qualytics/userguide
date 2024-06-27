@@ -8,6 +8,141 @@ By following these instructions, enterprises can ensure their Databricks environ
 
 Let's get started 🚀
 
+## Databricks Setup Guide
+
+This guide provides a comprehensive walkthrough for setting up Databricks. It highlights the distinction between SQL Warehouses and All-Purpose Compute, the functionality of node pools, and the enhancements they offer.
+
+Additionally, it details the process for attaching compute resources to node pools and explains the minimum requirements for effective operation.
+
+### Understanding SQL Warehouses and All-Purpose Compute
+
+#### SQL Warehouses (Serverless)
+
+SQL Warehouses (Serverless) in Databricks utilize serverless SQL endpoints for running SQL queries.
+
+| REF | ATTRIBUTE            | DESCRIPTION                                                                                                      |
+| --- | -------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 1️.  | Cost-effectiveness    | Serverless SQL endpoints allow you to pay only for the queries you execute, without the need to provision or manage dedicated infrastructure, making it more cost-effective for ad-hoc or sporadic queries. |
+| 2️.  | Scalability          | Serverless architectures automatically scale resources based on demand, ensuring optimal performance for varying workloads. |
+| 3️.  | Simplified Management | With serverless SQL endpoints, you don't need to manage clusters or infrastructure, reducing operational overhead. |
+| 4️.  | Minimum Requirements  | The minimum requirements for using SQL Warehouse with serverless typically include access to a Databricks workspace and appropriate permissions to create and run SQL queries. |
+
+#### All-Purpose Compute
+
+All-purpose compute in Databricks refers to clusters that are not optimized for specific tasks. While they offer flexibility, they may not provide the best performance or cost-effectiveness for certain workloads.
+
+| REF | ATTRIBUTE           | DESCRIPTION                                                                                                              |
+| --- | ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 1️.  | Slow Spin-up Time   | All-purpose compute clusters may take longer to spin up compared to specialized clusters, resulting in delays before processing can begin. |
+| 2️.  | Timeout Connections | Due to longer spin-up times, there's a risk of timeout connections, especially for applications or services that expect quick responses. |
+
+### Node Pool and Its Usage
+
+A node pool in Databricks is a set of homogeneous virtual machines (VMs) within a cluster. It allows you to have a fixed set of instances dedicated to specific tasks, ensuring consistent performance and resource isolation.
+
+| REF | ATTRIBUTE            | DESCRIPTION                                                                                                                         |
+| --- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 1️.  | Resource Isolation    | Node pools provide resource isolation, allowing different workloads or applications to run without impacting each other's performance. |
+| 2️.  | Optimized Performance | By dedicating specific nodes to particular tasks, you can optimize performance for those workloads.                                 |
+| 3️.  | Cost-effectiveness    | Node pools can be more cost-effective than using all-purpose compute for certain workloads, as you can scale resources according to the specific requirements of each task. |
+
+### Improving All-Purpose Compute with Node Pools
+
+To improve the performance of all-purpose compute using node pools, you can follow these steps:
+
+| REF | ATTRIBUTE                    | DESCRIPTION                                                                                                          |
+| --- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 1️.  | Define Workload-Specific Node Pools | Identify the specific tasks or workloads that require optimized performance and create dedicated node pools for them. |
+| 2️.  | Specify Minimum Requirements       | Determine the minimum resources (such as CPU, memory, and disk) required for each workload and configure the node pools accordingly. |
+| 3️.  | Monitor and Adjust                | Continuously monitor the performance of your node pools and adjust resource allocations as needed to ensure optimal performance. |
+
+**Step 1:** Configure details for Qualytics Node Pool.
+
+![configure-qualytics-node-pool](../assets/datastores/databricks/configure-qualytics-node-pool.png)
+
+**Step 2:** Attach Compute details with the Node Pool.
+
+![attach-compute-with-node-pool](../assets/datastores/databricks/attach-compute-with-node-pool.png)
+
+### Retrieve the Connection Details
+
+This section explains how to retrieve the connection details that you need to connect to Databricks.
+
+#### Credentials to Connect with Qualytics
+
+To configure Databricks, you need the following credentials:
+
+| REF | FIELDS               | ACTIONS                                                                                              |
+| --- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| 1️.  | Host (Required)                | Get **Hostname** from your Databricks account and add it to this field.                                |
+| 2️.  | HTTP Path (Required)           | Add HTTP Path (web address) to fetch data from your Databricks account.                              |
+| 3️.  | Catalog (Required)             | Add a **Catalog** to fetch data structures and metadata from Databricks.                               |
+| 4️.  | Database (Required)            | Specify the database name to be accessed.                                                            |
+| 5️.  | Personal Access Token (Required) | Generate a Personal Access Token from your Databricks account and add it for authentication.         |
+
+#### Get Connection Details for the SQL Warehouse
+
+Follow the given steps to get the connection details for the SQL warehouse:
+
+1. Click on the **SQL Warehouses** in the sidebar.
+2. Choose a **warehouse** to connect to.
+3. Navigate to the **Connection Details** tab.
+4. Copy the connection details.
+
+![connection-details-for-sql-warehouse](../assets/datastores/databricks/connection-details-for-sql-warehouse.png)
+
+#### Get Connection Details for the Cluster
+
+Follow the given steps to get the connection details for the cluster:
+
+1. Click on the **Compute** in the sidebar.
+2. Choose a **cluster** to connect to.
+3. Navigate to the **Advanced Options**.
+4. Click on the **JDBC/ODBC** tab.
+5. Copy the connection details.
+
+![connection-details-for-the-cluster](../assets/datastores/databricks/connection-details-for-the-cluster.png)
+
+#### Get the Access Token
+
+**Step 1:** In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop-down menu.
+
+![user-settings](../assets/datastores/databricks/user-settings.png)
+
+!!! note
+    Refer to the [**Databricks Official Docs**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} to generate the **Access Token**.
+
+**Step 2:** In the **Settings** page, select the **Developer** option in the **User** section.
+
+![developer-option](../assets/datastores/databricks/developer-options.png)
+
+**Step 3:** In the **Developer** page, click on **Manage** in Access Tokens.
+
+![manage-access-token](../assets/datastores/databricks/manage-access-token.png)
+
+**Step 4:** In the **Access Tokens** page, click on the **Generate new token** button.
+
+![generate-new-token](../assets/datastores/databricks/generate-new-token.png)
+
+**Step 5:** You will see a modal to add a description and validation time (in days) for the token.
+
+![add-a-description](../assets/datastores/databricks/add-a-description.png)
+
+**Step 6:** After adding the contents, click on **Generate**, and it will show the **token**
+
+![generated-token](../assets/datastores/databricks/generated-token.png)
+
+!!! warning
+    Before closing the modal window by clicking on the **Done** button, ensure the **Personal Access Token** is saved to a secure location
+
+**Step 7:** You can see the new **token** on the **Access Tokens** page.
+
+![new-token](../assets/datastores/databricks/new-token.png)
+
+You can also revoke a **token** on the **Access Tokens** page by clicking on the **Revoke token** button
+
+![revoke-token](../assets/datastores/databricks/revoke-token.png)
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Databricks is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
@@ -24,9 +159,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS         | ACTIONS                                                                                        |
 |------|----------------|------------------------------------------------------------------------------------------------|
-| 1️.   | Name           | Specify the datastore name (e.g., This name will appear on the datastore cards) |
+| 1️.   | Name (Reqired)         | Specify the datastore name (e.g., This name will appear on the datastore cards) |
 | 2️.   | Toggle Button  | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch.      |
-| 3️.   | Connector      | Select **Databricks** from the dropdown list.                                                  |                  
+| 3️.   | Connector (Required)     | Select **Databricks** from the dropdown list.                                                  |                  
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -44,12 +179,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF. | FIELDS                  | ACTIONS                                                                                         |
 |------|-------------------------|-------------------------------------------------------------------------------------------------|
-| 1️.   | Host                     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.                  |
-| 2️.   | HTTP Path                | Add the HTTP Path (web address) to fetch data from your Databricks account.                  |
-| 3️.   | Personal Access Token    | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
-| 4️.   | Catalog                 | Add a **Catalog** to fetch data structures and metadata from the Databricks.                    |
-| 5️.   | Database                | Specify the database name to be accessed.                                                       |
-| 6️.   | Teams                   | Select one or more teams from the dropdown to associate with this source datastore.             |
+| 1️.   | Host (Required)                     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.                  |
+| 2️.   | HTTP Path (Required)                | Add the HTTP Path (web address) to fetch data from your Databricks account.                  |
+| 3️.   | Personal Access Token (Required)    | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
+| 4️.   | Catalog (Required)                 | Add a **Catalog** to fetch data structures and metadata from the Databricks.                    |
+| 5️.   | Database (Optional)               | Specify the database name to be accessed.                                                       |
+| 6️.   | Teams (Required)                  | Select one or more teams from the dropdown to associate with this source datastore.             |
 | 7️.   | Initial Cataloging      | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
@@ -84,7 +219,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). The enrichment datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). The enrichment datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively. 
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -98,11 +233,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS                                           | ACTIONS                                                                                      |
 |------|--------------------------------------------------|----------------------------------------------------------------------------------------------|
-| 1️.   | Prefix                                           | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.         |
+| 1️.   | Prefix (Required)                                          | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.         |
 | 2️.   | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore; Toggle OFF to link it to a brand new enrichment datastore. |
-| 3️.   | Name                                             | Give a name for the enrichment datastore.                                                    |
+| 3️.   | Name (Required)                                            | Give a name for the enrichment datastore.                                                    |
 | 4️.   | Toggle Button for using an existing connection   | Toggle ON to reuse credentials from an existing connection; Toggle OFF to create a new enrichment from scratch. |
-| 5️.   | Connector                                        | Select a datastore connector as **Databricks** from the dropdown list.                         |
+| 5️.   | Connector (Required)                                       | Select a datastore connector as **Databricks** from the dropdown list.                         |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -115,12 +250,12 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF. | FIELDS                   | ACTIONS                                                                                      |
 |------|--------------------------|----------------------------------------------------------------------------------------------|
-| 1️.   | Host                     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.                  |
-| 2️.   | HTTP Path                | Add the HTTP Path (web address) to fetch data from your Databricks account.                  |
-| 3️.   | Personal Access Token    | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
-| 4️.   | Catalog                  | Add a **Catalog** to fetch data structures and metadata from Databricks.                     |
-| 5️.   | Database                 | Specify the database name.                                                                   |
-| 6️.   | Teams                    | Select one or more teams from the dropdown to associate with this enrichment datastore.      |
+| 1️.   | Host (Required)                   | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.                  |
+| 2️.   | HTTP Path (Required)                | Add the HTTP Path (web address) to fetch data from your Databricks account.                  |
+| 3️.   | Personal Access Token (Required)   | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
+| 4️.   | Catalog (Required)                 | Add a **Catalog** to fetch data structures and metadata from Databricks.                     |
+| 5️.   | Database (Optional)               | Specify the database name.                                                                   |
+| 6️.   | Teams (Required)                   | Select one or more teams from the dropdown to associate with this enrichment datastore.      |
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
@@ -153,7 +288,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS                                          | ACTIONS                                                                                      |
 |------|-------------------------------------------------|----------------------------------------------------------------------------------------------|
-| 1️.   | Prefix                                          | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata.          |
+| 1️.   | Prefix (Required)                                          | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata.          |
 | 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore.                  |
 | 3️.   | Enrichment Datastore                            | Select an enrichment datastore from the dropdown list.                                       |
 
@@ -189,7 +324,7 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating a Databricks datastore. Replace the placeholder values with actual data relevant to your setup.
 
@@ -215,7 +350,7 @@ This section provides sample payloads for creating a Databricks datastore. Repla
             }
         }
     ```
-=== "Create a Source Datastore with an Existing Connection"
+=== "Create a Source Datastore with an existing Connection"
     ```json
         {
             "name": "your_datastore_name",
@@ -263,7 +398,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
             "connection_id": connection-id
         }
     ```
-### Link Datastore to an Enrichment Datastore
+### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
