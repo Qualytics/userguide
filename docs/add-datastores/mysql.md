@@ -24,9 +24,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS       | ACTIONS      |
 |------|--------------|--------------|
-| 1️.   | Name         | Specify the datastore name (e.g., This name will appear on the datastore cards) |
+| 1️.   | Name (Required)         | Specify the datastore name (e.g., This name will appear on the datastore cards) |
 | 2️.   | Toggle Button| Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3️.   | Connector    | Select **MySQL** from the dropdown list. |
+| 3️.   | Connector (Required)    | Select **MySQL** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -44,12 +44,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️. | Host | Get **Hostname** from your MySQL account and add it to this field. |
-| 2️. | Port | Specify the **Port** number. |
-| 3️. | User | Enter the **User ID** to connect. |
-| 4️. | Password | Enter the **password** to connect to the database. |
-| 5️. | Database | Specify the database name. |
-| 6️. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
+| 1️. | Host (Required) | Get **Hostname** from your MySQL account and add it to this field. |
+| 2️. | Port (Required) | Specify the **Port** number. |
+| 3️. | User (Required) | Enter the **User ID** to connect. |
+| 4️. | Password (Required)| Enter the **password** to connect to the database. |
+| 5️. | Database (Required)| Specify the database name. |
+| 6️. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
 | 7️. | Initial Cataloging  | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
@@ -69,7 +69,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/mysql/use-existing-datastore-dark.png#only-dark)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as **Database** and **Teams**.
+    If you are using existing credentials, you can only edit the details such as Database, Teams and Initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
@@ -79,7 +79,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 !!! note 
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!! info
+!!! tip
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
@@ -98,11 +98,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS | ACTIONS                                                             |
 |------|--------|---------------------------------------------------------------------|
-| 1️.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
-| 3️.   | Name | Give a name for the enrichment datastore |
+| 3️.   | Name (Required) | Give a name for the enrichment datastore |
 | 4️.   | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-| 5️.   | Connector | Select a datastore connector as MySQL from the dropdown list. |
+| 5️.   | Connector (Required) | Select a datastore connector as MySQL from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -115,12 +115,12 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | Host   | Get **Hostname** from your MySQL account and add it to this field. |
-| 2️.  | Port   | Specify the **Port** number. |
-| 3️.  | User   | Enter the **User ID** to connect. |
-| 4️.  | Password | Enter the **password** to connect to the database. |
-| 5️.  | Database | Specify the database name. |
-| 6️.  | Teams | Select one or more teams from the dropdown to associate with this datastore. |
+| 1️.  | Host (Required)  | Get **Hostname** from your MySQL account and add it to this field. |
+| 2️.  | Port (Required)   | Specify the **Port** number. |
+| 3️.  | User (Required)  | Enter the **User ID** to connect. |
+| 4️.  | Password (Required) | Enter the **password** to connect to the database. |
+| 5️.  | Database (Required) | Specify the database name. |
+| 6️.  | Teams (Required) | Select one or more teams from the dropdown to associate with this datastore. |
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -154,7 +154,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1️.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.  | Toggle Button for existing enrichment datastore | Toggle **ON** to link the source datastore to an existing enrichment datastore. |
 | 3️.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
