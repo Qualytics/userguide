@@ -232,7 +232,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS                                           | ACTIONS                                                                                     |
 |------|--------------------------------------------------|---------------------------------------------------------------------------------------------|
-|   1.   | Prefix (Required)                                | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+|  1.   | Prefix (Required)                                | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 |  2.   | Toggle Button for existing enrichment datastore   | Toggle ON to link the source datastore to an existing enrichment datastore.                  |
 |  3.  | Enrichment Datastore                             | Select an enrichment datastore from the dropdown list.                                       |
 
@@ -274,7 +274,7 @@ This section provides sample payloads for creating a BigQuery datastore. Replace
 
 **Endpoint:** `/api/datastores (post)`
 
-=== "Create a Datastore with a new Connection"
+=== "Create a Source Datastore with a new Connection"
     ```json
         {
             "name": "your_datastore_name",
@@ -335,8 +335,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
-
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
-**Endpoint Details:** `/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)`
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
 
