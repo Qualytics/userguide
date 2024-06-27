@@ -24,9 +24,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF.         | FIELDS       | ACTIONS                                                                 |
 |--------------|--------------|-------------------------------------------------------------------------|
-| 1.      | **Name**     | Specify the datastore name (e.g., This name will appear on the datastore cards) |
-| 2.       | **Toggle Button** | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3.      | **Connector**   | Select **DB2** from the dropdown list.                                      |
+| 1.      | Name (Required)     | Specify the datastore name (e.g., This name will appear on the datastore cards) |
+| 2.       | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 3.      | Connector (Required)   | Select **DB2** from the dropdown list.                                      |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -44,14 +44,14 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF.         | FIELDS               | ACTIONS                                                                                     |
 |--------------|----------------------|---------------------------------------------------------------------------------------------|
-| 1.      | Host              | Get **Hostname** from your DB2 account and add it to this field.                              |
-| 2.      | Port            | Specify the **Port** number.                                                                   |
-| 3.       | Use              | Enter the **User ID** to connect.                                                              |
-| 4.       | Password          | Enter the **password** to connect to the database.                                             |
+| 1.       | Host (Required)             | Get **Hostname** from your DB2 account and add it to this field.                              |
+| 2.       | Port (Required)           | Specify the **Port** number.                                                                   |
+| 3.       | User (Required)             | Enter the **User ID** to connect.                                                              |
+| 4.       | Password (Required)         | Enter the **password** to connect to the database.                                             |
 | 5.       | SSL Connection    | Enable the SSL connection to ensure secure communication between Qualytics and the selected datastore. |
-| 6.       | Database          | Specify the database name.                                                                   |
-| 7.       | Schema            | Define the schema within the database that should be used.                                    |
-| 8.       | Teams             | Select one or more teams from the dropdown to associate with this source datastore.           |
+| 6.       | Database (Required)         | Specify the database name.                                                                   |
+| 7.       | Schema (Required)           | Define the schema within the database that should be used.                                    |
+| 8.       | Teams (Required)            | Select one or more teams from the dropdown to associate with this source datastore.           |
 | 9.       | Initial Catalog   | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
@@ -100,11 +100,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF.         | FIELDS                                            | ACTIONS                                                                                     |
 |--------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|                                               
-| 1.       | Prefix                                        | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1.       | Prefix (Required)                                        | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.      | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
-| 3.      | Name                                        | Give a name for the enrichment datastore.                                                    |
+| 3.      | Name (Required)                                       | Give a name for the enrichment datastore.                                                    |
 | 4.       | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-| 5.       | Connector                                    | Select a datastore connector as **DB2** from the dropdown list.                                |
+| 5.       | Connector (Required)                                   | Select a datastore connector as **DB2** from the dropdown list.                                |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -159,7 +159,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS                             | ACTIONS                                                                                                      |
 |------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| 1️.  | Prefix                             | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1️.  | Prefix (Required)                            | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore.                                    |
 | 3️.   | Enrichment Datastore               | Select an enrichment datastore from the dropdown list.                                                         |
 
@@ -195,7 +195,7 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating a DB2 datastore. Replace the placeholder values with actual data relevant to your setup.
 
@@ -275,7 +275,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ``` 
 
-### Link Datastore to an Enrichment Datastore
+### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
