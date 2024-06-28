@@ -1,154 +1,259 @@
 # Microsoft SQL Server
 
-## Steps to setup Microsoft SQL Server 
+Adding and configuring Microsoft SQL Server connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
 
----
-Fill the form with the credentials of your data source.
+This documentation provides a step-by-step guide on adding Microsoft SQL Server as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
-![Screenshot](../assets/datastores/microsoft-sql-server/create-datastore-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/datastores/microsoft-sql-server/create-datastore-dark.png#only-dark){: style="width:450px;"}
+By following these instructions, enterprises can ensure their Microsoft SQL Server environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle.
 
-Once the form is completed, it's necessary to test the connection to verify if Qualytics is able to connect to your source of data. A successful message will be shown:
+Let’s get started 🚀
 
-![Screenshot](../assets/datastores/test-connection/test-connection-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/datastores/test-connection/test-connection-dark.png#only-dark){: style="width:450px;"}
+## Add a Source Datastore
 
-!!! warning 
-    By clicking on the `Finish` button, it will create the Datastore and skipping the configuration of an Enrichment Datastore.
+A source datastore is a storage location used to connect to and access data from external sources. Microsoft SQL Server is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
 
-    - To configure an Enrichment Datastore in another moment, please refer [to this section](/userguide/enrichment/create-enrichment-datastore/)
+**Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface. 
 
-!!! note 
-    It is important to associate an `Enrichment Datastore` with your new Datastore
+![add-datastore](../assets/datastores/microsoft-sql-server/add-datastore-light.png#only-light)
+![add-datastore](../assets/datastores/microsoft-sql-server/add-datastore-dark.png#only-dark)
 
-    - The `Enrichment Datastore` will allow Qualytics to record `enrichment data`, copies of the source `anomalous data` and additional `metadata` for your `Datastore`
+**Step 2:** A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-## Configuring an Enrichment Datastore
+![select-a-connector](../assets/datastores/microsoft-sql-server/select-a-connector-light.png#only-light)
+![select-a-connector](../assets/datastores/microsoft-sql-server/select-a-connector-dark.png#only-dark)
 
-- If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list
+| REF. | FIELDS            | ACTIONS                                                                                               |
+|------|-------------------|-------------------------------------------------------------------------------------------------------|
+| 1️.   | Name (Required)   | Specify the datastore name (e.g., This name will appear on the datastore cards)                      |
+| 2️.   | Toggle Button     | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 3️.   | Connector (Required) | Select **Microsoft SQL Server** from the dropdown list.                                                  |
 
-- If you don't have an `Enrichment Datastore`, you can create one at the same page:
+### Option I: Create a Source Datastore with a new Connection
 
-    ![Screenshot](../assets/enrichment/microsoft-sql-server/create-enrichment-datastore-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/enrichment/microsoft-sql-server/create-enrichment-datastore-dark.png#only-dark){: style="width:450px"}
+If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-Once the form is completed, it's necessary to test the connection. A successful message will be shown:
+**Step 1:** Select the **Microsoft SQL Server** connector from the dropdown list and add connection details such as host, port, username, password, and database.
 
-![Screenshot](../assets/enrichment/test-connection-light.png#only-light){: style="width:450px;"}
-![Screenshot](../assets/enrichment/test-connection-dark.png#only-dark){: style="width:450px;"}
+![add-datastore-credentials](../assets/datastores/microsoft-sql-server/add-datastore-credentials-light.png#only-light)
+![add-datastore-credentials](../assets/datastores/microsoft-sql-server/add-datastore-credentials-dark.png#only-dark)
 
-!!! warning 
-    By clicking on the `Finish` button, it will create the Datastore and link or create the Enrichment Datastore
-    
----
-## Fields
-### `Name` <spam id='required'>`required`</spam>
+**Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-* The datastore name  to be created in Qualytics App
+![add-datastore-credentials-explain](../assets/datastores/microsoft-sql-server/add-datastore-credentials-explain-light.png#only-light)
+![add-datastore-credentials-explain](../assets/datastores/microsoft-sql-server/add-datastore-credentials-explain-dark.png#only-dark)
 
-### `Host` <spam id='required'>`required`</spam>
+| REF. | FIELDS                     | ACTIONS                                                                                                           |
+|------|----------------------------|-------------------------------------------------------------------------------------------------------------------|
+| 1️.   | Host (Required)            | Get **Hostname** from your Microsoft SQL Server account and add it to this field.                                   |
+| 2️.   | Port (Optional)            | Specify the **Port** number.                                                                                        |
+| 3️.   | User (Required)            | Enter the **User ID** to connect.                                                                                   |
+| 4️.   | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
+| 5️.  | Database (Required)        | Specify the database name.                                                                                        |
+| 6️.   | Schema (Required)          | Define the schema within the database that should be used.                                                         |
+| 7️.   | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
+| 8️.   | Initial Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
-* The address of the server to connect to. This address can be a DNS or IP address.
-### `Port` <spam id='required'>`required`</spam>
+**Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-* The port to connect to on serverName. 
-* The default is 1433. 
+![test-datastore-connection](../assets/datastores/microsoft-sql-server/test-datastore-connection-light.png#only-light)
+![test-datastore-connection](../assets/datastores/microsoft-sql-server/test-datastore-connection-dark.png#only-dark)
 
-    `Note: If you're using the default, you don't have to specify the port`
+If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
 
-### `Database` <spam id='required'>`required`</spam>
+### Option II: Use an Existing Connection
 
-* The `database` instance name to be connected.
+If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using the existing connection details.
 
-### `Schema` <spam id='required'>`required`</spam>
+**Step 1:** Select a **connection** to reuse existing credentials.
 
-* The `schema` name to be connected.
+![use-existing-datastore](../assets/datastores/microsoft-sql-server/use-existing-datastore-light.png#only-light)
+![use-existing-datastore](../assets/datastores/microsoft-sql-server/use-existing-datastore-dark.png#only-dark)
 
-### `User` <spam id='required'>`required`</spam>
+!!! note
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
 
-* The `user` to connect in Microsoft SQL Server
-### `Password` <spam id='required'>`required`</spam>
+**Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
+![test-connection-for-existing-datastore](../assets/datastores/microsoft-sql-server/test-connection-for-existing-datastore-light.png#only-light)
+![test-connection-for-existing-datastore](../assets/datastores/microsoft-sql-server/test-connection-for-existing-datastore-dark.png#only-dark)
 
-* The `password` to connect in Microsoft SQL Server.
+!!! note
+    Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-## More information on how to connect with Microsoft SQL Server
+!!! tip 
+    It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
----
+## Add Enrichment Datastore
 
-* [Building the connection URL](https://learn.microsoft.com/en-us/sql/connect/jdbc/building-the-connection-url?view=sql-server-ver16)
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). The enrichment datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
 
-* [Setting the connection properties](https://learn.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver16)
+**Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
+
+![next-button-for-enrichment](../assets/datastores/microsoft-sql-server/next-button-for-enrichment-light.png#only-light)
+![next-button-for-enrichment](../assets/datastores/microsoft-sql-server/next-button-for-enrichment-dark.png#only-dark)
+
+**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+
+![select-enrichment-connector](../assets/datastores/microsoft-sql-server/select-enrichment-connector-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/microsoft-sql-server/select-enrichment-connector-dark.png#only-dark)
+
+| REF. | FIELDS                                           | ACTIONS                                                                                                     |
+|------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| 1️.   | Prefix (Required)                                | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2️.   | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
+| 3️.   | Name (Required)                                  | Give a name for the enrichment datastore.                                                                    |
+| 4️.   | Toggle Button for using an existing connection   | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
+| 5️.   | Connector (Required)                             | Select a datastore connector as **Microsoft SQL Server** from the dropdown list.                              |
+
+### Option I: Create an Enrichment Datastore with a new Connection
+
+If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+
+**Step 1:** Add connection details for your selected **enrichment datastore** connector.
+
+![enrichment-datastore-explain](../assets/datastores/microsoft-sql-server/enrichment-datastore-explain-light.png#only-light)
+![enrichment-datastore-explain](../assets/datastores/microsoft-sql-server/enrichment-datastore-explain-dark.png#only-dark)
+
+| REF. | FIELDS             | ACTIONS                                                                                               |
+|------|--------------------|-------------------------------------------------------------------------------------------------------|
+| 1️.   | Host (Required)    | Get Hostname from your Microsoft SQL Server account and add it to this field.                      |
+| 2️.   | Port (Optional)    | Specify the Port number.                                                                             |
+| 3️.   | User (Required)    | Enter the User ID to connect.                                                                       |
+| 4️.   | Password (Required)| Enter the Password to connect to the database.                                                       |
+| 5️.   | Database (Required)| Specify the database name.                                                                             |
+| 6️.   | Schema (Required)  | Define the schema within the database that should be used.                                             |
+| 7️.   | Teams (Required)   | Select one or more teams from the dropdown to associate with this datastore.                           |
+
+**Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified. 
+
+![test-connection-for-enrichment-datastore](../assets/datastores/microsoft-sql-server/test-connection-for-enrichment-datastore-light.png#only-light)
+![test-connection-for-enrichment-datastore](../assets/datastores/microsoft-sql-server/test-connection-for-enrichment-datastore-dark.png#only-dark)
+
+**Step 3:** Click on the **Finish** button to complete the configuration process. 
+
+![finish-configuration](../assets/datastores/microsoft-sql-server/finish-configuration-light.png#only-light)
+![finish-configuration](../assets/datastores/microsoft-sql-server/finish-configuration-dark.png#only-dark)
+
+When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
+
+![success-message](../assets/datastores/microsoft-sql-server/success-message-light.png#only-light)
+![success-message](../assets/datastores/microsoft-sql-server/success-message-dark.png#only-dark)
+
+**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+
+![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-dark.png#only-dark)
+
+### Option II: Use an Existing Connection
+If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+
+**Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
+
+![select-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/select-existing-enrichment-datastore-light.png#only-light)
+![select-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/select-existing-enrichment-datastore-dark.png#only-dark)
+
+| REF. | FIELDS                                    | ACTIONS                                                                                                           |
+|------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| 1️.   | Prefix (Required)                         | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore.                                        |
+| 3️.   | Enrichment Datastore                      | Select an enrichment datastore from the dropdown list.                                                            |
+
+**Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
+
+ - **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users. 
+
+ - **Host:** This is the server address where the Microsoft SQL Server instance is hosted. It is the endpoint used to connect to the Microsoft SQL Server environment. 
+
+ - **Database:** Refers to the specific database within the Microsoft SQL Server environment where the data is stored. 
+
+ - **Schema:**  The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
+
+![use-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/use-existing-enrichment-datastore-light.png#only-light)
+![use-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/use-existing-enrichment-datastore-dark.png#only-dark)
+
+**Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
+
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
+
+When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
+
+![success-message](../assets/datastores/microsoft-sql-server/success-message-light.png#only-light)
+![success-message](../assets/datastores/microsoft-sql-server/success-message-dark.png#only-dark)
+
+Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+
+![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-dark.png#only-dark)
 
 ## API Payload Examples
 
-### Creating a Datastore
+This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. 
 
-This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-#### Endpoint (Post)
+### Creating a Source Datastore
 
-`/api/datastores` _(post)_
+This section provides sample payloads for creating a Microsoft SQL Server datastore. Replace the placeholder values with actual data relevant to your setup.
 
-=== "Creating a datastore with a new connection"
+**Endpoint:** `/api/datastores (post)`
+
+=== "Create a Source Datastore with a new Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "sqlserver_database",
+        "schema": "sqlserver_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "sqlserver",
+            "host": "sqlserver_host",
+            "port": "sqlserver_port",
+            "username": "sqlserver_username",
+            "password": "sqlserver_password"
+        }
+    }
+    ```
+=== "Create a Source Datastore with an existing Connection"
     ```json
         {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "sqlserver_database",
-            "schema": "sqlserver_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "sqlserver",
-                "host": "sqlserver_host",
-                "port": "sqlserver_port",
-                "username": "sqlserver_username",
-                "password": "sqlserver_password"
-            }
-        }
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "sqlserver_database",
+        "schema": "sqlserver_schema",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
-=== "Creating a datastore with an existing connection"
-    ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "sqlserver_database",
-            "schema": "sqlserver_schema",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
-    ```
-
 ### Creating an Enrichment Datastore
 
-#### Endpoint (Post)
+This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
 
-`/api/datastores` _(post)_
+**Endpoint:**  `/api/datastores (post)`
 
-This section provides a sample payload for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
-
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ```json
         {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "sqlserver_database",
-            "schema": "sqlserver_enrichment_schema",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "sqlserver",
-                "host": "sqlserver_host",
-                "port": "sqlserver_port",
-                "username": "sqlserver_username",
-                "password": "sqlserver_password",
-            }
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "sqlserver_database",
+        "schema": "sqlserver_enrichment_schema",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "sqlserver",
+            "host": "sqlserver_host",
+            "port": "sqlserver_port",
+            "username": "sqlserver_username",
+            "password": "sqlserver_password",
         }
+    }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an Existing Connection"
     ```json
         {
             "name": "your_datastore_name",
@@ -158,10 +263,12 @@ This section provides a sample payload for creating an enrichment datastore. Rep
             "enrich_only": true,
             "connection_id": connection-id
         }
-    ``` 
+    ```
+### Link an Enrichment Datastore to a Source Datastore
+Use the provided endpoint to link an enrichment datastore to a source datastore:
 
-### Linking Datastore to an Enrichment Datastore through API
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
 
-#### Endpoint (Patch)
 
-`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_
+
+
