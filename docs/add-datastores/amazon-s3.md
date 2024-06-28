@@ -231,7 +231,6 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 | 4.   | Root Path (Required)     | Specify the root path where the data is stored. |
 | 5.   | Teams (Required)         | Select one or more teams from the dropdown to associate with this source datastore. |
 
-
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
 ![test-connection-for-enrichment-datastore](../assets/datastores/amazon-s3/test-connection-for-enrichment-datastore-light.png#only-light)

@@ -16,7 +16,9 @@ This setup guide details the process for retrieving the Account Name and Access 
 
 The Uniform Resource Identifier (URI) for Azure Datalake Storage is structured to uniquely identify resources within your storage account. The format of the URI is as follows:
 
-```abfs[s]://<file_system>@<account_name>.dfs.core.windows.net/<path>``
+```
+abfs[s]://<file_system>@<account_name>.dfs.core.windows.net/<path>
+```
 
  - `abfs[s]`: The `abfs` or `abfss` protocol is used as the scheme identifier.
  - `\<file_system>`: The parent location that holds the files and folders. This is similar to containers in the Azure Storage Blobs service.
