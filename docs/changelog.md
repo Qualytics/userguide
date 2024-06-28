@@ -27,8 +27,9 @@ hide:
 - Sorting by Anomalous Record Count
     - Added a new sorting filter in the Anomalies tabs that allows users to sort anomalies by record count, improving the manageability and analysis of detected anomalies.
 
-- Improved Tag Sorting
-    - Enhanced tag sorting across all categories by implementing a default alphabetical order, ensuring consistent organization even when sorted by other attributes.
+- Refined Tag Sorting Hierarchy:
+    - Updated the tag sorting logic to consistently apply a secondary alphabetical sort by name. This ensures that within any primary sorting category, tags will additionally be organized by name.
+
 
 #### General Fixes
 
