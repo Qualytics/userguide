@@ -8,9 +8,71 @@ By following these instructions, enterprises can ensure their Snowflake environm
 
 Let’s get started 🚀
 
+## Snowflake Setup Guide
+
+The Snowflake Setup Guide provides step-by-step instructions for configuring warehouses and roles, ensuring efficient data management and access control. It explains how to create a warehouse with minimal requirements with the setup of a default warehouse for a user. It also explains how to create custom read-only and read-write roles and grant the necessary privileges for data access and modification. 
+
+This guide is designed to help you optimize your Snowflake environment for performance and security, whether setting it up for the first time or refining your configuration.
+
+### Warehouse & Role Configuration
+
+This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimum requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
+
+#### Create a Warehouse
+
+Use the following command to create a warehouse with minimum requirements:
+
+```sql
+CREATE WAREHOUSE qualytics_wh
+WITH
+    WAREHOUSE_SIZE = 'XSMALL'
+    AUTO_SUSPEND = 60
+    AUTO_RESUME = TRUE;
+```
+
+Set a specific warehouse as the default for a user:
+
+```sql
+ALTER USER <username> SET DEFAULT_WAREHOUSE = qualytics_wh;
+```
+
+#### Source Datastore Privileges and Permissions
+
+Create a new role called ```qualytics_read_role``` and grant it privileges:
+
+```sql
+CREATE ROLE qualytics_read_role;
+GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_read_role;
+GRANT USAGE ON DATABASE <database_name> TO ROLE qualytics_read_role;
+GRANT USAGE ON SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+GRANT SELECT ON TABLE <database_name>.<schema_name>.<table_name> TO ROLE qualytics_read_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
+GRANT ROLE qualytics_read_role TO USER <user_name>;
+```
+
+#### Enrichment Datastore Privileges and Permissions
+
+Create a new role called ```qualytics_readwrite_role``` and grant it privileges:
+
+```sql
+CREATE ROLE qualytics_readwrite_role;
+GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_readwrite_role;
+GRANT USAGE, MODIFY ON DATABASE <database_name> TO ROLE qualytics_readwrite_role;
+GRANT USAGE, MODIFY ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT CREATE TABLE ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
+GRANT ROLE qualytics_readwrite_role TO USER <user_name>;
+```
+
 ## Add a Source Datastore
 
-A Source Datastore is a storage location used to connect and access data from external sources, and it can be of type JDBC or DFS. Configuring a source datastore enables Qualytics platform to access and perform operations on the data for generating valuable insights.
+A source datastore is a storage location used to connect to and access data from external sources. Snowflake is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -24,11 +86,11 @@ A Source Datastore is a storage location used to connect and access data from ex
 
 | REF. | FIELDS         | ACTIONS                                                                 |
 |------|----------------|-------------------------------------------------------------------------|
-| 1️.  | Name | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 1️.  | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
 | 2️.  | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3️.  | Connector | Select **Snowflake** from the dropdown list. |
+| 3️.  | Connector (Required) | Select **Snowflake** from the dropdown list. |
 
-### Option I: Create a New Source Datastore Connection
+### Option I: Create a Source Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -44,15 +106,15 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} | Define the account identifier to be used for accessing the Snowflake. |
-| 2️.  | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} | Specify the user role that grants appropriate access and permissions. |
-| 3️.  | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} | Provide the warehouse name that will be used for computing resources. |
-| 4️.  | User | Enter the username for Snowflake authentication. |
-| 5️.  | Password | Enter the password associated with the Snowflake user account. |
-| 6️.  | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} | Specify the database name to be accessed. |
-| 7️.  | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} | Define the schema within the database that should be used. |
-| 8️.  | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 9️.  | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1️.  | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required)| Define the account identifier to be used for accessing the Snowflake. |
+| 2️.  | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
+| 3️.  | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
+| 4️.  | User (Required) | Enter the username for Snowflake authentication. |
+| 5️.  | Password (Required) | Enter the password associated with the Snowflake user account. |
+| 6️.  | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Specify the database name to be accessed. |
+| 7️.  | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Define the schema within the database that should be used. |
+| 8️.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
+| 9️.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -69,7 +131,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/snowflake/use-existing-datastore-dark.png#only-dark)
 
 !!!note
-    If you are using existing credentials, you can only edit the details such as Database, Schema and Teams.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection**  button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
@@ -84,7 +146,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore Connection
 
-Once you have successfully tested and verified your source datastore, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
+Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -98,13 +160,13 @@ Once you have successfully tested and verified your source datastore, you have t
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1️.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
-| 3️.  | Name | Specify the name of the enrichment datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 3️.  | Name (Required) | Specify the name of the enrichment datastore. (e.g., The specified name will appear on the datastore cards.) |
 | 4️.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-| 5️.  | Connector | Select a datastore connector as **Snowflake** from the dropdown list. |
+| 5️.  | Connector (Required) | Select a datastore connector as **Snowflake** from the dropdown list. |
 
-### Option I: Create a New Enrichment Datastore Connection
+### Option I: Create an Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
@@ -115,13 +177,13 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} | Define the account identifier to be used for accessing the Snowflake. |
-| 2️.  | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} | Specify the user role that grants appropriate access and permissions. |
-| 3️.  | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} | Provide the warehouse name that will be used for computing resources. |
-| 4️.  | User | Enter the username for Snowflake authentication. |
-| 5️.  | Password | Enter the password associated with the Snowflake user account. |
-| 6️.  | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} | Specify the database name to be accessed. |
-| 7️.  | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"}   | Define the schema within the database that should be used. |
+| 1️.  | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. |
+| 2️.  | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
+| 3️.  | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required) | Provide the warehouse name that will be used for computing resources. |
+| 4️.  | User (Required) | Enter the username for Snowflake authentication. |
+| 5️.  | Password (Required) | Enter the password associated with the Snowflake user account. |
+| 6️.  | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Specify the database name to be accessed. |
+| 7️.  | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required)  | Define the schema within the database that should be used. |
 | 8️.  | Teams | Select one or more teams from the dropdown to associate with this datastore. |
 
 **Step 2**: Click on the **Test Connection** button to verify the enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified.
@@ -155,7 +217,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.   | Prefix | Add a prefix name to uniquely identify tables/files for metadata. |
+| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files for metadata. |
 | 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link source datastore to an existing enrichment datastore. |
 | 3️.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
@@ -187,73 +249,18 @@ Close the success message and you will be automatically redirected to the **Sour
 ![data-operation-page](../assets/datastores/snowflake/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/snowflake/data-operation-page-dark.png#only-dark)
 
-## Warehouse & Role Configuration
-
-This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimum requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
-
-### Create a Warehouse
-
-Use the following command to create a warehouse with minimum requirements:
-
-```sql
-CREATE WAREHOUSE qualytics_wh
-WITH
-    WAREHOUSE_SIZE = 'XSMALL'
-    AUTO_SUSPEND = 60
-    AUTO_RESUME = TRUE;
-```
-
-Set a specific warehouse as the default for a user:
-
-```sql
-ALTER USER <username> SET DEFAULT_WAREHOUSE = qualytics_wh;
-```
-
-### Source Datastore Privileges and Permissions
-
-Create a new role called ```qualytics_read_role``` and grant it privileges:
-
-```sql
-CREATE ROLE qualytics_read_role;
-GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_read_role;
-GRANT USAGE ON DATABASE <database_name> TO ROLE qualytics_read_role;
-GRANT USAGE ON SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
-GRANT SELECT ON TABLE <database_name>.<schema_name>.<table_name> TO ROLE qualytics_read_role;
-GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
-GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
-GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
-GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<schema_name> TO ROLE qualytics_read_role;
-GRANT ROLE qualytics_read_role TO USER <user_name>;
-```
-
-### Enrichment Datastore Privileges and Permissions
-
-Create a new role called ```qualytics_readwrite_role``` and grant it privileges:
-
-```sql
-CREATE ROLE qualytics_readwrite_role;
-GRANT USAGE ON WAREHOUSE qualytics_wh TO ROLE qualytics_readwrite_role;
-GRANT USAGE, MODIFY ON DATABASE <database_name> TO ROLE qualytics_readwrite_role;
-GRANT USAGE, MODIFY ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT CREATE TABLE ON SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT SELECT ON FUTURE VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT SELECT ON FUTURE TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
-GRANT ROLE qualytics_readwrite_role TO USER <user_name>;
-```
 
 ## API Payload Examples
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating a Snowflake datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating a datastore with a new connection"
+=== "Create a Source Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -275,7 +282,7 @@ This section provides sample payloads for creating a Snowflake datastore. Replac
         }
     }
     ```
-=== "Creating a datastore with an existing connection"
+=== "Create a Source Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -293,7 +300,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -314,7 +321,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -326,7 +333,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ```
 
-### Link an Enrichment Datastore to a Source Datastore through API
+### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

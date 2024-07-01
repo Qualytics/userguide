@@ -10,7 +10,7 @@ Let’s get started 🚀
 
 ## Add a Source Datastore
 
-A Source Datastore is a storage location used to connect and access data from external sources, and it can be of type JDBC or DFS. Configuring a source datastore enables Qualytics platform to access and perform operations on the data for generating valuable insights.
+A source datastore is a storage location used to connect to and access data from external sources. Redshift is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -24,11 +24,11 @@ A Source Datastore is a storage location used to connect and access data from ex
 
 | REF. | FIELDS             | ACTIONS            |
 |------|--------------------|--------------------|
-| 1️. | Name | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 1️. | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
 | 2️. | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3️. | Connector | Select **Redshift** from the dropdown list. |
+| 3️. | Connector (Required) | Select **Redshift** from the dropdown list. |
 
-### Option I: Create a New Source Datastore Connection
+### Option I: Create a Source Datastore with a new Connection
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
@@ -44,14 +44,14 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 | REF. | FIELDS            | ACTIONS                                                                                         |
 |------|-------------------|-------------------------------------------------------------------------------------------------|
-| 1️.  | Host               | Get **Hostname** from your Redshift account and add it to this field.                             |
-| 2️.  | Port               | Specify the **Port** number.                                                                      |
-| 3️.  | User               | Enter the **User ID** to connect.                                                                 |
-| 4️.  | Password           | Enter the password associated with the Redshift user account.                                   |
-| 5️.  | Database           | Specify the database name.                                                                      |
-| 6️.  | Schema             | Define the schema within the database that should be used.                                      |
-| 7️.  | Teams              | Select one or more teams from the dropdown to associate with this source datastore.             |
-| 8️.  | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1️.  | Host (Required)              | Get **Hostname** from your Redshift account and add it to this field.                             |
+| 2️.  | Port (Required)              | Specify the **Port** number.                                                                      |
+| 3️.  | User (Required)              | Enter the **User** to connect.                                                                 |
+| 4️.  | Password (Required)          | Enter the password associated with the Redshift user account.                                   |
+| 5️.  | Database (Required)          | Specify the database name.                                                                      |
+| 6️.  | Schema (Required)            | Define the schema within the database that should be used.                                      |
+| 7️.  | Teams (Required)             | Select one or more teams from the dropdown to associate with this source datastore.             |
+| 8️.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -70,7 +70,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ![use-existing-datastore](../assets/datastores/redshift/use-existing-datastore-dark.png#only-dark)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Schema, and Teams.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
@@ -85,7 +85,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-Once you have successfully tested and verified your source datastore connection, you can add the enrichment datastore (recommended). This datastore is used to store the analyzed results, including any anomalies and additional metadata, in files and tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively
+Once you have successfully tested and verified your source datastore connection, you can add the enrichment datastore (recommended). The enrichment datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -105,7 +105,7 @@ Once you have successfully tested and verified your source datastore connection,
 | 4️.   | Toggle Button for using an existing connection  | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
 | 5️.   | Connector | Select a datastore connector as **Redshift** from the dropdown list. |
 
-### Option I: Create a New Enrichment Datastore Connection
+### Option I: Create an Enrichment Datastore with a new Connection
 
 If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
@@ -116,13 +116,13 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 | REF. | FIELDS    | ACTIONS                                                                                     |
 |------|-----------|---------------------------------------------------------------------------------------------|
-| 1️.   | Host      | Get **Hostname** from your Redshift account and add it to this field.                       |
-| 2️.   | Port      | Specify the **Port** number.                                                                |
-| 3️.   | User      | Enter the **User ID** to connect.                                                           |
-| 4️.   | Password  | Enter the password associated with the Redshift user account.                               |
-| 5️.   | Database  | Specify the database name to be accessed.                                                   |
-| 6️.   | Schema    | Define the schema within the database that should be used.                                  |
-| 7️.   | Teams     | Select one or more teams from the dropdown to associate with this datastore.                |
+| 1️.   | Host (Required)     | Get **Hostname** from your Redshift account and add it to this field.                       |
+| 2️.   | Port (Required)     | Specify the **Port** number.                                                                |
+| 3️.   | User (Required)     | Enter the **User** to connect.                                                           |
+| 4️.   | Password (Required) | Enter the password associated with the Redshift user account.                               |
+| 5️.   | Database (Required) | Specify the database name to be accessed.                                                   |
+| 6️.   | Schema  (Required)  | Define the schema within the database that should be used.                                  |
+| 7️.   | Teams (Required)   | Select one or more teams from the dropdown to associate with this datastore.                |
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -155,7 +155,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.  | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1️.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore. |
 | 3️.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
@@ -167,7 +167,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 - **Database**: Refers to the specific database within the Redshift environment where the data is stored.
 
-- **Schema**: The schema used in the enrichment datastore. This schema defines the structure and organization of the data within the database.
+- **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
 ![use-existing-enrichment-datastore](../assets/datastores/redshift/use-existing-enrichment-datastore-light.png#only-light)
 ![use-existing-enrichment-datastore](../assets/datastores/redshift/use-existing-enrichment-datastore-dark.png#only-dark)
@@ -191,13 +191,13 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides detailed examples of API payloads to guide you through the process of creating and managing datastores using Qualytics API. Each example includes endpoint details, sample payloads, and instructions on how to replace placeholder values with actual data relevant to your setup.
 
-### Creating a Datastore
+### Creating a Source Datastore
 
 This section provides sample payloads for creating a Redshift datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating a datastore with a new connection"
+=== "Create a Source Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -216,7 +216,7 @@ This section provides sample payloads for creating a Redshift datastore. Replace
         }
     }
     ```
-=== "Creating a datastore with an existing connection"
+=== "Create a Source Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -235,7 +235,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Creating an enrichment datastore with a new connection"
+=== "Create an Enrichment Datastore with a new Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -253,7 +253,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     }
     ```
-=== "Creating an enrichment datastore with an existing connection"
+=== "Create an Enrichment Datastore with an existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -265,7 +265,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ``` 
 
-### Link an Enrichment Datastore to a Source Datastore through API
+### Link an Enrichment Datastore to a Source Datastore
 
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
