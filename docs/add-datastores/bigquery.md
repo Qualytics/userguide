@@ -130,7 +130,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 |   3.   | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522){:target="_blank"} (Required)                 | Enter the Project ID associated with BigQuery.                                                |
 |   4.   | Dataset ID (Required)                | Enter the Dataset ID (schema name) associated with BigQuery.                                  |
 |   5.   | Teams (Required)                     | Select one or more teams from the dropdown to associate with this source datastore.            |
-|   6.   | Initial Cataloging (Optional)        | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+|   6.   | Initiate Cataloging (Optional)        | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -216,7 +216,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/bigquery/success-message-light.png#only-light)
 ![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/bigquery/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/bigquery/data-operation-page-dark.png#only-dark)

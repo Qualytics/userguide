@@ -46,7 +46,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 |--------------|----------------------|---------------------------------------------------------------------------------------------|
 | 1.       | Host (Required)             | Get **Hostname** from your DB2 account and add it to this field.                              |
 | 2.       | Port (Required)           | Specify the **Port** number.                                                                   |
-| 3.       | User (Required)             | Enter the **User ID** to connect.                                                              |
+| 3.       | User (Required)             | Enter the **User** to connect.                                                              |
 | 4.       | Password (Required)         | Enter the **password** to connect to the database.                                             |
 | 5.       | SSL Connection    | Enable the SSL connection to ensure secure communication between Qualytics and the selected datastore. |
 | 6.       | Database (Required)         | Specify the database name.                                                                   |
@@ -119,7 +119,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 |--------------|----------------|--------------------------------------------------------------------------------------------|
 | 1.       | Host        | Get **Hostname** from your DB2 account and add it to this field.                              |
 | 2.       | Port        | Specify the **Port** number.                                                                   |
-| 3.       | User         | Enter the **User ID** to connect.                                                              |
+| 3.       | User         | Enter the **User** to connect.                                                              |
 | 4.       | Password   | Enter the **password** to connect to the database.                                             |
 | 5.       | SSL Connection | Enable the SSL connection to ensure secure communication between Qualytics and the selected datastore. |
 | 6.       | Database    | Specify the database name.                                                                   |

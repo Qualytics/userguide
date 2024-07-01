@@ -100,7 +100,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 | 2️.     | Service Account Key (Required)  | Upload a JSON file that contains the credentials required for accessing the Google Cloud Storage.                  |
 | 3️.     | Root Path (Required)           | Specify the root path where the data is stored.                                                                   |
 | 4️.     | Teams (Required)               | Select one or more teams from the dropdown to associate with this source datastore.                                |
-| 5️.     | Initial Cataloging   | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 5️.     | Initiate Cataloging (Optional)   | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -186,7 +186,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/google-cloud-storage/success-message-light.png#only-light)
 ![success-message](../assets/datastores/google-cloud-storage/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/google-cloud-storage/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/google-cloud-storage/data-operation-page-dark.png#only-dark)

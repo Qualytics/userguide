@@ -46,7 +46,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 |------|-------------------|-------------------------------------------------------------------------------------------------|
 | 1️.  | Host (Required)              | Get **Hostname** from your Redshift account and add it to this field.                             |
 | 2️.  | Port (Required)              | Specify the **Port** number.                                                                      |
-| 3️.  | User (Required)              | Enter the **User ID** to connect.                                                                 |
+| 3️.  | User (Required)              | Enter the **User** to connect.                                                                 |
 | 4️.  | Password (Required)          | Enter the password associated with the Redshift user account.                                   |
 | 5️.  | Database (Required)          | Specify the database name.                                                                      |
 | 6️.  | Schema (Required)            | Define the schema within the database that should be used.                                      |
@@ -118,7 +118,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 |------|-----------|---------------------------------------------------------------------------------------------|
 | 1️.   | Host (Required)     | Get **Hostname** from your Redshift account and add it to this field.                       |
 | 2️.   | Port (Required)     | Specify the **Port** number.                                                                |
-| 3️.   | User (Required)     | Enter the **User ID** to connect.                                                           |
+| 3️.   | User (Required)     | Enter the **User** to connect.                                                           |
 | 4️.   | Password (Required) | Enter the password associated with the Redshift user account.                               |
 | 5️.   | Database (Required) | Specify the database name to be accessed.                                                   |
 | 6️.   | Schema  (Required)  | Define the schema within the database that should be used.                                  |

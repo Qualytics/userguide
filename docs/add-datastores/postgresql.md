@@ -46,12 +46,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 |------|-------------------|---------|
 | 1️.  | Host (Required) | Get **Hostname** from your PostgreSQL account and add it to this field. |
 | 2️.  | Port (Required) | Specify the **Port** number. |
-| 3️.  | User (Required)| Enter the **User ID** to connect. |
+| 3️.  | User (Required)| Enter the **User** to connect. |
 | 4️.  | Password (Required) | Enter the **password** to connect to the database. |
 | 5️.  | Database (Required) | Specify the database name. |
 | 6️.  | Schema (Required)| Define the schema within the database that should be used. |
 | 7️.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8️.  | Initial Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
+| 8️.  | Initiate Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -118,7 +118,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 |------|----------|---------|
 | 1️.   | Host (Required)| Get **Hostname** from your PostgreSQL account and add it to this field. |
 | 2️.   | Port (Required)| Specify the **Port** number. |
-| 3️.   | User (Required) | Enter the **User ID** to connect. |
+| 3️.   | User (Required) | Enter the **User** to connect. |
 | 4️.   | Password (Required)| Enter the password associated with the Snowflake user account. |
 | 5️.   | Database (Required)| Specify the database name to be accessed. |
 | 6️.   | Schema (Required)| Define the schema within the database that should be used.                                        |

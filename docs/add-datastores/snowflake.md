@@ -114,7 +114,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 | 6️.  | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Specify the database name to be accessed. |
 | 7️.  | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Define the schema within the database that should be used. |
 | 8️.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 9️.  | Initial Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 9️.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 

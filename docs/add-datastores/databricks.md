@@ -185,7 +185,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 | 4️.   | Catalog (Required)                 | Add a **Catalog** to fetch data structures and metadata from the Databricks.                    |
 | 5️.   | Database (Optional)               | Specify the database name to be accessed.                                                       |
 | 6️.   | Teams (Required)                  | Select one or more teams from the dropdown to associate with this source datastore.             |
-| 7️.   | Initial Cataloging      | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 7️.   | Initiate Cataloging (Optional)      | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 

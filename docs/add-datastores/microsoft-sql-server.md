@@ -46,12 +46,12 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 |------|----------------------------|-------------------------------------------------------------------------------------------------------------------|
 | 1️.   | Host (Required)            | Get **Hostname** from your Microsoft SQL Server account and add it to this field.                                   |
 | 2️.   | Port (Optional)            | Specify the **Port** number.                                                                                        |
-| 3️.   | User (Required)            | Enter the **User ID** to connect.                                                                                   |
+| 3️.   | User (Required)            | Enter the **User** to connect.                                                                                   |
 | 4️.   | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
 | 5️.  | Database (Required)        | Specify the database name.                                                                                        |
 | 6️.   | Schema (Required)          | Define the schema within the database that should be used.                                                         |
 | 7️.   | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
-| 8️.   | Initial Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8️.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -118,7 +118,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 |------|--------------------|-------------------------------------------------------------------------------------------------------|
 | 1️.   | Host (Required)    | Get Hostname from your Microsoft SQL Server account and add it to this field.                      |
 | 2️.   | Port (Optional)    | Specify the Port number.                                                                             |
-| 3️.   | User (Required)    | Enter the User ID to connect.                                                                       |
+| 3️.   | User (Required)    | Enter the User to connect.                                                                       |
 | 4️.   | Password (Required)| Enter the Password to connect to the database.                                                       |
 | 5️.   | Database (Required)| Specify the database name.                                                                             |
 | 6️.   | Schema (Required)  | Define the schema within the database that should be used.                                             |
@@ -139,7 +139,7 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/microsoft-sql-server/success-message-light.png#only-light)
 ![success-message](../assets/datastores/microsoft-sql-server/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/microsoft-sql-server/data-operation-page-dark.png#only-dark)
