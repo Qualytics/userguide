@@ -219,7 +219,7 @@ This section provides sample payloads for creating a Microsoft SQL Server datast
     ```
 === "Create a Source Datastore with an existing Connection"
     ```json
-        {
+    {
         "name": "your_datastore_name",
         "teams": ["Public"],
         "database": "sqlserver_database",
@@ -237,7 +237,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Create an Enrichment Datastore with a new Connection"
     ```json
-        {
+    {
         "name": "your_datastore_name",
         "teams": ["Public"],
         "database": "sqlserver_database",
@@ -255,14 +255,14 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     ```
 === "Create an Enrichment Datastore with an Existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "sqlserver_database",
-            "schema": "sqlserver_enrichment_schema",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "sqlserver_database",
+        "schema": "sqlserver_enrichment_schema",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore:
