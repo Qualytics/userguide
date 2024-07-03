@@ -5,6 +5,17 @@ hide:
 
 # Release Notes
 
+### 2024.07.03 { id=2024.07.03 }
+
+#### General Fixes
+
+- Fix Computed Field Icon Visibility
+    - Resolved an issue where the computed field icon was not being displayed in the table header.
+
+- General Fixes and Improvements
+
+# Release Notes
+
 ### 2024.06.29 { id=2024.06.29 }
 
 #### Feature Enhancements
