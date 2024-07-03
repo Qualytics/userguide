@@ -14,8 +14,6 @@ hide:
 
 - General Fixes and Improvements
 
-# Release Notes
-
 ### 2024.06.29 { id=2024.06.29 }
 
 #### Feature Enhancements
