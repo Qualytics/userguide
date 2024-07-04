@@ -5,7 +5,11 @@ hide:
 
 # Release Notes
 
-### 2024.07.03 { id=2024.07.03 }
+### 2024.07.05 { id=2024.07.05 }
+
+#### Feature Enhancements
+- Enhanced Operations Listing Performance
+    - Optimized the performance of operations listings and streamlined the display of container-related information dialogs. These enhancements include improved handling of operations responses and the addition of pagination for enhanced usability
 
 #### General Fixes
 
