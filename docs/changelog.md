@@ -5,6 +5,19 @@ hide:
 
 # Release Notes
 
+### 2024.07.05 { id=2024.07.05 }
+
+#### Feature Enhancements
+- Enhanced Operations Listing Performance
+    - Optimized the performance of operations listings and streamlined the display of container-related information dialogs. These enhancements include improved handling of operations responses and the addition of pagination for enhanced usability
+
+#### General Fixes
+
+- Fix Computed Field Icon Visibility
+    - Resolved an issue where the computed field icon was not being displayed in the table header.
+
+- General Fixes and Improvements
+
 ### 2024.06.29 { id=2024.06.29 }
 
 #### Feature Enhancements
