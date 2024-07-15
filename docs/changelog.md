@@ -5,9 +5,28 @@ hide:
 
 # Release Notes
 
+### 2024.07.15 { id=2024.07.15 }
+
+#### Feature Enhancements
+
+- Alation Data Catalog Integration
+    - We're excited to introduce integration with Alation, enabling users to synchronize and manage assets across both Qualytics and Alation.
+    - Metadata Customization:
+        - Trust Check Flags: We now support deprecation flags at both the container and field levels, ensuring users are aware of deprecated items.
+        - Data Health: Qualytics now pushes important checks to Alation's Data Health tab, providing a comprehensive view of data health at the container level.
+        - Custom Fields: Quality scores and related metadata are pushed under a new section in the Overview page of Alation. This includes quality scores, quality score factors, URLs, anomaly counts, and check counts.
+
+- Support for Never Expiration Option for Tokens
+    - Users now have the option to create tokens that never expire, providing more flexibility and control over token management.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.07.05 { id=2024.07.05 }
 
 #### Feature Enhancements
+
 - Enhanced Operations Listing Performance
     - Optimized the performance of operations listings and streamlined the display of container-related information dialogs. These enhancements include improved handling of operations responses and the addition of pagination for enhanced usability
 
