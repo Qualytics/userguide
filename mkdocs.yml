@@ -58,6 +58,7 @@ nav:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
       - Computed Tables and Files: container/overview-of-a-computed-table-and-file.md
+      - Computed Fields: container/overview-of-a-computed-field.md
       - Export Metadata: container/export-metadata.md
       - Settings:
         - Identifiers: container/overview-of-identifiers.md

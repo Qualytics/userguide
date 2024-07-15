@@ -2,7 +2,7 @@
 
 ### Definition
 
-*Asserts that the field's value is unique.*
+*Asserts that every value held by a field appears only once. If multiple fields are specified, then every combination of values of the fields should appear only once.*
 
 ### Field Scope
 
@@ -55,7 +55,7 @@
         "coverage": 1,
         "properties": null,
         "tags": [],
-        "fields": ["C_NAME", "DEATH_RATE"],
+        "fields": ["C_NAME", "C_ADDRESS"],
         "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
         "rule": "unique",
         "container_id": {container_id},
