@@ -14,6 +14,7 @@ nav:
   - Introduction: index.md
     # new page tree structure start 
   - Getting Started:
+    - onboarding.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
     - glossary.md
