@@ -12,7 +12,7 @@ hide:
 - Alation Data Catalog Integration
     - We're excited to introduce integration with Alation, enabling users to synchronize and manage assets across both Qualytics and Alation.
     - Metadata Customization:
-        - Trust Check Flags: We now support deprecation flags at both the container and field levels, ensuring users are aware of deprecated items.
+        - Trust Check Flags: We now support warning flags at both the container and field levels, ensuring users are aware of deprecated items.
         - Data Health: Qualytics now pushes important checks to Alation's Data Health tab, providing a comprehensive view of data health at the container level.
         - Custom Fields: Quality scores and related metadata are pushed under a new section in the Overview page of Alation. This includes quality scores, quality score factors, URLs, anomaly counts, and check counts.
 
