@@ -44,11 +44,12 @@ nav:
         - add-datastores/qfs.md
       - connections/overview-of-a-connection.md
     # new page tree structure end 
-    - Datastore Operations:
-      - Catalog: operations/catalog.md
-      - Profile: operations/profile.md
-      - Scan: operations/scan.md
-      - External Scan: operations/external-scan.md
+    - Data Assets:
+      - Catalog: data-assets/catalog.md
+      - Profile: data-assets/profile.md
+      - Scan: data-assets/scan.md
+      - External Scan: data-assets/external-scan.md
+      - Anomalies: data-assets/anomalies.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
@@ -115,9 +116,6 @@ nav:
         - Time Distribution Size: checks/time-distribution-size-check.md
         - Unique: checks/unique-check.md
         - User Defined Function: checks/user-defined-function-check.md
-    - Anomalies:
-      - Overview: anomalies/overview-of-an-anomaly.md
-      - Analysis: anomalies/anomaly-details.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
