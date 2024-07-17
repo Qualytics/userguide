@@ -51,6 +51,7 @@ nav:
       - Scan: data-assets/scan.md
       - External Scan: data-assets/external-scan.md
       - Anomalies: data-assets/anomalies.md
+      - Add Computed Table and Files: data-assets/add-computed-tables-and-files.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
