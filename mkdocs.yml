@@ -46,12 +46,12 @@ nav:
       - connections/overview-of-a-connection.md
     # new page tree structure end 
     - Data Assets:
-      - Catalog: data-assets/catalog.md
-      - Profile: data-assets/profile.md
-      - Scan: data-assets/scan.md
-      - External Scan: data-assets/external-scan.md
-      - Anomalies: data-assets/anomalies.md
-      - Add Computed Table and Files: data-assets/add-computed-tables-and-files.md
+      - Catalog: dataset-assets/catalog.md
+      - Profile: dataset-assets/profile.md
+      - Scan: dataset-assets/scan.md
+      - External Scan: dataset-assets/external-scan.md
+      - Anomalies: dataset-assets/anomalies.md
+      - Add Computed Table and Files: dataset-assets/add-computed-tables-and-files.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md

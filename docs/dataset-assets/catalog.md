@@ -25,8 +25,8 @@ Attribute Overrides: After the profile operation, the qualytics engine might aut
 
 While adding the datastore, tick the Initiate Cataloging checkbox to automatically perform catalog operation on the configured source datastore.
 
-![test-connection](../assets/datastores/catalog-oprtations/test-connection-light.png#only-light)
-![test-connection](../assets/datastores/catalog-operations/test-connection-dark.png#only-dark)
+![test-connection](../assets/catalog-operations/test-connection-light.png#only-light)
+![test-connection](../assets/catalog-operations/test-connection-dark.png#only-dark)
 
 
 With the automatic cataloging option turned on, you will be redirected to the datastore details page once the datastore (whether JDBC or DFS) is successfully added. You will observe the cataloging operation running automatically with the following default options:
@@ -37,8 +37,8 @@ With the automatic cataloging option turned on, you will be redirected to the da
 
 -   Include: Tables and views ✔️  
 
-![catalog-start](../assets/datastores/catalog-oprtations/catalog-start-light.png#only-light)
-![catalog-start](../assets/datastores/catalog-operations/catalog-start-dark.png#only-dark)
+![catalog-start](../assets/catalog-operations/catalog-start-light.png#only-light)
+![catalog-start](../assets/catalog-operations/catalog-start-dark.png#only-dark)
 
 ### Manual Catalog Operation
 
@@ -46,31 +46,31 @@ If automatic cataloging is disabled while adding the datastore, users can initia
 
 **Step 1**: Select a source datastore from the side menu on which you would like to perform the catalog operation.
 
-![add-source-datadtore](../assets/datastores/catalog-oprtations/add-source-datadtore-light.png#only-light)
-![add-source-datadtore](../assets/datastores/catalog-operations/add-source-datadtore-dark.png#only-dark)
+![add-source-datadtore](../assets/catalog-operations/add-source-datadtore-light.png#only-light)
+![add-source-datadtore](../assets/catalog-operations/add-source-datadtore-dark.png#only-dark)
 
 **Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the Run button under Catalog to initiate the catalog operation.
 
-![run-catalog](../assets/datastores/catalog-oprtations/run-catalog-light.png#only-light)
-![run-catalog](../assets/datastores/catalog-operations/run-catalog-dark.png#only-dark)
+![run-catalog](../assets/catalog-operations/run-catalog-light.png#only-light)
+![run-catalog](../assets/catalog-operations/run-catalog-dark.png#only-dark)
 
 A modal window will display **Operation Triggered** and you will be notified once the catalog operation is completed.  
 
 !!! note
     You will receive a notification when the catalog operation is completed.
 
-![opertaion-triggered](../assets/datastores/catalog-oprtations/opertaion-triggered-light.png#only-light)
-![opertaion-triggered](../assets/datastores/catalog-operations/opertaion-triggered-dark.png#only-dark)
+![opertaion-triggered](../assets/catalog-operations/opertaion-triggered-light.png#only-light)
+![opertaion-triggered](../assets/catalog-operations/opertaion-triggered-dark.png#only-dark)
 
 **Step 3**: Close the **Success** modal window and you will observe in the UI that the Catalog operation has been completed and it has gathered the data structures, file patterns, and corresponding metadata from your configured datastore.  
   
-![run-success](../assets/datastores/catalog-oprtations/run-success-light.png#only-light)
-![run-success](../assets/datastores/catalog-operations/run-success-dark.png#only-dark)
+![run-success](../assets/catalog-operations/run-success-light.png#only-light)
+![run-success](../assets/catalog-operations/run-success-dark.png#only-dark)
 
 Users might encounter a warning error if the schema of the datastore is empty or if the specified user for logging does not have the necessary permissions to read the objects. This ensures that proper access controls are in place and that the data structure is correctly defined.
 
-![catalog-complete](../assets/datastores/catalog-oprtations/catalog-complete-light.png#only-light)
-![catalog-complete](../assets/datastores/catalog-operations/catalog-complete-dark.png#only-dark)
+![catalog-complete](../assets/catalog-operations/catalog-complete-light.png#only-light)
+![catalog-complete](../assets/catalog-operations/catalog-complete-dark.png#only-dark)
 
 #### Custom Catalog Configuration
 
@@ -84,8 +84,8 @@ The catalog operation can be custom-configured with the following options:
 
 **Step 1**: Click on the **Run** button from the datastore details page (top-right corner) and select **Catalog** from the dropdown list.
 
-![select-catalog](../assets/datastores/catalog-oprtations/select-catalog-light.png#only-light)
-![select-catalog](../assets/datastores/catalog-operations/select-catalog-dark.png#only-dark)
+![select-catalog](../assets/catalog-operations/select-catalog-light.png#only-light)
+![select-catalog](../assets/catalog-operations/select-catalog-dark.png#only-dark)
 
 **Step 2**: When configuring the catalog operation settings, you have two options to tune:
 
@@ -93,23 +93,23 @@ The catalog operation can be custom-configured with the following options:
 
 -   **Recreate**: This option enables the recreation of any named collections that have been previously deleted in Qualytics. It is useful for restoring collections that may have been removed accidentally or need to be brought back for analysis.
 
-![catalog-operation](../assets/datastores/catalog-oprtations/catalog-operation-light.png#only-light)
-![catalog-operation](../assets/datastores/catalog-operations/catalog-operation-dark.png#only-dark)
+![catalog-operation](../assets/catalog-operations/catalog-operation-light.png#only-light)
+![catalog-operation](../assets/catalog-operations/catalog-operation-dark.png#only-dark)
 
 **Step 3**: The user can choose whether to include only tables, only views, or both in the catalog operation. This flexibility allows for more targeted metadata analysis based on the specific needs of the data management task.
 
-![include](../assets/datastores/catalog-oprtations/include-light.png#only-light)
-![include](../assets/datastores/catalog-operations/include-dark.png#only-dark)
+![include](../assets/catalog-operations/include-light.png#only-light)
+![include](../assets/catalog-operations/include-dark.png#only-dark)
 
 **Step 4**: Click on the **Run Now** button to apply the updated operation settings and run the operation again.
 
-![run-now](../assets/datastores/catalog-oprtations/run-now-light.png#only-light)
-![run-now](../assets/datastores/catalog-operations/run-now-dark.png#only-dark)
+![run-now](../assets/catalog-operations/run-now-light.png#only-light)
+![run-now](../assets/catalog-operations/run-now-dark.png#only-dark)
 
 Once the catalog operation is triggered, your view will be automatically switched to the Activity tab, allowing you to explore post-operation details on your ongoing/completed catalog operation.
 
-![completwd-catalog](../assets/datastores/catalog-oprtations/completwd-catalog-light.png#only-light)
-![completwd-catalog](../assets/datastores/catalog-operations/completwd-catalog-dark.png#only-dark)
+![completwd-catalog](../assets/catalog-operations/completwd-catalog-light.png#only-light)
+![completwd-catalog](../assets/catalog-operations/completwd-catalog-dark.png#only-dark)
 
 ## Operations Insights
 
@@ -133,8 +133,8 @@ When the catalog operation is completed, you will receive the notification and c
 
 -   Table
 
-![activity](../assets/datastores/catalog-oprtations/activity-light.png#only-light)
-![activity](../assets/datastores/catalog-operations/activity-dark.png#only-dark)
+![activity](../assets/catalog-operations/activity-light.png#only-light)
+![activity](../assets/catalog-operations/activity-dark.png#only-dark)
 
 ### Activity Heatmap
 
@@ -143,8 +143,8 @@ The activity heatmap shown in the snippet below represents activity levels over 
 !!! tip
     You can click on any of the squares from the Activity Heatmap to filter operations
 
-![activity-calender](../assets/datastores/catalog-oprtations/activity-calender-light.png#only-light)
-![activity-calender](../assets/datastores/catalog-operations/activity-calender-dark.png#only-dark)
+![activity-calender](../assets/catalog-operations/activity-calender-light.png#only-light)
+![activity-calender](../assets/catalog-operations/activity-calender-dark.png#only-dark)
 
 ### Operation Detail
 
@@ -166,8 +166,8 @@ This status indicates that the catalog operation is still running at the moment 
 | Views          | Indicates whether the **Views** was included in the operation or not |
 | Abort          | Click on the **Abort** button to stop the catalog operation |
 
-![running-catalog](../assets/datastores/catalog-oprtations/running-catalog-light.png#only-light)
-![running-catalog](../assets/datastores/catalog-operations/running-catalog-dark.png#only-dark)
+![running-catalog](../assets/catalog-operations/running-catalog-light.png#only-light)
+![running-catalog](../assets/catalog-operations/running-catalog-dark.png#only-dark)
 
 #### Aborted
 
@@ -189,8 +189,8 @@ This status indicates that the catalog operation was manually stopped before it 
 | Rerun          | Click on the **Rerun** button to initiate the catalog operation from the beginning, ignoring any previous attempts |
 | Delete         | Click on the **Delete** button to remove the record of the catalog operation from the list |
 
-![aborted-catalog](../assets/datastores/catalog-oprtations/aborted-catalog-light.png#only-light)
-![aborted-catalog](../assets/datastores/catalog-operations/aborted-catalog-dark.png#only-dark)
+![aborted-catalog](../assets/catalog-operations/aborted-catalog-light.png#only-light)
+![aborted-catalog](../assets/catalog-operations/aborted-catalog-dark.png#only-dark)
 
 #### Warning
 
@@ -212,8 +212,8 @@ This status signals that the catalog operation encountered some issues and displ
 | Delete         | Click on the **Delete** button to remove the record of the catalog operation from the list |
 | Logs           | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Catalog Operation |
 
-![warning-catalog](../assets/datastores/catalog-oprtations/warning-catalog-light.png#only-light)
-![warning-catalog](../assets/datastores/catalog-operations/warning-catalog-dark.png#only-dark)
+![warning-catalog](../assets/catalog-operations/warning-catalog-light.png#only-light)
+![warning-catalog](../assets/catalog-operations/warning-catalog-dark.png#only-dark)
 
 ### Success
 
@@ -234,8 +234,8 @@ This status confirms that the catalog operation was completed successfully witho
 | Rerun          | Click on the **Rerun** button to initiate the catalog operation from the beginning, ignoring any previous attempts |
 | Delete         | Click on the **Delete** button to remove the record of the catalog operation from the list |
 
-![success-catalog](../assets/datastores/catalog-oprtations/success-catalog-light.png#only-light)
-![success-catalog](../assets/datastores/catalog-operations/success-catalog-dark.png#only-dark)
+![success-catalog](../assets/catalog-operations/success-catalog-light.png#only-light)
+![success-catalog](../assets/catalog-operations/success-catalog-dark.png#only-dark)
 
 ## Post-Operation Details
 
@@ -245,20 +245,20 @@ After the catalog operation is completed on a JDBC source datastore, users can v
 
 **Container Names**: These are the names of the data collections (e.g., tables, views) identified during the catalog operation.
 
-![container-names](../assets/datastores/catalog-oprtations/container-names-light.png#only-light)
-![container-names](../assets/datastores/catalog-operations/container-names-dark.png#only-dark)
+![container-names](../assets/catalog-operations/container-names-light.png#only-light)
+![container-names](../assets/catalog-operations/container-names-dark.png#only-dark)
 
 **Fields for Each Container**: Each container will display its fields or columns, which were detected during the catalog operation.
 
-![connector-field](../assets/datastores/catalog-oprtations/connector-field-light.png#only-light)
-![connector-field](../assets/datastores/catalog-operations/connector-field-dark.png#only-dark)
+![connector-field](../assets/catalog-operations/connector-field-light.png#only-light)
+![connector-field](../assets/catalog-operations/connector-field-dark.png#only-dark)
 
 **Incremental Identifiers and Partition Fields**: These settings are automatically configured based on the catalog operation. Incremental identifiers help in recognizing changes since the last scan, and partition fields aid in efficient data processing.
 
 **Tree view > Container node > Gear icon > Settings option**
 
-![table-settings](../assets/datastores/catalog-oprtations/table-settings-light.png#only-light)
-![table-settings](../assets/datastores/catalog-operations/table-settings-dark.png#only-dark)
+![table-settings](../assets/catalog-operations/table-settings-light.png#only-light)
+![table-settings](../assets/catalog-operations/table-settings-dark.png#only-dark)
 
 ### For DFS Source Datastores
 
