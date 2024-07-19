@@ -5,6 +5,22 @@ hide:
 
 # Release Notes
 
+### Release Notes - Version 2024.07.19 { id=2024.07.19 }
+
+#### Feature Enhancements
+
+- Global Search
+    - We are thrilled to introduce the “Global Search” feature into Qualytics! This enhancement is designed to streamline the search across the most crucial assets: Datastores, Containers, and Fields. It provides quick and precise search results, significantly improving navigation and user interaction.
+    - Navigation Update: To integrate the new global search bar seamlessly, we have relocated the main menu icons to the left side of the interface. This adjustment ensures a smoother user experience.
+- Teradata Connector
+    - We’ve expanded our connectivity options by supporting a new connection with Teradata. This enhancement allows users to connect and interact with Teradata databases directly from Qualytics, facilitating more diverse data management capabilities.
+- Snowflake Key-pair Authentication
+    - In our ongoing efforts to enhance security, we have implemented support for Snowflake Key-pair authentication. This new feature provides an additional layer of security for our users accessing Snowflake, ensuring that data transactions are safe and reliable.
+
+#### General Fixes
+
+- General fixes and improvements
+
 ### 2024.07.15 { id=2024.07.15 }
 
 #### Feature Enhancements
