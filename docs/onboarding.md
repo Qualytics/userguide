@@ -1,50 +1,42 @@
+# Onboarding 
+
 Qualytics is a [<u>comprehensive data quality management solution</u>](https://www.qualytics.ai/product/), designed to help enterprises proactively manage their full data quality lifecycle at scale through automated profiling, contextual data quality checks, quality rule inference, anomaly detection, remediation, tailored notifications, and more.
 
 This comprehensive document is designed to help enterprises get started with Qualytics, ensuring a smooth and efficient onboarding process.
 
 Let’s get started 🚀
 
-# **Onboarding Process**
+## Onboarding Process
 
 Qualytics onboarding begins with understanding your enterprise's requirements. Based on your data records, it offers a tailored approach to smoothly onboard you to the platform.
 
-## **1. Screening & Criteria Gathering**
+### 1. Screening & Criteria Gathering
 
 [<u>Schedule a demo</u>](https://calendly.com/gorkemsevinc/30min?month=2024-06) with us to help our team understand your enterprise data. During this session, the Qualytics team will create the plan to identify key success criteria
 and tailor the deployment to meet your specific needs, exploring relevant use cases.
 
-## **2. User Invitations**
+### 2. User Invitations
 
 Once the deployment setup is complete, Qualytics sends invitations to the provided email addresses. These invitations include instructions for accessing the platform and assigning admin or member roles based on your
 preferences. Admins have full access to configure and manage the platform, while members have access according to the permissions set by the admins.
 
-# **Deployment Options**
+### Deployment Options
 
 Qualytics offers flexible deployment options to seamlessly plug and acknowledge your data infrastructure requirements.
 
-## **1. SaaS Deployment (Default)**
+### 1. SaaS Deployment (Default)
 
 The Software as a Service (SaaS) deployment is a fully managed service hosted by Qualytics. This option provides ease of use and minimal maintenance, allowing your team to focus on data quality management without worrying about infrastructure upkeep. SaaS deployment offers rapid scalability and seamless updates, ensuring you always have access
 to the latest features and improvements.
 
-## **2. On-Premise Deployment**
+### 2. On-Premise Deployment
 
 This option is ideal for organizations that prefer to keep their data within their own data centers. By deploying Qualytics on-premise, you maintain complete control over your data and its security, ensuring compliance with internal policies and regulations.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Tip:</strong> This deployment option is recommended for customers with sensitive data</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+!!! tip
+    This deployment option is recommended for customers with sensitive data
 
-# **Frequent Asked Questions (FAQs)**
+## Frequent Asked Questions (FAQs) 
 
 **Q 1: What type of support is provided during a POC?**
 
@@ -70,14 +62,11 @@ This option is ideal for organizations that prefer to keep their data within the
 
 **A 6:** Qualytics supports two types of data stacks: modern solutions and legacy systems.
 
-- **Modern Solutions:** Qualytics supports modern data platforms to
-  > ensure robust data quality management across infrastructures. This
-  > includes solutions like Snowflake, Amazon S3, BigQuery, etc.
+- Modern Solutions
+  > Qualytics supports modern data platforms to ensure robust data quality management across infrastructures. This includes solutions like Snowflake, Amazon S3, BigQuery, etc.
 
-- **Legacy Systems:** Qualytics also integrates with legacy systems to
-  > maintain high standards of data quality across all data sources.
-  > This includes reliable and scalable relational database management
-  > systems MySQL, Microsoft SQL Server, etc.
+- Legacy Systems
+  > Qualytics also integrates with legacy systems to maintain high standards of data quality across all data sources. This includes reliable and scalable relational database management systems MySQL, Microsoft SQL Server, etc.
 
 To integrate these data stacks refer to the [<u>quick start guide</u>](https://userguide.qualytics.io/quick-start-guide/).
 
