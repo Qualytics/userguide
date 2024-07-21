@@ -13,16 +13,16 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/timescaleDB/add-datastore-light.png#only-light)
-![add-datastore](../assets/datastores/timescaleDB/add-datastore-dark.png#only-dark)
+![add-datastore](../assets/datastores/timescale-db/add-datastore-light.png#only-light)
+![add-datastore](../assets/datastores/timescale-db/add-datastore-dark.png#only-dark)
 
 **Step 2:** A modal window- Add Datastore will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/timescaleDB/select-a-connector-light.png#only-light)
-![select-a-connector](../assets/datastores/timescaleDB/select-a-connector-dark.png#only-dark)
+![select-a-connector](../assets/datastores/timescale-db/select-a-connector-light.png#only-light)
+![select-a-connector](../assets/datastores/timescale-db/select-a-connector-dark.png#only-dark)
 
 | 1.| Name | Specify the name of the datastore (e.g., The specified name eill appear on the datastore cards) |
-|---| ----------------------------------------------------------------------------------------------- |
+|---| ---------------------|---------------------|
 | 2.  | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch.|
 | 3. | Connector | Select **TimescaleDB** from the dropdown list. |
 
@@ -32,13 +32,13 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1 :** Select the **TimescaleDB** connector from the dropdown list and add connection details such as host, port, username, database, and schema.
 
-![add-datastore-credentials](../assets/datastores/timescaleDB/add-datastore-credentials-light.png#only-light)
-![add-datastore-credentials](../assets/datastores/timescaleDB/add-datastore-credentials-dark.png#only-dark)
+![add-datastore-credentials](../assets/datastores/timescale-db/add-datastore-credentials-light.png#only-light)
+![add-datastore-credentials](../assets/datastores/timescale-db/add-datastore-credentials-dark.png#only-dark)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/timescaleDB/add-datastore-credentials-explain-light.png#only-light)
-![add-datastore-credentials-explain](../assets/datastores/timescaleDB/add-datastore-credentials-explain-dark.png#only-dark)
+![add-datastore-credentials-explain](../assets/datastores/timescale-db/add-datastore-credentials-explain-light.png#only-light)
+![add-datastore-credentials-explain](../assets/datastores/timescale-db/add-datastore-credentials-explain-dark.png#only-dark)
 
 | REF.| FIELDS | ACTIONS |
 |-----|--------|---------|
@@ -53,8 +53,8 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 3 :** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/timescaleDB/test-datastore-connection-light.png#only-light)
-![test-datastore-connection](../assets/timescaleDB/test-datastore-connection-dark.png#only-dark)
+![test-datastore-connection-light](../assets/datastores/timescale-db/test-datastore-connection-light.png#only-light)
+![test-datastore-connection](../assets/datastores/timescale-db/test-datastore-connection-dark.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -64,12 +64,12 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/timescaleDB/use-exitsting-datastore-light.png#only-light)
-![use-existing-datastore](../assets/datastores/timescaleDB/use-existing-datastore-dark.png#only-dark)
+![use-existing-datastore](../assets/datastores/timescale-db/use-existing-dtastore-light.png#only-light)
+![use-existing-datastore](../assets/datastores/timescale-db/use-existing-datastore-dark.png#only-dark)
 
 **Step 2:** Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
-![test-connection-for-existing-datastore](../assets/datastores/timescaleDB/test-connection-for-existing-datastore-light.png#only-light)
-![test-connection-for-existing-datastore](../assets/datastores/timescaleDB/test-connection-for-existing-datastore-dark.png#only-dark)
+![test-connection-for-existing-datastore](../assets/datastores/timescale-db/test-connection-for-existing-datastore-light.png#only-light)
+![test-connection-for-existing-datastore](../assets/datastores/timescale-db/test-connection-for-existing-datastore-dark.png#only-dark)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -85,14 +85,15 @@ After successfully testing and verifying your source datastore connection, you h
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/timescaleDB/next-button-for-enrichment-light.png#only-light)
-![next-button-for-enrichment](../assets/datastores/timescaleDB/next-button-for-enrichment-dark.png#only-dark)
+![next-button-for-enrichment](../assets/datastores/timescale-db/next-button-for-enrichment-light.png#only-light)
+![next-button-for-enrichment](../assets/datastores/timescale-db/next-button-for-enrichment-dark.png#only-dark)
 
 **Step 2:** A modal window- **“Add Enrichment Datastore”** will appear, providing you with the options to configure an **“enrichment datastore”**.
 
-![select-enrichment-connector](../assets/datastores/timescaleDB/select-enrichment-connector-light.png#only-light)
-![select-enrichment-connector](../assets/datastores/timescaleDB/select-enrichment-connector-dark.png#only-dark)
+![select-enrichment-connector](../assets/datastores/timescale-db/select-enrichment-connector-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/timescale-db/select-enrichment-connector-dark.png#only-dark)
 | REF. | FIELDS | ACTIONS |
+|------|--------|---------|
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the metadata datastore to your enrichment datastore. |
 | 2. | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore,or toggle OFF to link it to a brand new enrichment datastore. |
 | 3. | Name | Give a name for the enrichment datastore. |
@@ -105,24 +106,25 @@ Suppose the toggles for **Use an existing enrichment datastore** and **Use an ex
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/timescaleDB/enrichment-datastore-explain-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/timescaleDB/enrichment-datastore-explain-dark.png#only-dark)
+![enrichment-datastore-explain](../assets/datastores/timescale-db/enrichment-datastore-explain-light.png#only-light)
+![enrichment-datastore-explain](../assets/datastores/timescale-db/enrichment-datastore-explain-dark.png#only-dark)
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/timescaleDB/test-connection-for-enrichment-datastore-light.png#only-light)
-![test-connection-for-enrichment-datastore](../assets/datastores/timescaleDB/test-connection-for-enrichment-datastore-dark.png#only-dark)
+![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/test-connection-for-enrichment-datastore-light.png#only-light)
+![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/test-connection-for-enrichment-datastore-dark.png#only-dark)
 
 **Step 3:** Click on the **“Finish”** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/timescaleDB/finish-configuration-light.png#only-light)
-![finish-configuration](../assets/datastores/timescaleDB/finish-configuration-dark.png#only-dark)
+![finish-configuration](../assets/datastores/timescale-db/finish-configuration-light.png#only-light)
+![finish-configuration](../assets/datastores/timescale-db/finish-configuration-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
+
 **Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured source datastore.
 
-![success-message](../assets/datastores/timescaleDB/success-message-light.png#only-light)
-![success-message](../assets/datastores/timescaleDB/success-message-dark.png#only-dark)
+![success-message](../assets/datastores/timescale-db/success-message-light.png#only-light)
+![success-message](../assets/datastores/timescale-db/success-message-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
@@ -130,10 +132,11 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![select-existing-enrichment-datastore](../assets/datastores/timescaleDB/select-existing-enrichment-datastore-light.png#only-light)
-![select-existing-enrichment-datastore](../assets/datastores/timescaleDB/select-existing-enrichment-datastore-dark.png#only-dark)
+![select-existing-enrichment-datastore](../assets/datastores/timescale-db/select-existing-enrichment-datastore-light.png#only-light)
+![select-existing-enrichment-datastore](../assets/datastores/timescale-db/select-existing-enrichment-datastore-dark.png#only-dark)
 
 | REF. | FIELDS | ACTIONS |
+|------|--------|---------|
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment. |
 | 2. | Toggle Button for existing enrichment datastore | Toogle ON to link the source datastore to an existing enrichment datastore. | 
 | 3. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
@@ -145,8 +148,8 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 -   **Database:** Refers to the specific database within the TimescaleDB environment where the data is stored.
 -   **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![use-existing-enrichment-datastore](../assets/datastores/timescaleDB/use-existing-enrichment-datastore-light.png#only-light)
-![use-existing-enrichment-datastore](../assets/datastores/timescaleDB/use-existing-enrichment-datastore-dark.png#only-dark)
+![use-existing-enrichment-datastore](../assets/datastores/timescale-db/use-existing-enrichment-datastore-light.png#only-light)
+![use-existing-enrichment-datastore](../assets/datastores/timescale-db/use-existing-enrichment-datastore-dark.png#only-dark)
 
 **Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
@@ -154,13 +157,13 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![success-message](../assets/datastores/timescaleDB/success-message-light.png#only-light)
-![success-message](../assets/datastores/timescaleDB/success-message-dark.png#only-dark)
+![success-message](../assets/datastores/timescale-db/success-message-light.png#only-light)
+![success-message](../assets/datastores/timescale-db/success-message-darAk.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured 
 
-![data-operation-page](../assets/datastores/timescaleDB/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/timescaleDB/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/timescale-db/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/timescale-db/data-operation-page-dark.png#only-dark)
 
 ## API Payload Examples
 Creating a Source Datastore
@@ -187,7 +190,6 @@ This section provides a sample payload for creating a datastore. Replace the pla
             "password": "timescale_password"
         }
     }
-
     ```
  #### Option II: Creating a datastore with an existing connection
     ```json
@@ -199,8 +201,8 @@ This section provides a sample payload for creating a datastore. Replace the pla
         "enrich_only": false,
         "trigger_catalog": true,
         "connection_id": connection-id,
-    }
-```
+        }
+    ```
 ### Link Source Datastore to an Enrichment Datastore
 **Endpoint Details:** 
 ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
