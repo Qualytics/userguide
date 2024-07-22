@@ -5,7 +5,7 @@ hide:
 
 # Release Notes
 
-### Release Notes - Version 2024.07.19 { id=2024.07.19 }
+### 2024.07.19 { id=2024.07.19 }
 
 #### Feature Enhancements
 
