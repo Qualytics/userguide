@@ -14,7 +14,8 @@ An [incremental identifier](https://userguide.qualytics.io/glossary/#incremental
 
 For large data containers or partitions, a [partition identifier](https://userguide.qualytics.io/glossary/#partition-identifier) is necessary to process data efficiently. In DFS datastores, the default fields for both incremental and partition identifiers are set by the last-modified timestamp. If a partition identifier is missing, the system uses repeatable ordering candidates (order-by fields) to process containers, although this method is less efficient for handling large datasets with many rows.
 
-Attribute Overrides: After the profile operation, the qualytics engine might automatically update the containers to have partition fields and incremental fields. Those "attributes" can be manually overridden.
+!!! info
+    Attribute Overrides: After the profile operation, the qualytics engine might automatically update the containers to have partition fields and incremental fields. Those "attributes" can be manually overridden.
 
 !!! note
     Advanced users should be able to override these auto-detected selections and overwritten options should persist through subsequent Catalog Operations.
@@ -28,14 +29,13 @@ While adding the datastore, tick the Initiate Cataloging checkbox to automatical
 ![test-connection](../assets/catalog-operations/test-connection-light.png#only-light)
 ![test-connection](../assets/catalog-operations/test-connection-dark.png#only-dark)
 
-
 With the automatic cataloging option turned on, you will be redirected to the datastore details page once the datastore (whether JDBC or DFS) is successfully added. You will observe the cataloging operation running automatically with the following default options:
 
 -   Prune: Disabled ❌  
 
 -   Recreate: Disabled ❌  
 
--   Include: Tables and views ✔️  
+-   Include: Tables and views ✔️
 
 ![catalog-start](../assets/catalog-operations/catalog-start-light.png#only-light)
 ![catalog-start](../assets/catalog-operations/catalog-start-dark.png#only-dark)
@@ -46,10 +46,10 @@ If automatic cataloging is disabled while adding the datastore, users can initia
 
 **Step 1**: Select a source datastore from the side menu on which you would like to perform the catalog operation.
 
-![add-source-datadtore](../assets/catalog-operations/add-source-datadtore-light.png#only-light)
-![add-source-datadtore](../assets/catalog-operations/add-source-datadtore-dark.png#only-dark)
+![add-source-datadtore](../assets/catalog-operations/add-source-datastore-light.png#only-light)
+![add-source-datadtore](../assets/catalog-operations/add-source-datastore-dark.png#only-dark)
 
-**Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the Run button under Catalog to initiate the catalog operation.
+**Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Catalog** to initiate the catalog operation.
 
 ![run-catalog](../assets/catalog-operations/run-catalog-light.png#only-light)
 ![run-catalog](../assets/catalog-operations/run-catalog-dark.png#only-dark)
@@ -59,8 +59,8 @@ A modal window will display **Operation Triggered** and you will be notified onc
 !!! note
     You will receive a notification when the catalog operation is completed.
 
-![opertaion-triggered](../assets/catalog-operations/opertaion-triggered-light.png#only-light)
-![opertaion-triggered](../assets/catalog-operations/opertaion-triggered-dark.png#only-dark)
+![opertaion-triggered](../assets/catalog-operations/operation-triggred-light.png#only-light)
+![opertaion-triggered](../assets/catalog-operations/operation-triggred-dark.png#only-dark)
 
 **Step 3**: Close the **Success** modal window and you will observe in the UI that the Catalog operation has been completed and it has gathered the data structures, file patterns, and corresponding metadata from your configured datastore.  
   
@@ -108,8 +108,8 @@ The catalog operation can be custom-configured with the following options:
 
 Once the catalog operation is triggered, your view will be automatically switched to the Activity tab, allowing you to explore post-operation details on your ongoing/completed catalog operation.
 
-![completwd-catalog](../assets/catalog-operations/completwd-catalog-light.png#only-light)
-![completwd-catalog](../assets/catalog-operations/completwd-catalog-dark.png#only-dark)
+![completwd-catalog](../assets/catalog-operations/completed-catalog-light.png#only-light)
+![completwd-catalog](../assets/catalog-operations/completed-catalog-dark.png#only-dark)
 
 ## Operations Insights
 
@@ -117,9 +117,9 @@ When the catalog operation is completed, you will receive the notification and c
 
 ### Top Panel
 
-**1. Runs (Default View)**: Provides insights into the operations that have been performed
+**1. Runs (Default View)**: Provides insights into the operations that have been performed.
 
-**2. Schedule**: Provides insights into the [scheduled operations](https://userguide.qualytics.io/operation-automation/automated-tasks-with-cron/).
+**2. Schedule**: The Catalog operation cannot be scheduled.
 
 **3. Search**: Search any operation (including catalog) by entering the operation ID
 
@@ -285,16 +285,16 @@ To run a catalog operation, use the API payload example below and replace the pl
 **Endpoint (Post)**:  ```/api/operations/run (post)```
 
 ```json
-      {  
-        "type":"catalog",  
-        "datastore_id": datastore-id,  
-        "prune":false,  
-        "recreate":false,  
-        "include":[  
-                "table",  
-                "view"  
-                ]  
-        }
+{
+  "type": "catalog",
+  "datastore_id": "datastore-id",
+  "prune": false,
+  "recreate": false,
+  "include": [
+    "table",
+    "view"
+  ]
+}
 ```
 ### Retrieving Catalog Operation Status
 
@@ -303,38 +303,38 @@ To retrieve the catalog operation status, use the API payload example below and 
 **Endpoint (Get)**:  ```/api/operations/{id} (get)```
 
 ```json
-        {
-              "items": [
-              {
-              "id": 12345,
-              "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "type": "catalog",
-              "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "result": "success",
-              "message": null,
-              "triggered_by": "user@example.com",
-              "datastore": {
-                    "id": 54321,
-                    "name": "Datastore-Sample",
-                    "store_type": "jdbc",
-                    "type": "db_type",
-                    "enrich_only": false,
-                    "enrich_container_prefix": "_data_prefix",
-                    "favorite": false
-                },
-                "schedule": null,
-                "include": [
-                      "table",
-                      "view"
-                ],
-              "prune": false,
-              "recreate": false
-              }
-          ],
-          "total": 1,
-          "page": 1,
-          "size": 50,
-          "pages": 1
-        }
+{
+  "items": [
+    {
+      "id": 12345,
+      "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+      "type": "catalog",
+      "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+      "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+      "result": "success",
+      "message": null,
+      "triggered_by": "user@example.com",
+      "datastore": {
+        "id": 54321,
+        "name": "Datastore-Sample",
+        "store_type": "jdbc",
+        "type": "db_type",
+        "enrich_only": false,
+        "enrich_container_prefix": "_data_prefix",
+        "favorite": false
+      },
+      "schedule": null,
+      "include": [
+        "table",
+        "view"
+      ],
+      "prune": false,
+      "recreate": false
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "size": 50,
+  "pages": 1
+}
 ```
