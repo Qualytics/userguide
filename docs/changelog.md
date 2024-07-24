@@ -10,21 +10,31 @@ hide:
 #### Feature Enhancements
 
 - Introducing Event Bus for Extended Auto-Sync with Data Catalog Integrations
-  - Expanded auto-sync capabilities with the data catalog by implementing an event bus pattern.
-  - Added a prune feature for Alation Data Quality (DQ) values to delete any values that do not match important checks.
-  - Included support for a new WARNING status in the Alation Data Health tab for checks that have not been asserted yet.
+    - We are excited to expand our auto-sync capabilities with data catalog integrations by implementing an event bus pattern. This enhancement includes:
+    - Prune Feature for Alation Data Quality (DQ): Added functionality to delete any DQ values that do not meet important checks.
+    - New WARNING Status: Included support for a WARNING status in the Alation Data Health tab for checks that have not been asserted yet.
+
+- Add Autocomplete to the Notification Form
+    - Improved the notification message form by implementing autocomplete. Users can now easily include internal variables when crafting custom messages, streamlining the message creation process.
+
+- Redesign the Analytics Engine Functions
+    - We’ve redesigned the Analytics Engine functions for better usability:
+    - Function Menu: Some functions are now accessible through a menu, which displays the icon and full functionality.
+    - Restart Analytics Engine: Added a modal to alert users before proceeding with the restart. The modal informs users that the system will be unavailable for a period during the restart process.
 
 #### General Fixes
 
 - Normalize Enrichment Internal Containers
+  - To improve user recognition and differentiate between our internal tables and those in source systems, we now preserve the original case of table names.
 
-- Validation error on Field Search Result
-  - General fixes on global search.
+- Validation Error on Field Search Result
+  - Resolved the logic for cascade deletion of dependencies on containers that have been soft deleted, ensuring proper handling of related data.
 
-- Members cannot add datastore on the onboarding screen
-  - Members can no longer add Datastore in Onboarding. Only Admins can have this permission
+- Members Cannot Add Datastore on the Onboarding Screen
+  - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
 
 - General fixes and Improvements
+
 
 ### 2024.07.19 { id=2024.07.19 }
 
