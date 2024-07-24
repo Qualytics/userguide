@@ -5,6 +5,21 @@ hide:
 
 # Release Notes
 
+### 2024.07.24 { id=2024.07.24}
+
+#### General Fixes
+
+- Normalize Enrichment Internal Containers
+    - Internal enrichment table names are now preserved in their original case to ease user recognition
+
+- Validation error on Field Search Result
+    - General fixes on global search.
+
+- Members Cannot Add Datastore on the Onboarding Screen
+    - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
+
+- General Fixes and Improvements
+
 ### 2024.07.19 { id=2024.07.19 }
 
 #### Feature Enhancements
