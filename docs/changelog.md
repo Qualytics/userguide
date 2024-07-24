@@ -7,18 +7,24 @@ hide:
 
 ### 2024.07.24 { id=2024.07.24}
 
+#### Feature Enhancements
+
+- Introducing Event Bus for Extended Auto-Sync with Data Catalog Integrations
+  - Expanded auto-sync capabilities with the data catalog by implementing an event bus pattern.
+  - Added a prune feature for Alation Data Quality (DQ) values to delete any values that do not match important checks.
+  - Included support for a new WARNING status in the Alation Data Health tab for checks that have not been asserted yet.
+
 #### General Fixes
 
 - Normalize Enrichment Internal Containers
-    - Internal enrichment table names are now preserved in their original case to ease user recognition
 
 - Validation error on Field Search Result
-    - General fixes on global search.
+  - General fixes on global search.
 
-- Members Cannot Add Datastore on the Onboarding Screen
-    - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
+- Members cannot add datastore on the onboarding screen
+  - Members can no longer add Datastore in Onboarding. Only Admins can have this permission
 
-- General Fixes and Improvements
+- General fixes and Improvements
 
 ### 2024.07.19 { id=2024.07.19 }
 
