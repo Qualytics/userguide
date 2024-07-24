@@ -34,7 +34,7 @@ Let's get started! 🚀
 
 **Step 1:** Click on the **Run** button to initiate the scan operation.
 
-![run](../assets/datastore/scan/run-light.png#only-light)
+![run](../assets/datastores/scan/run-light.png#only-light)
 ![run](../assets/datastores/scan/run-dark.png#only-dark)
 
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
@@ -43,8 +43,8 @@ Let's get started! 🚀
 
 This option includes all tables or file patterns currently available for scanning in the datastore. It means that every table or file pattern recognized in your datastore will be subjected to the defined data quality checks. Use this when you want to perform a comprehensive scan covering all the available data without any exclusions.
 
-![tablefile](../assets/datastores/scan/tablefile-light.png#only-light)
-![tablefile](../assets/datastores/scan/tablefile-dark.png#only-dark)
+![all-operation](../assets/datastores/scan/all-operation-light.png#only-light)
+![all-operation](../assets/datastores/scan/all-operation-dark.png#only-dark)
 
 **2. Specific Tables/File Patterns**
 
@@ -52,10 +52,11 @@ This option allows you to manually select the individual table(s) or file patter
 
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purpoaes
 
-![specific-patterns](../assets/datastores/scan/specific-patterns.png#only-light)
-![specific-pattrens](../assets/datastores/scan/specific-patterns.png#only-dark)
+![specific](../assets/datastores/scan/specific-light.png#only-light)
+![specfic](../assets/datastores/scan/specfic-dark.png#only-dark)
 
 **Tag**
+
 This option enables you to automatically scan file patterns associated with the selected tags. Tags can be predefined or created to categorize and manage file patterns effectively.
 
 ![tag](../assets/datastores/scan/tag-light.png#only-light)
@@ -68,9 +69,6 @@ This option enables you to automatically scan file patterns associated with the 
 
 **Step 4:** Configure Read Settings, Starting Threshold (Optional), and the Record Limit.
 
-![read-setting](../assets/datastores/scan/read-setting-light.png#only-light)
-![read-setting](../assets/datastores/scan/read-setting-dark.png#only-dark)
-
 **1.Select the Read Strategy for your scan operation**.
 
 - **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation. On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources.  
@@ -80,6 +78,16 @@ This option enables you to automatically scan file patterns associated with the 
 ![incremental](../assets/datastores/scan/incremental-light.png#only-light)
 ![incremental](../assets/datastores/scan/incremental-dark.png#only-dark)
 
+
+When running an Incremental Scan for the first time, Qualytics automatically performs a full scan, saving the incremental field for subsequent runs.
+
+This ensures that the system establishes a baseline and captures all relevant data.
+
+Once the initial full scan is completed, the system intelligently uses the saved incremental field to execute future Incremental Scans efficiently, focusing only on the new or updated data since the last scan.
+
+This approach optimizes the scanning process while maintaining data quality and consistency.
+
+
 **2. Define the Starting Threshold (Optional) i.e.** - specify a minimum incremental identifier value to set a starting point for the scan.
 
 - **Greater Than Time:** This option applies only to tables with an incremental timestamp strategy. Users can specify a timestamp to scan records that were modified after this time.
@@ -88,13 +96,13 @@ This option enables you to automatically scan file patterns associated with the 
 
 **3. Define the record limit**- the maximum number of records to be scanned per table after any initial filtering.
 
-![record-limit](../assets/datastores/scan/record-limit-light.png#only-light)
-![record-limit](../assets/datastores/scan/record-limit-dark.png#only-dark)
+![record-limit-line](../assets/datastores/scan/record-limit-line-light.png#only-light)
+![record-limit-line](../assets/datastores/scan/record-limit-line-dark.png#only-dark)
 
 **Step 5:** Click on the **Next** button to Configure the **Enrichment Settings**.
 
-![enrichment](../assets/datastores/scan/enrichment-light.png#only-light)
-![enrichment](../assets/datastores/scan/enrichment-dark.png#only-dark)
+![next](../assets/datastores/scan/next-light.png#only-light)
+![next](../assets/datastores/scan/next-dark.png#only-dark)
 
 **Step 6:** Configure the **Enrichment Settings**.  
 
@@ -106,13 +114,13 @@ This option enables you to automatically scan file patterns associated with the 
 
 -   **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
 
-![overwrite](../assets/datastores/scan/overwrite-light.png#only-light)
-![overwrite](../assets/datastores/scan/overwrite-dark.png#only-dark)
+![scan-operation](../assets/datastores/scan/sacn-operation-light.png#only-light)
+![scan-operation](../assets/datastores/scan/scan-operation-dark.png#only-dark)
 
 **2. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
 
-![recordlimit](../assets/datastores/scan/record-limit-light.png#only-light)
-![recordlimit](../assets/datastores/scan/record-limit-dark.png#only-dark)
+![source-record-limit](../assets/datastores/scan/source-record-limit-light.png#only-light)
+![souce-record-limit](../assets/datastores/scan/source-record-limit-dark.png#only-dark)
 
 ## Run Instantly
 
@@ -125,8 +133,8 @@ Click on the **Run Now** button to perform the scan operation immediately.
 
 **Step 1:** Click on the **Schedule** button to configure the available schedule options for your scan operation.
 
-![schedule-button](../assets/datastores/scan/schedule-button-light.png#only-light)
-![schedule-button](../assets/datastores/scan/schedule-button-dark.png#only-dark)
+![click-schedule](../assets/datastores/scan/click-schedule-light.png#only-light)
+![click-schedule](../assets/datastores/scan/click-schedule-dark.png#only-dark)
 
 **Step 2:** Set the scheduling preferences for the profile operation.
 
@@ -150,7 +158,32 @@ Click on the **Run Now** button to perform the scan operation immediately.
 ![monthly](../assets/datastores/scan/monthly-light.png#only-light)
 ![monthly](../assets/datastores/scan/monthly-dark.png#only-dark)
 
-**5. Advanced:** This option allows for more complex and custom scheduling using Cron expressions. Enter a cron expression to define the exact times and intervals for the scan operation. Cron expressions are a powerful way to schedule tasks using a syntax that specifies the exact timing of the task. For example, a cron expression like 0 0 * * * would schedule the scan to run at midnight (00:00) every day.
+**5. Advanced:** The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for profile operations with precision.
+Cron expressions are a powerful and flexible way to schedule tasks. They use a syntax that specifies the exact timing of the task based on five fields:
+
+-   Minute (0 - 59)   
+-   Hour (0 - 23)   
+-   Day of the month (1 - 31)   
+-   Month (1 - 12)  
+-   Day of the week (0 - 6) (Sunday to Saturday)
+
+Each field can be defined using specific values, ranges, or special characters to create the desired schedule.
+
+Example: For instance, the Cron expression `0 0 * * *` schedules the profile operation to run at midnight (00:00) every day. Here’s a breakdown of this expression:
+
+-   0 (Minute) - The task will run at the 0th minute.    
+-   0 (Hour) - The task will run at the 0th hour (midnight).    
+-   *(Day of the month) - The task will run every day of the month.   
+-   *(Month) - The task will run every month.   
+-   *(Day of the week) - The task will run every day of the week.
+
+Users can define other specific schedules by adjusting the Cron expression. For example:
+
+-   0 12 * * 1-5 - Runs at 12:00 PM from Monday to Friday.   
+-   30 14 1 * * - Runs at 2:30 PM on the first day of every month.   
+-   0 22 * * 6 - Runs at 10:00 PM every Saturday.
+
+To define a custom schedule, enter the appropriate Cron expression in the "Custom Cron Schedule (UTC)" field before specifying the schedule name. This will allow for precise control over the timing of the profile operation, ensuring it runs exactly when needed according to your specific requirements.
 
 ![advanced](../assets/datastores/scan/advanced-light.png#only-light)
 ![advanced](../assets/datastores/scan/advanced-dark.png#only-dark)
@@ -177,20 +210,20 @@ If a Scan is meant to assert a check with a variable, a value for that variable 
 For example, a check might include a filter.- transaction_date == {{ checked_date }} which will be asserted against any records where transaction_date is equal to the value supplied when the Scan operation is initiated. In this case that value would be assigned by passing the following payload when calling ```/api/operations/run```
 
 ```json
-        {
-          "type": "scan",
-          "datastore_id": 42,
-          "container_names": [
-            "my_container"
-            ],
-          "incremental": true,
-          "remediation": "none",
-          "max_records_analyzed_per_partition": 0,
-          "check_variables": {
-          "checked_date": "2023-10-15"
-      },
-          "high_count_rollup_threshold": 10
-      }
+  {
+    "type": "scan",
+    "datastore_id": 42,
+   "container_names": [
+    "my_container"
+    ],
+    "incremental": true,
+    "remediation": "none",
+     "max_records_analyzed_per_partition": 0,
+    "check_variables": {
+    "checked_date": "2023-10-15"
+     },
+    "high_count_rollup_threshold": 10
+  }
 ```
 ### Operations Insights
 
@@ -199,7 +232,7 @@ When the scan operation is completed, you will receive the notification and can 
 
 **1. Runs (Default View):** Provides insights into the operations that have been performed
 
-**2. Schedule:** Provides insights into the [scheduled operations](https://userguide.qualytics.io/operation-automation/automated-tasks-with-cron/).
+**2. Schedule:** Provides insights into the [scheduled operations].
 
 **3. Search:** Search any operation (including scan) by entering the operation ID
 
@@ -211,8 +244,8 @@ When the scan operation is completed, you will receive the notification and can 
 -   Oeration Status   
 -   Table
 
-![operations](../assets/datastores/scan/operations-light.png#only-light)
-![operations](../assets/datastores/scan/operations-dark.png#only-dark)
+![activity-operation](../assets/datastores/scan/activity-operation-light.png#only-light)
+![activity-operation](../assets/datastores/scan/activity-operation-dark.png#only-dark)
 
 ## Activity Heatmap
 
@@ -231,34 +264,32 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a “running” status reflects the following details and actions:
 
-![running](../assets/datastores/scan/running-page-light.png#only-light)
-![running](../assets/datastores/scan/running-page-dark.png#only-dark)
-
-| Parameter         | Interpretation |
-|-------------------|-----------------------------------------------------|
-| Operation ID | Unique identifier  |
+| Parameter | Interpretation |
+|----------------------|-------------------------------------|
+| Operation ID | Unique identifier |
 | Operation Type | Type of operation performed (catalog, profile, or scan) |
-| Timestamp | Timestamp when the operation was started  |
+| Timestamp | Timestamp when the operation was started |
 | Progress Bar | The progress of the operation |
 | Triggered By | The author who triggered the operation |
 | Schedule | Whether the operation was scheduled or not |
-| Incremental Field | Indicates whether Incremental was enabled or disabled in the operation  |
+| Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
 | Remediation | Indicates whether Remediation was enabled or disabled in the operation |
-| Results | Provides immediate insights into any anomalies identified so far during the scan process |
-| Abort | The "Abort" button enables you to stop the ongoing scan operation |
-| Summary | The "Summary" section provides a real-time overview of the scan operation's progress. It includes key metrics such as: |
-|                   | - **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. |
-|                   | - **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. |
-|                   | - **Partitions Scanned**: The number of partitions scanned. |
-|                   | - **Records Scanned**: The total number of records that have been scanned.|
-|                   | - **Anomalies Identified**: The number of anomalies detected during the scan. |
+| Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
+| Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
+| Abort | The **Abort** button enables you to stop the ongoing scan operation. |
+| Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted.</li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
+
+![running](../assets/datastores/scan/running-light.png#only-light)
+![running](../assets/datastores/scan/running-dark.png#only-dark)
+
+
 
 ### Aborted
 
 This status indicates that the scan operation was manually stopped before it could be completed. A scan operation having an “aborted” status reflects the following details and actions:
 
-![aborted](../assets/datastores/scan/aborted-light.png#only-light)
-![aborted](../assets/datastores/scan/aborted-dark.png#only-dark)
+![aborted-operation](../assets/datastores/scan/aborted-operation-light.png#only-light)
+![aborted-operation](../assets/datastores/scan/aborted-operation-dark.png#only-dark)
 
 | Parameter | Interpretation |
 |----------------------|-------------------------------------|
@@ -275,50 +306,43 @@ This status indicates that the scan operation was manually stopped before it cou
 | Resume  | Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
 | Rerun | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
 | Delete | Removes the record of the aborted scan operation from the system. This permanently deletes all scan results and anomalies generated by the operation. This action cannot be undone. |
-| Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: |
-|                      | - **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. |
-|                      | - **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. |
-|                      | - **Partitions Scanned**: The number of partitions scanned before the operation was aborted.|
-|                      | - **Records Scanned**: The total number of records processed before the scan was stopped. |
-|                      | - **Anomalies Identified**: The number of anomalies detected during the partial scan. |
+| Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted. </li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul> |
 
 ### Warning
 
 This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a “warning” status reflects the following details and actions:
 
 ![warning](../assets/datastores/scan/warning-light.png#only-light)
-![warning](../assets/datastores/scan/warning-page-dark.png#only-dark)
+![warning](../assets/datastores/scan/warning-dark.png#only-dark)
 
-| Parameter            | Interpretation |
+| Parameter | Interpretation |
 |----------------------|-------------------------------------------|
-| Operation ID         | Unique identifier |
-| Operation Type       | Type of operation performed (catalog, profile, or scan)|
-| Timestamp            | Timestamp when the operation was started |
-| Progress Bar         | The progress of the operation |
-| Triggered By         | The author who triggered the operation |
-| Schedule             | Whether the operation was scheduled or not |
-| Incremental Field    | Indicates whether Incremental was enabled or disabled in the operation |
-| Remediation          | Indicates whether Remediation was enabled or disabled in the operation |
+| Operation ID | Unique identifier |
+| Operation Type | Type of operation performed (catalog, profile, or scan)|
+| Timestamp| Timestamp when the operation was started |
+| Progress Bar | The progress of the operation |
+| Triggered By| The author who triggered the operation |
+| Schedule | Whether the operation was scheduled or not |
+| Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
+| Remediation| Indicates whether Remediation was enabled or disabled in the operation |
 | Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
-| Results              | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
-| Resume               | Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
-| Rerun                | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
-| Delete               | Removes the record of the aborted scan operation from the system. This permanently deletes all scan results and anomalies generated by the operation. This action cannot be undone. |
-| Summary              | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: |
-|                      | - **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. |
-|                      | - **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. |
-|                      | - **Partitions Scanned**: The number of partitions scanned before the operation was aborted.|
-|                      | - **Records Scanned**: The total number of records processed before the scan was stopped.  |
-|                      | - **Anomalies Identified**: The number of anomalies detected during the partial scan. |
+| Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
+| Resume| Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
+| Rerun| The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
+| Delete | Removes the record of the aborted scan operation from the system. This permanently deletes all scan results and anomalies generated by the operation. This action cannot be undone. |
+| Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted. </li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
 
 # Post Operation Details
 
 **Step 1:** Click on any of the successful **Scan Operations** from the list and hit the Results button.
 
-![operations](../assets/datastores/scan/operations-light.png#only-light)
-![operations](../assets/datastores/scan/operations-dark.png#only-dark)
+![result-scan-operation](../assets/datastores/scan/result-scan-operation-light.png#only-light)
+![result-scan-operation](../assets/datastores/scan/result-scan-operation-dark.png#only-dark)
 
 **Step 2:** The **Scan Results** modal demonstrates the highlighted anomalies (if any) identified in your datastore with the following properties:
+
+![result](../assets/datastores/scan/result-light.png#only-light)
+![result](../assets/datastores/scan/result-dark.png#only-dark)
 
 | Ref. | Scan Properties | Description |
 |------|-----------------|------------------------|
@@ -348,16 +372,16 @@ Endpoint (Post): ```/api/operations/run (post)```
 -   **max_records_analyzed_per_partition:** null means that it will scan all records of all containers.   
 -   **Remediation:** append replicates source containers using an append-first strategy.
 ```json
-        {
-          "type":"scan",
-          "name":null,
-          "datastore_id": datastore-id,
-          "container_names":[],
-          "remediation":"append",
-          "incremental":false,
-          "max_records_analyzed_per_partition":null,
-          "enrichment_source_record_limit":10
-        }
+  {
+    "type":"scan",
+    "name":null,
+    "datastore_id": datastore-id,
+    "container_names":[],
+    "remediation":"append",
+    "incremental":false,
+    "max_records_analyzed_per_partition":null,
+    "enrichment_source_record_limit":10
+  }
 ```
 
 ### Option II: Running a scan operation of specific containers
@@ -367,15 +391,15 @@ Endpoint (Post): ```/api/operations/run (post)```
 -   **Remediation:** overwrite replicates source containers using an overwrite strategy.
 
 ```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "database": "databricks_database",
-        "schema": "databricks_catalog",
-        "enrich_only": false,
-        "trigger_catalog": true,
-        "connection_id": connection-id
-    }
+ {
+  "name": "your_datastore_name",
+  "teams": ["Public"],
+  "database": "databricks_database",
+  "schema": "databricks_catalog",
+  "enrich_only": false,
+  "trigger_catalog": true,
+  "connection_id": connection-id
+ }
 ```
 ## Scheduling scan operation of all containers
 
@@ -384,96 +408,96 @@ To schedule a scan operation, use the API payload example below and replace the 
 **Endpoint (Post):** ```/api/operations/schedule (post)```
 
 ```json  
+  {
+   "items": [
     {
-      "items": [
-        {
-              "id": 12345,
-              "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "type": "scan",
-            "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-              "result": "success",
-              "message": null,
-              "triggered_by": "user@example.com",
-            "datastore": {
-                          "id": 101,
-                          "name": "Datastore-Sample",
-                          "store_type": "jdbc",
-                          "type": "db_type",
-                          "enrich_only": false,
-                          "enrich_container_prefix": "data_prefix",
-                        "favorite": false
-                          },
-                              "schedule": null,
-                              "incremental": false,
-                              "remediation": "none",
-                              "max_records_analyzed_per_partition": -1,
-                              "greater_than_time": null,
-                              "greater_than_batch": null,
-                              "high_count_rollup_threshold": 10,
-                              "enrichment_source_record_limit": 10,
-                              "status": {
-                                        "total_containers": 2,
-                                        "containers_analyzed": 2,
-                                        "partitions_scanned": 2,
-                                        "records_processed": 28,
-                                        "anomalies_identified": 2
-                                        },
-                                      "containers": [
-                                        {
-                                          "id": 234,
-                                          "name": "Container1",
-                                          "container_type": "table",
-                                            "table_type": "table"
-                                        },
-                                        {
-                                          "id": 235,
-                                          "name": "Container2",
-                                          "container_type": "table",
-                                          "table_type": "table"
-                                        }
-                                  ],
-                                          "container_scans": [
-                                      {
-                                        "id": 456,
-                                        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                        "container": {
-                                                      "id": 235,
-                                                      "name": "Container2",
-                                                      "container_type": "table",
-                                                      "table_type": "table"
-                                                      },
-                                        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                        "records_processed": 8,
-                                        "anomaly_count": 1,
-                                        "result": "success",
-                                          "message": null
-                                          },
-                                          {
-                                          "id": 457,
-                                          "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                          "container": {
-                                          "id": 234,
-                                          "name": "Container1",
-                                          "container_type": "table",
-                                            "table_type": "table"
-                                            },
-                                          "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                          "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                                          "records_processed": 20,
-                                          "anomaly_count": 1,
-                                          "result": "success",
-                                            "message": null
-                                        }
-                                        ],
-                                        "tags": []
-                                          }
-                                          ],
-                                            "total": 1,
-                                              "page": 1,
-                                              "size": 50,
-                                              "pages": 1
-                                            }
+    "id": 12345,
+    "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+    "type": "scan",
+    "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+    "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+    "result": "success",
+    "message": null,
+    "triggered_by": "user@example.com",
+    "datastore": {
+    "id": 101,
+    "name": "Datastore-Sample",
+    "store_type": "jdbc",
+    "type": "db_type",
+    "enrich_only": false,
+    "enrich_container_prefix": "data_prefix",
+    "favorite": false
+     },
+     "schedule": null,
+     "incremental": false,
+     "remediation": "none",
+      "max_records_analyzed_per_partition": -1,
+      "greater_than_time": null,
+      "greater_than_batch": null,
+      "high_count_rollup_threshold": 10,
+     "enrichment_source_record_limit": 10,
+      "status": {
+      "total_containers": 2,
+      "containers_analyzed": 2,
+      "partitions_scanned": 2,
+      "records_processed": 28,
+       "anomalies_identified": 2
+        },
+      "containers": [
+      {
+       "id": 234,
+       "name": "Container1",
+       "container_type": "table",
+       "table_type": "table"
+      },
+      {
+        "id": 235,
+        "name": "Container2",
+        "container_type": "table",
+        "table_type": "table"
+      }
+      ],
+         "container_scans": [
+      {
+        "id": 456,
+        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+        "container": {
+        "id": 235,
+        "name": "Container2",
+        "container_type": "table",
+        "table_type": "table"
+      },
+        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+        "records_processed": 8,
+        "anomaly_count": 1,
+        "result": "success",
+        "message": null
+     },
+     {
+       "id": 457,
+       "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+       "container": {
+       "id": 234,
+       "name": "Container1",
+       "container_type": "table",
+       "table_type": "table"
+        },
+       "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+       "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+       "records_processed": 20,
+       "anomaly_count": 1,
+       "result": "success",
+       "message": null
+      }
+      ],
+        "tags": []
+      }
+       ],
+        "total": 1,
+        "page": 1,
+        "size": 50,
+        "pages": 1
+  }
 ```
 This payload is to run a scheduled scan operation every day at 00:00
