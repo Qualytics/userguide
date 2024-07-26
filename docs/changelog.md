@@ -10,30 +10,30 @@ hide:
 #### Feature Enhancements
 
 - Introducing Event Bus for Extended Auto-Sync with Data Catalog Integrations
-  - We are excited to expand our auto-sync capabilities with data catalog integrations by implementing an event bus pattern.
-  - Added functionality to delete any DQ values that do not meet important checks.
-  - Included support for a WARNING status in the Alation Data Health tab for checks that have not been asserted yet.
+    - We are excited to expand our auto-sync capabilities with data catalog integrations by implementing an event bus pattern.
+    - Added functionality to delete any DQ values that do not meet important checks.
+    - Included support for a WARNING status in the Alation Data Health tab for checks that have not been asserted yet.
 
 - Add Autocomplete to the Notification Form
-  - Improved the notification message form by implementing autocomplete. Users can now easily include internal variables when crafting custom messages, streamlining the message creation process.
+    - Improved the notification message form by implementing autocomplete. Users can now easily include internal variables when crafting custom messages, streamlining the message creation process.
 
 - Redesign the Analytics Engine Functions
-  - The functions are now accessible through a menu, which displays the icon and full functionality.
-  - Added a modal to alert users before proceeding with the restart. The modal informs users that the system will be unavailable for a period during the restart process.
+    - The functions are now accessible through a menu, which displays the icon and full functionality.
+    - Added a modal to alert users before proceeding with the restart. The modal informs users that the system will be unavailable for a period during the restart process.
 
 - Improve Qualytics metadata presentation in Alation
-  - Previously, multiple custom fields were used to persist data quality metrics measured by Qualytics. This process has been simplified by consolidating the metrics into a single rich text custom field formatted in HTML, making it easier for users to analyze the data.
+    - Previously, multiple custom fields were used to persist data quality metrics measured by Qualytics. This process has been simplified by consolidating the metrics into a single rich text custom field formatted in HTML, making it easier for users to analyze the data.
 
 #### General Fixes
 
 - Normalize Enrichment Internal Containers
-  - To improve user recognition and differentiate between our internal tables and those in source systems, we now preserve the original case of table names.
+    - To improve user recognition and differentiate between our internal tables and those in source systems, we now preserve the original case of table names.
 
 - Validation Error on Field Search Result
-  - Resolved the logic for cascade deletion of dependencies on containers that have been soft deleted, ensuring proper handling of related data.
+    - Resolved the logic for cascade deletion of dependencies on containers that have been soft deleted, ensuring proper handling of related data.
 
 - Members Cannot Add Datastore on the Onboarding Screen
-  - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
+    - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
 
 - General fixes and Improvements
 
