@@ -5,7 +5,7 @@ hide:
 
 # Release Notes
 
-### 2024.07.24 { id=2024.07.24}
+### 2024.07.26 { id=2024.07.26 }
 
 #### Feature Enhancements
 
@@ -20,6 +20,9 @@ hide:
 - Redesign the Analytics Engine Functions
   - The functions are now accessible through a menu, which displays the icon and full functionality.
   - Added a modal to alert users before proceeding with the restart. The modal informs users that the system will be unavailable for a period during the restart process.
+
+- Improve Qualytics metadata presentation in Alation
+  - Previously, multiple custom fields were used to persist data quality metrics measured by Qualytics. This process has been simplified by consolidating the metrics into a single rich text custom field formatted in HTML, making it easier for users to analyze the data.
 
 #### General Fixes
 
