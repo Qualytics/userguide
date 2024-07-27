@@ -94,7 +94,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **Snowflake** connector from the dropdown list and add the connection details such as account, role, warehouse, user, and password.
+**Step 1**: Select the **Snowflake** connector from the dropdown list and add the connection details.
 
 ![add-datastore-credentials](../assets/datastores/snowflake/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/snowflake/add-datastore-credentials-dark.png#only-dark)
@@ -102,7 +102,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
 ![add-datastore-credentials-explain](../assets/datastores/snowflake/add-datastore-credentials-explain-new-light.png#only-light)
-![add-datastore-credentials-explain](../assets/datastores/snowflake/add-datastore-credentials-explain-dark.png#only-dark)
+![add-datastore-credentials-explain](../assets/datastores/snowflake/add-datastore-credentials-explain-new-dark.png#only-dark)
 
 |  REF.  |  FIELDS | ACTIONS |
 | ------ | ------- | ------ |
@@ -127,7 +127,7 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 **Step 1**: Select a **connection** to reuse existing credentials.
 
 ![use-existing-datastore](../assets/datastores/snowflake/use-existing-datastore-new-light.png#only-light)
-![use-existing-datastore](../assets/datastores/snowflake/use-existing-datastore-dark.png#only-dark)
+![use-existing-datastore](../assets/datastores/snowflake/use-existing-datastore-new-dark.png#only-dark)
 
 !!!note
     If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Cataloging.
@@ -172,7 +172,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 **Step 1**: Add connection details for your selected **enrichment datastore** connector.
 
 ![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-connector-new-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-explain-dark.png#only-dark)
+![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-explain-new-dark.png#only-dark)
 
 |  REF.  |  FIELDS | ACTIONS |
 | ------ | ------- | ------ |
