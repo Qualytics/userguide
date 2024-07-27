@@ -105,7 +105,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 ![add-datastore-credentials-explain](../assets/datastores/snowflake/add-datastore-credentials-explain-new-dark.png#only-dark)
 
 |  REF.  |  FIELDS | ACTIONS |
-| ------ | ------- | ------ |
+| ------ | ------- | ------- |
 | 1️. | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. 
 | 2️. | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
 | 3️. | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
