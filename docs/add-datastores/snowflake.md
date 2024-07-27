@@ -84,8 +84,8 @@ A source datastore is a storage location used to connect to and access data from
 ![select-a-connector](../assets/datastores/snowflake/select-a-connector-light.png#only-light)
 ![select-a-connector](../assets/datastores/snowflake/select-a-connector-dark.png#only-dark)
 
-| REF. | FIELDS         | ACTIONS                                                                 |
-|------|----------------|-------------------------------------------------------------------------|
+| REF. | FIELDS         | ACTIONS       |
+|------|----------------|---------------|
 | 1️.  | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
 | 2️.  | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
 | 3️.  | Connector (Required) | Select **Snowflake** from the dropdown list. |
