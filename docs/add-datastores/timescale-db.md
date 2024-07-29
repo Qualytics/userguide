@@ -103,7 +103,7 @@ After successfully testing and verifying your source datastore connection, you h
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-Suppose the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off. In that case, this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
@@ -130,6 +130,9 @@ When the configuration process is finished, a modal will display a **success mes
 ### Option II: Use an Existing Connection
 
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+
+!!! note
+    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
