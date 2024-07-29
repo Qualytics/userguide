@@ -60,9 +60,6 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
-!!! note
-    By clicking on the Finish button, it will create the Datastore and skip the configuration of an Enrichment Datastore.
-
 ### Option II: Use an Existing Connection
 
 If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using the existing connection details.
@@ -89,6 +86,9 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 ## Add Enrichment Datastore
 
 Once you have successfully tested and verified your source datastore connection, you have the option to add the enrichment datastore (recommended). The enrichment datastore is used to store the analyzed results, including any anomalies and additional metadata in tables. This setup provides full visibility into your data quality, helping you manage and improve it effectively.
+
+!!! warning
+    Qualytics does not support the Oracle connector as an enrichment datastore, but you can point to a different connector.
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -117,15 +117,8 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 ![select-enrichment](../assets/datastores/oracle/select-enrichment-light.png#only-light)
 ![select-enrichment](../assets/datastores/oracle/select-enrichment-dark.png#only-dark)
 
-| REF. | FIELDS   | ACTIONS   |
-|------|----------|------------|
-| 1️.  | Host     | Get “Hostname” from your PostgreSQL account and add it to this field.  |
-| 2️.  | Port     | Specify the “Port” number. |
-| 3️.  | User     | Enter the “User ID” to connect. |
-| 4️.  | Password | Enter the password associated with the Snowflake user account.|
-| 5️.  | Database | Specify the database name to be accessed. |
-| 6️.  | Schema   | Define the schema within the database that should be used. |
-| 7️.  | Teams    | Select one or more teams from the dropdown to associate with this datastore. |
+!!! note
+    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore* has been successfully verified.
 
@@ -152,6 +145,9 @@ When the configuration process is finished, a modal will display a **success  me
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
+
+!!! note
+    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
 
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-light.png#only-light)
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-dark.png#only-dark)
