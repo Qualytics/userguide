@@ -46,7 +46,7 @@ hide:
 - Members Cannot Add Datastore on the Onboarding Screen
     - Updated permissions so that members can no longer add Datastores during the onboarding process. Only Admins now have this capability.
 
-- General fixes and Improvements
+- General Fixes and Improvements
 
 ### 2024.07.19 { id=2024.07.19 }
 
@@ -62,7 +62,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.07.15 { id=2024.07.15 }
 
@@ -269,7 +269,7 @@ hide:
 
 - Resolved a bug in Entity Resolution where the distinction constraint was only applied to entity names that differed.
   
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.05.22 { id=2024.05.22 }
 
@@ -295,7 +295,7 @@ hide:
 - Entity Resolution Anomalies:
     - Addressed an inconsistency where some Entity Resolution Checks did not return source records. Ongoing investigations and fixes have improved the reliability of finding source records for entity resolution checks across DFS and JDBC datastores.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 
 ### 2024.05.16 { id=2024.05.16 }
@@ -316,7 +316,7 @@ hide:
 - Computed File/Table Creation
     - Resolved an issue that prevented the creation of computed files/tables with the same name as previously deleted ones, even though it is a valid action.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.05.13 { id=2024.05.13}
 
@@ -325,7 +325,7 @@ hide:
 - Enhanced Quality Score Factors Computation
 	- Addressed issues in quality score calculation and its associated factors ensuring accuracy
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.05.11 { id=2024.05.11}
 
@@ -346,7 +346,7 @@ hide:
 - Fixes to JDBC Incremental Support
 	- Updated the conditional logic in the catalog operation for update tables to ensure the incremental identifier is preserved if already established.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.05.02 { id=2024.05.02}
 
@@ -366,7 +366,7 @@ hide:
 - Locked Template Field Editing:
     - Resolves an issue where selecting a new container in the check form would reset check properties, causing problems for locked templates. The fix ensures that checks derived from templates retain their properties, allowing users to modify the field_to_compare field as needed.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.04.25 { id=2024.04.25}
 
@@ -380,7 +380,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.04.23 { id=2024.04.23}
 
@@ -413,7 +413,7 @@ hide:
 - Addressed Data Preview Timeout Issues:
     - Tackled the timeout problems in the data preview feature, ensuring that data retrieval processes complete successfully within the new extended timeout limits.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.04.12 { id=2024.04.12}
 
@@ -433,7 +433,7 @@ hide:
 - Tree View Default Ordering:
     - We have updated the tree view default ordering. Datastore names are now grouped and presented in alphabetical order.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.04.06 { id=2024.04.06 }
 
@@ -470,7 +470,7 @@ hide:
 - Enhanced "Not Found" Warnings with Quick Filters:
     - Improved user guidance for Checks and Anomalies list filters by adding hints for "not found" items, suggesting users check the "all" group for unfiltered search results, clarifying navigation and search results.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.03.29 { id=2024.03.29}
 
@@ -505,7 +505,7 @@ hide:
 - Fix Notifications Loading Issue on Large Screens
     - Fixed an issue where the infinity loading feature for the user notification list was not functioning properly on large screens. The fix ensures correct triggering of infinity loading regardless of screen size, allowing all notifications to be accessed properly.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.03.15 { id=2024.03.15}
 
@@ -547,7 +547,7 @@ hide:
     - Implemented a clear distinction between non-profiled and profiled fields in the field count indicators.
     - Conducted a thorough review of the CTAs and descriptive text surrounding the Catalog, Profile, and Scan operations to improve clarity and user understanding.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.03.07 { id=2024.03.07}
 
@@ -562,7 +562,7 @@ hide:
 - Volumetric Measurements Tracking Fix:
     - Addressed a bug that prevented the recording of volumetric measurements for containers without a last modified time. This fix corrects the problem by treating last_modification_time as nullable, ensuring that containers are now accurately tracked for volumetric measurements regardless of their modification date status.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.03.05 { id=2024.03.05}
 
@@ -576,7 +576,7 @@ hide:
 - Matches Pattern Data Quality Check Handling White Space:
     - Resolved a bug in the Matches Pattern data quality check that caused white space to be ignored during training. With this fix, the system now accounts for white space during training, ensuring accurate pattern inference even with data containing significant white space. If 1% or more of the training data contains blanks, the system will derive a pattern that includes blanks as a valid value, improving data quality assessment.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.28 { id=2024.02.28 }
 
@@ -596,7 +596,7 @@ hide:
 - Template Details Page Responsiveness:
     - Addressed layout issues on the Template Details page caused by long descriptions. Adjustments ensure that the description section now accommodates larger text volumes without disrupting the page layout, maintaining a clean and accessible interface.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.23 { id=2024.02.23 }
 
@@ -619,7 +619,7 @@ hide:
 - Increased Backend Process Timeouts:
     - In response to frequent timeout issues, the backend process timeouts have been adjusted. This change aims to reduce interruptions and improve service reliability by ensuring that processes have sufficient time to complete.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.19 { id=2024.02.19 }
 
@@ -636,7 +636,7 @@ hide:
 - Resolved Parsing Errors in Expected Values Rule:
     - Fixed an issue where single quotes in the list of expected values caused parsing errors in the Analytics Engine, preventing the Expected Values rule from asserting correctly. This correction ensures values, including those with quotes or special characters, are now accurately parsed and asserted.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.17 { id=2024.02.17}
 
@@ -651,7 +651,7 @@ hide:
 - Check Validation Sampling Behavior Adjustment:
     - Fixed intermittent validation issues encountered in specific source datastore types (DB2, Microsoft SQL Server). The problem, where validation could unpredictably fail or succeed based on container size, was corrected by fine-tuning the sampling method for these technologies, leading to consistent validation performance.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.15 { id=2024.02.15}
 
@@ -686,7 +686,7 @@ hide:
 - Addressed Absence of Feedback for No-Match Field Filters on Explore Page:
     - Rectified the absence of feedback when field filters on the Explore Page yield no results, ensuring users receive a clear message indicating no items match the specified filter criteria.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.10 { id=2024.02.10}
 
@@ -710,7 +710,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.02.02 { id=2024.02.02}
 
@@ -742,7 +742,7 @@ hide:
 - Eliminating Infinite Load for Non-Admin Enrichment Editing:
     - Solved a persistent loading issue in the Enrichment form for non-admin users. Updates ensure a smoother, error-free interaction for these users, improving accessibility and functionality.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.01.30 { id=2024.01.30}
 
@@ -759,7 +759,7 @@ hide:
 - Resolved DFS Reading Issues with Special Character Headers:
     - Fixed a DFS reading issue where columns with headers containing special characters (like pipes |) adversely affected field profiling, including inaccuracies in histogram generation.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.01.26 { id=2024.01.26}
 
@@ -781,7 +781,7 @@ hide:
 
 - Performance enhancements for BigQuery and Snowflake removing the need for count operations during full table analysis
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.01.23 { id=2024.01.23}
 
@@ -807,7 +807,7 @@ hide:
 - Enabled Template Creation with Calculated Rules:
     - Resolved a limitation that prevented the creation of templates using calculated rules like 'Satisfies Expression' and 'Aggregation Comparison'. This fix expands the capabilities and flexibility of template creation.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024-01-11 { id=2024.01.11}
 
@@ -833,7 +833,7 @@ hide:
 - Correction of Group-by Field Display in Containers:
     - Resolved an issue where selected grouping fields were not appearing in the list fields of a container. This fix ensures that user-specified fields for group-by operations are correctly displayed, maintaining the integrity of data organization and analysis.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2024.01.04 { id=2024.01.04}
 
@@ -847,7 +847,7 @@ hide:
 - Containers with 'Group By' settings Leading to Erroneous Profile Operation
     - Fixed an issue affecting profile operations which included containers with 'Group By' settings. Previously, running a profile without inferring checks resulted in all fields being erroneously removed from the field list.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.20 { id=2023.12.20}
 
@@ -859,7 +859,7 @@ hide:
 - Conflict Resolution for 'anomaly_uuid' Field in Source Container:
     - Corrected a problem where source containers with a field named `anomaly_uuid` were unable to run scan operations. This fix eliminates the conflict with internal system columns, allowing for uninterrupted operation of these containers.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.14 { id=2023.12.14}
 
@@ -879,7 +879,7 @@ hide:
 - Corrected Health Page Duplication:
     - Addressed an issue on the Health Page where "Max Executors" information was being displayed twice. This duplication has been removed for clearer and more accurate reporting.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.12 { id=2023.12.12}
 
@@ -902,7 +902,7 @@ hide:
 - Source record not Available for Max Length Rule
     - Addressed a bug where the Max Length Rule was not producing source records in cases involving null values. The rule has been updated to correctly handle null values, ensuring accurate anomaly marking and data enrichment.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.08 { id=2023.12.08}
 
@@ -932,7 +932,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.05 { id=2023.12.05}
 
@@ -943,7 +943,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.12.01 { id=2023.12.01}
 
@@ -966,7 +966,7 @@ hide:
 - Histogram Field Selection Update:
     - Fixed a bug where histograms were not updating correctly when navigating to a new field. Histograms now properly reflect the data of the newly selected field.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.11.28 { id=2023.11.28}
 
@@ -1001,7 +1001,7 @@ hide:
 - Availability of Requested Tables During Operations:
     - The dialog displaying requested tables/files is now accessible immediately after an operation starts, enhancing transparency for both Profile and Scan operations.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.11.14 { id=2023.11.14}
 
@@ -1025,7 +1025,7 @@ hide:
 #### General Fixes
 
 - `isAddress` now supports defining multiple checks against the same field with different required label permutations
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.11.08 { id=2023.11.08}
 
@@ -1048,7 +1048,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.11.02 { id=2023.11.02}
 
@@ -1077,7 +1077,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.10.27 { id=2023.10.27}
 
@@ -1106,7 +1106,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.10.23 { id=2023.10.23}
 
@@ -1152,7 +1152,7 @@ hide:
 
 - Logging Adjustments:
     - Enhanced logging for catalog operations, ensuring that logs are visible and accessible even for catalogs with a warning status, facilitating improved tracking and resolution of issues.
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.10.09 { id=2023.10.09}
 
@@ -1180,7 +1180,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.10.04 { id=2023.10.04}
 
@@ -1206,7 +1206,7 @@ hide:
     - Adjusted scan duration calculations to accurately represent the actual processing time, excluding time between a failed scan and a successful retry.
 - Spark Partitioning:
     - Certain datastores may fail to properly coerce types into Spark-compatible partition column values if that column itself contains anomalous values. When this occurs, an attempt will be made to load the data without a partition column and a warning will be generated for the user.
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.29 { id=2023.09.29}
 
@@ -1235,7 +1235,7 @@ hide:
 
 - Insights Filter Consistency:
     - Fixed an inconsistency issue with the datastore filter that was affecting a couple of charts in Insights
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.21 { id=2023.09.21}
 
@@ -1258,7 +1258,7 @@ hide:
 - DFS Incremental Scans:
     - Addressed an issue that caused incremental scans to fail when no new files were detected on globs. Scans will now proceed without failure or warning in such cases.
 - Improve performance of the Containers endpoint
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.16 { id=2023.09.16}
 
@@ -1280,7 +1280,7 @@ hide:
     - Addressed an issue where the time series chart would not display data points despite having valid measurements. The core of the problem was pinpointed to how the system handled `0` values, especially when set as min and/or max thresholds.
     - Resolved inconsistencies in how undefined min/max thresholds were displayed across different comparison types. While we previously had a UI indicator displaying for some comparison types, this was missing for "Absolute Change" and "Absolute Value".
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.14 { id=2023.09.14 }
 
@@ -1305,7 +1305,7 @@ hide:
 
 - Configuring Metric Checks through the Check Form:
     - Resolved a bug where users were unable to clear optional inputs such as "min" or "max".
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.08 { id=2023.09.08 }
 
@@ -1318,7 +1318,7 @@ hide:
 
 - Incremental Scan: 
     - Resolved an issue where the scan operation would fail during the "Exists In Check" if there were no records to be processed.
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.09.07 { id=2023.09.07 }
 
@@ -1342,7 +1342,7 @@ hide:
 #### General Fixes
 
 - Addressed issues for 'Is Replica Of' failed checks in source record handling
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.08.31 { id=2023.08.31}
 
@@ -1369,7 +1369,7 @@ hide:
 
 - Check Dialog Accessibility:
     - Addressed an issue where the check dialog was not opening as expected when accessed through a direct link from the profile page.
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.08.23 { id=2023.08.23}
 
@@ -1394,7 +1394,7 @@ hide:
 - Schema Validation:
     - We've resolved an issue where the system was permitting the persistence of empty values under certain conditions for datastores and checks. This fix aims to prevent unintentional data inconsistencies, ensuring data integrity.
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 ### 2023.08.18 { id=2023.08.18}
 
@@ -1521,7 +1521,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements
+- General Fixes and Improvements
 
 
 
@@ -1784,7 +1784,7 @@ We're pleased to announce the latest update that includes enhancements to UI for
 
 #### General Fixes
 
-- General fixes and performance improvements
+- General Fixes and Performance Improvements
 
 
 ### 2023.04.07 { id=2023.04.07 }
