@@ -36,6 +36,7 @@ nav:
         - add-datastores/synapse.md
         - add-datastores/timescale-db.md
         - add-datastores/trino.md
+        - add-datastores/teradata.md
       - DFS Datastores: 
         - add-datastores/overview-of-a-dfs-datastore.md
         - add-datastores/amazon-s3.md
