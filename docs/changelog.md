@@ -10,7 +10,7 @@ hide:
 #### Feature Enhancements
 
 - Introducing Field Count to the Datastore Overview
-  - This enhancement allows users to easily view the total number of fields present in a datastore across all containers.
+    - This enhancement allows users to easily view the total number of fields present in a datastore across all containers.
 
 #### General Fixes
 
