@@ -5,6 +5,17 @@ hide:
 
 # Release Notes
 
+### Release Notes - Version 2024.07.30 { id=2024.07.30 }
+
+#### Feature Enhancements
+
+- Introducing Field Count to the Datastore Overview
+  - This enhancement allows users to easily view the total number of fields present in a datastore across all containers.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.07.26 { id=2024.07.26 }
 
 #### Feature Enhancements
