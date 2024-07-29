@@ -192,34 +192,32 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
-### Create a Source Datastore with a New Connection
-```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "schema": "schema_name",
-        "enrich_only": false,
-        "trigger_catalog": true,
-        "connection": {
-            "host": "teradata_host",
-            "port": "teradata_port",
-            "username": "teradata_user",
-            "password": "teradata_password",
-            "type": "teradata"
-            }
-    }
-```
-
-### Create a Source Datastore with an Existing Connection
-
-```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "schema": "schema_name",
-        "enrich_only": false,
-        "trigger_catalog": true,
-        "connection_id": connection_id
-    }
-```
+=== "Create a Source Datastore with a New Connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "schema": "schema_name",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection": {
+                "host": "teradata_host",
+                "port": "teradata_port",
+                "username": "teradata_user",
+                "password": "teradata_password",
+                "type": "teradata"
+                }
+        }
+    ```
+=== "Create a Source Datastore with an Existing Connection"
+    ```json
+        {
+            "name": "your_datastore_name",
+            "teams": ["Public"],
+            "schema": "schema_name",
+            "enrich_only": false,
+            "trigger_catalog": true,
+            "connection_id": connection_id
+        }
+    ```
 
