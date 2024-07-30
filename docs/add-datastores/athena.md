@@ -14,13 +14,13 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface. 
 
-![add-datastore](../assets/datastores/athena/add-source-datastore-light-1.png#only-light)
-![add-datastore](../assets/datastores/athena/add-source-datastore-dark-1.png#only-dark)
+![add-source-datastore](../assets/datastores/athena/add-source-datastore-light-1.png#only-light)
+![add-source-datastore](../assets/datastores/athena/add-source-datastore-dark-1.png#only-dark)
 
 **Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![add-datastore](../assets/datastores/athena/add-datastore-details-light-2.png#only-light)
-![add-datastore](../assets/datastores/athena/add-datastore-details-dark-2.png#only-dark)
+![add-datastore-details](../assets/datastores/athena/add-datastore-details-light-2.png#only-light)
+![add-datastore-details](../assets/datastores/athena/add-datastore-details-dark-2.png#only-dark)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -34,13 +34,13 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1**: Select the **Athena** connector from the dropdown list and add connection details such as host, port, username, password, catalog, database, etc. 
 
-![add-datastore](../assets/datastores/athena/add-source-datastore-details-light-3.png#only-light)
-![add-datastore](../assets/datastores/athena/add-source-datastore-details-dark-3.png#only-dark)
+![add-source-datastore-details](../assets/datastores/athena/add-source-datastore-details-light-3.png#only-light)
+![add-source-datastore-details](../assets/datastores/athena/add-source-datastore-details-dark-3.png#only-dark)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore](../assets/datastores/athena/add-configutre-details-light-4.png#only-light)
-![add-datastore](../assets/datastores/athena/add-configutre-details-dark-4.png#only-dark)
+![add-configutre-details](../assets/datastores/athena/add-configutre-details-light-4.png#only-light)
+![add-configutre-details](../assets/datastores/athena/add-configutre-details-dark-4.png#only-dark)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -56,8 +56,8 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![add-datastore](../assets/datastores/athena/test-source-connection-light-5.png#only-light)
-![add-datastore](../assets/datastores/athena/test-source-connection-dark-5.png#only-dark)
+![test-source-connection](../assets/datastores/athena/test-source-connection-light-5.png#only-light)
+![test-source-connection](../assets/datastores/athena/test-source-connection-dark-5.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
 
@@ -67,16 +67,16 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 **Step 1**: Select a **connection** to reuse existing credentials. 
 
-![add-datastore](../assets/datastores/athena/add-datastore-details-existing-light-6.png#only-light)
-![add-datastore](../assets/datastores/athena/add-datastore-details-existing-dark-6.png#only-dark)
+![add-datastore-details-existing](../assets/datastores/athena/add-datastore-details-existing-light-6.png#only-light)
+![add-datastore-details-existing](../assets/datastores/athena/add-datastore-details-existing-dark-6.png#only-dark)
 
 !!! note 
     If you are using existing credentials, you can only edit the details such as **Catalog**, **Database**, **Teams**, and **Initiate Cataloging**.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
-![add-datastore](../assets/datastores/athena/test-existing-enrichment-connection-light-7.png#only-light)
-![add-datastore](../assets/datastores/athena/test-existing-enrichment-connection-dark-7.png#only-dark)
+![test-existing-enrichment-connection](../assets/datastores/athena/test-existing-enrichment-connection-light-7.png#only-light)
+![test-existing-enrichment-connection](../assets/datastores/athena/test-existing-enrichment-connection-dark-7.png#only-dark)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -93,13 +93,13 @@ After successfully testing and verifying your source datastore connection, you h
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![add-datastore](../assets/datastores/athena/click-source-light-8.png#only-light)
-![add-datastore](../assets/datastores/athena/click-source-dark-8.png#only-dark)
+![click-source](../assets/datastores/athena/click-source-light-8.png#only-light)
+![click-source](../assets/datastores/athena/click-source-dark-8.png#only-dark)
 
 **Step 2**: A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.  
 
-![add-datastore](../assets/datastores/athena/enrichment-details-light-9.png#only-light)
-![add-datastore](../assets/datastores/athena/enrichment-details-dark-9.png#only-dark)
+![enrichment-details](../assets/datastores/athena/enrichment-details-light-9.png#only-light)
+![enrichment-details](../assets/datastores/athena/enrichment-details-dark-9.png#only-dark)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -118,30 +118,30 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 !!! note
     Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
 
-![add-datastore](../assets/datastores/athena/add-enrichment-details-light-10.png#only-light)
-![add-datastore](../assets/datastores/athena/add-enrichment-details-dark-10.png#only-dark)
+![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-light-10.png#only-light)
+![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-dark-10.png#only-dark)
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.     
    
-![add-datastore](../assets/datastores/athena/test-enrichment-connection-light-11.png#only-light)
-![add-datastore](../assets/datastores/athena/test-enrichment-connection-dark-11.png#only-dark)
+![test-enrichment-connection](../assets/datastores/athena/test-enrichment-connection-light-11.png#only-light)
+![test-enrichment-connection](../assets/datastores/athena/test-enrichment-connection-dark-11.png#only-dark)
 
 If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.        
 
 **Step 3**:  Click on the **Finish** button to complete the configuration process. 
 
-![add-datastore](../assets/datastores/athena/enrichment-details-finish-light-12.png#only-light)
-![add-datastore](../assets/datastores/athena/enrichment-details-finish-dark-12.png#only-dark)
+![enrichment-details-finish](../assets/datastores/athena/enrichment-details-finish-light-12.png#only-light)
+![enrichment-details-finish](../assets/datastores/athena/enrichment-details-finish-dark-12.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
-![add-datastore](../assets/datastores/athena/success-connection-light-13.png#only-light)
-![add-datastore](../assets/datastores/athena/success-connection-dark-13.png#only-dark)
+![success-connection](../assets/datastores/athena/success-connection-light-13.png#only-light)
+![success-connection](../assets/datastores/athena/success-connection-dark-13.png#only-dark)
 
 **Step 4**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![add-datastore](../assets/datastores/athena/athena-created-light-14.png#only-light)
-![add-datastore](../assets/datastores/athena/athena-created-dark-14.png#only-dark)
+![athena-created](../assets/datastores/athena/athena-created-light-14.png#only-light)
+![athena-created](../assets/datastores/athena/athena-created-dark-14.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
@@ -152,8 +152,8 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 !!! note
     Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
 
-![add-datastore](../assets/datastores/athena/add-enrichment-details-light-15.png#only-light)
-![add-datastore](../assets/datastores/athena/add-enrichment-details-dark-15.png#only-dark)
+![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-light-15.png#only-light)
+![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-dark-15.png#only-dark)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -171,23 +171,23 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 - **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![add-datastore](../assets/datastores/athena/add-existing-enrichment-light-16.png#only-light)
-![add-datastore](../assets/datastores/athena/add-existing-enrichment-dark-16.png#only-dark)
+![add-existing-enrichment](../assets/datastores/athena/add-existing-enrichment-light-16.png#only-light)
+![add-existing-enrichment](../assets/datastores/athena/add-existing-enrichment-dark-16.png#only-dark)
 
 **Step 3**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![add-datastore](../assets/datastores/athena/click-finish-light-17.png#only-light)
-![add-datastore](../assets/datastores/athena/click-finish-dark-17.png#only-dark)
+![click-finish](../assets/datastores/athena/click-finish-light-17.png#only-light)
+![click-finish](../assets/datastores/athena/click-finish-dark-17.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![add-datastore](../assets/datastores/athena/success-connection-light-18.png#only-light)
-![add-datastore](../assets/datastores/athena/success-connection-dark-18.png#only-dark)
+![success-connection](../assets/datastores/athena/success-connection-light-18.png#only-light)
+![success-connection](../assets/datastores/athena/success-connection-dark-18.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![add-datastore](../assets/datastores/athena/athena-existing-created-light-19.png#only-light)
-![add-datastore](../assets/datastores/athena/athena-existing-created-dark-19.png#only-dark)
+![athena-existing-created](../assets/datastores/athena/athena-existing-created-light-19.png#only-light)
+![athena-existing-created](../assets/datastores/athena/athena-existing-created-dark-19.png#only-dark)
 
 ## API Payload Examples
 ### Creating a Source Datastore

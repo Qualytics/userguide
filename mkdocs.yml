@@ -17,6 +17,7 @@ nav:
     - onboarding.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
+    - dashboard.md
     - glossary.md
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
