@@ -55,6 +55,7 @@ nav:
       - Scan: source-datastore/scan.md
       - External Scan: source-datastore/external-scan.md
       - Anomalies: source-datastore/anomalies.md
+      - Datastore Settings: source-datastore/datastore-settings.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
