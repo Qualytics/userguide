@@ -5,14 +5,30 @@ hide:
 
 # Release Notes
 
-### 2024.07.30 { id=2024.07.30 }
+### 2024.07.31 { id=2024.07.31 }
 
 #### Feature Enhancements
 
 - Introducing Field Count to the Datastore Overview
     - This enhancement allows users to easily view the total number of fields present in a datastore across all containers.
 
+- Search Template
+    - Added a check filter to the templates page.
+    - Added a template filter to the checks page in the datastore context and explore.
+
+- Driver Free Memory
+     - Added driver free memory information on the Health Page.
+
+- Anomalous Record Count to the Anomaly Sidebar Card
+     - Added the anomalous record count information to the anomaly sidebar card located under the Scan Results dialog.
+
 #### General Fixes
+
+- Enhanced write performance on scan operations with enrichment and relaxed hard timeouts.
+
+- Updated Azure Blob Storage connector to use TLS encrypted access by default.
+
+- Overview Tab is not refreshing asset details automatically.
 
 - General Fixes and Improvements
 
