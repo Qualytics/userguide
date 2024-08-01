@@ -48,7 +48,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 | 4. | Password | Enter the **password** to connect to the database. |
 | 5. |  Database | Specify the database name. |
 | 6. | Schema | Define the schema within the database that should be used.
-| 7. | Teams  | Select one or more teams from the dropdown to associate wit this source data store. |
+| 7. | Teams  | Select one or more teams from the dropdown to associate wit this source datastore. |
 | 8. | Initial cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and coressponding metadata. |                                                                                       
 
 **Step 3 :** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
@@ -78,10 +78,10 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
     It is recommended to click on the **Next**  button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This data store is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
 !!! note
-    Qualytics does not support TimescaleDB as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QDS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support TimescaleDB as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -132,7 +132,7 @@ When the configuration process is finished, a modal will display a **success mes
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
 
 !!! note
-    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
@@ -147,7 +147,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
 
--   **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this data store is accessible to all the users.
+-   **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users.
 -   **Host:** This is the server address where the **TimescaleDB** instance is hosted. It is the endpoint used to connect to the PostgreSQL environment.
 -   **Database:** Refers to the specific database within the TimescaleDB environment where the data is stored.
 -   **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
@@ -171,13 +171,12 @@ Close the success message and you will be automatically redirected to the **Sour
 ![data-operation-page](../assets/datastores/timescale-db/data-operation-page-dark.png#only-dark)
 
 ## API Payload Examples
-Creating a Source Datastore
-This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+
+This section provides a sample payload for creating a TimescaleDB datastore. Replace the placeholder values with actual data relevant to your setup.
 
 ***Endpoint (Post):*** ```/api/datastores (post)```
 
-#### Option I: Creating a source datastore with a new connection **source datastore**.
-
+=== "Creating a source datastore with a new connection"
     ```json
        {
         "name": "your_datastore_name",
@@ -196,8 +195,7 @@ This section provides a sample payload for creating a datastore. Replace the pla
         }
     }
     ```
-
- #### Option II: Creating a datastore with an existing connection
+=== "Creating a source datastore with an existing connection"
     ```json
         {
         "name": "your_datastore_name",
@@ -209,6 +207,7 @@ This section provides a sample payload for creating a datastore. Replace the pla
         "connection_id": connection-id,
         }
     ```
-### Link Source Datastore to an Enrichment Datastore
-**Endpoint Details:** 
-```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
+### Link an Enrichment Datastore to a Source Datastore
+Use the provided endpoint to link an enrichment datastore to a source datastore: 
+
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

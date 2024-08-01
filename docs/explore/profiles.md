@@ -15,7 +15,7 @@ This tab centralizes all your files, tables, and computed tables for easy manage
 
 * **Consolidated View:** See all profiles in one place.
 * **Search:** Quickly find specific profiles.
-* **Sort By:** Organize profiles by various criteria (e.g., name, data store, last modified).
+* **Sort By:** Organize profiles by various criteria (e.g., name, datastore, last modified).
 * **Filtering:** Narrow down profiles by datastores or tags.
 * **Card/List View:** Choose your preferred display format.
 * **Critical Data Element (CDE) Tagging:** Mark important data elements for tracking and analysis.

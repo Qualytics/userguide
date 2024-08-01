@@ -86,11 +86,11 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This data store is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
 
 !!! warning
-    Qualytics does not support the Teradata connector as an enrichment datastore, but you can point to a different connector.
+    Qualytics does not support the Teradata connector as an enrichment datastore, but you can point to a different enrichment datastore.
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -120,7 +120,7 @@ Suppose the toggles for **Use an existing enrichment datastore** and **Use an ex
 ![enrichment-details-added](../assets/datastores/teradata/enrichment-details-added-dark-10.png#only-dark)
 
 !!! note 
-    Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QDS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 2**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.        
 
@@ -149,7 +149,7 @@ When the configuration process is finished, a modal will display a **success mes
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
 
 !!! note
-    Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1**: Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
@@ -164,7 +164,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 2**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
-- **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this data store is accessible to all the users. 
+- **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users. 
 
 - **Host**: This is the server address where the **Teradata** instance is hosted. It is the endpoint used to connect to the PostgreSQL environment. 
 
@@ -192,32 +192,37 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
+***Endpoint (Post):*** ```/api/datastores (post)```
+
 === "Create a Source Datastore with a New Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "schema": "schema_name",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "host": "teradata_host",
-                "port": "teradata_port",
-                "username": "teradata_user",
-                "password": "teradata_password",
-                "type": "teradata"
-                }
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "schema": "schema_name",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "host": "teradata_host",
+            "port": "teradata_port",
+            "username": "teradata_user",
+            "password": "teradata_password",
+            "type": "teradata"
+            }
+    }
     ```
 === "Create a Source Datastore with an Existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "schema": "schema_name",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection_id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "schema": "schema_name",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection_id
+    }
     ```
+### Link an Enrichment Datastore to a Source Datastore
+Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

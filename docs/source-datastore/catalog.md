@@ -37,8 +37,8 @@ With the automatic cataloging option turned on, you will be redirected to the da
 
 -   Include: Tables and views ✔️
 
-![catalog-start](../assets/catalog-operations/catalog-start-light.png#only-light)
-![catalog-start](../assets/catalog-operations/catalog-start-dark.png#only-dark)
+![catalog](../assets/catalog-operations/catalog-light.png#only-light)
+![catalog](../assets/catalog-operations/catalog-dark.png#only-dark)
 
 ### Manual Catalog Operation
 
@@ -64,13 +64,13 @@ A modal window will display **Operation Triggered** and you will be notified onc
 
 **Step 3**: Close the **Success** modal window and you will observe in the UI that the Catalog operation has been completed and it has gathered the data structures, file patterns, and corresponding metadata from your configured datastore.  
   
-![run-success](../assets/catalog-operations/run-success-light.png#only-light)
-![run-success](../assets/catalog-operations/run-success-dark.png#only-dark)
+![file-pattern](../assets/catalog-operations/file-pattern-light.png#only-light)
+![file-pattern](../assets/catalog-operations/file-pattern-dark.png#only-dark)
 
 Users might encounter a warning error if the schema of the datastore is empty or if the specified user for logging does not have the necessary permissions to read the objects. This ensures that proper access controls are in place and that the data structure is correctly defined.
 
-![catalog-complete](../assets/catalog-operations/catalog-complete-light.png#only-light)
-![catalog-complete](../assets/catalog-operations/catalog-complete-dark.png#only-dark)
+![catalog-aborted](../assets/catalog-operations/catalog-aborted-light.png#only-light)
+![catalog-aborted](../assets/catalog-operations/catalog-aborted-dark.png#only-dark)
 
 #### Custom Catalog Configuration
 
@@ -84,8 +84,8 @@ The catalog operation can be custom-configured with the following options:
 
 **Step 1**: Click on the **Run** button from the datastore details page (top-right corner) and select **Catalog** from the dropdown list.
 
-![select-catalog](../assets/catalog-operations/select-catalog-light.png#only-light)
-![select-catalog](../assets/catalog-operations/select-catalog-dark.png#only-dark)
+![run-dropdown](../assets/catalog-operations/run-dropdown-light.png#only-light)
+![run-dropdown](../assets/catalog-operations/run-dropdown-dark.png#only-dark)
 
 **Step 2**: When configuring the catalog operation settings, you have two options to tune:
 
@@ -119,13 +119,11 @@ When the catalog operation is completed, you will receive the notification and c
 
 **1. Runs (Default View)**: Provides insights into the operations that have been performed.
 
-**2. Schedule**: The Catalog operation cannot be scheduled.
+**2. Search**: Search any operation (including catalog) by entering the operation ID
 
-**3. Search**: Search any operation (including catalog) by entering the operation ID
+**3. Sort by**: Organize the list of operations based on the **Created Date** or the **Duration**.
 
-**4. Sort by**: Organize the list of operations based on the **Created Date** or the **Duration**.
-
-**5. Filter**: Narrow down the list of operations based on:
+**4. Filter**: Narrow down the list of operations based on:
 
 -   Operation Type
 
@@ -189,8 +187,8 @@ This status indicates that the catalog operation was manually stopped before it 
 | Rerun          | Click on the **Rerun** button to initiate the catalog operation from the beginning, ignoring any previous attempts |
 | Delete         | Click on the **Delete** button to remove the record of the catalog operation from the list |
 
-![aborted-catalog](../assets/catalog-operations/aborted-catalog-light.png#only-light)
-![aborted-catalog](../assets/catalog-operations/aborted-catalog-dark.png#only-dark)
+![aborted](../assets/catalog-operations/aborted-light.png#only-light)
+![aborted](../assets/catalog-operations/aborted-dark.png#only-dark)
 
 #### Warning
 

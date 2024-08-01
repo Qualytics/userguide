@@ -51,7 +51,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 | 5.                | S3 Output Location   | Define the S3 bucket location where the output will be stored. This is specific to AWS Athena and specifies where query results are saved. |
 | 6.                | Catalog      | Enter the catalog name. In AWS Athena, this refers to the data catalog that contains database and table metadata. |
 | 7.                | Database     | Specify the database name. |
-| 8.                | Teams        | Select one or more teams from the dropdown to associate with this source data store. |
+| 8.                | Teams        | Select one or more teams from the dropdown to associate with this source datastore. |
 | 9.                | Initial Cataloging  | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
@@ -86,10 +86,10 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 ## Add Enrichment Datastore
 
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This data store is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.  
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.  
 
 !!! warning
-    Qualytics does not support the Athena connector as an enrichment datastore, but you can point to a different connector.
+    Qualytics does not support the Athena connector as an enrichment datastore, but you can point to a different enrichment datastore.
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -116,7 +116,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 **Step 1**: Add connection details for your selected **enrichment datastore** connector. 
 
 !!! note
-    Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 ![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-light-10.png#only-light)
 ![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-dark-10.png#only-dark)
@@ -150,7 +150,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 **Step 1**: Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 !!! note
-    Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different connector for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or QFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Athena as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 ![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-light-15.png#only-light)
 ![add-enrichment-details](../assets/datastores/athena/add-enrichment-details-dark-15.png#only-dark)
@@ -163,7 +163,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 2**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
-- **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this data store is accessible to all the users. 
+- **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users. 
 
 - **Host**: This is the server address where the **Athena** instance is hosted. It is the endpoint used to connect to the PostgreSQL environment. 
 
@@ -190,76 +190,79 @@ Close the success message and you will be automatically redirected to the **Sour
 ![athena-existing-created](../assets/datastores/athena/athena-existing-created-dark-19.png#only-dark)
 
 ## API Payload Examples
-### Creating a Source Datastore
 
-This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+This section provides a sample payload for creating a Athena datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint (Post)**: ```/api/datastores (post)```
 
 === "Create a Source Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "athena_catalog",
-            "schema": "athena_database",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "host": "athena_host",
-                "port": 443,
-                "username": "athena_user",
-                "password": "athena_password",
-                "parameters": { "output": "s3://<bucket_name>" },
-                "type": "athena"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "athena_catalog",
+        "schema": "athena_database",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "host": "athena_host",
+            "port": 443,
+            "username": "athena_user",
+            "password": "athena_password",
+            "parameters": { "output": "s3://<bucket_name>" },
+            "type": "athena"
         }
+    }
     ```
 === "Create a Source Datastore with an existing Connection"
     ```json 
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "athena_catalog",
-            "schema": "athena_database",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": connection_id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "athena_catalog",
+        "schema": "athena_database",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": connection_id
+    }
     ``` 
 
 ### Creating an Enrichment Datastore
+
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint**:  ```/api/datastores (post)```
 
 === "Create an Enrichment Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "athena_catalog",
-            "schema": "athena_database",
-            "enrich_only": true,
-            "connection": {
-                "host": "athena_host",
-                "port": 443,
-                "username": "athena_user",
-                "password": "athena_password",
-                "parameters": { "output": "s3://<bucket_name>" },
-                "type": "athena"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "athena_catalog",
+        "schema": "athena_database",
+        "enrich_only": true,
+        "connection": {
+            "host": "athena_host",
+            "port": 443,
+            "username": "athena_user",
+            "password": "athena_password",
+            "parameters": { "output": "s3://<bucket_name>" },
+            "type": "athena"
         }
+    }
     ```
 === "Create an Enrichment Datastore with an existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "athena_catalog",
-            "schema": "athena_database",
-            "enrich_only": true,
-            "connection": connection_id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "athena_catalog",
+        "schema": "athena_database",
+        "enrich_only": true,
+        "connection": connection_id
+    }
     ```
- 
+### Link an Enrichment Datastore to a Source Datastore
+Use the provided endpoint to link an enrichment datastore to a source datastore: 
+
+**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

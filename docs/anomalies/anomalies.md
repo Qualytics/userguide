@@ -73,7 +73,7 @@ A record anomaly identifies a single record (row) as anomalous and provides spec
 
 ### Shape Anomaly
 
-A shape anomaly identifies structural issues within a dataset at the column or schema level. It highlights broader patterns or distributions that deviate from expected norms. If a dataset is expected to have certain fields and one or more fields are missing or contain inconsistent patterns, this would be flagged as a shape anomaly.
+A shape anomaly identifies anomalous structure within the analyzed data. The simplest shape anomaly is a dataset that doesn't match the expected schema because it lacks one or more fields. Some shape anomalies only apply to a subset of the data being analyzed and can therefore produce a count of the number of rows that reflect the anomalous concern. Where that is possible, the shape anomaly's ```anomalous_record_count``` is populated.
 
 !!! note
     Sometimes, shape anomalies only affect a subset of the dataset. This means that only certain rows exhibit the structural issue, rather than the entire dataset.
@@ -526,23 +526,11 @@ For instance, if an anomaly is marked as invalid, the tolerances of the checks t
 **Example Result Response**
 
 ```json
-{
- "source_record": [
+
   {
-  "_qualytics_entity_id": 0,
-  "COLUMN_1": "VALUE 1",
-  "COLUMN_2": "VALUE 1"
-  },
-  {
-  "_qualytics_entity_id": 1234,
-  "COLUMN_1": "VALUE 2",
-  "COLUMN_2": "VALUE 2"
-  },
-  {
-  "_qualytics_entity_id": 5678
+        "source_record":"[{\"_qualytics_entity_id\":0,\"COLUMN_1\": VALUE 1,\"COLUMN_2\":\" VALUE 1\"},{\"_qualytics_entity_id\":1234,\"COLUMN_1\": VALUE 2,\"COLUMN 2\":\"VALUE 2\"},{\"_qualytics_entity_id\":5678}]",
+        "created":"2024-06-10T21:24:34.617296Z"
   }
-  ],
-  "created": "2024-06-10T21:24:34.617296Z"
-}
+
 
 ```

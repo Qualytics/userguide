@@ -125,7 +125,7 @@ Lists all the enrichment datastores at the left sidebar connected to Qualytics. 
 ![enrichment-datastore-nav](../assets/dashboard/enrichment-datastore-nav-light.png#only-light)
 ![enrichment-datastore-nav](../assets/dashboard/enrichment-datastore-nav-dark.png#only-dark)
 
-## Explore
+### Explore
 
 The Explore dashboard in Qualytics enables effective data management and analysis through several key sections:
 
