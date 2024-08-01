@@ -526,11 +526,8 @@ For instance, if an anomaly is marked as invalid, the tolerances of the checks t
 **Example Result Response**
 
 ```json
-
-  {
-        "source_record":"[{\"_qualytics_entity_id\":0,\"COLUMN_1\": VALUE 1,\"COLUMN_2\":\" VALUE 1\"},{\"_qualytics_entity_id\":1234,\"COLUMN_1\": VALUE 2,\"COLUMN 2\":\"VALUE 2\"},{\"_qualytics_entity_id\":5678}]",
-        "created":"2024-06-10T21:24:34.617296Z"
-  }
-
-
+{
+  "source_record":"[{\"_qualytics_entity_id\":0,\"COLUMN_1\": VALUE 1,\"COLUMN_2\":\" VALUE 1\"},{\"_qualytics_entity_id\":1234,\"COLUMN_1\": VALUE 2,\"COLUMN 2\":\"VALUE 2\"},{\"_qualytics_entity_id\":5678}]",
+  "created":"2024-06-10T21:24:34.617296Z"
+}
 ```

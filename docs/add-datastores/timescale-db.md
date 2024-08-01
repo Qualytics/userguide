@@ -78,10 +78,11 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
     It is recommended to click on the **Next**  button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
+
 After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
-!!! note
-    Qualytics does not support TimescaleDB as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+!!! warning
+    Qualytics does not support the TimescaleDB connector as an enrichment datastore, but you can point to a different enrichment datastore.
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
@@ -109,6 +110,9 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 ![enrichment-datastore-explain](../assets/datastores/timescale-db/enrichment-datastore-explain-light.png#only-light)
 ![enrichment-datastore-explain](../assets/datastores/timescale-db/enrichment-datastore-explain-dark.png#only-dark)
+
+!!! note
+    Qualytics does not support TimescaleDB as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -172,13 +176,15 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
+### Creating a Source Datastore
+
 This section provides a sample payload for creating a TimescaleDB datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint (Post):** ```/api/datastores (post)```
 
 === "Creating a source datastore with a new connection"
     ```json
-       {
+    {
         "name": "your_datastore_name",
         "teams": ["Public"],
         "database": "timescale_database",
@@ -197,7 +203,7 @@ This section provides a sample payload for creating a TimescaleDB datastore. Rep
     ```
 === "Creating a source datastore with an existing connection"
     ```json
-        {
+    {
         "name": "your_datastore_name",
         "teams": ["Public"],
         "database": "timescale_database",
@@ -205,7 +211,7 @@ This section provides a sample payload for creating a TimescaleDB datastore. Rep
         "enrich_only": false,
         "trigger_catalog": true,
         "connection_id": connection-id,
-        }
+    }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 
