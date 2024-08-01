@@ -19,6 +19,7 @@ is a composite reflecting the relative importance and configured weights of thes
 - **Volumetrics**: Analyzes consistency in data size and shape over time inheriting the container's volumetrics.
 - **Accuracy**: Determines the fidelity of field values to their real-world counterparts.
 
+
 ## Quality Scoring a Container
 
 A container is any structured data entity such as a table or dataframe that comprises multiple fields. Containers are
