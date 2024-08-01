@@ -1,10 +1,8 @@
-# Integrations
+# Atlan
 
 The integrations area supports the continuous synchronization of metadata between your Qualytics deployment and another system. 
 Where `Notifications` can be used to push data from Qualytics into another system after a specified event, `Integrations` establish
 an on-going two-way synchronization of data with another system.
-
-## Data Catalogs
 
 ### Atlan Integration 
 
@@ -165,7 +163,3 @@ After synchronization, Qualytics will issue Atlan `alerts` for tables where anom
 | **Quality Score Precision**    | Your data is of the expected defined resolution |
 | **Quality Score Timeliness**   | Data is available when and where you expect it |
 | **Quality Score Volumetrics**  | Data has the same size and shape across similar cycles |
-
-
-### Alation Integration
-- **Coming Soon**: Details about the integration with Alation will be added soon

@@ -140,7 +140,9 @@ nav:
             - settings/notifications/notification-services/slack.md
             - settings/notifications/notification-services/webhook.md
         - Connections: settings/connections/manage-connections.md
-        - Integrations: settings/integrations/overview-of-integrations.md
+        - Integrations: 
+          - Atlan: settings/integrations/atlan.md
+          - Alation: settings/integrations/alation.md
         - Security: settings/security/teams-and-permissions.md
         - Tokens: settings/tokens/overview-of-tokens.md
         - Health: settings/health/overview-of-health.md
