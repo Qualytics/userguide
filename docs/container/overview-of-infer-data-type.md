@@ -58,7 +58,7 @@ In some cases, you may have multiple files that share the same schema but don't 
 
 ### Explore Deeper Knowledge
 
-If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](/userguide/dfs-globbing/how-dfs-filename-globbing-works).
+If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](../dfs-globbing/how-dfs-filename-globbing-works.md).
 
 ###  Important Considerations
 

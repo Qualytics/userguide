@@ -40,7 +40,7 @@ For subsequent datastores that require the same connection parameters, you can r
 
 ## Manage Connections
 
-For managing the connections please see [Manage Connections](/userguide/settings/connections/manage-connections).
+For managing the connections please see [Manage Connections](../settings/connections/manage-connections.md/).
 
 ## Conclusion
 Using Connections optimizes datastore management by enabling the reuse of connection parameters, making the process more streamlined and organized.

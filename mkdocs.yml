@@ -14,12 +14,15 @@ nav:
   - Introduction: index.md
     # new page tree structure start 
   - Getting Started:
+    - onboarding.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
+    - dashboard.md
     - glossary.md
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
+        - add-datastores/athena.md
         - add-datastores/bigquery.md
         - add-datastores/databricks.md
         - add-datastores/db2.md
@@ -33,6 +36,7 @@ nav:
         - add-datastores/redshift.md
         - add-datastores/snowflake.md
         - add-datastores/synapse.md
+        - add-datastores/teradata.md
         - add-datastores/timescale-db.md
         - add-datastores/trino.md
       - DFS Datastores: 
@@ -44,20 +48,22 @@ nav:
         - add-datastores/qfs.md
       - connections/overview-of-a-connection.md
     # new page tree structure end 
-    - Datastore Operations:
-      - Catalog: operations/catalog.md
-      - Profile: operations/profile.md
-      - Scan: operations/scan.md
-      - External Scan: operations/external-scan.md
+    - Source Datastores:
+      - Link Enrichment: source-datastore/associate-enrichment-datastore.md
+      - Catalog: source-datastore/catalog.md
+      - Profile: source-datastore/profile.md
+      - Scan: source-datastore/scan.md
+      - External Scan: source-datastore/external-scan.md
+      - Datastore Settings: source-datastore/datastore-settings.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Add Enrichment: enrichment/enrichment-datastore-creation.md
-      - Link Enrichment: enrichment/associate-enrichment-datastore.md
+      
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
-      - Computed Tables and Files: container/overview-of-a-computed-table-and-file.md
+      - Computed Tables and Files: container/computed-tables-and-files.md
       - Computed Fields: container/overview-of-a-computed-field.md
       - Export Metadata: container/export-metadata.md
       - Settings:
@@ -117,8 +123,7 @@ nav:
         - Unique: checks/unique-check.md
         - User Defined Function: checks/user-defined-function-check.md
     - Anomalies:
-      - Overview: anomalies/overview-of-an-anomaly.md
-      - Analysis: anomalies/anomaly-details.md
+      - Anomaly Analysis: anomalies/anomalies.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
