@@ -41,13 +41,12 @@ Before setting up an Alation integration in Qualytics it is necessary to create 
 
 **Step 3:** Fill up the configuration form selecting the `Alation` integration type.
 
-![Screenshot](../../assets/integrations/qualytics-add-alation-integration-light.png#only-light)
-![Screenshot](../../assets/integrations/qualytics-add-atlan-integration-dark.png#only-dark)
+![Screenshot](../../assets/integrations/qualytics-add-alation-integration-light.png)
 
 | REF. | FIELDS                 | ACTIONS                                                                 |
 |------|------------------------|-------------------------------------------------------------------------|
 | 1️.  | Name (Required)         | Specify the name of the integration |
-| 2️.  | URL (Required)          | The Alation instance address. |
+| 2️.  | URL (Required)          | The Alation whole instance address. e.g https://`instance`.alationcloud.com |
 | 3️.  | Refresh Token (Required) | The refresh token used to reach Alation API. |
 | 4.  | User Id (Required) | The user id from which the token was generated. |
 | 5.  | Event Driven | If enabled, the integration sync will be triggered by the operations' execution (profile and scans), only impacting the operations' target assets. |
@@ -55,7 +54,7 @@ Before setting up an Alation integration in Qualytics it is necessary to create 
 
 !!!info
     To find the **User Id** navigate to **My Profile** page where the user id will appear in the URL. <br>
-    e.g (https://`instance`.alationcloud.com/app/user/`user-id`/queries)
+    e.g https://`instance`.alationcloud.com/app/user/`user-id`/queries
 
 **Step 4:** Click the **Save** button to create the Atlan integration. You will see the new integration created in Qualytics
 
@@ -90,6 +89,6 @@ The Quality Score Total, the Qualytics 8 and the count of checks and anomalies p
 
 ### Data Health
 
-In Alation, each asset has a Data Health tab which Qualytics leverages to present in a tabular manner insights of our data quality checks and their current status based on the count of anomalies per check. 
+In the Alation tables' page a tab called **Data Health** can be found which is leveraged by Qualytics to present in a tabular manner insights of our data quality checks and their current status based on the count of anomalies per check. 
 
 ![Screenshot](../../assets/integrations/alation-data-health.png)
