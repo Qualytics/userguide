@@ -8,10 +8,10 @@ This includes file systems like Hadoop Distributed File System (HDFS) or similar
 
 Qualytics supports DFS Datastores, catering to distributed file systems like:
 
-- [**Amazon S3**](../datastores/amazon-s3.md)
-- [**Google Cloud Storage**](../datastores/google-cloud-storage.md)
-- [**Windows Azure Storage Blob**](../datastores/azure-datalake-storage.md)
-- [**Azure Blob File System**](../datastores/azure-blob-storage.md)
+- [**Amazon S3**](./amazon-s3.md)
+- [**Google Cloud Storage**](./google-cloud-storage.md)
+- [**Windows Azure Storage Blob**](./azure-datalake-storage.md)
+- [**Azure Blob File System**](./azure-blob-storage.md)
 
 ## Connection Details
 
@@ -27,7 +27,7 @@ DFS Datastores support the initiation of Profile Operations, allowing users to u
 
 ## Containers Overview
 
-For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](/userguide/container/what-is-container) section in our comprehensive user guide. 
+For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../container/container.md) section in our comprehensive user guide. 
 
 This section covers topics such as container deletion, field deletion, and the initial profile of a Datastore's containers.
 
@@ -145,4 +145,4 @@ We recommend leveraging our automated tools for a seamless and error-free experi
 
 ## Explore Deeper Knowledge
 
-If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](/userguide/dfs-globbing/how-dfs-filename-globbing-works).
+If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](../dfs-globbing/how-dfs-filename-globbing-works.md).

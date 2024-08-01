@@ -77,7 +77,7 @@ Now that you have a deeper understanding of how our profiling operation works, y
 
 After the initial Profile Operation is complete, you can start a Scan Operation. By default, Qualytics initiates a `Full` Scan for the first operation. This comprehensive scan establishes a baseline for generating Quality Scores and facilitates the validation of all defined checks.
 
-As the Scan Operation progresses, you can monitor its status in real-time. If you choose, you can set up in-app [notifications](/userguide/notifications/what-is-a-notification/) to alert you when the operation is complete, whether you're currently signed in or you log back in later.
+As the Scan Operation progresses, you can monitor its status in real-time. If you choose, you can set up in-app [notifications](./settings/notifications/overview-of-a-notification.md) to alert you when the operation is complete, whether you're currently signed in or you log back in later.
 
 Upon completion of the Scan operation, you can review the following data points:
 

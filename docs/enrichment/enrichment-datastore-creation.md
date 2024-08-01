@@ -24,21 +24,21 @@ Configuring an Enrichment Datastore is a three-step process:
 
 On the following links you can see how to setup each one of them:
 
-* [Amazon S3](../../datastores/amazon-s3/#configuring-an-enrichment-datastore)
-* [Azure Blob Storage](../../datastores/azure-blob-storage/#configuring-an-enrichment-datastore)
-* [Azure Datalake Storage](../../datastores/azure-datalake-storage/#configuring-an-enrichment-datastore)
-* [BigQuery](../../datastores/bigquery/#configuring-an-enrichment-datastore)
-* [Databricks](../../datastores/databricks/#configuring-an-enrichment-datastore)
-* [Google Cloud Storage](../../datastores/google-cloud-storage/#configuring-an-enrichment-datastore)
-* [MariaDB](../../datastores/maria-db/#configuring-an-enrichment-datastore)
-* [Microsoft SQL Server](../../datastores/microsoft-sql-server/#configuring-an-enrichment-datastore)
-* [MySQL](../../datastores/mysql/#configuring-an-enrichment-datastore)
-* [Oracle](../../datastores/oracle/#configuring-an-enrichment-datastore)
-* [PostgreSQL](../../datastores/postgresql/#configuring-an-enrichment-datastore)
-* [QFS](../../datastores/qfs/#configuring-an-enrichment-datastore)
-* [Redshift](../../datastores/redshift/#configuring-an-enrichment-datastore)
-* [Snowflake](../../datastores/snowflake/#configuring-an-enrichment-datastore)
-* [Synapse](../../datastores/synapse/#configuring-an-enrichment-datastore)
+* [Amazon S3](../add-datastores/amazon-s3.md)
+* [Azure Blob Storage](../add-datastores/azure-blob-storage.md)
+* [Azure Datalake Storage](../add-datastores/azure-datalake-storage.md)
+* [BigQuery](../add-datastores/bigquery.md)
+* [Databricks](../add-datastores/databricks.md)
+* [Google Cloud Storage](../add-datastores/google-cloud-storage.md)
+* [MariaDB](../add-datastores//maria-db.md)
+* [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)
+* [MySQL](../add-datastores/mysql.md)
+* [Oracle](../add-datastores/oracle.md)
+* [PostgreSQL](../add-datastores/postgresql.md)
+* [QFS](../add-datastores/qfs.md)
+* [Redshift](../add-datastores/redshift.md)
+* [Snowflake](../add-datastores/snowflake.md)
+* [Synapse](../add-datastores/synapse.md)
 
 # Configuration
 
