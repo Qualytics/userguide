@@ -227,42 +227,6 @@ This section provides a sample payload for creating a Athena datastore. Replace 
     }
     ``` 
 
-### Creating an Enrichment Datastore
-
-This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
-
-**Endpoint**:  ```/api/datastores (post)```
-
-=== "Create an Enrichment Datastore with a new Connection"
-    ```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "database": "athena_catalog",
-        "schema": "athena_database",
-        "enrich_only": true,
-        "connection": {
-            "host": "athena_host",
-            "port": 443,
-            "username": "athena_user",
-            "password": "athena_password",
-            "parameters": { "output": "s3://<bucket_name>" },
-            "type": "athena"
-        }
-    }
-    ```
-=== "Create an Enrichment Datastore with an existing Connection"
-    ```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "database": "athena_catalog",
-        "schema": "athena_database",
-        "enrich_only": true,
-        "connection": connection_id
-    }
-    ```
 ### Link an Enrichment Datastore to a Source Datastore
-Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

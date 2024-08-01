@@ -192,9 +192,13 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
-***Endpoint (Post):*** ```/api/datastores (post)```
+### Creating a Source Datastore
 
-=== "Create a Source Datastore with a New Connection"
+This section provides a sample payload for creating a datastore. Replace the placeholder values with actual data relevant to your setup.
+
+**Endpoint (Post):** ```/api/datastores (post)```
+
+=== "Creating a source datastore with a new connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -211,7 +215,7 @@ Close the success message and you will be automatically redirected to the **Sour
             }
     }
     ```
-=== "Create a Source Datastore with an Existing Connection"
+=== "Creating a datastore with an existing connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -223,6 +227,7 @@ Close the success message and you will be automatically redirected to the **Sour
     }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
-Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
-**Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
+**Endpoint Patch:** 
+
+```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

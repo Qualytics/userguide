@@ -226,45 +226,6 @@ This section provides a sample payload for creating a Oracle datastore. Replace 
     }
     ```
 
-#### Creating an Enrichment Datastore
-
-This section provides a sample payload for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
-
-**Endpoint (Post)**: ```/api/datastores (post)```
-
-=== "Create an Enrichment Datastore with a new Connection"
-    ```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "database": "oracle_database",
-        "schema": "oracle_schema",
-        "enrich_only": true,
-        "connection": {
-            "name": "your_connection_name",
-            "type": "oracle",
-            "host": "oracle_host",
-            "port": "oracle_port",
-            "username": "oracle_username",
-            "password": "oracle_password",
-            "parameters": {
-                "sid": "orcl"
-            }
-        }
-    }
-    ```
-=== "Create an Enrichment Datastore with an existing Connection"
-    ```json
-    {
-        "name": "your_datastore_name",
-        "teams": ["Public"],
-        "database": "oracle_database",
-        "schema": "oracle_schema",
-        "enrich_only": true,
-        "connection_id": "connection-id"
-    }
-    ``` 
 ### Link an Enrichment Datastore to a Source Datastore
-Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

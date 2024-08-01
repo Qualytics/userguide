@@ -174,7 +174,7 @@ Close the success message and you will be automatically redirected to the **Sour
 
 This section provides a sample payload for creating a TimescaleDB datastore. Replace the placeholder values with actual data relevant to your setup.
 
-***Endpoint (Post):*** ```/api/datastores (post)```
+**Endpoint (Post):** ```/api/datastores (post)```
 
 === "Creating a source datastore with a new connection"
     ```json
@@ -208,6 +208,5 @@ This section provides a sample payload for creating a TimescaleDB datastore. Rep
         }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
-Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
