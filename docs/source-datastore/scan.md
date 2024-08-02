@@ -217,20 +217,18 @@ If a Scan is meant to assert a check with a variable, a value for that variable 
 For example, a check might include a filter.- `transaction_date == {{ checked_date }}` which will be asserted against any records where transaction_date is equal to the value supplied when the Scan operation is initiated. In this case that value would be assigned by passing the following payload when calling ```/api/operations/run```
 
 ```json
-  {
+{
     "type": "scan",
     "datastore_id": 42,
-   "container_names": [
-    "my_container"
-    ],
+    "container_names": ["my_container"],
     "incremental": true,
     "remediation": "none",
-     "max_records_analyzed_per_partition": 0,
+    "max_records_analyzed_per_partition": 0,
     "check_variables": {
-    "checked_date": "2023-10-15"
-     },
+        "checked_date": "2023-10-15"
+    },
     "high_count_rollup_threshold": 10
-  }
+}
 ```
 ## Operations Insights
 
@@ -402,16 +400,16 @@ To run a scan operation, use the API payload example below and replace the place
     *   **Remediation:** `append` replicates source containers using an append-first strategy.
 
     ```json
-        {
-          "type":"scan",
-          "name":null,
-          "datastore_id": datastore-id,
-          "container_names":[],
-          "remediation":"append",
-          "incremental":false,
-          "max_records_analyzed_per_partition":null,
-          "enrichment_source_record_limit":10
-        }
+    {
+        "type":"scan",
+        "name":null,
+        "datastore_id": datastore-id,
+        "container_names":[],
+        "remediation":"append",
+        "incremental":false,
+        "max_records_analyzed_per_partition":null,
+        "enrichment_source_record_limit":10
+    }
     ```
 === "Option II: Running a scan operation of specific containers"
     *   **container_names:** `["table_name_1", "table_name_2"]` means that it will scan only the tables table_name_1 and table_name_2.
@@ -419,7 +417,7 @@ To run a scan operation, use the API payload example below and replace the place
     *   **Remediation:** `overwrite` replicates source containers using an overwrite strategy.
 
     ```json
-        {
+    {
         "type":"profile",
         "name":null,
         "datastore_id":datastore-id,
@@ -429,7 +427,7 @@ To run a scan operation, use the API payload example below and replace the place
         ],
         "max_records_analyzed_per_partition":1000000,
         "enrichment_source_record_limit":10
-        }
+    }
     ```
 ### Scheduling scan operation of all containers
 
@@ -444,17 +442,17 @@ This payload is to run a scheduled scan operation every day at 00:00
 === "Scheduling scan operation of all containers"
 
     ```json
-        {
-            "type":"scan",
-            "name":"My scheduled Scan operation",
-            "datastore_id":"datastore-id",
-            "container_names":[],
-            "remediation": "overwrite"
-            "incremental": false,
-            "max_records_analyzed_per_partition":null,
-            "enrichment_source_record_limit":10,
-            "crontab":"00 00 */2 * *"
-        }
+    {
+        "type":"scan",
+        "name":"My scheduled Scan operation",
+        "datastore_id":"datastore-id",
+        "container_names":[],
+        "remediation": "overwrite"
+        "incremental": false,
+        "max_records_analyzed_per_partition":null,
+        "enrichment_source_record_limit":10,
+        "crontab":"00 00 */2 * *"
+    }
     ```
 
 ### Retrieving Scan Operation Information
@@ -465,95 +463,95 @@ This payload is to run a scheduled scan operation every day at 00:00
 
 === "Example result response"
     ```json
-        {
-            "items": [
-                {
-                    "id": 12345,
+    {
+        "items": [
+            {
+                "id": 12345,
+                "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                "type": "scan",
+                "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                "result": "success",
+                "message": null,
+                "triggered_by": "user@example.com",
+                "datastore": {
+                    "id": 101,
+                    "name": "Datastore-Sample",
+                    "store_type": "jdbc",
+                    "type": "db_type",
+                    "enrich_only": false,
+                    "enrich_container_prefix": "data_prefix",
+                    "favorite": false
+                },
+                "schedule": null,
+                "incremental": false,
+                "remediation": "none",
+                "max_records_analyzed_per_partition": -1,
+                "greater_than_time": null,
+                "greater_than_batch": null,
+                "high_count_rollup_threshold": 10,
+                "enrichment_source_record_limit": 10,
+                "status": {
+                    "total_containers": 2,
+                    "containers_analyzed": 2,
+                    "partitions_scanned": 2,
+                    "records_processed": 28,
+                    "anomalies_identified": 2
+                },
+                "containers": [
+                    {
+                    "id": 234,
+                    "name": "Container1",
+                    "container_type": "table",
+                    "table_type": "table"
+                    },
+                    {
+                    "id": 235,
+                    "name": "Container2",
+                    "container_type": "table",
+                    "table_type": "table"
+                    }
+                ],
+                "container_scans": [
+                    {
+                    "id": 456,
                     "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                    "type": "scan",
-                    "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                    "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                    "result": "success",
-                    "message": null,
-                    "triggered_by": "user@example.com",
-                    "datastore": {
-                        "id": 101,
-                        "name": "Datastore-Sample",
-                        "store_type": "jdbc",
-                        "type": "db_type",
-                        "enrich_only": false,
-                        "enrich_container_prefix": "data_prefix",
-                        "favorite": false
-                    },
-                    "schedule": null,
-                    "incremental": false,
-                    "remediation": "none",
-                    "max_records_analyzed_per_partition": -1,
-                    "greater_than_time": null,
-                    "greater_than_batch": null,
-                    "high_count_rollup_threshold": 10,
-                    "enrichment_source_record_limit": 10,
-                    "status": {
-                        "total_containers": 2,
-                        "containers_analyzed": 2,
-                        "partitions_scanned": 2,
-                        "records_processed": 28,
-                        "anomalies_identified": 2
-                    },
-                    "containers": [
-                        {
-                        "id": 234,
-                        "name": "Container1",
-                        "container_type": "table",
-                        "table_type": "table"
-                        },
-                        {
+                    "container": {
                         "id": 235,
                         "name": "Container2",
                         "container_type": "table",
                         "table_type": "table"
-                        }
-                    ],
-                    "container_scans": [
-                        {
-                        "id": 456,
-                        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "container": {
-                            "id": 235,
-                            "name": "Container2",
-                            "container_type": "table",
-                            "table_type": "table"
-                        },
-                        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "records_processed": 8,
-                        "anomaly_count": 1,
-                        "result": "success",
-                        "message": null
-                        },
-                        {
-                        "id": 457,
-                        "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "container": {
-                            "id": 234,
-                            "name": "Container1",
-                            "container_type": "table",
-                            "table_type": "table"
-                        },
-                        "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-                        "records_processed": 20,
-                        "anomaly_count": 1,
-                        "result": "success",
-                        "message": null
-                        }
-                    ],
-                    "tags": []
-                }
-            ],
-            "total": 1,
-            "page": 1,
-            "size": 50,
-            "pages": 1
-        }
+                    },
+                    "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "records_processed": 8,
+                    "anomaly_count": 1,
+                    "result": "success",
+                    "message": null
+                    },
+                    {
+                    "id": 457,
+                    "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "container": {
+                        "id": 234,
+                        "name": "Container1",
+                        "container_type": "table",
+                        "table_type": "table"
+                    },
+                    "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+                    "records_processed": 20,
+                    "anomaly_count": 1,
+                    "result": "success",
+                    "message": null
+                    }
+                ],
+                "tags": []
+            }
+        ],
+        "total": 1,
+        "page": 1,
+        "size": 50,
+        "pages": 1
+    }
     ```

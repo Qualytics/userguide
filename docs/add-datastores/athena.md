@@ -191,6 +191,8 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
+### Creating a Source Datastore
+
 This section provides a sample payload for creating a Athena datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint (Post)**: ```/api/datastores (post)```
