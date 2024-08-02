@@ -11,17 +11,17 @@ For example, ACME's Qualytics deployment might be published at `https://acme.qua
 
 After you've obtained access to your deployment, you'll want to:
 
-1. Connect a [Datastore](/userguide/glossary/#datastore)
-2. Initiate a [profiling](/userguide/glossary#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
-3. Assert those checks to detect data [anomalies](/userguide/glossary/#anomaly)
+1. Connect a [Datastore](https://userguide.qualytics.io/glossary/#datastore.md)
+2. Initiate a [profiling](https://userguide.qualytics.io/glossary/#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
+3. Assert those checks to detect data [anomalies](https://userguide.qualytics.io/glossary/#anomaly)
 
-## Connecting a [Datastore](/userguide/glossary/#datastore)
+## Connecting a [Datastore](https://userguide.qualytics.io/glossary/#datastore)
 
 The first step of configuring a Qualytics instance is to `Add Source Datastore`. In order to add a Source Datastore via Qualytics, you need to select the specific `Connector`. This is necessary so that the appropriate form for collecting connection details can be rendered.
 
 As you provide the required connection details, the UI verifies network connectivity and indicates whether the combination is accessible. This feature assists in diagnosing any network routing restrictions.
 
-While configuring the connection, you'll also come across an option to automatically trigger an asynchronous [Catalog operation](/userguide/glossary/#catalog-operation) upon successful Datastore creation.
+While configuring the connection, you'll also come across an option to automatically trigger an asynchronous [Catalog operation](https://userguide.qualytics.io/glossary/#catalog-operation) upon successful Datastore creation.
 
 Once the connection details are confirmed, the "Add Datastore" process moves to a second optional but **strongly recommended step: the configuration of an Enrichment Datastore**. 
 
@@ -40,14 +40,14 @@ The process of configuring a new Enrichment Datastore is similar to that of a So
 !!!note
     If you don't have a specific location to store these results, you can request the **QFS (Qualytics File System)** connector provided by Qualytics for this purpose.
 
-During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](/userguide/glossary/#compute-daemon):
+During the Source Datastore and Enrichment Datastore configuration steps, you'll find an option to `Test Connection`. This initiates a synchronous operation that verifies whether the indicated Datastore can be appropriately accessed from the [Compute Daemon](https://userguide.qualytics.io/glossary/#compute-daemon):
 
 - If the operation is successful, you can proceed with the configuration. Any issues during this `Test Connection` process will result in an error message being displayed on the current step of the form, be it the Source Datastore or Enrichment Datastore step.
 
 !!!note
     If any future operation fails to establish a connection with the Datastore, the UI will provide warnings to guide you in resolving the connectivity issues.
 
-## Generate a [Profile](/userguide/glossary/#profile-operation)
+## Generate a [Profile](https://userguide.qualytics.io/glossary/#profile-operation)
 
 The majority of a data scientist's work revolves around upfront curation of data, which involves taking steps to determine which type of ML modeling might be beneficial for the given data. Our Data Compute Daemon begins this process much like a data scientist initiating a new modeling effort. It profiles customer data through systematic computational analysis, executed in a fully **automated** and **scalable** manner.
 
@@ -73,7 +73,7 @@ Two concrete examples of sophisticated rule types automatically inferred at this
 
 Now that you have a deeper understanding of how our profiling operation works, you're ready to take action. To initiate a Profile Operation, navigate to the details of the specific source datastore you've created. There, you'll find a step to start the Profile Operation.
 
-## Initiating and Reviewing a [Scan](/userguide/glossary/#incremental-scan-operation) for [Anomalies](/userguide/glossary/#anomaly)
+## Initiating and Reviewing a [Scan](https://userguide.qualytics.io/glossary/#incremental-scan-operation) for [Anomalies](https://userguide.qualytics.io/glossary/#anomaly)
 
 After the initial Profile Operation is complete, you can start a Scan Operation. By default, Qualytics initiates a `Full` Scan for the first operation. This comprehensive scan establishes a baseline for generating Quality Scores and facilitates the validation of all defined checks.
 
