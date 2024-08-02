@@ -141,6 +141,7 @@ nav:
             - settings/notifications/notification-services/webhook.md
         - Connections: settings/connections/manage-connections.md
         - Integrations: 
+          - Overview: settings/integrations/overview.md
           - Atlan: settings/integrations/atlan.md
           - Alation: settings/integrations/alation.md
         - Security: settings/security/teams-and-permissions.md
