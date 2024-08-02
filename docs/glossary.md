@@ -67,7 +67,7 @@ aka "Check" is an expression regarding the values of a Container that can be eva
 
 ### <a name="datastore"></a>__Datastore__
 
-Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](/userguide/add-datastores/overview-of-a-datastore/).
+Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](/add-datastores/overview-of-a-datastore/).
 
 ### <a name="datawarehouse"></a>__Data Warehouse__
 
