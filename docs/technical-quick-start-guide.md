@@ -11,7 +11,7 @@ For example, ACME's Qualytics deployment might be published at `https://acme.qua
 
 After you've obtained access to your deployment, you'll want to:
 
-1. Connect a [Datastore](https://userguide.qualytics.io/glossary/#datastore.md)
+1. Connect a [Datastore](https://userguide.qualytics.io/glossary/#datastore)
 2. Initiate a [profiling](https://userguide.qualytics.io/glossary/#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
 3. Assert those checks to detect data [anomalies](https://userguide.qualytics.io/glossary/#anomaly)
 
