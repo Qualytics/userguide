@@ -4,7 +4,7 @@
 
 ### Create Atlan Persona and Policy
 
-Before initiating the integration process, it’s advisable to set up an Atlan persona. This persona enables you to grant the necessary access for Qualytics's API token to the metadata and data of the connections you plan to integrate. Although the persona can be created simultaneously with the API token, establishing it beforehand simplifies the process, allowing you to directly associate it with the token later.
+Before initiating the integration process, it’s advisable to set up an Atlan persona. This persona enables you to grant the necessary access for Qualytics' API token to the metadata and data of the connections you plan to integrate. Although the persona can be created simultaneously with the API token, establishing it beforehand simplifies the process, allowing you to directly associate it with the token later.
 
 Keep in mind that enabling Atlan for a data source requires that you first authorize the API token with access to the requisite metadata and data. This is done through policies set within the persona for the Atlan connection that matches the Qualytics data source, and it must be done for each data source you intend to integrate.
 
@@ -12,11 +12,11 @@ Keep in mind that enabling Atlan for a data source requires that you first autho
 
 ![Screenshot](../../assets/integrations/atlan-governance-center.png){: style="height:450px"}
 
-**Step 2**: Click in **New Persona**.
+**Step 2**: Click on **New Persona**.
 
 ![Screenshot](../../assets/integrations/atlan-add-new-persona.png)
 
-**Step 3**: Add a name and description and click in **Create**.
+**Step 3**: Add a name and description and click on **Create**.
 
 ![Screenshot](../../assets/integrations/atlan-create-new-persona.png)
 
@@ -28,7 +28,7 @@ Keep in mind that enabling Atlan for a data source requires that you first autho
 
 ![Screenshot](../../assets/integrations/atlan-add-policies.png)
 
-**Step 6**: You will see the Policies section, click in **New Policy** and choose **Metadata policy**.
+**Step 6**: You will see the Policies section, click on **New Policy** and choose **Metadata policy**.
 
 ![Screenshot](../../assets/integrations/atlan-new-policy-section.png)
 
@@ -50,7 +50,7 @@ After creating the persona, you need to create a personal access token.
 
 ![Screenshot](../../assets/integrations/atlan-admin-center.png){: style="height:450px"}
 
-**Step 2**: Click in **Generate API token**.
+**Step 2**: Click on **Generate API token**.
 
 ![Screenshot](../../assets/integrations/atlan-generate-api-token.png)
 

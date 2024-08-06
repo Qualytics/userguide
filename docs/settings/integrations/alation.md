@@ -20,11 +20,11 @@ Before setting up an Alation integration in Qualytics, it is necessary to create
 
 **Step 4**: Define a token name.
 
-![Screenshot](../../assets/integrations/alation-refresh-token-name.png)
+![Screenshot](../../assets/integrations/alation-refresh-token-name.png){ width=450}
 
 **Step 5**: Ensure you copy the generated token and store it in a safe place.
 
-![Screenshot](../../assets/integrations/alation-refresh-token-done.png)
+![Screenshot](../../assets/integrations/alation-refresh-token-done.png){ width=450}
 
 ![Screenshot](../../assets/integrations/alation-refresh-token-listed.png)
 
@@ -32,16 +32,16 @@ Before setting up an Alation integration in Qualytics, it is necessary to create
 
 **Step 1**: Go to the Qualytics' **Settings** page and navigate to the **Integrations** tab
 
-![Screenshot](../../assets/integrations/qualytics-settings-section-light.png#only-light)
-![Screenshot](../../assets/integrations/qualytics-settings-section-dark.png#only-dark)
+![Screenshot](../../assets/integrations/qualytics-settings-section-light.png#only-light){ width=650}
+![Screenshot](../../assets/integrations/qualytics-settings-section-dark.png#only-dark){ width=650}
     
 **Step 2**: Click the **Add Integration** button
 
 ![Screenshot](../../assets/integrations/qualytics-add-integration.png)
 
-**Step 3**: Fill up the configuration form selecting the `Alation` integration type.
+**Step 3**: Fill out the configuration form selecting the `Alation` integration type.
 
-![Screenshot](../../assets/integrations/qualytics-add-alation-integration-light.png)
+![Screenshot](../../assets/integrations/qualytics-add-alation-integration-light.png){ width=550}
 
 | REF. | FIELDS                 | ACTIONS                                                                 |
 |------|------------------------|-------------------------------------------------------------------------|
