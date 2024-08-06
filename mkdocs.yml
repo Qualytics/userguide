@@ -50,6 +50,7 @@ nav:
     # new page tree structure end 
     - Source Datastores:
       - Link Enrichment: source-datastore/associate-enrichment-datastore.md
+      - Assign Tag: source-datastore/assign-tags.md
       - Catalog: source-datastore/catalog.md
       - Profile: source-datastore/profile.md
       - Scan: source-datastore/scan.md
