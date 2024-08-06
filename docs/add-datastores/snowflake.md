@@ -273,13 +273,18 @@ This section provides sample payloads for creating a Snowflake datastore. Replac
             "host": "snowflake_host",
             "username": "snowflake_username",
             "password": "snowflake_password",
+            "passphrase": "key_passphrase",
             "parameters": {
                 "role": "snowflake_read_role",
-                "warehouse": "qualytics_wh"
+                "warehouse": "qualytics_wh",
+                "authentication_type": "KEYPAIR"
             }
         }
     }
     ```
+    !!! note
+        If the `authentication_type` parameter is removed, `BASIC` authentication will be used by default.
+        
 === "Create a Source Datastore with an existing Connection"
     ```json
     {
