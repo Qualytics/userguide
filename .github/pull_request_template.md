@@ -1,13 +1,3 @@
-<!--
-This section is optional. Use it if this PR has dependencies.
---> 
-> [!WARNING]  
-> This PR depends on [surveillance-hub#<number>](https://github.com/Qualytics/surveillance-hub/pull/<number>) getting merged first.
-
-### Shortcut
-
-https://app.shortcut.com/qualytics/story/<number>
-
 ### Overview
 
 <!-- Briefly describe the purpose of this PR. -->
