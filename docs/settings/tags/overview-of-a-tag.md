@@ -1,70 +1,114 @@
 # Tags
 
-The `Tags` allow users to categorize and organize entities effectively, while also providing the ability to assign weights for prioritization. They can drive notifications and downstream workflows, and users can configure tags, associate notifications based on `Tags`, and associate tags to specific properties.
+Tags allow users to categorize and organize data assets effectively and provide the ability to assign weights for prioritization. They drive notifications and downstream workflows, enabling users to stay informed and take appropriate actions. Tags can be configured and associated with specific properties, allowing for targeted actions and efficient management of entities across multiple datastores. 
 
-### Key Points
+Tags can be applied to Datastores, Profiles, Fields, Checks, and Anomalies, streamlining data management and improving workflow efficiency. Overall, tags enhance organization, prioritization, and decision-making.
 
+In this documentation, we will explore steps to:
 
-* **Versatile Labeling**
-    `Tags` can be applied to `Datastores`, `Profiles`, `Fields`, `Check's`, and/or `Anomalies`.
-* **Notification and Workflow Integration**
-    `Tags` are utilized to drive notifications and downstream workflows, enabling users to stay informed and take appropriate actions.
-* **Weight Assignment**
-    Users can assign weights to `Tags`, allowing for prioritization and emphasis on specific `Tags`.
-* **Property Association**
-    `Tags` can be associated with specific properties, allowing for targeted actions and efficient management of entities across multiple datastores.
+- **[Navigation to tags](#navigation-to-tags)**
 
-### Tags View
+- **[Add tag](#add-tag)**
 
-1. Find the `Tag` section by clicking on `Settings` in the menu bar:
- 
-    ![Screenshot](../../assets/notifications/settings-tab-light.png#only-light){: style="width:300px;"}
-    ![Screenshot](../../assets/notifications/settings-tab-dark.png#only-dark){: style="width:300px;"}
+- **[Manage tag](#manage-tags)**
 
-    ![Screenshot](../../assets/tags/tags-tab-light.png#only-light){: style="width:400px;"}
-    ![Screenshot](../../assets/tags/tags-tab-dark.png#only-dark){: style="width:400px;"}
+Let’s get started 🚀
 
-* View all the active `Tags` or click `Add Tag` in the upper right corner:
+## Navigation to Tags
 
-    ![Screenshot](../../assets/tags/tags-light.png#only-light)
-    ![Screenshot](../../assets/tags/tags-dark.png#only-dark)
+**Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
 
-### Add a Tag
+![global-settings](../../assets/tags/global-settings-light-1.png#only-light)
+![global-settings](../../assets/tags/global-settings-dark-1.png#only-dark)
 
-1. To add a `Tag`, start with navigating to the top right and find the `Add Tag` button.
+**Step 2**: You will be navigated to the **Tag** section, by default.
 
-    ![Screenshot](../../assets/tags/add-tag-light.png#only-light)
-    ![Screenshot](../../assets/tags/add-tag-dark.png#only-dark)
+![tags](../../assets/tags/tags-light-2.png#only-light)
+![tags](../../assets/tags/tags-dark-2.png#only-dark)
 
-* Clicking on the `Add` button will pop up a modal:
+## Add Tag
 
-    ![Screenshot](../../assets/tags/tag-screen-light.png#only-light)
-    ![Screenshot](../../assets/tags/tag-screen-dark.png#only-dark)
+**Step 1**: Click on the **Add Tag** button from the top right corner.
 
-    * `Name` your `Tag`
-    * Select a `Color`:
-        * Click into Hexadecimal number or select by clicking on the dropper to open a color picker
-    * Enter a description, if desired
-    * Select a `Weight`
-         * The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
-         * Ranges from -10 to 10
+![add-tag](../../assets/tags/add-tag-light-3.png#only-light)
+![add-tag](../../assets/tags/add-tag-dark-3.png#only-dark)
 
-### Applying a Tag
+**Step 2**: A modal window will appear, providing the options to create the tag. Enter the required values to get started. 
 
-Once a `Tag` is created, it's ready to be associated with a `Datastore`, `Profile`, `Check`, `Notification` and ultimately an `Anomaly`.
+| REF. | FIELD | ACTION | EXAMPLE |
+|------|-----------------|-------------------|----------------|
+| 1.   | Preview | This shows how the tag will appear to users. | Preview |
+| 2.   | Name | Assign a name to your tag. | Sensitive  |
+| 3.   | Color | A color picker feature is provided, allowing you to select a color using its hex code.|  #E74C3C |
+| 4.   | Description | Explain the nature of your tag. | Maintain data that is highly confidential and requires strict access controls.  |
+| 5.   | Weight MOdifier | Adjust the tag's weight for prioritization, where a higher value represents greater significance. The range is between -10 and 10.| 10 |
 
+![tag-details](../../assets/tags/tag-details-light-4.png#only-light)
+![tag-details](../../assets/tags/tag-details-dark-4.png#only-dark)
 
-#### Tag Inheritance
+**Step 3**: Click on the **Save** button to save your tag.
 
-* When a `Tag` is applied to a data asset, all the descendents of that data asset also receive the `Tag`. 
-    * For example, if a `Tag` named **Critical** is applied to a Datastore then all the Tables, Fields, and Checks under that Datastore also receive the `Tag`. 
-* Likewise, if the **Critical** `Tag` is subsequently removed from one of the Tables in that Datastore, then all the Fields and Checks belonging to that Table will have the **Critical**  `Tag` removed as well.
+![save-tag](../../assets/tags/save-tag-light-5.png#only-light)
+![save-tag](../../assets/tags/save-tag-dark-5.png#only-dark)
 
-* When a new data asset is created, it inherits the `Tags` from the owning data asset. For example, if a user creates a new Computed Table, it inherits all the `Tags` that are applied to the Datastore in which it is created.
+## View Created Tags
 
-#### Tagging Anomales
+Once you have created a tag, you can view it in the tags list.
 
-* Anomalies also inherit `Tags` at the time they are created. They inherit all the `Tags` of all the associated failed checks. 
-* However, anomalies are treated as metadata, not as data assets, for the purposes of tagging. 
-    * Thus Anomalies do not inherit subsequent tag changes from those checks. They only inherit checks one time - at creation time. 
-* `Tags` can be directly applied to or removed from Anomalies at any time after creation.
+![view-tag](../../assets/tags/view-tag-light-6.png#only-light)
+![view-tag](../../assets/tags/view-tag-dark-6.png#only-dark)
+
+## Filter and Sort 
+
+Qualytics allows you to sort and filter your tags so that you can easily organize and find the most relevant tags according to your criteria, improving data management and workflow efficiency.
+
+### Sort
+
+You can sort your tags by **Color**, **Created Date**, **Name**, and **Weight** to easily organize and prioritize them according to your needs.
+
+![sort-tag](../../assets/tags/sort-tag-light-7.png#only-light)
+![sort-tag](../../assets/tags/sort-tag-dark-7.png#only-dark)
+
+### Filter 
+
+You can filter your tags by global and external type which allows you to categorize and manage your tags more effectively. 
+
+![filter-tag](../../assets/tags/filter-tag-light-8.png#only-light)
+![filter-tag](../../assets/tags/filter-tag-dark-8.png#only-dark)
+
+## Manage Tags
+
+You can easily manage your tags by keeping them updated with current information and removing outdated or unnecessary tags. This ensures that your data remains organized and relevant, enhancing overall efficiency and workflow. By efficiently managing tags, you improve data handling and ensure high data standards across the platform.
+
+### Edit Tags
+
+This allows you to keep your tags updated with current information and relevance.
+
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the tag that you want to edit, then click on **Edit** from the dropdown menu.
+
+![edit-tag](../../assets/tags/edit-tag-light-9.png#only-light)
+![edit-tag](../../assets/tags/edit-tag-dark-9.png#only-dark)
+
+**Step 2**: Edit the tag's **name**, **description**, **color**, and **weight** as needed.
+
+![edit-details](../../assets/tags/edit-details-light-10.png#only-light)
+![edit-details](../../assets/tags/edit-details-dark-10.png#only-dark)
+
+**Step 3**: Click the **Save** button to apply your changes.
+
+![save-edit](../../assets/tags/save-edit-light-11.png#only-light)
+![save-edit](../../assets/tags/save-edit-dark-11.png#only-dark)
+
+### Delete Tags
+
+This allows you to remove outdated or unnecessary tags to maintain a clean and efficient tag system.
+
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the tag that you want to delete, then click on **Delete** from the dropdown menu.
+
+![delete](../../assets/tags/delete-light-12.png#only-light)
+![delete](../../assets/tags/delete-dark-12.png#only-dark)
+
+**Step 2**: After clicking the **Delete** button, your tag will be removed from the system, and a success message saying **Tag successfully deleted**.
+
+![tag-deleted](../../assets/tags/tag-deleted-light-13.png#only-light)
+![tag-deleted](../../assets/tags/tag-deleted-dark-13.png#only-dark)
