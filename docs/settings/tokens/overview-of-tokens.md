@@ -1,112 +1,108 @@
-Personal API tokens (`PATs`) are unique strings used to authenticate a user on your platform instead of a regular password. The `PATs` are generated only once and need to be copied and stored securely by the user for future use.
+# Tokens
 
- ![Screenshot](../../assets/tokens/settings-tokens-light.png#only-light)
- ![Screenshot](../../assets/tokens/settings-tokens-dark.png#only-dark)
+A token is a secure way to access the Qualytics API instead of using a password. Each user gets a unique Personal API Token (PAT) for authentication. These tokens are created only once, so you need to copy and store them safely because you'll use them to log in and interact with the platform in the future.
 
-## Benefits of using PATs
+Let’s get Started 🚀
 
-* **Enhanced security:** PATs offer an extra layer of security compared to regular passwords. If a PAT is compromised, your account remains secure as the PAT itself can be revoked.
-* **Granular access control:** PATs can be assigned specific permissions, limiting the actions a user can perform on your platform. This reduces the risk of accidental or unauthorized modifications.
+Navigation to Tokens
 
-## Creating Personal API Tokens
+**Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
 
-### Generating a new PAT
+![global-setting](../../assets/tokens/global-setting-light-1.png#only-light)
+![global-setting](../../assets/tokens/global-setting-dark-1.png#only-dark)
 
-#### Access the Token Generation Page
+**Step 2**: By default, you will be navigated to the **Tags** section. Click on the **Tokens** tab.
 
-- Navigate to the designated area for managing API tokens within your system `Settings`/`Tokens`
-- Locate and click the button labeled "`Generate New Token`".
+![tokens](../../assets/tokens/tokens-light-2.png#only-light)
+![tokens](../../assets/tokens/tokens-dark-2.png#only-dark)
 
-#### Configure Token Details
+## Generate Token 
 
-![Screenshot](../../assets/tokens/configure-new-token-light.png#only-light)
-![Screenshot](../../assets/tokens/configure-new-token-dark.png#only-dark)
+Generating a token provides a secure method for authenticating and interacting with your platform, ensuring that only authorized users and applications can access your resources. Personal Access Tokens (PATs) are particularly useful for automated tools and scripts, allowing them to perform tasks without needing manual intervention. By using PATs, you can leverage our Qualytics CLI to streamline data management and operations, making your workflows more efficient and secure.
 
-- **Token Name:** Assign a clear and descriptive name to your token.
-- **Expiration:** Choose your desired validity period for the token (30 days, 60 days, 90 days, or 1 year). This determines how long the token remains active.
+**Step 1**: Click on the **Generate Token** button located in the top right corner.
 
-#### Generate the Token
+![generate-token](../../assets/tokens/generate-token-light-3.png#only-light)
+![generate-token](../../assets/tokens/generate-token-dark-3.png#only-dark)
 
-Once you've configured the details, click the "Generate" button.
+A modal window will appear providing the options for generating the token.
 
-#### Copy and Secure Your Token
+![token-detail](../../assets/tokens/token-detail-light-4.png#only-light)
+![token-detail](../../assets/tokens/token-detail-dark-4.png#only-dark)
 
-- A new modal window will appear titled "`Token Successfully Generated`".
+**Step 2**: Enter the following values:
 
-![Screenshot](../../assets/tokens/generated-token-light.png#only-light)
-![Screenshot](../../assets/tokens/generated-token-dark.png#only-dark)
+1. **Name**: Enter the name for the Token ( e.g., DataAccessToken) 
+2. **Expiration**: Set the expiration period for the token (e.g., 30 days)
 
-- This window displays the following information:
-    - **Token Name:** The name you entered earlier.
-    - **Secret (Token):** The generated token string. This is crucial for API access, so make sure to copy it securely.
-    - **Warning:** A prominent message reminding you to copy the secret token, as it won't be visible again.
-- Locate the "Copy" button and copy the token string to your clipboard.
+![enter-values](../../assets/tokens/enter-values-light-5.png#only-light)
+![enter-values](../../assets/tokens/enter-values-dark-5.png#only-dark)
 
-### Token Listing
+**Step 3**: Once you have entered the values, then click on the **Generate** button.
 
-This page will display a list that includes your newly created token with the following details:
+![generate-token](../../assets/tokens/generate-token-light-6.png#only-light)
+![generate-token](../../assets/tokens/generate-token-dark-6.png#only-dark)
 
-![Screenshot](../../assets/tokens/tokens-list-light.png#only-light)
-![Screenshot](../../assets/tokens/tokens-list-dark.png#only-dark)
+**Step 4**: After clicking on the **Generate** button, your token is successfully generated.
 
-- Token Name
-- Expiration Date
-- Creation Date
-- Status (Active)
+!!! warning 
+    Make sure to copy your secret key as you won't be able to see it again. Keep your secret keys confidential and avoid sharing them with anyone. Use a password manager or an encrypted vault to store your secret keys.
 
-### Managing Existing Tokens
+![token-generated](../../assets/tokens/token-generated-light-7.png#only-light)
+![token-generated](../../assets/tokens/token-generated-dark-7.png#only-dark)
 
-#### Revoking a Token
+## Revoke Token
 
-The "Tokens" page provides an overview of all your active and revoked PATs. Here's how to manage them:
+You can revoke your token to prevent unauthorized access or actions, especially if the token has been compromised, is no longer needed, or to enhance security by limiting the duration of access.
 
-1. **Locate the Token:** Identify the token you wish to revoke within the "Tokens" list.
-2. **Revoke Button:** Look for a clear "Revoke" button associated with each token.
-3. **Confirmation:** Before revoking, a confirmation prompt will appear to prevent accidental revocation. Choose "Revoke" to proceed.
-4. **Visual Update:** Upon revocation:
-    - The token's status color will change to orange.
-    - The status text will update to "Revoked".
-    - Two new buttons will appear: "Restore" and "Delete".
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the user token, that you want to revoke, then click on **Revoke** from the dropdown menu.
 
-![Screenshot](../../assets/tokens/tokens-list-revoked-light.png#only-light)
-![Screenshot](../../assets/tokens/tokens-list-revoked-dark.png#only-dark)
+![revoke](../../assets/tokens/revoke-light-8.png#only-light)
+![revoke](../../assets/tokens/revoke-dark-8.png#only-dark)
 
+**Step 2**: After clicking the **Revoke** button, your user token will be successfully revoked. A success message will display saying **User token successfully revoked**. Following revocation, the token's status color will change from green to orange.
 
-#### Restoring a Revoked Token
+![revoked-sucessfully](../../assets/tokens/revoked-sucessfully-light-9.png#only-light)
+![revoked-sucessfully](../../assets/tokens/revoked-sucessfully-dark-9.png#only-dark)
 
-1. **Restore Button:** The "Restore" button becomes available for revoked tokens.
-2. **Status Change:** Clicking "Restore" will reactivate the token, changing its status back to "Active" and its color accordingly.
+## Restore Token
 
-#### Deleting a Token
+You can restore a token to reactivate its access, allowing authorized use again. This is useful if the token was mistakenly revoked or if access needs to be temporarily re-enabled without generating a new token.
 
-1. **Delete Button:** A "Delete" button will be visible next to revoked tokens.
-2. **Irreversible Action:**  A confirmation prompt will warn you that deleting a token is permanent. Click "Delete" only if you're certain.
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the revoked tokens, that you want to restore, then click on the **Restore** button from the dropdown menu.
 
-#### Important Reminders
+![restore](../../assets/tokens/restore-light-10.png#only-light)
+![restore](../../assets/tokens/restore-dark-10.png#only-dark)
 
-* **Secure Storage:** Always store copied tokens in a secure password manager or encrypted vault. Avoid sharing them with anyone.
-* **Expiration Best Practices:** Choose appropriate expiration times based on the token's intended use case. Shorter expirations enhance security if the token is compromised.
+**Step 2**: After clicking on the “Restore” button, your secret token will be restored and a confirmation message will display saying **User token successfully restored**
 
+![token-restored](../../assets/tokens/token-restored-light-11.png#only-light)
+![token-restored](../../assets/tokens/token-restored-dark-11.png#only-dark)
 
-## Use cases for PATs:
+## Delete Token
 
-### Automate tasks
+You can delete a token to permanently remove its access, ensuring it cannot be used again. This is important for maintaining security when a token is no longer needed, has been compromised, or to clean up unused tokens in your system.
 
-PATs can be used by automated tools and scripts to interact with your platform without requiring manual intervention. You can use the PATs to use our Qualytics CLI, see more [here](/userguide/cli/overview-of-qualytics-cli/).
+!!! note 
+    You can only delete revoked tokens, not active tokens. If you want to delete an active token, you must first revoke it before you can delete it.
 
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the revoked tokens, that you want to delete, then click on the **Delete** button from the dropdown menu.
 
-## Important considerations
+![delete](../../assets/tokens/delete-light-12.png#only-light)
+![delete](../../assets/tokens/delete-dark-12.png#only-dark)
 
-### Treat PATs like passwords
+After clicking the delete button, a confirmation modal window **Delete Token** will appear.
 
-Keep your PATs confidential and avoid sharing them with anyone.
+![delete-window](../../assets/tokens/delete-window-light-13.png#only-light)
+![delete-window](../../assets/tokens/delete-window-dark-13.png#only-dark)
 
-## Store them securely
+**Step 2**: Click on the **Delete** button to delete the token.
 
-Use a password manager or an encrypted vault to store your PATs.
+![click-delete](../../assets/tokens/click-delete-light-14.png#only-light)
+![click-delete](../../assets/tokens/click-delete-dark-14.png#only-dark)
 
-## Revoke compromised tokens 
+After clicking on the **Delete** button, your token will be deleted and a confirmation message will display saying **User token successfully deleted**.
 
-If you suspect a PAT is compromised, immediately revoke it to prevent unauthorized access.
+![successfully-deleted](../../assets/tokens/successfully-deleted-light-15.png#only-light)
+![successfully-deleted](../../assets/tokens/successfully-deleted-dark-15.png#only-dark)
 
-By following these guidelines, you can leverage PATs to enhance security and streamline workflows within your platform.
