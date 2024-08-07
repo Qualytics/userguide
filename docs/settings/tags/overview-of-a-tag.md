@@ -4,14 +4,6 @@ Tags allow users to categorize and organize data assets effectively and provide 
 
 Tags can be applied to Datastores, Profiles, Fields, Checks, and Anomalies, streamlining data management and improving workflow efficiency. Overall, tags enhance organization, prioritization, and decision-making.
 
-In this documentation, we will explore steps to:
-
-- **[Navigation to tags](#navigation-to-tags)**
-
-- **[Add tag](#add-tag)**
-
-- **[Manage tag](#manage-tags)**
-
 Let’s get started 🚀
 
 ## Navigation to Tags
@@ -112,3 +104,26 @@ This allows you to remove outdated or unnecessary tags to maintain a clean and e
 
 ![tag-deleted](../../assets/tags/tag-deleted-light-13.png#only-light)
 ![tag-deleted](../../assets/tags/tag-deleted-dark-13.png#only-dark)
+
+## Applying a Tag
+Once a Tag is created, it's ready to be associated with a ```Datastore```, ```Profile```, ```Check```, ```Notification``` and ultimately an ```Anomaly```.
+
+### Tag Inheritance
+
+- When a ```Tag``` is applied to a data asset, all the descendents of that data asset also receive the ```Tag```.
+
+    - For example, if a ```Tag``` named **Critical** is applied to a Datastore then all the Tables, Fields, and Checks under that Datastore also receive the ```Tag```.
+
+- Likewise, if the **Critical** ```Tag``` is subsequently removed from one of the Tables in that Datastore, then all the Fields and Checks belonging to that Table will have the **Critical** ```Tag``` removed as well.
+
+- When a new data asset is created, it inherits the ```Tags``` from the owning data asset. For example, if a user creates a new Computed Table, it inherits all the ```Tags``` that are applied to the Datastore in which it is created.
+
+### Tagging Anomales
+
+- Anomalies also inherit ```Tags``` at the time they are created. They inherit all the ```Tags``` of all the associated failed checks.
+
+- However, anomalies are treated as metadata, not as data assets, for the purposes of tagging.
+
+    - Thus Anomalies do not inherit subsequent tag changes from those checks. They only inherit checks one time - at creation time.
+
+- ```Tags``` can be directly applied to or removed from Anomalies at any time after creation.
