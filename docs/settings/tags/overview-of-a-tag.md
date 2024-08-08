@@ -65,6 +65,12 @@ You can sort your tags by **Color**, **Created Date**, **Name**, and **Weight** 
 
 You can filter your tags by global and external type which allows you to categorize and manage your tags more effectively. 
 
+You can filter your tags by global and external type, which allows you to categorize and manage them more effectively. 
+
+1. **External Tags**: External tags are metadata labels imported from an integrated data catalog system, such as Atlan or Alation, into Qualytics. These tags are synchronized automatically via API integrations and cannot be created or edited manually within Qualytics. They help ensure consistency in data tagging across different platforms by using the same tags already established in the data catalog. **Example**: If Atlan has a tag named **Customer,** once integrated, this tag will automatically be synchronized and added to Qualytics as an external tag. Users cannot add or modify this tag within Qualytics; it is managed through the integration process.
+
+2. **Global Tags**: Global tags are metadata labels that are created and managed directly within Qualytics. These tags are not influenced by external integrations and are used internally within the Qualytics platform to organize and categorize data according to the users' requirements.**Example**: A tag created within Qualytics to mark datasets that need internal review. This tag is managed entirely within the Qualytics platform and is not affected by external data catalog systems. 
+
 ![filter-tag](../../assets/tags/filter-tag-light-8.png#only-light)
 ![filter-tag](../../assets/tags/filter-tag-dark-8.png#only-dark)
 
