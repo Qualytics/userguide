@@ -73,7 +73,16 @@ After creating the persona, you need to create a personal access token.
 
 ![Screenshot](../../assets/integrations/qualytics-add-integration.png)
 
-**Step 3**: Give your new integration a descriptive name, select `Atlan` type, type the URL and the personal access token from the persona you created in Atlan.
+**Step 3**: Fill out the configuration form selecting the `Atlan` integration type.
+
+| REF. | FIELDS                 | ACTIONS                       |
+|------|------------------------|-------------------------------|
+| 1️.  | Name (Required)   | Specify the name of the integration |
+| 2.  | Type (Required)   | Select the type of integration from the dropdown menu. In this case, "Atlan" is selected |
+| 3.  | URL (Required)    | The Alation whole instance address. e.g https://`your-company`.atlan.com |
+| 4.  | Token (Required)| Provide the authentication token required to connect to Atlan |
+| 5.  | Event Driven | If enabled, the integration sync will be triggered by operations, archiving anomalies and checks. |
+| 6.  | Overwrite Tags | If enabled, Alation tags will take priority over Qualytics tags when there are conflicting tags (tags with the same name on both sides). |
 
 ![Screenshot](../../assets/integrations/qualytics-add-atlan-integration-light.png#only-light)
 ![Screenshot](../../assets/integrations/qualytics-add-atlan-integration-dark.png#only-dark)
