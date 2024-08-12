@@ -96,44 +96,74 @@ A modal window **“Add Notification Rule”** will appear providing you with fi
 ![notification-window](../../assets/notifications/notification-window-light-5.png#only-light)
 ![notification-window](../../assets/notifications/notification-window-light-5.png#only-dark)
 
-**Step 2:** Enter the details to add the notification rule.
+**Step 2:** Enter the following details to add the notification rule.
 
-| REF.  | FIELD | ACTION |
-|-------- |-------- |------- |
-| 1.  | Name  | Enter a specific and descriptive title to your notification rule to easily identify its purpose. |
-| 2.  | Description | A short note about what the rule does. |
-| 3.  | Trigger when | Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:<br><br> - **An Operation Completes**: Get notified when any operation completes on a data asset with the specified tags. <br><br> - **An Anomaly is Detected**: Get notified when any anomaly is identified with the specified tags and weight threshold. <br><br> - **Anomalies are Detected in a Table or File**: Get notified when an anomaly is identified in any table or file with the specified tags.<br><br> - **A Freshness SLA Violation Occurs**: Get notified for each SLA violation of a data asset with the specified tags. |
-| 4. | Message | Enter your custom message in the Message field, where you can specify the content of the notification that will be sent out.<br><br> You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily [insert internal variables](#available-variables) such as **{{rule_name}}**, **{{container_name}}**, and **{{datastore_name}}**. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.  |
+**1. Name:** Enter a specific and descriptive title to your notification rule to easily identify its purpose.
 
-![add-details](../../assets/notifications/add-details-light-6.png#only-light)
-![add-details](../../assets/notifications/add-details-light-6.png#only-dark)
+**2. Description:** Provide a brief description of what the notification rule does or when it should trigger.
 
-**Step 3:** Use the drop-down menu to **select the datastore tags**. Notifications will be generated for only those source datastores that have the datastore tags you select in this step. For example, if you select **“critical”** datastore tag from the dropdown menu, notifications will be generated only for source datastores having the "critical" tag applied to them. 
+![name-description](../../assets/notifications/name-description-light.png#only-light)
+![name-description](../../assets/notifications/name-description-light.png#only-dark)
+
+**3. Trigger When**: Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:
+
+* **Operation Completion:** This type of notification is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app messages and, if configured, via external notification channels such as email, Slack, Microsoft Teams, and others. For example, the team is notified whenever the catalog operation is completed, helping them proceed with the profile operation on the datastore. 
+
+* **An Anomaly is Identified:** This type of notification is triggered when any single anomaly is identified in the data. The notification message typically includes the type of anomaly detected and the datastore where it was found. It provides specific information about the anomaly type, which helps quickly understand the issue's nature.
+
+!!! tip 
+	Users can specify a minimum anomaly weight for this trigger condition. This threshold ensures that only anomalies with a weight equal to or greater than the specified value will trigger a notification. If no value is set, all detected anomalies, regardless of their weight, will generate notifications. This feature helps prioritize alerts based on the importance of the anomalies, allowing users to focus on more critical issues.  |
+
+* **Anomalies are Detected in a Table or File:** This notification is triggered when multiple anomalies are detected within a specific table or file. It includes information about the number of anomalies found and the specific scan target within the datastore. This is useful for assessing the overall health of a particular datastore. No concept of weights. 
+
+| Factors | An Anomaly is Identified | Anomalies are Detected in a Table or File |
+|--------|--------|--------|
+| Trigger Event | Notifies for individual anomaly detection | Notifies for multiple anomalies within a specific table or file |
+| Notification Content | Focuses on the type of anomaly and the affected datastore. | Provide a count of anomalies and specifies the scan target within the datastore. |
+| Notification Targeting  | Tags, Weight or both  | Only Tags  |
+
+* **A Freshness SLA Violation Occurs:** This type of notification is triggered when data within a datastore does not meet the defined freshness criteria, violating the Service Level Agreement (SLA). The notification message typically includes details about the extent of the violation, the specific datastore affected, and the freshness threshold that was breached. This helps the team take prompt corrective actions to ensure data timeliness and reliability.
+
+![trigger-condition](../../assets/notifications/trigger-condition-light.png#only-light)
+![trigger-condition](../../assets/notifications/trigger-condition-light.png#only-dark)
+
+**4.** **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out. 
+
+!!! tip
+	You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily [insert internal variables](#available-variables) such as {{rule_name}}, {{container_name}}, and {{datastore_name}}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
+
+![message](../../assets/notifications/message-light.png#only-light)
+![message](../../assets/notifications/message-light.png#only-dark)
+
+**5. Datastore Tags:** Use the drop-down menu to **select the datastore tags**. Notifications will be generated for only those source datastores that have the datastore tags you select in this step. For example, if you select **“critical”** datastore tag from the dropdown menu, notifications will be generated only for source datastores having the "critical" tag applied to them. 
+
+!!! note 
+	If you choose **"An Anomaly is Detected"** as the trigger condition, you'll need to define the Anomaly's Tag and set a minimum Anomaly weight. This means that only anomalies with a weight equal to or greater than the specified value will trigger a notification. If no value is set, the weight will be ignored. |
 
 ![select-tag](../../assets/notifications/select-tag-light-7.png#only-light)
 ![select-tag](../../assets/notifications/select-tag-light-7.png#only-dark)
 
-**Step 4:** Select the notification channel where you want your alerts to be sent. This ensures you get notified in the way you prefer. 
+**6. Notification channel:** Select the notification channel where you want your alerts to be sent. This ensures you get notified in the way you prefer. 
 
 | Channels | Description | References |
-|------ |------ |------ |
-| Emails | Sends notifications directly to your specified email addresses. | See more. |
-| HTTP Action | Triggers an HTTP action to notify a specific endpoint or service. | See more. |
-| Microsoft Teams | Sends notifications to a specified Microsoft Teams channel. | See more. |
-| Pager Duty | Integrates with Pager Duty to alert you through your Pager Duty setup. | See more. |
-| Slack  | Sends notifications to a specified Slack channel. | See more. |
-| Webhook | Sends notifications via webhooks to custom endpoints you configure. | See more. |
+|-------|--------|--------|
+| Emails | Send notifications directly to your specified email addresses. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/email/). |
+| HTTP Action | Triggers an HTTP action to notify a specific endpoint or service. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/http-action/). |
+| Microsoft Teams | Sends notifications to a specified Microsoft Teams channel. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/microsoft-teams/). |
+| PagerDuty | Integrates with Pager Duty to alert you through your PagerDuty setup. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/pagerduty/). |
+| Slack  | Sends notifications to a specific Slack channel. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/slack/). |
+| Webhook | Sends notifications via webhooks to custom endpoints you configure. | [See more](https://userguide.qualytics.io/settings/notifications/notification-services/webhook/). |
 
-!!! note
+!!! note 
 	If you do not select any notification channel, you will receive notifications by default via in-app notifications. However, if you choose any notification channel, such as Email, you will receive notifications through both your selected channel and also in-app notifications.
 
-!!! tip
+!!! tip 
 	Qualytics provides you with multiple options for receiving notifications. You can select one or more notification channels to get notified.
 
 ![select-channel](../../assets/notifications/select-channel-light-8.png#only-light)
 ![select-channel](../../assets/notifications/select-channel-light-8.png#only-dark)
 
-**Step 4:** Once you have selected your preferred notification channels, then click on the **“Save”** button.
+**Step 3:** Once you have selected your preferred notification channels, then click on the **“Save”** button.
 
 ![save](../../assets/notifications/save-light-9.png#only-light)
 ![save](../../assets/notifications/save-light-9.png#only-dark)
