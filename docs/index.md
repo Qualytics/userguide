@@ -13,9 +13,10 @@ With Qualytics, your data teams can quickly address data issues in a proactive w
 
 Here's how it works:
 
-1. **Analyzing Historical Data**: Qualytics examines your historical data to understand its patterns and characteristics, allowing it to create rules that define good data quality.
+1. **Analyzing Historical Data**: Qualytics examines your historical data to understand its patterns and characteristics, allowing it to automatically create rules that define expectations about your data's values and relationships. These rules
+   are called data quality checks or just "checks" for short.
 
-2. **Finding Anomalies**: These rules, combined with any rules you create yourself, are used to identify any abnormalities or inconsistencies in your historical data or new data (even when new data is added incrementally).
+2. **Finding Anomalies**: These automatically discovered checks, combined with any checks you create yourself, are used to identify any abnormalities or inconsistencies (anomalies) in your historical data or new data (even when new data is added incrementally).
 
 3. **Taking Corrective Actions**: When an anomaly is detected, Qualytics helps your team take appropriate actions. Utilizing tags, it can send notifications through the platforms you use (such as Teams, Slack, or PagerDuty), trigger workflows in tools (like Airflow, Fivetran or Airbyte), provide additional information about the anomaly to your chosen datastore (compatible with SQL-based integrations like dbt), and even suggest the best course of action through its user interface and API.
 
