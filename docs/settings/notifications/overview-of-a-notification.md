@@ -130,7 +130,7 @@ A modal window **“Add Notification Rule”** will appear providing you with fi
 **4.** **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out. 
 
 !!! tip
-	You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily [insert internal variables](#available-variables) such as {{rule_name}}, {{container_name}}, and {{datastore_name}}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
+	You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily [insert internal variables](#available-variables) such as **{{rule_name}}**, **{{container_name}}**, and **{{datastore_name}}**. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 ![message](../../assets/notifications/message-light.png#only-light)
 ![message](../../assets/notifications/message-light.png#only-dark)
