@@ -78,16 +78,166 @@ This option automatically profiles tables associated with selected tags. Tags ar
   
 **Step 4**: Configure the following three operations settings:
 
-**1. Infer data quality checks**: When enabled, this option allows Qualytics to automatically generate and update data quality checks based on the profile results. This feature leverages the Qualytics Inference Engine to create appropriate checks that ensure data integrity and quality.  
-  
-![inference-engine](../assets/profile-operations/inference-engine-light.png#only-light)
-![inference-engine](../assets/profile-operations/inference-engine-dark.png#only-dark)
-  
-**2. Starting Threshold**: This setting allows users to specify a minimum incremental identifier value to set a starting point for the profile operation. It helps in filtering data from a specific point in time or a particular batch value.  
+1. Profile Inference Threshold
+2. Starting Threshold
+3. Record Limit
 
-- Greater Than Time: Users can select a timestamp in UTC to start profiling data from a specific time onwards. This is useful for focusing on recent data or data changes since a particular time.  
+### Profile Inference Threshold
 
-- Greater Than Batch: Users can enter a batch value to start profiling from a specific batch. This option is helpful for scenarios where data is processed in batches, allowing the user to profile data from a specific batch number onwards.
+The Profile Inference Threshold allows you to customize the data quality checks that are automatically created and updated when your data is analyzed. This means you can adjust the data quality checks based on how complex the data rules are, giving you more control over how your data is checked and monitored.
+
+**Default Configuration**
+
+By default, the Profile Inference Threshold is set to 5, which provides a comprehensive range of checks designed to ensure data integrity across different scenarios. Users have the flexibility to adjust this threshold based on their specific needs, allowing for either basic or advanced checks as required.
+
+![default-configuration](../assets/profile-operations/default-configuration-light.png#only-light)
+![default-configuration](../assets/profile-operations/default-configuration-dark.png#only-dark)
+
+#### Levels of Check Inference
+
+The Profile Inference Threshold ranges from **0** to **5**, with each level including progressively more complex and comprehensive checks. Below is an explanation of each level:               
+
+!!! note 
+    Each level includes all the checks from the previous levels and adds new checks specific to that level. For example, at Level 1, there are five basic checks. At Level 2, you get those five checks plus additional ones for Level 2\. By the time you reach Level 5, it covers all the checks from Levels 1 to 4 and adds its own new checks for complete review. 
+
+**Level 0: No Inference**
+
+At this level, no checks are automatically inferred. This is suitable when users want complete control over which checks are applied, or if no checks are needed. Ideal for scenarios where profiling should not infer any constraints, and all checks will be manually defined.
+
+![inference-threshold-level0](../assets/profile-operations/inference-threshold-level0-light.png#only-light)
+![inference-threshold-level0](../assets/profile-operations/inference-threshold-level0-dark.png#only-dark)
+
+**Level 1: Basic Data Integrity and Simple Value Threshold Checks**
+
+This level includes fundamental rules for basic data integrity and simple validations. It ensures that basic constraints like completeness, non-negative numbers, and valid date ranges are applied. Included Checks:
+
+- **Completeness Checks:** Ensure data fields are complete if previously complete.
+
+- **Categorical Range Checks:** Validate if values fall within a predefined set of categories. 
+
+- **Non-Negative Numbers:** Ensure numeric values are non-negative.  
+
+- **Non-Future Date/Time:** Ensure datetime values are not set in the future.
+
+**Use Case:** Suitable for datasets where basic integrity checks are sufficient.
+
+The following table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 1, five checks are created.
+
+| Inferred Checks | Reference |
+|--------|--------|
+| Not Null (record) | [See more.](https://userguide.qualytics.io/checks/not-null-check/) |
+| Any Not Null (record) | [See more.](https://userguide.qualytics.io/checks/any-not-null-check/) |
+| Expected Values (record) | [See more.](https://userguide.qualytics.io/checks/expected-values-check/) |
+| Not Negative | [See more.](https://userguide.qualytics.io/checks/not-negative-check/) |
+| Not Future | [See more.](https://userguide.qualytics.io/checks/not-future-check/) |
+
+![inference-threshold-level1](../assets/profile-operations/inference-threshold-level1-light.png#only-light)
+![inference-threshold-level1](../assets/profile-operations/inference-threshold-level1-dark.png#only-dark)
+
+**Level 2: Value Range and Pattern Checks**
+
+Builds upon Level 1 by adding more specific checks related to value ranges and patterns. This level is more detailed and begins to enforce rules related to the nature of the data itself. Included Checks:
+
+- **Date Range Checks:** Ensure dates fall within a specified range. 
+
+- **Numeric Range Checks:** Validate that numeric values are within acceptable ranges.  
+
+- **String Pattern Checks:** Ensure strings match specific patterns (e.g., email formats).  
+
+- **Approximate Uniqueness:** Validate uniqueness of values if they are approximately unique.
+
+**Use Case:** Ideal for datasets where patterns and ranges are important for ensuring data quality.
+
+The following table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 2, four checks are created.
+
+| Checks | Reference |
+|------|------|
+| Between Times | [See more.](https://userguide.qualytics.io/checks/between-times-check/) |
+| Between | [See more.](https://userguide.qualytics.io/checks/between-check/) |
+| Matches Pattern | [See more.](https://userguide.qualytics.io/checks/matches-pattern-check/) |
+| Unique | [See more.](https://userguide.qualytics.io/checks/unique-check/) |
+
+![inference-threshold-level2](../assets/profile-operations/inference-threshold-level2-light.png#only-light)
+![inference-threshold-level2](../assets/profile-operations/inference-threshold-level2-dark.png#only-dark)
+
+**Level 3: Time Series and Comparative Relationship Checks**
+
+This level includes all checks from Level 2 and adds sophisticated checks for time series and comparative relationships between datasets. Included Checks:
+
+- **Date Granularity Checks:** Ensure the granularity of date values is consistent (e.g., day, month, year).
+
+- **Consistent Relationships:** Validate that relationships between overlapping datasets are consistent.
+
+**Use Case:** Suitable for scenarios where data quality depends on time-series data or when comparing data across different datasets.
+
+The following table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 3, eight checks are created.
+
+| Inferred checks | Reference |
+|--------|-------|
+| Time Distribution Size | [See more.](https://userguide.qualytics.io/checks/time-distribution-size-check/) |
+| After Date Time | [See more.](https://userguide.qualytics.io/checks/after-date-check/) |
+| Before Date Time | [See more.](https://userguide.qualytics.io/checks/before-date-time-check/) |
+| Greater Than | [See more.](https://userguide.qualytics.io/checks/greater-than-check/) |
+| Greater Than a Field | [See more.](https://userguide.qualytics.io/checks/greater-than-field-check/) |
+| Less Than | [See more.](https://userguide.qualytics.io/checks/less-than-check/) |
+| Less Than a Field | [See more.](https://userguide.qualytics.io/checks/less-than-field-check/) |
+| Equal To Field | [See more.](https://userguide.qualytics.io/checks/equal-to-field-check/) |
+
+![inference-threshold-level3](../assets/profile-operations/inference-threshold-level3-light.png#only-light)
+![inference-threshold-level3](../assets/profile-operations/inference-threshold-level3-dark.png#only-dark)
+
+**Level 4: Linear Regression and Cross-Datastore Relationship Checks**
+
+This level includes all checks from Level 3 and adds even more advanced checks, including linear regression analysis and validation of relationships across different data stores. Included Checks:
+
+- **Linear Regression Checks:** Validate data using regression models to identify trends and outliers.
+
+- **Cross-Datastore Relationships:** Ensure that data relationships are maintained across different data sources.
+
+**Use Case:** Best for complex datasets where advanced analytical checks are necessary.
+
+The following table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 4, four checks are created.
+
+| Inferred Checks | Reference |
+|-------|-------|
+| Predicted By | [See more.](https://userguide.qualytics.io/checks/predicted-by-check/) |
+| Exists In | [See more.](https://userguide.qualytics.io/checks/exists-in-check/) |
+| Not Exists In | [See more.](https://userguide.qualytics.io/checks/not-exists-in-check/) |
+| Is Replica Of | [See more.](https://userguide.qualytics.io/checks/is-replica-of-check/) |
+
+![inference-threshold-level4](../assets/profile-operations/inference-threshold-level4-light.png#only-light)
+![inference-threshold-level4](../assets/profile-operations/inference-threshold-level4-dark.png#only-dark)
+
+**Level 5: Shape Checks**
+
+The most comprehensive level, includes all previous checks plus checks that validate the shape of certain distribution patterns that can be identified in your data. Included Checks:
+
+- **Shape Checks:** Checks that define an expectation for some percentage of your data less than 100%.  The property “coverage” holds the percentage of your data for which the expressed check should be true.
+
+**Use Case:** Ideal for scenarios where each incremental set of scanned data should exhibit the same distributions of values as the training set.  For example, a transactions table is configured for a weekly incremental scan after each week’s data is loaded.  A shape check could define that 80% of all transactions are expected to be performed using “cash” or “credit” 
+
+This table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 5, three checks are created.
+
+| Inferred Checks | Reference |
+|--------|--------|
+| Expected Values (Shape) | [See more.](https://userguide.qualytics.io/checks/expected-values-check/) |
+| Matches Pattern (Shape) | [See more.](https://userguide.qualytics.io/checks/matches-pattern-check/) |
+| Not Null (Shape) | [See more.](https://userguide.qualytics.io/checks/not-null-check/) |
+
+![inference-threshold-level5](../assets/profile-operations/inference-threshold-level5-light.png#only-light)
+![inference-threshold-level5](../assets/profile-operations/inference-threshold-level5-dark.png#only-dark)
+
+!!! warning 
+    If the checks inferred during a profile operation do not detect any anomalies, and the check inference level decreases in the next profile operation, the checks that did not generate anomalies will be archived or discarded. However, if the checks detect any anomalies, they will be retained to continue monitoring the data and addressing potential issues.
+
+  
+### Starting Threshold 
+
+This setting allows users to specify a minimum incremental identifier value to set a starting point for the profile operation. It helps in filtering data from a specific point in time or a particular batch value.  
+
+- **Greater Than Time**: Users can select a timestamp in UTC to start profiling data from a specific time onwards. This is useful for focusing on recent data or data changes since a particular time.  
+
+- **Greater Than Batch**: Users can enter a batch value to start profiling from a specific batch. This option is helpful for scenarios where data is processed in batches, allowing the user to profile data from a specific batch number onwards.
 
 !!! note 
     The starting threshold i.e. **Greater Than Time** and **Greater Than Batch** are applicable only to the tables or files with an incremental timestamp strategy.
@@ -95,7 +245,9 @@ This option automatically profiles tables associated with selected tags. Tags ar
 ![starting-threshold](../assets/profile-operations/starting-threshold-light.png#only-light)
 ![starting-threshold](../assets/profile-operations/starting-threshold-dark.png#only-dark)
 
-**3. Record Limit**: Define the maximum number of records to be profiled: This slider allows users to set a limit on the number of records to be profiled per table. The range can be adjusted from 1 million to all available records. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
+### Record Limit 
+
+Define the maximum number of records to be profiled: This slider allows users to set a limit on the number of records to be profiled per table. The range can be adjusted from 1 million to all available records. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
 
 ![record-limit](../assets/profile-operations/record-limit-light.png#only-light)
 ![record-limit](../assets/profile-operations/record-limit-dark.png#only-dark)
@@ -220,7 +372,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 This status indicates that the profile operation is still running at the moment and is yet to be completed. A profile operation having a **running** status reflects the following details and actions:
 
 | Parameter                  | Interpretation |
-|----------------------------|-------------------------------------------------------------------------|
+|----------------------------|------------------------------------------|
 | Operation ID               | Unique identifier |
 | Operation Type             | Type of operation performed (catalog, profile, or scan) |
 | Timestamp                  | Timestamp when the operation was started |
@@ -241,7 +393,7 @@ This status indicates that the profile operation is still running at the moment 
 This status indicates that the profile operation was manually stopped before it could be completed. A profile operation having an **aborted** status reflects the following details and actions:
 
 | Parameters           | Interpretation |
-|----------------------|-----------------------------------------------------------------------------|
+|----------------------|-------------------------------------|
 | Operation ID         | Unique identifier |
 | Operation Type       | Type of operation performed (catalog, profile, or scan) |
 | Timestamp            | Timestamp when the operation was started |
@@ -264,7 +416,7 @@ This status indicates that the profile operation was manually stopped before it 
 This status signals that the profile operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A profile operation having a **warning** status reflects the following details and actions:
 
 | Parameter               | Interpretation  |
-|-------------------------|--------------------------------------------------------------------------|
+|-------------------------|------------------------------------------|
 | Operation ID            | Unique identifier |
 | Operation Type          | Type of operation performed (catalog, profile, or scan) |
 | Timestamp               | Timestamp when the operation was started |
