@@ -256,8 +256,8 @@ Define the maximum number of records to be profiled: This slider allows users to
 
 Click on the **Run Now** button, and perform the profile operation immediately.
 
-![run-now](../assets/profile-operations/run-now-light.png#only-light)
-![run-now](../assets/profile-operations/run-now-dark.png#only-dark)
+![run](../assets/profile-operations/run-light.png#only-light)
+![run](../assets/profile-operations/run-dark.png#only-dark)
   
 ### Schedule
 
