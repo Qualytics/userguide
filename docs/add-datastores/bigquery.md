@@ -63,6 +63,9 @@ Assigning these roles ensures Qualytics can perform data discovery, management, 
 - **BigQuery Read Session User (`roles/bigquery.readSessionUser`)**
     Allows usage of the BigQuery Storage API for efficient retrieval of large data volumes. It provides capabilities to create and manage read sessions, facilitating large-scale data transfers.
 
+!!! warning
+    If a temporary dataset already exists in BigQuery and users want to use it when creating a new datastore connection, the service account must have the `bigquery.tables.create` permission to perform the test connection and proceed to the datastore creation.
+
 ### Datastore BigQuery Privileges
 
 The following table outlines the privileges associated with BigQuery roles when configuring datastore connections in Qualytics:
@@ -102,12 +105,11 @@ A source datastore is a storage location used to connect to and access data from
 ![select-a-connector](../assets/datastores/bigquery/select-a-connector-light.png#only-light)
 ![select-a-connector](../assets/datastores/bigquery/select-a-connector-dark.png#only-dark)
 
-
-| REF. | FIELDS          | ACTIONS                                                                                     |
-|------|-----------------|---------------------------------------------------------------------------------------------|
+| REF. | FIELDS          | ACTIONS                                   |
+|------|-----------------|-------------------------------------------|
 | 1️.   | Name (Required)  | Specify the name of the datastore (e.g. The specified name will appear on the datastore cards.) |
 | 2️.  | Toggle Button   | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3.    | Connector (Required) | Select **BigQuery** from the dropdown list.                                                    |
+| 3.    | Connector (Required) | Select **BigQuery** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 

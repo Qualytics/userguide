@@ -1,45 +1,104 @@
-## Understanding Your System Health Page
+# Health
 
-This page gives you a real-time overview of your system's resources, helping you monitor performance and diagnose potential issues.
+System Health provides a real-time overview of your system's resources, essential for monitoring performance and diagnosing potential issues. It provides key indicators and status updates to help you maintain system health and quickly address potential issues.
+
+## Navigation to Health
+
+**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
+
+![global-settings](../../assets/health/global-settings-light-1.png#only-light)
+![global-settings](../../assets/health/global-settings-dark-1.png#only-dark)
+
+**Step 2:** You will be directed to the Settings page; then click on the **Health** section.
+
+![health](../../assets/health/health-light-2.png#only-light)
+![health](../../assets/health/health-dark-2.png#only-dark)
+
+## Summary Section
+
+The **Summary** section displays the current platform version, along with the database status and RabbitMQ state.
+
+| REF. | FIELD | ACTION | EXAMPLE |
+|----- |-------|--------|---------|
+| 1 | Current Platform Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
+| 2 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
+| 3 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
+
+![summary](../../assets/health/summary-light-3.png#only-light)
+![summary](../../assets/health/summary-dark-3.png#only-dark)
+
+## Health Indicator
+
+The health status indicator reflects the overall system resources health.For example, in the image below, a green checkmark indicates that our system resources are healthy.
+
+| NOTE: Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical." |
 
 
-![Screenshot](../../assets/health/health-light.png#only-light)
-![Screenshot](../../assets/health/health-dark.png#only-dark)
-
-!!!info
-	A simple indicator (e.g., green checkmark for "Healthy", red exclamation mark for "Critical").
-
-## Summary
-
-![Screenshot](../../assets/health/summary-light.png#only-light)
-![Screenshot](../../assets/health/summary-dark.png#only-dark)
-
-   - **Current Platform Version:** The active version of your platform's core software. This is important for compatibility and troubleshooting.
-   - **Database Status:**  Confirms a  connection to your database. A status of "OK" means connectivity is working. 
-   - **RabbitMQ  State:** Confirms that RabbitMQ, your message broker service, is functioning correctly with "OK" status.
+![health-indicator](../../assets/health/health-indicator-light-4.png#only-light)
+![health-indicator](../../assets/health/health-indicator-dark-4.png#only-dark)
 
 ## Analytics Engine
 
-![Screenshot](../../assets/health/analytics-engine-light.png#only-light)
-![Screenshot](../../assets/health/analytics-engine-dark.png#only-dark)
+The **Analytics Engine** section provides advanced information about the analytics engine's configuration and current state for technical users and developers.
 
-   - **Build Date:** The date the Analytics Engine was built.
-   - **Implementation Version:** The specific version of the Analytics Engine codebase in use.
-   - **Spark Version:**  The version of the Apache Spark processing engine, used by your Analytics Engine.
-   - **Max Executors, Cores Per Executor, Max Memory Per Executor:**  These show configuration settings for the Analytics Engine's resources, controlling how much computing power it can utilize.
-   - **Max DataFrame Size:** This determines the maximum size of dataframes the Analytics Engine can process.
-   - **Thread Pool State:** This provides technical detail on the status of threads, used by the Analytics Engine for parallel processing. 
+| REF | FIELD | ACTION | EXAMPLE |
+|-----|-------|--------|---------|
+| 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Aug 8 2024,7:39 AM (GMT+5:30) |
+| 2 | Implementation Version | The version of the analytics engine implementation being used.  | 2.0.0 |
+| 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 10 |
+| 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 25000 MB |
+| 5 | Driver Free Memory | The amount of free memory available for the driver, which manages the Spark application. | 968 MB |
+| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 3.5.1 |
+| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 3 |
+| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
+| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
 
-## Using the Health Page
+![analytics-engine](../../assets/health/analytics-engine-light-5.png#only-light)
+![analytics-engine](../../assets/health/analytics-engine-dark-5.png#only-dark)
 
-* **Baseline Health:** Refer to this page for a standard reading of your system's usual operating state.
-* **Issue Identification:**  If you experience slowdowns or errors, check this page:
-    - A non-"OK" status for Database or RabbitMQ indicates a critical issue.
-    - Changes in Analytics Engine configuration might affect performance.
-* **Version Tracking:**  Confirm the versions currently in use before updates or when troubleshooting compatibility issues.
+## Manage Health Summary
 
-**Important Notes:**
+You can perform essential tasks such as copying the health summary, refreshing it, and restarting the analytics engine. These functionalities help maintain an up-to-date overview of system performance and ensure accurate analytics.
 
-* If a component displays a status other than "OK", seek further documentation or consult your technical support team.
-* The Analytics Engine section provides advanced information for technical users and developers.
+### Copy Health Summary
+
+The **Copy Health Summary** feature lets you duplicate all data from the Health Section for easy sharing or saving.
+
+**Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Copy Health Summary** from the drop-down menu.
+
+![copy-health](../../assets/health/copy-health-light-6.png#only-light)
+![copy-health](../../assets/health/copy-health-dark-6.png#only-dark)
+
+**Step 2:** After clicking on **Copy Health Summary**,  a success message saying **Copied.**
+
+![copied](../../assets/health/copied-light-7.png#only-light)
+![copied](../../assets/health/copied-dark-7.png#only-dark)
+
+### Refresh Health Summary
+
+The **Refresh Health Summary** option updates the Health Section with the latest data. This ensures that you see the most current performance metrics and system status.
+
+**Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Refresh Health Summary** to update the latest data.  
+
+![refresh-health](../../assets/health/refresh-health-light-8.png#only-light)
+![refresh-health](../../assets/health/refresh-health-dark-8.png#only-dark)
+
+## Restart Analytics Engine
+
+The **Restart Analytics Engine** option restarts the analytics processing system. This helps resolve issues and ensures that analytics data is accurately processed.
+
+**Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Restart Analytics Engine** from the drop-down menu. 
+
+![restart-analytics](../../assets/health/restart-analytics-light-9.png#only-light)
+![restart-analytics](../../assets/health/restart-analytics-dark-9.png#only-dark)
+
+**Step 2:** A modal window will pop up. Click the **Restart** button in this window to restart the analytics engine. Restarting the engine helps resolve any issues and ensures that your analytics data is up-to-date and accurately processed.
+
+![restart](../../assets/health/restart-light-10.png#only-light)
+![restart](../../assets/health/restart-dark-10.png#only-dark)
+
+**Step 3:** After clicking on **Restart**button a success message saying **Successfully triggered Analytics Engine restart.**
+
+![successfully-triggered](../../assets/health/successfully-triggered-light-11.png#only-light)
+![successfully-triggered](../../assets/health/successfully-triggered-dark-11.png#only-dark)
 

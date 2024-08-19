@@ -5,6 +5,19 @@ hide:
 
 # Release Notes
 
+### 2024.08.10 { id=2024.08.10 }
+
+#### Feature Enhancements
+
+- Introducing Profile Inference Threshold
+    - This feature allows users to adjust which check types will be automatically created and updated during data profiling, enabling them to manage data quality expectations based on the complexity of inferred data quality rules.
+- Anomaly Source Records Retrieval Retry Option
+    - Enabled users to manually retry fetching anomaly source records when the initial request fails.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.07.31 { id=2024.07.31 }
 
 #### Feature Enhancements

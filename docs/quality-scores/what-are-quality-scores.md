@@ -1,7 +1,7 @@
 # Quality Scores
 
 Quality Scores are quantified measures of data quality calculated at the field
-and [container](/userguide/glossary#container) levels recorded as time-series to enable tracking of changes over time.
+and [container](https://userguide.qualytics.io/glossary/#container) levels recorded as time-series to enable tracking of changes over time.
 Scores range from 0-100 with higher values indicating superior quality. These scores integrate eight distinct factors
 providing a granular analysis of the attributes that impact the overall data quality.
 

@@ -67,7 +67,7 @@ aka "Check" is an expression regarding the values of a Container that can be eva
 
 ### <a name="datastore"></a>__Datastore__
 
-Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](/userguide/datastores/overview-of-a-datastore/).
+Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](/add-datastores/overview-of-a-datastore/).
 
 ### <a name="datawarehouse"></a>__Data Warehouse__
 
@@ -142,7 +142,7 @@ A procedure utilizing a combination of processes, tools, or systems of interrela
 
 ### <a name="quality"></a>__Quality Score__
 
-A measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/userguide/quality-scores/what-are-quality-scores).
+A measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/quality-scores/what-are-quality-scores).
 
 ### <a name="app"></a>__Qualytics App__
 
