@@ -5,6 +5,23 @@ hide:
 
 # Release Notes
 
+### 2024.08.19 { id=2024.08.19 }
+
+#### Feature Enhancements
+
+- Enhance Auto-Refresh Mechanism on Tree View
+    - The datastore and container tree footers are now automatically refreshed after specific actions, eliminating the need for manual page refreshes.
+
+- Support Oracle Client-Side Encryption
+    - Connections with Oracle now feature end-to-end encryption. Database connection encryption adds an extra layer of protection, especially for transmissions over long-distance, insecure channels.
+
+#### General Fixes and Improvements
+
+- UI Label on Explore Page
+    - Fixed an issue where the labels on the Explore page did not change based on the selected time frame.
+
+- General Fixes and Improvements
+
 ### 2024.08.10 { id=2024.08.10 }
 
 #### Feature Enhancements
