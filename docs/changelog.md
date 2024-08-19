@@ -20,6 +20,12 @@ hide:
 - UI Label on Explore Page
     - Fixed an issue where the labels on the Explore page did not change based on the selected time frame.
 
+- Inferred Field Type Enhancements
+    - Behavior updated to infer field types at data load time rather than implicitly cast them to latest profiled type. This change supports more consistent expected schema verification for delimited file types and resolves issues when comparing inferred fields to non-inferred fields in some rule types.
+
+- Boolean Type Inference
+    - Behavior updated to align boolean inference with Spark Catalyst so that profiled types are more robustly handled during Spark based comparisons
+
 - General Fixes and Improvements
 
 ### 2024.08.10 { id=2024.08.10 }
