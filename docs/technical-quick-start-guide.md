@@ -15,7 +15,7 @@ After you've obtained access to your deployment, you'll want to:
 2. Initiate a [profiling](https://userguide.qualytics.io/glossary/#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
 3. Assert those checks to detect data [anomalies](https://userguide.qualytics.io/glossary/#anomaly)
 
-## Connecting a [Datastore](https://userguide.qualytics.io/glossary/#datastore)
+## Connecting a [Datastore](./glossary.md)
 
 The first step of configuring a Qualytics instance is to `Add Source Datastore`. In order to add a Source Datastore via Qualytics, you need to select the specific `Connector`. This is necessary so that the appropriate form for collecting connection details can be rendered.
 
