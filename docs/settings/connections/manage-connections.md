@@ -18,9 +18,10 @@ Let's get started 🚀
 
 ## Manage Connection
 
-You can effectively manage your connections by editing, deleting, and adding datastores to maintain accuracy and efficiency. By editing connections, you update details, improve quality, and adjust configurations. 
+You can effectively manage your connections by editing, deleting, and adding datastores to maintain accuracy and efficiency.
 
-Deleting connections removes obsolete links, enhances security, and reduces clutter. Adding datastores integrates new sources, expands capabilities, and enriches data. These actions ensure a robust, secure, and efficient data environment, enhancing overall data management and workflow.
+!!! warning
+    Before deleting a connection, ensure that all associated datastores and enrichment datastores have been removed.
 
 ### Edit Connection
 
@@ -63,7 +64,7 @@ This allows you to remove outdated or unnecessary connections to maintain a clea
 
 **Step 2**: A modal window **Delete Connection** will appear.
 
-!!! note 
+!!! warning 
     Source Datastores and Enrichment Datastores associated must be removed before deleting the connection
 
 ![delete-window](../../assets/connections/delete-window-light-8.png#only-light)
