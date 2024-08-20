@@ -34,13 +34,13 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1:** Select the **DB2** connector from the dropdown list and add connection details such as host, port, user, password, SSL connection, database, and schema.
 
-![add-datastore-credentials](../assets/datastores/db2/add-datastore-credentials-light.png#only-light)
-![add-datastore-credentials](../assets/datastores/db2/add-datastore-credentials-dark.png#only-dark)
+![add-datastore-credentials](../assets/datastores/db2/add-datastore-credentials-light.png#only-light){: style="height:450px;width:400px;"}
+![add-datastore-credentials](../assets/datastores/db2/add-datastore-credentials-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/db2/add-datastore-credentials-explain-light.png#only-light)
-![add-datastore-credentials-explain](../assets/datastores/db2/add-datastore-credentials-explain-dark.png#only-dark)
+![add-datastore-credentials-explain](../assets/datastores/db2/add-datastore-credentials-explain-light.png#only-light){: style="height:450px;width:400px;"}
+![add-datastore-credentials-explain](../assets/datastores/db2/add-datastore-credentials-explain-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 | REF.         | FIELDS               | ACTIONS                                                                                     |
 |--------------|----------------------|---------------------------------------------------------------------------------------------|
@@ -56,8 +56,8 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/db2/test-datastore-connection-light.png#only-light)
-![test-datastore-connection](../assets/datastores/db2/test-datastore-connection-dark.png#only-dark)
+![test-datastore-connection](../assets/datastores/db2/test-datastore-connection-light.png#only-light){: style="height:450px;width:400px;"}
+![test-datastore-connection](../assets/datastores/db2/test-datastore-connection-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
 
@@ -67,16 +67,16 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/db2/use-existing-datastore-light.png#only-light)
-![use-existing-datastore](../assets/datastores/db2/use-existing-datastore-dark.png#only-dark)
+![use-existing-datastore](../assets/datastores/db2/use-existing-datastore-light.png#only-light){: style="height:450px;width:400px;"}
+![use-existing-datastore](../assets/datastores/db2/use-existing-datastore-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 !!!note
      If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/db2/test-connection-for-existing-datastore-light.png#only-light)
-![test-connection-for-existing-datastore](../assets/datastores/db2/test-connection-for-existing-datastore-dark.png#only-dark)
+![test-connection-for-existing-datastore](../assets/datastores/db2/test-connection-for-existing-datastore-connection-light.png#only-light){: style="height:450px;width:400px;"}
+![test-connection-for-existing-datastore](../assets/datastores/db2/test-connection-for-existing-datastore-connection-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 !!!note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -90,8 +90,8 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/db2/next-button-for-enrichment-light.png#only-light)
-![next-button-for-enrichment](../assets/datastores/db2/next-button-for-enrichment-dark.png#only-dark)
+![next-button-for-enrichment](../assets/datastores/db2/next-button-for-enrichment-light.png#only-light){: style="height:450px;width:400px;"}
+![next-button-for-enrichment](../assets/datastores/db2/next-button-for-enrichment-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 **Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
@@ -112,8 +112,8 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/db2/enrichment-datastore-explain-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/db2/enrichment-datastore-explain-dark.png#only-dark)
+![enrichment-datastore-explain](../assets/datastores/db2/enrichment-datastore-explain-light.png#only-light){: style="height:450px;width:400px;"}
+![enrichment-datastore-explain](../assets/datastores/db2/enrichment-datastore-explain-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 | REF.         | FIELDS         | ACTIONS                                                                                     |
 |--------------|----------------|--------------------------------------------------------------------------------------------|
@@ -129,13 +129,13 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 2:**  Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
-![test-connection-for-enrichment-datastore](../assets/datastores/db2/test-connection-for-enrichment-datastore-light.png#only-light)
-![test-connection-for-enrichment-datastore](../assets/datastores/db2/test-connection-for-enrichment-datastore-dark.png#only-dark)
+![test-connection-for-enrichment-datastore](../assets/datastores/db2/test-connection-for-enrichment-datastore-light.png#only-light){: style="height:450px;width:400px;"}
+![test-connection-for-enrichment-datastore](../assets/datastores/db2/test-connection-for-enrichment-datastore-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 **Step 3:** Click on the **Finish** button to complete the configuration process. 
 
-![finish-configuration](../assets/datastores/db2/finish-configuration-light.png#only-light)
-![finish-configuration](../assets/datastores/db2/finish-configuration-dark.png#only-dark)
+![finish-configuration](../assets/datastores/db2/finish-configuration-light.png#only-light){: style="height:450px;width:400px;"}
+![finish-configuration](../assets/datastores/db2/finish-configuration-dark.png#only-dark){: style="height:450px;width:400px;"}
 
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
@@ -173,13 +173,13 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
  - **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
- ![use-existing-enrichment-datastore](../assets/datastores/db2/use-existing-enrichment-datastore-light.png#only-light)
-![use-existing-enrichment-datastore](../assets/datastores/db2/use-existing-enrichment-datastore-dark.png#only-dark)
+ ![use-existing-enrichment-datastore](../assets/datastores/db2/use-existing-enrichment-datastore-light.png#only-light){: style="height:450px;width:500px;"}
+![use-existing-enrichment-datastore](../assets/datastores/db2/use-existing-enrichment-datastore-dark.png#only-dark){: style="height:450px;width:500px;"}
 
 **Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/db2/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/db2/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/db2/finish-configuration-for-existing-enrichment-datastore-light.png#only-light){: style="height:450px;width:500px;"}
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/db2/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark){: style="height:450px;width:500px;"}
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
