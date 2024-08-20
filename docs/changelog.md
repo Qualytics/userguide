@@ -5,6 +5,29 @@ hide:
 
 # Release Notes
 
+### 2024.08.19 { id=2024.08.19 }
+
+#### Feature Enhancements
+
+- Enhance Auto-Refresh Mechanism on Tree View
+    - The datastore and container tree footers are now automatically refreshed after specific actions, eliminating the need for manual page refreshes.
+
+- Support Oracle Client-Side Encryption
+    - Connections with Oracle now feature end-to-end encryption. Database connection encryption adds an extra layer of protection, especially for transmissions over long-distance, insecure channels.
+
+#### General Fixes and Improvements
+
+- UI Label on Explore Page
+    - Fixed an issue where the labels on the Explore page did not change based on the selected time frame.
+
+- Inferred Field Type Enhancements
+    - Behavior updated to infer field types at data load time rather than implicitly cast them to latest profiled type. This change supports more consistent expected schema verification for delimited file types and resolves issues when comparing inferred fields to non-inferred fields in some rule types.
+
+- Boolean Type Inference
+    - Behavior updated to align boolean inference with Spark Catalyst so that profiled types are more robustly handled during Spark based comparisons
+
+- General Fixes and Improvements
+
 ### 2024.08.10 { id=2024.08.10 }
 
 #### Feature Enhancements
