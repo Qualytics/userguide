@@ -10,6 +10,39 @@ The `Satisfies Expression` rule allows for a wide range of custom validations on
 
 This rule will evaluate an expression against each record, marking those that do not satisfy the condition as anomalies. It provides the flexibility to create complex validation logic without being restricted to predefined rule structures.
 
+### Use Case
+
+#### Example 1: Satisfies Expression Using a `CASE` Statement
+
+Let's assume you want to ensure that for orders with a priority of '1-URGENT' or '2-HIGH', the `orderstatus` must be 'O' (for open), and for orders with a priority of '3-MEDIUM', the `orderstatus` must be either 'O' or 'P' (for pending).
+
+``` json
+ CASE
+    WHEN o_orderpriority IN ('1-URGENT', '2-HIGH') AND o_orderstatus != 'O' THEN FALSE
+    WHEN o_orderpriority = '3-MEDIUM' AND o_orderstatus NOT IN ('O', 'P') THEN FALSE
+    ELSE TRUE
+ END
+```
+
+#### Example 2: Satisfies Expression Using a `Relatively Complex CTE` Statement
+
+**Objective:**
+
+To ensure that the overall effect of discounts on item prices remains within acceptable limits, we validate whether the average discounted price of all items is greater than the maximum discount applied to any single item.
+
+**Background:**
+
+In pricing analysis, it’s important to monitor how discounts affect the final prices of products. By comparing the average price after discounts with the maximum discount applied, we can assess whether the discounts are having an overly significant impact or if they are within a reasonable range.
+
+``` json
+CASE 
+        WHEN (SELECT AVG(l_extendedprice * (1 - l_discount)) FROM lineitem) > 
+             (SELECT MAX(l_discount) FROM {{_qualytics_self}}) 
+        THEN TRUE 
+        ELSE FALSE 
+    END AS is_discount_within_limits
+```
+
 ### Field Scope
 
 **Calculated:** The rule automatically identifies the fields involved, without requiring explicit field selection.
