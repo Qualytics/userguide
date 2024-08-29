@@ -33,7 +33,7 @@ The inferred data quality checks are rigorously tested against the actual source
 ![adding-source-datastore](../assets/profile-operations/adding-source-datastore-light.png#only-light)
 ![adding-source-datastore](../assets/profile-operations/adding-source-datastore-dark.png#only-dark)
   
-**Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the Run button under Profile to initiate the catalog operation.
+**Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Profile** to initiate the profile operation.
 
 ![profile](../assets/profile-operations/profile-light.png#only-light)
 ![profile](../assets/profile-operations/profile-dark.png#only-dark)
@@ -342,7 +342,7 @@ When the profile operation is completed, you will receive the notification and c
 
 2. **Schedule**: Provides insights into the scheduled operations.
 
-3. **Search**: Search any operation (including catalog) by entering the operation ID
+3. **Search**: Search any operation (including profile) by entering the operation ID
 
 4. **Sort by**: Organize the list of operations based on the **Created Date** or the **Duration**.
 
@@ -539,7 +539,7 @@ Unwrap the container to view the underlying fields. The following details (metri
 
 This section provides payload examples for initiating and checking the running status of a profile operation. Replace the placeholder values with data specific to your setup.
 
-### Running a Catalog operation
+### Running a Profile operation
 
 To run a profile operation, use the API payload example below and replace the placeholder values with your specific values:
 
@@ -551,7 +551,7 @@ To run a profile operation, use the API payload example below and replace the pl
 
 -   **max_records_analyzed_per_partition: null**: This setting implies that all records within all containers will be profiled.
 
--   **infer_constraints: false**: This setting indicates that the engine will not automatically infer quality checks for you.
+-   **infer_threshold: 5:** This setting indicates that the engine will automatically infer quality checks of level 5 for you.
     
 ```json
 {  
@@ -559,7 +559,7 @@ To run a profile operation, use the API payload example below and replace the pl
     "datastore_id": datastore-id,  
     "container_names":[],  
     "max_records_analyzed_per_partition":null,  
-    "infer_constraints":true  
+    "inference_threshold":5  
 }
 ```
   
@@ -569,7 +569,7 @@ To run a profile operation, use the API payload example below and replace the pl
 
 -   **max_records_analyzed_per_partition: 1000000:** This setting means that up to 1 million rows per container will be profiled.
 
--   **infer_constraints: false:** This setting indicates that the engine will not automatically infer quality checks.
+-   **infer_threshold: 0:** This setting indicates that the engine will not automatically infer quality checks for you.
 
 ```json
 {  
@@ -580,7 +580,7 @@ To run a profile operation, use the API payload example below and replace the pl
         "table_name_2"  
     ],  
     "max_records_analyzed_per_partition":1000000,  
-    "infer_constraints":false  
+    "inference_threshold":0  
 }
 ```
 
@@ -601,8 +601,8 @@ Below is a sample payload for scheduling a profile operation. Please substitute 
     "datastore_id":"datastore-id",  
     "container_names":[],  
     "max_records_analyzed_per_partition":null,  
-    "infer_constraints":true,  
-    "crontab":"00 00 */1 * *"  
+    "infer_constraints":5,  
+    "crontab":"00 00 /1  *"  
 }
 ```
 
@@ -634,7 +634,7 @@ To retrieve the profile operation status, use the API payload example below and 
                 "favorite": false
             },
             "schedule": null,
-            "infer_constraints": true,
+            "inference_threshold": 5,
             "max_records_analyzed_per_partition": -1,
             "max_count_testing_sample": 100000,
             "histogram_max_distinct_values": 100,
