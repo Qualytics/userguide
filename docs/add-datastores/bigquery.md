@@ -31,15 +31,15 @@ Click on the **Create dataset** to set up a new dataset.
     - **Dataset Location:** Select the location that aligns with where your other datasets reside to minimize data transfer delays.
     - **Default Table Expiration:** Set the expiration to `1 day` to ensure any table created in this dataset is automatically deleted one day after its creation.
 
-![configure-dataset-details](../assets/datastores/bigquery/configure-dataset-details.png){: style=“height:450px;width:450px;”}
+![configure-dataset-details](../assets/datastores/bigquery/configure-dataset-details.png){: style=width:650px}
  
 **Step 4:** Click the **Create Dataset** button to apply the configuration and create the dataset.
 
-![create-dataset-button](../assets/datastores/bigquery/create-dataset-button.png){: style=“height:450px;width:450px;”}
+![create-dataset-button](../assets/datastores/bigquery/create-dataset-button.png){: style=width:650px}
 
 **Step 5:** Navigate to the **created dataset** and find the **Dataset ID** in the **Dataset Info**.
 
-![created-dataset-page](../assets/datastores/bigquery/created-dataset-page.png)
+![created-dataset-page](../assets/datastores/bigquery/created-dataset-page.png){: style=width:650px}
 
 The dataset Info section contains the Dataset ID and other information related to the created dataset. This generated Dataset ID is used to configure the BigQuery datastore.
 
@@ -278,31 +278,31 @@ This section provides sample payloads for creating a BigQuery datastore. Replace
 
 === "Create a Source Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "your_project_id",
-            "schema": "your_dataset_id",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "bigquery",
-                "password": "your_service_account_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "your_project_id",
+        "schema": "your_dataset_id",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "bigquery",
+            "password": "your_service_account_key"
         }
+    }
     ```
 === "Create a Source Datastore with an existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "your_project_id",
-            "schema": "your_dataset_id",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "your_project_id",
+        "schema": "your_dataset_id",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 ### Creating an Enrichment Datastore
 
@@ -312,29 +312,29 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Create an Enrichment Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "your_project_id",
-            "schema": "your_enrichment_dataset_id",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "bigquery",
-                "password": "your_service_account_key"
-            }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "your_project_id",
+        "schema": "your_enrichment_dataset_id",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "bigquery",
+            "password": "your_service_account_key"
         }
+    }
     ```
 === "Create an Enrichment Datastore with an Existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "your_project_id",
-            "schema": "your_enrichment_dataset_id",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "your_project_id",
+        "schema": "your_enrichment_dataset_id",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
