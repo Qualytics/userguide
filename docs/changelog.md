@@ -5,6 +5,37 @@ hide:
 
 # Release Notes
 
+### 2024.08.30 { id=2024.08.30 }
+
+#### Feature Enhancements
+
+- New Draft Status for Checks
+    - Introduced a new 'draft' status for checks to enhance lifecycle management, allowing checks to be prepared and reviewed without impacting scan operations.
+    - Validation is only applied to active checks, ensuring draft checks remain flexible for adjustments without triggering automatic validations.
+
+- Introduce Draft Check Inference in Profile Operations
+    - Added a new option to infer checks as drafts, offering more flexibility during data profiling.
+
+- Improve Archive Capabilities for Checks and Anomalies
+    - Enhanced the archive capabilities for both checks and anomalies, allowing recovery of archived items.
+    - Introduced a hard delete option that allows permanent removal of archived items, providing greater control over their management.
+    - The Anomaly statuses 'Resolved' and 'Invalid' are now treated as archived states, aligning with the consistent approach used for checks.
+
+- Introduce a new Volumetric Check
+    - Introduced the Volumetric Check to monitor and maintain data volume stability within a specified range. This check ensures that the volume of data assets does not fluctuate beyond acceptable limits based on a moving daily average.
+    - Automatically inferred and maintained by the system for daily, weekly, and monthly averages, enabling proactive management of data volume trends.
+
+- Incremental Identifier Warning in Scan Dialog
+    - Enhanced the dialog to notify users when they attempt an incremental scan on containers lacking an incremental identifier, ensuring transparency and preventing unexpected full scans.
+
+#### General Fixes
+
+- Improve enrichment writes with queuing all writes (up to a queue threshold) for the entire scan operation. This will dramatically reduce the number of write operations performed.
+
+- Explicit casting to avoid weak CSV parser support for typing.
+
+- General Fixes and Improvements
+
 ### 2024.08.19 { id=2024.08.19 }
 
 #### Feature Enhancements
@@ -15,7 +46,7 @@ hide:
 - Support Oracle Client-Side Encryption
     - Connections with Oracle now feature end-to-end encryption. Database connection encryption adds an extra layer of protection, especially for transmissions over long-distance, insecure channels.
 
-#### General Fixes and Improvements
+#### General Fixes
 
 - UI Label on Explore Page
     - Fixed an issue where the labels on the Explore page did not change based on the selected time frame.
