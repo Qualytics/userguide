@@ -118,7 +118,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 ![select-enrichment](../assets/datastores/oracle/select-enrichment-dark.png#only-dark)
 
 !!! note
-    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore* has been successfully verified.
 
@@ -132,8 +132,8 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 When the configuration process is finished, a modal will display a **success  message** indicating that **your datastore has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/sucess-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/sucess-datastore-dark.png#only-dark)
+![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 **Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -147,7 +147,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 !!! note
-    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using  Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-light.png#only-light)
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-dark.png#only-dark)
@@ -175,8 +175,8 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/sucess-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/sucess-datastore-dark.png#only-dark)
+![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
