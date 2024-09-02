@@ -147,7 +147,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 !!! note
-    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using SQL server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-light.png#only-light)
 ![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-datastore-dark.png#only-dark)
