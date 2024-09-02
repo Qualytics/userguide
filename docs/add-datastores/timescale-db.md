@@ -136,7 +136,7 @@ When the configuration process is finished, a modal will display a **success mes
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
 
 !!! note
-    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Bank Enrichnment as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
@@ -164,7 +164,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![use-existing-enrichment-datastore](../assets/datastores/timescale-db/finish-datastore-light.png#only-light)
 ![use-existing-enrichment-datastore](../assets/datastores/timescale-db/finish-datastore-dark.png#only-dark)
 
-When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
+When the configuration process is finished, a modal window will display and a **success flash message** stating that **your data has been successfully added**.
 
 ![success-message](../assets/datastores/timescale-db/success-message-light.png#only-light)
 ![success-message](../assets/datastores/timescale-db/success-message-dark.png#only-dark)
