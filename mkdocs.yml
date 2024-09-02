@@ -73,7 +73,6 @@ nav:
         - General: container/overview-of-infer-data-type.md
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
-      - Add Check Templates: checks/add-check-template.md
       - Check Templates: checks/checks-template.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
