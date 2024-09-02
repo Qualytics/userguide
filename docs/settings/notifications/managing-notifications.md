@@ -1,4 +1,4 @@
-# Managing Notifications
+# Manage Notifications
 
 In Qualytics, managing notifications gives you full control over how and when you receive alerts. You can customize notifications to fit your needs, mute or unmute them to manage distractions and delete notifications to keep your system organized. By effectively managing your notifications, you ensure that critical updates reach you at the right time, while unnecessary alerts are minimized, allowing you to stay focused on what matters most.
 
@@ -80,13 +80,13 @@ Here, you can view all notifications that have been triggered based on the notif
 - Add or remove datastore tags
 - Update Notification Channels
 
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-11.png#only-light)
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-11.png#only-dark)
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-11.png#only-light){: style="height:600px;width:610px;"}
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-11.png#only-dark){: style="height:600px;width:610px;"}
 
 **Step 5:** Once you have edited the notification rule or made necessary changes, click on the **Save** button.
 
-![save-button](../../../assets/notifications/manage-notifications/save-button-light-12.png#only-light)
-![save-button](../../../assets/notifications/manage-notifications/save-button-dark-12.png#only-dark)
+![save-button](../../../assets/notifications/manage-notifications/save-button-light-12.png#only-light){: style="height:600px;width:610px;"}
+![save-button](../../../assets/notifications/manage-notifications/save-button-dark-12.png#only-dark){: style="height:600px;width:610px;"}
 
 After clicking on the **Save** button, a success flash message will appear saying the **Notification successfully updated.**
 
@@ -124,13 +124,13 @@ Here you can view a list of all the notifications you have added to the Qualytic
 - Add or remove datastore tags
 - Update notification channels 
 
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-18.png#only-light)
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-18.png#only-dark)
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-18.png#only-light){: style="height:600px;width:610px;"}
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-18.png#only-dark){: style="height:600px;width:610px;"}
 
 **Step 5:** Once you have edited the notification rule or made necessary changes, click on the **Save** button.
 
-![save-button](../../../assets/notifications/manage-notifications/save-button-light-19.png#only-light)
-![save-button](../../../assets/notifications/manage-notifications/save-button-dark-19.png#only-dark)
+![save-button](../../../assets/notifications/manage-notifications/save-button-light-19.png#only-light){: style="height:600px;width:610px;"}
+![save-button](../../../assets/notifications/manage-notifications/save-button-dark-19.png#only-dark){: style="height:600px;width:610px;"}
 
 After clicking on the **Save** button, a success flash message will display saying **Notification successfully updated.**
 
