@@ -259,13 +259,13 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
-   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png#only-light){: style="height:500px;width:610px;"}
-   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-dark.png#only-dark){: style="height:500px;width:610px;"}
+   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png#only-light)
+   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-dark.png#only-dark)
 
 **Step 3:** Click on the **Finish** button to complete the configuration process. 
 
-![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png#only-light){: style="height:500px;width:610px;"}
-![finish-configuration](../assets/datastores/databricks/finish-configuration-dark.png#only-dark){: style="height:500px;width:610px;"}
+![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png#only-light)
+![finish-configuration](../assets/datastores/databricks/finish-configuration-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
@@ -332,35 +332,35 @@ This section provides sample payloads for creating a Databricks datastore. Repla
 
 === "Create a Source Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "databricks_database",
-            "schema": "databricks_catalog",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "databricks",
-                "host": "databricks_host",
-                "password": "databricks_token",
-                "parameters": {
-                    "path": "databricks_http_path"
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "databricks_database",
+        "schema": "databricks_catalog",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "databricks",
+            "host": "databricks_host",
+            "password": "databricks_token",
+            "parameters": {
+                "path": "databricks_http_path"
             }
         }
+    }
     ```
 === "Create a Source Datastore with an existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "databricks_database",
-            "schema": "databricks_catalog",
-            "enrich_only": false,
-            "trigger_catalog": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "databricks_database",
+        "schema": "databricks_catalog",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection_id": connection-id
+    }
     ```
 ### Creating an Enrichment Datastore
 
@@ -370,33 +370,33 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 === "Create an Enrichment Datastore with a new Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "databricks_database",
-            "schema": "databricks_enrichment_catalog",
-            "enrich_only": true,
-            "connection": {
-                "name": "your_connection_name",
-                "type": "databricks",
-                "host": "databricks_host",
-                "password": "databricks_token",
-                "parameters": {
-                    "path": "databricks_http_path"
-                }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "databricks_database",
+        "schema": "databricks_enrichment_catalog",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "databricks",
+            "host": "databricks_host",
+            "password": "databricks_token",
+            "parameters": {
+                "path": "databricks_http_path"
             }
         }
+    }
     ```
 === "Create an Enrichment Datastore with an Existing Connection"
     ```json
-        {
-            "name": "your_datastore_name",
-            "teams": ["Public"],
-            "database": "databricks_database",
-            "schema": "databricks_enrichment_catalog",
-            "enrich_only": true,
-            "connection_id": connection-id
-        }
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "databricks_database",
+        "schema": "databricks_enrichment_catalog",
+        "enrich_only": true,
+        "connection_id": connection-id
+    }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
