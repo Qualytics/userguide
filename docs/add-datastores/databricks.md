@@ -22,7 +22,7 @@ SQL Warehouses (Serverless) in Databricks utilize serverless SQL endpoints for r
 
 | REF | ATTRIBUTE            | DESCRIPTION                            |
 | --- | -------------------- | -------------------------------------- |
-| 1️.  | Cost-effectiveness    | Serverless SQL endpoints allow you to pay only for the queries you execute, without the need to provision or manage dedicated infrastructure, making it more cost-effective for ad-hoc or sporadic queries. |
+| 1️.  | Cost-effectiveness   | Serverless SQL endpoints allow you to pay only for the queries you execute, without the need to provision or manage dedicated infrastructure, making it more cost-effective for ad-hoc or sporadic queries. |
 | 2️.  | Scalability          | Serverless architectures automatically scale resources based on demand, ensuring optimal performance for varying workloads. |
 | 3️.  | Simplified Management | With serverless SQL endpoints, you don't need to manage clusters or infrastructure, reducing operational overhead. |
 | 4️.  | Minimum Requirements  | The minimum requirements for using SQL Warehouse with serverless typically include access to a Databricks workspace and appropriate permissions to create and run SQL queries. |
@@ -169,28 +169,28 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1:** Select the **Databricks** connector from the dropdown list and add connection details such as host, HTTP path, database, and personal access token.
 
-![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-light.png#only-light){: style="height:450px;width:450px;"}
-![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-dark.png#only-dark){: style="height:450px;width:450px;"}
+![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-light.png#only-light){: style="height:600px;width:610px;"}
+![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-dark.png#only-dark){: style="height:600px;width:610px;"}
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/databricks/add-datastore-credentials-explain-light.png#only-light){: style="height:450px;width:450px;"}
-![add-datastore-credentials-explain](../assets/datastores/databricks/add-datastore-credentials-explain-dark.png#only-dark){: style="height:450px;width:450px;"}
+![add-datastore-credentials-explain](../assets/datastores/databricks/add-datastore-credentials-explain-light.png#only-light){: style="height:600px;width:610px;"}
+![add-datastore-credentials-explain](../assets/datastores/databricks/add-datastore-credentials-explain-dark.png#only-dark){: style="height:600px;width:610px;"}
 
-| REF. | FIELDS                  | ACTIONS               |
-|------|-------------------------|-----------------------|
-| 1️.   | Host (Required)         | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.|
-| 2️.   | HTTP Path (Required)    | Add the HTTP Path (web address) to fetch data from your Databricks account. |
+| REF. | FIELDS  | ACTIONS   |
+|------|---------|-----------|
+| 1️.   | Host (Required)     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.|
+| 2️.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
 | 3️.   | Personal Access Token (Required)  | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
-| 4️.   | Catalog (Required)      | Add a **Catalog** to fetch data structures and metadata from the Databricks. |
-| 5️.   | Database (Optional)     | Specify the database name to be accessed.|
-| 6️.   | Teams (Required)        | Select one or more teams from the dropdown to associate with this source datastore.|
+| 4️.   | Catalog (Required)  | Add a **Catalog** to fetch data structures and metadata from the Databricks. |
+| 5️.   | Database (Optional) | Specify the database name to be accessed.|
+| 6️.   | Teams (Required)    | Select one or more teams from the dropdown to associate with this source datastore.|
 | 7️.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/databricks/test-datastore-connection-light.png#only-light){: style="height:450px;width:450px;"}
-![test-datastore-connection](../assets/datastores/databricks/test-datastore-connection-dark.png#only-dark){: style="height:450px;width:450px;"}
+![test-datastore-connection](../assets/datastores/databricks/test-datastore-connection-light.png#only-light){: style="height:600px;width:610px;"}
+![test-datastore-connection](../assets/datastores/databricks/test-datastore-connection-dark.png#only-dark){: style="height:600px;width:610px;"}
                                   
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
 
@@ -200,16 +200,16 @@ If the toggle for **Use an existing connection** is turned on, then this will pr
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/databricks/use-existing-datastore-light.png#only-light){: style="height:450px;width:450px;"}
-![use-existing-datastore](../assets/datastores/databricks/use-existing-datastore-dark.png#only-dark){: style="height:450px;width:450px;"}
+![use-existing-datastore](../assets/datastores/databricks/use-existing-datastore-light.png#only-light){: style="height:600px;width:610px;"}
+![use-existing-datastore](../assets/datastores/databricks/use-existing-datastore-dark.png#only-dark){: style="height:600px;width:610px;"}
     
 !!!note
     If you are using existing credentials, you can only edit the details such as Catalog, Database, Teams, and Initiate Cataloging.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/databricks/test-connection-for-existing-datastore-light.png#only-light){: style="height:450px;width:450px;"}
-![test-connection-for-existing-datastore](../assets/datastores/databricks/test-connection-for-existing-datastore-dark.png#only-dark){: style="height:450px;width:450px;"}
+![test-connection-for-existing-datastore](../assets/datastores/databricks/test-connection-for-existing-datastore-light.png#only-light){: style="height:600px;width:610px;"}
+![test-connection-for-existing-datastore](../assets/datastores/databricks/test-connection-for-existing-datastore-dark.png#only-dark){: style="height:600px;width:610px;"}
 
 !!!note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -223,20 +223,20 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-light.png#only-light){: style="height:450px;width:450px;"}
-![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-dark.png#only-dark){: style="height:450px;width:450px;"}
+![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-light.png#only-light){: style="height:600px;width:610px;"}
+![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-dark.png#only-dark){: style="height:600px;width:610px;"}
 
 **Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-dark.png#only-dark)
 
-| REF. | FIELDS  | ACTIONS        |
-|------|---------------|-----------------|
-| 1️.   | Prefix (Required)     | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.         |
+| REF. | FIELDS  | ACTIONS   |
+|------|---------|-----------|
+| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2️.   | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore; Toggle OFF to link it to a brand new enrichment datastore. |
 | 3️.   | Name (Required) | Give a name for the enrichment datastore. |
-| 4️.   | Toggle Button for using an existing connection   | Toggle ON to reuse credentials from an existing connection; Toggle OFF to create a new enrichment from scratch. |
+| 4️.   | Toggle Button for using an existing connection  | Toggle ON to reuse credentials from an existing connection; Toggle OFF to create a new enrichment from scratch. |
 | 5️.   | Connector (Required) | Select a datastore connector as **Databricks** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
@@ -245,32 +245,32 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-light.png#only-light){: style="height:450px;width:450px;"}
-![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-dark.png#only-dark){: style="height:450px;width:450px;"}
+![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-light.png#only-light){: style="height:600px;width:610px;"}
+![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-dark.png#only-dark){: style="height:600px;width:610px;"}
 
 | REF. | FIELDS     | ACTIONS     |
-|------|-----------------------|------------------------|
-| 1️.   | Host (Required)       | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field. |
-| 2️.   | HTTP Path (Required)  | Add the HTTP Path (web address) to fetch data from your Databricks account.  |
-| 3️.   | Personal Access Token (Required)   | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
-| 4️.   | Catalog (Required)  | Add a **Catalog** to fetch data structures and metadata from Databricks. |
+|------|------------|-------------|
+| 1️.   | Host (Required) | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field. |
+| 2️.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
+| 3️.   | Personal Access Token (Required) | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication. |
+| 4️.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Databricks. |
 | 5️.   | Database (Optional) | Specify the database name |
-| 6️.   | Teams (Required)   | Select one or more teams from the dropdown to associate with this enrichment datastore. |
+| 6️.   | Teams (Required)  | Select one or more teams from the dropdown to associate with this enrichment datastore. |
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
-![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png#only-light){: style="height:450px;width:650px;"}
-![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-dark.png#only-dark){: style="height:450px;width:650px;"}
+   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png#only-light){: style="height:500px;width:610px;"}
+   ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-dark.png#only-dark){: style="height:500px;width:610px;"}
 
 **Step 3:** Click on the **Finish** button to complete the configuration process. 
 
-![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png#only-light){: style="height:450px;width:650px;"}
-![finish-configuration](../assets/datastores/databricks/finish-configuration-dark.png#only-dark){: style="height:450px;width:650px;"}
+![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png#only-light){: style="height:500px;width:610px;"}
+![finish-configuration](../assets/datastores/databricks/finish-configuration-dark.png#only-dark){: style="height:500px;width:610px;"}
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
-![success-message](../assets/datastores/databricks/success-message-light.png#only-light)
-![success-message](../assets/datastores/databricks/success-message-dark.png#only-dark)
+![success-message](../assets/datastores/databricks/success-message-light.png#only-light){: style="height:400px;width:750px;"}
+![success-message](../assets/datastores/databricks/success-message-dark.png#only-dark){: style="height:400px;width:750px;"}
 
 **Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -286,9 +286,9 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-light.png#only-light)
 ![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-dark.png#only-dark)
 
-| REF. | FIELDS     | ACTIONS             |
-|------|------------|---------------------|
-| 1️.   | Prefix (Required)   | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
+| REF. | FIELDS  | ACTIONS   |
+|------|---------|-----------|
+| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
 | 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore. |
 | 3️.   | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
 
