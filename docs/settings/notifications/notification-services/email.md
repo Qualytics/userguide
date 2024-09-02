@@ -53,8 +53,8 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 
 - **A Freshness SLA Violation Occurs:** This type of notification is triggered when data within a datastore does not meet the defined freshness criteria, violating the Service Level Agreement (SLA). The notification message typically includes details about the extent of the violation, the specific datastore affected, and the freshness threshold that was breached. This helps the team take prompt corrective actions to ensure data timeliness and reliability.
 
-![enter-details](../../../assets/notifications/services/email/enter-details-light-5.png#only-light)
-![enter-details](../../../assets/notifications/services/email/enter-details-dark-5.png#only-dark)
+![enter-details](../../../assets/notifications/services/email/enter-details-light-5.png#only-light){: style="height:350px;width:550px;"}
+![enter-details](../../../assets/notifications/services/email/enter-details-dark-5.png#only-dark){: style="height:350px;width:550px;"}
 
 **4.** **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out. 
 
