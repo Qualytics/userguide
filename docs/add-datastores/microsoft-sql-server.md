@@ -22,11 +22,11 @@ A source datastore is a storage location used to connect to and access data from
 ![select-a-connector](../assets/datastores/microsoft-sql-server/select-a-connector-light.png#only-light)
 ![select-a-connector](../assets/datastores/microsoft-sql-server/select-a-connector-dark.png#only-dark)
 
-| REF. | FIELDS            | ACTIONS                                                                                               |
-|------|-------------------|-------------------------------------------------------------------------------------------------------|
-| 1️.   | Name (Required)   | Specify the datastore name (e.g., This name will appear on the datastore cards)                      |
-| 2️.   | Toggle Button     | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
-| 3️.   | Connector (Required) | Select **Microsoft SQL Server** from the dropdown list.                                                  |
+| REF. | FIELDS   | ACTIONS     |
+|------|--------|---------------|
+| 1️.   | Name (Required) | Specify the datastore name (e.g., This name will appear on the datastore cards)  |
+| 2️.   | Toggle Button   | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 3️.   | Connector (Required) | Select **Microsoft SQL Server** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -42,10 +42,10 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 ![add-datastore-credentials-explain](../assets/datastores/microsoft-sql-server/add-datastore-credentials-explain-light.png#only-light)
 ![add-datastore-credentials-explain](../assets/datastores/microsoft-sql-server/add-datastore-credentials-explain-dark.png#only-dark)
 
-| REF. | FIELDS                     | ACTIONS                                                                                                           |
-|------|----------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 1️.   | Host (Required)            | Get **Hostname** from your Microsoft SQL Server account and add it to this field.                                   |
-| 2️.   | Port (Optional)            | Specify the **Port** number.                                                                                        |
+| REF. | FIELDS     | ACTIONS      |
+|------|------------|-----------|
+| 1️.   | Host (Required)  | Get **Hostname** from your Microsoft SQL Server account and add it to this field.|
+| 2️.   | Port (Optional)   | Specify the **Port** number.                                                                                        |
 | 3️.   | User (Required)            | Enter the **User** to connect.                                                                                   |
 | 4️.   | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
 | 5️.  | Database (Required)        | Specify the database name.                                                                                        |
