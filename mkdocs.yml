@@ -138,6 +138,7 @@ nav:
         - Tags: settings/tags/overview-of-a-tag.md
         - Notifications:
           - Overview: settings/notifications/overview-of-a-notification.md
+          - Manage Notifications: settings/notifications/managing-notifications.md
           - Channels:
             - settings/notifications/notification-services/email.md
             - settings/notifications/notification-services/http-action.md
