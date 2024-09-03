@@ -5,6 +5,17 @@ hide:
 
 # Release Notes
 
+### 2024.09.03 { id=2024.09.03 }
+
+#### Feature Enhancements
+
+- Introducing Catalog Scheduling
+    - Users are now able to schedule a Catalog operation like Profile and Scan Operations, allowing automated metadata extraction.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.08.30 { id=2024.08.30 }
 
 #### Feature Enhancements
