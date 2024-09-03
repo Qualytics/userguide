@@ -10,7 +10,7 @@ hide:
 #### Feature Enhancements
 
 - Introducing Catalog Scheduling
-    - Users are now able to schedule a Catalog operation like Profile and Scan Operations, allowing automated metadata extraction.
+    - Users can now schedule a Catalog operation like Profile and Scan Operations, allowing automated metadata extraction.
 
 #### General Fixes
 
