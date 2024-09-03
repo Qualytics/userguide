@@ -54,7 +54,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 **Step 3 :** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
 ![test-datastore-connection-light](../assets/datastores/timescale-db/test-datastore-connection-light.png#only-light)
-![test-datastore-connection](../assets/datastores/timescale-db/test-connection-dark.png#only-dark)
+![test-datastore-connection](../assets/datastores/timescale-db/test-datastore-connection-dark.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -116,13 +116,13 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/test-connection-light.png#only-light)
-![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/test-connection-dark.png#only-dark)
+![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/timescale-dbtest-connection-light.png#only-light)
+![test-connection-for-enrichment-datastore](../assets/datastores/timescale-db/timescale-dbtest-connection-dark.png#only-dark)
 
 **Step 3:** Click on the **“Finish”** button to complete the configuration process.
 
 ![finish-configuration](../assets/datastores/timescale-db/finish-configuration-light.png#only-light)
-![finish-configuration](../assets/datastores/timescale-db/finish-configration-dark.png#only-dark)
+![finish-configuration](../assets/datastores/timescale-db/finish-configuration-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
@@ -136,7 +136,7 @@ When the configuration process is finished, a modal will display a **success mes
 If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
 
 !!! note
-    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
+    Qualytics does not support Timescale as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Bank Enrichnment as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
@@ -162,9 +162,9 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 **Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
 ![use-existing-enrichment-datastore](../assets/datastores/timescale-db/finish-datastore-light.png#only-light)
-![use-existing-enrichment-datastore](../assets/datastores/timescale-db/finish-dark.png#only-dark)
+![use-existing-enrichment-datastore](../assets/datastores/timescale-db/finish-datastore-dark.png#only-dark)
 
-When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
+When the configuration process is finished, a modal window will display and a **success flash message** stating that **your data has been successfully added**.
 
 ![success-message](../assets/datastores/timescale-db/success-message-light.png#only-light)
 ![success-message](../assets/datastores/timescale-db/success-message-dark.png#only-dark)

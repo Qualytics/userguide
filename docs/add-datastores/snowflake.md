@@ -172,7 +172,7 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 **Step 1**: Add connection details for your selected **enrichment datastore** connector.
 
 ![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-connector-new-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-explain-new-dark.png#only-dark)
+![enrichment-datastore-explain](../assets/datastores/snowflake/enrichment-datastore-connector-new-dark.png#only-dark)
 
 |  REF.  |  FIELDS | ACTIONS |
 | ------ | ------- | ------ |
@@ -196,8 +196,8 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
-![success-message](../assets/datastores/snowflake/success-message-light.png#only-light)
-![success-message](../assets/datastores/snowflake/success-message-dark.png#only-dark)
+![success-message](../assets/datastores/snowflake/success-message-light.png#only-light){: style="height:350px;width:710px;"}
+![success-message](../assets/datastores/snowflake/success-message-dark.png#only-dark){: style="height:350px;width:710px;"}
 
 **Step 4**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -239,13 +239,13 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![success-message](../assets/datastores/snowflake/success-message-light.png#only-light)
-![success-message](../assets/datastores/snowflake/success-message-dark.png#only-dark)
+![success-message](../assets/datastores/snowflake/success-message-light.png#only-light){: style="height:350px;width:710px;"}
+![success-message](../assets/datastores/snowflake/success-message-dark.png#only-dark){: style="height:350px;width:710px;"}
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/snowflake/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/snowflake/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/snowflake/data-operation-page-light2.png#only-light)
+![data-operation-page](../assets/datastores/snowflake/data-operation-page-dark2.png#only-dark)
 
 
 ## API Payload Examples
