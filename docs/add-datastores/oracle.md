@@ -137,8 +137,8 @@ When the configuration process is finished, a modal will display a **success  me
 
 **Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![click-datastore](../assets/datastores/oracle/click-datastore-light.png#only-light)
-![click-datastore](../assets/datastores/oracle/click-datastore-dark.png#only-dark)
+![new-datastore](../assets/datastores/oracle/new-datastore-light.png#only-light)
+![new-datastore](../assets/datastores/oracle/new-datastore-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
