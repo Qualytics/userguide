@@ -123,6 +123,7 @@ nav:
         - Time Distribution Size: checks/time-distribution-size-check.md
         - Unique: checks/unique-check.md
         - User Defined Function: checks/user-defined-function-check.md
+        - Volumetric Checks: checks/volumetric-check.md
     - Anomalies:
       - Anomaly Analysis: anomalies/anomalies.md
     - Explore:
