@@ -31,6 +31,17 @@ hide:
     - PUT /operations/schedule/{id}: `type` is now required.
     - POST /operations/run: `type` is now required.
 
+### 2024.09.03 { id=2024.09.03 }
+
+#### Feature Enhancements
+
+- Introducing Catalog Scheduling
+    - Users can now schedule a Catalog operation like Profile and Scan Operations, allowing automated metadata extraction.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.08.31 { id=2024.08.31 }
 
 #### Feature Enhancements
