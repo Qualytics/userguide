@@ -5,6 +5,32 @@ hide:
 
 # Release Notes
 
+### 2024.09.06 { id=2024.09.06 }
+
+#### Feature Enhancements
+
+- Introducing Bulk Activation on Draft Checks
+    - Users can now activate and validate multiple draft checks at once, streamlining the workflow and reducing manual effort.
+
+#### General Fixes
+
+- Improved error message for BigQuery temporary dataset configuration exceptions.
+
+- Added a retry operation for Snowflake when no active warehouse is selected in the current session.
+
+- General Fixes and Improvements
+
+#### Breaking Changes
+
+- API fields (`type` and `container_type`) are now mandatory in request payloads where they were previously optional.
+    - POST /global-tags: `type` is now required.
+    - PUT /global-tags/{name}: `type` is now required.
+     - POST /containers: `container_type` is now required.
+    - PUT /containers/{id}: `container_type` is now required.
+    - POST /operations/schedule: `type` is now required.
+    - PUT /operations/schedule/{id}: `type` is now required.
+    - POST /operations/run: `type` is now required.
+
 ### 2024.08.31 { id=2024.08.31 }
 
 #### Feature Enhancements
