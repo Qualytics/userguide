@@ -244,8 +244,8 @@ When the configuration process is finished, a modal will display a **success mes
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/snowflake/data-operation-page-light2.png#only-light)
-![data-operation-page](../assets/datastores/snowflake/data-operation-page-dark2.png#only-dark)
+![data-operation-page](../assets/datastores/snowflake/data-operation-page-light.png#only-light)
+![data-operation-page](../assets/datastores/snowflake/data-operation-page-dark.png#only-dark)
 
 
 ## API Payload Examples

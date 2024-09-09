@@ -220,8 +220,8 @@ When the configuration process is finished, a modal will display a **success mes
 
 **Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png#only-light){: style=“height:450px;width:450px;”}
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png#only-light)
+![data-operation-page](../assets/datastores/bigquery/data-operations-page-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
@@ -263,8 +263,8 @@ When the configuration process is finished, a modal will display a **success mes
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png#only-light){: style=“height:450px;width:450px;”}
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png#only-light)
+![data-operation-page](../assets/datastores/bigquery/data-operations-page-dark.png#only-dark)
 
 ## API Payload Examples
 

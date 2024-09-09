@@ -87,24 +87,96 @@ The catalog operation can be custom-configured with the following options:
 ![run-dropdown](../assets/catalog-operations/run-dropdown-light.png#only-light)
 ![run-dropdown](../assets/catalog-operations/run-dropdown-dark.png#only-dark)
 
-**Step 2**: When configuring the catalog operation settings, you have two options to tune:
+**Step 2:** When configuring the catalog operation settings, you have two options to tune: 
 
--   **Prune**: This option allows the removal of any named collections (tables, views, files, etc.) that no longer exist in the datastore. This ensures that outdated or obsolete collections are not included in future operations, keeping the datastore clean and relevant.
+- **Prune:** This option allows the removal of any named collections (tables, views, files, etc.) that no longer exist in the datastore. This ensures that outdated or obsolete collections are not included in future operations, keeping the datastore clean and relevant.
 
--   **Recreate**: This option enables the recreation of any named collections that have been previously deleted in Qualytics. It is useful for restoring collections that may have been removed accidentally or need to be brought back for analysis.
+- **Recreate**: This option enables the recreation of any named collections that have been previously deleted in Qualytics. It is useful for restoring collections that may have been removed accidentally or need to be brought back for analysis.
 
-![catalog-operation](../assets/catalog-operations/catalog-operation-light.png#only-light)
-![catalog-operation](../assets/catalog-operations/catalog-operation-dark.png#only-dark)
+![options](../assets/catalog-operations/options-light.png#only-light)
+![options](../assets/catalog-operations/options-dark.png#only-dark)
 
-**Step 3**: The user can choose whether to include only tables, only views, or both in the catalog operation. This flexibility allows for more targeted metadata analysis based on the specific needs of the data management task.
+**Step 3:** The user can choose whether to include only tables, only views, or both in the catalog operation. This flexibility allows for more targeted metadata analysis based on the specific needs of the data management task.
 
 ![include](../assets/catalog-operations/include-light.png#only-light)
 ![include](../assets/catalog-operations/include-dark.png#only-dark)
 
-**Step 4**: Click on the **Run Now** button to apply the updated operation settings and run the operation again.
+### Run Instantly
 
-![run-now](../assets/catalog-operations/run-now-light.png#only-light)
-![run-now](../assets/catalog-operations/run-now-dark.png#only-dark)
+Click on the “**Run Now**” button, and perform the catalog operation immediately. 
+
+![run](../assets/catalog-operations/run-light.png#only-light)
+![run](../assets/catalog-operations/run-dark.png#only-dark)
+
+### Schedule
+
+**Step 1:** Click on the **“Schedule”** button to configure the available schedule options in the catalog operation.
+
+![schedule-catalog](../assets/catalog-operations/schedule-catalog-light.png#only-light)
+![schedule-catalog](../assets/catalog-operations/schedule-catalog-dark.png#only-dark)
+
+**Step 2:** Set the scheduling preferences for the catalog operation. 
+
+**1. Hourly:** This option allows you to schedule the catalog operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the cataloging should start. Example: If set to "Every 1 hour(s) on minute 0," the catalog operation will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00). 
+
+![hourly](../assets/catalog-operations/hourly-light.png#only-light)
+![hourly](../assets/catalog-operations/hourly-dark.png#only-dark)
+
+**2. Daily:** This option schedules the catalog operation to run once every day at a specific time. You specify the number of days between scans and the exact time of day in UTC. Example: If set to "Every 1 day(s) at 00:00 UTC," the scan will run every day at midnight UTC. 
+
+![daily](../assets/catalog-operations/daily-light.png#only-light)
+![daily](../assets/catalog-operations/daily-dark.png#only-dark)
+
+**3. Weekly:** This option schedules the catalog operation to run on specific days of the week at a set time. You select the days of the week and the exact time of day in UTC for the catalog operation to run. Example: If configured to run on "Sunday" and "Friday" at 00:00 UTC, the scan will execute at midnight UTC on these days. 
+
+![weekly](../assets/catalog-operations/weekly-light.png#only-light)
+![weekly](../assets/catalog-operations/weekly-dark.png#only-dark)
+
+**4. Monthly:** This option schedules the catalog operation to run once a month on a specific day at a set time. You specify the day of the month and the time of day in UTC. If set to "On the 1st day of every 1 month(s), at 00:00 UTC," the catalog operation will run on the first day of each month at midnight UTC. 
+
+![monthly](../assets/catalog-operations/monthly-light.png#only-light)
+![monthly](../assets/catalog-operations/monthly-dark.png#only-dark)
+
+**5. Advanced:** The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for catalog operations with precision. 
+
+Cron expressions are a powerful and flexible way to schedule tasks. They use a syntax that specifies the exact timing of the task based on five fields:
+
+* Minute (0 - 59)  
+* Hour (0 - 23)  
+* Day of the month (1 - 31)  
+* Month (1 - 12)  
+* Day of the week (0 - 6) (Sunday to Saturday)
+
+Each field can be defined using specific values, ranges, or special characters to create the desired schedule.
+
+**Example:** For instance, the Cron expression `0 0 * * *`** schedules the catalog operation to run at midnight (00:00) every day. Here’s a breakdown of this expression:
+
+* 0 (Minute) - The task will run at the 0th minute.  
+* 0 (Hour) - The task will run at the 0th hour (midnight).  
+* *(Day of the month) - The task will run every day of the month.  
+* *(Month) - The task will run every month.  
+* *(Day of the week) - The task will run every day of the week.
+
+Users can define other specific schedules by adjusting the Cron expression. For example:
+
+* 0 12 * * 1-5 - Runs at 12:00 PM from Monday to Friday.  
+* 30 14 1 * * - Runs at 2:30 PM on the first day of every month.  
+* 0 22 * * 6 - Runs at 10:00 PM every Saturday.
+
+To define a custom schedule, enter the appropriate Cron expression in the **"Custom Cron Schedule (UTC)"** field before specifying the schedule name. This will allow for precise control over the timing of the catalog operation, ensuring it runs exactly when needed according to your specific requirements.
+
+![advanced](../assets/catalog-operations/advanced-light.png#only-light)
+![advanced](../assets/catalog-operations/advanced-dark.png#only-dark)
+
+**Step 3**: Define the **“Schedule Name”** to identify the scheduled operation at the running time.
+
+![schedule-name](../assets/catalog-operations/schedule-name-light.png#only-light)
+![schedule-name](../assets/catalog-operations/schedule-name-dark.png#only-dark)
+
+**Step 4:** Click on the **“Schedule”** button to activate your catalog operation schedule. 
+
+![schedule](../assets/catalog-operations/schedule-light.png#only-light)
+![schedule](../assets/catalog-operations/schedule-dark.png#only-dark)
 
 Once the catalog operation is triggered, your view will be automatically switched to the Activity tab, allowing you to explore post-operation details on your ongoing/completed catalog operation.
 
