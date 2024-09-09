@@ -76,29 +76,59 @@ This option automatically profiles tables associated with selected tags. Tags ar
 ![profile-operation-next](../assets/profile-operations/profile-operation-next-light.png#only-light)
 ![profile-operation-next](../assets/profile-operations/profile-operation-next-dark.png#only-dark)
   
-**Step 4**: Configure the following three operations settings:
+**Step 4**: Configure the following two **Read Settings**:
 
-1. Profile Inference Threshold
-2. Starting Threshold
-3. Record Limit
+- **Starting Threshold**
+- **Record Limit**
 
-### Profile Inference Threshold
+### Starting Threshold 
 
-The Profile Inference Threshold allows you to customize the data quality checks that are automatically created and updated when your data is analyzed. This means you can adjust the data quality checks based on how complex the data rules are, giving you more control over how your data is checked and monitored.
+This setting allows users to specify a minimum incremental identifier value to set a starting point for the profile operation. It helps in filtering data from a specific point in time or a particular batch value.  
+
+- **Greater Than Time**: Users can select a timestamp in UTC to start profiling data from a specific time onwards. This is useful for focusing on recent data or data changes since a particular time.  
+
+- **Greater Than Batch**: Users can enter a batch value to start profiling from a specific batch. This option is helpful for scenarios where data is processed in batches, allowing the user to profile data from a specific batch number onwards.
+
+!!! note 
+    The starting threshold i.e. **Greater Than Time** and **Greater Than Batch** are applicable only to the tables or files with an incremental timestamp strategy.
+
+![starting-threshold](../assets/profile-operations/starting-threshold-light.png#only-light)
+![starting-threshold](../assets/profile-operations/starting-threshold-dark.png#only-dark)
+
+### Record Limit 
+
+Define the maximum number of records to be profiled: This slider allows users to set a limit on the number of records to be profiled per table. The range can be adjusted from 1 million to all available records. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
+
+![record-limit](../assets/profile-operations/record-limit-light.png#only-light)
+![record-limit](../assets/profile-operations/record-limit-dark.png#only-dark)
+
+**Step 5:** After making the relevant selections, click on the **Next** button to configure the **Inference Settings**. 
+
+![next](../assets/profile-operations/next-light.png#only-light)
+![next](../assets/profile-operations/next-dark.png#only-dark)
+
+**Step 6:** Configure the following two **Inference Settings**: 
+
+- **Inference Threshold**
+- **Inference State**
+
+### **Inference Threshold**
+
+The Inference Threshold allows you to customize the data quality checks that are automatically created and updated when your data is analyzed. This means you can adjust the data quality checks based on how complex the data rules are, giving you more control over how your data is checked and monitored.
 
 **Default Configuration**
 
-By default, the Profile Inference Threshold is set to 5, which provides a comprehensive range of checks designed to ensure data integrity across different scenarios. Users have the flexibility to adjust this threshold based on their specific needs, allowing for either basic or advanced checks as required.
+By default, the Inference Threshold is set to **2**, which provides a comprehensive range of checks designed to ensure data integrity across different scenarios. Users have the flexibility to adjust this threshold based on their specific needs, allowing for either basic or advanced checks as required.
 
 ![default-configuration](../assets/profile-operations/default-configuration-light.png#only-light)
 ![default-configuration](../assets/profile-operations/default-configuration-dark.png#only-dark)
 
 #### Levels of Check Inference
 
-The Profile Inference Threshold ranges from **0** to **5**, with each level including progressively more complex and comprehensive checks. Below is an explanation of each level:               
+The Inference Threshold ranges from **0** to **5**, with each level including progressively more complex and comprehensive checks. Below is an explanation of each level:               
 
 !!! note 
-    Each level includes all the checks from the previous levels and adds new checks specific to that level. For example, at Level 1, there are five basic checks. At Level 2, you get those five checks plus additional ones for Level 2\. By the time you reach Level 5, it covers all the checks from Levels 1 to 4 and adds its own new checks for complete review. 
+    Each level includes all the checks from the previous levels and adds new checks specific to that level. For example, at Level 1, there are five basic checks. At Level 2, you get those five checks plus additional ones for Level 2. By the time you reach Level 5, it covers all the checks from Levels 1 to 4 and adds its own new checks for complete review. 
 
 **Level 0: No Inference**
 
@@ -230,29 +260,14 @@ This table shows the inferred checks that the Analytics Engine can generate base
 !!! warning 
     If the checks inferred during a profile operation do not detect any anomalies, and the check inference level decreases in the next profile operation, the checks that did not generate anomalies will be archived or discarded. However, if the checks detect any anomalies, they will be retained to continue monitoring the data and addressing potential issues.
 
-  
-### Starting Threshold 
+### Inference State
 
-This setting allows users to specify a minimum incremental identifier value to set a starting point for the profile operation. It helps in filtering data from a specific point in time or a particular batch value.  
+Check the box labeled **"Infer As Draft"** to ensure that all inferred checks will be generated in a draft state. This allows for greater flexibility as you can review and refine these checks before they are finalized.
 
-- **Greater Than Time**: Users can select a timestamp in UTC to start profiling data from a specific time onwards. This is useful for focusing on recent data or data changes since a particular time.  
+![inference-state](../assets/profile-operations/inference-state-light.png#only-light)
+![inference-state](../assets/profile-operations/inference-state-dark.png#only-dark)
 
-- **Greater Than Batch**: Users can enter a batch value to start profiling from a specific batch. This option is helpful for scenarios where data is processed in batches, allowing the user to profile data from a specific batch number onwards.
-
-!!! note 
-    The starting threshold i.e. **Greater Than Time** and **Greater Than Batch** are applicable only to the tables or files with an incremental timestamp strategy.
-
-![starting-threshold](../assets/profile-operations/starting-threshold-light.png#only-light)
-![starting-threshold](../assets/profile-operations/starting-threshold-dark.png#only-dark)
-
-### Record Limit 
-
-Define the maximum number of records to be profiled: This slider allows users to set a limit on the number of records to be profiled per table. The range can be adjusted from 1 million to all available records. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
-
-![record-limit](../assets/profile-operations/record-limit-light.png#only-light)
-![record-limit](../assets/profile-operations/record-limit-dark.png#only-dark)
-  
-## Run Instantly
+### Run Instantly
 
 Click on the **Run Now** button, and perform the profile operation immediately.
 
