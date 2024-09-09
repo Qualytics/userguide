@@ -57,7 +57,7 @@ You can also search the tables/file patterns you want to scan directly using the
 ![specific](../assets/datastores/scan/specific-light.png#only-light)
 ![specfic](../assets/datastores/scan/specfic-dark.png#only-dark)
 
-**Tag**
+**3. Tag**
 
 This option enables you to automatically scan file patterns associated with the selected tags. Tags can be predefined or created to categorize and manage file patterns effectively.
 
@@ -73,12 +73,15 @@ This option enables you to automatically scan file patterns associated with the 
 
 1.Select the **Read Strategy** for your scan operation.
 
-- **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation. On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources.  
+- **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation.  On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources. 
 
-- **Full:** This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data.
+- **Full**: This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data. 
 
 ![incremental](../assets/datastores/scan/incremental-light.png#only-light)
 ![incremental](../assets/datastores/scan/incremental-dark.png#only-dark)
+
+!!! warning 
+    If any selected tables do not have an incremental identifier, a full scan will be performed for those tables.
 
 !!! info
     When running an Incremental Scan for the first time, Qualytics automatically performs a full scan, saving the incremental field for subsequent runs.
@@ -90,31 +93,34 @@ This option enables you to automatically scan file patterns associated with the 
     - This approach optimizes the scanning process while maintaining data quality and consistency.
 
 
-2. Define the Starting Threshold **(Optional)** i.e. - specify a minimum incremental identifier value to set a starting point for the scan.
+2.Define the Starting Threshold **(Optional)** i.e. - specify a minimum incremental identifier value to set a starting point for the scan.
 
-- **Greater Than Time:** This option applies only to tables with an incremental timestamp strategy. Users can specify a timestamp to scan records that were modified after this time.
+* **Greater Than Time:** This option applies only to tables with an incremental timestamp strategy. Users can specify a timestamp to scan records that were modified after this time.
 
-- **Greater Than Batch:** This option applies to tables with an incremental batch strategy. Users can set a batch value, ensuring that only records with a batch identifier greater than the specified value are scanned.
+* **Greater Than Batch:** This option applies to tables with an incremental batch strategy. Users can set a batch value, ensuring that only records with a batch identifier greater than the specified value are scanned.
 
-3. Define the **record limit**- the maximum number of records to be scanned per table after any initial filtering.
+![starting-threshold](../assets/datastores/scan/starting-threshold-light.png#only-light)
+![starting-threshold](../assets/datastores/scan/starting-threshold-dark.png#only-dark)
+
+3.Define the **record limit**- the maximum number of records to be scanned per table after any initial filtering.
 
 ![record-limit-line](../assets/datastores/scan/record-limit-line-light.png#only-light)
 ![record-limit-line](../assets/datastores/scan/record-limit-line-dark.png#only-dark)
 
 **Step 5:** Click on the **Next** button to Configure the **Enrichment Settings**.
 
-![next](../assets/datastores/scan/next-light.png#only-light)
-![next](../assets/datastores/scan/next-dark.png#only-dark)
+![next-button](../assets/datastores/scan/next-button-light.png#only-light)
+![next-button](../assets/datastores/scan/next-button-dark.png#only-dark)
 
 **Step 6:** Configure the **Enrichment Settings**.  
 
 1. **Remediation Strategy:** This strategy dictates how your source tables are replicated in your enrichment datastore:
 
--   **None:** This option does not replicate source tables. It only writes anomalies and associated source data to the enrichment datastore. This is useful when the primary goal is to track anomalies without duplicating the entire dataset.  
+- **None:** This option does not replicate source tables. It only writes anomalies and associated source data to the enrichment datastore. This is useful when the primary goal is to track anomalies without duplicating the entire dataset.  
 
--   **Append:** This option replicates source tables using an append-first strategy. It adds new records to the enrichment datastore, maintaining a history of all data changes over time. This approach is beneficial for auditing and historical analysis.
+- **Append:** This option replicates source tables using an append-first strategy. It adds new records to the enrichment datastore, maintaining a history of all data changes over time. This approach is beneficial for auditing and historical analysis.
 
--   **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
+- **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
 
 ![scan-operation](../assets/datastores/scan/sacn-operation-light.png#only-light)
 ![scan-operation](../assets/datastores/scan/scan-operation-dark.png#only-dark)
