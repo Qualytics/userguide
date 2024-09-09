@@ -121,7 +121,7 @@ If you enter an incorrect Action URL, you will receive a failure message. For ex
 ![Screenshot](../../../assets/notifications/services/http-action/failed-noti-light-13.png#only-light)
 ![Screenshot](../../../assets/notifications/services/http-action/failed-noti-dark-13.png#only-dark)
 
-## Save Email Notification
+## Save HTTP Action Notification
 
 Once you have provided all the necessary values, set the trigger conditions for the notification, and verify the correctness of the Action URL, click the **"Save"** button.
 
