@@ -122,6 +122,8 @@ You can move an active check into a draft state, allowing you to work on the che
 
 **Step 1:** Click on the active check that you want to move to the draft state.
 
+For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+
 ![checks-list](../assets/checks/manage-checks/checks-list-light-18.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-18.png#only-dark)
 
@@ -166,9 +168,13 @@ After clicking the **"Update"** button, your selected checks will be moved to dr
 
 ### Activate Draft Check
 
-You can activate the draft checks after when you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data.
+You can activate the draft checks after when you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate speciic checks or activate multiple checks in bulk.
+ 
+#### Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click on the drafted check that you want to activate, whether you have made changes or wish to activate it as is.  
+**Step 1:** Navigate to the **Draft** check section, and click on the drafted check that you want to activate, whether you have made changes or wish to activate it as is.
+
+For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-26.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-26.png#only-dark)
@@ -178,7 +184,7 @@ A modal window will appear with the check details. If you want to make any chang
 ![check-details](../assets/checks/manage-checks/check-details-light-27.png#only-light)
 ![check-details](../assets/checks/manage-checks/check-details-dark-27.png#only-dark)
 
-**Step 2:** Click on the "🔽" **arrow icon** next to the **Update** button. A dropdown menu will appear, click on the **Activate** button.  
+**Step 2:** Click on the **down arrow** icon with the **Update** button. A dropdown menu will appear, click on the **Activate** button.  
 
 ![activate](../assets/checks/manage-checks/activate-light-28.png#only-light)
 ![activate](../assets/checks/manage-checks/activate-dark-28.png#only-dark)
@@ -187,6 +193,33 @@ A modal window will appear with the check details. If you want to make any chang
 
 ![success-updated](../assets/checks/manage-checks/success-updated-light-29.png#only-light)
 ![success-updated](../assets/checks/manage-checks/success-updated-dark-29.png#only-dark)
+
+#### Method II. Activate Draft Checks in Bulk
+
+**Step 1**. Hover over the draft checks and click on the checkbox to select multiple checks in bulk.
+
+![bulk-draft](../assets/checks/manage-checks/bulk-draft-light-94.png#only-light)
+![bulk-draft](../assets/checks/manage-checks/bulk-draft-dark-94.png#only-dark)
+ 
+When multiple checks are selected, an action toolbar appears, displaying the total number of checks chosen along with a vertical ellipsis for additional bulk action options.
+
+![action-toolbar](../assets/checks/manage-checks/action-toolbar-light-95.png#only-light)
+![action-toolbar](../assets/checks/manage-checks/action-toolbar-dark-95.png#only-dark)
+
+**Step 2**. Click on the vertical ellipsis **(⋮)** and choose **"Activate"** from the dropdown menu to activate the selected checks.
+
+![activate-btn](../assets/checks/manage-checks/activate-btn-light-96.png#only-light)
+![activate-btn](../assets/checks/manage-checks/activate-btn-dark-96.png#only-dark)
+
+**Step 3**. A confirmation modal window **“Bulk Activate Check”** will appear, click on the **“Activate”** button to activate the draft checks.
+
+![modal-window](../assets/checks/manage-checks/modal-window-light-97.png#only-light)
+![modal-window](../assets/checks/manage-checks/modal-window-dark-97.png#only-dark)
+
+After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“Selected checks have been successfully updated”**
+
+![success-msg](../assets/checks/manage-checks/success-msg-light-98.png#only-light)
+![success-msg](../assets/checks/manage-checks/success-msg-dark-98.png#only-dark)
 
 ### Set Check as Archived 
 
@@ -199,6 +232,8 @@ You can archive a specific check using two ways: either by directly clicking the
 ##### 1. Archive Directly
 
 **Step 1:** Locate the check (whether Active or Draft) which you want to archive and click on the **Archive** icon (represented by a box with a downward arrow) located on the right side of the check. 
+
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![archive-icon](../assets/checks/manage-checks/archive-icon-light-30.png#only-light)
 ![archive-icon](../assets/checks/manage-checks/archive-icon-dark-30.png#only-dark)
@@ -225,6 +260,8 @@ You can archive a specific check using two ways: either by directly clicking the
 ##### 2. Archive from Action Menu
 
 **Step 1**: Click on the check from the list of available (whether Active or Draft) checks that you want to archive.
+
+For Demonstration purpose, we have selected the **"Not Future"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-34.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-34.png#only-dark)
@@ -306,6 +343,8 @@ If a check has been archived, then you can restore it back to an active state or
 
 **Step 2**: Click on the archived check which you want to restore as an active or draft check.
 
+For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+
 ![archive-checks](../assets/checks/manage-checks/archive-checks-light-46.png#only-light)
 ![archive-checks](../assets/checks/manage-checks/archive-checks-dark-46.png#only-dark)
 
@@ -339,6 +378,8 @@ You can edit an existing check to modify its properties, such as the rule type, 
 #### Method I. Edit Specific Check
 
 **Step 1:** Click on the check you want to edit, whether it is an active or draft check.
+
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![edit-check](../assets/checks/manage-checks/edit-check-light-51.png#only-light)
 ![edit-check](../assets/checks/manage-checks/edit-check-dark-51.png#only-dark)
@@ -439,6 +480,8 @@ You can delete a check permanently, removing it from the system, and this is an 
 
 **Step 2:** Locate the check, that you want to delete and click on the **Delete** icon located on the right side of the check.
 
+For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+
 ![delete-btn](../assets/checks/manage-checks/delete-btn-light-67.png#only-light)
 ![delete-btn](../assets/checks/manage-checks/delete-btn-dark-67.png#only-dark)
 
@@ -457,7 +500,7 @@ You can delete a check permanently, removing it from the system, and this is an 
 You can permanently delete multiple checks from the system in one action. This process is irreversible, so it should be used when you are certain that the checks are no longer needed.
 
 !!! note 
-       You can only delete archived checks, not active or draft checks. If you want to delete an active or draft check, you must first move it to the archive, and then you can delete it.
+       For bulk archiving checks, the only available option is Bulk Delete. There is no option to Bulk Restore to draft or activate archived checks.
 
 **Step 1:** Hover over the archived checks and click on the checkbox to select checks in bulk.  
 
@@ -508,6 +551,8 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 You can clone both active and draft checks to create a duplicate copy of an existing check. This is useful when you want to create a new check based on the structure of an existing one, allowing you to make adjustments without affecting the original check.
 
 **Step 1**: Click on the check (whether Active or Draft) that you want to clone.
+
+For Demonstration purpose, we have selected the **"Greater Than Field"** check.
 
 ![clone-check](../assets/checks/manage-checks/clone-check-light-78.png#only-light)
 ![clone-check](../assets/checks/manage-checks/clone-check-dark-78.png#only-dark)
@@ -582,6 +627,8 @@ You can add checks as a Template, which allows you to create a reusable framewor
 
 **Step 1:** Locate the check (whether Active or Draft) which you want to archive and click on that check.
 
+For Demonstration purpose, we have selected the **"Matches Pattern"** check.
+
 ![select-check](../assets/checks/manage-checks/select-check-light-91.png#only-light)
 ![select-check](../assets/checks/manage-checks/select-check-dark-91.png#only-dark)
 
@@ -594,3 +641,33 @@ After clicking the **"Template"** button, the check will be saved and created as
 
 ![quality-check](../assets/checks/manage-checks/quality-check-light-93.png#only-light)
 ![quality-check](../assets/checks/manage-checks/quality-check-dark-93.png#only-dark)
+
+#### Method II: Activate Draft Checks in Bulk
+
+Once you have completed refining the validation rules and made the necessary adjustments, you can activate multiple draft checks in bulk. Activating these checks in bulk ensures that all the defined criteria are enforced across the data simultaneously.
+
+**Step 1**. Hover over the draft checks and click on the checkbox to select multiple checks in bulk.
+
+![bulk-draft](../assets/checks/manage-checks/bulk-draft-light-94.png#only-light)
+![bulk-draft](../assets/checks/manage-checks/bulk-draft-dark-94.png#only-dark)
+ 
+When multiple checks are selected, an action toolbar appears, displaying the total number of checks chosen along with a vertical ellipsis for additional bulk action options.
+
+![action-toolbar](../assets/checks/manage-checks/action-toolbar-light-95.png#only-light)
+![action-toolbar](../assets/checks/manage-checks/action-toolbar-dark-95.png#only-dark)
+
+**Step 2**. Click on the vertical ellipsis (⋮) and choose **"Activate"** from the dropdown menu to activate the selected checks.
+
+![activate-btn](../assets/checks/manage-checks/activate-btn-light-96.png#only-light)
+![activate-btn](../assets/checks/manage-checks/activate-btn-dark-96.png#only-dark)
+
+**Step 3**. A confirmation modal window “Bulk Activate Check” will appear, click on the **“Activate”** button to activate the draft checks.
+
+![modal-window](../assets/checks/manage-checks/modal-window-light-97.png#only-light)
+![modal-window](../assets/checks/manage-checks/modal-window-dark-97.png#only-dark)
+
+After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“Selected checks have been successfully updated”**
+
+![success-msg](../assets/checks/manage-checks/success-msg-light-98.png#only-light)
+![success-msg](../assets/checks/manage-checks/success-msg-dark-98.png#only-dark)
+
