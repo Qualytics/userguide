@@ -5,6 +5,20 @@ hide:
 
 # Release Notes
 
+### 2024.09.10 { id=2024.09.10 }
+
+#### Feature Enhancements
+
+- Add Source Datastore Modal
+    - Enhanced text messages and labels for better clarity and user experience.
+
+- Add Datastore
+    - Users can now add a datastore directly from the Settings page under the Connections tab, simplifying connection management.
+
+#### General Fixes
+
+- General Fixes and Improvements
+
 ### 2024.09.06 { id=2024.09.06 }
 
 #### Feature Enhancements
