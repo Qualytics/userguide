@@ -5,6 +5,42 @@ hide:
 
 # Release Notes
 
+### 2024.09.13 { id=2024.09.13 }
+
+#### Feature Enhancements
+
+- Volumetric Measurement
+    - We are excited to introduce support for volumetric measurements of views, computed tables and computed files.
+  
+- Enhanced Source Record CSV Download
+    - Users can now download all source records as CSV that have been written to the enrichment datastores.
+
+- Tags and Notifications Moved to Left-Side Navigation
+    - Users can now quickly switch between Tags, Notifications, and Data Assets through the left-side navigation.
+    - Access to the Settings page is restricted to admin users.
+
+- Last Asserted Information in Checks
+    - The `Created Date` information has been replaced with `Last Asserted` to improve visibility.
+    - Users can hover over an info icon to view the `Created Date`.
+
+- Auto-Generated Description in Check Template Dialog
+  - Descriptions are now automatically generated in the Template Dialog based on the rule type, ensuring consistency with the check form.
+
+- Exposed Properties in Profile and Scan Operations
+    - Profile and scan operations now expose properties when listed:
+        - Record Limit
+        - Infer As Draft
+        - Starting Threshold
+        - Enrichment Record Limit
+
+#### General Fixes
+
+- Fixed a bug where the container list would not update when a user created a computed container.
+- Fixed an issue where deactivated users were not filtered on the Settings page under the Security tab.
+- Improved error messages when operations fail.
+- Fixed a bug where the `Last Editor` field was empty after a user was deactivated by an admin.
+- General Fixes and Improvements.
+
 ### 2024.09.10 { id=2024.09.10 }
 
 #### Feature Enhancements
