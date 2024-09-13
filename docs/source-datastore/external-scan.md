@@ -1,47 +1,66 @@
-# External Scan Operation
+#  External Scan Operation
 
-External Scan is a specialized Scan Operation that enables you to assert data quality checks against data residing outside the platform. 
+By running an external scan, organizations can apply the same data quality checks and anomaly detection mechanisms they use internally to the datastores. This is crucial for verifying the reliability of data from third-party sources, ensuring it meets internal data standards, and identifying potential issues before the data is integrated or used for decision-making. 
 
-It empowers you to assess the quality of external datasets while leveraging the defined checks and anomaly detection capabilities within the platform.
+Let’s get started 🚀
 
-## Key Characteristics:
+## Navigation to External Scan Operation
 
- - External Data Sources: Accepts CSV, XLSX, and XLS files as data sources.
- - Schema Requirement: Requires an existing schema or structure within the platform that aligns with the external data's format. This schema can be based on a view, computed table, file, or other compatible object.
- - Check Assertion: Uses the same data quality checks defined for the corresponding schema to identify anomalies within the external data.
- - Anomaly Recording: Records any detected anomalies in the associated Enrichment Datastore, similar to standard Scan Operations.
+**Step 1:** Select a source datastore from the side menu on which you would like to perform the external scan operation.
 
+![datastore](../assets//external-scan/datastore-light-1.png#only-light)
+![datastore](../assets//external-scan/datastore-dark-1.png#only-dark)
 
-!!! info
-    To perform data quality checks on an External Scan operation, users need to have a pre-existing structure.
+**Step 2:** Clicking on your preferred datastore will navigate you to the datastore details page. Click on **"Tables"** an uploaded dataset list will appear. Select the dataset on which you will perform the external scan operation. 
 
-## Configuration
+![tables](../assets//external-scan/tables-light-2.png#only-light)
+![tables](../assets//external-scan/tables-dark-2.png#only-dark)
 
-1. Begin by selecting the existing profile that matches the external data's format.
-2. File Upload: Upload the external data file (CSV, XLSX, or XLS).
-3. Scan: External Scans always perform full scans of the uploaded data.
+For demonstration purposes, we have selected the **“CUSTOMER”** container.
 
-![Screenshot](../assets/operations/external-scan-light.png#only-light)
-![Screenshot](../assets/operations/external-scan-dark.png#only-dark)
+![container](../assets//external-scan/container-light-3.png#only-light)
+![container](../assets//external-scan/container-dark-3.png#only-dark)
+
+## External Scan Configuration
+
+**Step 1:** Click on the **“Run”** button and select the **“External Scan”** option. 
+
+![external-scan](../assets//external-scan/external-scan-light-4.png#only-light)
+![external-scan](../assets//external-scan/external-scan-dark-4.png#only-dark)
+
+**Step 2:** After clicking on the **"External Scan"** button a modal window will provide you the option to upload the external data file in the **"File"** section and click on the **“Run”** button.
+
+![external-file](../assets//external-scan/external-file-light-5.png#only-light)
+![external-file](../assets//external-scan/external-file-dark-5.png#only-dark)
+
+!!! note 
+	An External Scan Operation can be supported in file formats: CSV, XLSX, XLS. 
+
+**Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message stating **"External scan operation triggered."**
+
+![success](../assets//external-scan/success-light-6.png#only-light)
+![success](../assets//external-scan/success-dark-6.png#only-dark)
+
+## Supported File Formats
+
+External scan operation accepts CSV, XLSX, and XLS files. CSV is a simple text format, while XLSX and XLS are Excel formats that support more complex data structures. This versatility enables seamless integration of data from various sources.
 
 An External Scan Operation can be configured with the following file formats:
 
-| File Extension | .csv                                             | .xls                                            | .xlsx                                          |
-|-----------------|--------------------------------------------------|-------------------------------------------------|------------------------------------------------|
-| File Format     | Comma-separated values                            | Microsoft Excel 97-2003 Workbook                | Microsoft Excel 2007+ Workbook                   |
-| Header Row      | Required for optimal reading. It should contain column names. | Recommended, but not strictly required.     | Recommended, but not strictly required.        |
-| Empty Cells     | Represented as empty strings.                     | Allowed.                                        | Allowed.                                       |
-| Data Types      | Typically inferred by Spark.                      | May require explicit specification for complex types. | May require explicit specification for complex types. |
-| Nested Data     | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. |
+| File Extension | .csv   | .xls  | .xlsx  |
+|----------------|--------|-------|--------|
+| File Format  | Comma-separated values | Microsoft Excel 97-2003 Workbook | Microsoft Excel 2007+ Workbook |
+| Header Row  | Required for optimal reading. It should contain column names. | Recommended, but not strictly required. | Recommended, but not strictly required. |
+| Empty Cells | Represented as empty strings. | Allowed.   | Allowed. |
+| Data Types | Typically inferred by Spark.  | May require explicit specification for complex types. | May require explicit specification for complex types. |
+| Nested Data | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. | Not directly supported. Consider flattening or using alternative file formats. |
 | Additional Considerations | - Ensure consistent delimiter usage (usually commas).<br> - Avoid special characters or line breaks within fields.<br> - Enclose text fields containing commas or delimiters in double quotes. | - Use a plain XLS format without macros or formatting.<br> - Consider converting to CSV for simpler handling. | - Use a plain XLSX format without macros or formatting.<br> - Consider converting to CSV for simpler handling. |
 
 ## Scenario
 
-A company maintains a large sales database containing information about various transactions, customers, and products. 
-The organization wants to ensure data quality and identify any anomalies in the sales data. 
+A company maintains a large sales database containing information about various transactions, customers, and products. The organization wants to ensure data quality and identify any anomalies in the sales data. 
 
 An External Scan is initiated to validate the integrity of the sales table.
-
 
 ### Specific Checks:
 
@@ -54,6 +73,8 @@ An External Scan is initiated to validate the integrity of the sales table.
 
 
 ### Potential Anomalies:
+
+This overview highlights common issues such as data type mismatches, missing references, out-of-range dates, and inconsistent revenue calculations. Each anomaly affects data integrity and requires corrective action for accurate analysis.
 
 | Anomaly                | Description                                               |
 |------------------------|-----------------------------------------------------------|
@@ -73,6 +94,9 @@ An External Scan is initiated to validate the integrity of the sales table.
 
 
 ### CSV Table (Sales Data):
+
+This dataset includes transaction records with details such as **Transaction_ID**, **Customer_ID**, **Product_ID**, **Transaction_Date**, **Quantit**y, and **Unit_Price**. It provides essential information for tracking and analyzing sales activities.
+
 | Transaction_ID | Customer_ID | Product_ID | Transaction_Date | Quantity | Unit_Price |
 |-----------------|-------------|------------|-------------------|----------|------------|
 | 1               | 101         | 201        | 2023-01-15        | 5        | 20.00      |
