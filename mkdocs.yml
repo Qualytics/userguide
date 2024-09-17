@@ -74,6 +74,7 @@ nav:
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Check Templates: checks/checks-template.md
+      - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
       - Rule Types:
