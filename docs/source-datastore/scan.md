@@ -54,7 +54,7 @@ This option allows you to manually select the individual table(s) or file patter
 
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purpoaes
 
-![specific](../assets/datastores/scan/specific-light.png#only-light)
+![specific](../assets/datastores/scan/specfic-light.png#only-light)
 ![specfic](../assets/datastores/scan/specfic-dark.png#only-dark)
 
 **3. Tag**
@@ -122,7 +122,7 @@ This option enables you to automatically scan file patterns associated with the 
 
 - **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
 
-![scan-operation](../assets/datastores/scan/sacn-operation-light.png#only-light)
+![scan-operation](../assets/datastores/scan/scan-operation-light.png#only-light)
 ![scan-operation](../assets/datastores/scan/scan-operation-dark.png#only-dark)
 
 **2. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
