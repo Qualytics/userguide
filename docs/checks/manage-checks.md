@@ -49,12 +49,12 @@ You can also categorize the active checks based on their importance, favorites, 
 ![favorite](../assets/checks/manage-checks/favorite-light-6.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-6.png#only-dark)
 
-**3. Metrics:** Filters checks that are associated with specific metrics. These checks validate key performance indicators or other numerical data trends.
+**3. Metrics:** This filters and displays only Metric checks, which validate key performance indicators and numerical data trends. Currently, only Metric checks are supported.
 
 ![metrics](../assets/checks/manage-checks/metrics-light-7.png#only-light)
 ![metrics](../assets/checks/manage-checks/metrics-dark-7.png#only-dark)
 
-**4. All:** Displays a comprehensive view of all checks, including important, favorite, metrics, and any checks that do not fall under these specific categories. 
+**4. All:** Displays a comprehensive view of all active checks, including important, favorite, metrics, and any checks that do not fall under these specific categories. 
 
 ![all](../assets/checks/manage-checks/all-light-8.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-8.png#only-dark)
@@ -78,12 +78,12 @@ You can also categorize the draft checks based on their importance, favorites, o
 ![favorite](../assets/checks/manage-checks/favorite-light-11.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-11.png#only-dark)
 
-**3. Metrics:** Filters checks that are associated with specific metrics. These checks validate key performance indicators or other numerical data trends.
+**3. Metrics:** This filters and displays only Metric checks, which validate key performance indicators and numerical data trends. Currently, only Metric checks are supported here.
 
 ![metrics](../assets/checks/manage-checks/metrics-light-12.png#only-light)
 ![metrics](../assets/checks/manage-checks/metrics-dark-12.png#only-dark)
 
-**4. All:** Displays a comprehensive view of all checks, including important, favorite, metrics, and any checks that do not fall under these specific categories.   
+**4. All:** Displays a comprehensive view of all draft checks, including important, favorite, metrics, and any checks that do not fall under these specific categories.   
 
 ![all](../assets/checks/manage-checks/all-light-13.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-13.png#only-dark)
@@ -107,7 +107,7 @@ You can also categorize the archived checks based on their status as **Discarded
 ![invalid](../assets/checks/manage-checks/invalid-light-16.png#only-light)
 ![invalid](../assets/checks/manage-checks/invalid-dark-16.png#only-dark)
 
-**3. All**: Provides a view of all checks within this category, including archived, discarded, and invalid checks.
+**3. All**: Provides a view of all archive checks within this category including discarded and invalid checks.
 
 ![all](../assets/checks/manage-checks/all-light-17.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-17.png#only-dark)
@@ -168,7 +168,7 @@ After clicking the **"Update"** button, your selected checks will be moved to dr
 
 ### Activate Draft Check
 
-You can activate the draft checks after when you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate speciic checks or activate multiple checks in bulk.
+You can activate the draft checks after when you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate specific checks or activate multiple checks in bulk.
  
 #### Method I. Activate Specific Check
 
@@ -463,10 +463,10 @@ After clicking the "Save" button, your selected checks will be updated with the 
 
 ### Delete Checks
 
-You can delete a check permanently, removing it from the system, and this is an irreversible action. Once you delete it, the check cannot be restored. By deleting the check, you ensure it will no longer appear in active or archived lists, making the system more streamlined and organized. There are two methods for deleting checks: you can either delete individual checks or delete multiple checks in bulk.
+You can delete a check permanently, removing it from the system, and this is an **irreversible action**. Once you delete it, the check cannot be restored. By deleting the check, you ensure it will no longer appear in active or archived lists, making the system more streamlined and organized. There are two methods for deleting checks: you can either delete individual checks or delete multiple checks in bulk.
 
 !!! note 
-       You can only delete archived checks, not active or draft checks. If you want to delete an active or draft check, you must first move it to the archive, and then you can delete it.
+       You can only delete archived checks. If you want to delete an active or draft check, you must first move it to the archive, and then you can delete it.
 
 !!! warning 
        Deleting a check is a one-time action. It cannot be restored after deletion.
@@ -522,7 +522,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![delete-btn](../assets/checks/manage-checks/delete-btn-light-73.png#only-light)
 ![delete-btn](../assets/checks/manage-checks/delete-btn-dark-73.png#only-dark)
 
-After clicking on the "Delete" button, your selected checks will be permanently deleted, and a success flash message will appear stating, "Checks have been successfully deleted."  
+After clicking on the "Delete" button, your selected checks will be permanently deleted, and a success flash message will appear stating, **"Checks have been successfully deleted."**  
    
 ![delete-msg](../assets/checks/manage-checks/delete-msg-light-74.png#only-light)
 ![delete-msg](../assets/checks/manage-checks/delete-msg-dark-74.png#only-dark)
