@@ -57,14 +57,19 @@ Adjust the **Coverage setting** to specify the percentage of records that must c
 ![coverage-setting](../assets/checks/add-check-template/coverage-setting-light-6.png#only-light)
 ![coverage-setting](../assets/checks/add-check-template/coverage-setting-dark-6.png#only-dark)
 
-**3. Description (Required):** Enter a detailed explanation of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users.
+**3. Description (Required):** Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the **"💡"** **lightbulb** icon to apply a suggested description based on the rule type.
 
-**Example**: **"Asserts that the Target has fewer rows than the Reference."** This example demonstrates how to convey the intent of the check, making it easier for others to understand and implement the template correctly.
+**Example**: **"The < field > must exist in `bank_transactions_*.csv.Total_Transaction_Amount` (Bank Dataset - Staging)"**.
 
-**4. Tag**: Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality,"** **"financial reports,"** or **"critical checks."**
+This description clarifies that the specified field must be present in a particular file (`bank_transactions_*.csv`) and column (`Total_Transaction_Amount`) within the Bank Dataset. 
 
 ![description](../assets/checks/add-check-template/description-light-7.png#only-light)
 ![description](../assets/checks/add-check-template/description-dark-7.png#only-dark)
+
+**4. Tag**: Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality,"** **"financial reports,"** or **"critical checks."**
+
+![tag](../assets/checks/add-check-template/tag-light-8.png#only-light)
+![tag](../assets/checks/add-check-template/tag-dark-8.png#only-dark)
 
 **5. Additional Metadata:** Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
 
