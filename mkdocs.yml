@@ -136,8 +136,9 @@ nav:
       - Anomalies: explore/anomalies.md
     - Freshness:
       - Overview: freshness/global-freshness.md
+    - Tags: 
+        - Overview: tags/overview-of-tag.md
     - Settings:
-        - Tags: settings/tags/overview-of-a-tag.md
         - Notifications:
           - Overview: settings/notifications/overview-of-a-notification.md
           - Manage Notifications: settings/notifications/managing-notifications.md
