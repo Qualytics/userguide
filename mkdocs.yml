@@ -75,6 +75,7 @@ nav:
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Check Templates: checks/checks-template.md
+      - Export Check Templates: checks/export-check-templates.md
       - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
