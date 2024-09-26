@@ -6,15 +6,10 @@ Let’s get started 🚀
 
 ## Navigation to Notifications
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
+Log in to your Qualytics account and click the **"Notification Rules** button on the left side panel of the interface. 
 
-![settings](../../../assets/notifications/services/email/settings-light-1.png#only-light)
-![settings](../../../assets/notifications/services/email/settings-dark-1.png#only-dark)
-
-**Step 2:** By default, you will be navigated to the **Tags** section. Click on the **Notifications** tab.
-
-![notification](../../../assets/notifications/services/email/notification-light-2.png#only-light)
-![notification](../../../assets/notifications/services/email/notification-dark-2.png#only-dark)
+![notification-rule](../../../assets/notifications/services/email/notification-rule-light-1.png#only-light)
+![notification-rule](../../../assets/notifications/services/email/notification-rule-dark-1.png#only-dark)
 
 ## Add Email Notification
 
@@ -33,6 +28,9 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 **1. Name:** Enter a specific and descriptive title to your notification rule to easily identify its purpose.
 
 **2. Description:** Provide a brief description of what the notification rule does or when it should trigger.
+
+![name-description](../../../assets/notifications/services/email/name-description-light.png#only-light)
+![name-description](../../../assets/notifications/services/email/name-description-dark.png#only-dark)
 
 **3. Trigger When**: Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:
 
@@ -53,8 +51,8 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 
 - **A Freshness SLA Violation Occurs:** This type of notification is triggered when data within a datastore does not meet the defined freshness criteria, violating the Service Level Agreement (SLA). The notification message typically includes details about the extent of the violation, the specific datastore affected, and the freshness threshold that was breached. This helps the team take prompt corrective actions to ensure data timeliness and reliability.
 
-![enter-details](../../../assets/notifications/services/email/enter-details-light-5.png#only-light){: style="height:350px;width:550px;"}
-![enter-details](../../../assets/notifications/services/email/enter-details-dark-5.png#only-dark){: style="height:350px;width:550px;"}
+![trigger-condition](../../../assets/notifications/services/email/trigger-condition-light-5.png#only-light)
+![trigger-condition](../../../assets/notifications/services/email/trigger-condition-dark-5.png#only-dark)
 
 **4.** **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out. 
 
