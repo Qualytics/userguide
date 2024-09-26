@@ -6,8 +6,8 @@ Integrating PagerDuty with Qualytics ensures that your team gets instant alerts 
 
 **Step 1:** Log in to your Qualytics account and click the **Notification Rules** button on the left side panel of the interface.
 
-![setting](../../../assets/notifications/services/pagerduty/setting-light-1.png#only-light)
-![setting](../../../assets/notifications/services/pagerduty/setting-dark-1.png#only-dark)
+![setting](../../../assets/notifications/services/pagerduty/notification-rule-light-1.png#only-light)
+![setting](../../../assets/notifications/services/pagerduty/notification-rule-dark-1.png#only-dark)
 
 ## Add PagerDuty Notification
 
@@ -26,6 +26,9 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 **1. Name:** Enter a specific and descriptive title to your notification rule to easily identify its purpose.
 
 **2. Description:** Provide a brief description of what the notification rule does or when it should trigger.
+
+![notification-rule](../../../assets/notifications/services/pagerduty/name-description-light.png#only-light)
+![notification-rule](../../../assets/notifications/services/pagerduty/name-description-dark.png#only-dark)
 
 **3. Trigger When**: Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:
 
@@ -62,8 +65,8 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 !!! note 
     If you choose "An Anomaly is Detected" as the trigger condition, you'll need to define the Anomaly's Tag and set a minimum Anomaly weight. This means that only anomalies with a weight equal to or greater than the specified value will trigger a notification. If no value is set, the weight will be ignored.
 
-![tag](../../../assets/notifications/services/pagerduty/tag-light-7.png#only-light)
-![tag](../../../assets/notifications/services/pagerduty/tag-dark-7.png#only-dark) 
+![tag](../../../assets/notifications/services/pagerduty/tags-light-7.png#only-light)
+![tag](../../../assets/notifications/services/pagerduty/tags-dark-7.png#only-dark) 
 
 **6. Notification Channel:** Select **PagerDuty** as your notification channel and enter the **Integration Key** where you want the notification to be sent.
 
