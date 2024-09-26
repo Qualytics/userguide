@@ -22,6 +22,7 @@ nav:
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
+        - add-datastores/overview-of-a-jdbc-datastore.md
         - add-datastores/athena.md
         - add-datastores/bigquery.md
         - add-datastores/databricks.md
