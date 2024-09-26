@@ -1856,7 +1856,7 @@ hide:
 
 #### Feature Enhancements
 
-- [**Explore**](/userguide/explore/global-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
+- [**Explore**](/userguide/explore/overview-of-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
 - Enhanced Navigation Features
     - The navigation tabs have been refined for increased user-friendliness.
     - Enhanced the Profile View and added a toggle between card and list views.
@@ -1870,8 +1870,8 @@ hide:
 
     - ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
     ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
-    - The [`Absolute Change Limit`](/userguide/checks/absolute-change-limit-check) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
-    - The [`Relative Change Limit`](/userguide/checks/relative-change-limit-check) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
+    - The [`Absolute Change Limit`](/userguide/checks/metric-check/#comparison-options) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
+    - The [`Relative Change Limit`](/userguide/checks/metric-check/#comparison-options) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
 
 #### General Fixes
 
