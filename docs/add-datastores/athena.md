@@ -25,7 +25,7 @@ A source datastore is a storage location used to connect to and access data from
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
 | 1.                | Name         | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
-| 2.                | Toggle Button    | Toggle **OFF** to reuse credentials from an existing connection, or toggle **ON** to create a new source datastore from scratch. |
+| 2.                | Toggle Button    | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentals from an existing connection |
 | 3.                | Connector        | Select **Athena** from the dropdown list. |
 
 ### Option I: Create a Datastore with a new Connection
@@ -106,7 +106,7 @@ After successfully testing and verifying your source datastore connection, you h
 | 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.                | Toggle Button for existing enrichment datastore   | Toggle **ON** to link the source datastore to an existing enrichment datastore, or toggle **OFF** to link it to a brand new enrichment datastore. |
 | 3.                | Name         | Give a name for the enrichment datastore. |
-| 4.                | Toggle Button for add new connection  | Toggle **OFF** to reuse credentials from an existing connection, or toggle **ON** to create a new enrichment from scratch. |
+| 4.                | Toggle Button for add new connection  | Toggle **ON** to create a new enrichment from scratch or toggle **OFF** to reuse credentials from an existing connection. |
 | 5.                | Connector | Select a datastore connector as **Athena** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
