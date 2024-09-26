@@ -4,15 +4,10 @@ Integrating PagerDuty with Qualytics ensures that your team gets instant alerts 
 
 ## Navigation to Notifications
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.
+**Step 1:** Log in to your Qualytics account and click the **Notification Rules** button on the left side panel of the interface.
 
 ![setting](../../../assets/notifications/services/pagerduty/setting-light-1.png#only-light)
 ![setting](../../../assets/notifications/services/pagerduty/setting-dark-1.png#only-dark)
-
-**Step 2:** By default, you will be navigated to the **“Tags”** section. Click on the **Notifications** tab.
-
-![notifications](../../../assets/notifications/services/pagerduty/notifications-light-2.png#only-light)
-![notifications](../../../assets/notifications/services/pagerduty/notifications-dark-2.png#only-dark)
 
 ## Add PagerDuty Notification
 
