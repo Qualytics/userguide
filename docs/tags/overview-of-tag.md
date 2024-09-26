@@ -8,15 +8,15 @@ Let’s get started 🚀
 
 ## Navigation to Tags
 
-**Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
+**Step 1**: Log in to your Qualytics account and click on the **Tags** on the left side panel of the interface. 
 
-![global-settings](../../assets/tags/global-settings-light-1.png#only-light)
-![global-settings](../../assets/tags/global-settings-dark-1.png#only-dark)
+![tags](../../assets/tags/tags-light-1.png#only-light)
+![tags](../../assets/tags/tags-dark-1.png#only-dark)
 
-**Step 2**: You will be navigated to the **Tag** section, by default.
+You will be navigated to the **Tags** section, where you can view all the tags available in the system.
 
-![tags](../../assets/tags/tags-light-2.png#only-light)
-![tags](../../assets/tags/tags-dark-2.png#only-dark)
+![tags-section](../../assets/tags/tags-section-light-2.png#only-light)
+![tags-section](../../assets/tags/tags-section-dark-2.png#only-dark)
 
 ## Add Tag
 
