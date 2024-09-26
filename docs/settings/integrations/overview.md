@@ -10,8 +10,8 @@ Key features include:
 
 Supported data catalog integrations:
 
-- [Atlan](../atlan.md)
-- [Alation](../alation.md)
+- [Atlan](./atlan.md)
+- [Alation](./alation.md)
 
 Once an integration is set up, the synchronization process can occur in two ways:
 
