@@ -46,15 +46,10 @@ The system allows for feedback on detected anomalies, which helps refine the ano
 
 ## Navigation to Notifications
 
-**Step 1:** Log in to your Qualytics account and click the **“Settings”** button on the left side panel of the interface.
+Log in to your Qualytics account and click on the **"Notification Rules** button on the left side panel of the interface.
 
-![global-settings](../../assets/notifications/global-settings-light-2.png#only-light)
-![global-settings](../../assets/notifications/global-settings-dark-2.png#only-dark)
-
-**Step 2:** By default, you will be navigated to the **“Tags”** section. Click on the **“Notifications”** tab.
-
-![notifications](../../assets/notifications/notifications-light-3.png#only-light)
-![notifications](../../assets/notifications/notifications-dark-3.png#only-dark)
+![global-settings](../../assets/notifications/notification-rule-light-2.png#only-light)
+![global-settings](../../assets/notifications/notification-rule-dark-2.png#only-dark)
 
 ## **Add Notification Rule**
 
