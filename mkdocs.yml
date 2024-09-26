@@ -22,6 +22,7 @@ nav:
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
+        - add-datastores/overview-of-a-jdbc-datastore.md
         - add-datastores/athena.md
         - add-datastores/bigquery.md
         - add-datastores/databricks.md
@@ -74,6 +75,8 @@ nav:
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Check Templates: checks/checks-template.md
+      - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
+      - Export Check Templates: checks/export-check-templates.md
       - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
@@ -136,26 +139,27 @@ nav:
       - Anomalies: explore/anomalies.md
     - Freshness:
       - Overview: freshness/global-freshness.md
+    - Notifications:
+      - Overview: notifications/overview-of-a-notification.md
+      - Manage Notifications: notifications/managing-notifications.md
+      - Channels:
+        - notifications/notification-services/email.md
+        - notifications/notification-services/http-action.md
+        - notifications/notification-services/microsoft-teams.md
+        - notifications/notification-services/pagerduty.md
+        - notifications/notification-services/slack.md
+        - notifications/notification-services/webhook.md
+    - Tags: 
+      - Overview: tags/overview-of-tag.md
     - Settings:
-        - Tags: settings/tags/overview-of-a-tag.md
-        - Notifications:
-          - Overview: settings/notifications/overview-of-a-notification.md
-          - Manage Notifications: settings/notifications/managing-notifications.md
-          - Channels:
-            - settings/notifications/notification-services/email.md
-            - settings/notifications/notification-services/http-action.md
-            - settings/notifications/notification-services/microsoft-teams.md
-            - settings/notifications/notification-services/pagerduty.md
-            - settings/notifications/notification-services/slack.md
-            - settings/notifications/notification-services/webhook.md
-        - Connections: settings/connections/manage-connections.md
-        - Integrations: 
-          - Overview: settings/integrations/overview.md
-          - Atlan: settings/integrations/atlan.md
-          - Alation: settings/integrations/alation.md
-        - Security: settings/security/teams-and-permissions.md
-        - Tokens: settings/tokens/overview-of-tokens.md
-        - Health: settings/health/overview-of-health.md
+      - Connections: settings/connections/manage-connections.md
+      - Integrations: 
+        - Overview: settings/integrations/overview.md
+        - Atlan: settings/integrations/atlan.md
+        - Alation: settings/integrations/alation.md
+      - Security: settings/security/teams-and-permissions.md
+      - Tokens: settings/tokens/overview-of-tokens.md
+      - Health: settings/health/overview-of-health.md
     - Qualytics CLI:
         - Overview: cli/overview-of-qualytics-cli.md
     - FAQ:
@@ -238,8 +242,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - tables
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
