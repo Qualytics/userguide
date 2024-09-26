@@ -139,7 +139,6 @@ If the toggles for **Use an existing enrichment datastore** and **Use an existin
 
 **Step 1**: Add connection details for your selected **enrichment datastore** connector.
 
-![](images/image3.png)
 ![enrichment-datastore-explain](../assets/datastores/azure-datalake-storage/enrichment-datastore-explain-light.png#only-light)
 ![enrichment-datastore-explain](../assets/datastores/azure-datalake-storage/enrichment-datastore-explain-dark.png#only-dark)
 
