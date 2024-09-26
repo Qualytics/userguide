@@ -160,7 +160,7 @@ A source datastore is a storage location used to connect to and access data from
 | REF. | FIELDS         | ACTIONS              |
 |------|----------------|----------------------|
 | 1️.   | Name (Reqired) | Specify the datastore name (e.g., This name will appear on the datastore cards) |
-| 2️.   | Toggle Button  | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection to create a new source datastore from scratch. |
+| 2️.   | Toggle Button  | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
 | 3️.   | Connector (Required)     | Select **Databricks** from the dropdown list. |                  
 
 ### Option I: Create a Source Datastore with a new Connection
