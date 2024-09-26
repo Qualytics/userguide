@@ -1,22 +1,26 @@
 #  External Scan Operation
 
-By running an external scan, organizations can apply the same data quality checks and anomaly detection mechanisms they use internally to the datastores. This is crucial for verifying the reliability of data from third-party sources, ensuring it meets internal data standards, and identifying potential issues before the data is integrated or used for decision-making. 
+An external scan is ideal for ad hoc scenarios, where you may receive a file intended to be replicated to a source datastore. Before loading, you can perform an external scan to ensure the file aligns with existing data standards. The schema of the file must match the target table or file pattern that has already been profiled within Qualytics, allowing you to reuse the quality checks to identify any issues before data integration.
 
 Let’s get started 🚀
 
 ## Navigation to External Scan Operation
 
-**Step 1:** Select a source datastore from the side menu on which you would like to perform the external scan operation.
+**Step 1:** Select a source datastore from the side menu to perform the external scan operation.
 
 ![datastore](../assets//external-scan/datastore-light-1.png#only-light)
 ![datastore](../assets//external-scan/datastore-dark-1.png#only-dark)
 
-**Step 2:** Clicking on your preferred datastore will navigate you to the datastore details page. Click on **"Tables"** an uploaded dataset list will appear. Select the dataset on which you will perform the external scan operation. 
+
+**Step 2:** After selecting your preferred source datastore, you will be taken to the details page. From there, click on **"Tables"** and select the table you want to perform the external scan operation on.
+
+!!! note 
+	This example is based on a JDBC table, but the same steps apply to DFS as well. For DFS source datastores, you will need to click on **"File Patterns"** and select a File Pattern to run the external scan.
 
 ![tables](../assets//external-scan/tables-light-2.png#only-light)
 ![tables](../assets//external-scan/tables-dark-2.png#only-dark)
 
-For demonstration purposes, we have selected the **“CUSTOMER”** container.
+For demonstration purposes, we have selected the **“CUSTOMER”** table.
 
 ![container](../assets//external-scan/container-light-3.png#only-light)
 ![container](../assets//external-scan/container-dark-3.png#only-dark)
@@ -28,15 +32,15 @@ For demonstration purposes, we have selected the **“CUSTOMER”** container.
 ![external-scan](../assets//external-scan/external-scan-light-4.png#only-light)
 ![external-scan](../assets//external-scan/external-scan-dark-4.png#only-dark)
 
-**Step 2:** After clicking on the **"External Scan"** button a modal window will provide you the option to upload the external data file in the **"File"** section and click on the **“Run”** button.
+**Step 2:** After selecting the **"External Scan"** option, a modal window will appear with an input for uploading your external file. After uploading the file, click the **“Run”** button to start the operation.
 
 ![external-file](../assets//external-scan/external-file-light-5.png#only-light)
 ![external-file](../assets//external-scan/external-file-dark-5.png#only-dark)
 
 !!! note 
-	An External Scan Operation can be supported in file formats: CSV, XLSX, XLS. 
+	An External Scan operation supports the following file formats: CSV, XLSX, and XLS.
 
-**Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message stating **"External scan operation triggered."**
+**Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message if the operation is successfully triggered.
 
 ![success](../assets//external-scan/success-light-6.png#only-light)
 ![success](../assets//external-scan/success-dark-6.png#only-dark)
@@ -58,9 +62,9 @@ An External Scan Operation can be configured with the following file formats:
 
 ## Scenario
 
-A company maintains a large sales database containing information about various transactions, customers, and products. The organization wants to ensure data quality and identify any anomalies in the sales data. 
+A company maintains a large sales database containing information about various transactions, customers, and products. They have received a new sales data file that will be integrated into the existing database. Before loading the data, the organization wants to ensure there are no issues with the file.
 
-An External Scan is initiated to validate the integrity of the sales table.
+An External Scan is initiated to perform checks on the incoming file, validating that it aligns with the quality standards of the sales table.
 
 ### Specific Checks:
 
@@ -74,7 +78,7 @@ An External Scan is initiated to validate the integrity of the sales table.
 
 ### Potential Anomalies:
 
-This overview highlights common issues such as data type mismatches, missing references, out-of-range dates, and inconsistent revenue calculations. Each anomaly affects data integrity and requires corrective action for accurate analysis.
+This overview highlights common issues such as data type mismatches, missing references, out-of-range dates, and inconsistent revenue calculations. Each anomaly affects data integrity and requires corrective action.
 
 | Anomaly                | Description                                               |
 |------------------------|-----------------------------------------------------------|
@@ -146,12 +150,12 @@ This section provides a sample payload for running an external scan operation. R
 `/api/containers/{container-id}/scan` _(post)_
 
 === "Running an external scan operation of a datastore"
-    ```json
-        {
-            "name":"file_name.csv",
-            "records": [{\"COLUMN_1\":\"VALUE 1\",\"COLUMN_2\":\"VALUE 1\"},{\"COLUMN_1\":\"VALUE_2\",\"COLUMN_2\":\"VALUE 2\"}]
-        }
-    ```
+	```json
+	{
+		"name":"file_name.csv",
+		"records": [{\"COLUMN_1\":\"VALUE 1\",\"COLUMN_2\":\"VALUE 1\"},{\"COLUMN_1\":\"VALUE_2\",\"COLUMN_2\":\"VALUE 2\"}]
+	}
+	```
 
 ### Retrieving an External Scan Operation Status
 
@@ -160,74 +164,74 @@ This section provides a sample payload for running an external scan operation. R
 `/api/operations/{id}` _(get)_
 
 === "Example result response"
-    ```json
-		{
-			"items": [
-				{
-					"id": 12345,
-					"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-					"type": "external_scan",
-					"start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-					"end_time": null,
-					"result": "running",
-					"message": null,
-					"triggered_by": "user@example.com",
-					"datastore": {
-						"id": 101,
-						"name": "Datastore-Sample",
-						"store_type": "jdbc",
-						"type": "db_type",
-						"enrich_only": false,
-						"enrich_container_prefix": "data_prefix",
-						"favorite": false
-					},
-					"schedule": null,
-					"incremental": false,
-					"remediation": "none",
-					"max_records_analyzed_per_partition": -1,
-					"greater_than_time": null,
-					"greater_than_batch": null,
-					"high_count_rollup_threshold": 10,
-					"enrichment_source_record_limit": 10,
-					"status": {
-						"total_containers": 1,
-						"containers_analyzed": 0,
-						"partitions_scanned": 0,
-						"records_processed": 0,
-						"anomalies_identified": 0
-					},
-					"containers": [
-							{
+	```json
+	{
+		"items": [
+			{
+				"id": 12345,
+				"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+				"type": "external_scan",
+				"start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+				"end_time": null,
+				"result": "running",
+				"message": null,
+				"triggered_by": "user@example.com",
+				"datastore": {
+					"id": 101,
+					"name": "Datastore-Sample",
+					"store_type": "jdbc",
+					"type": "db_type",
+					"enrich_only": false,
+					"enrich_container_prefix": "data_prefix",
+					"favorite": false
+				},
+				"schedule": null,
+				"incremental": false,
+				"remediation": "none",
+				"max_records_analyzed_per_partition": -1,
+				"greater_than_time": null,
+				"greater_than_batch": null,
+				"high_count_rollup_threshold": 10,
+				"enrichment_source_record_limit": 10,
+				"status": {
+					"total_containers": 1,
+					"containers_analyzed": 0,
+					"partitions_scanned": 0,
+					"records_processed": 0,
+					"anomalies_identified": 0
+				},
+				"containers": [
+						{
+						"id": 234,
+						"name": "Container1",
+						"container_type": "table",
+						"table_type": "table"
+						}
+					],
+					"container_scans": [
+						{
+						"id": 456,
+						"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
+						"container": {
 							"id": 234,
 							"name": "Container1",
 							"container_type": "table",
 							"table_type": "table"
-							}
-						],
-						"container_scans": [
-							{
-							"id": 456,
-							"created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-							"container": {
-								"id": 234,
-								"name": "Container1",
-								"container_type": "table",
-								"table_type": "table"
-							},
-							"start_time": null,
-							"end_time": null,
-							"records_processed": 0,
-							"anomaly_count": 0,
-							"result": "running",
-							"message": null
-							}
-						],
-						"tags": []
-				}
-			],
-			"total": 1,
-			"page": 1,
-			"size": 50,
-			"pages": 1
-		}
-    ```
+						},
+						"start_time": null,
+						"end_time": null,
+						"records_processed": 0,
+						"anomaly_count": 0,
+						"result": "running",
+						"message": null
+						}
+					],
+					"tags": []
+			}
+		],
+		"total": 1,
+		"page": 1,
+		"size": 50,
+		"pages": 1
+	}
+	```
