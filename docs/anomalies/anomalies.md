@@ -182,7 +182,7 @@ If the value in the right column (reference) differs from the value in the left 
 
 ### Download Source Records
 
-Download and export the source records (in .csv) for further analysis or external use. Only 10 rows can be exported in this operation.
+Download and export all source records (up to 250MB in a compressed .csv) for further analysis or external use.
 
 ![download-source-records](../assets/datastores/anomalies/download-source-records-light.png#only-light)
 ![download-source-records](../assets/datastores/anomalies/download-source-records-dark.png#only-dark)

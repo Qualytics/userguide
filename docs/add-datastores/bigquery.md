@@ -108,22 +108,22 @@ A source datastore is a storage location used to connect to and access data from
 | REF. | FIELDS          | ACTIONS                                   |
 |------|-----------------|-------------------------------------------|
 | 1️.   | Name (Required)  | Specify the name of the datastore (e.g. The specified name will appear on the datastore cards.) |
-| 2️.  | Toggle Button   | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 2️.  | Toggle Button   | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
 | 3.    | Connector (Required) | Select **BigQuery** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
-If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
 **Step 1:** Select the **BigQuery** connector from the dropdown list and add connection details such as temp dataset ID, service account key, project ID, and dataset ID.
 
-![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-light.png#only-light){: style=“height:450px;width:450px;”}
-![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-light.png#only-light)
+![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-dark.png#only-dark)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-light.png#only-light){: style=“height:450px;width:450px;”}
-![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-light.png#only-light)
+![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-dark.png#only-dark)
 
 | REF. | FIELDS                               | ACTIONS                                    |
 |------|--------------------------------------|--------------------------------------------|
@@ -136,27 +136,27 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/bigquery/test-datastore-connection-light.png#only-light){: style=“height:400px;width:400px;”}
-![test-datastore-connection](../assets/datastores/bigquery/test-datastore-connection-dark.png#only-dark){: style=“height:400px;width:400px;”}
+![test-datastore-connection](../assets/datastores/bigquery/test-datastore-connection-light.png#only-light)
+![test-datastore-connection](../assets/datastores/bigquery/test-datastore-connection-dark.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using the existing connection details.
+If the toggle for **Add New connection** is turned off, then this will prompt you to configure the source datastore using the existing connection details.
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/bigquery/use-existing-datastore-light.png#only-light){: style=“height:450px;width:450px;”}
-![use-existing-datastore](../assets/datastores/bigquery/use-existing-datastore-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![use-existing-datastore](../assets/datastores/bigquery/use-existing-datastore-light.png#only-light)
+![use-existing-datastore](../assets/datastores/bigquery/use-existing-datastore-dark.png#only-dark)
 
 !!! note
     If you are using existing credentials, you can only edit the details such as Project ID, Dataset ID, Teams, and Initiate Cataloging. 
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/bigquery/test-connection-for-existing-datastore-light.png#only-light){: style=“height:450px;width:400px;”}
-![test-connection-for-existing-datastore](../assets/datastores/bigquery/test-connection-for-existing-datastore-dark.png#only-dark){: style=“height:450px;width:400px;”}
+![test-connection-for-existing-datastore](../assets/datastores/bigquery/test-connection-for-existing-datastore-light.png#only-light)
+![test-connection-for-existing-datastore](../assets/datastores/bigquery/test-connection-for-existing-datastore-dark.png#only-dark)
 
 !!! note 
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -170,53 +170,53 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-light.png#only-light){: style=“height:450px;width:450px;”}
-![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-light.png#only-light)
+![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-dark.png#only-dark)
 
 **Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
 
-![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-light.png#only-light){: style=“height:450px;width:450px;”}
-![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-dark.png#only-dark)
 
-| REF. | FIELDS                                           | ACTIONS                                                                                     |
-|------|--------------------------------------------------|---------------------------------------------------------------------------------------------|
-|   1.  | Prefix (Required)                                | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata for your selected datastore. |
-|   2.  | Toggle Button for existing enrichment datastore   | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
-|   3.  | Name (Required)                                  | Give a name for the enrichment datastore.                                                   |
-|   4.  | Toggle Button for using an existing connection   | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
-|   5.   | Connector (Required)                             | Select a datastore connector as **BigQuery** from the dropdown list.                          |
+| REF. | FIELDS | ACTIONS |
+|------|--------|---------|
+|   1. | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata for your selected datastore. |
+|   2. | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
+|   3. | Name (Required) | Give a name for the enrichment datastore. |
+|   4. | Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch, or toggle OFF to reuse credentials from an existing connection. |
+|   5. | Connector (Required) | Select a datastore connector as **BigQuery** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Use an existing enrichment datastore** is off and **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-light.png#only-light){: style=“height:450px;width:450px;”}
-![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-light.png#only-light)
+![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-dark.png#only-dark)
 
-| REF. | FIELDS                           | ACTIONS                                                                                      |
-|------|----------------------------------|----------------------------------------------------------------------------------------------|
-|   1.   | Temp Dataset ID (Optional)       | Enter a temporary Dataset ID for intermediate data storage during BigQuery operations.        |
-|   2.  | [Service Account Key](https://cloud.google.com/iam/docs/keys-create-delete){:target="_blank"} (Required)   | Upload a JSON file that contains the credentials required for accessing BigQuery.             |
-|   3.   | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522){:target="_blank"} (Required)            | Enter the Project ID associated with BigQuery.                                                |
-|   4.   | Dataset ID (Required)            | Enter the Dataset ID (schema name) associated with BigQuery.                                  |
-|   5.   | Teams (Required)                 | Select one or more teams from the dropdown to associate with this source datastore.            |
+| REF. | FIELD | ACTIONS |
+|------|-------|---------|
+|   1. | Temp Dataset ID (Optional) | Enter a temporary Dataset ID for intermediate data storage during BigQuery operations.  |
+|   2. | [Service Account Key](https://cloud.google.com/iam/docs/keys-create-delete){:target="_blank"} (Required) | Upload a JSON file that contains the credentials required for accessing BigQuery.|
+|   3. | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522){:target="_blank"} (Required) | Enter the Project ID associated with BigQuery.|
+|   4. | Dataset ID (Required) | Enter the Dataset ID (schema name) associated with BigQuery.|
+|   5. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
 
 **Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
-![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-light.png#only-light){: style=“height:450px;width:450px;”}
-![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-light.png#only-light)
+![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-dark.png#only-dark)
 
 **Step 3:** Click on the **Finish** button to complete the configuration process. 
 
-![finish-configuration](../assets/datastores/bigquery/finish-configuration-light.png#only-light){: style=“height:450px;width:450px;”}
-![finish-configuration](../assets/datastores/bigquery/finish-configuration-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![finish-configuration](../assets/datastores/bigquery/finish-configuration-light.png#only-light)
+![finish-configuration](../assets/datastores/bigquery/finish-configuration-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
-![success-message](../assets/datastores/bigquery/success-message-light.png#only-light){: style=“height:450px;width:450px;”}
-![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![success-message](../assets/datastores/bigquery/success-message-light.png#only-light)
+![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark)
 
 **Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -229,14 +229,14 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-light.png#only-light){: style=“height:450px;width:450px;”}
-![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-light.png#only-light)
+![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-dark.png#only-dark)
 
-| REF. | FIELDS                                           | ACTIONS                                                                                     |
-|------|--------------------------------------------------|---------------------------------------------------------------------------------------------|
-|  1.   | Prefix (Required)                                | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-|  2.   | Toggle Button for existing enrichment datastore   | Toggle ON to link the source datastore to an existing enrichment datastore.                  |
-|  3.  | Enrichment Datastore                             | Select an enrichment datastore from the dropdown list.                                       |
+| REF. | FIELDS  | ACTIONS  |
+|------|---------|----------|
+|  1.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+|  2.  | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore. |
+|  3.  | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
 
 **Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
@@ -248,18 +248,18 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 - **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-light.png#only-light){: style=“height:450px;width:450px;”}
-![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-light.png#only-light)
+![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-dark.png#only-dark)
 
 **Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-light.png#only-light){: style=“height:450px;width:450px;”}
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![success-message](../assets/datastores/bigquery/success-message-light.png#only-light){: style=“height:450px;width:450px;”}
-![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark){: style=“height:450px;width:450px;”}
+![success-message](../assets/datastores/bigquery/success-message-light.png#only-light)
+![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 

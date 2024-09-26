@@ -38,7 +38,7 @@ This allows users to access the system without the need for an integrated IdP du
   
 Once the customer completes the onboarding through the invitation link sent to the email, the credentials are produced that can be used for signing in to your Qualytics account and accessing the dashboard.
 
-![sign-in](../assets/quick-start-guide/sign-in-light.png#light-only)
+![sign-in](assets/quick-start-guide/sign-in-light.png#light-only)
 
 ### Method 2: Qualytics SSO
 
@@ -50,7 +50,7 @@ Most customers will have their own SSO integration. Typically, the login screen 
     
 -   **Customer SSO:** Used by the organization's users, leveraging their own SSO for seamless access.
 
-![sign-in](../assets/quick-start-guide/welcome-screen-light.png#light-only)
+![sign-in](assets/quick-start-guide/welcome-screen-light.png#light-only)
 
 ## Datastore
 
@@ -60,8 +60,8 @@ Additionally, Qualytics supports an "Enrichment Datastore," used solely for writ
 
 When the user is authenticated, the Qualytics onboarding screen appears, where you can click and add your datastore to the Qualytics platform.
 
-![add-first-datastore](../assets/quick-start-guide/add-first-datastore-light.png#only-light)
-![add-first-datastore](../assets/quick-start-guide/add-first-datastore-dark.png#only-dark)
+![add-first-datastore](assets/quick-start-guide/add-first-datastore-light.png#only-light)
+![add-first-datastore](assets/quick-start-guide/add-first-datastore-dark.png#only-dark)
 
 ## Configuring Datastores
 
