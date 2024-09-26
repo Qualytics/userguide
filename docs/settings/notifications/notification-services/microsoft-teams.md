@@ -4,15 +4,10 @@ Integrating Microsoft Teams notifications allows users to receive timely updates
 
 ## Navigation to Notifications
 
-**Step 1:** Log in to your Qualytics account and click the **“Settings”** button on the left side panel of the interface. 
+**Step 1:** Log in to your Qualytics account and click the **“Notification Rules”** button on the left side panel of the interface. 
 
-![settings](../../../assets/notifications/services/microsoft-teams/settings-light-1.png#only-light)
-![settings](../../../assets/notifications/services/microsoft-teams/settings-dark-1.png#only-dark)
-
-**Step 2:** Click on the **“Notifications”** tab.
-
-![notification](../../../assets/notifications/services/microsoft-teams/notification-light-2.png#only-light)
-![notification](../../../assets/notifications/services/microsoft-teams/notification-dark-2.png#only-dark)
+![settings](../../../assets/notifications/services/microsoft-teams/notification-rule-light-1.png#only-light)
+![settings](../../../assets/notifications/services/microsoft-teams/notification-rule-dark-1.png#only-dark)
 
 ## **Add Microsoft Teams Notification**
 
