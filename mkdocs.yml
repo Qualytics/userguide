@@ -140,38 +140,26 @@ nav:
     - Freshness:
       - Overview: freshness/global-freshness.md
     - Notifications:
-          - Overview: notifications/overview-of-a-notification.md
-          - Manage Notifications: notifications/managing-notifications.md
-          - Channels:
-            - notifications/notification-services/email.md
-            - notifications/notification-services/http-action.md
-            - notifications/notification-services/microsoft-teams.md
-            - notifications/notification-services/pagerduty.md
-            - notifications/notification-services/slack.md
-            - notifications/notification-services/webhook.md
-    - Settings:
-        - Tags: settings/tags/overview-of-a-tag.md
+      - Overview: notifications/overview-of-a-notification.md
+      - Manage Notifications: notifications/managing-notifications.md
+      - Channels:
+        - notifications/notification-services/email.md
+        - notifications/notification-services/http-action.md
+        - notifications/notification-services/microsoft-teams.md
+        - notifications/notification-services/pagerduty.md
+        - notifications/notification-services/slack.md
+        - notifications/notification-services/webhook.md
     - Tags: 
-        - Overview: tags/overview-of-tag.md
+      - Overview: tags/overview-of-tag.md
     - Settings:
-        - Notifications:
-          - Overview: settings/notifications/overview-of-a-notification.md
-          - Manage Notifications: settings/notifications/managing-notifications.md
-          - Channels:
-            - settings/notifications/notification-services/email.md
-            - settings/notifications/notification-services/http-action.md
-            - settings/notifications/notification-services/microsoft-teams.md
-            - settings/notifications/notification-services/pagerduty.md
-            - settings/notifications/notification-services/slack.md
-            - settings/notifications/notification-services/webhook.md
-        - Connections: settings/connections/manage-connections.md
-        - Integrations: 
-          - Overview: settings/integrations/overview.md
-          - Atlan: settings/integrations/atlan.md
-          - Alation: settings/integrations/alation.md
-        - Security: settings/security/teams-and-permissions.md
-        - Tokens: settings/tokens/overview-of-tokens.md
-        - Health: settings/health/overview-of-health.md
+      - Connections: settings/connections/manage-connections.md
+      - Integrations: 
+        - Overview: settings/integrations/overview.md
+        - Atlan: settings/integrations/atlan.md
+        - Alation: settings/integrations/alation.md
+      - Security: settings/security/teams-and-permissions.md
+      - Tokens: settings/tokens/overview-of-tokens.md
+      - Health: settings/health/overview-of-health.md
     - Qualytics CLI:
         - Overview: cli/overview-of-qualytics-cli.md
     - FAQ:
