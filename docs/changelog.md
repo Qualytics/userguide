@@ -5,6 +5,53 @@ hide:
 
 # Release Notes
 
+### 2024.09.25 { id=2024.09.25 }
+
+#### Feature Enhancements
+
+- Observability
+    - Time-series charts are presented to monitor data volume and related anomalies for each data asset.
+        - Custom thresholds were added to adjust minimum and maximum volume expectations.
+    - The Metrics tab has been moved to the Observability tab.
+    - The Observability tab has replaced the Freshness page.
+
+- Check Category Options for Scan Operations
+    - Users can select one or multiple check categories when running a scan operation.
+
+- Anomaly Trigger Rule Type Filter
+    - Added a filter by check rule types to anomaly triggers. A help component was added to the tags selector to improve clarity.
+
+- Auto-Archive Anomalies
+    - A new Duplicate status has been introduced for anomalies.
+    - Users can now use Incremental Identifier ranges to auto-archive anomalies with the new Duplicate status.
+    - An option has been added to scan operations to automatically archive anomalies identified as duplicates if the containers analyzed have incremental identifiers configured.
+  - A dedicated tab for filtering duplicate anomalies has been added for better visibility.
+
+- Tree View and Breadcrumb Context Menu
+    - A context menu has been added, allowing users to copy essential information and open links in new tabs.
+    - Users can access the context menu by right-clicking on the assets.
+
+- Incremental Identifier Support
+    - Users can manage incremental identifiers for computed tables and computed files.
+
+- Native Field Properties
+    - Users can now see native field properties in the field profile, displayed through an info icon next to the Type Inferred section.
+
+- Qualytics CLI Update
+    - Users can now import check templates.
+    - A status filter has been added to check exports. Users can filter by `Active`, `Draft`, or `Archived` (which will include `Invalid` and `Discarded` statuses).
+
+#### General Fixes
+
+- The Oracle connector now handles invalid schemas when creating connections.
+- Anomalies identified in scan operations were not counting archived statuses.
+- Improved error message when a user creates a schedule name longer than 50 characters.
+- General fixes and improvements.
+
+#### Breaking Changes
+
+- Freshness and SLA references have been removed from user notifications and notification rules, users should migrate to Observability using volumetric checks.
+
 ### 2024.09.14 { id=2024.09.14 }
 
 #### Feature Enhancements
@@ -1809,7 +1856,7 @@ hide:
 
 #### Feature Enhancements
 
-- [**Explore**](/userguide/explore/global-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
+- [**Explore**](/userguide/explore/overview-of-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
 - Enhanced Navigation Features
     - The navigation tabs have been refined for increased user-friendliness.
     - Enhanced the Profile View and added a toggle between card and list views.
@@ -1823,8 +1870,8 @@ hide:
 
     - ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
     ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
-    - The [`Absolute Change Limit`](/userguide/checks/absolute-change-limit-check) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
-    - The [`Relative Change Limit`](/userguide/checks/relative-change-limit-check) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
+    - The [`Absolute Change Limit`](/userguide/checks/metric-check/#comparison-options) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
+    - The [`Relative Change Limit`](/userguide/checks/metric-check/#comparison-options) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
 
 #### General Fixes
 

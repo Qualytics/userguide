@@ -22,6 +22,7 @@ nav:
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
+        - add-datastores/overview-of-a-jdbc-datastore.md
         - add-datastores/athena.md
         - add-datastores/bigquery.md
         - add-datastores/databricks.md
@@ -75,6 +76,8 @@ nav:
       - Overview: checks/overview-of-a-check.md
       - Check Templates: checks/checks-template.md
       - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
+      - Export Check Templates: checks/export-check-templates.md
+      - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
       - Rule Types:
@@ -136,8 +139,9 @@ nav:
       - Anomalies: explore/anomalies.md
     - Freshness:
       - Overview: freshness/global-freshness.md
+    - Tags: 
+        - Overview: tags/overview-of-tag.md
     - Settings:
-        - Tags: settings/tags/overview-of-a-tag.md
         - Notifications:
           - Overview: settings/notifications/overview-of-a-notification.md
           - Manage Notifications: settings/notifications/managing-notifications.md
@@ -238,8 +242,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - tables
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
