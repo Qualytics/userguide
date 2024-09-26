@@ -4,15 +4,10 @@ Integrating HTTP Action notifications allows users to receive timely updates or 
 
 ## Navigation to Notifications
 
-**Step 1:** Log in to your Qualytics account and click the **“Settings”** button on the left side panel of the interface. 
+**Step 1:** Log in to your Qualytics account and click the **“Notification Rules”** button on the left side panel of the interface. 
 
-![Setting](../../../assets/notifications/services/http-action/settings-light-1.png#only-light)
-![Setting](../../../assets/notifications/services/http-action/settings-dark-1.png#only-dark)
-
-**Step 2:** Click on the **“Notifications”** tab.
-
-![Notification](../../../assets/notifications/services/http-action/notification-light-2.png#only-light)
-![Notification](../../../assets/notifications/services/http-action/notification-dark-2.png#only-dark)
+![Setting](../../../assets/notifications/services/http-action/notification-rule-light-1.png#only-light)
+![Setting](../../../assets/notifications/services/http-action/notification-rule-dark-1.png#only-dark)
 
 ## Add HTTP Action Notification
 
