@@ -13,15 +13,15 @@ The Global Search feature in Qualytics is designed to streamline the process of 
 !!! tip
     Press the shortcut key: Ctrl+K for quick access to Global Search
 
-![global-search](../assets/dashboard/global-search-light.png#only-light)
-![global-search](../assets/dashboard/global-search-dark.png#only-dark)
+![global-search](assets/dashboard/global-search-light.png#only-light)
+![global-search](assets/dashboard/global-search-dark.png#only-dark)
 
 ## In-App Notifications
 
 In-app notifications in Qualytics are real-time alerts that keep users informed about various events related to their data operations and quality checks. These notifications are displayed within the Qualytics interface and cover a range of activities, including operation completions, anomaly detections, and service level agreement (SLA) status updates.
 
-![nav-notification](../assets/dashboard/nav-notification-light.png#only-light)
-![nav-notification](../assets/dashboard/nav-notification-dark.png#only-dark)
+![nav-notification](assets/dashboard/nav-notification-light.png#only-light)
+![nav-notification](assets/dashboard/nav-notification-dark.png#only-dark)
 
 ## Discover
 
@@ -39,8 +39,8 @@ The **Discover** option in Qualytics features a dropdown menu that provides acce
 
 - **Playground**: Provides access to an interactive environment where users can test and experiment with API calls. This feature is particularly useful for developers who want to understand how the API works and try out different queries before implementing them in their applications.
 
-![discovery](../assets/dashboard/discovery-light.png#only-light)
-![discovery](../assets/dashboard/discovery-dark.png#only-dark)
+![discovery](assets/dashboard/discovery-light.png#only-light)
+![discovery](assets/dashboard/discovery-dark.png#only-dark)
 
 ## Theme
 
@@ -62,8 +62,8 @@ Qualytics offers both dark mode and light mode to enhance user experience and ca
 
 - To activate dark mode, click on the same **Dark Mode** button.
 
-![light-mode-theme](../assets/dashboard/light-mode-theme.png#only-light)
-![dark-mode-theme](../assets/dashboard/dark-mode-theme.png#only-dark)
+![light-mode-theme](assets/dashboard/light-mode-theme.png#only-light)
+![dark-mode-theme](assets/dashboard/dark-mode-theme.png#only-dark)
 
 ## View Mode
 
@@ -73,8 +73,8 @@ In Qualytics, users have the option to switch between two display modes: List Vi
 
 - **Card View**: Card View displays items as individual cards arranged in a grid. Each card typically includes a summary of the most important information about the item. To switch to Card View, click the "Card View" button (represented by an icon with a grid of squares) located at the top of the page. 
 
-![view-mode](../assets/dashboard/view-mode-light.png#only-light)
-![view-mode](../assets/dashboard/view-mode-dark.png#only-dark)
+![view-mode](assets/dashboard/view-mode-light.png#only-light)
+![view-mode](assets/dashboard/view-mode-dark.png#only-dark)
 
 ## User Profile 
 
@@ -92,8 +92,8 @@ The user profile section in Qualytics provides essential information and setting
 
 - **Version**: Displays the current version of the Qualytics platform being used, which is helpful for troubleshooting and ensuring compatibility with other tools and features.
 
-![profile-menu](../assets/dashboard/profile-menu-light.png#only-light)
-![profile-menu](../assets/dashboard/profile-menu-dark.png#only-dark)
+![profile-menu](assets/dashboard/profile-menu-light.png#only-light)
+![profile-menu](assets/dashboard/profile-menu-dark.png#only-dark)
 
 ## Navigation Menu (Left Sidebar)
 
@@ -111,8 +111,8 @@ Lists all the source datastores at the left sidebar connected to Qualytics. Also
 
 - Filter source datastores 
 
-![source-datastore-nav](../assets/dashboard/source-datastore-nav-light.png#only-light)
-![source-datastore-nav](../assets/dashboard/source-datastore-nav-dark.png#only-dark)
+![source-datastore-nav](assets/dashboard/source-datastore-nav-light.png#only-light)
+![source-datastore-nav](assets/dashboard/source-datastore-nav-dark.png#only-dark)
 
 ### Enrichment Datastores
 
@@ -122,8 +122,8 @@ Lists all the enrichment datastores at the left sidebar connected to Qualytics. 
 - Search from existing enrichment datastores 
 - Sort existing datastores based on the name, records, checks, etc. 
 
-![enrichment-datastore-nav](../assets/dashboard/enrichment-datastore-nav-light.png#only-light)
-![enrichment-datastore-nav](../assets/dashboard/enrichment-datastore-nav-dark.png#only-dark)
+![enrichment-datastore-nav](assets/dashboard/enrichment-datastore-nav-light.png#only-light)
+![enrichment-datastore-nav](assets/dashboard/enrichment-datastore-nav-dark.png#only-dark)
 
 ### Explore
 
@@ -139,8 +139,8 @@ The Explore dashboard in Qualytics enables effective data management and analysi
 
 - **Anomalies**: Lists all detected anomalies across source datastores for quick identification and resolution of issues.
 
-![explore-nav](../assets/dashboard/explore-nav-light.png#only-light)
-![explore-nav](../assets/dashboard/explore-nav-dark.png#only-dark)
+![explore-nav](assets/dashboard/explore-nav-light.png#only-light)
+![explore-nav](assets/dashboard/explore-nav-dark.png#only-dark)
 
 ### Library
 
@@ -153,8 +153,8 @@ The library dashboard allows for managing check templates and editing applied ch
 !!! tip
     You can also search, sort, and filter checks across the source datastores
 
-![library-access](../assets/dashboard/library-access-light.png#only-light)
-![library-access](../assets/dashboard/library-access-dark.png#only-dark)
+![library-access](assets/dashboard/library-access-light.png#only-light)
+![library-access](assets/dashboard/library-access-dark.png#only-dark)
 
 ### Global Settings
 
@@ -174,5 +174,5 @@ Manage global configurations with the following options:
 
 - **Health**: Monitor and restart the Qualytics deployment.
 
-![global-settings](../assets/dashboard/global-settings-light.png#only-light)
-![global-settings](../assets/dashboard/global-settings-dark.png#only-dark)
+![global-settings](assets/dashboard/global-settings-light.png#only-light)
+![global-settings](assets/dashboard/global-settings-dark.png#only-dark)

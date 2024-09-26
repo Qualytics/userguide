@@ -27,15 +27,10 @@ You can switch between the different types of notifications to have a categorica
 
 ### Method II: Global Settings
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.   
+**Step 1:** Log in to your Qualytics account and click the **"Notification Rules** button on the left side panel of the interface.   
 
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-light-4.png#only-light)
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-dark-4.png#only-dark)
-
-**Step 2:** Click on the **Notifications** tab.
-
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-light-5.png#only-light)
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-dark-5.png#only-dark)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-light-4.png#only-light)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-dark-4.png#only-dark)
 
 Here, you can view a list of all the notification rules you’ve added to the system. From this interface, you can easily manage (edit, delete, or mute) your notification rules as needed.
 
@@ -80,13 +75,13 @@ Here, you can view all notifications that have been triggered based on the notif
 - Add or remove datastore tags
 - Update Notification Channels
 
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-11.png#only-light){: style="height:600px;width:610px;"}
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-11.png#only-dark){: style="height:600px;width:610px;"}
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-11.png#only-light)
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-11.png#only-dark)
 
 **Step 5:** Once you have edited the notification rule or made necessary changes, click on the **Save** button.
 
-![save-button](../../../assets/notifications/manage-notifications/save-button-light-12.png#only-light){: style="height:600px;width:610px;"}
-![save-button](../../../assets/notifications/manage-notifications/save-button-dark-12.png#only-dark){: style="height:600px;width:610px;"}
+![save-button](../../../assets/notifications/manage-notifications/save-button-light-12.png#only-light)
+![save-button](../../../assets/notifications/manage-notifications/save-button-dark-12.png#only-dark)
 
 After clicking on the **Save** button, a success flash message will appear saying the **Notification successfully updated.**
 
@@ -97,40 +92,35 @@ After clicking on the **Save** button, a success flash message will appear sayin
 
 You can also edit notification rules from the global settings. After making changes, such as adjusting the trigger conditions or adding tags, the notifications will now trigger based on the updated rule instead of the previous settings.
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
+**Step 1:** Log in to your Qualytics account and click the **"Notification Rules** button on the left side panel of the interface.  
 
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-light-14.png#only-light)
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-dark-14.png#only-dark)
-
-**Step 2:** Click on the **Notifications** tab.
-
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-light-15.png#only-light)
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-dark-15.png#only-dark)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-light-14.png#only-light)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-dark-14.png#only-dark)
 
 Here you can view a list of all the notifications you have added to the Qualytics system.
 
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-light-16.png#only-light)
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-dark-16.png#only-dark)
 
-**Step 3:** Click on the **vertical ellipsis** next to the notification rule you want to update and select the **"Edit"** option from the drop-down menu.
+**Step 2:** Click on the **vertical ellipsis** next to the notification rule you want to update and select the **"Edit"** option from the drop-down menu.
 
 ![edit-button](../../../assets/notifications/manage-notifications/edit-button-light-17.png#only-light)
 ![edit-button](../../../assets/notifications/manage-notifications/edit-button-dark-17.png#only-dark)
 
-**Step 4:** A modal window will appear, allowing you to edit the notification rule. Here, you can:
+**Step 3:** A modal window will appear, allowing you to edit the notification rule. Here, you can:
 
 - Adjust trigger conditions
 - Modify notification messages   
 - Add or remove datastore tags
 - Update notification channels 
 
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-18.png#only-light){: style="height:600px;width:610px;"}
-![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-18.png#only-dark){: style="height:600px;width:610px;"}
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-light-18.png#only-light)
+![edit-notification-rule](../../../assets/notifications/manage-notifications/edit-notification-rule-dark-18.png#only-dark)
 
-**Step 5:** Once you have edited the notification rule or made necessary changes, click on the **Save** button.
+**Step 4:** Once you have edited the notification rule or made necessary changes, click on the **Save** button.
 
-![save-button](../../../assets/notifications/manage-notifications/save-button-light-19.png#only-light){: style="height:600px;width:610px;"}
-![save-button](../../../assets/notifications/manage-notifications/save-button-dark-19.png#only-dark){: style="height:600px;width:610px;"}
+![save-button](../../../assets/notifications/manage-notifications/save-button-light-19.png#only-light)
+![save-button](../../../assets/notifications/manage-notifications/save-button-dark-19.png#only-dark)
 
 After clicking on the **Save** button, a success flash message will display saying **Notification successfully updated.**
 
@@ -179,27 +169,22 @@ After clicking the **Mute** button, your notification will be muted, and a succe
 
 You can also mute notifications from the global settings. This helps you focus by reducing distractions and ensuring that only the most important alerts come through on your notification channels when you need them.
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.   
+**Step 1:** Log in to your Qualytics account and click the **"Notification Rules** button on the left side panel of the interface.     
 
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-light-26.png#only-light)
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-dark-26.png#only-dark)
-
-**Step 2:** Click on the **Notifications** tab.
-
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-light-27.png#only-light)
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-dark-27.png#only-dark)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-light-26.png#only-light)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-dark-26.png#only-dark)
 
 Here you can view a list of all the notifications you have added to the Qualytics system.
 
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-light-28.png#only-light)
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-dark-28.png#only-dark)
 
-**Step 3:** Click on the **vertical ellipsis** next to the notification rule that you want to mute, then select **Mute** from the drop-down menu.
+**Step 2:** Click on the **vertical ellipsis** next to the notification rule that you want to mute, then select **Mute** from the drop-down menu.
 
 ![mute-button](../../../assets/notifications/manage-notifications/mute-button-light-29.png#only-light)
 ![mute-button](../../../assets/notifications/manage-notifications/mute-button-dark-29.png#only-dark)
 
-**Step 4:** After clicking the **Mute** button, all the notifications related to that rule will be muted, and a success flash message will be displayed: **Notification successfully muted.**
+**Step 3:** After clicking the **Mute** button, all the notifications related to that rule will be muted, and a success flash message will be displayed: **Notification successfully muted.**
 
 ![muted-notifi](../../../assets/notifications/manage-notifications/muted-notifi-light-30.png#only-light)
 ![muted-notifi](../../../assets/notifications/manage-notifications/muted-notifi-dark-30.png#only-dark)
@@ -220,27 +205,22 @@ Here you can view a list of all the notifications you have added to the Qualytic
 
 If you need to tidy up your notifications, you can delete a notification rule to remove it from the system permanently. Once deleted, the rule and its associated notifications will no longer appear in the user interface.
 
-**Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.   
+**Step 1:** Log in to your Qualytics account and click the **"Notification Rules** button on the left side panel of the interface.    
 
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-light-33.png#only-light)
-![setting-button](../../../assets/notifications/manage-notifications/setting-button-dark-33.png#only-dark)
-
-**Step 2:** You will be navigated to the **Tags** section by default. Click on the **Notifications** tab.
-
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-light-34.png#only-light)
-![notification-tab](../../../assets/notifications/manage-notifications/notification-tab-dark-34.png#only-dark)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-light-33.png#only-light)
+![notification-rule](../../../assets/notifications/manage-notifications/notification-rule-dark-33.png#only-dark)
 
 Here you can view a list of all the notifications you have added to the Qualytics system.
 
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-light-35.png#only-light)
 ![notification-rules](../../../assets/notifications/manage-notifications/notification-rules-dark-35.png#only-dark)
 
-**Step 3:** Click on the **vertical ellipsis** next to the notification you want to delete, then select **"Delete"** from the drop-down menu.
+**Step 2:** Click on the **vertical ellipsis** next to the notification you want to delete, then select **"Delete"** from the drop-down menu.
 
 ![delete-button](../../../assets/notifications/manage-notifications/delete-button-light-36.png#only-light)
 ![delete-button](../../../assets/notifications/manage-notifications/delete-button-dark-36.png#only-dark)
 
-**Step 4:** A modal window **Delete Notification** will appear. Click the **Delete** button to confirm and remove the notification.
+**Step 3:** A modal window **Delete Notification** will appear. Click the **Delete** button to confirm and remove the notification.
 
 ![delete-window](../../../assets/notifications/manage-notifications/delete-window-light-37.png#only-light)
 ![delete-window](../../../assets/notifications/manage-notifications/delete-window-dark-37.png#only-dark)
