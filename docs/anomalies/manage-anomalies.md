@@ -50,19 +50,24 @@ By selecting **Archived Anomalies**, you can view anomalies that have been resol
 ![archived-anomalies](../assets/datastores/manage-anomalies/archived-anomalies-light-6.png#only-light)
 ![archived-anomalies](../assets/datastores/manage-anomalies/archived-anomalies-dark-6.png#only-dark)
 
-You can also categorize the archived anomalies based on their status as **Resolved** and **Invalid**, to manage and review them effectively.
+You can also categorize the archived anomalies based on their status as **Resolved**, **Duplicate** and **Invalid**, to manage and review them effectively.
 
 **1. Resolved**: This indicates that the anomaly was a legitimate data quality concern and has been addressed.
 
 ![resolved](../assets/datastores/manage-anomalies/resolved-light-7.png#only-light)
 ![resolved](../assets/datastores/manage-anomalies/resolved-dark-7.png#only-dark)
 
-**2. Invalid**: This indicates that the anomaly is not a legitimate data quality concern and does not require further action.
+**2. Duplicate**: This indicates that the anomaly is a duplicate of an existing record and has already been addressed.
+
+![duplicate](../assets/datastores/manage-anomalies/duplicate-light.png#only-light)
+![duplicate](../assets/datastores/manage-anomalies/duplicate-dark.png#only-dark)
+
+**3. Invalid**: This indicates that the anomaly is not a legitimate data quality concern and does not require further action.
 
 ![invalid](../assets/datastores/manage-anomalies/invalid-light-8.png#only-light)
 ![invalid](../assets/datastores/manage-anomalies/invalid-dark-8.png#only-dark)
 
-**3. All:** 
+**4. All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, and Invalid, giving a comprehensive view of all past issues. 
 
 ![all](../assets/datastores/manage-anomalies/all-light-9.png#only-light)
 ![all](../assets/datastores/manage-anomalies/all-dark-9.png#only-dark)
@@ -186,6 +191,8 @@ You can archive individual anomalies either directly or through the action menu.
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.
 
+* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.
+
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
 
 ![archive-anomaly](../assets/datastores/manage-anomalies/archive-anomaly-light-26.png#only-light)
@@ -216,6 +223,8 @@ You can archive individual anomalies either directly or through the action menu.
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.
+
+* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.
 
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
 
@@ -254,6 +263,8 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.
+
+* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.
 
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
 
