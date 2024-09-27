@@ -130,6 +130,7 @@ nav:
         - Volumetric Checks: checks/volumetric-check.md
     - Anomalies:
       - Anomaly Analysis: anomalies/anomalies.md
+      - Manage Anomalies: anomalies/manage-anomalies.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
