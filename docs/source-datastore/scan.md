@@ -107,20 +107,44 @@ This option enables you to automatically scan file patterns associated with the 
 ![record-limit-line](../assets/datastores/scan/record-limit-line-light.png#only-light)
 ![record-limit-line](../assets/datastores/scan/record-limit-line-dark.png#only-dark)
 
-**Step 5:** Click on the **Next** button to Configure the **Enrichment Settings**.
+**Step 5:** Click on the **Next** button to Configure the **Scan Settings**.
 
 ![next-button](../assets/datastores/scan/next-button-light.png#only-light)
 ![next-button](../assets/datastores/scan/next-button-dark.png#only-dark)
 
-**Step 6:** Configure the **Enrichment Settings**.  
+**Step 6:** Configure the **Scan Settings**.
+
+1. **Check Categories:** Users can choose one or more check categories when initiating a scan. This allows for flexible selection based on the desired scope of the operation:
+
+    -  **Metadata**: This option checks that define the expected properties of the table, such as volume. This ensures the table meets required standards during the validation process.
+
+    - **Data Integrity:** This option checks that specify the expected values for the data stored in the table. These checks help validate data entries, ensuring they align with the defined expectations for accuracy and reliability.
+
+![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
+![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
+
+2. **Anomaly Options:** Enable the option to automatically archive duplicate anomalies detected in previous scans that overlap with the current scan. This feature helps improve data management by minimizing redundancy and ensuring a more organized anomaly record.
+
+    - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
+
+![anomaly-option](../assets/datastores/scan/anomaly-option-light.png#only-light)
+![anomaly-option](../assets/datastores/scan/anomaly-option-dark.png#only-dark)
+
+**Step 7:** Click on the **Next** button to Configure the **Enrichment Settings**.
+
+![next-button](../assets/datastores/scan/next-buttonn-light.png#only-light)
+![next-button](../assets/datastores/scan/next-buttonn-dark.png#only-dark)
+
+
+**Step 8:** Configure the **Enrichment Settings**.  
 
 1. **Remediation Strategy:** This strategy dictates how your source tables are replicated in your enrichment datastore:
 
-- **None:** This option does not replicate source tables. It only writes anomalies and associated source data to the enrichment datastore. This is useful when the primary goal is to track anomalies without duplicating the entire dataset.  
+       - **None:** This option does not replicate source tables. It only writes anomalies and associated source data to the enrichment datastore. This is useful when the primary goal is to track anomalies without duplicating the entire dataset.  
 
-- **Append:** This option replicates source tables using an append-first strategy. It adds new records to the enrichment datastore, maintaining a history of all data changes over time. This approach is beneficial for auditing and historical analysis.
+       - **Append:** This option replicates source tables using an append-first strategy. It adds new records to the enrichment datastore, maintaining a history of all data changes over time. This approach is beneficial for auditing and historical analysis.
 
-- **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
+       - **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
 
 ![scan-operation](../assets/datastores/scan/scan-operation-light.png#only-light)
 ![scan-operation](../assets/datastores/scan/scan-operation-dark.png#only-dark)
@@ -287,6 +311,10 @@ This status indicates that the scan operation is still running at the moment and
 | Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
 | Remediation | Indicates whether Remediation was enabled or disabled in the operation |
 | Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
+| All Record Limit | Defines the maximum number of records to be scanned per table after initial filtering. |
+| Check Categories | Indicates which categories should be included in the scan(Metadata,Data Integrity). |
+| Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation. |
+| Source Record Limit | Indicates the limit on records stored in the enrichment datastore for each detected anomaly. |
 | Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
 | Abort | The **Abort** button enables you to stop the ongoing scan operation. |
 | Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted.</li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
@@ -312,6 +340,10 @@ This status indicates that the scan operation was manually stopped before it cou
 | Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
 | Remediation | Indicates whether Remediation was enabled or disabled in the operation |
 | Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
+| All Record Limit | Defines the maximum number of records to be scanned per table after initial filtering. |
+| Check Categories | Indicates which categories should be included in the scan(Metadata,Data Integrity). |
+| Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation. |
+| Source Record Limit | Indicates the limit on records stored in the enrichment datastore for each detected anomaly. |
 | Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
 | Resume  | Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
 | Rerun | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
@@ -336,6 +368,10 @@ This status signals that the scan operation encountered some issues and displays
 | Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
 | Remediation| Indicates whether Remediation was enabled or disabled in the operation |
 | Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
+| All Record Limit | Defines the maximum number of records to be scanned per table after initial filtering. |
+| Check Categories | Indicates which categories should be included in the scan(Metadata,Data Integrity). |
+| Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation. |
+| Source Record Limit | Indicates the limit on records stored in the enrichment datastore for each detected anomaly. |
 | Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
 | Resume| Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
 | Rerun| The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
@@ -358,6 +394,10 @@ This status confirms that the scan operation was completed successfully without 
 | Incremental Field | Indicates whether Incremental was enabled or disabled in the operation |
 | Remediation| Indicates whether Remediation was enabled or disabled in the operation |
 | Anomalies Identified | Provides a count on the number of anomalies detected before the operation was aborted |
+| All Record Limit | Defines the maximum number of records to be scanned per table after initial filtering. |
+| Check Categories | Indicates which categories should be included in the scan(Metadata,Data Integrity). |
+| Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation. |
+| Source Record Limit | Indicates the limit on records stored in the enrichment datastore for each detected anomaly. |
 | Results | View the details of the scan operation that was aborted. This includes information on which tables were scanned, the anomalies identified (if any), and other related data collected up to the point when the scan was aborted. |
 | Resume| Provides an option to continue the scan operation from where it left off. This can be useful if the scan was interrupted and you wish to complete it without starting over from the beginning. |
 | Rerun| The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan. This is helpful if you want to restart the scan from scratch due to errors or issues encountered in the previous attempt. |
