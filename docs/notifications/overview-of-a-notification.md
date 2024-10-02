@@ -108,7 +108,7 @@ A modal window **“Add Notification Rule”** will appear providing you with fi
 **5. Datastore Tags:** Use the drop-down menu to **select the datastore tags**. Notifications will be generated for only those source datastores that have the datastore tags you select in this step. For example, if you select **“critical”** datastore tag from the dropdown menu, notifications will be generated only for source datastores having the "critical" tag applied to them. 
 
 !!! note 
-	If you choose "An Anomaly is Detected" as the trigger condition, you must define the Anomaly Tag, set a minimum anomaly weight, and select the check rule types. This ensures that only anomalies with a weight equal to or greater than the specified value and matching the selected check rule types will trigger a notification. If no weight or check rule types are specified, these filters will be ignored.
+	If you choose **"An Anomaly is Detected"** as the trigger condition, you must define the Anomaly Tag, set a minimum anomaly weight, and select the check rule types. This ensures that only anomalies with a weight equal to or greater than the specified value and matching the selected check rule types will trigger a notification. If no weight or check rule types are specified, these filters will be ignored.
 
 ![select-tag](.././assets/notifications/select-tag-light-7.png#only-light)
 ![select-tag](.././assets/notifications/select-tag-dark-7.png#only-dark)
