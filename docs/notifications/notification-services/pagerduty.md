@@ -1,6 +1,6 @@
 #  PagerDuty Notification
 
-Integrating PagerDuty with Qualytics ensures that your team gets instant alerts for critical data events and system issues. With this connection, you can automatically receive real-time notifications about anomalies, operation completions, SLA violations, and other important events directly in your PagerDuty account. By categorizing alerts based on severity, it ensures the right people are notified at the right time, speeding up decision-making and resolving incidents efficiently. This helps your team respond quickly to issues, reducing downtime and keeping data operations on track. 
+Integrating PagerDuty with Qualytics ensures that your team gets instant alerts for critical data events and system issues. With this connection, you can automatically receive real-time notifications about anomalies, operation completions and other important events directly in your PagerDuty account. By categorizing alerts based on severity, it ensures the right people are notified at the right time, speeding up decision-making and resolving incidents efficiently. This helps your team respond quickly to issues, reducing downtime and keeping data operations on track. 
 
 ## Navigation to Notifications
 
@@ -32,22 +32,24 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 
 **3. Trigger When**: Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:
 
-- **Operation Completion:** This type of notification is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are notified through in-app alerts, and notifications are also sent directly to PagerDuty. For example, when a catalog operation is completed, a notification is automatically sent to PagerDuty, allowing for immediate action.
+- **Operation Completion:** This type of notification is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app notifications and, the Microsoft Teams channel. For example, the team is notified whenever the catalog operation is completed, helping them proceed with the profile operation on the datastore. 
 
 - **An Anomaly is Identified:** This type of notification is triggered when any single anomaly is identified in the data. The notification message typically includes the type of anomaly detected and the datastore where it was found. It provides specific information about the anomaly type, which helps quickly understand the issue's nature.
 
+                       
 !!! tip
     Users can specify a minimum anomaly weight for this trigger condition. This threshold ensures that only anomalies with a weight equal to or greater than the specified value will trigger a notification. If no value is set, all detected anomalies, regardless of their weight, will generate notifications. This feature helps prioritize alerts based on the importance of the anomalies, allowing users to focus on more critical issues.
 
-- **Anomalies are Detected in a Table or File:** This notification is triggered when multiple anomalies are detected within a specific table or file. It includes information about the number of anomalies found and the specific scan target within the datastore. This is useful for assessing the overall health of a particular datastore. No concept of weights. 
+!!! tip
+    Users can specify check rule types for this trigger condition. This selection ensures that only anomalies identified by the chosen rule types will trigger a notification. If no check rule types are selected, this filter will be ignored, resulting in all anomalies generating notifications. This feature enables users to prioritize alerts based on specific criteria, allowing them to focus on the most relevant issues.
+
+- **Anomalies are Detected in a Table or File:** This notification is triggered when multiple anomalies are detected within a specific table, file and check rule types. It includes information about the number of anomalies found and the specific scan target within the datastore. This is useful for assessing the overall health of a particular datastore. No concept of weights. 
 
 | Factors | An Anomaly is Identified | Anomalies are Detected in a Table or File |
-|-------|--------|-------|
+|---------|--------|--------|
 | Trigger Event | Notifies for individual anomaly detection | Notifies for multiple anomalies within a specific table or file |
 | Notification Content | Focuses on the type of anomaly and the affected datastore. | Provide a count of anomalies and specifies the scan target within the datastore. |
-| Notification Targeting  | Tags, Weight or both  | Only Tags  |
-
-- **A Freshness SLA Violation Occurs:** This type of notification is triggered when data within a datastore does not meet the defined freshness criteria, violating the Service Level Agreement (SLA). The notification message typically includes details about the extent of the violation, the specific datastore affected, and the freshness threshold that was breached. This helps the team take prompt corrective actions to ensure data timeliness and reliability.
+| Notification Targeting  | Tags, Weight and Check Rule Types  | Tags,Check Rule Types or both  |
 
 ![conditions](../../../assets/notifications/services/pagerduty/conditions-light-5.png#only-light)
 ![conditions](../../../assets/notifications/services/pagerduty/conditions-dark-5.png#only-dark)
@@ -62,8 +64,8 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 
 **5. Datastore Tags:** Use the drop-down menu to **select the datastore tags**. Notifications will be generated for only those source datastores that have the datastore tags you select in this step. For example, if you select the **“critical”** datastore tag from the dropdown menu, notifications will be generated only for source datastores having the "critical" tag applied to them. 
 
-!!! note 
-    If you choose "An Anomaly is Detected" as the trigger condition, you'll need to define the Anomaly's Tag and set a minimum Anomaly weight. This means that only anomalies with a weight equal to or greater than the specified value will trigger a notification. If no value is set, the weight will be ignored.
+!!! note
+    If you choose "An Anomaly is Detected" as the trigger condition, you must define the Anomaly Tag, set a minimum anomaly weight, and select the check rule types. This ensures that only anomalies with a weight equal to or greater than the specified value and matching the selected check rule types will trigger a notification. If no weight or check rule types are specified, these filters will be ignored.
 
 ![tag](../../../assets/notifications/services/pagerduty/tags-light-7.png#only-light)
 ![tag](../../../assets/notifications/services/pagerduty/tags-dark-7.png#only-dark) 
