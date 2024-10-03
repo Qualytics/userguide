@@ -31,8 +31,8 @@ The **Summary** section displays the current platform version, along with the da
 
 The health status indicator reflects the overall system resources health.For example, in the image below, a green checkmark indicates that our system resources are healthy.
 
-| NOTE: Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical." |
-
+!!! note
+    Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical."
 
 ![health-indicator](../../assets/health/health-indicator-light-4.png#only-light)
 ![health-indicator](../../assets/health/health-indicator-dark-4.png#only-dark)
