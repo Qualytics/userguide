@@ -118,7 +118,7 @@ This option enables you to automatically scan file patterns associated with the 
 
     -  **Metadata**: Include checks that define the expected properties of the table, such as volume. It belongs to the Volumetric rule type.
 
-    - **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric..
+    - **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
 
 ![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
 ![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
