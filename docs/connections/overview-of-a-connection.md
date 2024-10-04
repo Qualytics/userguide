@@ -6,8 +6,8 @@ Connections facilitate the management of datastores by allowing you to share com
 
 When you create your first datastore, a Connection is automatically generated using the parameters you provide. This Connection can then be used for other datastores with similar configuration needs.
 
-![Screenshot](../assets/connections/add-datastore-connection-modal-light.png#only-light){: style="width:450px"}
-![Screenshot](../assets/connections/add-datastore-connection-modal-dark.png#only-dark){: style="width:450px"}
+![Screenshot](../assets/connections/connection/add-datastore-connection-modal-light.png#only-light){: style="width:450px"}
+![Screenshot](../assets/connections/connection/add-datastore-connection-modal-dark.png#only-dark){: style="width:450px"}
 
 
 **Example:**
@@ -28,13 +28,13 @@ For subsequent datastores that require the same connection parameters, you can r
 1. Open the **Create Datastore** form.
 2. Select **Use an existing connection**.
 	
-	![Screenshot](../assets/connections/add-datastore-modal-light.png#only-light){: style="width:450px"}
-    ![Screenshot](../assets/connections/add-datastore-modal-dark.png#only-dark){: style="width:450px"}
+	![Screenshot](../assets/connections/connection/add-datastore-modal-light.png#only-light){: style="width:450px"}
+    ![Screenshot](../assets/connections/connection/add-datastore-modal-dark.png#only-dark){: style="width:450px"}
 
 3. Pick the desired Connection from a dropdown list.
 
-	![Screenshot](../assets/connections/connections-list-light.png#only-light){: style="width:450px"}
-	![Screenshot](../assets/connections/connections-list-dark.png#only-dark){: style="width:450px"}
+	![Screenshot](../assets/connections/connection/connections-list-light.png#only-light){: style="width:450px"}
+	![Screenshot](../assets/connections/connection/connections-list-dark.png#only-dark){: style="width:450px"}
 
 4. Provide any additional details required for the new datastore (e.g., database name, root path).
 
