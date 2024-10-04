@@ -300,6 +300,9 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a “running” status reflects the following details and actions:
 
+![running](../assets/datastores/scan/running-light.png#only-light)
+![running](../assets/datastores/scan/running-dark.png#only-dark)
+
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | 1   | Operation ID and Type   | Unique identifier and type of operation performed (catalog, profile, or scan).                               |
@@ -317,9 +320,6 @@ This status indicates that the scan operation is still running at the moment and
 | 13  | Results                 | View the details of the scan operation that was aborted, including scanned tables and identified anomalies.|
 | 14  | Abort                   | The Abort button enables you to stop the ongoing scan operation.|
 | 15  | Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted.</li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
-
-![running](../assets/datastores/scan/running-light.png#only-light)
-![running](../assets/datastores/scan/running-dark.png#only-dark)
 
 #### Aborted
 
