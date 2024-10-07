@@ -298,7 +298,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 #### Running
 
-This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a “running” status reflects the following details and actions:
+This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a **running** status reflects the following details and actions:
 
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -309,21 +309,21 @@ This status indicates that the scan operation is still running at the moment and
 | 5   | Schedule                | Indicates whether the operation was scheduled or not.                                                        |
 | 6   | Incremental Field       | Indicates whether Incremental was enabled or disabled in the operation.                                      |
 | 7   | Remediation             | Indicates whether Remediation was enabled or disabled in the operation.                                      |
-| 8   | Anomalies Identified    | Provides a count of the number of anomalies detected before the operation was aborted.|
+| 8   | Anomalies Identified    | Provides a count of the number of anomalies detected during the running operation.|
 | 9   | Read Record Limit        | Defines the maximum number of records to be scanned per table after initial filtering.|
 | 10  | Check Categories        | Indicates which categories should be included in the scan (e.g., Metadata, Data Integrity).|
 | 11  | Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation.
 | 12  | Source Record Limit     | Indicates the limit on records stored in the enrichment datastore for each detected anomaly.|
-| 13  | Results                 | View the details of the scan operation that was aborted, including scanned tables and identified anomalies.|
+| 13  | Results                 | View the details of the ongoing scan operation. This includes information on which tables are currently being scanned, the anomalies identified so far (if any), and other related data collected during the active scan.|
 | 14  | Abort                   | The Abort button enables you to stop the ongoing scan operation.|
-| 15  | Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted.</li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
+| 15  | Summary | The summary section provides an overview of the scan operation in progress. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the ongoing operation.</li><li> **Records Scanned**: The total number of records processed up to this point. </li><li> **Anomalies Identified**: The number of anomalies detected so far during the scan. </li></ul>|
 
 ![running](../assets/datastores/scan/running-light.png#only-light)
 ![running](../assets/datastores/scan/running-dark.png#only-dark)
 
 #### Aborted
 
-This status indicates that the scan operation was manually stopped before it could be completed. A scan operation having an “aborted” status reflects the following details and actions:
+This status indicates that the scan operation was manually stopped before it could be completed. A scan operation having an **aborted** status reflects the following details and actions:
 
 ![aborted-operation](../assets/datastores/scan/aborted-operation-light.png#only-light)
 ![aborted-operation](../assets/datastores/scan/aborted-operation-dark.png#only-dark)
@@ -350,7 +350,7 @@ This status indicates that the scan operation was manually stopped before it cou
 
 #### Warning
 
-This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a “warning” status reflects the following details and actions:
+This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a **warning** status reflects the following details and actions:
 
 ![warning](../assets/datastores/scan/warning-light.png#only-light)
 ![warning](../assets/datastores/scan/warning-dark.png#only-dark)
@@ -364,19 +364,19 @@ This status signals that the scan operation encountered some issues and displays
 | 5       | Schedule                  | Whether the operation was scheduled or not                                         |
 | 6       | Incremental Field         | Indicates whether Incremental was enabled or disabled in the operation             |
 | 7       | Remediation               | Indicates whether Remediation was enabled or disabled in the operation             |
-| 8       | Anomalies Identified      | Provides a count on the number of anomalies detected before the operation was aborted|
+| 8       | Anomalies Identified      | Provides a count on the number of anomalies detected before the operation was warned.|
 | 9       | Read Record Limit          | Defines the maximum number of records to be scanned per table after initial filtering|
 | 10      | Check Categories          | Indicates which categories should be included in the scan (Metadata, Data Integrity)|
 | 11      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
 | 12      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 13      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan|
-| 14      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
-| 15      |Summary                    | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted. </li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
-| 16       |Logs                      | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Catalog Operation.|
+| 13      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the warning scan|
+| 14      | Delete                    | Removes the record of the warning operation from the system, permanently deleting scan results and anomalies|
+| 15      |Summary                    | The summary section provides an overview of the scan operation, highlighting any warnings encountered. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the operation, including any partitions that triggered warnings. </li><li> **Records Scanned**: The total number of records processed during the scan, along with any records that raised warnings. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
+| 16       |Logs                      | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Scan Operation.|
 
 #### Success
 
-This status confirms that the scan operation was completed successfully without any issues. A scan operation having a **success** status reflects the following details and actions: 
+The summary section provides an overview of the **scan** operation upon successful completion. It includes:
 
 ![success](../assets/datastores/scan/success-2-light.png#only-light)
 ![success](../assets/datastores/scan/success-2-dark.png#only-dark)
@@ -390,14 +390,14 @@ This status confirms that the scan operation was completed successfully without 
 | 5       | Schedule                  | Whether the operation was scheduled or not                                         |
 | 6       | Incremental Field         | Indicates whether Incremental was enabled or disabled in the operation             |
 | 7       | Remediation               | Indicates whether Remediation was enabled or disabled in the operation             |
-| 8       | Anomalies Identified      | Provides a count on the number of anomalies detected before the operation was aborted|
+| 8       | Anomalies Identified      | Provides a count of the number of anomalies detected during the successful completion of the operation.|
 | 9      | Read Record Limit          | Defines the maximum number of records to be scanned per table after initial filtering|
 | 10      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
 | 11      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 12      | Results                   | View the details of the scan operation that was aborted, including tables scanned and anomalies identified|
-| 13      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan|
+| 12      | Results                   | View the details of the completed scan operation. This includes information on which tables were scanned, the anomalies identified (if any), and other relevant data collected throughout the successful completion of the scan.|
+| 13      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the success scan|
 | 14      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
-| 15      | Summary | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The number of anomalies detected. </li></ul>|
+| 15      | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The number of anomalies detected. </li></ul>|
 
 #### Post Operation Details
 
