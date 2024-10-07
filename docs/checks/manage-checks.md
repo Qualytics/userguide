@@ -49,12 +49,7 @@ You can also categorize the active checks based on their importance, favorites, 
 ![favorite](../assets/checks/manage-checks/favorite-light-6.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-6.png#only-dark)
 
-**3. Metrics:** This filters and displays only Metric checks, which validate key performance indicators and numerical data trends. Currently, only Metric checks are supported.
-
-![metrics](../assets/checks/manage-checks/metrics-light-7.png#only-light)
-![metrics](../assets/checks/manage-checks/metrics-dark-7.png#only-dark)
-
-**4. All:** Displays a comprehensive view of all active checks, including important, favorite, metrics, and any checks that do not fall under these specific categories. 
+**3. All:** Displays a comprehensive view of all active checks, including important, favorite, metrics, and any checks that do not fall under these specific categories. 
 
 ![all](../assets/checks/manage-checks/all-light-8.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-8.png#only-dark)
@@ -78,12 +73,7 @@ You can also categorize the draft checks based on their importance, favorites, o
 ![favorite](../assets/checks/manage-checks/favorite-light-11.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-11.png#only-dark)
 
-**3. Metrics:** This filters and displays only Metric checks, which validate key performance indicators and numerical data trends. Currently, only Metric checks are supported here.
-
-![metrics](../assets/checks/manage-checks/metrics-light-12.png#only-light)
-![metrics](../assets/checks/manage-checks/metrics-dark-12.png#only-dark)
-
-**4. All:** Displays a comprehensive view of all draft checks, including important, favorite, metrics, and any checks that do not fall under these specific categories.   
+**3. All:** Displays a comprehensive view of all draft checks, including important, favorite, metrics, and any checks that do not fall under these specific categories.   
 
 ![all](../assets/checks/manage-checks/all-light-13.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-13.png#only-dark)
@@ -111,6 +101,52 @@ You can also categorize the archived checks based on their status as **Discarded
 
 ![all](../assets/checks/manage-checks/all-light-17.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-17.png#only-dark)
+
+## Check Details
+
+Check Details provides important information about each check in the system. It shows when a check was last run, how often it has been used, when it was last updated, who made changes to it, and when it was created. This section helps users understand the status and history of the check, making it easier to manage and track its use over time.
+
+**Step 1:** 
+Locate the check you want to review, then hover over the info icon to view the Check Details. 
+
+![hover](../assets/checks/manage-checks/hover-light-17.png#only-light)
+![hover](../assets/checks/manage-checks/hover-dark-17.png#only-dark)
+
+A popup will appear with additional details about the check.
+
+![popup](../assets/checks/manage-checks/popup-light-17.png#only-light)
+![popup](../assets/checks/manage-checks/popup-dark-17.png#only-dark)
+
+### Last Asserted
+Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **Oct 17, 2023, at 2:37 AM (GMT+5:30).**
+
+![popup](../assets/checks/manage-checks/asserted-light-17.png#only-light)
+![popup](../assets/checks/manage-checks/asserted-dark-17.png#only-dark)
+
+### Scans
+Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **30 operations.**
+
+![scan](../assets/checks/manage-checks/scan-light-17.png#only-light)
+![scan](../assets/checks/manage-checks/scan-dark-17.png#only-dark)
+
+### Updated At
+Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Sep 9, 2024, at 3:18 PM (GMT+5:30).**
+
+![update](../assets/checks/manage-checks/update-light-17.png#only-light)
+![update](../assets/checks/manage-checks/update-dark-17.png#only-dark)
+
+### Last Editor
+Last Editor indicates who most recently made changes to the check. It helps track who is responsible for the latest updates or modifications. This is useful for accountability and collaboration within teams. For example, the last person who edited the check is **Rodrigo Ogawa.**
+
+![editor](../assets/checks/manage-checks/editor-light-17.png#only-light)
+![editor](../assets/checks/manage-checks/editor-dark-17.png#only-dark)
+
+### Created At
+Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 2:19 PM (GMT+5:30).**
+
+![created](../assets/checks/manage-checks/created-light-17.png#only-light)
+![created](../assets/checks/manage-checks/created-dark-17.png#only-dark)
+
 
 ## Status Management of Checks
 
