@@ -118,7 +118,7 @@ This option enables you to automatically scan file patterns associated with the 
 
     -  **Metadata**: Include checks that define the expected properties of the table, such as volume. It belongs to the Volumetric rule type.
 
-    - **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric..
+    - **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
 
 ![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
 ![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
@@ -300,6 +300,9 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a **running** status reflects the following details and actions:
 
+![running](../assets/datastores/scan/running-light.png#only-light)
+![running](../assets/datastores/scan/running-dark.png#only-dark)
+
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | 1   | Operation ID and Type   | Unique identifier and type of operation performed (catalog, profile, or scan).                               |
@@ -317,9 +320,6 @@ This status indicates that the scan operation is still running at the moment and
 | 13  | Results                 | View the details of the ongoing scan operation. This includes information on which tables are currently being scanned, the anomalies identified so far (if any), and other related data collected during the active scan.|
 | 14  | Abort                   | The Abort button enables you to stop the ongoing scan operation.|
 | 15  | Summary | The summary section provides an overview of the scan operation in progress. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the ongoing operation.</li><li> **Records Scanned**: The total number of records processed up to this point. </li><li> **Anomalies Identified**: The number of anomalies detected so far during the scan. </li></ul>|
-
-![running](../assets/datastores/scan/running-light.png#only-light)
-![running](../assets/datastores/scan/running-dark.png#only-dark)
 
 #### Aborted
 
