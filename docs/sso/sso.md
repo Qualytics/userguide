@@ -22,7 +22,7 @@ Auth0 supports the following enterprise providers out of the box:
 
 -   [OpenID Connect](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/oidc)
 
--   [Auth0](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/Auth0)
+-   [Okta](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/okta)
 
 -   [PingFederate](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate)
 

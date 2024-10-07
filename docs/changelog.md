@@ -5,6 +5,38 @@ hide:
 
 # Release Notes
 
+### 2024.10.04 { id=2024.10.04 }
+
+#### Feature Enhancements
+
+- Insights Page Redesign
+    - Introduced a new Overview card displaying key metrics such as `Data Under Management`, `Source Datastores`, and `Containers`.
+    - Added a doughnut chart visualization for checks and anomalies, providing a clearer view of data health.
+    - Expanded available metrics to include profile runs and scan runs.
+    - Users can now easily navigate to Checks and Anomalies based on their current states and statuses.
+    - Implemented data volume visualizations to give users better insight into data trends.
+    - Introduced a legend option that allows users to compare specific metrics against the primary one.
+    - Enhanced the check distribution visualization across the platform within the overview tabs.
+
+- Check Filter
+    - Now users can filter `Not Asserted` checks.
+
+- Team Management
+    - Now admin users can modify the `Read` and `Write` permissions of the `Public` Team.
+
+- Reapplying Clone Field
+    - Check cloning functionality by attempting to reapply the field from the original (source) check when a new container is selected. If the selected container matches the field and type from the original check, the cloned field will be reapplied automatically.
+
+#### General Fixes
+
+- Allow saving checks with attached templates as drafts
+    - Adjusted the behavior to allow checks attached to a template to be saved as drafts. The `Save as draft` feature now remains functional when a template is attached.
+
+- Incremental identifier strange behavior
+    - When a user tries to modify a query in a computed table, the Incremental Modifier is set to null.
+
+- General Fixes and Improvements
+
 ### 2024.09.25 { id=2024.09.25 }
 
 #### Feature Enhancements
