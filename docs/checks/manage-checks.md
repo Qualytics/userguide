@@ -1,6 +1,6 @@
 # Manage Checks in Datastore
 
-Managing your checks within a datastore is important to maintain data integrity and ensure quality. You can categorize, create, update, archive, restore, delete, and clone checks, making it easier to apply validation rules across the datastores. The system allows for checks to be set as active, draft, or archived based on their current state of use. You can also define reusable templates for quality checks to streamline the creation of multiple checks with similar criteria. With options for important, favorite, and metric-based checks, users have full flexibility to manage data quality efficiently.
+Managing your checks within a datastore is important to maintain data integrity and ensure quality. You can categorize, create, update, archive, restore, delete, and clone checks, making it easier to apply validation rules across the datastores. The system allows for checks to be set as active, draft, or archived based on their current state of use. You can also define reusable templates for quality checks to streamline the creation of multiple checks with similar criteria. With options for important and favorite, users have full flexibility to manage data quality efficiently.
 
 Let's get started 🚀
 
@@ -34,7 +34,7 @@ By selecting **Active**, you can view checks that are currently applied and bein
 ![active](../assets/checks/manage-checks/active-light-4.png#only-light)
 ![active](../assets/checks/manage-checks/active-dark-4.png#only-dark)
 
-You can also categorize the active checks based on their importance, favorites, or specific metrics to streamline your data quality monitoring.
+You can also categorize the active checks based on their importance and favorites to streamline your data quality monitoring.
 
 **1. Important:** Shows only checks that are marked as important. These checks are prioritized based on their significance, typically assigned a weight of 7 or higher.
 
@@ -49,7 +49,7 @@ You can also categorize the active checks based on their importance, favorites, 
 ![favorite](../assets/checks/manage-checks/favorite-light-6.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-6.png#only-dark)
 
-**3. All:** Displays a comprehensive view of all active checks, including important, favorite, metrics, and any checks that do not fall under these specific categories. 
+**3. All:** Displays a comprehensive view of all active checks, including important, favorite and any checks that do not fall under these specific categories. 
 
 ![all](../assets/checks/manage-checks/all-light-8.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-8.png#only-dark)
@@ -61,7 +61,7 @@ By selecting **Draft**, you can view checks that have been created but have not 
 ![draft](../assets/checks/manage-checks/draft-light-9.png#only-light)
 ![draft](../assets/checks/manage-checks/draft-dark-9.png#only-dark)
 
-You can also categorize the draft checks based on their importance, favorites, or specific metrics to prioritize and organize them effectively during the review and adjustment process.
+You can also categorize the draft checks based on their importance and favorites to prioritize and organize them effectively during the review and adjustment process.
 
 **1. Important:** Shows only checks that are marked as important. These checks are prioritized based on their significance, typically assigned a weight of 7 or higher. 
 
@@ -73,7 +73,7 @@ You can also categorize the draft checks based on their importance, favorites, o
 ![favorite](../assets/checks/manage-checks/favorite-light-11.png#only-light)
 ![favorite](../assets/checks/manage-checks/favorite-dark-11.png#only-dark)
 
-**3. All:** Displays a comprehensive view of all draft checks, including important, favorite, metrics, and any checks that do not fall under these specific categories.   
+**3. All:** Displays a comprehensive view of all draft checks, including important, favorite and any checks that do not fall under these specific categories.   
 
 ![all](../assets/checks/manage-checks/all-light-13.png#only-light)
 ![all](../assets/checks/manage-checks/all-dark-13.png#only-dark)
@@ -158,7 +158,7 @@ You can move an active check into a draft state, allowing you to work on the che
 
 **Step 1:** Click on the active check that you want to move to the draft state.
 
-For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+For Demonstration purpose, we have selected the **"Between"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-18.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-18.png#only-dark)
@@ -210,7 +210,7 @@ You can activate the draft checks after when you have worked on the check, make 
 
 **Step 1:** Navigate to the **Draft** check section, and click on the drafted check that you want to activate, whether you have made changes or wish to activate it as is.
 
-For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-26.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-26.png#only-dark)
@@ -297,7 +297,7 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 
 **Step 1**: Click on the check from the list of available (whether Active or Draft) checks that you want to archive.
 
-For Demonstration purpose, we have selected the **"Not Future"** check.
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-34.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-34.png#only-dark)
@@ -379,7 +379,7 @@ If a check has been archived, then you can restore it back to an active state or
 
 **Step 2**: Click on the archived check which you want to restore as an active or draft check.
 
-For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![archive-checks](../assets/checks/manage-checks/archive-checks-light-46.png#only-light)
 ![archive-checks](../assets/checks/manage-checks/archive-checks-dark-46.png#only-dark)
@@ -663,7 +663,7 @@ You can add checks as a Template, which allows you to create a reusable framewor
 
 **Step 1:** Locate the check (whether Active or Draft) which you want to archive and click on that check.
 
-For Demonstration purpose, we have selected the **"Matches Pattern"** check.
+For Demonstration purpose, we have selected the **"Not Exists In"** check.
 
 ![select-check](../assets/checks/manage-checks/select-check-light-91.png#only-light)
 ![select-check](../assets/checks/manage-checks/select-check-dark-91.png#only-dark)
