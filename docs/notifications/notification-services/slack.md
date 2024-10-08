@@ -32,7 +32,7 @@ A modal window **Add Notification Rule** will appear providing you with fields t
 
 **3. Trigger When**: Select the event or condition from the dropdown menu that will trigger the notification. Below is the list of available events you can choose from:
 
-- **Operation Completion:** This type of notification is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app notifications and, the Microsoft Teams channel. For example, the team is notified whenever the catalog operation is completed, helping them proceed with the profile operation on the datastore. 
+- **Operation Completion:** This type of notification is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app messages, and a slack is triggered to send notifications to external systems or applications. For example, when a catalog operation is completed, a slack notification is sent, allowing the team to proceed with the profile operation on the datastore efficiently. 
 
 - **An Anomaly is Identified:** This type of notification is triggered when any single anomaly is identified in the data. The notification message typically includes the type of anomaly detected and the datastore where it was found. It provides specific information about the anomaly type, which helps quickly understand the issue's nature.
 
