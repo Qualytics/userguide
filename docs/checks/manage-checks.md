@@ -136,7 +136,7 @@ Updated At shows the most recent time the check was modified or updated. It help
 ![update](../assets/checks/manage-checks/update-dark-17.png#only-dark)
 
 ### Last Editor
-Last Editor indicates who most recently made changes to the check. It helps track who is responsible for the latest updates or modifications. This is useful for accountability and collaboration within teams. For example, the last person who edited the check is **Rodrigo Ogawa.**
+Last Editor indicates who most recently made changes to the check. It helps track who is responsible for the latest updates or modifications. This is useful for accountability and collaboration within teams.
 
 ![editor](../assets/checks/manage-checks/editor-light-17.png#only-light)
 ![editor](../assets/checks/manage-checks/editor-dark-17.png#only-dark)
@@ -588,7 +588,7 @@ You can clone both active and draft checks to create a duplicate copy of an exis
 
 **Step 1**: Click on the check (whether Active or Draft) that you want to clone.
 
-For Demonstration purpose, we have selected the **"Greater Than Field"** check.
+For Demonstration purpose, we have selected the **"Metric"** check.
 
 ![clone-check](../assets/checks/manage-checks/clone-check-light-78.png#only-light)
 ![clone-check](../assets/checks/manage-checks/clone-check-dark-78.png#only-dark)
