@@ -49,7 +49,7 @@ Qualytics offers flexible integration options to fit your data infrastructure se
 
 ## Demo
 Here is a short video demonstrating the platform with a quick walkthrough:
-<iframe width="760" height="415" src="https://www.loom.com/embed/788412013bd34366a1800fee54190379" title="Qualytics - Full Demo of Qualytics Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://demo.arcade.software/GRb9jJyq66dhHsgVtqC6?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Qualytics - Full Demo of Qualytics Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
