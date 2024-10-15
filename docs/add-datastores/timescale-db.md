@@ -23,12 +23,12 @@ A source datastore is a storage location used to connect to and access data from
 
 | 1. | Name | Specify the name of the datastore (e.g., The specified name eill appear on the datastore cards) |
 | --- | --------------------- | --------------------- |
-| 2. | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection |
 | 3. | Connector | Select **TimescaleDB** from the dropdown list. |
 
 ### Option I: Create a Datastore with a new Connection
 
-If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
 **Step 1 :** Select the **TimescaleDB** connector from the dropdown list and add connection details such as host, port, username, database, and schema.
 
@@ -60,7 +60,7 @@ If the credentials and provided details are verified, a success message will be 
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using the existing connection details.
+If the toggle for **Add New connection** is turned off, then this will prompt you to configure the source datastore using the existing connection details.
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
@@ -97,14 +97,14 @@ After successfully testing and verifying your source datastore connection, you h
 | REF. | FIELDS | ACTIONS |
 | ------ | -------- | --------- |
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the metadata datastore to your enrichment datastore. |
-| 2. | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore,or toggle OFF to link it to a brand new enrichment datastore. |
+| 2. | Toggle Button for existing enrichment datastore | Toggle **ON** to link the source datastore to an existing enrichment datastore,or toggle **OFF** to link it to a brand new enrichment datastore. |
 | 3. | Name | Give a name for the enrichment datastore. |
-| 4. | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to link it to a brand new enrichment datastore. |
+| 4. | Toggle Button for using an existing connection | Toggle **ON** to create a new enrichment from scratch or toggle **OFF** to reuse credentials from an existing connection. |
 | 5. | Connector | Select a datastore connector as **TimescaleDB** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Use an existing enrichment datastore** is off and **Add New connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1:** Add connection details for your selected **enrichment datastore** connector.
 
