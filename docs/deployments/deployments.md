@@ -16,7 +16,7 @@ Depending on Customer’s cloud infrastructure, this option uses one of the foll
 - GKE (Google Kubernetes Engine)
 - Oracle OKE (Oracles Container Engine for Kubernetes)
 
-The Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer’s choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.  This model requires that the provisioned VPC have the ability to access Customer’s datastore(s). In the case of publicly routable datastores such as Snowflake or S3, no extra configuration is required. In the case of private datastore(s) with no public IP address or route, the hosted VPC will require private peering, PrivateLink, Transit Gateway, point to point VPN, or similar support to enable network access to that private datastore.
+The Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer’s choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.  This model requires that the provisioned VPC have the ability to access Customer’s datastore(s). In the case of publicly routable datastores such as Snowflake or S3, no extra configuration is required. In the case of private datastore(s) with no public IP address or route, the hosted VPC will require private routing using: PrivateLink, Transit Gateway peering, point to point VPN, or similar support to enable network access to that private datastore.
 
 <figure markdown>
   [![PaaS Deployment Architecture](../assets/deployments/paas_architectura_diagram.jpg)](../assets/deployments/paas_architectura_diagram.jpg)

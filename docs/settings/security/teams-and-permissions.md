@@ -310,7 +310,7 @@ After enabling these settings, your Okta SCIM API integration is successfully co
 
 **Step 2**: In the search bar, type **SCIM** and select the app called **SCIM Provisioner with SAML (SCIM V2 Enterprise)** from the list of apps.
 
-![security](../../assets/security/directory/security-35.png)
+![scim](../../assets/security/directory/scim-35.png)
 
 **Step 3**: Enter a name for your app, then click **Save**. You have successfully created the SCIM app in OneLogin.
 

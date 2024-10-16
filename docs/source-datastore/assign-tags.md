@@ -21,7 +21,7 @@ In this documentation, we will explore the steps to assign a tag to the datastor
 
 **Step 4**: Once you have assigned a tag, the tag will be instantly labeled on your source Datastore, and all related records will be updated.
 
-For demonstration, we have assigned the **Customer 1** tag for the Snowflake source datastore. **Analytics**, so it will automatically be applied to all related tables and checks within the datastore. 
+For demonstration, we have assigned the **High** tag for the Snowflake source datastore. **Covid-19 Data**, so it will automatically be applied to all related tables and checks within the datastore. 
 
 ![tag-snowflake](../assets/assign-tags/tag-snowflake-light-4.png#only-light)
 ![tag-snowflake](../assets/assign-tags/tag-snowflake-dark-4.png#only-dark)
