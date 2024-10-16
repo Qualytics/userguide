@@ -5,6 +5,47 @@ hide:
 
 # Release Notes
 
+### 2024.10.16 { id=2024.10.16 }
+
+#### Feature Enhancements
+
+- Improved Anomaly Modal
+    - Introduced an information icon in each failed check to display the check's description.
+    - Anomaly links now persist filters for sort order and displayed fields.
+    - Added integration details to fields in a source record.
+
+- Secrets Management
+    - Added support for Secrets Manager in connection properties, enabling integration with Vault and other secrets management systems.
+
+- Alation Data Dictionary
+    - Enhanced the dictionary to display friendly names in anomaly screens for improved usability.
+    - Added integration information to the datastore, container, and fields in the tree view footer.
+
+- Tag Category
+    - Introduced support for tag categories to improve tag management, with sorting and filtering options based on the category field.
+
+- Call to Action for Volumetric Measurements
+    - A call to action was added in the overview tab within the container context, and the observability page per container was added to enable volumetric measurements.
+
+- Error Display for Check Operations
+    - Bulk operations like Edit, Activate, Update, and Template Edit now display error messages clearly when validation fails.
+
+- Check Validation
+    - Improved check validation logic to enhance bulk check validation speed and prevent timeouts.
+
+- Tag Filtering for Fields
+    - Users can now filter fields by tags in the field list under the datastore context.
+
+- Field Remarks in Native Field Properties
+    - Added support for displaying field remarks alongside other native field properties.
+
+- Customer Support Link
+    - Users can now access the Qualytics Helpdesk via the Discover menu in the main header.
+
+#### General Fixes
+
+- General fixes and improvements.
+
 ### 2024.10.04 { id=2024.10.04 }
 
 #### Feature Enhancements
