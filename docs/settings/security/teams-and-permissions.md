@@ -562,7 +562,10 @@ Whenever new teams are added to the system, they will appear in the Teams list. 
 
 ### Edit Team
 
-You can edit a team to update its permissions, manage users within the team, and adjust access to source and enrichment datastores, ensuring the team's configuration is current and effective.
+You can edit a team to update its permissions, name, manage users within the team, and adjust access to source and enrichment datastores, ensuring the team's configuration is current and effective.
+
+!!! note
+    The **name** and **users** of a public team cannot be edited.
 
 **Step 1**:  Click on the **vertical ellipsis (⋮)** next to the team name that you want to edit, then click on **Edit** from the dropdown menu.
 
