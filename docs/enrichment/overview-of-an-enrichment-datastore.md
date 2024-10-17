@@ -132,8 +132,6 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 
     - _QUALYTICS_SOURCE_PARTITION
     - ANOMALY_UUID
-    - _QUALYTICS_APPEARS_IN
-		- This **optional** column appears based on specific check rule types, such as `Is Replica Of`, to provide additional context.
 
 ### Understanding Remediation Tables vs. Source Record Tables
 
