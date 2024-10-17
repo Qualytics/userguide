@@ -87,12 +87,12 @@ A source datastore is a storage location used to connect to and access data from
 | REF. | FIELDS         | ACTIONS       |
 |------|----------------|---------------|
 | 1️.  | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
-| 2️.  | Toggle Button | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new source datastore from scratch. |
+| 2️.  | Toggle Button | Toggle ON to  create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
 | 3️.  | Connector (Required) | Select **Snowflake** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a New Connection
 
-If the toggle for **Use an existing connection** is turned off, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
 **Step 1**: Select the **Snowflake** connector from the dropdown list and add the connection details.
 
@@ -122,7 +122,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing connection** is turned on, then this will prompt you to configure the source datastore using existing connection details.
+If the toggle for **Add New connection** is turned off, then this will prompt you to configure the source datastore using the existing connection details.
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
@@ -160,14 +160,14 @@ Once you have successfully tested and verified your source datastore connection,
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
 | 1️.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2️.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
+| 2️.  | Toggle Button for existing enrichment datastore | Toggle **ON** to link the source datastore to an existing enrichment datastore, or toggle **OFF** to link it to a brand new enrichment datastore. |
 | 3️.  | Name (Required) | Specify the name of the enrichment datastore. (e.g., The specified name will appear on the datastore cards.) |
-| 4️.  | Toggle Button for using an existing connection | Toggle ON to reuse credentials from an existing connection, or toggle OFF to create a new enrichment from scratch. |
+| 4️.  | Toggle Button for using an existing connection | Toggle **ON** to create a new enrichment from scratch or toggle **OFF** to reuse credentials from an existing connection. |
 | 5️.  | Connector (Required) | Select a datastore connector as **Snowflake** from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** and **Use an existing connection** are turned off, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Use an existing enrichment datastore** is off and **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Add connection details for your selected **enrichment datastore** connector.
 
@@ -216,7 +216,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
 | 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files for metadata. |
-| 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link source datastore to an existing enrichment datastore. |
+| 2️.   | Toggle Button for existing enrichment datastore | Toggle **ON** to link source datastore to an existing enrichment datastore. |
 | 3️.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
 **Step 2**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
