@@ -24,8 +24,8 @@ Use Computed Tables when you want to perform the following operation on your sel
 
 **Step 2:** After selecting your preferred source datastore, you will be redirected to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed Table** option from the dropdown menu.
 
-![select-computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-light.png#only-light)
-![select-computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-dark.png#only-dark)
+<img alt="select-computed-table" src="https://userguide.qualytics.io/assets/datastores/add-computed-tables-files/select-computed-table-light.png#only-light">
+<img alt="select-computed-table" src="https://userguide.qualytics.io/assets/datastores/add-computed-tables-files/select-computed-table-dark.png#only-dark">
 
 **Step 3:** A modal window will appear prompting you to enter the name for your computed table and a valid SQL query that supports your selected source datastore.
 
