@@ -116,7 +116,6 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 |----------------------------|--------------------|---------------------------------------------------------------------|
 | <span class="text-primary">_QUALYTICS_SOURCE_PARTITION</span> | STRING            | The partition from the source data container.                      |
 | <span class="text-primary">ANOMALY_UUID</span>                | STRING            | Unique identifier of the anomaly.                                  |
-| <span class="text-primary">_QUALYTICS_APPEARS_IN</span>       | STRING            | Indicates whether the record came from the target or reference container in relation to the check definition. |
 | ORDERKEY                   | NUMBER       | Unique identifier of the order.                                    |
 | CUSTKEY                    | NUMBER       | The customer key related to the order.                             |
 | ORDERSTATUS                | CHAR         | The status of the order (e.g., 'F' for 'finished').                |
