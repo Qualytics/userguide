@@ -63,6 +63,95 @@ You can find your computed field by clicking on the dropdown arrow next to the c
 ![field-created](../assets/container/computed-field/field-created-light-8.png#only-light)
 ![field-created](../assets/container/computed-field/field-created-dark-8.png#only-dark)
 
+## Computed Fields Details
+
+### Totals
+
+**1. Quality Score**: This provides a comprehensive assessment of the overall health of the data, factoring in multiple checks for accuracy, consistency, and completeness. A higher score, closer to 100, indicates optimal data quality with minimal issues or errors detected. A lower score may highlight areas that require attention and improvement.
+
+**2. Sampling**: This shows the percentage of data that was evaluated during profiling. A sampling rate of 100% indicates that the entire dataset was analyzed, ensuring a complete and accurate representation of the data’s quality across all records, rather than just a partial sample.  
+   
+**3. Completeness**: This metric measures how fully the data is populated without missing or null values. A higher completeness percentage means that most fields contain the necessary information, while a lower percentage indicates data gaps that could negatively impact downstream processes or analysis.
+
+**4. Active Checks**: This refers to the number of ongoing quality checks being applied to the dataset. These checks monitor aspects such as format consistency, uniqueness, and logical correctness. Active checks help maintain data integrity and provide real-time alerts about potential issues that may arise.
+
+**5. Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
+
+![Totals](../assets/container/computed-field/totals-light-9.png#only-light)
+![Totals](../assets/container/computed-field/totals-dark-9.png#only-dark)
+
+
+### Profile
+
+This provides detailed insights into the characteristics of the field, including its type, distinct values, and length. You can use this information to evaluate the data's uniqueness, length consistency, and complexity.
+
+
+| **No** | **Profile**           | **Description**                                                                 |
+|--------|-----------------------|---------------------------------------------------------------------------------|
+| 1      | Declared Type          | Indicates whether the type is declared by the source or inferred.               |
+| 2      | Distinct Values        | Count of distinct values observed in the dataset.                               |
+| 3      | Min Length             | Shortest length of the observed string values or lowest value for numerics.      |
+| 4      | Max Length             | Greatest length of the observed string values or highest value for numerics.     |
+| 5      | Mean                   | Mathematical average of the observed numeric values.                            |
+| 6      | Median                 | The median of the observed numeric values.                                      |
+| 7      | Standard Deviation     | Measure of the amount of variation in observed numeric values.                  |
+| 8      | Kurtosis               | Measure of the ‘tailedness’ of the distribution of observed numeric values.     |
+| 9      | Skewness               | Measure of the asymmetry of the distribution of observed numeric values.        |
+| 10     | Q1                     | The first quartile; the central point between the minimum and the median.       |
+| 11     | Q3                     | The third quartile; the central point between the median and the maximum.       |
+| 12     | Sum                    | Total sum of all observed numeric values.                                       |
+
+![Profile](../assets/container/computed-field/profile-light-10.png#only-light)
+![Profile](../assets/container/computed-field/profile-dark-10.png#only-dark)
+
+
+
+You can hover over the (i) button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
+
+![Hover](../assets/container/computed-field/hover-light-11.png#only-light)
+![Hover](../assets/container/computed-field/hover-dark-11.png#only-dark)
+
+## Filter and Sort Fields
+
+Filter and Sort options allow you to organize your fields by various criteria, such as Name, Checks, Completeness, Created Date, and Tags. You can also apply filters to refine your list of fields based on Type and Tags
+
+### Sort
+
+You can sort your checks by Anomalies, Checks, Completeness,  Created Date,  Name, Quality Score, and Type to easily organize and prioritize them according to your needs.
+
+![Sort](../assets/container/computed-field/sort-light-12.png#only-light)
+![Sort](../assets/container/computed-field/sort-dark-12.png#only-dark)
+
+| **No** | **Sort By**           | **Description**                                                                 |
+|--------|-----------------------|---------------------------------------------------------------------------------|
+| 1      | Anomalies              | Sorts fields based on the number of detected anomalies.                          |
+| 2      | Checks                 | Sorts fields by the number of active validation checks applied.                  |
+| 3      | Completeness           | Sorts fields based on their data completeness percentage.                       |
+| 4      | Created Date           | Sorts fields by the date they were created, showing the newest or oldest fields first. |
+| 5      | Name                   | Sorts fields alphabetically by their names.                                     |
+| 6      | Quality Score          | Sorts fields based on their quality score, indicating the reliability of the data in the field. |
+| 7      | Type                   | Sorts fields based on their data type (e.g., string, boolean, etc.).             |
+
+![Sort](../assets/container/computed-field/sort-light-13.png#only-light)
+![Sort](../assets/container/computed-field/sort-dark-13.png#only-dark)
+
+Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.
+
+![caret](../assets/container/computed-field/caret-light-14.png#only-light)
+![caret](../assets/container/computed-field/caret-dark-14.png#only-dark)
+
+### Filter
+
+You can filter your checks based on values like Type and Tag to easily organize and prioritize them according to your needs.
+
+![caret](../assets/container/computed-field/filter-light-15.png#only-light)
+![caret](../assets/container/computed-field/filter-dark-15.png#only-dark)
+
+| **No** | **Filter**            | **Description**                                                                 |
+|--------|-----------------------|---------------------------------------------------------------------------------|
+| 1      | Type                  | Filters fields based on the data type (e.g., string, boolean, date, etc.).        |
+| 2      | Tag                   | Select this to filter the fields based on specific tags, such as Healthcare, Compliance, or Sensitive. |
+
 ## Types of Transformations
 
 ### Cleaned Entity Name
