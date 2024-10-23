@@ -27,7 +27,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements.
+- General Fixes and Improvements.
 
 ### 2024.10.16 { id=2024.10.16 }
 
@@ -68,7 +68,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements.
+- General Fixes and Improvements.
 
 ### 2024.10.04 { id=2024.10.04 }
 
