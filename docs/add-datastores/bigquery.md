@@ -120,7 +120,24 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 ![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-dark.png#only-dark)
 
-**Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note 
+    Once the **HashiCorp Vault** is set up, use the $<secret_name> format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+
+![secrets-management](../assets/datastores/bigquery/secrets-management-light.png#only-light)
+![secrets-management](../assets/datastores/bigquery/secrets-management-dark.png#only-dark)
+
+**Step 2:** The configuration form, requesting credential details before establishing the connection.
 
 ![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-light.png#only-light)
 ![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-dark.png#only-dark)

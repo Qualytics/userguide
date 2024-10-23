@@ -32,12 +32,29 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **Athena** connector from the dropdown list and add connection details such as host, port, username, password, catalog, database, etc. 
+**Step 1**: Select the **Athena** connector from the dropdown list and add connection properties such as Secrets Management, host, port, username, and password, along with datastore properties like catalog, database, etc.
 
 ![add-source-datastore-details](../assets/datastores/athena/add-source-datastore-details-light-3.png#only-light)
 ![add-source-datastore-details](../assets/datastores/athena/add-source-datastore-details-dark-3.png#only-dark)
 
-**Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note 
+    Once the **HashiCorp Vault** is set up, use the $<secret_name> format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+
+![secret-management](../assets/datastores/athena/secret-management-light-04.png#only-light)
+![secret-management](../assets/datastores/athena/secret-management-dark-04.png#only-dark)
+
+**Step 2**: The configuration form, requesting credential details before establishing the connection.
 
 ![add-configutre-details](../assets/datastores/athena/add-configutre-details-light-4.png#only-light)
 ![add-configutre-details](../assets/datastores/athena/add-configutre-details-dark-4.png#only-dark)
