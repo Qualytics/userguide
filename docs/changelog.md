@@ -5,6 +5,30 @@ hide:
 
 # Release Notes
 
+### 2024.10.23 { id=2024.10.23 }
+
+#### Feature Enhancements
+
+- Dremio Connector
+    - We’ve expanded our connectivity options by supporting a new connection with Dremio. This enhancement allows users to connect and interact with Dremio databases directly from Qualytics, facilitating more diverse data management capabilities.
+
+- Full View of Abbreviated Metrics in Operation Summary
+    - Users can now hover over abbreviated metrics to see the full value for better clarity.
+
+- Redirect to Conflicting Check
+    - Added a redirect link to the conflicting check from the error message, improving navigation when addressing errors.
+
+- Enhanced Visibility and Engagement for Tags and Notifications Setup
+    - Introduced a Call to Action to encourage users to manage Tags and Notifications for better engagement.
+
+- Favorite Containers
+    - Users can now favorite containers and pin them to the top of the list.
+    - The option to favorite datastores and containers is now available in both card view and list view.
+
+#### General Fixes
+
+- General fixes and improvements.
+
 ### 2024.10.16 { id=2024.10.16 }
 
 #### Feature Enhancements
