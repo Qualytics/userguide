@@ -50,6 +50,7 @@ nav:
       - connections/overview-of-a-connection.md
     # new page tree structure end 
     - Source Datastores:
+      - Right Click Options: source-datastore/right-click-options.md 
       - Link Enrichment: source-datastore/associate-enrichment-datastore.md
       - Assign Tags: source-datastore/assign-tags.md
       - Catalog: source-datastore/catalog.md
