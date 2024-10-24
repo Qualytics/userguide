@@ -18,7 +18,7 @@ The Global Search feature in Qualytics is designed to streamline the process of 
 
 ## In-App Notifications
 
-In-app notifications in Qualytics are real-time alerts that keep users informed about various events related to their data operations and quality checks. These notifications are displayed within the Qualytics interface and cover a range of activities, including operation completions, anomaly detections, and service level agreement (SLA) status updates.
+In-app notifications in Qualytics are real-time alerts that keep users informed about various events related to their data operations and quality checks. These notifications are displayed within the Qualytics interface and cover a range of activities, including operation completions, and anomaly detections.
 
 ![nav-notification](assets/dashboard/nav-notification-light.png#only-light)
 ![nav-notification](assets/dashboard/nav-notification-dark.png#only-dark)
@@ -38,6 +38,10 @@ The **Discover** option in Qualytics features a dropdown menu that provides acce
 - **Docs**: Opens the API documentation, offering detailed information on how to interact programmatically with the Qualytics platform. This is essential for developers looking to integrate Qualytics with other systems or automate tasks.
 
 - **Playground**: Provides access to an interactive environment where users can test and experiment with API calls. This feature is particularly useful for developers who want to understand how the API works and try out different queries before implementing them in their applications.
+
+**Support:**
+
+- **Qualytics Helpdesk**: Qualytics Helpdesk provides users with access to a support environment where they can get assistance with any issues or questions related to the platform. 
 
 ![discovery](assets/dashboard/discovery-light.png#only-light)
 ![discovery](assets/dashboard/discovery-dark.png#only-dark)
@@ -135,6 +139,8 @@ The Explore dashboard in Qualytics enables effective data management and analysi
 
 - **Profiles**: Unifies all containers, including tables, views, computed tables, computed files, and fields, with search, sort, and filter functionalities.
 
+- **Observability**: Observability gives users an easy way to track changes in data volume over time. It introduces two types of checks: Volumetric and Metric. 
+
 - **Checks**: Shows all applied checks, both inferred and authored, across source datastores to monitor and manage data quality rules.
 
 - **Anomalies**: Lists all detected anomalies across source datastores for quick identification and resolution of issues.
@@ -156,13 +162,23 @@ The library dashboard allows for managing check templates and editing applied ch
 ![library-access](assets/dashboard/library-access-light.png#only-light)
 ![library-access](assets/dashboard/library-access-dark.png#only-dark)
 
+### Tags
+
+Tags help users organize and prioritize data assets by categorizing them. They can be applied to Datastores, Profiles, Fields, Checks, and Anomalies, improving data management and workflows.
+
+![tags-nav](assets/dashboard/tags-light.png#only-light)
+![tags-nav](assets/dashboard/tags-dark.png#only-dark)
+
+### Notification Rules
+
+Qualytics allows users to set up notification rules with specific triggers and channels, ensuring timely alerts for critical events. Notifications can be delivered through multiple channels, including in-app, email, Slack, Microsoft Teams, and more, helping users stay informed and manage data quality issues in real time.
+
+![notification-nav](assets/dashboard/notification-rule-light.png#only-light)
+![notification-nav](assets/dashboard/notification-rule-dark.png#only-dark)
+
 ### Global Settings
 
 Manage global configurations with the following options:
-
-- **Tags**: Categorize and prioritize entities, configure notifications, and associate tags with properties.
-
-- **Notifications**: Set notifications for completed operations and identified anomalies.
 
 - **Connection**: Manage datastore sources (add, edit, delete).
 
