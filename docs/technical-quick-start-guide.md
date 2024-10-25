@@ -15,7 +15,7 @@ After you've obtained access to your deployment, you'll want to:
 2. Initiate a [profiling](https://userguide.qualytics.io/glossary/#profiling) on the source datastore by running a Profile Operation. This step will automatically infer a set of data quality checks from your data.
 3. Assert those checks to detect data [anomalies](https://userguide.qualytics.io/glossary/#anomaly)
 
-## Connecting a [Datastore](./glossary.md)
+## Connecting a [Datastore](https://userguide.qualytics.io/glossary/#datastore:~:text=expected%20or%20not.-,Datastore,-Where%20data%20is)
 
 The first step of configuring a Qualytics instance is to `Add Source Datastore`. In order to add a Source Datastore via Qualytics, you need to select the specific `Connector`. This is necessary so that the appropriate form for collecting connection details can be rendered.
 
@@ -77,7 +77,7 @@ Now that you have a deeper understanding of how our profiling operation works, y
 
 After the initial Profile Operation is complete, you can start a Scan Operation. By default, Qualytics initiates a `Full` Scan for the first operation. This comprehensive scan establishes a baseline for generating Quality Scores and facilitates the validation of all defined checks.
 
-As the Scan Operation progresses, you can monitor its status in real-time. If you choose, you can set up in-app [notifications](./settings/notifications/overview-of-a-notification.md) to alert you when the operation is complete, whether you're currently signed in or you log back in later.
+As the Scan Operation progresses, you can monitor its status in real-time. If you choose, you can set up in-app [notifications](https://userguide.qualytics.io/notifications/overview-of-a-notification/) to alert you when the operation is complete, whether you're currently signed in or you log back in later.
 
 Upon completion of the Scan operation, you can review the following data points:
 
