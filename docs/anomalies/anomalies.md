@@ -13,21 +13,21 @@ The anomaly detection process in Qualytics ensures data quality and reliability 
 By setting up a datastore and establishing a connection to your data source (database or file system), you create a robust foundation for effective data management and analysis in Qualytics. This setup enables you to access, manipulate, and utilize your data efficiently, paving the way for advanced data quality checks, profiling, scanning, anomaly surveillance, and other analytics tasks.
 
 !!! note
-    For more information, please refer to the documentation- **Configuring Datastores**.
+    For more information, please refer to the documentation on [Configuring Datastores](https://userguide.qualytics.io/quick-start-guide/#configuring-datastores:~:text=the%20Qualytics%20platform.-,Configuring%20Datastores,-Qualytics%20allows%20you)
 
 ### 2. Catalog Operation
 
 The Catalog operation involves systematically collecting data structures along with their corresponding metadata. This process also includes a thorough analysis of the existing metadata within the datastore. This ensures a solid foundation for the subsequent Profile and Scan operations.
 
 !!! note
-    For more information, please refer to the documentation- **Catalog Operation**.
+    For more information, please refer to the documentation [Catalog Operation](https://userguide.qualytics.io/source-datastore/catalog/#:~:text=Catalog%20Operation%20Status-,Catalog%20Operation,-A%20Catalog%20Operation)
 
 ### 3. Profile Operation
 
 The Profile operation enables training of the collected data structures and their associated metadata values. This is crucial for gathering comprehensive aggregating statistics on the selected data, providing deeper insights, and preparing the data for quality assessment.
 
 !!! note
-    For more information, please refer to the documentation- **Catalog Operation**.
+    For more information, please refer to the documentation [Profile Operation](https://userguide.qualytics.io/source-datastore/profile/#:~:text=Profile%20Operation%20Status-,Profile%20Operation,-The%20Profile%20Operation)
 
 ### 4. Create Authored Checks
 
@@ -36,21 +36,21 @@ Authored Checks are manually created data quality checks in Qualytics, defined b
 Authored checks can range from simple, template-based checks to more complex rules implemented through SQL or user-defined functions (UDFs) in Scala. By allowing users to define precise criteria for data quality, authored checks enable detailed monitoring and validation of data within the datastore, ensuring that it meets the specified standards and requirements.
 
 !!! note
-    For more information, please refer to the documentation- **Checks**.
+    For more information, please refer to the documentation [Checks](https://userguide.qualytics.io/explore/checks/#:~:text=the%20Checks%20Tab-,Checks,-Ensure%20data%20integrity)
 
 ### 5. Scan Operation
 
 The Scan operation asserts rigorous quality checks to identify any anomalies within the data. This step ensures data integrity and reliability by recording the analyzed data in your configured enrichment datastore, facilitating continuous data quality improvement.
 
 !!! note
-    For more information, please refer to the documentation- **Scan Operation**.
+    For more information, please refer to the documentation [Scan Operation](https://userguide.qualytics.io/source-datastore/scan/#:~:text=Endpoint%20(Get)-,Scan%20Operation,-The%20Scan%20Operation)
 
 ### 6. Anomaly Analysis
 
 An Anomaly is a data record or column that fails a data quality check during a Scan Operation. These anomalies are identified through both Inferred and Authored Checks and are grouped together to highlight data quality issues. This process ensures that any deviations from expected data quality standards are promptly identified and addressed.
 
 !!! note
-    For more information, please refer to the documentation- **Anomalies**.
+    For more information, please refer to the documentation- [Anomalies](https://userguide.qualytics.io/anomalies/anomalies/#:~:text=Anomaly%20Source%20Records-,Anomalies,-An%20anomaly%20in).
 
 ## Types of Anomalies
 
@@ -228,7 +228,7 @@ You can archive the anomalies when they are determined to be false positives or 
 
 For instance, if an anomaly is marked as invalid, the tolerances of the checks that identified the anomaly will be updated to prevent similar false positives in the future. This continuous feedback loop enhances the accuracy and relevance of data quality checks over time.
 
-For more details on how to archive anomalies, please refer to the documentation on [Archive Anomalies](https://userguide.qualytics.io/anomalies/manage-anomalies/#1-archive-directly:~:text=been%20successfully%20archived%E2%80%9D-,2.%20Archive%20via%20Action%20Menu,-Step%201%3A%20Click)
+For more details on how to archive anomalies, please refer to the documentation on [Archive Anomalies](https://userguide.qualytics.io/anomalies/manage-anomalies/#method-ii-acknowledge-anomalies-in-bulk:~:text=been%20successfully%20acknowledged%E2%80%9D-,Archive%20Anomalies,-By%20archiving%20anomalies)
 
 
 ## API Payload Examples  
