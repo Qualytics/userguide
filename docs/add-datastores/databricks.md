@@ -167,10 +167,27 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add new connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1:** Select the **Databricks** connector from the dropdown list and add connection details such as host, HTTP path, database, and personal access token.
+**Step 1:** Select the **Databricks** connector from the dropdown list and add connection details such as Secrets Management, host, HTTP path, database, and personal access token.
 
 ![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-dark.png#only-dark)
+
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note
+    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1   | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2   | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.      |
+| 3   | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4   | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5   | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6   | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).       |
+
+![hashcorp-vault](../assets/datastores/databricks/hashcorp-light.png#only-light)
+![hashcorp-vault](../assets/datastores/databricks/hashcorp-dark.png#only-dark)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -226,7 +243,7 @@ Once you have successfully tested and verified your source datastore connection,
 ![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-light.png#only-light)
 ![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-dark.png#only-dark)
 
-**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
+**Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-dark.png#only-dark)
@@ -234,19 +251,56 @@ Once you have successfully tested and verified your source datastore connection,
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
 | 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2️.   | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore; Toggle OFF to link it to a brand new enrichment datastore. |
-| 3️.   | Name (Required) | Give a name for the enrichment datastore. |
-| 4️.   | Toggle Button for add new connection  | Toggle ON to  create a new enrichment from scratch; Toggle OFF to reuse credentials from an existing connection. |
-| 5️.   | Connector (Required) | Select a datastore connector as **Databricks** from the dropdown list. |
+| 2.| Caret Down Button   | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.|
+| 3.| Enrichment Datastore| Select an enrichment datastore from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** is off and **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1:** Add connection details for your selected **enrichment datastore** connector.
+**Step 1**: Click on the caret button and select Add Enrichment Datastore.
+
+![carret-button](../assets/datastores/databricks/add-enrichment-light.png#only-light)
+![carret-button](../assets/datastores/databricks/add-enrichment-light.png#only-dark)
+
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
+
+![modal-window](../assets/datastores/databricks/add-enrichment-detail-light.png#only-light)
+![modal-window](../assets/datastores/databricks/add-enrichment-detail-dark.png#only-dark)
+
+| REF.              | FIELDS       | ACTIONS                                    |
+|-------------------|--------------|--------------------------------------------|
+| 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Name   | Give a name for the enrichment datastore.|
+| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 4.                |Connector | Select a datastore connector from the dropdown list.|
+
+**Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
 ![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-light.png#only-light)
 ![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-dark.png#only-dark)
+
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note
+    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+
+![secret-management](../assets/datastores/databricks/secret-management-light.png#only-light)
+![secret-management](../assets/datastores/databricks/secret-management-dark.png#only-dark)
+
+**Step 3:** The configuration form, requesting credential details after selected **enrichment datastore** connector.
+
+![config-details](../assets/datastores/databricks/config-details-light.png#only-light)
+![confid-details](../assets/datastores/databricks/config-details-dark.png#only-dark)
 
 | REF. | FIELD     | ACTIONS     |
 |------|------------|-------------|
@@ -257,12 +311,12 @@ If the toggles for **Use an existing enrichment datastore** is off and **Use an 
 | 5️.   | Database (Optional) | Specify the database name |
 | 6️.   | Teams (Required)  | Select one or more teams from the dropdown to associate with this enrichment datastore. |
 
-**Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
+**Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
    ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png#only-light)
    ![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process. 
+**Step 5:** Click on the **Finish** button to complete the configuration process. 
 
 ![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png#only-light)
 ![finish-configuration](../assets/datastores/databricks/finish-configuration-dark.png#only-dark)
@@ -272,27 +326,31 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/databricks/success-message-light.png#only-light)
 ![success-message](../assets/datastores/databricks/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 6:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/databricks/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/databricks/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/databricks/data-operations-page-light.png#only-light)
+![data-operation-page](../assets/datastores/databricks/data-operations-page-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the datastore using existing connection details.
+If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details. 
 
-**Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-light.png#only-light)
-![select-existing-enrichment-datastore](../assets/datastores/databricks/select-existing-enrichment-datastore-dark.png#only-dark)
+![use-enrichment-datastore](../assets/datastores/databricks/use-enrichment-light.png#only-light)
+![use-enrichment-datastore](../assets/datastores/databricks/use-enrichment-dark.png#only-dark)
+
+**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+
+![use-enrichment-details](../assets/datastores/databricks/use-enrichment-details-light.png#only-light)
+![use-enrichment-details](../assets/datastores/databricks/use-enrichment-details-dark.png#only-dark)
 
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
 | 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
-| 2️.   | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore. |
-| 3️.   | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
+| 2.   | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
 
-**Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
+**Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
 - **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users. 
 
@@ -305,7 +363,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![use-existing-enrichment-datastore](../assets/datastores/databricks/use-existing-enrichment-datastore-light.png#only-light)
 ![use-existing-enrichment-datastore](../assets/datastores/databricks/use-existing-enrichment-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
+**Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
 ![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/databricks/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
 ![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/databricks/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
@@ -317,8 +375,8 @@ When the configuration process is finished, a modal will display a **success mes
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/databricks/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/databricks/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/databricks/data-operations-page-light.png#only-light)
+![data-operation-page](../assets/datastores/databricks/data-operations-page-dark.png#only-dark)
 
 ## API Payload Examples
 
