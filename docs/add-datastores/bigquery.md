@@ -203,7 +203,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
@@ -279,7 +279,7 @@ When the configuration process is finished, a modal will display a **success mes
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the datastore using existing connection details.
+If the "Use an existing enrichment datastore" option is selected from the dropdown menu, you will be prompted to configure the datastore using existing connection details. 
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
