@@ -5,6 +5,30 @@ hide:
 
 # Release Notes
 
+### 2024.11.01 { id=2024.11.01 }
+
+#### Feature Enhancements
+
+- Observability Enhancements
+    - An observability heatmap was added to the volumetric card in the Observability tab.
+        - The heatmap allows users to monitor volumetric status and check for new anomalies.
+     - Improved observability chart for clearer insights.
+        - Users can now view the count of volumetric anomalies produced over time, along with the last recorded measurements for each period.
+        - Introduced new color indicators to help distinguish volumetric measures outside thresholds that didn’t produce anomalies from those that did.
+
+- Editable Tags in Field Details
+    - Users with write permissions can now manage tags directly in the Field Details within the Explore context.
+
+- Distinct Count Rule Update
+    - The Distinct Count rule now excludes the Coverage field for more accurate assessments.
+
+- Support for Pasting into Expected Values
+    - Users can now paste values from spreadsheets directly into Expected Values, saving time on data entry.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.10.23 { id=2024.10.23 }
 
 #### Feature Enhancements
@@ -143,7 +167,7 @@ hide:
 - The Oracle connector now handles invalid schemas when creating connections.
 - Anomalies identified in scan operations were not counting archived statuses.
 - Improved error message when a user creates a schedule name longer than 50 characters.
-- General fixes and improvements.
+- General Fixes and Improvements.
 
 #### Breaking Changes
 
