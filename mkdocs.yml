@@ -142,8 +142,6 @@ nav:
       - Profiles: explore/profiles.md
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
-    - Freshness:
-      - Overview: freshness/global-freshness.md
     - Notifications:
       - Overview: notifications/overview-of-a-notification.md
       - Manage Notifications: notifications/managing-notifications.md
