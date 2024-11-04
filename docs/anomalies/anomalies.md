@@ -13,21 +13,21 @@ The anomaly detection process in Qualytics ensures data quality and reliability 
 By setting up a datastore and establishing a connection to your data source (database or file system), you create a robust foundation for effective data management and analysis in Qualytics. This setup enables you to access, manipulate, and utilize your data efficiently, paving the way for advanced data quality checks, profiling, scanning, anomaly surveillance, and other analytics tasks.
 
 !!! note
-    For more information, please refer to the documentation- **Configuring Datastores**.
+    For more information, please refer to the documentation on [Configuring Datastores](../quick-start-guide.md/#datastore)
 
 ### 2. Catalog Operation
 
 The Catalog operation involves systematically collecting data structures along with their corresponding metadata. This process also includes a thorough analysis of the existing metadata within the datastore. This ensures a solid foundation for the subsequent Profile and Scan operations.
 
 !!! note
-    For more information, please refer to the documentation- **Catalog Operation**.
+    For more information, please refer to the documentation [Catalog Operation](../source-datastore/catalog.md)
 
 ### 3. Profile Operation
 
 The Profile operation enables training of the collected data structures and their associated metadata values. This is crucial for gathering comprehensive aggregating statistics on the selected data, providing deeper insights, and preparing the data for quality assessment.
 
 !!! note
-    For more information, please refer to the documentation- **Catalog Operation**.
+    For more information, please refer to the documentation [Profile Operation](../source-datastore/profile.md)
 
 ### 4. Create Authored Checks
 
@@ -36,21 +36,21 @@ Authored Checks are manually created data quality checks in Qualytics, defined b
 Authored checks can range from simple, template-based checks to more complex rules implemented through SQL or user-defined functions (UDFs) in Scala. By allowing users to define precise criteria for data quality, authored checks enable detailed monitoring and validation of data within the datastore, ensuring that it meets the specified standards and requirements.
 
 !!! note
-    For more information, please refer to the documentation- **Checks**.
+    For more information, please refer to the documentation [Checks](../explore/checks.md)
 
 ### 5. Scan Operation
 
 The Scan operation asserts rigorous quality checks to identify any anomalies within the data. This step ensures data integrity and reliability by recording the analyzed data in your configured enrichment datastore, facilitating continuous data quality improvement.
 
 !!! note
-    For more information, please refer to the documentation- **Scan Operation**.
+    For more information, please refer to the documentation [Scan Operation](../source-datastore/scan.md)
 
 ### 6. Anomaly Analysis
 
 An Anomaly is a data record or column that fails a data quality check during a Scan Operation. These anomalies are identified through both Inferred and Authored Checks and are grouped together to highlight data quality issues. This process ensures that any deviations from expected data quality standards are promptly identified and addressed.
 
 !!! note
-    For more information, please refer to the documentation- **Anomalies**.
+    For more information, please refer to the documentation [Anomalies](#source-records).
 
 ## Types of Anomalies
 
@@ -97,13 +97,13 @@ Anomaly status is a crucial feature for managing and addressing data quality iss
 
 The anomaly identified during the scan operation illustrates the following details:
 
-**1. Status:** Reflects the status of the Anomaly. It can be **active**, **acknowledged**, **resolved**, or **invalid**.
+**1. Anomaly ID:** A numerical identifier (e.g. #75566) used for quick search and easy identification of anomalies within the Qualytics interface.
 
-**2.Anomaly ID:** A numerical identifier (e.g. #75566) used for quick search and easy identification of anomalies within the Qualytics interface.
+**2. Status:** Reflects the status of the Anomaly. It can be **active**, **acknowledged**, **resolved**, or **invalid**.
 
-**3. Anomaly UID:** A longer, standardized, and globally unique identifier, displayed as a string of hexadecimal characters. This can be copied to the clipboard.
+**3. Share:** Copy a shareable link to a specific anomaly. This can be shared with other users or stakeholders for collaboration.
 
-**4. Share:** Copy a shareable link to a specific anomaly. This can be shared with other users or stakeholders for collaboration.
+**4. Anomaly UID:** A longer, standardized, and globally unique identifier, displayed as a string of hexadecimal characters. This can be copied to the clipboard.
 
 **5. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
 
@@ -180,6 +180,14 @@ If the value in the right column (reference) differs from the value in the left 
 ![suggestion-details](../assets/datastores/anomalies/suggestion-details-light.png#only-light)
 ![suggestion-details](../assets/datastores/anomalies/suggestion-details-dark.png#only-dark)
 
+### Failed Check Description
+
+This allows users to view detailed explanations of each failed check by hovering over the information icon, helping users better understand the nature of the violation.
+
+![failed-check-description](../assets/datastores/anomalies/failed-check-description-light.png#only-light)
+![failed-check-description](../assets/datastores/anomalies/failed-check-description-dark.png#only-dark)
+
+
 ### Download Source Records
 
 Download and export all source records (up to 250MB in a compressed .csv) for further analysis or external use.
@@ -199,36 +207,29 @@ Assigning tags to an anomaly serves the purpose of labeling and grouping anomali
 **Step 2:** A dropdown menu will appear with existing tags. Scroll through the list and click on the tag you wish to assign.
 
 ![updated-existing-tags](../assets/datastores/anomalies/updated-existing-tags-light.png#only-light)
-![updated-existing-tags](../assets/datastores/anomalies/update-existing-tags-dark.png#only-dark)
+![updated-existing-tags](../assets/datastores/anomalies/updated-existing-tags-dark.png#only-dark)
 
-## Update Anomaly Status
+## Anomaly Actions
 
-The Anomaly Status feature helps users manage their worklist of anomalies and serves as a feedback mechanism for the system. When users provide feedback by validating or invalidating an anomaly, the system adjusts its learning methods accordingly.
+You can update the status of anomalies by acknowledging them to confirm they are real issues, or by moving them to archive if they are false positives. This helps refine the system’s detection process and keeps your worklist focused on relevant issues.
+
+![anomalies-action](../assets/datastores/anomalies/anomalies-action-light.png#only-light)
+![anomalies-action](../assets/datastores/anomalies/anomalies-action-dark.png#only-dark)
+
+### Acknowledge Anomalies
+
+You can acknowledge anomalies to confirm that they represent real data issues that need attention. By acknowledging an anomaly, you provide feedback to the system, validating the detection and helping it improve future checks. 
+
+For more details on how to acknowledge anomalies, please refer to the documentation on [Acknowledge Anomalies](./manage-anomalies.md/#acknowledge).
+
+### Archive Anomalies
+
+You can archive the anomalies when they are determined to be false positives or not significant. Archiving helps the system adjust its checks to prevent similar issues from being flagged in the future, ensuring more accurate anomaly detection and keeping your worklist streamlined.
 
 For instance, if an anomaly is marked as invalid, the tolerances of the checks that identified the anomaly will be updated to prevent similar false positives in the future. This continuous feedback loop enhances the accuracy and relevance of data quality checks over time.
 
-**Step 1:** Click on the Update Status button.
+For more details on how to archive anomalies, please refer to the documentation on [Archive Anomalies](./manage-anomalies.md/#archived)
 
-![updated-details](../assets/datastores/anomalies/updated-details-light.png#only-light)
-![updated-details](../assets/datastores/anomalies/updated-details-dark.png#only-dark)
-
-**Step 2:** Select the new Anomaly Status.
-
-![anomalies-status](../assets/datastores/anomalies/anomalies-status-light.png#only-light)
-![anomalies-status](../assets/datastores/anomalies/anomalies-status-dark.png#only-dark)
-
-!!! note
-    Verify the anomaly ID displayed at the top of the dialog to ensure you are updating the correct anomaly.
-
-**Step 3:** In the comment box, provide any relevant information about the status update. This is optional but recommended for documentation purposes.
-
-![comment-box](../assets/datastores/anomalies/comment-box-light.png#only-light)
-![comment-box](../assets/datastores/anomalies/comment-box-dark.png#only-dark)
-
-**Step 4:** After selecting the new status and adding any comments, click the **Save** button to confirm the update.
-
-![click-save](../assets/datastores/anomalies/click-save-light.png#only-light)
-![click-save](../assets/datastores/anomalies/click-save-dark.png#only-dark)
 
 ## API Payload Examples  
 
