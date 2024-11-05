@@ -38,7 +38,6 @@ A modal window will appear, allowing you to enter the details for your computed 
 !!! info
     Transformations are changes made to data, like converting formats, doing calculations, or cleaning up fields. In Qualytics, you can use transformations to meet specific needs, such as cleaning entity names, converting formatted numbers, or applying custom expressions. With various transformation types available, Qualytics enables you to customize your data directly within the platform, ensuring it’s accurate and ready for analysis. 
 
-
 | Transformation Types | Purpose | Reference |
 |------|--------|---------|
 | Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | [See here](#cleaned-entity-name) |
@@ -80,11 +79,9 @@ You can find your computed field by clicking on the dropdown arrow next to the c
 ![Totals](../assets/container/computed-field/totals-light-9.png#only-light)
 ![Totals](../assets/container/computed-field/totals-dark-9.png#only-dark)
 
-
 ### Profile
 
 This provides detailed insights into the characteristics of the field, including its type, distinct values, and length. You can use this information to evaluate the data's uniqueness, length consistency, and complexity.
-
 
 | **No** | **Profile**           | **Description**                                                                 |
 |--------|-----------------------|---------------------------------------------------------------------------------|
@@ -104,12 +101,46 @@ This provides detailed insights into the characteristics of the field, including
 ![Profile](../assets/container/computed-field/profile-light-10.png#only-light)
 ![Profile](../assets/container/computed-field/profile-dark-10.png#only-dark)
 
-
-
 You can hover over the (i) button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
 
 ![Hover](../assets/container/computed-field/hover-light-11.png#only-light)
 ![Hover](../assets/container/computed-field/hover-dark-11.png#only-dark)
+
+## Manage Tags in field details
+
+Tags can now be directly managed in the field profile within the Explore section. Simply access the Field Details panel to create, add, or remove tags, enabling more efficient and organized data management.
+
+**Step 1**: Log in to your Qualytics account and click the **Explore** button on the left side panel of the interface.
+
+![exlore](../assets/container/computed-field/explore-light.png#only-light)
+![explore](../assets/container/computed-field/explore-dark.png#only-dark)
+
+**Step 2**: Click on the **Profiles** tab and select **fields**.
+
+![profiles-tab](../assets/container/computed-field/profiles-light.png#only-light)
+![profiles-tab](../assets/container/computed-field/profiles-dark.png#only-dark)
+
+**Step 3**: Click on the specific field that you want to manage tags.
+
+![specific](../assets/container/computed-field/specific-light.png#only-light)
+![specific](../assets/container/computed-field/specific-dark.png#only-dark)
+
+A Field Details modal window will appear. Click on the + button to assign tags to the selected field.
+
+![field](../assets/container/computed-field/fields-light.png#only-light)
+![field](../assets/container/computed-field/fields-dark.png#only-dark)
+
+**Step 4:** You can also create the new tag by clicking on the ➕ button.
+
+![plus](../assets/container/computed-field/plus-light.png#only-light)
+![plus](../assets/container/computed-field/plus-dark.png#only-dark)
+
+A modal window will appear, providing the options to create the tag. Enter the required values to get started.
+
+![modal-window](../assets/container/computed-field/modal-light.png#only-light)
+![modal-window](../assets/container/computed-field/modal-dark.png#only-dark)
+
+For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md#add-tag).
 
 ## Filter and Sort Fields
 
