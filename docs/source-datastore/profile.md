@@ -473,7 +473,14 @@ This status confirms that the profile operation was completed successfully witho
 
 ![profile-success](../assets/profile-operations/profile-success-light.png#only-light)
 ![profile-success](../assets/profile-operations/profile-success-dark.png#only-dark)
-  
+
+#### Full View of Metrics in Operation Summary
+
+Users can now hover over abbreviated metrics to see the full value for better clarity. For demonstration purposes, we are hovering over the **Records Profiled** field to display the full value.
+
+![records-profiled-operation](../assets/profile-operations/profile-scan-operation-light.png#only-light)
+![records-profiled-operation](../assets/profile-operations/profile-scan-operation-dark.png#only-dark)
+
 ## Post Operation Details
 
 **Step 1**: Click on any of the successful **Scan Operations** from the list and hit the Results button.
