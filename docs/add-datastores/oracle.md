@@ -32,10 +32,27 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add new connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1:** Select the **Oracle** connector from the dropdown list and add connection details such as such as host, port, username, sid, and schema.
+**Step 1:** Select the **Oracle** connector from the dropdown list and add connection details such as such as Secret Management, host, port, username, sid, and schema.
 
 ![add-source-datastore-details](../assets/datastores/oracle/add-source-datastore-details-light.png#only-light)
 ![add-source-datastore-details](../assets/datastores/oracle/add-source-datastore-details-dark.png#only-dark)
+
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note 
+    Once the **HashiCorp Vault** is set up, use the $<secret_name> format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+
+![hashcorp-explain](../assets/datastores/oracle/hashcorp-explain-light.png#only-light)
+![hashcorp-explain](../assets/datastores/oracle/hashcorp-explain-dark.png#only-dark)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -95,24 +112,39 @@ Once you have successfully tested and verified your source datastore connection,
 ![click-next-datastore](../assets/datastores/oracle/click-next-datastore-light.png#only-light)
 ![click-next-datastore](../assets/datastores/oracle/click-next-datastore-dark.png#only-dark)
 
-**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
+**Step 2:** A modal window **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![add-enrichment](../assets/datastores/oracle/add-enrichment-light.png#only-light)
 ![add-enrichment](../assets/datastores/oracle/add-enrichment-dark.png#only-dark)
 
-| REF. | FIELDS | ACTIONS |
-|------|--------------|---------------|
-| 1️. | Prefix   | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2️. | Toggle Button for add new connection datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to create a new enrichment from scratch.|
-| 3️. | Name  | Give a name for the enrichment datastore. |
-| 4️. | Toggle Button for using an existing connection | Toggle ON to create a new enrichment from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 5️. | Connector | Select a datastore connector as “PostgreSQL” from the dropdown list. |
+| REF. | FIELDS  | ACTIONS                                                                                                           |
+|------|-----------------------|------------------------------------------------------------------------------------------------------------------|
+| 1 | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2 | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.               |
+| 3 | Enrichment Datastore | Select an enrichment datastore from the dropdown list.                                                           |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** is off and **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1:** Add connection details for your selected **enrichment datastore** connector.
+**Step 1**: Click on the caret button and select Add Enrichment Datastore.
+
+![carret-button](../assets/datastores/oracle/add-enrichments-light.png#only-light)
+![carret-button](../assets/datastores/oracle/add-enrichments-dark.png#only-dark)
+
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
+
+![modal-window](../assets/datastores/oracle/add-enrichment-details-light.png#only-light)
+![modal-window](../assets/datastores/oracle/add-enrichment-details-dark.png#only-dark)
+
+| REF.              | FIELDS       | ACTIONS                                    |
+|-------------------|--------------|--------------------------------------------|
+| 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Name   | Give a name for the enrichment datastore.|
+| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 4.                |Connector | Select a datastore connector from the dropdown list.|
+
+**Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
 ![select-enrichment](../assets/datastores/oracle/select-enrichment-light.png#only-light)
 ![select-enrichment](../assets/datastores/oracle/select-enrichment-dark.png#only-dark)
@@ -120,12 +152,12 @@ If the toggles for **Use an existing enrichment datastore** is off and **Use an 
 !!! note
     Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
-**Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore* has been successfully verified.
+**Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore* has been successfully verified.
 
 ![test-datastore](../assets/datastores/oracle/test-datastore-light.png#only-light)
 ![test-datastore](../assets/datastores/oracle/test-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process.
+**Step 4:** Click on the **Finish** button to complete the configuration process.
 
 ![finish-datastore](../assets/datastores/oracle/finish-datastore-light.png#only-light)
 ![finish-datastore](../assets/datastores/oracle/finish-datastore-dark.png#only-dark)
@@ -135,16 +167,21 @@ When the configuration process is finished, a modal will display a **success  me
 ![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
 ![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
-**Step 4:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 5:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![new-datastore](../assets/datastores/oracle/new-datastore-light.png#only-light)
 ![new-datastore](../assets/datastores/oracle/new-datastore-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
-**Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+
+![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-light.png#only-light)
+![use-enrichment-datastore](../assets/datastores/oracle/use-enrichment-dark.png#only-dark)
+
+**Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 !!! note
     Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using  Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
@@ -155,10 +192,9 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 | REF. | FIELDS | ACTIONS  |
 |------|--------------|------|
 | 1️. | Prefix  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2️.  | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore.|
-| 3️.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list.  |
+| 2.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list.  |
 
-**Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
+**Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
 
 -   **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. For example, Marked as **Public** means that this datastore is accessible to all the users.
 -   **Host:** This is the server address where the **Oracle** instance is hosted. It is the endpoint used to connect to the Oracle environment.
@@ -168,7 +204,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![select-enrichment-datastore](../assets/datastores/oracle/select-enrichment-datastore-light.png#only-light)
 ![select-enrichmentdatastore](../assets/datastores/oracle/select-enrichment-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
+**Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
 ![click-finish-datastore](../assets/datastores/oracle/click-finish-datastore-light.png#only-light)
 ![click-finish-datastore](../assets/datastores/oracle/click-finish-datastore-dark.png#only-dark)
