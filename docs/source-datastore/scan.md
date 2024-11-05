@@ -399,6 +399,13 @@ The summary section provides an overview of the **scan** operation upon successf
 | 14      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
 | 15      | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The number of anomalies detected. </li></ul>|
 
+#### Full View of Metrics in Operation Summary
+
+Users can now hover over abbreviated metrics to see the full value for better clarity. For demonstration purposes, we are hovering over the **Records Scanned** field to display the full value.
+
+![records-scan-operation](../assets/datastores/scan/records-scan-operation-light.png#only-light)
+![records-scan-operation](../assets/datastores/scan/records-scan-operation-dark.png#only-dark)
+
 #### Post Operation Details
 
 **Step 1:** Click on any of the successful **Scan Operations** from the list and hit the **Results** button.
