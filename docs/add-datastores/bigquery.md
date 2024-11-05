@@ -190,7 +190,7 @@ Once you have successfully tested and verified your source datastore connection,
 ![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-light.png#only-light)
 ![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-dark.png#only-dark)
 
-**Step 2:** A modal window- **Add Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+**Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-light.png#only-light)
 ![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-dark.png#only-dark)
@@ -198,19 +198,56 @@ Once you have successfully tested and verified your source datastore connection,
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
 |   1. | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata for your selected datastore. |
-|   2. | Toggle Button for existing enrichment datastore | Toggle ON to link the source datastore to an existing enrichment datastore, or toggle OFF to link it to a brand new enrichment datastore. |
-|   3. | Name (Required) | Give a name for the enrichment datastore. |
-|   4. | Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch, or toggle OFF to reuse credentials from an existing connection. |
-|   5. | Connector (Required) | Select a datastore connector as **BigQuery** from the dropdown list. |
+| 2.                | Caret Down Button   | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.|
+| 3.                | Enrichment Datastore         | Select an enrichment datastore from the dropdown list. |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Use an existing enrichment datastore** is off and **Use an existing connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggles for **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1:** Add connection details for your selected **enrichment datastore** connector.
+**Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/bigquery/enrichment-datastore-explain-dark.png#only-dark)
+![select-enrichment-connector](../assets/datastores/bigquery/add-new-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/bigquery/add-new-dark.png#only-dark)
+
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
+
+![select-enrichment-connector](../assets/datastores/bigquery/new-connection-detail-light.png#only-light)
+![select-enrichment-connector](../assets/datastores/bigquery/new-connection-detail-dark.png#only-dark)
+
+| REF.              | FIELDS       | ACTIONS                                    |
+|-------------------|--------------|--------------------------------------------|
+| 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Name   | Give a name for the enrichment datastore.|
+| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 4.                |Connector | Select a datastore connector from the dropdown list.|
+
+**Step 2:** Add connection details for your selected **enrichment datastore** connector.
+
+![enrichment-datastore-explain](../assets/datastores/bigquery/new-detailss-light.png#only-light)
+![enrichment-datastore-explain](../assets/datastores/bigquery/new-detailss-dark.png#only-dark)
+
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+
+!!! note
+    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+
+| REF | FIELDS               | ACTIONS                                                                 |
+|-----|----------------------|-------------------------------------------------------------------------|
+| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+
+![hash-details](../assets/datastores/bigquery/hash-details-light.png#only-light)
+![hash-details](../assets/datastores/bigquery/hash-details-dark.png#only-dark)
+
+**Step 3:** The configuration form, requesting credential details after selected **enrichment datastore** connector.
+
+![connection-details](../assets/datastores/bigquery/connection-detailss-light.png#only-light)
+![connection-details](../assets/datastores/bigquery/connection-detailss-dark.png#only-dark)
 
 | REF. | FIELD | ACTIONS |
 |------|-------|---------|
@@ -220,12 +257,12 @@ If the toggles for **Use an existing enrichment datastore** is off and **Use an 
 |   4. | Dataset ID (Required) | Enter the Dataset ID (schema name) associated with BigQuery.|
 |   5. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
 
-**Step 2:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
+**Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
 ![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-light.png#only-light)
 ![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process. 
+**Step 5:** Click on the **Finish** button to complete the configuration process. 
 
 ![finish-configuration](../assets/datastores/bigquery/finish-configuration-light.png#only-light)
 ![finish-configuration](../assets/datastores/bigquery/finish-configuration-dark.png#only-dark)
@@ -235,16 +272,21 @@ When the configuration process is finished, a modal will display a **success mes
 ![success-message](../assets/datastores/bigquery/success-message-light.png#only-light)
 ![success-message](../assets/datastores/bigquery/success-message-dark.png#only-dark)
 
-**Step 4:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+**Step 6:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png#only-light)
 ![data-operation-page](../assets/datastores/bigquery/data-operations-page-dark.png#only-dark)
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the datastore using existing connection details.
+If the "Use an existing enrichment datastore" option is selected from the dropdown menu, you will be prompted to configure the datastore using existing connection details. 
 
-**Step 1:** Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+
+![use-enrichment](../assets/datastores/bigquery/use-enrichment-light.png#only-light)
+![use-enrichment](../assets/datastores/bigquery/use-enrichment-light.png#only-dark)
+
+**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 ![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-light.png#only-light)
 ![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-dark.png#only-dark)
@@ -252,10 +294,9 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 | REF. | FIELDS  | ACTIONS  |
 |------|---------|----------|
 |  1.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-|  2.  | Toggle Button for existing enrichment datastore  | Toggle ON to link the source datastore to an existing enrichment datastore. |
-|  3.  | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
+|  2.  | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
 
-**Step 2:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
+**Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
 - **Teams:** The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users. 
 
@@ -268,7 +309,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 ![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-light.png#only-light)
 ![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-dark.png#only-dark)
 
-**Step 3:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
+**Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
 ![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
 ![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)

@@ -18,7 +18,7 @@ The following Volumetric Checks are automatically inferred for data assets with 
 
 #### Scan Assertion and Anomaly Creation
 
-Volumetric Checks are asserted during a **Scan Operation** just like all other check types and enrichment of volumetric check anomalies is fully supported. This enables full support for custom scheduling of volumetric checks and remediation workflows of volumetric anomalies.
+Volumetric Checks are asserted during a [Scan Operation](../source-datastore/scan.md) just like all other check types and enrichment of volumetric check anomalies is fully supported. This enables full support for custom scheduling of volumetric checks and remediation workflows of volumetric anomalies.
 
 ### Adaptive Thresholds and Human Adjustments
 
