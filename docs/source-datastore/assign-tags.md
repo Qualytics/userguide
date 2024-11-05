@@ -19,9 +19,21 @@ In this documentation, we will explore the steps to assign a tag to the datastor
 ![select-tag](../assets/assign-tags/select-tag-light-3.png#only-light)
 ![select-tag](../assets/assign-tags/select-tag-dark-3.png#only-dark)
 
+ You can also create the new tag by clicking on the call to action (➕) button.
+
+![call-to-action](../assets/assign-tags/action-light-4.png#only-light)
+![call-to-action](../assets/assign-tags/action-dark-4.png#only-dark)
+
+ A modal window will appear, providing the options to create the tag. Enter the required values to get started.
+
+![modal-window](../assets/assign-tags/modal-window-light-5.png#only-light)
+![modal-window](../assets/assign-tags/modal-window-dark-5.png#only-dark)
+
+ For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md#add-tag).
+
 **Step 4**: Once you have assigned a tag, the tag will be instantly labeled on your source Datastore, and all related records will be updated.
 
 For demonstration, we have assigned the **High** tag for the Snowflake source datastore. **Covid-19 Data**, so it will automatically be applied to all related tables and checks within the datastore. 
 
-![tag-snowflake](../assets/assign-tags/tag-snowflake-light-4.png#only-light)
-![tag-snowflake](../assets/assign-tags/tag-snowflake-dark-4.png#only-dark)
+![tag-snowflake](../assets/assign-tags/tag-snowflake-light-6.png#only-light)
+![tag-snowflake](../assets/assign-tags/tag-snowflake-dark-6.png#only-dark)
