@@ -32,7 +32,7 @@ Filtering Controls allow you to refine the data displayed on the **Insights** pa
 
 ## Quality Score
 
-**Quality Score** gives a clear view of your data's overall quality. It shows important measures like [**Completeness**](https://userguide.qualytics.io/glossary/#accuracy:~:text=perform%20a%20comparison-,Completeness,-Required%20fields%20are), [**Conformity**](https://userguide.qualytics.io/glossary/#accuracy:~:text=are%20fully%20populated.-,Conformity,-Alignment%20of%20the), [**Consistency**](https://userguide.qualytics.io/glossary/#completeness:~:text=other%20JDBC%20source-,Consistency,-The%20value%20is), [**Precision**](https://userguide.qualytics.io/glossary/#precision:~:text=data%20between%20systems.-,Precision,-Your%20data%20is), [**Timeliness**](https://userguide.qualytics.io/glossary/#timeliness:~:text=internally%20vetted%20datasets.-,Timeliness,-It%20can%20be), [**Volumetrics**](https://userguide.qualytics.io/glossary/#timeliness:~:text=when%20it%E2%80%99s%20expected.-,Volumetrics,-Data%20has%20the), and [**Accuracy**](https://userguide.qualytics.io/glossary/#:~:text=batch%20of%20data-,Accuracy,-The%20data%20represents), each represented by a percentage. This helps you quickly understand the health of your data, making it easier to identify areas that need improvement.  
+**Quality Score** gives a clear view of your data's overall quality. It shows important measures like [**Completeness**](../glossary.md#completeness), [**Conformity**](../glossary.md#conformity), [**Consistency**](../glossary.md#consistency), [**Precision**](../glossary.md#precision), [**Timeliness**](../glossary.md#timeliness), [**Volumetrics**](../glossary.md#volumetrics), and [**Accuracy**](../glossary.md#accuracy), each represented by a percentage. This helps you quickly understand the health of your data, making it easier to identify areas that need improvement.  
 
 ![quality-score](../assets/explore/insights/quality-4-light.png#only-light)
 ![quality-score](../assets/explore/insights/quality-4-dark.png#only-dark)
@@ -64,12 +64,12 @@ This section shows important information about the records and fields in the con
 ![Screenshot](../assets/explore/insights/checks-7-light.png#only-light)
 ![Screenshot](../assets/explore/insights/checks-7-dark.png#only-dark)
 
-**1. Passed Check:** Displays the real-time number of passed checks that were successfully completed during the **[scan](https://userguide.qualytics.io/source-datastore/scan/)** or [**profile operation**](https://userguide.qualytics.io/source-datastore/profile/), indicating that the data met the set quality criteria.
+**1. Passed Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating that the data met the set quality criteria.
 
 ![passed-check](../assets/explore/insights/passed-check-8-light.png#only-light)
 ![passed-check](../assets/explore/insights/passed-check-8-dark.png#only-dark)
 
-**2. Failed Checks:** This shows the real-time number of checks that did not pass during the **[scan](https://userguide.qualytics.io/source-datastore/scan/) or [profile operation](https://userguide.qualytics.io/source-datastore/profile/),** indicating data that did not meet the quality criteria.
+**2. Failed Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating data that did not meet the quality criteria.
 
 ![failed-check](../assets/explore/insights/failed-check-9-light.png#only-light)
 ![failed-check](../assets/explore/insights/failed-check-9-dark.png#only-dark)
@@ -121,7 +121,7 @@ By clicking the caret down 🔽 button, users can choose either the top 5 or top
 
 ## Profiles
 
-[**Profiles**](https://userguide.qualytics.io/source-datastore/profile/) section provides a clear view of data profiling activities over time, showing how often profiling is performed and the amount of data (records) analyzed.
+[**Profiles**](../source-datastore/profile.md) section provides a clear view of data profiling activities over time, showing how often profiling is performed and the amount of data (records) analyzed.
 
 ![profiles](../assets/explore/insights/profiles-17-light.png#only-light)
 ![profiles](../assets/explore/insights/profiles-17-dark.png#only-dark)
@@ -152,7 +152,7 @@ Field Profiled shows the number of fields processed during the profile runs. It 
 
 ## Scans
 
-[**Scans**](https://userguide.qualytics.io/source-datastore/scan/) section provides a clear overview of all scanning activities within a selected period. It helps users keep track of how many scans were performed and how many anomalies were detected during those scans. This section makes it easier to understand the scanning process and manage data by offering insight into how often scans occur. 
+[**Scans**](../source-datastore/scan.md) section provides a clear overview of all scanning activities within a selected period. It helps users keep track of how many scans were performed and how many anomalies were detected during those scans. This section makes it easier to understand the scanning process and manage data by offering insight into how often scans occur. 
 
 ![scans](../assets/explore/insights/scan-22-light.png#only-light)
 ![scans](../assets/explore/insights/scan-22-dark.png#only-dark)
