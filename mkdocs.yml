@@ -76,9 +76,6 @@ nav:
         - General: container/overview-of-infer-data-type.md
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
-      - Check Templates: checks/checks-template.md
-      - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
-      - Export Check Templates: checks/export-check-templates.md
       - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
@@ -130,6 +127,9 @@ nav:
         - Unique: checks/unique-check.md
         - User Defined Function: checks/user-defined-function-check.md
         - Volumetric Checks: checks/volumetric-check.md
+      - Check Templates: checks/checks-template.md
+      - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
+      - Export Check Templates: checks/export-check-templates.md
     - Observability: 
       - Overview: observability/observability.md     
     - Anomalies:
