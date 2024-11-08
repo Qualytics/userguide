@@ -5,6 +5,29 @@ hide:
 
 # Release Notes
 
+### 2024.11.08 { id=2024.11.08 }
+
+#### Feature Enhancements
+
+- Enhance Data Catalog Integration
+    - Introduced a new domain input field that allows users to select specific domains, enabling more granular control over assets synchronization.
+
+- Scan Results Enhancements
+    - Added partition label to the scan results modal for improved partition identification.
+    - Removed unnecessary metadata partitions created solely for volumetric checks, reducing clutter in scan results.
+
+- Display of Unprocessed Containers in the Operation List
+    - Unprocessed containers are now visible in the operation list within the operation summary.
+    - A total count label was added to indicate if the number of analyzed containers exceeds the total requested.
+    - The search icon now highlights in a different color if not all containers were analyzed, making it easier to identify incomplete operations.
+
+- Reorder the Datastore Column in the Activity Tab
+    - Users can now reorder columns in the Activity tab for easier navigation and data organization.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.11.01 { id=2024.11.01 }
 
 #### Feature Enhancements
