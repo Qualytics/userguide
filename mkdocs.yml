@@ -160,6 +160,7 @@ nav:
         - Overview: settings/integrations/overview.md
         - Atlan: settings/integrations/atlan.md
         - Alation: settings/integrations/alation.md
+        - External Tag Propagation: settings/integrations/external-tag-propagation.md
       - Security: settings/security/teams-and-permissions.md
       - Tokens: settings/tokens/overview-of-tokens.md
       - Health: settings/health/overview-of-health.md
