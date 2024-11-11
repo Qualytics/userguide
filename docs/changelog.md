@@ -5,7 +5,7 @@ hide:
 
 # Release Notes
 
-### 2024.11.08 { id=2024.11.08 }
+### 2024.11.12 { id=2024.11.12 }
 
 #### Feature Enhancements
 
