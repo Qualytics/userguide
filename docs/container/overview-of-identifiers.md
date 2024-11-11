@@ -1,53 +1,63 @@
-# Identifiers Overview
+# Identifiers 
 
-An `Identifier` is a field that can be used to help load the desired data from a Table in support of analysis. 
+An **Identifier** is a field that can be used to help load the desired data from a Table in support of analysis.There are two types of identifiers can be declared for a Table:
 
-There are two types of identifiers can be declared for a Table:
+* **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
-* `Incremental Field` - used to track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
-
-* `Partition Field` - used to divide the data in the table into distinct dataframes that can be analyzed in parallel. 
+* **Partition Field:** Divide the data in the table into distinct dataframes that can be analyzed in parallel.
 
 ## Managing an Identifier
 
-1. You can manage an identifier in the Tables view of a selected datastore, just opening the options of a specific `table`:
+**Step 1:** Log in to your Qualytics account and select the source datastore (**JDBC** or **DFS**) from the left menu that you want to manage.
  
-    ![Screenshot](../assets/identifiers/identifiers-light.png#only-light)
-    ![Screenshot](../assets/identifiers/identifiers-dark.png#only-dark)
+![datastore](../assets/identifiers/identifiers-overview/datastore-light.png#only-light)
+![datastore](../assets/identifiers/identifiers-overview/datastore-dark.png#only-dark)
 
-* Click on `Settings` button:
+**Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-    ![Screenshot](../assets/identifiers/identifier-menu-light.png#only-light)
-    ![Screenshot](../assets/identifiers/identifier-menu-dark.png#only-dark)
+![table](../assets/identifiers/identifiers-overview/table-menu-light.png#only-light)
+![table](../assets/identifiers/identifiers-overview/table-menu-dark.png#only-dark)
 
-* In the pop-up modal, specific configuration is displayed and can be edited:
+**Step 3:** You will view the full list of tables or files belonging to the selected source datastore.
   
-    ![Screenshot](../assets/identifiers/identifiers-screen-light.png#only-light){: style="width:550px;"}
-    ![Screenshot](../assets/identifiers/identifiers-screen-dark.png#only-dark){: style="width:550px;"}
+![list](../assets/identifiers/identifiers-overview/list-light.png#only-light)
+![list](../assets/identifiers/identifiers-overview/list-dark.png#only-dark)
 
+**Step 4:** Click on the vertical ellipse next to the table of your choice and select **Settings** from the dropdown list.
+
+![settings](../assets/identifiers/identifiers-overview/setting-light.png#only-light)
+![settings](../assets/identifiers/identifiers-overview/setting-dark.png#only-dark)
+
+A modal window will appear for **“Table Settings”**, where you can manage identifiers for the selected table.
+
+![window](../assets/identifiers/identifiers-overview/window-light.png#only-light)
+![window](../assets/identifiers/identifiers-overview/window-dark.png#only-dark)
 
 ## Incremental Strategy
 
-The `Incremental Strategy` configuration in Qualytics is crucial for tracking changes at the row level within tables.
+The **Incremental Strategy** configuration in Qualytics is crucial for tracking changes at the row level within tables.
 
 This approach is essential for efficient data processing, as it is specifically used to track which records have already been scanned. 
 
 This allows for scan operations to focus exclusively on new records that have not been previously scanned, thereby optimizing the scanning process and ensuring that only the most recent and relevant data is analyzed.
 
-| Strategy Option                    | Description |
-|------------------------------------|-------------|
-| `None`                             | - No incremental strategy, it will run full. |
-| `Last modified`                    | - Available types are `Date` or `Timestamp` was last modified.<br>- Uses a "last modified column" to track changes in the data set.<br>- This column typically contains a timestamp or date value indicating when a record was last modified.<br>- The system compares the "last modified column" to a previous timestamp or date, updating only the records modified since that time. |
-| `Batch value`                      | - Available types are `Integral` or `Fractional`.<br>- Uses a "batch value column" to track changes in the data set.<br>- This column typically contains an incremental value that increases as new data is added.<br>- The system compares the current "batch value" with the previous one, updating only records with a higher "batch value".<br>- Useful when data comes from a system without a modification timestamp. |
-| `Postgres Commit Timestamp Tracking` | - Utilizes commit timestamps for change tracking. |
+![incremental](../assets/identifiers/identifiers-overview/incremental-light.png#only-light)
+![incremental](../assets/identifiers/identifiers-overview/incremental-dark.png#only-dark)
+
+| No |                    Strategy Option |                 Description |
+| :---- | :---- | :---- |
+| 1 | **None** | No incremental strategy, it will run full. |
+| 2 | **Last Modified** | - Available types are **Date** or **Timestamp** was last modified.<br>- Uses a "last modified column" to track changes in the data set.<br>- This column typically contains a timestamp or date value indicating when a record was last modified.<br>- The system compares the "last modified column" to a previous timestamp or date, updating only the records modified since that time. |
+| 3 | **Batch Value** | - Available types are **Integral** or **Fractional**.<br>- Uses a "batch value column" to track changes in the data set.<br>- This column typically contains an incremental value that increases as new data is added.<br>- The system compares the current "batch value" with the previous one, updating only records with a higher "batch value".<br>- Useful when data comes from a system without a modification timestamp. |
+| 4 | **Postgres Commit Timestamp Tracking** | - Utilizes commit timestamps for change tracking. |
 
 Availability based on technologies: 
 
 | Option                                  |  Availability |                                     
 |-----------------------------------------|---------------|
-| `Last Modified`                         | All           |
-| `Batch Value`                           | All           |
-| `Postgres Commit Timestamp Tracking`    | PostgreSQL    |
+| **Last Modified**                         | All           |
+| **Batch Value**                           | All           |
+| **Postgres Commit Timestamp Tracking**    | PostgreSQL    |
 
 
 !!! info
@@ -55,13 +65,13 @@ Availability based on technologies:
     - The 3 options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
 
 
-#### Incremental Strategy with DFS (Distributed File System)
+### Incremental Strategy with DFS (Distributed File System)
 
-For DFS in Qualytics, the incremental strategy leverages the `last modified` timestamps from the file metadata. 
+For DFS in Qualytics, the incremental strategy leverages the **last modified** timestamps from the file metadata. 
 
 This automated process means that DFS users do not need to manually configure their incremental strategy, as the system efficiently identifies and processes the most recent changes in the data.
 
-### Example
+## Example
 
 **Objective**: *Identify and process new or modified records in the ORDERS table since the last scan using an Incremental Strategy.*
 
@@ -75,7 +85,7 @@ This automated process means that DFS users do not need to manually configure th
 | 4          | {"date": "2023-09-25", "amount": 175.00, "credit_card": "5555-5555-5555-4444"}   | 2023-09-26 09:00:00
 | 5          | {"date": "2023-09-25", "amount": 300.00, "credit_card": "2222-2222-2222-2222"}   | 2023-09-26 09:30:00
 
-**Incremental Strategy Explanation**
+### Incremental Strategy Explanation
 
 In this example, an Incremental Strategy would focus on processing records that have a LAST_MODIFIED timestamp after a certain cutoff point. For instance, if the last scan was performed on 2023-09-25 at 11:00:00, then only records with O_ORDERKEY 4 and 5 would be considered for the current scan, as they have been modified after the last scan time.
 
@@ -101,11 +111,9 @@ In this example, an Incremental Strategy would focus on processing records that 
     where
         last_modified > '2023-09-25 11:00:00'
     ```
-
-
 ## Partition Field
 
-The `Partition Field` is a fundamental feature for organizing and managing large datasets. It is specifically designed to divide the data within a table into separate, distinct dataframes. 
+The **Partition Field** is a fundamental feature for organizing and managing large datasets. It is specifically designed to divide the data within a table into separate, distinct dataframes. 
 
 This segmentation is a key strategy for handling and analyzing data more effectively. By creating these individual dataframes, Qualytics allows for parallel processing, which significantly accelerates the analysis. 
 
@@ -113,7 +121,10 @@ Each partition can be analyzed independently, enabling simultaneous examination 
 
 This not only increases the efficiency of data processing but also ensures a more streamlined and scalable approach to handling large volumes of data, making it an indispensable tool in data analysis and management.
 
-The ideal Partition Identifier is an Incremental Identifier of type `datetime` such as a last-modified field, however alternatives are automatically identified and set during a Catalog operation.
+The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however alternatives are automatically identified and set during a Catalog operation.
+
+![partition](../assets/identifiers/identifiers-overview/partition-light.png#only-light)
+![partition](../assets/identifiers/identifiers-overview/partition-dark.png#only-dark)
 
 !!! info
     * **Partition Field Selection**: When selecting a partition field for a table during catalog operation, we will attempt to select a field with no nulls where possible. 
@@ -137,7 +148,7 @@ The ideal Partition Identifier is an Incremental Identifier of type `datetime` s
 | 5          | 202       | 'F'           | 144659.20    | 2023-09-03   |
   
 
-**Partition Field Explanation**
+### Partition Field Explanation
 
 In this example, the O_ORDERDATE field is used to partition the ORDERS table. Each partition represents a distinct date, allowing for the parallel processing of orders based on their order date. This strategy enhances the efficiency of data analysis by distributing the workload across different partitions.
 
