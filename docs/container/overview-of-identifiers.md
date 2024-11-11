@@ -164,6 +164,7 @@ In this example, the O_ORDERDATE field is used to partition the ORDERS table. Ea
     F --> G[Combine Results/End]
     ```
 
+
 === "SQL"
     ```sql
     -- An illustrative SQL query to partition the ORDERS table by the O_ORDERDATE field for parallel processing.
