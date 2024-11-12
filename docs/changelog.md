@@ -16,13 +16,17 @@ hide:
     - Added partition label to the scan results modal for improved partition identification.
     - Removed unnecessary metadata partitions created solely for volumetric checks, reducing clutter in scan results.
 
-- Display of Unprocessed Containers in the Operation List
-    - Unprocessed containers are now visible in the operation list within the operation summary.
-    - A total count label was added to indicate if the number of analyzed containers exceeds the total requested.
-    - The search icon now highlights in a different color if not all containers were analyzed, making it easier to identify incomplete operations.
-
-- Reorder the Datastore Column in the Activity Tab
-    - Users can now reorder columns in the Activity tab for easier navigation and data organization.
+- Activity Tab
+    - Display of Unprocessed Containers in the Operation List
+        - Unprocessed containers are now visible in the operation list within the operation summary.
+        - A total count label was added to indicate if the number of analyzed containers exceeds the total requested.
+        - The search icon now highlights in a different color if not all containers were analyzed, making it easier to identify incomplete operations.
+    - Reorder the Datastore Column in the Activity Tab
+        - Users can now reorder columns in the Activity tab for easier navigation and data organization.
+    - Profile Operations
+        - Users can now view added, updated, and total inferred checks within Profile operations.
+    - Triggered by Column
+        - Updated the term "Triggered by API" to "Triggered by System" for clarity.
 
 #### General Fixes
 
