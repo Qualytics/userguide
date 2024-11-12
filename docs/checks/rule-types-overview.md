@@ -51,3 +51,4 @@ Here’s an overview of the rule types and their purposes:
 | [Time Distribution Size](../checks/time-distribution-size-check.md)                   | Asserts that the count of records for each interval of a timestamp is between two numbers.          |
 | [Unique](../checks/unique-check.md)                                                   | Asserts that the field's value is unique.                                                           |
 | [User Defined Function](../checks/user-defined-function-check.md)                     | Asserts that the given user-defined function (as `Scala` script) evaluates to true over the field's value.|
+| [Volumetric Check](../checks/volumetric-check.md)                                     | Asserts that the volume of the data asset has not changed by more than an inclusive percentage amount for the prescribed moving daily average.|
