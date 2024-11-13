@@ -30,7 +30,7 @@ A modal window- **Link Enrichment Datastore** will appear, providing you with tw
 
 ## Option I: Link New Enrichment
 
-If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle **Add new connection** is turned on, then this will prompt you to link a new enrichment datastore from scratch without using existing connection details.
 
 !!! note
     Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking BigQuery as a new enrichment datastore.
@@ -76,7 +76,7 @@ If the credentials and provided details are verified, a success message will be 
 
 ## Option II: Link Existing Connection
 
-If the  **Use an existing enrichment datastore** option is selected from the dropdown menu, you will be prompted to configure the datastore using existing connection details.
+If the **Use an existing enrichment datastore** option is selected from the dropdown menu, you will be prompted to link the enrichment datastore using existing connection details.
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
