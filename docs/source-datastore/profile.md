@@ -481,6 +481,16 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 ![records-profiled-operation](../assets/profile-operations/profile-scan-operation-light.png#only-light)
 ![records-profiled-operation](../assets/profile-operations/profile-scan-operation-dark.png#only-dark)
 
+In the **Summary** section, users can view both profiled and non-profiled File Patterns or Tables by clicking on the search icon next to **File Patterns Profiled** or **Table Profiled**.
+
+![search](../assets/profile-operations/search-light.png#only-light)
+![search](../assets/profile-operations/search-dark.png#only-dark)
+
+A modal window will appear, displaying a list of the profiled and non-profiled File Patterns or Tables.
+
+![profiled](../assets/profile-operations/profiled-light.png#only-light)
+![profiled](../assets/profile-operations/profiled-dark.png#only-dark)
+
 ## Post Operation Details
 
 **Step 1**: Click on any of the successful **Scan Operations** from the list and hit the Results button.
