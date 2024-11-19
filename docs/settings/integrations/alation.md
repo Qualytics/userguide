@@ -62,16 +62,18 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 
 |REF.|FIELDS |ACTIONS|
 | ---| ----- | ----- |
-| 1️. |Name (Required)| Provide a name for the integration. |
-| 2. | URL (Required) | Enter the full address of the Alation instance, for example,  https://instance.alationcloud.com. |
-| 3. | Refresh Token (Required) | Enter the refresh token required to access the Alation API. |
-| 4. | User ID (Required) | Provide the user ID associated with the generated token. |
-| 5. | Event Driven | If enabled, operations, archiving anomalies, and checks will activate the integration sync. |
-| 6. | Overwrite Tags | If enabled, Alation tags will override Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
+| 1. |Name (Required)| Provide a name for the integration. |
+| 2. | Type (Required) | Choose the type of integration from the dropdown menu. Currently, 'Atlan' is selected |
+| 3. | URL (Required) | Enter the full address of the Alation instance, for example,  https://instance.alationcloud.com. |
+| 4. | Refresh Token (Required) | Enter the refresh token required to access the Alation API. |
+| 5. | User ID (Required) | Provide the user ID associated with the generated token. |
+| 6. | Domains | Select specific domains to filter assets for synchronization. <br>- Acts as a filtering mechanism to sync specific assets <br>- Uses domain information from the data catalog (e.g. Sales ). Only assets under the selected domains will synchronize.|
+| 7. | Event Driven | If enabled, operations, archiving anomalies, and checks will activate the integration sync. |
+| 8. | Overwrite Tags | If enabled, Alation tags will override Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
 
 **Step 5:** Click on the **Save** button to integrate Alation with Qualytics. 
 
-![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-light-13.png#only-light)
+![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-light-12.png#only-light)
 ![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-dark-12.png#only-dark)
 
 **Step 6:** Here you can view the **new integration** appearing in Qualytics.
