@@ -95,11 +95,12 @@ Integrating Atlan with Qualytics enhances your data management capabilities, all
 | 2. | Type (Required) | Choose the type of integration from the dropdown menu. Currently, 'Atlan' is selected |
 | 3. | URL (Required) | The complete address for the Atlan instance, for example: [https://your-company.atlan.com](https://your-company.atlan.com). |
 | 4. | Token (Required) | Provide the authentication token needed to connect to Atlan. |
-| 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. |
-| 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
+| 5. | Domains | Select specific domains to filter assets for synchronization. <br>- Acts as a filtering mechanism to sync specific assets <br>- Uses domain information from the data catalog (e.g. Sales ). Only assets under the selected domains will synchronize.|
+| 6. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. |
+| 7. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
 
 ![add-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integrations-light.png#only-light)
-![Sadd-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integration-dark.png#only-dark)
+![Sadd-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integrations-dark.png#only-dark)
 
 **Step 5:**  Click on the **Save** button to set up the Atlan integration. 
 
