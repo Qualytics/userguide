@@ -10,10 +10,10 @@ hide:
 #### Feature Enhancements
 
 - Improved Operations Container Dialogs
-  - Added container status details based on profile and scan results, providing better visibility of container-level operations.
-  - Introduced a loading tracker component for containers, enhancing feedback during operation processing.
-  - Made the entire modal reactive to operation updates, enabling real-time tracking of operation progress within the modal.
-  - Removed "containers requested" and "containers analyzed" dialogs for a cleaner interface.
+    - Added container status details based on profile and scan results, providing better visibility of container-level operations.
+    - Introduced a loading tracker component for containers, enhancing feedback during operation processing.
+    - Made the entire modal reactive to operation updates, enabling real-time tracking of operation progress within the modal.
+    - Removed "containers requested" and "containers analyzed" dialogs for a cleaner interface.
 
 #### General Fixes
 
