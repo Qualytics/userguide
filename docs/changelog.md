@@ -5,6 +5,22 @@ hide:
 
 # Release Notes
 
+### 2024.11.21 { id=2024.11.2210 }
+
+#### Feature Enhancements
+
+- Improved Operations Container Dialogs
+    - Added container status details based on profile and scan results, providing better visibility of container-level operations.
+    - Introduced a loading tracker component for containers, enhancing feedback during operation processing.
+    - Made the entire modal reactive to operation updates, enabling real-time tracking of operation progress within the modal.
+    - Removed "containers requested" and "containers analyzed" dialogs for a cleaner interface.
+
+#### General Fixes
+
+- Resolved an issue where the table name was not rendering correctly in notifications when using the `{{customer_name}}` variable.
+
+- General Fixes and Improvements.
+
 ### 2024.11.12 { id=2024.11.12 }
 
 #### Feature Enhancements
