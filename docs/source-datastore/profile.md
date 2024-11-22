@@ -481,24 +481,19 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 ![records-profiled-operation](../assets/profile-operations/profile-scan-operation-light.png#only-light)
 ![records-profiled-operation](../assets/profile-operations/profile-scan-operation-dark.png#only-dark)
 
-In the **Summary** section, users can view both profiled and non-profiled File Patterns or Tables by clicking on the search icon next to **File Patterns Profiled** or **Table Profiled**.
-
-![search](../assets/profile-operations/search-light.png#only-light)
-![search](../assets/profile-operations/search-dark.png#only-dark)
-
-A modal window will appear, displaying a list of the profiled and non-profiled File Patterns or Tables.
-
-![profiled](../assets/profile-operations/profiled-light.png#only-light)
-![profiled](../assets/profile-operations/profiled-dark.png#only-dark)
-
 ## Post Operation Details
 
-**Step 1**: Click on any of the successful **Scan Operations** from the list and hit the Results button.
+**Step 1**: Click on any of the successful **Profile Operations** from the list and hit the Results button.
 
 ![profile-result](../assets/profile-operations/profile-result-light.png#only-light)
 ![profile-result](../assets/profile-operations/profile-result-dark.png#only-dark)
   
-**Step 2**: The **Profile Results** modal demonstrates the list of all the containers profiled. This opens the following two analysis options for you:
+Step 2: The **Profile Results** modal displays a list of both profiled and non-profiled containers. You can filter the view to show only non-profiled containers by toggling on button, which will display the complete list of unprofiled containers.
+
+![profiled](../assets/profile-operations/profiled-light.png#only-light)
+![profiled](../assets/profile-operations/profiled-dark.png#only-dark)
+
+ The **Profile Results** modal also provides two analysis options for you:
 
 -   Details for a Specific Container (Container's Profile)
 -   Details for a Specific Field of a Container (Field Profile)
