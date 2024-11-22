@@ -78,15 +78,17 @@ For demonstration purposes, we have selected the profile operation.
 ![record](../assets/explore/activity/record-light.png#only-light)
 ![record](../assets/explore/activity/record-dark.png#only-dark)
 
-In the **Summary** section, users can view both profiled and non-profiled File Patterns or Tables by clicking on the search icon next to **File Patterns Profiled** or **Table Profiled**.
+Users also view both profiled and non-profiled File Patterns:
+
+**Step 4:** Click on Result Button.
+
+![profiled](../assets/explore/activity/result-light.png#only-light)
+![profiled](../assets/explore/activity/result-dark.png#only-dark)
+
+The **Profile Results** modal displays a list of both profiled and non-profiled containers. You can filter the view to show only non-profiled containers by toggling on button, which will display the complete list of unprofiled containers.
 
 ![profiled](../assets/explore/activity/profiled-light.png#only-light)
 ![profiled](../assets/explore/activity/profiled-dark.png#only-dark)
-
-A modal window will appear, displaying a list of the profiled and non-profiled File Patterns or Tables.
-
-![lists](../assets/explore/activity/lists-light.png#only-light)
-![lists](../assets/explore/activity/lists-dark.png#only-dark)
 
 ### Schedule
 
