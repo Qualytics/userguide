@@ -429,17 +429,6 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 | 7.   | Type | The type of anomaly (e.g., Record or Shape) |
 | 8.   | Date time | The date and time when the anomaly was found. |
 
-#### Computed & Table in Scan Results
-
-In Qualytics scan results, you’ll often see two types: "Table" and "Computed." These icons help you quickly identify where an anomaly is coming from and what it might mean for your data. Here's a breakdown of each:
-
-![computed&table](../assets/datastores/scan/computed-light.png#only-light)
-![computed&table](../assets/datastores/scan/computed-dark.png#only-dark)
-
-**1 Computed**: Computed indicates anomalies found in data that is not directly from your database tables. Instead, it represents data that Qualytics has calculated or generated virtually within its system.
-
-**2 Table**: Table indicates anomaly was found in your actual database table. It means there may be an issue with the data stored directly in your database. You might need to check and possibly fix this data to resolve the issue.
-
 ## API Payload Examples
 
 This section provides payload examples for running, scheduling, and checking the status of scan operations. Replace the placeholder values with data specific to your setup.
