@@ -40,9 +40,9 @@ Runs provide a complete record of all executed operations across various source 
 | 1. | Select Source Datastore | Select specific source datastores to focus on their operations. |
 | 2. | Search | This feature helps users quickly find specific identifiers. |
 | 3. | Sort By | **Sort By** option helps users organize list of performed operations by criteria like Duration and Created Date for quick access. |
-| 4. | Filter | The filter lets users easily refine list of performed operations by choosing specific Type[Scan](../source-datastore/scan.md), [Catalog](../source-datastore/catalog.md), [Profile](../source-datastore/profile.md), and [External Scan](../source-datastore/external-scan.md)  or Success(Success, Failure, Running, and aborted) to view. |
+| 4. | Filter | The filter lets users easily refine list of performed operations by choosing specific Type [Scan](../source-datastore/scan.md), [Catalog](../source-datastore/catalog.md), [Profile](../source-datastore/profile.md), and [External Scan](../source-datastore/external-scan.md)  or Status(Success, Failure, Running, and aborted) to view. |
 | 5. | Activity Heatmap | **Activity Heatmap** shows daily activity levels, with color intensity indicating operation counts. Hovering over a square reveals details for that day. |
-| 6. | Operation List | Shows a list of performed operations[**catalog**](../source-datastore/catalog.md), [**profile**](../source-datastore/profile.md), [**scan**](../source-datastore/scan.md), and [**external scan**](../source-datastore/external-scan.md) performed across various source datastores. |
+| 6. | Operation List | Shows a list of performed operations [**catalog**](../source-datastore/catalog.md), [**profile**](../source-datastore/profile.md), [**scan**](../source-datastore/scan.md), and [**external scan**](../source-datastore/external-scan.md) performed across various source datastores. |
 
 ### Activity Heatmap
 
