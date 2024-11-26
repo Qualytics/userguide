@@ -1,32 +1,48 @@
 # Is Replica Of
 
-### Definition
+**Is Replica Of** rule ensures that data copied from one place to another is exactly the same in both content and structure. This rule checks that everything from the original is accurately reflected in the copy, making sure no data is missing, altered, or incorrectly formatted.
 
-*Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).*
+### Why It Matters
 
-#### In-Depth Overview
+Data is often replicated for important reasons, such as:
 
-The `IsReplicaOf` rule ensures that data integrity is maintained when data is replicated from one source to another. This involves checking not only the data values themselves but also ensuring that the structure and relationships are preserved.
+1. **Availability**: Keeping data accessible even if the main system goes down.  
+2. **Backup**: Creating a backup copy to prevent data loss.  
+3. **Analysis**: Sending data to systems that analyze or report on it.
 
-In a distributed data ecosystem, replication often occurs to maintain high availability, create backups, or feed data into analytical systems. However, discrepancies might arise due to various reasons such as network glitches, software bugs, or human errors. The `IsReplicaOf` rule serves as a safeguard against these issues by:
+However, things can go wrong during this process, such as:
 
-1. **Preserving Data Structure**: Ensuring that the structure of the replicated data matches the original.
-2. **Checking Data Values**: Ensuring that every piece of data in the source exists in the replica.
+* Network issues  
+* Software bugs  
+* Human errors
+
+The Is Replica Of rule helps prevent or spot problems like these, making sure the copied data is still accurate and complete.
+
+### How It Works
+
+This rule ensures:
+
+1. **Data Structure Matches**: The way the data is organized (like tables, rows, or columns) in the copy is the same as in the original.  
+2. **Data Values Match**: Every value in the original data is present and correct in the copy.  
 
 ### Field Scope
 
-**Multi:** The rule evaluates multiple specified fields.
+* **Scope:**
 
-**Accepted Types**
+This rule evaluates multiple fields to ensure all required data is correctly replicated.
 
-| Type        |                          |
-|-------------|--------------------------|
-| `Date`      | <div style="text-align:center">:octicons-check-16:</div>      |
-| `Timestamp` | <div style="text-align:center">:octicons-check-16:</div>      |
-| `Integral`  | <div style="text-align:center">:octicons-check-16:</div>      |
-| `Fractional`| <div style="text-align:center">:octicons-check-16:</div>      |
-| `String`    | <div style="text-align:center">:octicons-check-16:</div>      |
-| `Boolean`   | <div style="text-align:center">:octicons-check-16:</div>      |
+* **Supported Types:**  
+
+The rule supports the following field types:
+
+| No. | Field Type |  Supported |
+| :---- | :---- | :---- |
+| 1. | Date | Yes |
+| 2. | Timestamp | Yes |
+| 3. | Integral | Yes |
+| 4. | Fractional | Yes |
+| 5. | String | Yes |
+| 6. | Boolean | Yes |
 
 ### General Properties
 
@@ -36,44 +52,16 @@ start='<!-- filter-only--start -->'
 end='<!-- filter-only--end -->'
 %}
 
+### Configuration Properties
 
-### Specific Properties
+To set up the IsReplicaOf rule, the following properties must be defined:
 
-Specify the datastore and table/file where the replica of the targeted fields is located for comparison.
-
-| Name       | Description                                                   |
-|------------|---------------------------------------------------------------|
-| <div class="text-primary">Row Identifiers</div>  | The list of fields defining the compound key to identify rows in the comparison analysis. |
-| <div class="text-primary">Datastore</div>  | The source datastore where the replica of the targeted field(s) is located. |
-| <div class="text-primary">Table/file</div> | The table, view or file in the source datastore that should serve as the replica. |
-| <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
-
-!!! note "Details"
-    <div style="margin-top: -12px;">
-    ### Row Identifiers
-    </div>
-
-    This optional input allows row comparison analysis by defining a list of fields as row identifiers, it enables a more detailed comparison between tables/files, where each row compound key is used to identify its presence or abscence in the reference table/file compared to the target table/file.  Qualytics can inform if the row exists or not and distinguish which field values differ in each row present in the reference table/file, helping to determine if it is a replica.
-
-    !!! info
-        Anomalies produced by a `IsReplicaOf` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
-        See more at: *[Comparison Source Records](https://userguide.qualytics.io/anomalies/anomalies/#anomaly-status)*
-
-    {%
-        include-markdown "components/comparators/index.md"
-    %}
-    {%
-        include-markdown "components/comparators/numeric.md"
-    %}
-    {%
-        include-markdown "components/comparators/duration.md"
-    %}
-    {%
-        include-markdown "components/comparators/string.md"
-    %}
-
-
-
+| No. | Property | Description |
+| :---- | :---- | :---- |
+| 1 | Row Identifiers | A compound key comprising fields that uniquely identify rows for detailed comparison. |
+| 2 | Datastore | Specifies the datastore containing the replica for comparison. |
+| 3 | Table/File | Refers to the table, view, or file in the datastore that serves as the replica. |
+| 4 | Comparators | Methods for comparing field values (e.g., numeric or string-based comparisons). |
 
 ### Anomaly Types
 
@@ -85,25 +73,38 @@ Specify the datastore and table/file where the replica of the targeted fields is
 
 ### Example
 
-**Scenario**: *Consider that the fields N_NATIONKEY and N_NATIONNAME in the NATION table are being replicated to a backup database for disaster recovery purposes. The data engineering team wants to ensure that both fields in the replica in the backup accurately reflect the original.*
+**Scenario:** Your company keeps a table of country information, such as country keys (IDs) and names, in a main database. For disaster recovery, this data is regularly copied to a backup system. The goal is to ensure that the backup data exactly matches the original data.
 
-**Objective**: *Ensure that N_NATIONKEY and N_NATIONNAME from the NATION table are replicas in the NATION_BACKUP table.*
+**Objective:** Verify that the N_NATIONKEY and N_NATIONNAME fields in the main table (NATION) match exactly with those in the backup table (NATION_BACKUP).
 
-**Sample Data from NATION**
+**Original Data from NATION Table:**
 
-| N_NATIONKEY | N_NATIONNAME       |
-|-------------|--------------------|
-| 1           | Australia          |
-| 2           | United States      |
-| 3           | Uruguay            |
+| Country ID (N_NATIONKEY) | Country Name (N_NATIONNAME) |
+| ----- | ----- |
+| 1 | Australia |
+| 2 | United States |
+| 3 | Uruguay |
 
-**Replica Sample Data from NATION_BACKUP**
+**Replica Data from NATION_BACKUP Table:**
 
-| N_NATIONKEY | N_NATIONNAME       |
-|-------------|--------------------|
-| 1           | Australia          |
-| 2           | USA                |
-| 3           | Uruguay            |
+| Country ID (N_NATIONKEY) | Country Name (N_NATIONNAME) |
+| ----- | :---- |
+|  1 | Australia |
+| 2 | USA |
+| 3 | Uruguay |
+
+In this example, the country name for ID 2 is different in the backup (USA instead of United States), which may indicate an issue with the replication process.
+
+### What Happens:
+
+1. **The Check:** The system compares both the original and backup data for any differences.
+
+2. **The Result:** If the data doesn't match (like the name difference), it flags it as an anomaly, indicating something might have gone wrong during replication.
+
+**How It Works:**
+
+* **Data Comparison:** The system will check both the country IDs and names.  
+* **Flagging Issues:** If the names or IDs don’t match between the original and the backup, an alert is raised.
 
 === "Payload example"
     ``` json
@@ -124,9 +125,9 @@ Specify the datastore and table/file where the replica of the targeted fields is
     }
     ```
 
-**Anomaly Explanation**
+### Anomaly Explanation
 
-The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the original and the replica are not completely identical, indicating a possible discrepancy in the replication process or an unintended change.
+The datasets representing the fields N_NATIONKEY and N_NATIONNAME in the original and the replica are not completely identical, indicating a possible discrepancy in the replication process or an unintended change.
 
 === "Flowchart"
     ```mermaid
@@ -159,3 +160,72 @@ The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the ori
 
 !!! example "Shape Anomaly"
     There is 1 record that differ between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
