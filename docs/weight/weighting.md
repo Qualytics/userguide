@@ -106,13 +106,13 @@ Let's break down an example calculation for a check of type **Authored**, using 
 - **Step 2: Anomaly Weight** – An **Authored Check** without anomalies adds **9 points**.
 - **Step 3: Tag Weight** – **Tag B** adds **2 points**.
 
-### Total Weight = 2 (rule type) + 9 (no anomalies) + 2 (Tag B) = **13 points**
+**Total Weight** = 2 (rule type) + 9 (no anomalies) + 2 (Tag B) = **13 points**
 
 ## Additional Notes
 
 If the table itself has a **Tag A** with a weight of **10**, the check will inherit that tag. In this case, the total weight will include both tag weights.
 
-**Total Weight = 2 (rule type) + 9 (no anomalies) + 2 (Tag B) + 10 (Tag A) = **23 points****
+**Total Weight** = 2 (rule type) + 9 (no anomalies) + 2 (Tag B) + 10 (Tag A) = **23 points**
 
 ## Quick Calculation Formula
 
@@ -145,3 +145,5 @@ Let's extend the example with the inclusion of both **Tag A** and **Tag B**:
   
 - **For Inferred Checks without Anomalies**:  
   `[Rule Type Weight] + 0 + 10 (Tag A) + 2 (Tag B)`
+
+  
