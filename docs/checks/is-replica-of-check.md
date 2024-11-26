@@ -63,6 +63,30 @@ To set up the IsReplicaOf rule, the following properties must be defined:
 | 3 | Table/File | Refers to the table, view, or file in the datastore that serves as the replica. |
 | 4 | Comparators | Methods for comparing field values (e.g., numeric or string-based comparisons). |
 
+!!! note "Details"
+    <div style="margin-top: -12px;">
+    ### Row Identifiers
+    </div>
+
+    This optional input allows row comparison analysis by defining a list of fields as row identifiers, it enables a more detailed comparison between tables/files, where each row compound key is used to identify its presence or abscence in the reference table/file compared to the target table/file.  Qualytics can inform if the row exists or not and distinguish which field values differ in each row present in the reference table/file, helping to determine if it is a replica.
+
+    !!! info
+        Anomalies produced by a `IsReplicaOf` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
+        See more at: *[Comparison Source Records](../anomalies/anomalies.md#comparison-source-records)*
+
+    {%
+        include-markdown "components/comparators/index.md"
+    %}
+    {%
+        include-markdown "components/comparators/numeric.md"
+    %}
+    {%
+        include-markdown "components/comparators/duration.md"
+    %}
+    {%
+        include-markdown "components/comparators/string.md"
+    %}
+
 ### Anomaly Types
 
 {%
