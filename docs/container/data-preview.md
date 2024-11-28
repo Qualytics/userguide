@@ -1,77 +1,79 @@
 # Data Preview
 
-The `Data Preview` section in the platform provides users with a streamlined preview of specific container data, offering direct insights into its structure and contents. This feature streamlines workflow processes and empowers users to make confident, data-driven decisions.
+Data Preview in Qualytics makes it easy for users to view and understand their container data. It provides a clear snapshot of the data's structure and contents, showing up to 100 rows from the source. With options to filter specific data, refresh for the latest updates, and download records, it helps users focus on the most relevant information, troubleshoot issues, and analyze data effectively. The simple grid view ensures a smooth and efficient way to explore and work with your data.
 
-`Data preview` is dedicated to displaying a concise yet comprehensive preview of container data, facilitating various tasks such as debugging quality checks and data analysis. It enhances the user experience by offering a grid view that showcases a maximum of 100 rows from the container's source records.
+Let’s get started 🚀
 
-To access the Data Preview section and explore container data within the platform, follow these steps:
+## Navigation
 
-1. **Navigate to Your Datastore**
+**Step 1:** Log in to your Qualytics account and select the source datastore (JDBC or DFS) from the left menu that contains the data you want to preview.
 
-    Begin by navigating to your datastore within the platform.
+![select](../assets/container/data-preview/select-light.png#only-light)
+![select](../assets/container/data-preview/select-dark.png#only-dark)
 
-* **Select a Specific Container**
+**Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-    From your datastore, select the specific container whose data you want to preview.
+!!! note 
+    Before accessing the Data Preview tab, ensure the container is profiled. If not, run a profile operation on the container. Profiling collects important information about the table structure, like column types and field names. Without profiling, no data will be shown in the Data Preview section. 
 
-* **Ensure Profiling**
+![table](../assets/container/data-preview/table-light.png#only-light)
+![table](../assets/container/data-preview/table-dark.png#only-dark)
 
-    Before accessing the Data Preview tab, ensure that the container has been profiled. If not, run a profile operation on the container. This operation gathers essential information about the table structure, such as column types and field names. Without profiling, the Data Preview section will display no data.
+**Step 3:** You will view the full list of tables or files belonging to the selected source datastore. Select the specific table or file whose data you want to preview.
 
-* **Access Data Preview Tab**
+![list](../assets/container/data-preview/list-light.png#only-light)
+![list](../assets/container/data-preview/list-dark.png#only-dark)
 
-    Once the container is profiled, navigate to the Data Preview tab within the specific container.
+Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datasource. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
 
-    ![Screenshot](../assets/container/data-preview/data-preview-tab-light.png#only-light){: style="width:640px"}
-    ![Screenshot](../assets/container/data-preview/data-preview-tab-dark.png#only-dark){: style="width:640px"}
+![alter](../assets/container/data-preview/alter-light.png#only-light)
+![alter](../assets/container/data-preview/alter-dark.png#only-dark)
 
-## Explore Data Preview Features
-In the Data Preview tab, users can access various features to interact with the data:
+**Step 4:** After selecting the specific table or file, click on the Data Preview tab.
 
-### Data Display
+![preview](../assets/container/data-preview/preview-light.png#only-light)
+![preview](../assets/container/data-preview/preview-dark.png#only-dark)
 
-The primary function of the Data Preview tab is to present users with a preview of container data. This preview includes up to 100 rows from the container's source, providing users with a quick glimpse into the dataset's contents.
+You will see a tabular view of the data, displaying the field names (columns) and their corresponding data values, allowing you to review the data's structure, types, and sample records.
 
-![Screenshot](../assets/container/data-preview/data-display-2-light.png#only-light)
-![Screenshot](../assets/container/data-preview/data-display-2-dark.png#only-dark)
+![tabular](../assets/container/data-preview/tabular-light.png#only-light)
+![tablular](../assets/container/data-preview/tabular-dark.png#only-dark)
 
-### UI Caching
+## UI Caching
 
-Upon initial access, data in the Data Preview section may not be cached, resulting in varying load times depending on the underlying data store technology (e.g., DFS or JDBC) and whether the warehouse is serverless. Subsequent access will display cached data, improving performance and reducing load times.
+Upon initial access, data in the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
 
-#### Last Refreshed Information
+## Filter Clause and Refresh
 
-The Data Preview section displays information about when the data was last refreshed, providing users with transparency regarding the freshness of the displayed data.
+**Data Preview** tab includes a filter functionality that enables users to focus on a specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data. 
 
-![Screenshot](../assets/container/data-preview/last-refreshed-light.png#only-light)
-![Screenshot](../assets/container/data-preview/last-refreshed-dark.png#only-dark)
+### Filter Clause
 
-### Filter Input and Refresh
+Use the Filter Clause to narrow down the displayed rows by applying specific filter clauses, allowing for focused and precise data analysis.
 
-To enable users to focus on specific subsets of data, the Data Preview tab incorporates filter functionality. Users can apply filter clauses to the displayed data, refining the rows based on specific criteria. This feature enhances data analysis capabilities and allows for more targeted insights.
+![filter](../assets/container/data-preview/filter-light.png#only-light)
+![filter](../assets/container/data-preview/filter-dark.png#only-dark)
 
-Utilize the filter input to refine the displayed rows based on specific criteria and `Refresh` the data to ensure you are viewing the latest information.
+### Refresh
 
-![Screenshot](../assets/container/data-preview/filter-refresh-2-light.png#only-light)
-![Screenshot](../assets/container/data-preview/filter-refresh-2-dark.png#only-dark)
+Click **Refresh** button to update the data view with the latest information, ensuring accuracy and relevance.
 
-#### Profile Operation Changes
+![refresh](../assets/container/data-preview/refresh-light.png#only-light)
+![refresh](../assets/container/data-preview/refresh-dark.png#only-dark)
 
-After performing a profile operation that adds additional columns to the data table, users must perform a new refresh to view these changes reflected in the Data Preview section. This ensures that users have access to the most up-to-date and comprehensive dataset for analysis.
+## Select Specific Fields
 
-### Select Specific Fields
+Select specific fields to display, allowing you to focus on the most relevant data for analysis.To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
 
-Choose specific fields to display, focusing on relevant data for analysis.
+![field](../assets/container/data-preview/field-light.png#only-light)
+![field](../assets/container/data-preview/field-dark.png#only-dark)
 
-![Screenshot](../assets/container/data-preview/fields-to-show-light.png#only-light){: style="width:540px"}
-![Screenshot](../assets/container/data-preview/fields-to-show-dark.png#only-dark){: style="width:540px"}
+## Download Records
 
-### Download Records
+**Download Records** feature in Qualytics allows users to easily export all source records from the selected enrichment dataset. This functionality is essential for performing deeper analysis outside the platform or for sharing data with external tools and teams.
 
-Download the data for further analysis or external use.
-
-![Screenshot](../assets/container/data-preview/download-source-records-light.png#only-light){: style="width:440px"}
-![Screenshot](../assets/container/data-preview/download-source-records-dark.png#only-dark){: style="width:440px"}
+![download](../assets/container/data-preview/download-light.png#only-light)
+![download](../assets/container/data-preview/download-dark.png#only-dark)
 
 ## Use Cases
 
@@ -82,7 +84,6 @@ One of the primary use cases of the Data Preview tab is for debugging checks. Us
 ### Data Analysis
 
 The Data Preview tab also serves as a valuable tool for data analysis tasks. Users can explore the dataset, apply filters to focus on specific subsets of data, and gain insights into patterns, trends, and correlations within the container data.
-
 
 ## Examples
 
