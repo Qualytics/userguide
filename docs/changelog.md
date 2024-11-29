@@ -5,6 +5,18 @@ hide:
 
 # Release Notes
 
+### 2024.11.29 { id=2024.11.29 }
+
+#### Feature Enhancements
+
+- Activity List
+    - Removed the `Warning` status for a cleaner and more concise status display.
+    - Added an alert icon to indicate if an operation completed with warnings, improving visibility into operation outcomes.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.11.21 { id=2024.11.2210 }
 
 #### Feature Enhancements
