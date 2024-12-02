@@ -24,9 +24,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | Step | Description |
 |------|-------------|
-| 1️. | **Name** <br> Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
-| 2️. | **Toggle Button** <br> Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 3️. | **Connector** <br> Select “Oracle” from the dropdown list. |
+| 1. | **Name** <br> Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
+| 2. | **Toggle Button** <br> Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
+| 3. | **Connector** <br> Select “Oracle” from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -61,14 +61,15 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 
 | REF. | FIELDS  | ACTIONS    |
 |------|---------------|---------|
-| 1️. | Host | Get “Hostname” from your Oracle account and add it to this field. |
-| 2️. | Port | Specify the “Port” number.|
-| 3️. | User | Enter the “User ID” to connect. |
-| 4️. | Password | Enter the “password” to connect to the database. |
-| 5️. | Database | Specify the database name.|
-| 6️. | Schema | Define the schema within the database that should be used.|
-| 7️. | Teams | Select one or more teams from the dropdown to associate with this source data     store. |
-| 8️. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1. | Host | Get “Hostname” from your Oracle account and add it to this field. |
+| 2. | Port | Specify the “Port” number.|
+| 3. | Protocol | Specifies the connection protocol used for communicating with the database. Choose between TCP or TCPS.|
+| 4. | Connect By |You can choose between **SID** or **Service Name** to establish a connection with the Oracle database, depending on how your database instance is configured.|
+| 5. | User | Enter the “User ID” to connect. |
+| 6. | Password | Enter the “password” to connect to the database. |
+| 7. | Schema | Define the schema within the database that should be used.|
+| 8. | Teams | Select one or more teams from the dropdown to associate with this source data store. |
+| 9. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -119,9 +120,9 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS  | ACTIONS                                                                                                           |
 |------|-----------------------|------------------------------------------------------------------------------------------------------------------|
-| 1 | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2 | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.               |
-| 3 | Enrichment Datastore | Select an enrichment datastore from the dropdown list.                                                           |
+| 1. | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2. | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.               |
+| 3. | Enrichment Datastore | Select an enrichment datastore from the dropdown list.                                                           |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -191,7 +192,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS | ACTIONS  |
 |------|--------------|------|
-| 1️. | Prefix  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1. | Prefix  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list.  |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
