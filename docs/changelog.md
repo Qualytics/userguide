@@ -15,6 +15,7 @@ hide:
 
 #### General Fixes
 
+- Better handling of Oracle Date and Numeric columns during Catalog operations for improved partition field selection
 - General Fixes and Improvements.
 
 ### 2024.11.21 { id=2024.11.2210 }
