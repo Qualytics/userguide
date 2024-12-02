@@ -24,9 +24,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS        | ACTIONS |
 |------|---------------|----------------------------|
-| 1️.  | Name (Required)         | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
-| 2️.  | Toggle Button | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 3️.  | Connector (Required)    | Select **PostgreSQL** from the dropdown list. |
+| 1. | Name (Required)         | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 2. | Toggle Button | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
+| 3. | Connector (Required)    | Select **PostgreSQL** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -61,14 +61,14 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 
 | REF. | FIELDS            | ACTIONS |
 |------|-------------------|---------|
-| 1️.  | Host (Required) | Get **Hostname** from your PostgreSQL account and add it to this field. |
-| 2️.  | Port (Required) | Specify the **Port** number. |
-| 3️.  | User (Required)| Enter the **User** to connect. |
-| 4️.  | Password (Required) | Enter the **password** to connect to the database. |
-| 5️.  | Database (Required) | Specify the database name. |
-| 6️.  | Schema (Required)| Define the schema within the database that should be used. |
-| 7️.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8️.  | Initiate Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
+| 1.  | Host (Required) | Get **Hostname** from your PostgreSQL account and add it to this field. |
+| 2.  | Port (Required) | Specify the **Port** number. |
+| 3.  | User (Required)| Enter the **User** to connect. |
+| 4.  | Password (Required) | Enter the **password** to connect to the database. |
+| 5.  | Database (Required) | Specify the database name. |
+| 6.  | Schema (Required)| Define the schema within the database that should be used. |
+| 7.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
+| 8.  | Initiate Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -170,13 +170,13 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 | REF. | FIELDS   | ACTIONS |
 |------|----------|---------|
-| 1️.   | Host (Required)| Get **Hostname** from your PostgreSQL account and add it to this field. |
-| 2️.   | Port (Required)| Specify the **Port** number. |
-| 3️.   | User (Required) | Enter the **User** to connect. |
-| 4️.   | Password (Required)| Enter the password associated with the Snowflake user account. |
-| 5️.   | Database (Required)| Specify the database name to be accessed. |
-| 6️.   | Schema (Required)| Define the schema within the database that should be used.                                        |
-| 7️.   | Teams (Required)| Select one or more teams from the dropdown to associate with this datastore. |
+| 1.   | Host (Required)| Get **Hostname** from your PostgreSQL account and add it to this field. |
+| 2.   | Port (Required)| Specify the **Port** number. |
+| 3.   | User (Required) | Enter the **User** to connect. |
+| 4.   | Password (Required)| Enter the password associated with the Snowflake user account. |
+| 5.   | Database (Required)| Specify the database name to be accessed. |
+| 6.   | Schema (Required)| Define the schema within the database that should be used.                                        |
+| 7.   | Teams (Required)| Select one or more teams from the dropdown to associate with this datastore. |
 
 **Step 4**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -214,7 +214,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS          | ACTIONS     |
 |------|-----------------|-------------|
-| 1️.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.  |
+| 1.   | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore.  |
 | 2.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
 **Step 3**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:

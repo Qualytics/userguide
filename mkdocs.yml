@@ -75,12 +75,15 @@ nav:
         - Identifiers: container/overview-of-identifiers.md
         - Grouping: container/overview-of-grouping.md
         - General: container/overview-of-infer-data-type.md
+    - Weight:
+      - Weight Mechanism: weight/weighting.md 
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
       - Rule Types:
+        - Rule Types Overview: checks/rule-types-overview.md
         - After Date: checks/after-date-check.md
         - Aggregation Comparison: checks/aggregation-comparison-check.md
         - Any Not Null: checks/any-not-null-check.md
