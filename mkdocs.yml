@@ -81,6 +81,7 @@ nav:
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
       - Rule Types:
+        - Rule Types Overview: checks/rule-types-overview.md
         - After Date: checks/after-date-check.md
         - Aggregation Comparison: checks/aggregation-comparison-check.md
         - Any Not Null: checks/any-not-null-check.md
