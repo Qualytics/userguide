@@ -5,6 +5,61 @@ hide:
 
 # Release Notes
 
+### 2024.11.29 { id=2024.11.29 }
+
+#### Feature Enhancements
+
+- Activity List
+    - Removed the `Warning` status for a cleaner and more concise status display.
+    - Added an alert icon to indicate if an operation completed with warnings, improving visibility into operation outcomes.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
+### 2024.11.21 { id=2024.11.2210 }
+
+#### Feature Enhancements
+
+- Improved Operations Container Dialogs
+    - Added container status details based on profile and scan results, providing better visibility of container-level operations.
+    - Introduced a loading tracker component for containers, enhancing feedback during operation processing.
+    - Made the entire modal reactive to operation updates, enabling real-time tracking of operation progress within the modal.
+    - Removed "containers requested" and "containers analyzed" dialogs for a cleaner interface.
+
+#### General Fixes
+
+- Resolved an issue where the table name was not rendering correctly in notifications when using the `{{customer_name}}` variable.
+
+- General Fixes and Improvements.
+
+### 2024.11.12 { id=2024.11.12 }
+
+#### Feature Enhancements
+
+- Enhance Data Catalog Integration
+    - Introduced a new domain input field that allows users to select specific domains, enabling more granular control over assets synchronization.
+
+- Scan Results Enhancements
+    - Added partition label to the scan results modal for improved partition identification.
+    - Removed unnecessary metadata partitions created solely for volumetric checks, reducing clutter in scan results.
+
+- Activity Tab
+    - Display of Unprocessed Containers in the Operation List
+        - Unprocessed containers are now visible in the operation list within the operation summary.
+        - A total count label was added to indicate if the number of analyzed containers exceeds the total requested.
+        - The search icon now highlights in a different color if not all containers were analyzed, making it easier to identify incomplete operations.
+    - Reorder the Datastore Column in the Activity Tab
+        - Users can now reorder columns in the Activity tab for easier navigation and data organization.
+    - Profile Operations
+        - Users can now view added, updated, and total inferred checks within Profile operations.
+    - Triggered by Column
+        - Updated the term "Triggered by API" to "Triggered by System" for clarity.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.11.01 { id=2024.11.01 }
 
 #### Feature Enhancements

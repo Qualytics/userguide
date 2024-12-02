@@ -187,3 +187,22 @@ The **Delete Datastore** action permanently removes a datastore and all associat
 
 ![confirm-delete](../assets/datastore-settings/confirm-delete-light-23.png#only-light)
 ![confirm-delete](../assets/datastore-settings/confirm-delete-dark-23.png#only-dark)
+
+## Mark Datastore as Favorite
+
+Marking a datastore as a favorite allows you to quickly access important data sources. This feature helps you prioritize and manage the datastores you frequently use, making data management more efficient.
+
+**Step 1**: Click on the bookmark icon to mark the Datastores as a favorite.
+
+![mark-favorite](../assets/datastore-settings/mark-favorite-light-24.png#only-light)
+![mark-favorite](../assets/datastore-settings/mark-favorite-dark-24.png#only-dark)
+
+After Clicking on the bookmark icon your datastore is successfully marked as a favorite and a success flash message will appear stating “The datastore has been favorited”.
+
+![msg](../assets/datastore-settings/msg-light-25.png#only-light)
+![msg](../assets/datastore-settings/msg-dark-25.png#only-dark)
+
+**Step 2**: To unmark a datastore, simply click on the bookmark icon of the marked datastore. This will remove it from your favorites
+
+![unmark-favorite](../assets/datastore-settings/unmark-fav-light-26.png#only-light)
+![unmark-favorite](../assets/datastore-settings/unmark-fav-dark-26.png#only-dark)

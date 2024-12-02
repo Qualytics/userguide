@@ -1,86 +1,201 @@
-This tab is your command center for staying on top of data quality and anomalies across your datastores.
+# Insights
 
-![Screenshot](../assets/explore/insights/insights-1-light.png#only-light)
-![Screenshot](../assets/explore/insights/insights-1-dark.png#only-dark)
-![Screenshot](../assets/explore/insights/insights-2-light.png#only-light)
-![Screenshot](../assets/explore/insights/insights-2-dark.png#only-dark)
+**Insights** in Qualytics provides a quick and clear overview of your data's health and performance. It shows key details like Quality Scores, active checks, profiles, scans, and anomalies in a simple and effective way. This makes it easy to monitor and track data quality, respond to issues, and take action quickly. Additionally, users can monitor specific source datastores and check for a particular report date and time frame.
 
-## Key Sections
+Let’s get started 🚀
 
-### Filtering Controls
+## Navigation
 
-* **Datastores:** Select specific datastores of interest.
+**Step 1:** Log in to your Qualytics account and click the **Explore** button on the left side panel of the interface.
 
-![Screenshot](../assets/explore/insights/insights-datastore-light.png#only-light){: style="height:100px"}
-![Screenshot](../assets/explore/insights/insights-datastore-dark.png#only-dark){: style="height:100px"}
+![explore-button](../assets/explore/insights/explore-1-light.png#only-light)
+![explore-button](../assets/explore/insights/explore-1-dark.png#only-dark)
 
-* **Tags:** Focus on data tagged with specific labels.
+You will be navigated to the **Insights** tab to view a presentation of your data, pulled from the connected source datastore.
 
-![Screenshot](../assets/explore/insights/insights-tags-light.png#only-light){: style="height:100px"}
-![Screenshot](../assets/explore/insights/insights-tags-dark.png#only-dark){: style="height:100px"}
+![insight-page](../assets/explore/insights/insights-2-light.png#only-light)
+![insight-page](../assets/explore/insights/insights-2-dark.png#only-dark)
 
-* **Date Range:** Customize the time period for analysis (Week, Month, Quarter, Year).
+## Filtering Controls
 
-![Screenshot](../assets/explore/insights/insights-date-light.png#only-light)
-![Screenshot](../assets/explore/insights/insights-date-dark.png#only-dark)
+Filtering Controls allow you to refine the data displayed on the **Insights** page. You can customize the data view based on **Source Datastores**, **Tags**, **Report Date**, and **Timeframe**, ensuring you focus on the specific information that matters to you.
 
-### Insights Summary
+![filters](../assets/explore/insights/filter-3-light.png#only-light)
+![filters](../assets/explore/insights/filter-3-dark.png#only-dark)
 
+| No | Filter | Description |
+| :---- | :---- | :---- |
+| 1. | Select Source Datastores | Select specific source datastores to focus on their data. |
+| 2. | Tags | Filter data by specific tags to categorize and refine results. |
+| 3. | Report Date  | Set the report date to view data from a particular day. |
+| 4. | Timeframe | Choose a timeframe to view data for a specific  (week, month, quarter, and year) |
 
-* **Monitoring Overview**
-    * Data Under Management 
-    * Overall Quality Score
-    * Total of Datastores
-    * Total of Containers
+## Quality Score
 
-    ![Screenshot](../assets/explore/insights/insights-overview-light.png#only-light){: style="height:300px"}
-    ![Screenshot](../assets/explore/insights/insights-overview-dark.png#only-dark){: style="height:300px"}
+**Quality Score** gives a clear view of your data's overall quality. It shows important measures like [**Completeness**](../glossary.md#completeness), [**Conformity**](../glossary.md#conformity), [**Consistency**](../glossary.md#consistency), [**Precision**](../glossary.md#precision), [**Timeliness**](../glossary.md#timeliness), [**Volumetrics**](../glossary.md#volumetrics), and [**Accuracy**](../glossary.md#accuracy), each represented by a percentage. This helps you quickly understand the health of your data, making it easier to identify areas that need improvement.  
 
-* **Profile and Scan Data**
-    * Records Profiled
-    * Fields Profiled
-    * Records Scanned
+![quality-score](../assets/explore/insights/quality-4-light.png#only-light)
+![quality-score](../assets/explore/insights/quality-4-dark.png#only-dark)
 
-    ![Screenshot](../assets/explore/insights/insights-profile-light.png#only-light){: style="height:300px"}
-    ![Screenshot](../assets/explore/insights/insights-profile-dark.png#only-dark){: style="height:300px"}
+## Overview
 
-* **Checks**
-    * Total of Active Checks
-    * Authored Checks
-    * Inferred Checks 
-    * Passed
-    * Failed
+**Overview** provides a quick view of your data. It shows the total amount of data being managed, along with the number of **Source Datastores** and **Containers**. This helps you easily track the size and growth of your data.
 
-    ![Screenshot](../assets/explore/insights/insights-checks-light.png#only-light){: style="height:300px"}
-    ![Screenshot](../assets/explore/insights/insights-checks-dark.png#only-dark){: style="height:300px"}
+![overview](../assets/explore/insights/overview-5-light.png#only-light)
+![overview](../assets/explore/insights/overview-5-dark.png#only-dark)
 
-* **Anomalies Status**
-    * Total of Anomalies Identified
-    * Active
-    * Acknowledged
-    * Resolved
-    * Invalid
+## Records and Fields Data
 
-    ![Screenshot](../assets/explore/insights/insights-anomalies-light.png#only-light){: style="height:300px"}
-    ![Screenshot](../assets/explore/insights/insights-anomalies-dark.png#only-dark){: style="height:300px"}
+This section shows important information about the records and fields in the connect source datastores:
 
-* **Rules**
-    * Count of Rules
-    * Distribution by Rule Type 
+* **Records Profiled**: This represents the total number of records that were included in the profiling process.
 
-    ![Screenshot](../assets/explore/insights/insights-rules-light.png#only-light)
-    ![Screenshot](../assets/explore/insights/insights-rules-dark.png#only-dark)
+* **Records Scanned**: This refers to the number of records that were checked during a scan operation. The scan performs data quality checks on collections like tables, views, and files.
 
-* **Weekly Bar Charts**
-    * **Profiles:** Visualize trends in Fields and Records profiled.
-    * **Scans:** Track Records Scanned vs. Anomalies Identified.
+* **Fields Profiled**: This shows how many field profiles were updated as a result of the profiling operation.
 
-    ![Screenshot](../assets/explore/insights/insights-chart-bar-light.png#only-light)
-    ![Screenshot](../assets/explore/insights/insights-chart-bar-dark.png#only-dark)
+![Screenshot](../assets/explore/insights/records-6-light.png#only-light)
+![Screenshot](../assets/explore/insights/records-6-dark.png#only-dark)
 
-**How to Use the Insights Tab:**
+## Checks 
 
-1. **Filter:** Narrow your focus to specific datastores, tags, or date ranges.
-2. **Review Insights Summary:** Get an at-a-glance view of key recent metrics.
-3. **Analyze Bar Charts:** Spot potential issues or areas for optimization.
-4. **Investigate Further:** Use the insights here to jump directly to other Explore tabs for detailed investigations.
+**Checks** offer a quick view of active checks, categorizing them based on their results.
+
+![Screenshot](../assets/explore/insights/checks-7-light.png#only-light)
+![Screenshot](../assets/explore/insights/checks-7-dark.png#only-dark)
+
+**1. Passed Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating that the data met the set quality criteria.
+
+![passed-check](../assets/explore/insights/passed-check-8-light.png#only-light)
+![passed-check](../assets/explore/insights/passed-check-8-dark.png#only-dark)
+
+**2. Failed Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating data that did not meet the quality criteria.
+
+![failed-check](../assets/explore/insights/failed-check-9-light.png#only-light)
+![failed-check](../assets/explore/insights/failed-check-9-dark.png#only-dark)
+
+**3. Not Asserted Checks:** This shows the real-time number of checks that haven't been processed or validated yet, meaning their status is still pending and they have not been confirmed as either passed or failed.
+
+![not-asserted](../assets/explore/insights/not-asserted-10-light.png#only-light)
+![not-asserted](../assets/explore/insights/not-asserted-10-dark.png#only-dark)
+
+The count for each category can be viewed by hovering over the relevant check, providing real-time ratios of checks. Users can also click on these checks to navigate directly to the corresponding checks’ dedicated page in the Explore section. 
+
+## Anomalies
+
+**Anomalies** section provides a clear overview of identified anomalies in the system. The anomalies are categorized for better clarity and management.
+
+![anomalies](../assets/explore/insights/anomalies-11-light.png#only-light)
+![anomalies](../assets/explore/insights/anomalies-11-dark.png#only-dark)
+
+Anomalies Identified shows the total issues found, divided into **active**, **acknowledged**, and **resolved**, helping users quickly manage and fix problems.
+
+**1. Active Anomalies:** Shows the number of unresolved anomalies that require immediate attention. These anomalies are still present and have not been acknowledged, archived, or resolved in the system.
+
+![active-anomalies](../assets/explore/insights/active-anomalies-12-light.png#only-light)
+![active-anomalies](../assets/explore/insights/active-anomalies-12-dark.png#only-dark)
+
+**2. Acknowledged Anomalies:**  These are anomalies that have been reviewed and recognized by users but are not yet resolved. Acknowledging anomalies helps keep track of issues that have been addressed, even if further actions are still needed. 
+
+![acknowledged-anomalies](../assets/explore/insights/acknowledged-anomalies-13-light.png#only-light)
+![acknowledged-anomalies](../assets/explore/insights/acknowledged-anomalies-13-dark.png#only-dark)
+
+**3. Resolved Anomalies:** Represent anomalies that were valid data quality issues and have been successfully addressed. These anomalies have been resolved, indicating the data now meets the required quality standards.
+
+![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-light.png#only-light)
+![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-dark.png#only-dark)
+
+The count for each category can be viewed by hovering over the relevant anomalies, providing real-time ratios of anomalies. Users can also click on these anomalies to navigate directly to the corresponding anomalies’ dedicated page in the Explore section. 
+
+## Rule Distribution Type
+
+Rule Type Distribution highlights the top rule types applied to the source datastore, each represented by a different color. The visualization allows users to quickly see which rules are most commonly applied.   
+
+![rule-type](../assets/explore/insights/rule-type-15-light.png#only-light)
+![rule-type](../assets/explore/insights/rule-type-15-dark.png#only-dark)
+
+By clicking the caret down 🔽 button, users can choose either the top 5 or top 10 rule types to view in the insights, based on their analysis needs.
+
+![top](../assets/explore/insights/top-16-light.png#only-light)
+![top](../assets/explore/insights/top-16-dark.png#only-dark)
+
+## Profiles
+
+[**Profiles**](../source-datastore/profile.md) section provides a clear view of data profiling activities over time, showing how often profiling is performed and the amount of data (records) analyzed.
+
+![profiles](../assets/explore/insights/profiles-17-light.png#only-light)
+![profiles](../assets/explore/insights/profiles-17-dark.png#only-dark)
+
+**Profile Runs** shows how many times data profiling has been done over a certain period. Each run processes a specific source datastore or table, helping users see how often profiling happens. The graph gives a clear view of the changes in profile runs over time, making it easier to track  profiling activity.
+
+![profile-run](../assets/explore/insights/profile-run-18-light.png#only-light)
+![profile-run](../assets/explore/insights/profile-run-18-dark.png#only-dark)
+
+Click on the caret down 🔽 button to choose between viewing **Records Profiled** or **Fields Profiled**, depending on your preference.
+
+![caret-button](../assets/explore/insights/caret-button-19-light.png#only-light)
+![caret-button](../assets/explore/insights/caret-button-19-dark.png#only-dark)
+
+###  Record Profile 
+
+Record Profiled shows the total number of records processed during the profile runs. It provides insight into the amount of data that has been analyzed during those runs. The bars in the graph show the comparison of the number of records profiled over the selected days.
+
+![record-profile](../assets/explore/insights/record-profile-20-light.png#only-light)
+![record-profile](../assets/explore/insights/record-profile-20-dark.png#only-dark)
+
+###  Field Profiled 
+
+Field Profiled shows the number of fields processed during the profile runs. It shows how many individual fields within datasets have been analyzed during those runs. The bars in the graph provide a comparison of the fields profiled over the selected days.
+
+![field-profile](../assets/explore/insights/field-profile-21-light.png#only-light)
+![field-profile](../assets/explore/insights/field-profile-21-dark.png#only-dark)
+
+## Scans
+
+[**Scans**](../source-datastore/scan.md) section provides a clear overview of all scanning activities within a selected period. It helps users keep track of how many scans were performed and how many anomalies were detected during those scans. This section makes it easier to understand the scanning process and manage data by offering insight into how often scans occur. 
+
+![scans](../assets/explore/insights/scan-22-light.png#only-light)
+![scans](../assets/explore/insights/scan-22-dark.png#only-dark)
+
+**Scan Runs** show how often data scans are performed over a certain period. These scans check the quality of data across tables, views, and files, helping users monitor their data regularly and identify any issues. The process can be customized to scan tables or limit the number of records checked, ensuring that data stays accurate and up to standard.
+
+![scans-runs](../assets/explore/insights/scans-run-23-light.png#only-light)
+![scans-runs](../assets/explore/insights/scans-run-23-dark.png#only-dark)
+
+Click on the caret down **🔽** button to choose between viewing **Anomalies Identified** or **Records Scanned**, depending on your preference.
+
+![caret-button](../assets/explore/insights/caret-button-24-light.png#only-light)
+![caret-button](../assets/explore/insights/caret-button-24-dark.png#only-dark)
+
+### Anomalies Identified
+
+Anomalies Identified shows the total number of anomalies detected during the scan runs. The bars in the graph allow users to compare the number of anomalies found across different days, helping them spot trends or irregularities in the data.
+
+![anomalies](../assets/explore/insights/anomalies-25-light.png#only-light)
+![anomalies](../assets/explore/insights/anomalies-25-dark.png#only-dark)
+
+### Records Scanned 
+
+Records Scanned shows the total number of records that were scanned during the scan runs. It gives users insight into how much data has been processed and allows them to compare the scanned records over the selected period.
+
+![record-scanned](../assets/explore/insights/record-scanned-26-light.png#only-light)
+![record-scanned](../assets/explore/insights/record-scanned-26-dark.png#only-dark)
+
+## Data Volume
+
+**Data Volume** allows users to track the size of data stored within all source datastores present in the Qualytics platform over time. This helps in monitoring how the source datastore grows or changes, making it easier to detect irregularities or unexpected increases that could affect system performance. Users can visualize data size trends and manage the source datastore's efficiency, optimizing storage, adjusting resources, and enhancing data processing based on its size and growth.  
+
+![data-volume](../assets/explore/insights/data-volume-27-light.png#only-light)
+![data-volume](../assets/explore/insights/data-volume-27-dark.png#only-dark)
+
+## Export
+
+**Export** button allows you to quickly download the data from the **Insights** page. You can export data according to the selected **Source Datastores**, **Tags**, **Report Date**, and **Timeframe**. This makes it easy to save the data for offline use or share it with others.
+
+![export](../assets/explore/insights/export-28-light.png#only-light)
+![export](../assets/explore/insights/export-28-dark.png#only-dark)
+
+After exporting, the data appears in a structured format, making it easy to save for offline use or to share with others.
+
+![download](../assets/explore/insights/download-29-light.png#only-light)
+![dowmnload](../assets/explore/insights/download-29-dark.png#only-dark)

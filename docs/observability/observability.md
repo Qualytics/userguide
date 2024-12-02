@@ -47,11 +47,11 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 3 | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year.) to view data trends. |
 | 4 | Sort By |  **Sort By** option helps users organize data by criteria like Volumetrics Count, Name, or Last Scanned for quick access. |
 | 5 |  Filter | The filter lets users easily refine results by choosing specific tags or tables to view. |
-| 6 | Table | Displays the table for which the volumetric check is being performed (e.g., customer, nation). Each table has its own Volumetric Check. |
-| 7 | Volumetric Check (# ID) | Each check is assigned a unique identifier, followed by the time period it applies to (e.g., 1 Day for the customer table). This ID helps in tracking the specific check in the system. |
-| 8 | Weight | Weight shows how important a check is for finding anomalies and sending alerts. |
-| 9 | Anomaly Detection | The Volumetric Check detects anomalies when row counts exceed set min or max thresholds, triggering an alert for sudden changes. |
-| 10 |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
+| 6 |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
+| 7 | Table | Displays the table for which the volumetric check is being performed (e.g., customer_view, nation). Each table has its own Volumetric Check. |
+| 8 | Check (# ID) | Each check is assigned a unique identifier, followed by the time period it applies to (e.g., 1 Day for the customer table). This ID helps in tracking the specific check in the system. |
+| 9 | Weight | Weight shows how important a check is for finding anomalies and sending alerts. |
+| 10 | Anomaly Detection | The Volumetric Check detects anomalies when row counts exceed set min or max thresholds, triggering an alert for sudden changes. |
 | 11 | Edit Checks | Edit the check to modify settings, or add tags for better customization and monitoring. |
 | 12 | Group By  | Users can also Group By specific intervals, such as day, week, or month, to observe trends over different periods. |
 | 13 |  Measurement Period  | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
@@ -60,6 +60,22 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 16 |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
 | 17 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
 | 18 | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
+
+### Observability Heatmap
+
+The heatmap provides a visual overview of data anomalies by day, using color codes for quick understanding:
+
+![heatmap-square](../assets/observability/heatmap-light.png#only-light)
+![heatmap-square](../assets/observability/heatmap-dark.png#only-dark)
+
+- **Blue square**: Blue square represent days with no anomalies, meaning data stayed within the expected range.
+- **Orange square**: Orange square indicate days where data exceeded the minimum or maximum threshold range but didn’t qualify as a critical anomaly.
+- **Red square**: Red square highlight days with anomalies, signaling significant deviations from expected values that need further investigation.
+
+![heatmap-square](../assets/observability/hover-light.png#only-light)
+![heatmap-square](../assets/observability/hover-dark.png#only-dark)
+
+By hovering over each square, you can view additional details for that specific day, including the **date**, **last row count**, and **anomaly count**, allowing you to easily pinpoint and analyze data issues over time.
 
 ### Edit Check
 
@@ -113,8 +129,8 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 
 After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"Check successfully updated"**.
 
-![observability](../assets/observability/success-msg-dark-14.png#only-light)
-![observability](../assets/observability/success-msg-light-14.png#only-dark)
+![observability](../assets/observability/success-msg-light-14.png#only-light)
+![observability](../assets/observability/success-msg-dark-14.png#only-dark)
 
 ### Edit Threshold
 
