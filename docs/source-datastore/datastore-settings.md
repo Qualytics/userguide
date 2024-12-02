@@ -54,40 +54,50 @@ You have the option to link an enrichment datastore to your existing source data
 ![enrichment](../assets/datastore-settings/enrichment-light-6.png#only-light)
 ![enrichment](../assets/datastore-settings/enrichment-dark-6.png#only-dark)
 
-**Step 2**: A modal window- **Link Enrichment Datastore** will appear, providing you with two options to link an **enrichment datastore**.
-
-| REF.              | FIELDS                  | ACTIONS                                    |
-|-------------------|-------------------------|--------------------------------------------|
-| 1.                | Prefix                  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2.                | Toggle Button for existing enrichment datastore  | Toggle **ON** to link the source datastore to an existing enrichment datastore, or toggle **OFF** to link it to a brand new enrichment datastore. |
-| 3.                | Name                    | Give a name for the enrichment datastore.|
-| 4.                | Toggle Button for using an existing connection  | Toggle **ON** to reuse credentials from an existing connection, or toggle **OFF** to create a new enrichment from scratch. |
-| 5.                | Connector               | Select a datastore connector as **Teradata** from the dropdown list. |
+A modal window-**Link Enrichment Datastore** will appear, providing you with two options to link an **enrichment datastore**.
 
 ![link-enrichment](../assets/datastore-settings/link-enrichment-light-7.png#only-light)
 ![link-enrichment](../assets/datastore-settings/link-enrichment-dark-7.png#only-dark)
 
+| REF.              | FIELDS                  | ACTIONS                                    |
+|-------------------|-------------------------|--------------------------------------------|
+| 1.                | Prefix                  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Caret Down Button  | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**. |
+| 3.                | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
+
 ### Option I: Link New Enrichment 
 
-If the toggle for **Use an existing connection** is turned off, then this will prompt you to link a new enrichment datastore from scratch without using existing connection details.
+If the toggle for **Add new connection** is turned on, then this will prompt you to link a new enrichment datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **Enrichment** datastore from the connector dropdown list and add connection details such as URI, access key, secret key, root path, and teams. 
+**Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
+
+![caret](../assets/datastore-settings/caret-light-8.png#only-light)
+![caret](../assets/datastore-settings/caret-dark-8.png#only-dark)
+
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
+
+![caret](../assets/datastore-settings/window-light.png#only-light)
+![caret](../assets/datastore-settings/window-dark.png#only-dark)
+
+| REF.              | FIELDS                  | ACTIONS                                    |
+|-------------------|-------------------------|--------------------------------------------|
+| 1.                | Prefix                  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Name  | Give a name for the enrichment datastore. |
+| 3.                | Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 4.                | Connector | Select a datastore connector from the dropdown list.|
+
+**Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
 !!! note
-    Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking Amazon S3 as a new enrichment datastore.
+    Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking BigQuery as a new enrichment datastore.
 
-![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-light-8.png#only-light)
-![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-dark-8.png#only-dark)
-
-**Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
-
-![connector-creds](../assets/datastore-settings/connector-creds-light-9.png#only-light)
-![connector-creds](../assets/datastore-settings/connector-creds-dark-9.png#only-dark)
+![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-light-9.png#only-light)
+![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-dark-9.png#only-dark)
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-connection](../assets/datastore-settings/test-connection-light-10.png#only-light)
-![test-connection](../assets/datastore-settings/test-connection-dark-10.png#only-dark)
+![connector-creds](../assets/datastore-settings/connector-creds-light-10.png#only-light)
+![connector-creds](../assets/datastore-settings/connector-creds-dark-10.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -103,22 +113,32 @@ If the credentials and provided details are verified, a success message will be 
 
 ### Option II: Link Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to link the enrichment datastore using existing connection details.
+If the **Use an existing enrichment datastore** option is selected from the dropdown menu, you will be prompted to link the enrichment datastore using existing connection details.
 
-**Step 1**: Select an existing enrichment datastore from the dropdown list. 
+**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![existing-connection](../assets/datastore-settings/existing-connection-light-13.png#only-light)
-![existing-connection](../assets/datastore-settings/existing-connection-dark-13.png#only-dark)
+![caret](../assets/datastore-settings/caret2-light.png#only-light)
+![caret](../assets/datastore-settings/caret2-dark.png#only-dark)
 
-**Step 2**: View and check the connection details of the enrichment and click on the  **Save** button.
+**Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![save](../assets/datastore-settings/save-light-14.png#only-light)
-![save](../assets/datastore-settings/save-dark-14.png#only-dark)
+![modal](../assets/datastore-settings/modal-light.png#only-light)
+![modal](../assets/datastore-settings/modal-dark.png#only-dark)
 
-**Step 3**: After clicking on the **Save** button a modal window will appear **Your Datastore has been successfully updated**
+| REF.              | FIELDS                  | ACTIONS                                    |
+|-------------------|-------------------------|--------------------------------------------|
+| 1.                | Prefix                  | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.                | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
-![success](../assets/datastore-settings/success-light-15.png#only-light)
-![success](../assets/datastore-settings/success-dark-15.png#only-dark)
+**Step 3**: View and check the connection details of the enrichment and click on the **Save** button.
+
+![save](../assets/datastore-settings/save-light-15.png#only-light)
+![save](../assets/datastore-settings/save-dark-15.png#only-dark)
+
+**Step 4**: After clicking on the **Save** button a modal window will appear **Your Datastore has been successfully updated**
+
+![success](../assets/datastore-settings/success-light-12.png#only-light)
+![success](../assets/datastore-settings/success-dark-12.png#only-dark)
 
 ## Quality Score Settings
 
@@ -146,28 +166,28 @@ The **Quality Score Settings** allow users to tailor the impact of each quality 
 
 **Step 1**: Click on the **Score** option in the settings icon.
 
-![score](../assets/datastore-settings/score-light-16.png#only-light)
-![score](../assets/datastore-settings/score-dark-16.png#only-dark)
+![score](../assets/datastore-settings/score-light-17.png#only-light)
+![score](../assets/datastore-settings/score-dark-17.png#only-dark)
 
 **Step 2**: A modal window "Quality Score Settings" will appear. 
 
-![score-settings](../assets/datastore-settings/score-settings-light-17.png#only-light)
-![score-settings](../assets/datastore-settings/score-settings-dark-17.png#only-dark)
+![score-settings](../assets/datastore-settings/score-settings-light-18.png#only-light)
+![score-settings](../assets/datastore-settings/score-settings-dark-18.png#only-dark)
 
 **Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the most relevant data quality insights. 
 
-![decay-period](../assets/datastore-settings/decay-period-light-18.png#only-light)
-![decay-period](../assets/datastore-settings/decay-period-dark-18.png#only-dark)
+![decay-period](../assets/datastore-settings/decay-period-light-19.png#only-light)
+![decay-period](../assets/datastore-settings/decay-period-dark-19.png#only-dark)
 
 **Step 4**: Adjust the **Factor Weights** using the sliding bar. The factor weights determine the importance of different data quality aspects. 
 
-![factor-weights](../assets/datastore-settings/factor-weights-light-19.png#only-light)
-![factor-weights](../assets/datastore-settings/factor-weights-dark-19.png#only-dark)
+![factor-weights](../assets/datastore-settings/factor-weights-light-20.png#only-light)
+![factor-weights](../assets/datastore-settings/factor-weights-dark-20.png#only-dark)
 
 **Step 5**: Click on the **Save** button to save the quality score settings.
 
-![score-save](../assets/datastore-settings/score-save-light-20.png#only-light)
-![score-save](../assets/datastore-settings/score-save-dark-20.png#only-dark)
+![score-save](../assets/datastore-settings/score-save-light-21.png#only-light)
+![score-save](../assets/datastore-settings/score-save-dark-21.png#only-dark)
 
 ## Delete Datastore
 
@@ -175,18 +195,18 @@ The **Delete Datastore** action permanently removes a datastore and all associat
 
 **Step 1**: Click on the **Delete** option in the settings icon.
 
-![delete](../assets/datastore-settings/delete-light-21.png#only-light)
-![delete](../assets/datastore-settings/delete-dark-21.png#only-dark)
+![delete](../assets/datastore-settings/delete-light-22.png#only-light)
+![delete](../assets/datastore-settings/delete-dark-22.png#only-dark)
 
 **Step 2**: A modal window **Delete Datastore** will appear.
 
-![delete-datastore](../assets/datastore-settings/delete-datastore-light-22.png#only-light)
-![delete-datastore](../assets/datastore-settings/delete-datastore-dark-22.png#only-dark)
+![delete-datastore](../assets/datastore-settings/delete-datastore-light-23.png#only-light)
+![delete-datastore](../assets/datastore-settings/delete-datastore-dark-23.png#only-dark)
 
 **Step 3**: Enter the **Name of the datastore** in the given field (confirmation check) and then click on the **I’M SURE, DELETE THIS DATASTORE** button to delete the datastore.
 
-![confirm-delete](../assets/datastore-settings/confirm-delete-light-23.png#only-light)
-![confirm-delete](../assets/datastore-settings/confirm-delete-dark-23.png#only-dark)
+![confirm-delete](../assets/datastore-settings/confirm-delete-light-24.png#only-light)
+![confirm-delete](../assets/datastore-settings/confirm-delete-dark-24.png#only-dark)
 
 ## Mark Datastore as Favorite
 
