@@ -66,5 +66,6 @@ There are two types of Checks in Qualytics: **inferred** and **authored**:
 | [Time Distribution Size](../checks/time-distribution-size-check.md)                   | Asserts that the count of records for each interval of a timestamp is between two numbers.          |
 | [Unique](../checks/unique-check.md)                                                   | Asserts that the field's value is unique.                                                           |
 | [User Defined Function](../checks/user-defined-function-check.md)                     | Asserts that the given user-defined function (as `Scala` script) evaluates to true over the field's value.|
+| [Volumetrics](../checks/volumetric-check.md)                                           | Asserts that the data volume (rows or bytes) remains within dynamically inferred thresholds based on historical trends (daily, weekly, monthly).|
 
 
