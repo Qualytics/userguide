@@ -42,7 +42,7 @@ By selecting the **Containers section**, you can explore structured datasets tha
 ![dates](../assets/explore/profiles/dates-light.png#only-light)
 ![dates](../assets/explore/profiles/dates-dark.png#only-dark)
 
-### Explore Tables and Fields**
+### Explore Tables and Fields
 
 By clicking on a specific container, users can view its associated fields, including detailed profiling information. Additionally, clicking the arrow icon on the right side of a specific container allows users to navigate directly to its corresponding table for a more in-depth exploration.
 
