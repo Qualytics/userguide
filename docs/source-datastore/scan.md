@@ -350,7 +350,7 @@ This status indicates that the scan operation was manually stopped before it cou
 
 #### Warning
 
-This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a **warning** status reflects the following details and actions:
+This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a **completed with warning** status reflects the following details and actions:
 
 ![warning](../assets/datastores/scan/warning-light.png#only-light)
 ![warning](../assets/datastores/scan/warning-dark.png#only-dark)
@@ -369,10 +369,11 @@ This status signals that the scan operation encountered some issues and displays
 | 10      | Check Categories          | Indicates which categories should be included in the scan (Metadata, Data Integrity)|
 | 11      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
 | 12      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 13      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the warning scan|
-| 14      | Delete                    | Removes the record of the warning operation from the system, permanently deleting scan results and anomalies|
-| 15      |Summary                    | The summary section provides an overview of the scan operation, highlighting any warnings encountered. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the operation, including any partitions that triggered warnings. </li><li> **Records Scanned**: The total number of records processed during the scan, along with any records that raised warnings. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
-| 16       |Logs                      | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Scan Operation.|
+| 13      | Result                         | View the details of the scan operation that was completed with warning, including tables scanned and anomalies identified|
+| 14      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the warning scan|
+| 15      | Delete                    | Removes the record of the warning operation from the system, permanently deleting scan results and anomalies|
+| 16      |Summary                    | The summary section provides an overview of the scan operation, highlighting any warnings encountered. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the operation, including any partitions that triggered warnings. </li><li> **Records Scanned**: The total number of records processed during the scan, along with any records that raised warnings. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
+| 17       |Logs                      | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Scan Operation.|
 
 #### Success
 
