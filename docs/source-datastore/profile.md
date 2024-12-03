@@ -430,7 +430,7 @@ This status indicates that the profile operation was manually stopped before it 
   
 #### Warning
 
-This status signals that the profile operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A profile operation having a **warning** status reflects the following details and actions:
+This status signals that the profile operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A profile operation having a **completed with warning** status reflects the following details and actions:
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -443,10 +443,11 @@ This status signals that the profile operation encountered some issues and displ
 | 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation                                           |
 | 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation                             |
 | 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering                 |
-| 10.    | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan               |
-| 11.    | Delete                           | Removes the record of the profile operation, permanently deleting all results                         |
-| 12.     | Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation.</li><li>  **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></ul> |
-| 13.    |   Logs                    | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Profile Operation. |
+| 10.     | Result                | Provides immediate insights into the profile operation conducted                 |
+| 11.    | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan               |
+| 12.    | Delete                           | Removes the record of the profile operation, permanently deleting all results                         |
+| 13.     | Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation.</li><li>  **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></ul> |
+| 14.    |   Logs                    | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Profile Operation. |
 
 ![profile-warning](../assets/profile-operations/profile-warning-light.png#only-light)
 ![profile-warning](../assets/profile-operations/profile-warning-dark.png#only-dark)
