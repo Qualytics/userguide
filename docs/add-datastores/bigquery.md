@@ -107,8 +107,8 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS          | ACTIONS                                   |
 |------|-----------------|-------------------------------------------|
-| 1️.   | Name (Required)  | Specify the name of the datastore (e.g. The specified name will appear on the datastore cards.) |
-| 2️.  | Toggle Button   | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
+| 1.   | Name (Required)  | Specify the name of the datastore (e.g. The specified name will appear on the datastore cards.) |
+  | 2.  | Toggle Button   | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
 | 3.    | Connector (Required) | Select **BigQuery** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
