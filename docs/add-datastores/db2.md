@@ -218,8 +218,8 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS                             | ACTIONS                                                                                                      |
 |------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| 1️.  | Prefix (Required)                            | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2.   | Enrichment Datastore               | Select an enrichment datastore from the dropdown list.                                                         |
+| 1  | Prefix (Required)                            | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2   | Enrichment Datastore               | Select an enrichment datastore from the dropdown list.                                                         |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
