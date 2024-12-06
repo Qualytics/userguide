@@ -22,10 +22,10 @@ SQL Warehouses (Serverless) in Databricks utilize serverless SQL endpoints for r
 
 | REF | ATTRIBUTE            | DESCRIPTION                            |
 | --- | -------------------- | -------------------------------------- |
-| 1️.  | Cost-effectiveness   | Serverless SQL endpoints allow you to pay only for the queries you execute, without the need to provision or manage dedicated infrastructure, making it more cost-effective for ad-hoc or sporadic queries. |
-| 2️.  | Scalability          | Serverless architectures automatically scale resources based on demand, ensuring optimal performance for varying workloads. |
-| 3️.  | Simplified Management | With serverless SQL endpoints, you don't need to manage clusters or infrastructure, reducing operational overhead. |
-| 4️.  | Minimum Requirements  | The minimum requirements for using SQL Warehouse with serverless typically include access to a Databricks workspace and appropriate permissions to create and run SQL queries. |
+| 1.  | Cost-effectiveness   | Serverless SQL endpoints allow you to pay only for the queries you execute, without the need to provision or manage dedicated infrastructure, making it more cost-effective for ad-hoc or sporadic queries. |
+| 2.  | Scalability          | Serverless architectures automatically scale resources based on demand, ensuring optimal performance for varying workloads. |
+| 3.  | Simplified Management | With serverless SQL endpoints, you don't need to manage clusters or infrastructure, reducing operational overhead. |
+| 4. | Minimum Requirements  | The minimum requirements for using SQL Warehouse with serverless typically include access to a Databricks workspace and appropriate permissions to create and run SQL queries. |
 
 #### All-Purpose Compute
 
@@ -33,8 +33,8 @@ All-purpose compute in Databricks refers to clusters that are not optimized for 
 
 | REF | ATTRIBUTE           | DESCRIPTION         |
 | --- | ------------------- | ------------------- |
-| 1️.  | Slow Spin-up Time   | All-purpose compute clusters may take longer to spin up compared to specialized clusters, resulting in delays before processing can begin. |
-| 2️.  | Timeout Connections | Due to longer spin-up times, there's a risk of timeout connections, especially for applications or services that expect quick responses. |
+| 1.  | Slow Spin-up Time   | All-purpose compute clusters may take longer to spin up compared to specialized clusters, resulting in delays before processing can begin. |
+| 2.  | Timeout Connections | Due to longer spin-up times, there's a risk of timeout connections, especially for applications or services that expect quick responses. |
 
 ### Node Pool and Its Usage
 
@@ -42,9 +42,9 @@ A node pool in Databricks is a set of homogeneous virtual machines (VMs) within 
 
 | REF | ATTRIBUTE            | DESCRIPTION                     |
 | --- | -------------------- | ------------------------------- |
-| 1️.  | Resource Isolation    | Node pools provide resource isolation, allowing different workloads or applications to run without impacting each other's performance. |
-| 2️.  | Optimized Performance | By dedicating specific nodes to particular tasks, you can optimize performance for those workloads.                                 |
-| 3️.  | Cost-effectiveness    | Node pools can be more cost-effective than using all-purpose compute for certain workloads, as you can scale resources according to the specific requirements of each task. |
+| 1. | Resource Isolation    | Node pools provide resource isolation, allowing different workloads or applications to run without impacting each other's performance. |
+| 2.  | Optimized Performance | By dedicating specific nodes to particular tasks, you can optimize performance for those workloads.                                 |
+| 3.  | Cost-effectiveness    | Node pools can be more cost-effective than using all-purpose compute for certain workloads, as you can scale resources according to the specific requirements of each task. |
 
 ### Improving All-Purpose Compute with Node Pools
 
@@ -52,9 +52,9 @@ To improve the performance of all-purpose compute using node pools, you can foll
 
 | REF | ATTRIBUTE                    | DESCRIPTION                    |
 | --- | ---------------------------- | ------------------------------ |
-| 1️.  | Define Workload-Specific Node Pools | Identify the specific tasks or workloads that require optimized performance and create dedicated node pools for them. |
-| 2️.  | Specify Minimum Requirements       | Determine the minimum resources (such as CPU, memory, and disk) required for each workload and configure the node pools accordingly. |
-| 3️.  | Monitor and Adjust                | Continuously monitor the performance of your node pools and adjust resource allocations as needed to ensure optimal performance. |
+| 1.  | Define Workload-Specific Node Pools | Identify the specific tasks or workloads that require optimized performance and create dedicated node pools for them. |
+| 2.  | Specify Minimum Requirements       | Determine the minimum resources (such as CPU, memory, and disk) required for each workload and configure the node pools accordingly. |
+| 3.  | Monitor and Adjust                | Continuously monitor the performance of your node pools and adjust resource allocations as needed to ensure optimal performance. |
 
 **Step 1:** Configure details for Qualytics Node Pool.
 
@@ -74,11 +74,11 @@ To configure Databricks, you need the following credentials:
 
 | REF | FIELDS               | ACTIONS                        |
 | --- | -------------------- | ------------------------------ |
-| 1️.  | Host (Required)      | Get **Hostname** from your Databricks account and add it to this field. |
-| 2️.  | HTTP Path (Required) | Add HTTP Path (web address) to fetch data from your Databricks account. |
-| 3️.  | Catalog (Required)   | Add a **Catalog** to fetch data structures and metadata from Databricks. |
-| 4️.  | Database (Required)  | Specify the database name to be accessed. |
-| 5️.  | Personal Access Token (Required) | Generate a Personal Access Token from your Databricks account and add it for authentication.|
+| 1.  | Host (Required)      | Get **Hostname** from your Databricks account and add it to this field. |
+| 2.  | HTTP Path (Required) | Add HTTP Path (web address) to fetch data from your Databricks account. |
+| 3.  | Catalog (Required)   | Add a **Catalog** to fetch data structures and metadata from Databricks. |
+| 4.  | Database (Required)  | Specify the database name to be accessed. |
+| 5.  | Personal Access Token (Required) | Generate a Personal Access Token from your Databricks account and add it for authentication.|
 
 #### Get Connection Details for the SQL Warehouse
 
@@ -159,9 +159,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS         | ACTIONS              |
 |------|----------------|----------------------|
-| 1️.   | Name (Reqired) | Specify the datastore name (e.g., This name will appear on the datastore cards) |
-| 2️.   | Toggle Button  | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 3️.   | Connector (Required)     | Select **Databricks** from the dropdown list. |                  
+| 1.   | Name (Reqired) | Specify the datastore name (e.g., This name will appear on the datastore cards) |
+| 2.   | Toggle Button  | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
+| 3.   | Connector (Required)     | Select **Databricks** from the dropdown list. |                  
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -196,13 +196,13 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 
 | REF. | FIELD   | ACTIONS   |
 |------|---------|-----------|
-| 1️.   | Host (Required)     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.|
-| 2️.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
-| 3️.   | Personal Access Token (Required)  | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
-| 4️.   | Catalog (Required)  | Add a **Catalog** to fetch data structures and metadata from the Databricks. |
-| 5️.   | Database (Optional) | Specify the database name to be accessed.|
-| 6️.   | Teams (Required)    | Select one or more teams from the dropdown to associate with this source datastore.|
-| 7️.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1.   | Host (Required)     | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field.|
+| 2.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
+| 3.   | Personal Access Token (Required)  | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication.  |
+| 4.   | Catalog (Required)  | Add a **Catalog** to fetch data structures and metadata from the Databricks. |
+| 5.   | Database (Optional) | Specify the database name to be accessed.|
+| 6.   | Teams (Required)    | Select one or more teams from the dropdown to associate with this source datastore.|
+| 7.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -250,7 +250,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
-| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 1.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.| Caret Down Button   | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.|
 | 3.| Enrichment Datastore| Select an enrichment datastore from the dropdown list. |
 
@@ -304,12 +304,12 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 | REF. | FIELD     | ACTIONS     |
 |------|------------|-------------|
-| 1️.   | Host (Required) | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field. |
-| 2️.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
-| 3️.   | Personal Access Token (Required) | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication. |
-| 4️.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Databricks. |
-| 5️.   | Database (Optional) | Specify the database name |
-| 6️.   | Teams (Required)  | Select one or more teams from the dropdown to associate with this enrichment datastore. |
+| 1.   | Host (Required) | Get the [**hostname**](https://docs.databricks.com/en/integrations/compute-details.html){:target="_blank"} from your Databricks account and add it to this field. |
+| 2.   | HTTP Path (Required) | Add the HTTP Path (web address) to fetch data from your Databricks account. |
+| 3.   | Personal Access Token (Required) | Generate a [**Personal Access Token**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} from your Databricks account and add it for authentication. |
+| 4.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Databricks. |
+| 5.   | Database (Optional) | Specify the database name |
+| 6.   | Teams (Required)  | Select one or more teams from the dropdown to associate with this enrichment datastore. |
 
 **Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified. 
 
@@ -347,7 +347,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
-| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
+| 1.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
 | 2.   | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
