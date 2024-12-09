@@ -24,9 +24,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS   | ACTIONS     |
 |------|--------|---------------|
-| 1️.   | Name (Required) | Specify the datastore name (e.g., This name will appear on the datastore cards)  |
-| 2️.   | Toggle Button   | Toggle ON to  create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 3️.   | Connector (Required) | Select **Microsoft SQL Server** from the dropdown list. |
+| 1.| Name (Required) | Specify the datastore name (e.g., This name will appear on the datastore cards)  |
+| 2. | Toggle Button   | Toggle ON to  create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
+| 3. | Connector (Required) | Select **Microsoft SQL Server** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -44,12 +44,12 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
-| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
-| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
-| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
-| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
-| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+| 1. | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2. | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3. | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4. | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5. | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6. | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
 ![hashcorp-explain](../assets/datastores/microsoft-sql-server/hashcorp-explain-light.png#only-light)
 ![hashcorp-explain](../assets/datastores/microsoft-sql-server/hashcorp-explain-dark.png#only-dark)
@@ -61,14 +61,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 | REF. | FIELDS     | ACTIONS      |
 |------|------------|-----------|
-| 1️.   | Host (Required)  | Get **Hostname** from your Microsoft SQL Server account and add it to this field.|
-| 2️.   | Port (Optional)   | Specify the **Port** number.                                                                                        |
-| 3️.   | User (Required)            | Enter the **User** to connect.                                                                                   |
-| 4️.   | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
-| 5️.  | Database (Required)        | Specify the database name.                                                                                        |
-| 6️.   | Schema (Required)          | Define the schema within the database that should be used.                                                         |
-| 7️.   | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
-| 8️.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 1.  | Host (Required)  | Get **Hostname** from your Microsoft SQL Server account and add it to this field.|
+| 2.  | Port (Optional)   | Specify the **Port** number.                                                                                        |
+| 3.  | User (Required)            | Enter the **User** to connect.                                                                                   |
+| 4.  | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
+| 5. | Database (Required)        | Specify the database name.                                                                                        |
+| 6. | Schema (Required)          | Define the schema within the database that should be used.                                                         |
+| 7. | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
+| 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -116,9 +116,9 @@ Once you have successfully tested and verified your source datastore connection,
 
 | REF. | FIELDS  | ACTIONS                                                                                                           |
 |------|-----------------------|------------------------------------------------------------------------------------------------------------------|
-| 1 | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2 | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.               |
-| 3 | Enrichment Datastore | Select an enrichment datastore from the dropdown list.                                                           |
+| 1. | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2. | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**.               |
+| 3. | Enrichment Datastore | Select an enrichment datastore from the dropdown list.                                                           |
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
@@ -136,10 +136,10 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
-| 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2.                | Name   | Give a name for the enrichment datastore.|
-| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
-| 4.                |Connector | Select a datastore connector from the dropdown list.|
+| 1.               | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.               | Name   | Give a name for the enrichment datastore.|
+| 3.               |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 4.               |Connector | Select a datastore connector from the dropdown list.|
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
@@ -153,12 +153,12 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
-| 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
-| 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
-| 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
-| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
-| 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
+| 1. | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 2. | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
+| 3. | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
+| 4. | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
+| 5. | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 6. | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
 ![secret-management](../assets/datastores/microsoft-sql-server/secret-management-light.png#only-light)
 ![secret-management](../assets/datastores/microsoft-sql-server/secret-management-dark.png#only-dark)
@@ -170,13 +170,13 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 | REF. | FIELDS             | ACTIONS                                                                                               |
 |------|--------------------|-------------------------------------------------------------------------------------------------------|
-| 1️.   | Host (Required)    | Get Hostname from your Microsoft SQL Server account and add it to this field.                      |
-| 2️.   | Port (Optional)    | Specify the Port number.                                                                             |
-| 3️.   | User (Required)    | Enter the User to connect.                                                                       |
-| 4️.   | Password (Required)| Enter the Password to connect to the database.                                                       |
-| 5️.   | Database (Required)| Specify the database name.                                                                             |
-| 6️.   | Schema (Required)  | Define the schema within the database that should be used.                                             |
-| 7️.   | Teams (Required)   | Select one or more teams from the dropdown to associate with this datastore.                           |
+| 1.  | Host (Required)    | Get Hostname from your Microsoft SQL Server account and add it to this field.                      |
+| 2.  | Port (Optional)    | Specify the Port number.                                                                             |
+| 3.  | User (Required)    | Enter the User to connect.                                                                       |
+| 4.  | Password (Required)| Enter the Password to connect to the database.                                                       |
+| 5.  | Database (Required)| Specify the database name.                                                                             |
+| 6.  | Schema (Required)  | Define the schema within the database that should be used.                                             |
+| 7.  | Teams (Required)   | Select one or more teams from the dropdown to associate with this datastore.                           |
 
 **Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified. 
 
@@ -213,8 +213,8 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS                                    | ACTIONS                                                                                                           |
 |------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 1️.   | Prefix (Required)                         | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2.   | Enrichment Datastore                      | Select an enrichment datastore from the dropdown list.                                                            |
+| 1. | Prefix (Required)                         | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
+| 2.  | Enrichment Datastore                      | Select an enrichment datastore from the dropdown list.                                                            |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment: 
 
