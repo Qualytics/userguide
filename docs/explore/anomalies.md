@@ -210,13 +210,13 @@ You can delete individual anomalies using one of two methods:
 **Step 4:** After clicking on the delete button, your anomaly is successfully deleted and a success flash message will appear saying **“Anomaly has been successfully deleted”.**
 
 ![flash](../assets/explore/anomalies/dlt-msg-light.png#only-light)
-![flash](../assets/explore/anomalies/dlt-msg.png#only-dark)
+![flash](../assets/explore/anomalies/dlt-msg-dark.png#only-dark)
 
 ### **2. Delete via Action Menu**
 
 **Step 1:** Click on the archive anomaly from the list of archived anomalies that you want to delete.
 
-![action](../assets/explore/anomalies/select-anomlies-light.png#only-light)
+![action](../assets/explore/anomalies/select-anomalies-light.png#only-light)
 ![action](../assets/explore/anomalies/select-anomalies-dark.png#only-dark)
 
 **Step 2:** A modal window will appear displaying the anomaly details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on **“Delete”** from the drop-down menu.
