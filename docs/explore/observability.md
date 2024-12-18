@@ -21,7 +21,7 @@ Let’s get started 🚀
 Observability, data checks are divided into two categories: Volumetric and Metric. Volumetric checks track overall data volume, while Metric checks measures data based on predefined fields and thresholds, tracking changes in data values over time. These two categories work together to offer comprehensive insights into data trends and anomalies.
 
 ![category](../assets/explore/observability/category-light.png#only-light)
-![category](../assets/explore/observability/categoryy-dark.png#only-dark)
+![category](../assets/explore/observability/category-dark.png#only-dark)
 
 **1. Volumetric:** Volumetric automatically tracks changes in the amount of data within a table over time. It monitors row counts and compares them to expected ranges based on historical data. If the data volume increases or decreases unexpectedly, the check flags it for further review. This feature helps users easily identify unusual data patterns without manual monitoring.
 
