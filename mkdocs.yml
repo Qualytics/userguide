@@ -144,6 +144,7 @@ nav:
       - Insights: explore/insights.md
       - Activity: explore/activity.md
       - Profiles: explore/profiles.md
+      - Observability: explore/observability.md
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
     - Notifications:
