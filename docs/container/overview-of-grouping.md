@@ -2,6 +2,35 @@
 
 The grouping is a fundamental aspect of data analysis, allowing users to organize data into meaningful categories for in-depth examination. With the ability to set grouping on Containers, users can define how data within a container should be grouped, facilitating more focused and efficient analysis.
 
+Let’s get started 🚀
+
+## Managing an Grouping
+
+**Step 1:** Log in to your Qualytics account and select the source datastore (**JDBC** or **DFS**) from the left menu that you want to manage.
+
+![grouping](../assets/identifiers/grouping-overview/datastore-light.png#only-light)
+![grouping](../assets/identifiers/grouping-overview/datastore-dark.png#only-dark)
+
+**Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
+
+![table](../assets/identifiers/grouping-overview/table-light.png#only-light)
+![table](../assets/identifiers/grouping-overview/table-dark.png#only-dark)
+
+**Step 3:** You will view the full list of tables or files belonging to the selected source datastore.
+
+![list](../assets/identifiers/grouping-overview/list-light.png#only-light)
+![list](../assets/identifiers/grouping-overview/list-dark.png#only-dark)
+
+**Step 4:** Click on the vertical ellipse next to the table of your choice and select **Settings** from the dropdown list.
+
+![settings](../assets/identifiers/grouping-overview/settings-light.png#only-light)
+![settings](../assets/identifiers/grouping-overview/settings-dark.png#only-dark)
+
+A modal window will appear for **“Table Settings”**, where you can manage grouping for the selected table.Use the **Grouping** section to organize fields, with a warning to avoid large row groupings to maintain performance. Add grouping logic via **Group Criteria**.
+
+![window](../assets/identifiers/grouping-overview/window-light.png#only-light)
+![window](../assets/identifiers/grouping-overview/window-dark.png#only-dark)
+
 ## Usage
 
 The `grouping` parameter accepts a list of lists of field names. Each inner list holds the field names in the order that they will be applied as grouping criteria. This flexibility allows users to customize the grouping behavior based on their specific analytical requirements.
