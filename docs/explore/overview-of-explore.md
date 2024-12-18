@@ -1,6 +1,6 @@
 # Explore
 
-**Explore** button in  Qualytics is where you can easily view and manage all your data.It provides easy access to important features through tabs like [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), **Observability**, [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md). Each tab shows a different part of your data, such as its quality, activities, structure, checks, and issues. You can sort and filter the data by datastore and time frame, making it easier to track performance, spot problems, and take action. The Explore section helps you manage and understand your data all in one place.
+**Explore** page in  Qualytics is where you can easily view and manage all your data. It provides easy access to important features through tabs like [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), **Observability**, [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md). Each tab shows a different part of your data, such as its quality, activities, structure, checks, and issues. You can sort and filter the data by datastore and time frame, making it easier to track performance, spot problems, and take action. The Explore section helps you manage and understand your data all in one place.
 
 Let’s get started 🚀
 
