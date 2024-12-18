@@ -5,6 +5,17 @@ hide:
 
 # Release Notes
 
+### 2024.12.11 { id=2024.12.11 }
+
+#### Feature Enhancements
+
+- Add `Max Parallelization` Field on Datastore Connection
+    - Users can now configure the maximum parallelization level for certain datastores, providing greater control over operation performance.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.11.29 { id=2024.11.29 }
 
 #### Feature Enhancements
@@ -15,7 +26,7 @@ hide:
 
 #### General Fixes
 
-- Better handling of Oracle Date and Numeric columns during Catalog operations for improved partition field selection
+- Better handling of Oracle Date and Numeric columns during Catalog operations for improved partition field selection.
 - General Fixes and Improvements.
 
 ### 2024.11.21 { id=2024.11.2210 }

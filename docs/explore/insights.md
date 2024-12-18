@@ -30,6 +30,74 @@ Filtering Controls allow you to refine the data displayed on the **Insights** pa
 | 3. | Report Date  | Set the report date to view data from a particular day. |
 | 4. | Timeframe | Choose a timeframe to view data for a specific  (week, month, quarter, and year) |
 
+## **Understanding Timeframes and Timeslices**
+
+When analyzing data on the Insights, two key concepts help you uncover trends: **timeframes** and **timeslices**. These work together to give you both a broad view and a detailed breakdown of your data.
+
+## **Timeframes**
+
+**Timeframe** is the total range of time you select to view your data. For example, you can choose to see data:
+
+* **Weekly**: Summarize data for an entire week.
+
+* **Monthly**: Group data by months.
+
+* **Quarterly**: Cover three months at a time.
+
+* **Yearly**: Show data for the entire year.
+
+### **How Metrics Behave Over a Timeframe** 
+
+* **Quality Score** and other similar metrics display an **average** for the selected timeframe.
+
+**Example:**If you select **weekly**, the Quality Score shown will be the **average score for the entire week**.
+
+![average](../assets/explore/insights/average-light.png#only-light)
+![average](../assets/explore/insights/average-dark.png#only-dark)
+
+* **Historical Graphs** (like **Profiles** or **Scans**) show **cumulative totals** over time.
+
+**Example:**If you view a graph for a **monthly timeframe**, the graph shows how data grows or changes month by month.
+
+![monthly](../assets/explore/insights/monthly-light.png#only-light)
+![monthly](../assets/explore/insights/monthly-dark.png#only-dark)
+
+## **Timeslices**
+
+**Timeslice** breaks your selected timeframe into smaller parts. It helps you see more detailed trends within the overall timeframe.
+
+For example:
+
+* A **weekly timeframe** shows each day of the week.
+
+* A **monthly timeframe** breaks into weekly segments.
+
+* A **quarterly timeframe** highlights months within that quarter.
+
+* A **yearly timeframe** divides into quarters and months.
+
+### **How Timeslices Work**
+
+* When you choose a timeframe, the graph automatically breaks it into timeslices.
+
+* Each bar or point on the graph represents one **timeslice**.
+    
+**Example:**
+
+* If you choose a **Weekly timeframe**, each bar in the graph will represent one **day** of the week.
+
+![weekly](../assets/explore/insights/weekly-light.png#only-light)
+![weekly](../assets/explore/insights/weekly-dark.png#only-dark)
+
+* If you choose a **Monthly timeframe**, each bar will represent one **week** in that month.
+
+![week](../assets/explore/insights/week-light.png#only-light)
+![week](../assets/explore/insights/week-dark.png#only-dark)
+
+### **Metrics Within a Timeslice** 
+
+Metrics like Quality Score, Profiles, or Scans are displayed for each timeslice, allowing you to identify trends and patterns over smaller intervals.
+
 ## Quality Score
 
 **Quality Score** gives a clear view of your data's overall quality. It shows important measures like [**Completeness**](../glossary.md#completeness), [**Conformity**](../glossary.md#conformity), [**Consistency**](../glossary.md#consistency), [**Precision**](../glossary.md#precision), [**Timeliness**](../glossary.md#timeliness), [**Volumetrics**](../glossary.md#volumetrics), and [**Accuracy**](../glossary.md#accuracy), each represented by a percentage. This helps you quickly understand the health of your data, making it easier to identify areas that need improvement.  
