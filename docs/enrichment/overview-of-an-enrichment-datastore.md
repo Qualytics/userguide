@@ -46,15 +46,15 @@ Captures and logs detailed metrics for every data quality check performed within
 
 | Name                    | Data Type | Description                                          |
 |-----------------------------|---------------|----------------------------------------------------------|
-| Operation_ID            | NUMBER        | Unique Identifier for the check metric.                 |
-| Container_ID            | NUMBER        | Identifier for the container associated with the check metric. |
-| Source_Datastore        | STRING        | Datastore where the source data resides.                |
-| Source_Container        | STRING        | Name of the source data container.                      |
-| Source_Partition        | STRING        | Partition of the source data.                           |
-| Quality_Check_ID        | NUMBER        | Unique identifier for the quality check performed.      |
-| Asserted_Records_Count  | NUMBER        | Count of records expected or asserted in the source.    |
-| Anomalous_Records_Count | NUMBER        | Count of records identified as anomalous.               |
-| _Qualytics_Source_Partition | STRING    | Partition information specific to Qualytics metrics.    |
+| OPERATION_ID            | NUMBER        | Unique Identifier for the check metric.                 |
+| CONTAINER_ID            | NUMBER        | Identifier for the container associated with the check metric. |
+| SOURCE_DATASTORE        | STRING        | Datastore where the source data resides.                |
+| SOURCE_CONTAINER        | STRING        | Name of the source data container.                      |
+| SOURCE_PARTITION        | STRING        | Partition of the source data.                           |
+| QUALITY_CHECK_ID        | NUMBER        | Unique identifier for the quality check performed.      |
+| ASSERTED_RECORDS_COUNT  | NUMBER        | Count of records expected or asserted in the source.    |
+| ANOMALOUS_RECORDS_COUNT | NUMBER        | Count of records identified as anomalous.               |
+| _QUALYTICS_SOURCE_PARTITION | STRING    | Partition information specific to Qualytics metrics.    |
 
 #### _FAILED_CHECKS Table
 
