@@ -110,7 +110,7 @@ A modal window will appear with the check details.
 **Step 3:** Once you have edited the check details, then click on the **Validate** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct.
 
 ![observability](../assets/observability/validate-btn-light-10.png#only-light)
-![observability](../assets/observability/validate-btn-light-10.png#only-dark)
+![observability](../assets/observability/validate-btn-dark-10.png#only-dark)
 
 If the validation is successful, a green message saying **"Validation Successful"** will appear.
 
@@ -248,7 +248,7 @@ Based on the chosen comparison type, the system flags any deviations from the de
 A modal window will appear with the check details.
 
 ![observability](../assets/observability/modal-window-light-27.png#only-light)
-![observability](../assets/observability/modal-window-light-27.png#only-dark)
+![observability](../assets/observability/modal-window-dark-27.png#only-dark)
 
 **Step 2:** Modify the check details as needed based on your preferences:
 
