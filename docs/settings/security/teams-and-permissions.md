@@ -170,7 +170,7 @@ We do not support **Google Workspace**, as it does not offer SCIM support. Organ
 
 1. **Provisioning Mode**: Select **Automatic**.
 
-2. **Tenant URL:**  `https://fhlbny.qualytics.io/api/scim/v2` 
+2. **Tenant URL:**  `https://your-domain.qualytics.io/api/scim/v2` 
 
 3. **Secret Token:** Generate this token from the Qualytics UI when logged in as an admin user. For more information on how to generate tokens in Qualytics, refer to the documentation on [Tokens](https://userguide.qualytics.io/settings/tokens/overview-of-tokens/).
 
@@ -252,7 +252,7 @@ We do not support **Google Workspace**, as it does not offer SCIM support. Organ
 
 **Step 2**: Check the box labeled **Enable API Integration**, and enter the following details:
 
-* **SCIM 2.0 Base URL:**  `https://fhlbny.qualytics.io/api/scim/v2`  
+* **SCIM 2.0 Base URL:**  `https://your-domain.qualytics.io/api/scim/v2`  
 
 * **OAuth Bearer Token:** Generate this token from the Qualytics UI when logged in as an admin user. For more information on how to generate tokens in Qualytics, refer to the documentation on [Tokens](https://userguide.qualytics.io/settings/tokens/overview-of-tokens/).
 
@@ -322,7 +322,7 @@ After enabling these settings, your Okta SCIM API integration is successfully co
 
 * **API Status**: Enable the API status for the integration to work properly. 
 
-* **SCIM Base URL:**  `https://fhlbny.qualytics.io/api/scim/v2` 
+* **SCIM Base URL:**  `https://your-domain.qualytics.io/api/scim/v2` 
 
 * **SCIM Bearer Token:** Generate this token from the Qualytics UI when logged in as an admin user. For more information on how to generate tokens in Qualytics, refer to the documentation on [Tokens](https://userguide.qualytics.io/settings/tokens/overview-of-tokens/).
 
@@ -426,7 +426,7 @@ JumpCloud supports SCIM provisioning within an existing SAML application. Follow
 
 Under the **SCIM Version**, choose **SCIM 2.0** and enter the following information:
 
-1. **Base URL:** `https://fhlbny.qualytics.io/api/scim/v2`
+1. **Base URL:** `https://your-domain.qualytics.io/api/scim/v2`
 
 2. **Token Key:** Generate this token from the Qualytics UI when logged in as an admin user. For more information on how to generate tokens in Qualytics, refer to the documentation on [Tokens](https://userguide.qualytics.io/settings/tokens/overview-of-tokens/).  
 
