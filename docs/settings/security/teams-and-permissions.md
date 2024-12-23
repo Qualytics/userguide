@@ -21,13 +21,70 @@ Let’s get started 🚀
 
 ## Add Team
 
-You can create a new team for efficient and secure data management. Teams make it easier to control who has access to what, help people work together better, keep things secure with consistent rules, and simplify managing and expanding user groups. You can assign permissions to the team, such as read and write access, by selecting the datastore and enrichment datastore to which you want them to have access. This makes data management easier.
+You can create a new team for efficient and secure data management. Teams make it easier to control who has access to what, help people work together better, keep things secure with consistent rules, and simplify managing and expanding user groups. You can assign permissions to the team, such as Editor, Author, Drafter, Viewer and Reporter access, by selecting the datastore and enrichment datastore to which you want them to have access. This makes data management easier.
 
-In Qualytics, every user is assigned one of two roles: ```Admin``` or ```Member```.
+In Qualytics, every user is assigned roles: ```Admin```,```Manager``` and ```Member```.
 
 - **Admin**: Admin users have full access to the system and can manage datastores, teams, and users. This means they can access everything in the application, as well as manage user accounts and team permissions.
 
+| Category              | Functionality             | Description                                                                 |
+|-----------------------|---------------------------|-----------------------------------------------------------------------------|
+| Source Datastore      | Delete                   | Permanently remove a source datastore from the system.                      |
+| Enrichment Datastore  | Delete                   | Permanently remove an enrichment datastore from the system.                 |
+| Global Settings       | Settings                 | Manage global system configurations and preferences.                        |
+|                       | Security                 | Manage user access and team permissions within the system.                  |
+|                       | User(Manage)           | Add, modify, or delete user accounts, assign roles, and control access levels. |
+|                       | Team(Manage)           | Manage teams by adding or removing members, and setting team-specific permissions. |
+|                       | Health                   | Monitor the system’s health status and performance metrics.                 |
+|                       | Restart Analytical Engine | Restart the analytics engine to refresh data processing or resolve issues.  |
+
+- **Manager**: Manager role has limited administrative access, can view all datastores, even without a team role, and create datastores for teams where they have Editor permissions. However, they cannot manage global settings, user accounts, or override team role restrictions like Admins.
+
+| Category              | Functionality             | Description                                                                 |
+|-----------------------|---------------------------|-----------------------------------------------------------------------------|
+| Source Datastore      | Create                   | Managers can create new source datastores for data integration.             |
+|                       | List                     | Managers can view all source datastores that are listed in the system.      |
+|                       | Open                     | Open and access details of the selected source datastore.                   |
+|                       | Add Enrichment           | Add enrichment processes to source datastores to enhance data quality.      |
+| Enrichment Datastore  | Create                   | Managers can create enrichment datastores and assign them to teams with an "Editor" role. |
+|                       | List                     | Managers can view all enrichment datastores available in the system.        |
+| Global Settings       | DataStore (Source & Enrichment) |                                                                         |
+|                       | Create                   | Managers can create new source and enrichment datastores and assign them to teams with an "Editor" role. |
+|                       | List                     | Managers can view all datastores (source and enrichment) listed in the system. |
+| Library               | View                     | View the checks, or assets available in the library.                        |
+|                       | Manage                   | Manage library content, such as adding, modifying, or removing checks.      |
+| Tags                  | View                     | View tags assigned to datastores, records, or other elements in the system. |
+|                       | Manage                   | Manage the tags, including adding, removing, or modifying tags for elements        |
+| Notifications Rules   | View                     | View existing notification rules and actions configured for alerts.         |
+|                       | Manage                   | Configure and manage notification rules for different actions or triggers.  |
+| Settings              | Connections              |                                                                             |
+|                       | Create                   | Create new connections for integrating external systems or databases.       |
+|                       | Update                   | Update existing connections to modify their settings or credentials.        |
+|                       | Delete                   | Remove existing connections that are no longer needed.                      |
+|                       | Security                 |                                                                             |
+|                       | View Users               | View the list of users in the system and their access details.              |
+|                       | View Teams               | View the teams and their roles/permissions within the system.               |
+|                       | Integration              |                                                                             |
+|                       | Add                      | Add new integrations to the system for external systems or data sources.    |
+|                       | Sync                     | Sync external data with the system to ensure the most up-to-date information.|
+| Health                | View                     | View the health status of the system to monitor performance and stability.   |
+| API only (ATM)        | Transaction History      | View the history of transactions made via the API for auditing and tracking.|
+
 - **Member**: Members are normal users with access explicitly granted to them, usually inherited from the teams they are assigned to.
+
+| Category              | Functionality             | Description                                                                 |
+|-----------------------|---------------------------|-----------------------------------------------------------------------------|
+| Library               | View                     | Access and browse available checks.                                         |
+| Tags                  | View                     | View tags associated with datastores, records, or other system elements.    |
+| Actions               | View                     | View existing notification rules and action configurations.                 |
+| Settings              | Connection               |                                                                             |
+|                       | Read                     | Access connection details without modification permissions.                 |
+|                       | Tokens                   |                                                                             |
+|                       | Generate Token           | Create new tokens for secure access or integrations.                        |
+|                       | Revoke                   | Disable existing tokens to restrict access.                                 |
+|                       | Restore                  | Reactivate previously revoked tokens.                                       |
+|                       | Delete                   | Permanently remove tokens.                                                  |
+|                       | View                     | Access and review all token details.                                        |
 
 **Step 1**: Click on the **Add Team** button located in the top right corner.
 
@@ -40,13 +97,91 @@ In Qualytics, every user is assigned one of two roles: ```Admin``` or ```Member`
 |----------|--------------|------------|------------------|
 |  1.      | Name         | Enter the name of the team  |   Data Insights Team  |
 |  2.      | Description  |  Provide a brief description of the team.  |  Analyzes data to provide actionable insights, supporting data-driven decisions  |
-|  3.      | Permission | Select the permission level for the team: Write (manage and edit data), Read (view and report) None (no access) | Read/Write |
+
+![window](../../assets/security/description-light.png#only-light)
+![window](../../assets/security/description-dark.png#only-dark)
+
+### Permissions
+
+System uses permissions to ensure tasks are managed securely and efficiently. Each role is designed with specific capabilities based on what the user needs to do. Roles range from full access for advanced management to basic, read-only access for monitoring. 
+
+![permission](../../assets/security/permission-light.png#only-light)
+![permission](../../assets/security/permission-dark-.png#only-dark)
+
+#### Editor
+
+Editor role has the most advanced permissions, enabling users to manage datastore functions comprehensively. Editors can control enrichment, scoring, computed fields, operations, and more. However, they cannot add teams outside their access; only administrators can perform this task.
+
+![editor](../../assets/security/editor-light.png#only-light)
+![editor](../../assets/security/editor-dark.png#only-dark)
+
+| Categories            | Functionality                                         |
+|-----------------------|-------------------------------------------------------|
+| Source Datastore      | Open, Add Datastore, Edit Settings, Switch Enrichment |
+| Enrichment            | Add Enrichment, Edit Enrichment, Edit Scoring, Add Computed |
+| Operations            | Run Operation, Manage Operations, Manage Scheduled Operations |
+| Field Context         | Edit, Delete                                         |
+
+#### Author
+
+Author role focuses on managing checks and their associated metadata. This role is essential for tasks like activating, validating, and editing checks but has limited access to datastore functionalities.
+
+![author](../../assets/security/author-light.png#only-light)
+![author](../../assets/security/author-dark.png#only-dark)
+
+| Categories            | Functionality                                                   |
+|-----------------------|-----------------------------------------------------------------|
+| Source Datastore      | Checks, Activate, Validate, Change Status, Edit Metadata, Anomalies, Change Status |
+| Global Settings       | API only (ATM)                                           |
+
+#### Drafter
+
+Drafter role is designed for users who need to create and prepare checks without performing or finalizing them. This role focuses on adding and organizing content for future use.
+
+![drafter](../../assets/security/drafter-light.png#only-light)
+![drafter](../../assets/security/drafter-dark.png#only-dark)
+
+| Category            | Functionality           |
+|---------------------|-------------------------|
+| Source Datastore    | Open, Add Check         |
+| Profiles            | Add Check              |
+| Checks              | Create as Draft        |
+| Field Context       | Add Check              |
+
+#### Viewer
+
+Viewer role provides read-only access to anomalies and allows users to add comments or create notes. This role is ideal for those who need to monitor activities without making changes.
+
+![viewer](../../assets/security/viewer-light.png#only-light)
+![viewer](../../assets/security/viewer-dark.png#only-dark)
+
+| Category            | Functionality                        |
+|---------------------|--------------------------------------|
+| Source Datastore    | Anomalies, Add Comment, Preview (container) |
+| Enrichment Datastore| View, Preview                       |
+| Explore             | Anomalies, Source Records           |
+
+#### Reporter
+
+Reporter role has extensive access to all app report information, including dashboards, overviews, and anomalies. Reporters can view various data contexts and generate analytical insights.
+
+![reporter](../../assets/security/reporter-light.png#only-light)
+![reporter](../../assets/security/reporter-dark.png#only-dark)
+
+| Category            | Functionality                                                         |
+|---------------------|---------------------------------------------------------------------|
+| Source Datastore    | List, View, Overview, Activity, Profiles, Observability, Checks, Anomalies, Fields (container) |
+| Enrichment Datastore| List                                                                 |
+| Explore             | Insights, Activity, Profiles, Observability, Checks, Anomalies     |
+
+![team](../../assets/security/det-light.png#only-light)
+![team](../../assets/security/det-dark.png#only-dark)
+
+| REF.     | FIELD        | ACTION     | EXAMPLE          |
+|----------|--------------|------------|------------------|  
 |  4.      | Users | Add users to the team | John, Michael |
 |  5.      | Source Datastores | Grant access to specific source datastores (single or multiple) for the team | Athena |
 |  6.      | Enrichment Datastores | Add and grant access to additional enrichment datastores (single or multiple) for the team  | Bank Enrichment |
-
-![team-details](../../assets/security/team-details-light-4.png#only-light)
-![team-details](../../assets/security/team-details-dark-4.png#only-dark)
 
 **Step 3**: Click on the **Save** button to save your team.
 
@@ -468,11 +603,15 @@ The **Security** section, visible only to Admins, allows for granting and revoki
 
 Access controls in Qualytics are assigned at the datastore level. A non-administrator user (Member) can have one of three levels of access to any datastore connected to Qualytics:
 
-- **Write**: Allows the user to perform operations on and manage the datastore’s metadata.
+- **Editor**: [Editor](#editor) role has the most advanced permissions, enabling users to manage datastore functions comprehensively. Editors can control enrichment, scoring, computed fields, operations, and more. However, they cannot add teams outside their access; only administrators can perform this task.
 
-- **Read**: Allows the user to view and report on the datastore.
+- **Author**: [Author](#author) role focuses on managing checks and their associated metadata. This role is essential for tasks like activating, validating, and editing checks but has limited access to datastore functionalities.
 
-- **None**: The datastore is not visible or accessible to the user.
+- **Drafter**:[Drafter](#drafter) role is designed for users who need to create and prepare checks without performing or finalizing them. This role focuses on adding and organizing content for future use.
+
+- **Viewer**:[Viewer](#viewer) role provides read-only access to anomalies and allows users to add comments or create notes. This role is ideal for those who need to monitor activities without making changes.
+
+- **Reporter**:[Reporter](#reporter) role has extensive access to all app report information, including dashboards, overviews, and anomalies. Reporters can view various data contexts and generate analytical insights.
 
 !!! note 
     Permissions are assigned to Teams rather than directly to users. Users inherit the permissions of the teams to which they are assigned.
@@ -544,7 +683,7 @@ You can sort users by various criteria, such as **Created date**, **Name**, **Ro
 
 ### Filter Users
 
-You can filter the users by their roles and team, to quickly find and manage particular groups of users. 
+You can filter the users by their roles, deactivated and team, to quickly find and manage particular groups of users. 
 
 ![filter](../../assets/security/filter-light-16.png#only-light)
 ![filter](../../assets/security/filter-dark-16.png#only-dark)
