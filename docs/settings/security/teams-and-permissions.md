@@ -132,7 +132,7 @@ Author role focuses on managing checks and their associated metadata. This role 
 | Categories            | Functionality                                                   |
 |-----------------------|-----------------------------------------------------------------|
 | Source Datastore      | Checks, Activate, Validate, Change Status, Edit Metadata, Anomalies, Change Status |
-| Global Settings       | API only (ATM), SCIM                                           |
+| Global Settings       | API only (ATM)                                           |
 
 #### Drafter
 
