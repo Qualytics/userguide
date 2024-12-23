@@ -5,6 +5,36 @@ hide:
 
 # Release Notes
 
+### 2024.12.23 { id=2024.12.23 }
+
+#### Feature Enhancements
+
+- User and Teams Permissions
+    - We are excited to introduce an enhancement to User and Team Permissions.
+        - Users can now have `Admin`, `Manager`, or `Member` roles.
+            - The Manager role provides a subset of Admin permissions for global assets or settings but does not include the "Admin exemption to team roles."
+        - Teams can have specific permissions: `Editor`, `Author`, `Drafter`, `Viewer`, and `Reporter`.
+            - Each permission type includes restricted capabilities tailored to its role.
+        - Admins can now create special tokens that grant access exclusively to SCIM endpoints. These tokens allow customers to enable SCIM integrations with minimal access, ensuring the holder cannot access other endpoints or log in to the platform.
+
+- Improve Visibility of Datastore Teams
+    - Users can now view respective teams in the tree view footer. Depending on privileges, they can manage this field.
+    - Teams are also visible in the table and field context for improved collaboration and data transparency.
+
+#### General Fixes
+
+- Completeness Rounding
+    - Added two more decimal places to the Completeness metric in the Overview tab.
+        - Previously, percentages were being rounded up incorrectly.
+
+- "Is Replica Of" Check Validation
+    - Fixed a bug that occurred when users attempted to validate this check using the same container.
+
+- Global Search
+    - Fixed the label to better distinguish between Enrichment Datastores and Source Datastores.
+
+- General Fixes and Improvements.
+
 ### 2024.12.11 { id=2024.12.11 }
 
 #### Feature Enhancements
