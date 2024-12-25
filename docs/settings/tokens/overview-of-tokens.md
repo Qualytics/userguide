@@ -34,6 +34,7 @@ A modal window will appear providing the options for generating the token.
 
 1. **Name**: Enter the name for the Token ( e.g., DataAccessToken) 
 2. **Expiration**: Set the expiration period for the token (e.g., 30 days)
+3. **SCIM Administration Token**: If the SCIM Administration Token is checked, the token is restricted to SCIM endpoints only. If unchecked, it may allow broader access based on assigned permissions.
 
 ![enter-values](../../assets/tokens/enter-values-light-5.png#only-light)
 ![enter-values](../../assets/tokens/enter-values-dark-5.png#only-dark)
