@@ -142,6 +142,13 @@ A modal window will appear, providing the options to create the tag. Enter the r
 
 For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md#add-tag).
 
+## View Team
+
+By hovering over the information icon, users can view the assigned teams for enhanced collaboration and data transparency.
+
+![view-team](../assets/container/computed-field/team-light.png#only-light)
+![view-team](../assets/container/computed-field/team-dark.png#only-dark)
+
 ## Filter and Sort Fields
 
 Filter and Sort options allow you to organize your fields by various criteria, such as Name, Checks, Completeness, Created Date, and Tags. You can also apply filters to refine your list of fields based on Type and Tags
