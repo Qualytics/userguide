@@ -99,3 +99,13 @@ After clicking on the **Add** button, a flash message for successful operation w
     - Updating a computed table's query will trigger a profiling operation.      
     - Updating a computed file's select or where clause will trigger a profiling operation.  
     - When you create a computed table or file, a basic profile of up to 1000 records is automatically generated.
+
+## View Teams
+
+By hovering over the information icon, users can view the assigned teams for enhanced collaboration and data transparency.
+
+![team](../assets/datastores/add-computed-tables-files/team-light.png#only-light)
+![team](../assets/datastores/add-computed-tables-files/team-dark.png#only-dark)
+
+
+
