@@ -86,9 +86,9 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS         | ACTIONS       |
 |------|----------------|---------------|
-| 1️.  | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
-| 2️.  | Toggle Button | Toggle ON to  create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
-| 3️.  | Connector (Required) | Select **Snowflake** from the dropdown list. |
+| 1.  | Name (Required) | Specify the name of the datastore. (e.g., The specified name will appear on the datastore cards.) |
+| 2.  | Toggle Button | Toggle ON to  create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
+| 3.  | Connector (Required) | Select **Snowflake** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a New Connection
 
@@ -123,9 +123,9 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 |  REF.  |  FIELDS | ACTIONS |
 | ------ | ------- | ------- |
-| 1️. | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. 
-| 2️. | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
-| 3️. | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
+| 1. | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. 
+| 2. | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
+| 3. | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
 | 4 | Authentication | You can choose between Basic authentication or Keypair authentication for validating and securing the connection to your Snowflake instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Snowflake. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Keypair Authentication:** This method uses a combination of a private key and a corresponding public key for authentication. This is a more secure method compared to basic authentication, as it involves asymmetric cryptography <ul> <li>**Type:** Select "Keypair" from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li> <li>**Private Key:** Upload the private key file that will be used for authentication. This key is part of a public-private key pair used to securely authenticate the user.</li> <li>**Private Key Password (Optional):** Enter the password associated with the private key, if any </li> </ul>|
 | 5. | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Specify the database name to be accessed. |
 | 6. | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Define the schema within the database that should be used. |
@@ -230,10 +230,10 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 |  REF.  |  FIELDS | ACTIONS |
 | ------ | ------- | ------ |
-| 1️. | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. 
-| 2️. | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
-| 3️. | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
-| 4 | Authentication | You can choose between Basic authentication or Keypair authentication for validating and securing the connection to your Snowflake instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Snowflake. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Keypair Authentication:** This method uses a combination of a private key and a corresponding public key for authentication. This is a more secure method compared to basic authentication, as it involves asymmetric cryptography <ul> <li>**Type:** Select "Keypair" from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li> <li>**Private Key:** Upload the private key file that will be used for authentication. This key is part of a public-private key pair used to securely authenticate the user.</li> <li>**Private Key Password (Optional):** Enter the password associated with the private key, if any </li> </ul>|
+| 1. | [Account](https://docs.snowflake.com/en/user-guide/admin-account-identifier){:target="_blank"} (Required) | Define the account identifier to be used for accessing the Snowflake. 
+| 2. | [Role](https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles){:target="_blank"} (Required) | Specify the user role that grants appropriate access and permissions. |
+| 3. | [Warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview#overview-of-warehouses){:target="_blank"} (Required)| Provide the warehouse name that will be used for computing resources. |
+| 4. | Authentication | You can choose between Basic authentication or Keypair authentication for validating and securing the connection to your Snowflake instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Snowflake. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Keypair Authentication:** This method uses a combination of a private key and a corresponding public key for authentication. This is a more secure method compared to basic authentication, as it involves asymmetric cryptography <ul> <li>**Type:** Select "Keypair" from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Snowflake.</li> <li>**Private Key:** Upload the private key file that will be used for authentication. This key is part of a public-private key pair used to securely authenticate the user.</li> <li>**Private Key Password (Optional):** Enter the password associated with the private key, if any </li> </ul>|
 | 5. | [Database](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Specify the database name to be accessed. |
 | 6. | [Schema](https://docs.snowflake.com/en/sql-reference/ddl-database#database-schema-share-ddl){:target="_blank"} (Required) | Define the schema within the database that should be used. |
 | 7. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
@@ -274,8 +274,8 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1️.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files for metadata. |
-| 2.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
+| 1.  | Prefix (Required) | Add a prefix name to uniquely identify tables/files for metadata. |
+| 2.  | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
 **Step 3**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
 
