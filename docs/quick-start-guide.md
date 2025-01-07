@@ -184,14 +184,21 @@ It also offers search, sort, and filter functionality to help you efficiently fi
 ![explore-profiles](./assets/quick-start-guide/explore-profiles-light.png#only-light)
 ![explore-profiles](./assets/quick-start-guide/explore-profiles-dark.png#only-dark)
 
-### 4. Checks
+### 4. Observability
+
+Observability in the Explore section provides insights into platform data, enabling users to monitor volumes, metrics, trends, and anomalies. Organized into Volumetric and Metric checks, it offers heatmaps and customizable thresholds for efficient data management.
+
+![Observability](./assets/quick-start-guide/observability-light.png#only-light)
+![Observability](./assets/quick-start-guide/observability-dark.png#only-dark)
+
+### 5. Checks
 
 The Checks section provides an overview of all applied checks, including both inferred and authored checks, across all source datastores. This allows you to monitor and manage the rules ensuring your data quality.
 
 ![explore-checks](./assets/quick-start-guide/explore-checks-light.png#only-light)
 ![explore-checks](./assets/quick-start-guide/explore-checks-dark.png#only-dark)
 
-### 5. Anomalies
+### 6. Anomalies
 
 The Anomalies section gives an overview of all detected anomalies across your source datastores. This helps in quickly identifying and addressing any issues.
 
@@ -216,53 +223,54 @@ The export feature is an operation that writes metadata to a specified Enrichmen
 ![export-check-templates](./assets/quick-start-guide/export-check-templates-light.png#only-light)
 ![export-check-templates](./assets/quick-start-guide/export-check-templates-dark.png#only-dark)
 
-## Settings
-
-This section allows you to manage global configurations. You can configure various settings as explained below
-
-### 1. Tags
+## Tags
 
 The Tags allow users to categorize and organize entities effectively, while also providing the ability to assign weights for prioritization. They can drive notifications and downstream workflows, and users can configure tags, associate notifications based on Tags, and associate tags to specific properties.
 
 ![settings-tags](./assets/quick-start-guide/settings-tags-light.png#only-light)
 ![settings-tags](./assets/quick-start-guide/settings-tags-dark.png#only-dark)
 
-### 2. Notifications
+## Notifications
 
 You can set up notifications when an operation is completed (e.g.- catalog/profile/scan) or when anomalies are identified.
 
 ![settings-notifications](./assets/quick-start-guide/settings-notifications-light.png#only-light)
 ![settings-notfications](./assets/quick-start-guide/settings-notifications-dark.png#only-dark)
 
-### 3. Connection
+
+## Settings
+
+This section allows you to manage global configurations. You can configure various settings as explained below
+
+### 1. Connection
 
 Delete, edit, or add new datastore sources, ensuring efficient management of your configured datastores.
 
 ![settings-connection](./assets/quick-start-guide/settings-connections-light.png#only-light)
 ![settings-connection](./assets/quick-start-guide/settings-connections-dark.png#only-dark)
 
-### 4. Integration
-
-Configure necessary parameters to integrate external tools with the Qualytics dashboard.
-
-![settings-integrations](./assets/quick-start-guide/settings-integrations-light.png#only-light)
-![settings-integrations](./assets/quick-start-guide/settings-integrations-dark.png#only-dark)
-
-### 5. Security
+### 2. Security
 
 Delete, edit, or add new teams, and assign roles to users for better access control and management.
 
 ![settings-security](./assets/quick-start-guide/settings-security-light.png#only-light)
 ![settings-security](./assets/quick-start-guide/settings-security-dark.png#only-dark)
 
-### 6. Tokens
+### 3. Integration
+
+Configure necessary parameters to integrate external tools with the Qualytics dashboard.
+
+![settings-integrations](./assets/quick-start-guide/settings-integrations-light.png#only-light)
+![settings-integrations](./assets/quick-start-guide/settings-integrations-dark.png#only-dark)
+
+### 4. Tokens
 
 Create tokens to enable secure and direct interaction with the Qualytics API.
 
 ![settings-tokens](./assets/quick-start-guide/settings-tokens-light.png#only-light)
 ![settings-tokens](./assets/quick-start-guide/settings-tokens-dark.png#only-dark)
 
-### 7. Health
+### 5. Health
 
 This page provides an easy way to monitor the health of Qualytics deployment while also providing the option to restart the Analytics engine.
 
