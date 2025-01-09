@@ -93,7 +93,7 @@ For more details how to manage checks in datastore, please refer to the [**Manag
 
 In Qualytics, a variety of check rule types are provided to maintain data quality and integrity.These rules define specific criteria that data must meet, and checks apply these rules during the validation process.
 
-For more details about check rule types, please refer to the [**Rule Types Overview**](../checks/rule-types-overview.md).
+For more details about check rule types, please refer to the [**Rule Types Overview**](../checks/rule-types-overview.md) documentation.
 
 | Rule Type                                                                             | Description                                                                                        |
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
