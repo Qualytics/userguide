@@ -75,7 +75,7 @@ Integrating Atlan with Qualytics enhances your data management capabilities, all
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.  
 
 ![global-settings](../../assets/integrations/atlan/qualytics-global-settings-light.png#only-light)
-![global-settings](../../assets/integrations/atlan/qualytics-global-settings-section-dark.png#only-dark)
+![global-settings](../../assets/integrations/atlan/qualytics-global-settings-dark.png#only-dark)
 
 **Step 2:** You will be directed to the **Settings** page, then click on the **"Integration"** tab.
 
