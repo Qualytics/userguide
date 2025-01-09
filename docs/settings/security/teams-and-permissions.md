@@ -103,76 +103,108 @@ In Qualytics, every user is assigned roles: ```Admin```,```Manager``` and ```Mem
 
 ### Permissions
 
-System uses permissions to ensure tasks are managed securely and efficiently. Each role is designed with specific capabilities based on what the user needs to do. Roles range from full access for advanced management to basic, read-only access for monitoring. 
+Permissions decide what users can see, create, or manage based on their role. Each role is designed for specific tasks, giving users access to the tools and information they need without going beyond their limits. From Editors who manage advanced settings to Viewers with read-only access, these roles make it easy to use the system while keeping everything secure.
 
 ![permission](../../assets/security/permission-light.png#only-light)
-![permission](../../assets/security/permission-dark-.png#only-dark)
+![permission](../../assets/security/permission-dark.png#only-dark)
 
 #### Editor
 
-Editor role has the most advanced permissions, enabling users to manage datastore functions comprehensively. Editors can control enrichment, scoring, computed fields, operations, and more. However, they cannot add teams outside their access; only administrators can perform this task.
+Editor role allows users to manage datastore functions comprehensively. They can handle tasks such as controlling enrichment, scoring, computed fields, and operations.
 
 ![editor](../../assets/security/editor-light.png#only-light)
 ![editor](../../assets/security/editor-dark.png#only-dark)
 
-| Categories            | Functionality                                         |
-|-----------------------|-------------------------------------------------------|
-| Source Datastore      | Open, Add Datastore, Edit Settings, Switch Enrichment |
-| Enrichment            | Add Enrichment, Edit Enrichment, Edit Scoring, Add Computed |
-| Operations            | Run Operation, Manage Operations, Manage Scheduled Operations |
-| Field Context         | Edit, Delete                                         |
+| Feature | Operation | Can View/Can Run | Can Manage |
+| :---- | :---- | :---- | :---- |
+| **Datastoes** | Add Datastore |  | **✓** |
+|  | Edit Settings |  | **✓** |
+| **Enrichment** | Add Enrichment |  | **✓** |
+|  | Edit Enrichment |  | **✓** |
+| **Scoring** | Edit Scoring |  | **✓** |
+| **Computed Field** | Add Computed |  | **✓** |
+| **Operation** | Run Operation | **✓** | **✓** |
+|  | Manage Operation |  | **✓** |
+|  | Manage Scheduled Operation |  | **✓** |
+| **Profiles** | Add Computed |  | **✓** |
+|  | Delete Computed |  | **✓** |
+| **Field Context** | Edit Field Context |  | **✓** |
+|  | Delete Field Context |  | **✓** |
 
 #### Author
 
-Author role focuses on managing checks and their associated metadata. This role is essential for tasks like activating, validating, and editing checks but has limited access to datastore functionalities.
+Author role focuses on managing checks within the system. Users can activate, validate, change the status of checks, and edit their metadata. It is specifically designed for handling these functions efficiently.
 
 ![author](../../assets/security/author-light.png#only-light)
 ![author](../../assets/security/author-dark.png#only-dark)
 
-| Categories            | Functionality                                                   |
-|-----------------------|-----------------------------------------------------------------|
-| Source Datastore      | Checks, Activate, Validate, Change Status, Edit Metadata, Anomalies, Change Status |
-| Global Settings       | API only (ATM)                                           |
+| Feature | Functionality | Can View/ Can Run | Can Edit |
+| :---- | :---- | :---- | :---- |
+| **Source Datastore** | Checks |  | **✓** |
+|  | Activate Checks |  | **✓** |
+|  | Validate Checks |  | **✓** |
+|  | Change Status of Checks |  | **✓** |
+|  | Edit Metadata |  | **✓** |
+|  | Anomalies |  | **✓** |
+| **Anomalies** | Change Status of Anomalies |  | **✓** |
 
 #### Drafter
 
-Drafter role is designed for users who need to create and prepare checks without performing or finalizing them. This role focuses on adding and organizing content for future use.
+Drafter role is designed specifically for adding and saving data within the system. Users can create new, make edits to existing ones, and save their progress as drafts. It is focused on these basic functions without access to advanced features or management tasks.
 
 ![drafter](../../assets/security/drafter-light.png#only-light)
 ![drafter](../../assets/security/drafter-dark.png#only-dark)
 
-| Category            | Functionality           |
-|---------------------|-------------------------|
-| Source Datastore    | Open, Add Check         |
-| Profiles            | Add Check              |
-| Checks              | Create as Draft        |
-| Field Context       | Add Check              |
+| Feature | Functionality | Can View | Can Edit |
+| :---- | :---- | :---- | :---- |
+| **Source Datastore** | Open Datastore | **✓** |  |
+|  | Add Checks |  | **✓** |
+| **Profiles** | Add Check  |  | **✓** |
+| **Checks** | Create as Draft |  | **✓** |
+| **Field Context** | Add Check |  | **✓** |
 
 #### Viewer
 
-Viewer role provides read-only access to anomalies and allows users to add comments or create notes. This role is ideal for those who need to monitor activities without making changes.
+Viewer role is focused on viewing anomalies within the system and creating notes as needed. It offers read-only access while allowing users to add comments to document their observations.
 
 ![viewer](../../assets/security/viewer-light.png#only-light)
 ![viewer](../../assets/security/viewer-dark.png#only-dark)
 
-| Category            | Functionality                        |
-|---------------------|--------------------------------------|
-| Source Datastore    | Anomalies, Add Comment, Preview (container) |
-| Enrichment Datastore| View, Preview                       |
-| Explore             | Anomalies, Source Records           |
+| Features | Functionality | Can View | Can Edit |
+| :---- | :---- | :---- | :---- |
+| **Source Datastore** | Anomalies | **✓** |  |
+|  | Add Comment | **✓** |  |
+|  | Preview(Container) | **✓** |  |
+| **Enrichment Datastore** | View | **✓** |  |
+|  | Preview | **✓** |  |
+| **Explore** | Anomalies | **✓** |  |
+|  | Source Records | **✓** |  |
 
 #### Reporter
 
-Reporter role has extensive access to all app report information, including dashboards, overviews, and anomalies. Reporters can view various data contexts and generate analytical insights.
+Reporter role provides access to all report-related information, including dashboards, overviews, checks, anomalies, fields, containers, and datastores. It is intended for users who need to view and analyze data to generate reports.
 
 ![reporter](../../assets/security/reporter-light.png#only-light)
 ![reporter](../../assets/security/reporter-dark.png#only-dark)
 
-| Category            | Functionality                                                         |
-|---------------------|---------------------------------------------------------------------|
-| Source Datastore    | List, View, Overview, Activity, Profiles, Observability, Checks, Anomalies, Fields (container) |
-| Enrichment Datastore| List                                                                 |
-| Explore             | Insights, Activity, Profiles, Observability, Checks, Anomalies     |
+| Feature | Operation | Can View | Can Edit |
+| :---- | :---- | :---- | :---- |
+| **Source Datastore** | List | **✓** |  |
+|  | View | **✓** |  |
+|  | Overview | **✓** |  |
+|  | Activity | **✓** |  |
+|  | Profiles | **✓** |  |
+|  | Observability | **✓** |  |
+|  | Checks | **✓** |  |
+|  | Anomalies | **✓** |  |
+|  | Fields(Containers)  | **✓** |  |
+| **Enrichment Datastores** | List | **✓** |  |
+| **Explore** | Insights | **✓** |  |
+|  | Activity | **✓** |  |
+|  | Profiles | **✓** |  |
+|  | Observability | **✓** |  |
+|  | Checks | **✓** |  |
+|  | Anomalies | **✓** |  |
 
 ![team](../../assets/security/det-light.png#only-light)
 ![team](../../assets/security/det-dark.png#only-dark)
