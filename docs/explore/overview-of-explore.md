@@ -1,7 +1,6 @@
 # Explore
 
-**Explore** page in  Qualytics is where you can easily view and manage all your data. It provides easy access to important features through tabs like [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), **Observability**, [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md). Each tab shows a different part of your data, such as its quality, activities, structure, checks, and issues. You can sort and filter the data by datastore and time frame, making it easier to track performance, spot problems, and take action. The Explore section helps you manage and understand your data all in one place.
-
+**Explore** page in  Qualytics is where you can easily view and manage all your data. It provides easy access to important features through tabs like [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), [**Observability**](../explore/observability.md), [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md). Each tab shows a different part of your data, such as its quality, activities, structure, checks, and issues. You can sort and filter the data by datastore and time frame, making it easier to track performance, spot problems, and take action. The Explore section helps you manage and understand your data all in one place.
 
 Let’s get started 🚀
 
@@ -39,7 +38,7 @@ For more details on Profiles, please refer to the [**Profiles**](../explore/prof
 
 Observability tab gives users an easy way to track changes in data volume over time. It introduces two types of checks: **Volumetric** and **Metric.** The Volumetric check automatically monitors the number of rows in a table and flags unusual changes, while the Metric check focuses on specific fields, providing more detailed insights from scan operations. Together, these tools help users spot data anomalies quickly and keep their data accurate.
 
-For more details on Observability, please refer to the **Observability** documentation.
+For more details on Observability, please refer to the [**Observability**](../explore/observability.md) documentation.
 
 # Checks
 
