@@ -29,7 +29,7 @@ Once the form is completed, it's necessary to test the connection to verify if Q
 !!! warning 
     Qualytics does not support `Presto` connector as an enrichment datastore, but you can point to a different connector.
 
-    - To configure an Enrichment Datastore in another moment, please refer [to this section](enrichment/enrichment-datastore-creation/)
+    - To configure an Enrichment Datastore in another moment, please refer [to this section](/enrichment/enrichment-datastore-creation/)
 - If you have an `Enrichment Datastore` already setup, you can link it by enable to use an existing Enrichment Datastore and select from the list
 
 - If you don't have an `Enrichment Datastore`, you can create one at the same page.
