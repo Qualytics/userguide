@@ -21,14 +21,12 @@ Legend:
 |:-----------------------------|:-----------|:---------|:----------|:---------|:--------------|
 | Delete Source Datastore      | -          | -        | -         | -        | -             |
 | View Source Datastore        | X          | X        | X         | X        | X             |
-| Edit Settings                | -          | -        | -         | -        | X             |
-| Switch Enrichment            | -          | -        | -         | -        | X             |
-| Edit Scoring                 | -          | -        | -         | -        | X             |
+| Edit Datastore Settings      | -          | -        | -         | -        | X             |
+| Preview Source Datastore     | -          | X        | X         | X        | X             |
 | Create/Delete Computed Asset | -          | -        | -         | -        | X             |
-| Run Operation                | -          | -        | -         | -        | X             |
 | View Activity                | X          | X        | X         | X        | X             |
-| Manage Operations            | -          | -        | -         | -        | X             |
-| Manage Schedule Operations   | -          | -        | -         | -        | X             |
+| Run & Manage Operations      | -          | -        | -         | -        | X             |
+| Schedule Operations          | -          | -        | -         | -        | X             |
 | View Profiles                | X          | X        | X         | X        | X             |
 | Delete Profiles              | -          | -        | -         | -        | X             |
 | View Checks                  | X          | X        | X         | X        | X             |
@@ -41,7 +39,6 @@ Legend:
 | View Anomaly Source Records  | -          | X        | X         | X        | X             |
 | Change Anomaly Status        | -          | -        | -         | X        | X             |
 | Add Comment to Anomaly       | -          | X        | X         | X        | X             |
-| Preview Source Datastore     | -          | X        | X         | X        | X             |
 | Delete Enrichment Datastore  | -          | -        | -         | -        | -             |
 | View Enrichment Datastore    | -          | X        | X         | X        | X             |
 | Preview Enrichment Datastore | -          | X        | X         | X        | X             |
