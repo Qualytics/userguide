@@ -22,7 +22,6 @@ Legend:
 
 | Permission    | Action                              | Reporter   | Viewer   | Drafter   | Author   | Editor        |
 |:--------------|:------------------------------------|:-----------|:---------|:----------|:---------|:--------------|
-|               |                                     |            |          |           |          |               |
 | Create        |                                     | -          | -        | -         | -        | Managers Only |
 | Delete        |                                     | -          | -        | -         | -        | -             |
 | List          |                                     | X          | X        | X         | X        | X             |
@@ -57,21 +56,6 @@ Legend:
 |               | Change Status                       | -          | -        | -         | X        | X             |
 |               | Add Comment                         | -          | X        | X         | X        | X             |
 | Preview       |                                     | -          | X        | X         | X        | X             |
-|               |                                     |            |          |           |          |               |
-|               |                                     |            |          |           |          |               |
-| Create        |                                     | -          | -        | -         | -        | Managers Only |
-| Delete        |                                     | -          | -        | -         | -        | -             |
-| List          |                                     | X          | X        | X         | X        | X             |
-| View          |                                     | -          | X        | X         | X        | X             |
-| Preview       |                                     | -          | X        | X         | X        | X             |
-|               |                                     |            |          |           |          |               |
-| Insights      |                                     | X          | X        | X         | X        | X             |
-| Activity      |                                     | X          | X        | X         | X        | X             |
-| Profiles      |                                     | X          | X        | X         | X        | X             |
-| Observability |                                     | X          | X        | X         | X        | X             |
-| Checks        |                                     | X          | X        | X         | X        | X             |
-| Anomalies     |                                     | X          | X        | X         | X        | X             |
-|               | ViewSource Records                  | -          | X        | X         | X        | X             |
 
 ### Enrichment Datastores
 
