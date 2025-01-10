@@ -6,14 +6,17 @@ site_author: Qualytics Team
 repo_url: https://github.com/Qualytics/userguide
 repo_name: GitHub
 edit_uri: edit/main/docs/
-copyright: Copyright &copy; 2024 Qualytics
+copyright: Copyright &copy; 2025 Qualytics
+
+validation:
+  links:
+    absolute_links: relative_to_docs
 
 # Page tree
 nav:
-  - Home: https://qualytics.ai
   - Introduction: index.md
-    # new page tree structure start 
-  - Getting Started:
+    # new page tree structure start
+  - Reference:
     - onboarding.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
@@ -41,7 +44,7 @@ nav:
         - add-datastores/timescale-db.md
         - add-datastores/trino.md
         - add-datastores/dremio.md
-      - DFS Datastores: 
+      - DFS Datastores:
         - add-datastores/overview-of-a-dfs-datastore.md
         - add-datastores/amazon-s3.md
         - add-datastores/azure-blob-storage.md
@@ -49,9 +52,9 @@ nav:
         - add-datastores/google-cloud-storage.md
         - add-datastores/qfs.md
       - connections/overview-of-a-connection.md
-    # new page tree structure end 
+    # new page tree structure end
     - Source Datastores:
-      - Right Click Options: source-datastore/right-click-options.md 
+      - Right Click Options: source-datastore/right-click-options.md
       - Link Enrichment: source-datastore/associate-enrichment-datastore.md
       - Assign Tags: source-datastore/assign-tags.md
       - Catalog: source-datastore/catalog.md
@@ -63,7 +66,7 @@ nav:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Add Enrichment: enrichment/enrichment-datastore-creation.md
-      
+
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
@@ -76,7 +79,7 @@ nav:
         - Grouping: container/overview-of-grouping.md
         - General: container/overview-of-infer-data-type.md
     - Weight:
-      - Weight Mechanism: weight/weighting.md 
+      - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
       - Manage Checks: checks/manage-checks.md
@@ -134,8 +137,8 @@ nav:
       - Check Templates: checks/checks-template.md
       - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
       - Export Check Templates: checks/export-check-templates.md
-    - Observability: 
-      - Overview: observability/observability.md     
+    - Observability:
+      - Overview: observability/observability.md
     - Anomalies:
       - Anomaly Analysis: anomalies/anomalies.md
       - Manage Anomalies: anomalies/manage-anomalies.md
@@ -157,16 +160,19 @@ nav:
         - notifications/notification-services/pagerduty.md
         - notifications/notification-services/slack.md
         - notifications/notification-services/webhook.md
-    - Tags: 
+    - Tags:
       - Overview: tags/overview-of-tag.md
     - Settings:
       - Connections: settings/connections/manage-connections.md
-      - Integrations: 
+      - Integrations:
         - Overview: settings/integrations/overview.md
         - Atlan: settings/integrations/atlan.md
         - Alation: settings/integrations/alation.md
         - External Tag Propagation: settings/integrations/external-tag-propagation.md
-      - Security: settings/security/teams-and-permissions.md
+      - Security:
+        - Overview: settings/security/overview.md
+        - Team Permissions: settings/security/team-permissions.md
+        - Directory Sync: settings/security/directory-sync.md
       - Tokens: settings/tokens/overview-of-tokens.md
       - Health: settings/health/overview-of-health.md
     - Qualytics CLI:
@@ -182,7 +188,7 @@ nav:
       - dfs-globbing/how-dfs-filename-globbing-works.md
 
   # - glossary.md
-  - API reference: https://demo.qualytics.io/api/docs
+  - API docs: https://demo.qualytics.io/api/docs
   - changelog.md
 
 extra_css:
@@ -209,6 +215,7 @@ theme:
   logo: assets/Logo.png
   favicon: assets/Q_sm_logo.png
   name: material
+  custom_dir: overrides
 
   features:
     - navigation.footer
@@ -222,8 +229,9 @@ theme:
     - content.action.edit
     - content.action.view
     - content.code.copy
+    - content.code.annotate
+    - content.tables.sortable  # Adds horizontal scroll only to table
     # - content.tabs.link
-
 
 markdown_extensions:
   - pymdownx.tabbed:
@@ -279,6 +287,7 @@ plugins:
       exclude:
 
 extra:
+  homepage: https://qualytics.ai
   analytics:
     provider: google
     property: G-46N5E3NXG0
