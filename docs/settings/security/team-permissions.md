@@ -18,58 +18,83 @@ Legend:
 * `-` Does not have permission to perform the Action
 
 
-  | Feature               | Permission    | Action                              | Reporter   | Viewer   | Drafter   | Author   | Editor        |
-  |:----------------------|:--------------|:------------------------------------|:-----------|:---------|:----------|:---------|:--------------|
-  | Source Datastores     |            |                                     |         |       |        |       |            |
-  |                    | Create        |                                     | -          | -        | -         | -        | Managers Only |
-  |                    | Delete        |                                     | -          | -        | -         | -        | -             |
-  |                    | List          |                                     | X          | X        | X         | X        | X             |
-  |                    | View          |                                     | X          | X        | X         | X        | X             |
-  |                    | Open          |                                     |         |       |        |       |            |
-  |                    |            | Edit Settings                       | -          | -        | -         | -        | X             |
-  |                    |            | Switch Enrichment                   | -          | -        | -         | -        | X             |
-  |                    |            | Add Enrichment                      | -          | -        | -         | -        | Managers Only |
-  |                    |            | Edit Scoring                        | -          | -        | -         | -        | X             |
-  |                    |            | Create/Delete Computed Asset        | -          | -        | -         | -        | X             |
-  |                    |            | Run Operation                       | -          | -        | -         | -        | X             |
-  |                    | Overview      |                                     | X          | X        | X         | X        | X             |
-  |                    | Activity      |                                     |         |       |        |       |            |
-  |                    |            | View                                | X          | X        | X         | X        | X             |
-  |                    |            | Manage Operations                   | -          | -        | -         | -        | X             |
-  |                    |            | Manage Schedule Operations          | -          | -        | -         | -        | X             |
-  |                    | Profiles      |                                     |         |       |        |       |            |
-  |                    |            | View                                | X          | X        | X         | X        | X             |
-  |                    |            | Delete                              | -          | -        | -         | -        | X             |
-  |                    | Observability |                                     |         |       |        |       |            |
-  |                    |            | View                                | X          | X        | X         | X        | X             |
-  |                    | Checks        |                                     |         |       |        |       |            |
-  |                    |            | View                                | X          | X        | X         | X        | X             |
-  |                    |            | Create                              | -          | -        | X         | X        | X             |
-  |                    |            | Save to draft                       | -          | -        | X         | X        | X             |
-  |                    |            | Restore to draft                    | -          | -        | X         | X        | X             |
-  |                    |            | Activate / Validate / Change Status | -          | -        | -         | X        | X             |
-  |                    |            | Edit Metadata                       | -          | -        | -         | X        | X             |
-  |                    | Anomalies     |                                     |         |       |        |       |            |
-  |                    |            | View                                | X          | X        | X         | X        | X             |
-  |                    |            | View Source Records                 | -          | X        | X         | X        | X             |
-  |                    |            | Change Status                       | -          | -        | -         | X        | X             |
-  |                    |            | Add Comment                         | -          | X        | X         | X        | X             |
-  |                    | Preview       |                                     | -          | X        | X         | X        | X             |
-  |                    |            |                                     |         |       |        |       |            |
-  | Enrichment Datastores |            |                                     |         |       |        |       |            |
-  |                    | Create        |                                     | -          | -        | -         | -        | Managers Only |
-  |                    | Delete        |                                     | -          | -        | -         | -        | -             |
-  |                    | List          |                                     | X          | X        | X         | X        | X             |
-  |                    | View          |                                     | -          | X        | X         | X        | X             |
-  |                    | Preview       |                                     | -          | X        | X         | X        | X             |
-  | Explore               |            |                                     |         |       |        |       |            |
-  |                    | Insights      |                                     | X          | X        | X         | X        | X             |
-  |                    | Activity      |                                     | X          | X        | X         | X        | X             |
-  |                    | Profiles      |                                     | X          | X        | X         | X        | X             |
-  |                    | Observability |                                     | X          | X        | X         | X        | X             |
-  |                    | Checks        |                                     | X          | X        | X         | X        | X             |
-  |                    | Anomalies     |                                     | X          | X        | X         | X        | X             |
-  |                    |            | View Source Records                 | -          | X        | X         | X        | X             |
+### Source Datastores
+
+| Permission    | Action                              | Reporter   | Viewer   | Drafter   | Author   | Editor        |
+|:--------------|:------------------------------------|:-----------|:---------|:----------|:---------|:--------------|
+|               |                                     |            |          |           |          |               |
+| Create        |                                     | -          | -        | -         | -        | Managers Only |
+| Delete        |                                     | -          | -        | -         | -        | -             |
+| List          |                                     | X          | X        | X         | X        | X             |
+| View          |                                     | X          | X        | X         | X        | X             |
+| Open          |                                     |            |          |           |          |               |
+|               | Edit Settings                       | -          | -        | -         | -        | X             |
+|               | Switch Enrichment                   | -          | -        | -         | -        | X             |
+|               | Add Enrichment                      | -          | -        | -         | -        | Managers Only |
+|               | Edit Scoring                        | -          | -        | -         | -        | X             |
+|               | Create/Delete Computed Asset        | -          | -        | -         | -        | X             |
+|               | Run Operation                       | -          | -        | -         | -        | X             |
+| Overview      |                                     | X          | X        | X         | X        | X             |
+| Activity      |                                     |            |          |           |          |               |
+|               | View                                | X          | X        | X         | X        | X             |
+|               | Manage Operations                   | -          | -        | -         | -        | X             |
+|               | Manage Schedule Operations          | -          | -        | -         | -        | X             |
+| Profiles      |                                     |            |          |           |          |               |
+|               | View                                | X          | X        | X         | X        | X             |
+|               | Delete                              | -          | -        | -         | -        | X             |
+| Observability |                                     |            |          |           |          |               |
+|               | View                                | X          | X        | X         | X        | X             |
+| Checks        |                                     |            |          |           |          |               |
+|               | View                                | X          | X        | X         | X        | X             |
+|               | Create                              | -          | -        | X         | X        | X             |
+|               | Save to draft                       | -          | -        | X         | X        | X             |
+|               | Restore to draft                    | -          | -        | X         | X        | X             |
+|               | Activate / Validate / Change Status | -          | -        | -         | X        | X             |
+|               | Edit Metadata                       | -          | -        | -         | X        | X             |
+| Anomalies     |                                     |            |          |           |          |               |
+|               | View                                | X          | X        | X         | X        | X             |
+|               | View Source Records                 | -          | X        | X         | X        | X             |
+|               | Change Status                       | -          | -        | -         | X        | X             |
+|               | Add Comment                         | -          | X        | X         | X        | X             |
+| Preview       |                                     | -          | X        | X         | X        | X             |
+|               |                                     |            |          |           |          |               |
+|               |                                     |            |          |           |          |               |
+| Create        |                                     | -          | -        | -         | -        | Managers Only |
+| Delete        |                                     | -          | -        | -         | -        | -             |
+| List          |                                     | X          | X        | X         | X        | X             |
+| View          |                                     | -          | X        | X         | X        | X             |
+| Preview       |                                     | -          | X        | X         | X        | X             |
+|               |                                     |            |          |           |          |               |
+| Insights      |                                     | X          | X        | X         | X        | X             |
+| Activity      |                                     | X          | X        | X         | X        | X             |
+| Profiles      |                                     | X          | X        | X         | X        | X             |
+| Observability |                                     | X          | X        | X         | X        | X             |
+| Checks        |                                     | X          | X        | X         | X        | X             |
+| Anomalies     |                                     | X          | X        | X         | X        | X             |
+|               | ViewSource Records                  | -          | X        | X         | X        | X             |
+
+### Enrichment Datastores
+
+| Permission    | Action                              | Reporter   | Viewer   | Drafter   | Author   | Editor        |
+|:--------------|:------------------------------------|:-----------|:---------|:----------|:---------|:--------------|
+| Create        |                                     | -          | -        | -         | -        | Managers Only |
+| Delete        |                                     | -          | -        | -         | -        | -             |
+| List          |                                     | X          | X        | X         | X        | X             |
+| View          |                                     | -          | X        | X         | X        | X             |
+| Preview       |                                     | -          | X        | X         | X        | X             |
+
+### Explore
+
+| Permission    | Action                              | Reporter   | Viewer   | Drafter   | Author   | Editor        |
+|:--------------|:------------------------------------|:-----------|:---------|:----------|:---------|:--------------|
+| Insights      |                                     | X          | X        | X         | X        | X             |
+| Activity      |                                     | X          | X        | X         | X        | X             |
+| Profiles      |                                     | X          | X        | X         | X        | X             |
+| Observability |                                     | X          | X        | X         | X        | X             |
+| Checks        |                                     | X          | X        | X         | X        | X             |
+| Anomalies     |                                     | X          | X        | X         | X        | X             |
+|               | View Source Records                 | -          | X        | X         | X        | X             |
+
 
 ## Add Team
 
