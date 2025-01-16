@@ -5,6 +5,54 @@ hide:
 
 # Release Notes
 
+### 2025.01.15 { id=2025.01.15 }
+
+#### Feature Enhancements
+
+- Flows
+    - Introducing Flows: Users can now create automated pipelines by chaining actions and configuring triggers based on predefined events and filters.
+        - Triggers: Configurable based on events, filters, and operation conditions.
+        - Actions: Include notifications (Email, Slack, PagerDuty, etc.) and operations (catalog, profile, and scan).
+        - Real-Time Execution: Monitor execution history and real-time progress in the Flow Executions tab.
+
+    - Setup Made Simple
+        - Add and configure flows using the “Add Flow” button in the top-right corner.
+        - Deactivate, delete, or edit flows via the vertical ellipses or node configurations.
+
+    - Enhanced Triggering Options
+        - Operations Complete, Anomalous Table/File Detected, and Anomaly Detected triggers provide flexible, event-driven automation.
+        - Fine-tune triggers using filters like tags, rule types, or anomaly weights.
+
+    - Diverse Action Support
+        - Notify through in-app messages, Emails, Slack, Microsoft Teams, PagerDuty, and custom HTTP actions
+        - Trigger operational tasks across cataloging, profiling, and scanning.
+
+    - Flow Identification on Activity Tab
+        - Operations executed by flows are marked in the new `Flow` column, displaying the associated flow name.
+        - Users can navigate directly to the flow execution view from this tab.
+
+#### General Fixes
+
+- Duplicate Anomalies on Scan Schedule Operations
+    - Fixed an issue where duplicate anomalies were not being archived during scan operations despite user selection.
+
+- BigQuery Message Size
+    - Enhanced default batch insertion size to improve performance and reliability.
+
+- Anomalous Record Integer out of Range
+    - Updated check metrics to use BigInteger, addressing large value handling.
+
+- Fix Last Asserted Date
+    - Resolved inconsistencies in the Last Asserted Date logic for partition and container scans.
+
+- General Fixes and Improvements.
+
+#### Breaking Changes
+
+- Notification Rules Replaced by Flows.
+    - Existing notification rules have been migrated to Flows and will continue to function as before.
+    - For new notifications the users must create a flow leveraging the Flows functionality.
+
 ### 2024.12.23 { id=2024.12.23 }
 
 #### Feature Enhancements
