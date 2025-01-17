@@ -191,7 +191,118 @@ After modify the flow page a warning message will show that changes were made an
 
 ## Edit a Flow
 
+You can edit an existing flow. 
+
+**Step 1:** Click on the selected flow.
+
+![flows-edit-flow-1](../assets/flows/overview/flows-edit-flow-1-light.png#only-light)
+![flows-edit-flow-1](../assets/flows/overview/flows-edit-flow-1-dark.png#only-dark)
+
+
+**Step 2:** Change the nodes that you want.
+
+![flows-edit-flow-2](../assets/flows/overview/flows-edit-flow-2-light.png#only-light)
+![flows-edit-flow-2](../assets/flows/overview/flows-edit-flow-2-dark.png#only-dark)
+
+
+**Step 3:** Publish the flow.
+
+![flows-edit-flow-3](../assets/flows/overview/flows-edit-flow-3-light.png#only-light)
+![flows-edit-flow-3](../assets/flows/overview/flows-edit-flow-3-dark.png#only-dark)
+
+
 ## Deactivate a Flow
+
+In flows we can deactivate a flow to be trigger.
+
+### In Flows page
+
+**Step 1:** Click on the vertical ellipses button.
+
+![flows-ellipses-button](../assets/flows/overview/flows-ellipses-button-light.png#only-light)
+![flows-ellipses-button](../assets/flows/overview/flows-ellipses-button-dark.png#only-dark)
+
+**Step 2:** Select the "**Deactivate**" option.
+
+![flows-deactivate-1](../assets/flows/overview/flows-deactivate-1-light.png#only-light)
+![flows-deactivate-1](../assets/flows/overview/flows-deactivate-1-dark.png#only-dark)
+
+**Step 3:** You can see a notification message that the flow is deactivated. Also, the Flow icon color will change to gray.
+
+![flows-deactivate-2](../assets/flows/overview/flows-deactivate-2-light.png#only-light)
+![flows-deactivate-2](../assets/flows/overview/flows-deactivate-2-dark.png#only-dark)
+
+### Editing a flow
+
+**Step 1:** Click on Flow node
+
+![flows-deactivate-3](../assets/flows/overview/flows-deactivate-3-light.png#only-light)
+![flows-deactivate-3](../assets/flows/overview/flows-deactivate-3-dark.png#only-dark)
+
+**Step 2:** Mark the "**Deactivated**" checkbox
+
+![flows-deactivate-4](../assets/flows/overview/flows-deactivate-4-light.png#only-light)
+![flows-deactivate-4](../assets/flows/overview/flows-deactivate-4-dark.png#only-dark)
+
+**Step 3:** Save the Flow node form.
+
+![flows-deactivate-5](../assets/flows/overview/flows-deactivate-5-light.png#only-light)
+![flows-deactivate-5](../assets/flows/overview/flows-deactivate-5-dark.png#only-dark)
+
+**Step 4:** Click on "**Publish**" button to save the flow.
+
+![flows-deactivate-6](../assets/flows/overview/flows-deactivate-6-light.png#only-light)
+![flows-deactivate-6](../assets/flows/overview/flows-deactivate-6-dark.png#only-dark)
 
 ## Delete a Flow
 
+You can delete any flow operation.
+
+!!! warning
+    This action cannot be undone.
+    Any operations triggered by this flow will remain, but their link to the flow execution will be removed
+
+
+### In Flows page
+
+**Step 1:** Click on the vertical ellipses button
+
+![flows-ellipses-button](../assets/flows/overview/flows-ellipses-button-light.png#only-light)
+![flows-ellipses-button](../assets/flows/overview/flows-ellipses-button-dark.png#only-dark)
+
+**Step 2:** Select the "**Delete**" option.
+
+![flows-delete-1](../assets/flows/overview/flows-delete-1-light.png#only-light)
+![flows-delete-1](../assets/flows/overview/flows-delete-1-dark.png#only-dark)
+
+**Step 3:** An alert notification will show confirming that you want to delete. Click on the "**Delete**" button.
+
+![flows-delete-2](../assets/flows/overview/flows-delete-2-light.png#only-light)
+![flows-delete-2](../assets/flows/overview/flows-delete-2-dark.png#only-dark)
+
+**Step 4:** You can see a notification message that the flow is deleted.
+
+![flows-delete-3](../assets/flows/overview/flows-delete-3-light.png#only-light)
+![flows-delete-3](../assets/flows/overview/flows-delete-3-dark.png#only-dark)
+
+### Editing a flow
+
+**Step 1:** Click on "**Settings**" button
+
+![flows-delete-4](../assets/flows/overview/flows-delete-4-light.png#only-light)
+![flows-delete-4](../assets/flows/overview/flows-delete-4-dark.png#only-dark)
+
+**Step 2:** Select the "**Delete**" option
+
+![flows-delete-5](../assets/flows/overview/flows-delete-5-light.png#only-light)
+![flows-delete-5](../assets/flows/overview/flows-delete-5-dark.png#only-dark)
+
+**Step 3:** An alert notification will show confirming that you want to delete. Click on the "**Delete**" button.
+
+![flows-delete-6](../assets/flows/overview/flows-delete-6-light.png#only-light)
+![flows-delete-6](../assets/flows/overview/flows-delete-6-dark.png#only-dark)
+
+**Step 4:** You will be redirected to Flows page and see a notification message that the flow is deleted.
+
+![flows-delete-3](../assets/flows/overview/flows-delete-3-light.png#only-light)
+![flows-delete-3](../assets/flows/overview/flows-delete-3-dark.png#only-dark)
