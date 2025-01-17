@@ -1,4 +1,4 @@
-# Flows: Overview
+# Flows Overview
 
 Flows in Qualytics allow users to create pipelines by chaining actions and configuring how they are trigerred. Triggers can be set based on predefined events and filters, offering a flexible and efficient way to automate processes. These actions can be notifications or operations, allowing users to inform various notification channels or execute tasks based on specific operations.
 
@@ -11,33 +11,35 @@ Log in to your Qualytics account and click on the "**Flows**" button on the left
 ![flows-icon](../assets/flows/overview/flows-icon-light.png#only-light)
 ![flows-icon](../assets/flows/overview/flows-icon-dark.png#only-dark)
 
-## Flow Page
+## Definitions
 
-Here, you can view a list of all the flow you've added to the system. From this interface, you can easily manage (add, deactivate, or delete) your flow as needed.
+This section provides an overview of all the flows you’ve added to the system. For each flow, you can view key details, including its title, description, trigger type (such as Operation Completes, Anomalous Table or File Detected, Anomaly Detected, or Manual), associated actions, and the last time it was triggered.
+
+From here, you can easily manage your flows—add new ones, deactivate those you’re not using, or delete them when they’re no longer needed.
 
 ![flows-page](../assets/flows/overview/flows-page-light.png#only-light)
 ![flows-page](../assets/flows/overview/flows-page-dark.png#only-dark)
 
 ### Search a Flow
 
-Also you can search the flow name using the **Search Box**
+You can quickly find a flow by typing its name in the **Search Box**.
 
 ![flows-page-searchbox](../assets/flows/overview/flows-page-searchbox-light.png#only-light)
 ![flows-page-searchbox](../assets/flows/overview/flows-page-searchbox-dark.png#only-dark)
 
 !!! tip
-    The Search box only searches by flow name. The other flow data, like ID or description will not bring the expected results.
+    The search box only looks for flow names. Searching by other details, like ID or description, won’t return any results.
 
-### Sort by Flow List
+### Sort the Flow List
 
-And sort the list by **Name** (ascending or descending) or **Creation Date** (ascending or descending)
+Easily sort the list of flows by **Name** or **Creation Date** in either `ascending` or `descending` order.
 
 ![flows-page-filter](../assets/flows/overview/flows-page-filter-light.png#only-light)
 ![flows-page-filter](../assets/flows/overview/flows-page-filter-dark.png#only-dark)
 
 ## Add new Flow
 
-**Setop 1:** Click on the "**Add Flow**" button located in the top right corner of the application. 
+**Step 1:** Click on the "**Add Flow**" button located in the top right corner of the application. 
 
 ![flows-add-new-item-1](../assets/flows/overview/flows-add-new-item-1-light.png#only-light)
 ![flows-add-new-item-1](../assets/flows/overview/flows-add-new-item-2-dark.png#only-dark)
