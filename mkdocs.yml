@@ -153,6 +153,7 @@ nav:
     - Flows:
       - Overview: flows/overview.md
       - Executions: flows/executions.md
+      - Actions: flows/actions.md
     - Notifications:
       - Overview: notifications/overview-of-a-notification.md
       - Manage Notifications: notifications/managing-notifications.md
