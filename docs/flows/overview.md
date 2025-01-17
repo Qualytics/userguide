@@ -37,12 +37,24 @@ Easily sort the list of flows by **Name** or **Creation Date** in either `ascend
 ![flows-page-filter](../assets/flows/overview/flows-page-filter-light.png#only-light)
 ![flows-page-filter](../assets/flows/overview/flows-page-filter-dark.png#only-dark)
 
+### Flow Status
+
+It's possible to identify the Flow status just checking the flow icon color.
+
+![flows-flow-status](../assets/flows/overview/flows-flow-status-light.png#only-light)
+![flows-flow-status](../assets/flows/overview/flows-flow-status-dark.png#only-dark)
+
+| Color | Description |
+|-------|--------|
+| **Blue** | Active. |
+| **Gray** | Deactive. |
+
 ## Add new Flow
 
 **Step 1:** Click on the "**Add Flow**" button located in the top right corner of the application. 
 
 ![flows-add-new-item-1](../assets/flows/overview/flows-add-new-item-1-light.png#only-light)
-![flows-add-new-item-1](../assets/flows/overview/flows-add-new-item-2-dark.png#only-dark)
+![flows-add-new-item-1](../assets/flows/overview/flows-add-new-item-1-dark.png#only-dark)
 
 After being redirected them to the Add Flows page you can see 2 nodes "**Flow**" and "**Trigger**". 
 
@@ -56,7 +68,7 @@ After being redirected them to the Add Flows page you can see 2 nodes "**Flow**"
 ![flows-setup-flow-node-1](../assets/flows/overview/flows-setup-flow-node-1-light.png#only-light)
 ![flows-setup-flow-node-1](../assets/flows/overview/flows-setup-flow-node-1-dark.png#only-dark)
 
-**Step 2:** Fill out the Flow node form. After finishing the required fields, click on "**Save**" button.
+**Step 2:** Fill out the Flow node form.
 
 ![flows-setup-flow-node-2](../assets/flows/overview/flows-setup-flow-node-2-light.png#only-light)
 ![flows-setup-flow-node-2](../assets/flows/overview/flows-setup-flow-node-2-dark.png#only-dark)
@@ -68,7 +80,7 @@ After being redirected them to the Add Flows page you can see 2 nodes "**Flow**"
 | **Deactivated** | If checked this will deactivate this flow. The flow item will not until user uncheck this field  |
 
 !!! warning
-    * Required field
+    \* Required field
 
 **Step 3:** After finishing the required fields, click on "**Save**" button.
 
@@ -167,4 +179,19 @@ After being redirected them to the Add Flows page you can see 2 nodes "**Flow**"
 
 ### Publishing
 
-After finishing to create the flow the user must save this flow clicking on "**Publish**" button.
+After finishing to create the flow the user must save this flow clicking on "**Publish**" button. Otherwise this flow will be discarded when user leaves this page.
+
+![flows-setup-action-3](../assets/flows/overview/flows-flow-publish-light.png#only-light)
+![flows-setup-action-3](../assets/flows/overview/flows-flow-publish-dark.png#only-dark)
+
+After modify the flow page a warning message will show that changes were made and is not published yet.
+
+![flows-setup-action-3](../assets/flows/overview/flows-flow-not-saved-light.png#only-light)
+![flows-setup-action-3](../assets/flows/overview/flows-flow-not-saved-dark.png#only-dark)
+
+## Edit a Flow
+
+## Deactivate a Flow
+
+## Delete a Flow
+
