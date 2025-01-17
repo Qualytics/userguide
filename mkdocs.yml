@@ -150,6 +150,9 @@ nav:
       - Observability: explore/observability.md
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
+    - Flows:
+      - Overview: flows/overview.md
+      - Executions: flows/executions.md
     - Notifications:
       - Overview: notifications/overview-of-a-notification.md
       - Manage Notifications: notifications/managing-notifications.md
