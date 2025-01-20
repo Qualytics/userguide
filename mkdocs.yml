@@ -19,7 +19,6 @@ nav:
   - Using the Platform:
     - onboarding.md
     - quick-start-guide.md
-    - technical-quick-start-guide.md
     - web-app.md
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
