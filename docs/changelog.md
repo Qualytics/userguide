@@ -5,6 +5,23 @@ hide:
 
 # Release Notes
 
+### 2024.01.20 { id=2024.12.20 }
+
+#### Feature Enhancements
+
+- Enhanced behavior for "All" in Schedule Operations
+    - The "All" option in Schedule Operations has been updated to include future containers automatically. Previously, if you created a schedule with the "All" option and added new tables or containers later, the schedule would not include these new additions.
+
+- Validate Button for Enrichment Datastore Connections
+    - Users can now validate their data when creating or editing an enrichment datastore connection, improving reliability and confidence in datastore setups.
+
+#### General Fixes
+
+- Inaccurate Check Assertion Details
+    - Resolved an issue where some checks were being marked as never asserted despite producing anomalies, ensuring more accurate reporting.
+
+- General Fixes and Improvements.
+
 ### 2025.01.16 { id=2025.01.16 }
 
 #### Feature Enhancements
