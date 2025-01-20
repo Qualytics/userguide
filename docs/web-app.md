@@ -1,8 +1,8 @@
-# Dashboard
+# Web Application
 
-Upon signing in to Qualytics, users are greeted with a thoughtfully designed dashboard that offers intuitive navigation and quick access to essential features and datasets, ensuring an efficient and comprehensive data quality management experience.
+Upon signing in to Qualytics, users are greeted with a thoughtfully designed web application that offers intuitive navigation and quick access to essential features and datasets, ensuring an efficient and comprehensive data quality management experience.
 
-In this documentation, we will explore every component of the Qualytics dashboard. 
+In this documentation, we will explore every component of the Qualytics web application. 
 
 Let’s get started 🚀
 
@@ -101,7 +101,7 @@ The user profile section in Qualytics provides essential information and setting
 
 ## Navigation Menu (Left Sidebar)
 
-The left sidebar of the dashboard contains the primary navigation menu, which allows users to quickly access various functionalities of the Qualytics platform. The menu items include:
+The left sidebar of the app displays the primary navigation menu, which allows users to quickly access various functionalities of the Qualytics platform. The menu items include:
 
 ### Source Datastores (Default View)
 
@@ -131,7 +131,7 @@ Lists all the enrichment datastores at the left sidebar connected to Qualytics. 
 
 ### Explore
 
-The Explore dashboard in Qualytics enables effective data management and analysis through several key sections:
+The Explore section in Qualytics enables effective data management and analysis through several key sections:
 
 - **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can also export the insight reports into a PDF format.  
 
@@ -150,7 +150,7 @@ The Explore dashboard in Qualytics enables effective data management and analysi
 
 ### Library
 
-The library dashboard allows for managing check templates and editing applied checks in source datastores with two main functionalities:
+The library section allows for managing check templates and editing applied checks in source datastores with two main functionalities:
 
 - **Add Check Templates**: Easily add new templates to apply standardized checks across datastores.
 

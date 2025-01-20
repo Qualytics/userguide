@@ -1,4 +1,4 @@
-# DFS multi-token filename globbing
+# Filename Globbing
 
 ## Overview
 
