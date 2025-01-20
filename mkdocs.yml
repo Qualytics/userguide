@@ -16,12 +16,11 @@ validation:
 nav:
   - Introduction: index.md
     # new page tree structure start
-  - Reference:
+  - Using the Platform:
     - onboarding.md
     - quick-start-guide.md
     - technical-quick-start-guide.md
-    - dashboard.md
-    - glossary.md
+    - web-app.md
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
@@ -164,11 +163,11 @@ nav:
       - Overview: tags/overview-of-tag.md
     - Settings:
       - Connections: settings/connections/manage-connections.md
-      - Integrations:
-        - Overview: settings/integrations/overview.md
-        - Atlan: settings/integrations/atlan.md
-        - Alation: settings/integrations/alation.md
-        - External Tag Propagation: settings/integrations/external-tag-propagation.md
+      - Catalog Integrations:
+        - Overview: settings/catalog-integrations/overview.md
+        - Atlan: settings/catalog-integrations/atlan.md
+        - Alation: settings/catalog-integrations/alation.md
+        - External Tag Propagation: settings/catalog-integrations/external-tag-propagation.md
       - Security:
         - Overview: settings/security/overview.md
         - Team Permissions: settings/security/team-permissions.md
@@ -177,15 +176,17 @@ nav:
       - Health: settings/health/overview-of-health.md
     - Qualytics CLI:
         - Overview: cli/overview-of-qualytics-cli.md
+    - Integrations:
+        - Overview: integrations/overview.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
     - Misc:
-      - sso/sso.md
       - deployments/deployments.md
       - upgrades/qualytics-single-tenant-instance.md
       - operation-automation/automated-tasks-with-cron.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
+      - glossary.md
 
   # - glossary.md
   - API docs: https://demo.qualytics.io/api/docs
