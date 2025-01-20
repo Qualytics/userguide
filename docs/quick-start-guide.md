@@ -75,21 +75,21 @@ Here is a list of available JDBC datastores you can add and configure in Qualyti
 
 | REF | ADD DATASTORE          | DESCRIPTION                                                                                           |
 |-----|------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.  | BigQuery               | A fully managed, serverless data warehouse that enables scalable analysis over petabytes of data.     |
-| 2.  | Databricks             | A unified analytics platform that stores your data to accelerate innovation by unifying data science, engineering, and business. |
-| 3.  | DB2                    | It is an IBM database known for its scalability, performance, and availability, primarily used for large enterprises. |
-| 4.  | Hive                   | A data warehouse infrastructure built on top of Hadoop for providing data query and analysis.         |
-| 5.  | MariaDB                | An open-source relational database management system, a fork of MySQL, renowned for its performance and reliability. |
-| 6.  | Microsoft SQL Server   | A relational database management system developed by Microsoft, offering a wide range of data tools and services. |
-| 7.  | MySQL                  | An open-source relational database management system widely used for web applications and various other uses. |
-| 8.  | Oracle                 | A multi-model database management system widely used for running online transaction processing and data warehousing. |
-| 9.  | PostgreSQL             | An advanced, open-source relational database known for its robustness, extensibility, and standards compliance. |
-| 10. | Presto                 | A distributed SQL query engine for big data, allowing users to run interactive analytic queries against data sources. |
-| 11. | Amazon RedShift        | A fully managed data warehouse service in the cloud, designed to handle large-scale data sets and analytics. |
-| 12. | Snowflake              | A cloud-based data warehousing solution that provides data storage, processing, and analytics.        |
-| 13. | Synapse                | An analytics service that brings together big data and data warehousing.                              |
-| 14. | Timescale DB           | A relational database for time-series data, built on PostgreSQL.                                      |
-| 15. | Trino                  | A distributed SQL query engine for big data, designed to query large data sets across multiple data sources. |
+| 1.  | [BigQuery](./add-datastores/bigquery.md)               | A fully managed, serverless data warehouse that enables scalable analysis over petabytes of data.     |
+| 2.  | [Databricks](./add-datastores/databricks.md)             | A unified analytics platform that stores your data to accelerate innovation by unifying data science, engineering, and business. |
+| 3.  | [DB2](./add-datastores/db2.md)                    | It is an IBM database known for its scalability, performance, and availability, primarily used for large enterprises. |
+| 4.  | [Hive](./add-datastores/hive.md)                   | A data warehouse infrastructure built on top of Hadoop for providing data query and analysis.         |
+| 5.  | [MariaDB](./add-datastores/maria-db.md)                | An open-source relational database management system, a fork of MySQL, renowned for its performance and reliability. |
+| 6.  | [Microsoft SQL Server](./add-datastores/microsoft-sql-server.md)   | A relational database management system developed by Microsoft, offering a wide range of data tools and services. |
+| 7.  | [MySQL](./add-datastores/mysql.md)                  | An open-source relational database management system widely used for web applications and various other uses. |
+| 8.  | [Oracle](./add-datastores/oracle.md)                 | A multi-model database management system widely used for running online transaction processing and data warehousing. |
+| 9.  | [PostgreSQL](./add-datastores/postgresql.md)             | An advanced, open-source relational database known for its robustness, extensibility, and standards compliance. |
+| 10. | [Presto](./add-datastores/presto.md)                 | A distributed SQL query engine for big data, allowing users to run interactive analytic queries against data sources. |
+| 11. | [Amazon RedShift](./add-datastores/redshift.md)        | A fully managed data warehouse service in the cloud, designed to handle large-scale data sets and analytics. |
+| 12. | [Snowflake](./add-datastores/snowflake.md)              | A cloud-based data warehousing solution that provides data storage, processing, and analytics.        |
+| 13. | [Synapse](./add-datastores/synapse.md)                | An analytics service that brings together big data and data warehousing.                              |
+| 14. | [Timescale DB](./add-datastores/timescale-db.md)           | A relational database for time-series data, built on PostgreSQL.                                      |
+| 15. | [Trino](./add-datastores/trino.md)                  | A distributed SQL query engine for big data, designed to query large data sets across multiple data sources. |
 
 ### 2. DFS (Distributed File Systems) Datastores
 
@@ -99,11 +99,11 @@ Here is a list of available DFS datastores you can configure in the Qualytics pl
 
 | REF | ADD DATASTORE            | DESCRIPTION                                                                                       |
 |-----|--------------------------|---------------------------------------------------------------------------------------------------|
-| 1.  | Amazon S3                | A scalable object storage service from Amazon Web Services, used for storing and retrieving any amount of data. |
-| 2.  | Azure Blob Storage       | A Microsoft Azure service for storing large amounts of unstructured data, such as text or binary data. |
-| 3.  | Azure DataLake Storage   | A scalable data storage and analytics service from Microsoft Azure designed for big data analytics. |
-| 4.  | Google Cloud Storage     | A scalable, fully managed object storage service for unstructured data in Google Cloud.           |
-| 5.  | Qualytics File System (QFS) | A custom file system designed by Qualytics for optimized data storage and retrieval within the platform. |
+| 1.  | [Amazon S3](./add-datastores/amazon-s3.md)                | A scalable object storage service from Amazon Web Services, used for storing and retrieving any amount of data. |
+| 2.  | [Azure Blob Storage](./add-datastores/azure-blob-storage.md)       | A Microsoft Azure service for storing large amounts of unstructured data, such as text or binary data. |
+| 3.  | [Azure DataLake Storage](./add-datastores/azure-datalake-storage.md)   | A scalable data storage and analytics service from Microsoft Azure designed for big data analytics. |
+| 4.  | [Google Cloud Storage](./add-datastores/google-cloud-storage.md)     | A scalable, fully managed object storage service for unstructured data in Google Cloud.           |
+| 5.  | [Qualytics File System (QFS)](./add-datastores/qfs.md) | A custom file system designed by Qualytics for optimized data storage and retrieval within the platform. |
 
 
 ## Operations
