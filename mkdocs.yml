@@ -149,16 +149,8 @@ nav:
       - Observability: explore/observability.md
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
-    - Notifications:
-      - Overview: notifications/overview-of-a-notification.md
-      - Manage Notifications: notifications/managing-notifications.md
-      - Channels:
-        - notifications/notification-services/email.md
-        - notifications/notification-services/http-action.md
-        - notifications/notification-services/microsoft-teams.md
-        - notifications/notification-services/pagerduty.md
-        - notifications/notification-services/slack.md
-        - notifications/notification-services/webhook.md
+    - Flows:
+      - Overview: flows/flows.md
     - Tags:
       - Overview: tags/overview-of-tag.md
     - Settings:
