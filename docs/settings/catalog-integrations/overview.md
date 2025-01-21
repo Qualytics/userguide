@@ -1,12 +1,13 @@
 # Data Catalog Integrations
 
 The Qualytics platform seamlessly integrates with enterprise data catalogs, enabling organizations to:
+ 
 - Surface data quality insights directly within existing catalog tools
-- Automatically sync metadata between platforms in real-time
-- Leverage data catalog tags for quality classification
-- Push quality alerts and anomaly notifications to catalog users
-- Maintain consistent metadata across platforms
-- Track data quality metrics within your data governance framework
+-  Automatically sync metadata between platforms in real-time
+-  Leverage data catalog tags for quality classification
+-  Push quality alerts and anomaly notifications to catalog users
+-  Maintain consistent metadata across platforms
+-  Track data quality metrics within your data governance framework
 
 These catalog integrations ensure that data quality insights are readily available to users within their preferred data discovery and governance platforms.
 
