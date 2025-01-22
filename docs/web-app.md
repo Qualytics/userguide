@@ -18,7 +18,8 @@ The Global Search feature in Qualytics is designed to streamline the process of 
 
 ## In-App Notifications
 
-In-app notifications in Qualytics are real-time alerts that keep users informed about various events related to their data operations and quality checks. These notifications are displayed within the Qualytics interface and cover a range of activities, including operation completions, and anomaly detections.
+In Qualytics, notifications keep users updated on flow executions in real time. When a flow is triggered, users receive alerts with details like the flow name, status (success or failure), completion time, and actions performed. 
+Clicking on a notification provides more details, including any detected anomalies. These notifications help users monitor workflows efficiently and respond quickly to important updates.
 
 ![nav-notification](assets/dashboard/nav-notification-light.png#only-light)
 ![nav-notification](assets/dashboard/nav-notification-dark.png#only-dark)
@@ -169,12 +170,12 @@ Tags help users organize and prioritize data assets by categorizing them. They c
 ![tags-nav](assets/dashboard/tags-light.png#only-light)
 ![tags-nav](assets/dashboard/tags-dark.png#only-dark)
 
-### Notification Rules
+### Flows
 
-Qualytics allows users to set up notification rules with specific triggers and channels, ensuring timely alerts for critical events. Notifications can be delivered through multiple channels, including in-app, email, Slack, Microsoft Teams, and more, helping users stay informed and manage data quality issues in real time.
+Qualytics allows users to set up flows, enabling them to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, providing a flexible and efficient way to automate processes. These actions can include notifications or operations, allowing users to notify various channels or execute tasks based on specific operations.
 
-![notification-nav](assets/dashboard/notification-rule-light.png#only-light)
-![notification-nav](assets/dashboard/notification-rule-dark.png#only-dark)
+![notification-nav](assets/dashboard/flows-light.png#only-light)
+![notification-nav](assets/dashboard/flows-dark.png#only-dark)
 
 ### Global Settings
 
