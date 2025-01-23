@@ -5,6 +5,29 @@ hide:
 
 # Release Notes
 
+### 2025.01.23 { id=2025.01.23 }
+
+#### Feature Enhancements
+
+- Introducing Freshness Tracking in Containers
+    - Users can now enable freshness tracking for containers, which measures and records the last time data was added or updated in a data asset. This feature helps ensure data timeliness and highlights pipeline delays.
+
+- Private Routes on Analytics Engine
+    - Customers using Private Routes can now view the user's IP address along with a corresponding message for better visibility and tracking.
+
+- Clone a Flow
+    - Users can now duplicate existing flows, making it easier to reuse and modify flow configurations for similar use cases.
+
+- "Is Replica Of" Check Passthrough
+    - The "IsReplicaOf" rule now supports a passthrough property to exclude specific fields from assertions. Fields listed in this property are no longer flagged as anomalous, providing more granular control.
+
+- Enhancement for Volumetric Rule Type
+    - Added support for volumetric checks with a new `comparison` property, ensuring consistency with metric checks and improving flexibility for rule configurations.
+
+#### General Fixes
+
+- General Fixes and Improvements.
+
 ### 2024.01.20 { id=2024.12.20 }
 
 #### Feature Enhancements
