@@ -32,7 +32,7 @@ hide:
 
 #### General Fixes
 
-- General fixes and improvements.
+- General Fixes and Improvements.
 
 ### 2024.01.20 { id=2024.12.20 }
 
