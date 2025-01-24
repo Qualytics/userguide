@@ -10,23 +10,29 @@ hide:
 #### Feature Enhancements
 
 - Introducing Freshness Tracking in Containers
-    - Users can now enable freshness tracking for containers, which measures and records the last time data was added or updated in a data asset. This feature helps ensure data timeliness and highlights pipeline delays.
+    - Users can now enable a freshness tracking option for containers to measure and record the last time data was added or updated in a data asset. This helps ensure data timeliness and identifies pipeline delays.
 
 - Private Routes on Analytics Engine
-    - Customers using Private Routes can now view the user's IP address along with a corresponding message for better visibility and tracking.
+    - Customers using private routes can now view their IP addresses along with relevant messages displayed in the Analytics Engine for improved transparency.
 
 - Clone a Flow
-    - Users can now duplicate existing flows, making it easier to reuse and modify flow configurations for similar use cases.
+    - Users can duplicate existing flows, streamlining the process of reusing and modifying flow configurations for similar scenarios.
 
-- "Is Replica Of" Check Passthrough
-    - The "IsReplicaOf" rule now supports a passthrough property to exclude specific fields from assertions. Fields listed in this property are no longer flagged as anomalous, providing more granular control.
+- Additional Option to Execute Manual Flows
+    - A new "Start a Manual Flow" option has been added to the vertical ellipsis menu, providing users with enhanced flexibility for executing manual flows.
+
+- Cancel Action for Unpublished Flows
+    - A "Cancel" action has been introduced in the flow builder, allowing users to reset the graph to its initial state for unpublished flows. This update also addresses issues related to the execute button and read-only state logic.
+
+- "Is Replica Of" Passthrough
+    - The `IsReplicaOf` rule now supports a passthrough property, allowing users to exclude specific fields from assertions. Fields listed under this property are no longer flagged as anomalous.
 
 - Enhancement for Volumetric Rule Type
-    - Added support for volumetric checks with a new `comparison` property, ensuring consistency with metric checks and improving flexibility for rule configurations.
+    - Volumetric checks now include a `comparison` property, ensuring consistency with metric checks and offering greater flexibility in rule configurations.
 
 #### General Fixes
 
-- General Fixes and Improvements.
+- General fixes and improvements.
 
 ### 2024.01.20 { id=2024.12.20 }
 
