@@ -38,7 +38,14 @@ The **Edit Datastore** setting allows users to modify the connection details of 
 ![connection-details](../assets/datastore-settings/connection-details-light-4.png#only-light)
 ![connection-details](../assets/datastore-settings/connection-details-dark-4.png#only-dark)
 
-**Step 3**: After editing the connection details, click on the **Save** button. 
+**Step 3:** After editing the connection details, click on the **Test Connection** button to check and verify its connection.
+
+![test](../assets/datastore-settings/test-light.png#only-light)
+![test](../assets/datastore-settings/test-dark.png#only-dark)
+
+If the credentials and provided connection details are verified, a success message will be displayed indicating that the connection has been verified.
+
+**Step 4**: Click on the **Save** button. 
 
 ![save-datastore](../assets/datastore-settings/save-datastore-light-5.png#only-light)
 ![save-datastore](../assets/datastore-settings/save-datastore-dark-5.png#only-dark)
