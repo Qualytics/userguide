@@ -73,7 +73,14 @@ For demonstration purposes we have selected the **Snowflake** connector.
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
 
-**Step 3:** After adding the details, click on the **Save** button.
+**Step 3:** After adding the details, click on the **Test Connection** button to check and verify its connection.
+
+![test](../assets/enrichment/add-enrichment/test-light.png#only-light)
+![test](../assets/enrichment/add-enrichment/test-dark.png#only-dark)
+
+If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
+
+**Step 4:** Click on the **Save** button.
 
 ![save](../assets/enrichment/add-enrichment/save-light.png#only-light)
 ![save](../assets/enrichment/add-enrichment/save-dark.png#only-dark)
@@ -83,7 +90,7 @@ A modal window apperars display a **success message** indicating that **your enr
 ![success](../assets/enrichment/add-enrichment/success-light.png#only-light)
 ![success](../assets/enrichment/add-enrichment/success-dark.png#only-dark)
 
-**Step 4:** Close the success dialog. Here, you can view a list of all the enrichment datastores you have added to the system. For demonstration purposes, we have created an enrichment datastore named **Snowflake_demo**, which is visible in the list.
+**Step 5:** Close the success dialog. Here, you can view a list of all the enrichment datastores you have added to the system. For demonstration purposes, we have created an enrichment datastore named **Snowflake_demo**, which is visible in the list.
 
 ![close](../assets/enrichment/add-enrichment/close-light.png#only-light)
 ![close](../assets/enrichment/add-enrichment/close-dark.png#only-dark)
@@ -100,7 +107,14 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![connection](../assets/enrichment/add-enrichment/connection-light.png#only-light)
 ![connection](../assets/enrichment/add-enrichment/connection-dark.png#only-dark)
 
-**Step 2:**  Click on the **Save** button.
+**Step 2:** After adding the details, click on the **Test Connection** button to check and verify its connection.
+
+![test](../assets/enrichment/add-enrichment/test2-light.png#only-light)
+![test](../assets/enrichment/add-enrichment/test2-dark.png#only-dark)
+
+If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
+
+**Step 3:**  Click on the **Save** button.
 
 ![save2](../assets/enrichment/add-enrichment/save2-light.png#only-light)
 ![save2](../assets/enrichment/add-enrichment/save2-dark.png#only-dark)
