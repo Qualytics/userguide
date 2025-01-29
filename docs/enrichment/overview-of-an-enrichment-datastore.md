@@ -344,8 +344,8 @@ Contains metadata from field profiles.
 
 The diagram below provides a visual representation of the associations between various tables in the Enrichment Datastore. It illustrates how tables can be joined to track and analyze data across different processes.
 
-![Screenshot](../assets/enrichment/diagram-light.png#only-light)
-![Screenshot](../assets/enrichment/diagram-dark.png#only-dark)
+![Screenshot](../assets/enrichment/diagram-01-29-2025.light.png#only-light)
+![Screenshot](../assets/enrichment/diagram-01-29-2025.dark.png#only-dark)
 
 ## Handling JSON and string splitting
 
