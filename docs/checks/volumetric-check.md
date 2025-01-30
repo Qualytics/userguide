@@ -83,7 +83,7 @@ Let's get started 🚀
 !!! note "Details"
     ### Comparison Options
 
-    ** Percentage Change**
+    **Percentage Change**
 
     The `Percentage Change` comparison operates by tracking changes in a numeric field's value relative to its previous value. If the change exceeds the predefined percentage (%) limit since the last relevant scan, an anomaly is generated.
 
