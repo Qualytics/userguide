@@ -60,7 +60,7 @@ Qualytics supports a range of datasource, including but not limited to:
 |         2. |                      [Databricks](../add-datastores/databricks.md) |
 |         3. |                          [DB2](../add-datastores/db2.md) |
 |         4. |                         [Hive](../add-datastores/hive.md) |
-|        5. |                      [MariaDB](../add-datastores/maira-db.md) |
+|        5. |                      [MariaDB](../add-datastores/maria-db.md) |
 |        6. |              [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md) |
 |        7. |                     [MySQL](../add-datastores/mysql.md) |
 |        8. |                     [Oracle](../add-datastores/oracle.md) |
