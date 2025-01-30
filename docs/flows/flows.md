@@ -605,6 +605,30 @@ Once a flow is added, it will be visible in the **Definitions** tab, where you c
 ![panel](.././assets/flows/panel-light-84.png#only-light)
 ![panel](.././assets/flows/panel-dark-84.png#only-dark)
 
+## Clone a Flow
+
+Users can duplicate existing flows to simplify the reuse and modification of flow configurations for similar scenarios.
+
+**Step 1**: Click on the existing flow you want to clone.
+
+![panel](.././assets/flows/exisiting-doc-light.png#only-light)
+![panel](.././assets/flows/exisiting-doc-dark.png#only-dark)
+
+**Step 2**:  A new window will open displaying the flow's detailed configuration. Click the settings icon and select **Clone**.
+
+![panel](.././assets/flows/clone-light.png#only-light)
+![panel](.././assets/flows/clone-dark.png#only-dark)
+
+**Step 3:** After selecting the clone button. Click the Publish button to publish it.
+
+![panel](.././assets/flows/publishh-light.png#only-light)
+![panel](.././assets/flows/publishh-dark.png#only-dark)
+
+Once published, a success message will appear: "**Your flow has been successfully added**" .
+
+![panel](.././assets/flows/added-light.png#only-light)
+![panel](.././assets/flows/added-dark.png#only-dark)
+
 ## Sort Flows
 
 Qualytics allows you to sort your flows by **Created Date** and  **Name** to easily organize and prioritize them according to your needs.  
@@ -616,6 +640,25 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 ![sort](.././assets/flows/sort-light-86.png#only-light)
 ![sort](.././assets/flows/sort-dark-86.png#only-dark)
+
+## Execute Manual Flows
+
+Users can start a manual flow from the vertical ellipsis menu for greater flexibility in executing flows.
+
+**Step 1:** Locate the manual flow in your list of flows.
+
+![manual-flow](.././assets/flows/manuall-flow-light.png#only-light)
+![manual-flow](.././assets/flows/manuall-flow-dark.png#only-dark)
+
+**Step 2:** Click the **vertical ellipsis (⋮)** next to the manual flow you wish to execute, then select **"Execute"** from the dropdown menu to trigger the flow.
+
+![manual-flow](.././assets/flows/verticall-light.png#only-light)
+![manual-flow](.././assets/flows/verticall-dark.png#only-dark)
+
+After clicking the execute button, a confirmation message will appear saying **The Flow has been successfully executed**.
+
+![sort](.././assets/flows/flow-msg-light.png#only-light)
+![sort](.././assets/flows/flow-msg-dark.png#only-dark)
 
 ## Manage Flows
 
@@ -694,6 +737,7 @@ After clicking on the **Delete** button, your flow will be deleted and a confirm
 
 ![delete](.././assets/flows/delete-light-98.png#only-light)
 ![delete](.././assets/flows/delete-dark-98.png#only-dark)
+
 ## Flows Execution
 
 Execution tab allows users to view the execution history and current status of a flow. It provides detailed timestamps, status updates, and a comprehensive record of flow executions for efficient tracking and analysis.
@@ -708,15 +752,14 @@ You will be navigated to the **Execution** tab, where you can view the complete 
 ![executions](.././assets/flows/executions-light-100.png#only-light)
 ![executions](.././assets/flows/executions-dark-100.png#only-dark)
 
-
 ### See a Flow Execution
 
 Users can view flow execution in real-time by clicking on the desired flow operation. The page shows detailed operations but does not allow editing. 
 
 **Step 1:** Click on the flow operation you want to view.  
 
-![chart](.././assets/flows/chart-light-100.png#only-light)
-![chart](.././assets/flows/chart-dark-100.png#only-dark)
+![manual-flow](.././assets/flows/manuall-flow-light.png#only-light)
+![manual-flow](.././assets/flows/manuall-flow-dark.png#only-dark)
 
  After clicking, the user will navigate to the selected flow operation details.The page displays all operational details in real-time. Note that this page is for viewing only, and no edits can be made here.  
 
@@ -762,7 +805,7 @@ To view detailed results of specific operations:
 ![result](.././assets/flows/result-light-104.png#only-light)
 ![result](.././assets/flows/result-dark-104.png#only-dark)
 
-# Delete Flow Execution
+### Delete Flow Execution
 
 **Step 1:** Click the Delete icon next to the flow execution you want to remove. 
 
