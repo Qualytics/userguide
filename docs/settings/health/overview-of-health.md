@@ -56,6 +56,13 @@ The **Analytics Engine** section provides advanced information about the analyti
 ![analytics-engine](../../assets/health/analytics-engine-light-5.png#only-light)
 ![analytics-engine](../../assets/health/analytics-engine-dark-5.png#only-dark)
 
+## Private Routes
+
+Users can now utilize private routes to view their IP addresses along with relevant system messages in the Analytics Engine, ensuring greater transparency and visibility into network activity.
+
+![private-routes](../../assets/health/private-light.png#only-light)
+![private-routes](../../assets/health/private-dark.png#only-dark)
+
 ## Manage Health Summary
 
 You can perform essential tasks such as copying the health summary, refreshing it, and restarting the analytics engine. These functionalities help maintain an up-to-date overview of system performance and ensure accurate analytics.
