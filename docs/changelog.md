@@ -5,6 +5,28 @@ hide:
 
 # Release Notes
 
+### 2025.01.31 { id=2025.01.31 }
+
+#### Feature Enhancements
+
+- Freshness View
+    - We are excited to introduce the "Freshness View" feature in Qualytics!
+    - Users can now visualize both volumetric and freshness checks within the same tab.
+    - The displayed data includes:
+        - Unit: Day, Month, Hour, etc.
+        - Maximum Age: Defines the maximum allowed time since the last data update.
+        - Last Asserted: Indicates the last time the data was validated.
+
+- Datastore Filter Condition in Flows
+    - Users can now configure datastore filter conditions in triggers for flows, enhancing control over triggered actions.
+
+- Treat Empty Value as Null for DFS
+    - A new option allows users to enable "Empty value as null" as the default behavior for File Patterns, improving data consistency.
+
+#### General Fixes and Improvements
+
+- General Fixes and Improvements.
+
 ### 2025.01.24 { id=2025.01.24 }
 
 #### Feature Enhancements
