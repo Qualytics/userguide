@@ -14,6 +14,7 @@ Qualytics connects to data sources using "Datastores," a framework that enables 
 
 * Manage data quality centrally across all sources.
 
+These data source integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
 
 ## Understanding Datastores
 
