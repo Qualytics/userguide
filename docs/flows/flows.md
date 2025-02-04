@@ -89,9 +89,11 @@ Filters can be set to narrow down which operations should trigger the flow execu
 
 1. **Source Datastore Tags**: The flow is triggered only for source datastores that have all the selected tags assigned.
 
-2. **Operation Types**: The flow is triggered only for operations that match one or more of the selected types.
+2. **Source Datastores**: The flow is triggered only for the selected source datastores.
 
-3. **Operation Status**: The flow is triggered for operations with a status of either Success or Failure.
+3. **Operation Types**: The flow is triggered only for operations that match one or more of the selected types.
+
+4. **Operation Status**: The flow is triggered for operations with a status of either Success or Failure.
 
 ![operation](.././assets/flows/operation-light-12.png#only-light)
 ![operation](.././assets/flows/operation-dark-12.png#only-dark)
@@ -114,7 +116,9 @@ Users can optionally set filters to specify which tables or files should trigger
 
 1. **Tables / Files Tags**: Only tables or files with all the selected tags assigned will trigger the flow.
 
-2. **Check Rule Types**: Only anomalies identified by one or more of the selected check rule types will initiate the flow.
+2. **Source Datastores**: The flow is triggered only for the selected source datastores.
+
+3. **Check Rule Types**: Only anomalies identified by one or more of the selected check rule types will initiate the flow.
 
 ![table](.././assets/flows/table-light-15.png#only-light)
 ![table](.././assets/flows/table-dark-15.png#only-dark)
@@ -137,9 +141,11 @@ Users can define specific conditions to determine when the flow should be initia
 
 1. **Anomaly’s Tags**: Only anomalies with all selected tags assigned will trigger the flow.
 
-2. **Check Rule Types**: Only anomalies identified by one or more of the selected check rule types will initiate the flow.
+2. **Source Datastores**: Only triggered when anomalies are detected in the selected datastores.
 
-3. **Anomaly Weight (Min)**: Only anomalies with a weight equal to or greater than the specified value will trigger the flow.
+3. **Check Rule Types**: Only anomalies identified by one or more of the selected check rule types will initiate the flow.
+
+4. **Anomaly Weight (Min)**: Only anomalies with a weight equal to or greater than the specified value will trigger the flow.
 
 ![anomaly](.././assets/flows/anomaly-light-18.png#only-light)
 ![anomaly](.././assets/flows/anomaly-dark-18.png#only-dark)
