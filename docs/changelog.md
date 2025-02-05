@@ -5,6 +5,37 @@ hide:
 
 # Release Notes
 
+### 2025.02.05 { id=2025.02.05 }
+
+#### Feature Enhancements
+
+- Overview Improvement
+    - Added inferred and authored check totals
+        - Users can now view the total number of inferred and authored checks, along with a comparison timeframe.
+        - A redirect link allows users to access the checks directly, displaying only their current statuses.
+    - Improved check assertion-related metrics to reflect assertions as of the report date.
+
+- Team Permissions
+    - Manager users can now update datastore teams.
+        - Requires `Editor` permission within the team.
+
+#### General Fixes and Improvements
+
+- Flow Graph
+    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow node.
+
+- Observability Chart
+    - Fixed an issue where threshold calculations incorrectly referenced measurement values that did not account for grouping.
+
+- General Fixes and Improvements.
+
+#### Breaking Changes
+
+- Container Overview Tab
+    - Refactored the Totals section to clarify that metrics are based on sampled data rather than the full dataset.
+        - Added the sampling percentage next to the spark chart to indicate that derived metrics are based on this sampling percentage.
+        - Updated titles and labels for better clarity.
+
 ### 2025.01.31 { id=2025.01.31 }
 
 #### Feature Enhancements
