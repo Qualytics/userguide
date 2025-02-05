@@ -171,7 +171,7 @@ You can control how file patterns behave by checking or unchecking options to ma
 ![general-field](../assets/container/manage-tables-files/general-light-113.png#only-light)
 ![general-field](../assets/container/manage-tables-files/general-dark-113.png#only-dark)
 
-* **Treating Empty Values as Nulls:** The treatEmptyValuesAsNull setting controls how empty fields in files like Excel and CSV are handled. If enabled (true), empty fields are treated as NULL (missing data). If disabled (false), they are stored as empty strings (""), meaning the field exists but is blank. This affects reporting, calculations, and data processing, as NULL values are ignored while empty strings may still be counted.
+* **Treating Empty Values as Nulls:** The Treat empty values as null setting controls how empty fields in files like Excel and CSV are handled. If enabled (true), empty fields are treated as NULL (missing data). If disabled (false), they are stored as empty strings (""), meaning the field exists but is blank. This affects reporting, calculations, and data processing, as NULL values are ignored while empty strings may still be counted.
 
 ![general-field](../assets/container/manage-tables-files/general-light-114.png#only-light)
 ![general-field](../assets/container/manage-tables-files/general-dark-114.png#only-dark)
