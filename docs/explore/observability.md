@@ -1,6 +1,6 @@
 # Observability
 
-**Observability** in the Explore section offers a clear view of platform data, enabling users to monitor and analyze data behavior effectively. It tracks changes in data volumes and metrics, highlighting trends and anomalies. By organizing checks into Volumetric and Metric categories, it simplifies monitoring overall data volumes and specific field-based values. Visual tools like heatmaps and customizable checks make it easy to identify issues, set thresholds, and adjust monitoring parameters for efficient data management.
+Observability in the Explore section provides structured tracking through **Measures** and **Metrics**, enabling users to monitor data behavior, detect anomalies, and identify trends. **Volume Tracking** analyzes daily data volumes, **Freshness Tracking** ensures data timeliness, and **Metric Tracking** monitors field-specific values against predefined thresholds. Automated scans and visual insights help maintain data integrity. Visual tools like heatmaps and customizable checks make it easy to identify issues, set thresholds, set maximum energy, and adjust monitoring parameters for efficient data management.
 
 Let’s get started 🚀
 
@@ -18,12 +18,12 @@ Let’s get started 🚀
 
 ## Observability Categorized
 
-Observability, data checks are divided into two categories: Volumetric and Metric. Volumetric checks track overall data volume, while Metric checks measures data based on predefined fields and thresholds, tracking changes in data values over time. These two categories work together to offer comprehensive insights into data trends and anomalies.
+Observability in data checks is divided into two key categories: **Measures** and **Metric Checks**. Measures focus on overall data trends and include **Volumetric Checks**, which monitor data volume to identify trends and anomalies, and **Freshness Tracking**, which tracks when data was last added or updated to ensure timeliness. **Metric Checks**, on the other hand, analyze specific data attributes, providing detailed insights into data quality.
 
 ![category](../assets/explore/observability/category-light.png#only-light)
 ![category](../assets/explore/observability/category-dark.png#only-dark)
 
-**1. Volumetric:** Volumetric automatically tracks changes in the amount of data within a table over time. It monitors row counts and compares them to expected ranges based on historical data. If the data volume increases or decreases unexpectedly, the check flags it for further review. This feature helps users easily identify unusual data patterns without manual monitoring.
+**1.Measures:** Measures focus on monitoring overall data trends to ensure consistency and reliability. This includes **Volumetric Checks**, which track data volume to identify trends and detect anomalies, and **Freshness** Tracking, which measures the last update or addition of data to ensure timeliness. These checks help maintain data integrity by highlighting unexpected changes in volume or delays in data updates.
 
 ![volumetric](../assets/explore/observability/volumetric-light.png#only-light)
 ![volumetric](../assets/explore/observability/volumetric-dark.png#only-dark)
@@ -33,7 +33,11 @@ Observability, data checks are divided into two categories: Volumetric and Metri
 ![metric](../assets/explore/observability/metric-light.png#only-light)
 ![metric](../assets/explore/observability/metric-dark.png#only-dark)
 
-## Volumetric
+## **Measures**
+
+**Measures** focus on tracking overall data trends to ensure stability, consistency, and reliability. This category includes two key checks:
+
+### Volumetric
 
 Volumetric help monitor data volumes over time to keep data accurate and reliable. They automatically count rows in a table and spot any unusual changes, like problems with data loading. This makes it easier to catch issues early and keep everything running smoothly. Volumetric checks also let you track data over different time periods, like daily or weekly. The system sets limits based on past data, and if the row count goes above or below those limits, an anomaly alert is triggered.
 
@@ -42,26 +46,25 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1. | Select Source Datastore | Select specific source datastores to focus on their data. |
-| 2. | Select Tag | Filter data by specific tags to categorize and refine results. |
-| 3. | Search  | This feature helps users quickly find specific identifiers or names in the data. |
-| 4. | Report Data | **Report Date** lets users pick a specific date to view data trends for that day. |
-| 5. | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year.) to view data trends. |
-| 6. | Sort By |  **Sort By** option helps users organize data by criteria like Anoamlies, Created Date, Checks, Name, Type or Last Scanned for quick access. |
-| 7 |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
-| 8. | Datastore | Displays the Datastore name for which the volumetric check is being performed . |
-| 9. | Table | Displays the table for which the volumetric check is being performed (e.g., customer, nation). Each table has its own Volumetric Check. |
-| 10. | Weight | Weight shows how important a check is for finding anomalies and sending alerts. |
-| 11. | Anomaly Detection | The Volumetric Check detects anomalies when row counts exceed set min or max thresholds, triggering an alert for sudden changes. |
-| 12. | Edit Checks | Edit the check to modify settings, or add tags for better customization and monitoring. |
-| 13. | Volumetric Check (# ID) | Each check is assigned a unique identifier, followed by the time period it applies to (e.g., 1 Day for the customer table). This ID helps in tracking the specific check in the system. |
-| 14. | Group By | Users can also Group By specific intervals, such as day, week, or month, to observe trends over different periods. |
-| 15. | Measurement Period | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
-| 16. |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows) |
-| 17. |  Max Values. | These indicate the maximum thresholds for the row count of the table being checked |
-| 18. |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
-| 19. | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
-| 20. | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
+| 1. | Search  | This feature helps users quickly find specific identifiers or names in the data. |
+| 2. | Report Data | **Report Date** lets users pick a specific date to view data trends for that day. |
+| 3. | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year.) to view data trends. |
+| 4. | Sort By |  **Sort By** option helps users organize data by criteria like Anoamlies, Created Date, Checks, Name, Type or Last Scanned for quick access. |
+| 5. |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
+| 6. | Datastore | Displays the Datastore name for which the volumetric check is being performed . |
+| 7. | Table | Displays the table for which the volumetric check is being performed (e.g., customer, nation). Each table has its own Volumetric Check. |
+| 8. | Weight | Weight shows how important a check is for finding anomalies and sending alerts. |
+| 9. | Anomaly Detection | The Volumetric Check detects anomalies when row counts exceed set min or max thresholds, triggering an alert for sudden changes. |
+| 10. | Edit Checks | Edit the check to modify settings, or add tags for better customization and monitoring. |
+| 11. | Volumetric Check (# ID) | Each check is assigned a unique identifier, followed by the time period it applies to (e.g., 1 Day for the customer table). This ID helps in tracking the specific check in the system. |
+| 12. | Group By | Users can also Group By specific intervals, such as day, week, or month, to observe trends over different periods. |
+| 13. | Measurement Period | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
+| 14. | Comparision | These indicate the comparision type Absolute value, Percentage Value and Absolute Change. |
+| 15. |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows) |
+| 16. |  Max Values. | These indicate the maximum thresholds for the row count of the table being checked |
+| 17. |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
+| 18. | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
+| 19. | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
 
 ### Observability Heatmap
 
@@ -99,11 +102,12 @@ A modal window will appear with the check details.
 
 | No |              Fields |                      Description |
 | :---- | :---- | :---- |
-| 1. | Measurement Periods Days | Edit the **Measurement Period Days** to change how often the check runs (e.g., 1 day, 2 days, etc). |
-| 2. | Min Value and Max Value | Edit the **Min Value** and **Max Value** to set new row count limits. If the row count exceeds these limits, an alert will be triggered. |
-| 3. | Description | Edit the **Description** to better explain what the check does. |
-| 4. | Tags | Edit the **Tags** to organize and easily find the check later. |
-| 5. | Additional Metadata(Optional) | Edit the **Additional Metadata** section to add any new custom details for more context. |
+| 1 | Comparision | Edits the type of comparison to Absolute Change, Absolute Value, or Percentage Change. |
+| 2. | Measurement Periods Days | Edit the **Measurement Period Days** to change how often the check runs (e.g., 1 day, 2 days, etc). |
+| 3. | Min Value and Max Value | Edit the **Min Value** and **Max Value** to set new row count limits. If the row count exceeds these limits, an alert will be triggered. |
+| 4. | Description | Edit the **Description** to better explain what the check does. |
+| 5. | Tags | Edit the **Tags** to organize and easily find the check later. |
+| 6. | Additional Metadata(Optional) | Edit the **Additional Metadata** section to add any new custom details for more context. |
 
 ![details](../assets/explore/observability/details-light.png#only-light)
 ![details](../assets/explore/observability/details-dark.png#only-dark)
@@ -159,6 +163,104 @@ After clicking on the Save button, your threshold is successfully updated and a 
 
 ![msg](../assets/explore/observability/msg-light.png#only-light)
 ![msg](../assets/explore/observability/msg-dark.png#only-dark)
+
+### Freshness
+
+This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
+
+![freshness](../assets/explore/observability/freshness-light.png#only-light)
+![freshness](../assets/explore/observability/freshness-dark.png#only-dark)
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| 1. | **Search Bar** | This feature helps users quickly find specific identifiers or names in the data. |
+| 2. | **Report Date** | **Report Date** lets users pick a specific date to view data trends for that day. |
+| 3. | **Timeframe** | The **time frame** option lets users choose a period (week, month, quarter, or year.) to view data trends. |
+| 4. | **Sort By** | **Sort By** option helps users organize data by criteria like Anomalies, Checks, Created Date, Name, or Last Scanned for quick access. |
+| 5. | **Favorite** | Mark this as a favorite for quick access and easy monitoring in the future. |
+| 6. | **Datastore** | Displays the Datastore name for which the freshness check is being performed . |
+| 7. | **Table** | Displays the name of the selected table being analyzed. |
+| 8. | **Weight** | Weight shows how important a check is for finding anomalies and sending alerts. |
+| 9. | **Anomaly Detection** | Represents active anomalies detected in the data. |
+| 10. | **Edit Check** | Edit the check to modify settings, or add tags for better customization. |
+| 11. | **Freshness (# ID)** | Each freshness check is assigned a unique identifier, corresponding to the specified time period it monitors (e.g., 1 Day for the customer table). This identifier facilitates precise tracking and management within the system. |
+| 12. | **Group By** | Users can also Group By specific intervals, such as day, week to observe trends over different periods. |
+| 13. | **Unit** | The unit used to measure data freshness, shown in milliseconds. |
+| 14. | **Maximum Age** | Displays the maximum recorded age of data in milliseconds. |
+| 15. | **Last Asserted** | Shows the latest date when the data was validated or checked. |
+| 16. | **Edit Maximum Age** | Edit **Maximum Age** lets users set custom limits for data freshness, allowing control over when alerts are triggered based on the age of the data. |
+| 17. | **Graph Visualization** | Graph illustrates consistent data patterns over time, with sudden anomalies marked by spikes in red. It reflects changes in data freshness and highlights when the data was last updated. |
+
+### Edit Check
+
+Editing a Check enables users to modify settings such as the unit of measurement, maximum age, description, and metadata. Additionally, they can add tags to streamline organization and retrieval.
+
+**Step 1:** Click the edit icon to modify the check.
+
+![freshness](../assets/explore/observability/icons-light.png#only-light)
+![freshness](../assets/explore/observability/icons-dark.png#only-dark)
+
+A modal window will appear with the check details.
+
+![freshness](../assets/explore/observability/windows-light.png#only-light)
+![freshness](../assets/explore/observability/windows-dark.png#only-dark)
+
+**Step 2:** Modify the check details as needed based on your preferences:
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| 1. | Unit | Edit the unit of measurement for the freshness check, such as milliseconds (Millis), Minutes, Hours etc. |
+| 2. | Maximum Age | Edit the maximum allowed age (in the specified unit) for data to be considered fresh. |
+| 3. | Description | Edit the **Description** to better explain what the check does. |
+| 4. | Tags | Edit the **Tags** to organize and easily find the check later. |
+| 5. | Additional Metadata(Optional) | Edit the **Additional Metadata** section to add any new custom |
+
+![table](../assets/explore/observability/tabless-light.png#only-light)
+![table](../assets/explore/observability/tables-dark.png#only-dark)
+
+**Step 3:** Once you have edited the check details, then click on the **Validate** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct.
+
+![validate](../assets/explore/observability/validates-light.png#only-light)
+![validate](../assets/explore/observability/validates-dark.png#only-dark)
+
+If the validation is successful, a green message saying **"Validation Successful"** will appear.
+
+![freshness](../assets/explore/observability/mesg-light.png#only-light)
+![freshness](../assets/explore/observability/mesg-dark.png#only-dark)
+
+**Step 4:** Once you have a successful validation, click the **"Update"** button. The system will update the changes you've made to the check, including changes to the properties, description, tags, or additional metadata.
+
+![freshness](../assets/explore/observability/updates-light.png#only-light)
+![freshness](../assets/explore/observability/updates-dark.png#only-dark)
+
+After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"Check successfully updated"**.
+
+![freshness](../assets/explore/observability/mesgs-light.png#only-light)
+![freshness](../assets/explore/observability/nesgss-dark.png#only-dark)
+
+### Edit Maximum Age
+
+**Maximum Age** sets the limit for how long data can remain unchanged before it’s flagged as outdated. This ensures your data stays fresh and reliable for decision-making.
+
+**Step 1:** Click the **Edit Maximum Age** button on the right side of the graph.
+
+![freshness](../assets/explore/observability/age-light.png#only-light)
+![freshness](../assets/explore/observability/age-dark.png#only-dark)
+
+**Step 2:** After clicking **Edit Maximum Age**, the field becomes editable, allowing you to modify the maximum age value.
+
+![freshness](../assets/explore/observability/editables-light.png#only-light)
+![freshness](../assets/explore/observability/editables-dark.png#only-dark)
+
+**Step 3:** Once you've updated the **maximum age** values, click **Save** to apply the changes.
+
+![freshness](../assets/explore/observability/saves-light.png#only-light)
+![freshness](../assets/explore/observability/saves-dark.png#only-dark)
+
+After clicking on the Save button, a success flash message will appear stating **"Check successfully updated"**.
+
+![freshness](../assets/explore/observability/msg-light.png#only-light)
+![freshness](../assets/explore/observability/msg-dark.png#only-dark)
 
 ## Metric
 
