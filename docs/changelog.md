@@ -5,6 +5,37 @@ hide:
 
 # Release Notes
 
+### 2025.02.06 { id=2025.02.06 }
+
+#### Feature Enhancements
+
+- Overview Improvement
+    - Added inferred and authored check totals
+        - Users can now view the total number of inferred and authored checks, along with a comparison timeframe.
+        - A redirect link allows users to access the checks directly, displaying only their current statuses.
+    - Improved check assertion-related metrics to reflect assertions as of the report date.
+
+- Team Permissions
+    - Manager users can now update datastore teams.
+        - Requires `Editor` permission within the team.
+
+#### General Fixes and Improvements
+
+- Flow Graph
+    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow node.
+
+- Observability Chart
+    - Fixed an issue where threshold calculations incorrectly referenced measurement values that did not account for grouping.
+
+- General Fixes and Improvements.
+
+#### Breaking Changes
+
+- Container Overview Tab
+    - Refactored the Totals section to clarify that metrics are based on sampled data rather than the full dataset.
+        - Added the sampling percentage next to the spark chart to indicate that derived metrics are based on this sampling percentage.
+        - Updated titles and labels for better clarity.
+
 ### 2025.01.31 { id=2025.01.31 }
 
 #### Feature Enhancements
@@ -2190,7 +2221,7 @@ hide:
 
 #### Feature Enhancements
 
-- [**Explore**](/userguide/explore/overview-of-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
+- [**Explore**](/explore/overview-of-explore/) is the new centralized view of Activities, Containers (Profiles, Tables, Computed Tables), Checks, Anomalies and Insights across ALL Datastores. This new view allows for filtering by Datastores & Tags, which will persist the filters across all of the submenu tabs. The goal is to help with Critical Data Elements and filter out irrelevant information.
 - Enhanced Navigation Features
     - The navigation tabs have been refined for increased user-friendliness.
     - Enhanced the Profile View and added a toggle between card and list views.
@@ -2204,8 +2235,8 @@ hide:
 
     - ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-light){: style="height:100px"}
     ![Screenshot](assets/changelog/absolute-relative-change-limit.png#only-dark){: style="height:100px"}
-    - The [`Absolute Change Limit`](/userguide/checks/metric-check/#comparison-options/) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
-    - The [`Relative Change Limit`](/userguide/checks/metric-check/#comparison-options/) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
+    - The [`Absolute Change Limit`](/checks/metric-check/#comparison-options/) check is designed to monitor changes in a field's value by a fixed amount. If the field's value changes by more than the specified limit since the last applicable scan, an anomaly is generated.
+    - The [`Relative Change Limit`](/checks/metric-check/#comparison-options/) check works similarly but tracks changes in terms of percentages. If the change in a field's value exceeds the defined percentage limit since the last applicable scan, an anomaly is generated.
 
 #### General Fixes
 
