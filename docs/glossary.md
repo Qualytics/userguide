@@ -142,7 +142,7 @@ A procedure utilizing a combination of processes, tools, or systems of interrela
 
 ### <a name="quality"></a>__Quality Score__
 
-A measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](/quality-scores/what-are-quality-scores).
+A measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](quality-scores/what-are-quality-scores.md).
 
 ### <a name="app"></a>__Qualytics App__
 
