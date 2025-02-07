@@ -15,7 +15,7 @@ A source datastore is a storage location used to connect to and access data from
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
 ![add](../assets/datastores/presto/add-light-1.png#only-light)
-![add](../assets/datastores/presto/add-dark-2.png#only-dark)
+![add](../assets/datastores/presto/add-dark-1.png#only-dark)
 
 **Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
