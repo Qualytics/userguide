@@ -128,7 +128,7 @@ A message will appear indicating that **your datastore has been successfully add
 
 You can effectively manage your connections by editing, deleting, and adding datastores to maintain accuracy and efficiency.
 
-For more information on manage connection, refer to the [Manage Connection section](/userguide/settings/connections/manage-connections).
+For more information on manage connection, refer to the [Manage Connection section](../settings/connections/manage-connections.md).
 
 ## Conclusion
 
