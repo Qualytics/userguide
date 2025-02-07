@@ -91,7 +91,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
-![test-connection-2](../assets/datastores/synapse/addtest-connection-2-light.png#only-light)
+![test-connection-2](../assets/datastores/synapse/test-connection-2-light.png#only-light)
 ![test-connection-2](../assets/datastores/synapse/test-connection-2-dark.png#only-dark)
 
 !!! note
