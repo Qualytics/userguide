@@ -210,7 +210,7 @@ Currently, the following assets are available for exporting:
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
 	
-	For more detailed information on exporting metadata, please refer to the [export documentation](/container/export-metadata/).
+	For more detailed information on exporting metadata, please refer to the [Export documentation](../container/export-metadata.md).
 
 #### _EXPORT_ANOMALIES Table
 
