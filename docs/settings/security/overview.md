@@ -36,13 +36,14 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 |                       | Health                   | Monitor the system’s health status and performance metrics.                 |
 |                       | Restart Analytical Engine | Restart the analytics engine to refresh data processing or resolve issues.  |
 
-- **Manager**: Manager role has limited administrative access over global assets but is still subject to team permissions when interacting with datastores and has no ability to manage user roles or teams. Managers can list all datastores (but not view their content without an explicit team permission) and create datastores for teams where they have Editor permission. They can manage global assets such as Tags, Templates, and Notifications. However, they cannot manage user accounts or team permissions like Admins.
+- **Manager**: Manager role has limited administrative access over global assets but remains subject to team permissions when interacting with datastores. Managers cannot manage user roles or teams. They can list all datastores (but cannot view their content without explicit team permission) and create datastores for teams where they have Editor permission. Additionally, Managers on a team with Editor permission can manage datastore teams. They can manage global assets such as Tags, Templates, and Notifications but do not have the ability to manage user accounts or team permissions like Admins.
 
 | Category              | Functionality             | Description                                                                 |
 |-----------------------|---------------------------|-----------------------------------------------------------------------------|
 | Source Datastore      | Create                   | Managers can create new source datastores for data integration.             |
 |                       | List                     | Managers can view all source datastores that are listed in the system.      |
 |                       | Add Enrichment           | Add enrichment processes to source datastores to enhance data quality.      |
+| Teams                 | Manage                    | Managers on a team with Editor permission can manage datastore teams.   |
 | Enrichment Datastore  | Create                   | Managers can create enrichment datastores and assign them to teams with an "Editor" role. |
 |                       | List                     | Managers can view all enrichment datastores available in the system.        |
 | Global Settings       | DataStore (Source & Enrichment) |                                                                         |
@@ -92,18 +93,18 @@ The **Security** section, visible only to Admins, allows for granting and revoki
 
 Access controls in Qualytics are assigned at the datastore level. A non-administrator user (Member) can have one of three levels of access to any datastore connected to Qualytics:
 
-- **Editor**: [Editor](#editor) role has the most advanced permissions, enabling users to manage datastore functions comprehensively. Editors can control enrichment, scoring, computed fields, operations, and more. However, they cannot add teams outside their access; only administrators can perform this task.
+- **Editor**: [Editor](./team-permissions.md#editor) role has the most advanced permissions, enabling users to manage datastore functions comprehensively. Editors can control enrichment, scoring, computed fields, operations, and more. However, they cannot add teams outside their access; only administrators can perform this task.
 
-- **Author**: [Author](#author) role focuses on managing checks and their associated metadata. This role is essential for tasks like activating, validating, and editing checks but has limited access to datastore functionalities.
+- **Author**: [Author](./team-permissions.md#author) role focuses on managing checks and their associated metadata. This role is essential for tasks like activating, validating, and editing checks but has limited access to datastore functionalities.
 
-- **Drafter**:[Drafter](#drafter) role is designed for users who need to create and prepare checks without performing or finalizing them. This role focuses on adding and organizing content for future use.
+- **Drafter**: [Drafter](./team-permissions.md#drafter) role is designed for users who need to create and prepare checks without performing or finalizing them. This role focuses on adding and organizing content for future use.
 
-- **Viewer**:[Viewer](#viewer) role provides read-only access to anomalies and allows users to add comments or create notes. This role is ideal for those who need to monitor activities without making changes.
+- **Viewer**: [Viewer](./team-permissions.md#viewer) role provides read-only access to anomalies and allows users to add comments or create notes. This role is ideal for those who need to monitor activities without making changes.
 
-- **Reporter**:[Reporter](#reporter) role has extensive access to all app report information, including dashboards, overviews, and anomalies. Reporters can view various data contexts and generate analytical insights.
+- **Reporter**: [Reporter](./team-permissions.md#reporter) role has extensive access to all app report information, including dashboards, overviews, and anomalies. Reporters can view various data contexts and generate analytical insights.
 
 !!! note
-Permissions are assigned to Teams rather than directly to users. Users inherit the permissions of the teams to which they are assigned.
+    Permissions are assigned to Teams rather than directly to users. Users inherit the permissions of the teams to which they are assigned.
 
 All users are part of the default Public team, which provides access to all Public Datastores. Admins can create and manage additional teams, assigning both users and datastores to them. When a datastore is assigned to a team, the team is granted either Read or Write access, and all team members inherit this permission.
 
@@ -129,7 +130,7 @@ You can edit user details to update their role, and team assignments, ensuring t
 2. Assigning them additional teams
 
 !!! note
-All users are inside the Public team by default and that can't be changed. If users have no default access to any datastore, then no datastores should be assigned to the Public team.
+    All users are inside the Public team by default and that can't be changed. If users have no default access to any datastore, then no datastores should be assigned to the Public team.
 
 ![edit-user-details](../../assets/security/edit-user-details-light-9.png#only-light)
 ![edit-user-details](../../assets/security/edit-user-details-dark-9.png#only-dark)
@@ -139,7 +140,7 @@ All users are inside the Public team by default and that can't be changed. If us
 ![save-user](../../assets/security/save-user-light-10.png#only-light)
 ![save-user](../../assets/security/save-user-dark-10.png#only-dark)
 
-After clicking the **Save** button, your changes will be updated, and a success message will display saying, **User successfully updated.
+After clicking the **Save** button, your changes will be updated, and a success message will display saying, **User successfully updated**.
 
 ![user-updated](../../assets/security/user-updated-light-11.png#only-light)
 ![user-updated](../../assets/security/user-updated-dark-11.png#only-dark)
@@ -193,14 +194,14 @@ Whenever new teams are added to the system, they will appear in the Teams list. 
 You can edit a team to update its permissions, name, manage users within the team, and adjust access to source and enrichment datastores, ensuring the team's configuration is current and effective.
 
 !!! note
-The **name** and **users** of a public team cannot be edited.
+    The **name** and **users** of a public team cannot be edited.
 
 **Step 1**:  Click on the **vertical ellipsis (⋮)** next to the team name that you want to edit, then click on **Edit** from the dropdown menu.
 
 ![edit-team](../../assets/security/edit-team-light-18.png#only-light)
 ![edit-team](../../assets/security/edit-team-dark-18.png#only-dark)
 
-**Step 2**:  Edit the [team details](#add-team) as needed, including updating their permissions, users, source, and enrichment datastores.
+**Step 2**:  Edit the [team details](team-permissions.md#add-team) as needed, including updating their permissions, users, source, and enrichment datastores.
 
 ![team-details](../../assets/security/team-details-light-19.png#only-light)
 ![team-details](../../assets/security/team-details-dark-19.png#only-dark)
@@ -231,8 +232,8 @@ A modal window **Delete Team** will appear.
 
 **Step 2**: Click on the **Delete** button to delete the team from the system.
 
-![click-delete](../../assets/security/click-delete-dark-24.png#only-light)
-![click-delete](../../assets/security/click-delete-light-24.png#only-dark)
+![click-delete](../../assets/security/click-delete-light-24.png#only-light)
+![click-delete](../../assets/security/click-delete-dark-24.png#only-dark)
 
 ### Sort Team
 
