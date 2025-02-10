@@ -216,7 +216,7 @@ A modal window will appear with the check details.
 | 5. | Additional Metadata(Optional) | Edit the **Additional Metadata** section to add any new custom |
 
 ![table](../assets/explore/observability/tabless-light.png#only-light)
-![table](../assets/explore/observability/tables-dark.png#only-dark)
+![table](../assets/explore/observability/tabless-dark.png#only-dark)
 
 **Step 3:** Once you have edited the check details, then click on the **Validate** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct.
 
@@ -236,7 +236,7 @@ If the validation is successful, a green message saying **"Validation Successful
 After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"Check successfully updated"**.
 
 ![freshness](../assets/explore/observability/mesgs-light.png#only-light)
-![freshness](../assets/explore/observability/nesgss-dark.png#only-dark)
+![freshness](../assets/explore/observability/mesgs-dark.png#only-dark)
 
 ### Edit Maximum Age
 
