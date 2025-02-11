@@ -20,6 +20,9 @@ DFS containers are used to represent files stored in distributed file systems, s
 
 ### Totals
 
+!!! note
+    Totals are calculated from sampled data, not the full dataset. Values may differ from actual totals across all records.
+
 1. **Quality Score**: This represents the overall health of the data based on various checks. A higher score indicates better data quality and fewer issues detected.
 
 2. **Sampling**: Displays the percentage of data sampled during profiling. A 100% sampling rate means the entire dataset was analyzed for the quality report.
