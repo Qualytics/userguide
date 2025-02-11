@@ -11,7 +11,7 @@ Let’s get started 🚀
 ![explore](../assets/explore/overview-of-explore/explore-light.png#only-light)
 ![explore](../assets/explore/overview-of-explore/explore-dark.png#only-dark)
 
-**Step 2:** After click on the Explore button, you will see the following tabs: [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), **Observability**, [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md).
+**Step 2:** After click on the Explore button, you will see the following tabs: [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), [**Observability**](../explore/observability.md), [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md).
 
 ![explore-tab](../assets/explore/overview-of-explore/explore-tab-light.png#only-light)
 ![explore-tab](../assets/explore/overview-of-explore/explore-tab-dark.png#only-dark)
