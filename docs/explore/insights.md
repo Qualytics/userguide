@@ -183,6 +183,9 @@ Anomalies Identified shows the total issues found, divided into **active**, **ac
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-light.png#only-light)
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-dark.png#only-dark)
 
+!!! info
+    Users can see the checks using the redirect link (the redirect only show the current check statuses).
+
 The count for each category can be viewed by hovering over the relevant anomalies, providing real-time ratios of anomalies. Users can also click on these anomalies to navigate directly to the corresponding anomalies’ dedicated page in the Explore section. 
 
 ## Rule Distribution Type
