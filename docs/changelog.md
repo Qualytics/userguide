@@ -5,6 +5,32 @@ hide:
 
 # Release Notes
 
+### 2025.02.13 { id=2025.02.13 }
+
+#### Feature Enhancements
+
+- Explore View
+    - Users can now refresh the Insights data.
+    - A label will indicate when the page was last refreshed.
+
+- System Appearance
+    - Users can now select the `System` theme.
+        - This setting automatically adjusts based on the user's system theme, switching between dark and light mode.
+    - Users can still manually select dark or light mode.
+
+- Dismiss Popup Window
+    - Users can now dismiss popup windows by pressing the `Esc` key, improving the user experience.
+
+#### General Fixes and Improvements
+
+- External Scan
+    - Fixed an issue where attempting to run an external scan resulted in a "Request Failed" error message.
+
+- Explore View
+    - Fixed an issue causing excessively long loading times.
+
+- General Fixes and Improvements.
+
 ### 2025.02.06 { id=2025.02.06 }
 
 #### Feature Enhancements
