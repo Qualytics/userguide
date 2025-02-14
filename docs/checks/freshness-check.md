@@ -16,7 +16,7 @@ A Freshness Check ensures data is always up-to-date for real-time analytics. It 
 
 ## How It Works
 
-A **Freshness Check** monitors when a dataset (table, file, or viewI) was last updated. If the data is **older than the allowed limit**, the system **triggers an alert**.
+A **Freshness Check** monitors when a dataset (table, file, or view) was last updated. If the data is **older than the allowed limit**, the system **triggers an alert**.
 
 ### Process Flow 
 
