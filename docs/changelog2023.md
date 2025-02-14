@@ -1,6 +1,4 @@
-# 2023
-
-## Release Notes
+# 2023 Release Notes
 
 ### 2023.12.20 { id=2023.12.20}
 
