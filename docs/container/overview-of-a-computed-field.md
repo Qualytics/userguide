@@ -236,13 +236,34 @@ Enables the creation of a field based on a custom computation using Spark SQL. T
 #### Using Custom Expression:
    You can combine multiple fields, apply conditional logic, or use any valid Spark SQL functions to derive your new computed field.
    
-   Example: To create a field that sums two existing fields, you could use the expression `SUM(field1, field2)`.
+   **Example**: To create a field that sums two existing fields, you could use the expression `SUM(field1, field2)`.
 
-#### Example for Custom Expression
+   **Advanced Example**: You need to ensure that a log of leases has no overlapping dates for an asset but your data only captures a single lease's details like 
+   
+| **LeaseID** |  **AssetID** | **Lease_Start** | **Lease_End** |
+|-------------|-------------|--------------------|------------|
+| 1           | 42          | 1/1/2025         |   2/1/2026    |
+| 2           | 43          | 1/1/2025         |   2/1/2026    |
+| 3           | 42          | 1/1/2026         |   2/1/2026    |
+| 4           | 43          | 2/2/2026         |   2/1/2027    |
+
+You can see in this example that Lease 1 has overlapping dates with Lease 3 for the same Asset. This can be difficult to detect without a full transformation of the data. However we can accomplish our goal easily with a Computed Field. 
+We'll simply add a Computed Field to our table named "Next_Lease_Start" and define it with the custom expression `LEAD(Lease_Start, 1) OVER (ORDER BY Lease_Start)` our table will now hold the new field and render as
+
+ | **LeaseID** |  **AssetID** | **Lease_Start** | **Lease_End** | **Next_Lease_Start** |
+|-------------|-------------|--------------------|------------|------------|
+| 1           | 42          | 1/1/2025         |   2/1/2026    | 1/1/2026    |
+| 2           | 43          | 1/1/2025         |   2/1/2026    | 2/2/2026    |
+| 3           | 42          | 1/1/2026         |   2/1/2026    |             |
+| 4           | 43          | 2/2/2026         |   2/1/2027    |             |
+
+Now you can author a Quality Check stating that Lease_End should always be less than "Next_Lease_Start" to catch any errors of this type.  In fact, Qualytics will automatically infer that check for you at [Level 3 Inference](/source-datastore/profile/#levels-of-check-inference)!
+
+#### More Examples for Custom Expression
 
 | **Example** | **Input Fields**  | **Custom Expression**  | **Output**   |
 |-------------|--------------|-----------------|---------------------|
 | 1   | `field1 = 10`, `field2 = 20` | `SUM(field1, field2)` | `30`  |
 | 2   | `salary = 50000`, `bonus = 5000` | `salary + bonus`  | `55000` |
 | 3   | `hours = 8`, `rate = 15.50` | `hours * rate`         | `124`   |
-| 4           | `status = 'active'`, `score = 85` | `CASE WHEN status = 'active' THEN score ELSE 0 END` | `85` |
+| 4   | `status = 'active'`, `score = 85` | `CASE WHEN status = 'active' THEN score ELSE 0 END` | `85` |
