@@ -248,7 +248,9 @@ Enables the creation of a field based on a custom computation using Spark SQL. T
 | 4           | 43          | 2/2/2026         |   2/1/2027    |
 
 You can see in this example that Lease 1 has overlapping dates with Lease 3 for the same Asset. This can be difficult to detect without a full transformation of the data. However we can accomplish our goal easily with a Computed Field. 
-We'll simply add a Computed Field to our table named "Next_Lease_Start" and define it with the custom expression `LEAD(Lease_Start, 1) OVER (ORDER BY Lease_Start)` our table will now hold the new field and render as
+We'll simply add a Computed Field to our table named "Next_Lease_Start" and define it with the following custom expression so that our table will now hold the new field and render it as shown below
+
+`LEAD(Lease_Start, 1) OVER (PARTITION BY AssetID ORDER BY Lease_Start)` 
 
  | **LeaseID** |  **AssetID** | **Lease_Start** | **Lease_End** | **Next_Lease_Start** |
 |-------------|-------------|--------------------|------------|------------|
