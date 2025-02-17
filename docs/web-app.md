@@ -67,6 +67,17 @@ Qualytics offers both dark mode and light mode to enhance user experience and ca
 
 - To activate dark mode, click on the same **Dark Mode** button.
 
+**System Appearance:**
+
+- The system theme automatically adjusts based on the user’s device settings.
+
+- When enabled, Qualytics will switch between light and dark mode based on the system preference.
+
+- It provides a seamless experience by adapting to the user’s environment without manual adjustments.
+
+!!! tip
+    Users can still manually select **dark** or **light** mode if they prefer a fixed theme.
+
 ![light-mode-theme](assets/dashboard/light-mode-theme.png#only-light)
 ![dark-mode-theme](assets/dashboard/dark-mode-theme.png#only-dark)
 
