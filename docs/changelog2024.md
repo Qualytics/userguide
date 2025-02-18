@@ -1,4 +1,6 @@
-# 2024 Release Notes
+# 2024 
+
+## Release Notes
 
 ### 2024.12.23 { id=2024.12.23 }
 
