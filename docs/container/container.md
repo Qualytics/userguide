@@ -20,6 +20,9 @@ DFS containers are used to represent files stored in distributed file systems, s
 
 ### Totals
 
+!!! note
+    Totals are calculated from sampled data, not the full dataset. Values may differ from actual totals across all records.
+
 1. **Quality Score**: This represents the overall health of the data based on various checks. A higher score indicates better data quality and fewer issues detected.
 
 2. **Sampling**: Displays the percentage of data sampled during profiling. A 100% sampling rate means the entire dataset was analyzed for the quality report.
@@ -72,7 +75,7 @@ Users can perform various operations on containers to manage datasets effectivel
 | **1.** |        Settings | Configure incremental strategy, partitioning fields, and exclude specific fields from analysis. |
 | **2.** |          Edit | Edit allowing you edit computed file/table to modify the file name, select expressions, and apply filter clauses. |
 | **3.** |         Score | Score allowing you to adjust the decay period and factor weights for metrics like completeness, accuracy, and consistency. |
-| **4.** |     Observability | Enables or disables volumetrics tracking for daily data volumes. |
+| **4.** |     Observability | Enables or disables tracking for data volume and freshness.<br> **Volume Tracking:** Monitors daily volume metrics to identify trends and detect anomalies over time.<br>**Freshness Tracking:** Records the last update timestamp to ensure data timeliness and detect pipeline delays. |
 | **5.** |         Export | Export quality checks, field profiles and Anomalies to an enrichment datastore for further action or analysis. |
 | **6.** |         Delete | Delete the selected container from the system. |
 

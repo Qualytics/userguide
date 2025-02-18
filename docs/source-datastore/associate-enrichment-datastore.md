@@ -5,6 +5,8 @@ An enrichment datastore is a database used to enhance your existing data by addi
 
 You have the option to link an enrichment datastore to your existing source datastore. However, some datastores cannot be linked as enrichment datastores. For example, Oracle, Athena, Dremio, and Timescale cannot be used for this purpose.
 
+When selecting an enrichment datastore, it is important to consider compatibility. It is not advisable to use blob storage as an enrichment datastore.
+
 Let's get started 🚀
 
 **Step 1:** Select a source datastore from the side menu for which you would like to configure **Link Enrichment.**

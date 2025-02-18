@@ -1,37 +1,50 @@
 # Onboarding 
 
-Qualytics is a [<u>comprehensive data quality management solution</u>](https://www.qualytics.ai/product/), designed to help enterprises proactively manage their full data quality lifecycle at scale through automated profiling, contextual data quality checks, quality rule inference, anomaly detection, remediation, tailored notifications, and more.
+Qualytics is a [<u>comprehensive data quality management solution</u>](https://www.qualytics.ai/product/) that helps enterprises proactively manage their full data quality lifecycle at scale. Through automated profiling, contextual quality checks, rule inference, anomaly detection, remediation, and tailored notifications, Qualytics transforms how organizations approach data quality.
 
-This comprehensive document is designed to help enterprises get started with Qualytics, ensuring a smooth and efficient onboarding process.
+This guide will walk you through getting started with Qualytics, ensuring a smooth and efficient onboarding experience.
 
-Let’s get started 🚀
+Let's get started 🚀
 
 ## Onboarding Process
 
-Qualytics onboarding begins with understanding your enterprise's requirements. Based on your data records, it offers a tailored approach to smoothly onboard you to the platform.
+Your Qualytics journey begins with understanding your enterprise's specific requirements. We'll work with you to create a tailored approach based on your data needs and goals.
 
 ### 1. Screening & Criteria Gathering
 
-[<u>Schedule a demo</u>](https://calendly.com/gorkemsevinc/30min?month=2024-06) with us to help our team understand your enterprise data. During this session, the Qualytics team will create the plan to identify key success criteria
-and tailor the deployment to meet your specific needs, exploring relevant use cases.
+[<u>Schedule a demo</u>](https://calendly.com/gorkemsevinc/30min?month=2024-06) with our team to help us understand your enterprise data needs. During this session, we'll:
+- Create a detailed plan
+- Identify key success criteria
+- Tailor the deployment to your specific requirements
+- Explore relevant use cases for your business
 
 ### 2. User Invitations
 
-Once the deployment setup is complete, Qualytics sends invitations to the provided email addresses. These invitations include instructions for accessing the platform and assigning admin or member roles based on your
-preferences. Admins have full access to configure and manage the platform, while members have access according to the permissions set by the admins.
+Once your deployment setup is complete, we'll send invitations to your team members' email addresses. These invitations include:
+- Instructions for accessing the platform
+- Role assignments (admin or member) based on your preferences
+- Access configuration details
+
+Admins receive full platform configuration and management capabilities, while members receive access based on admin-defined permissions.
 
 ### Deployment Options
 
-Qualytics offers flexible deployment options to seamlessly plug and acknowledge your data infrastructure requirements.
+Qualytics offers flexible deployment options to seamlessly integrate with your existing data infrastructure:
 
 ### 1. SaaS Deployment (Default)
 
-The Software as a Service (SaaS) deployment is a fully managed service hosted by Qualytics. This option provides ease of use and minimal maintenance, allowing your team to focus on data quality management without worrying about infrastructure upkeep. SaaS deployment offers rapid scalability and seamless updates, ensuring you always have access
-to the latest features and improvements.
+Our Software as a Service (SaaS) deployment provides a fully managed experience hosted by Qualytics. This option offers:
+- Minimal maintenance requirements
+- Rapid scalability
+- Automatic updates and improvements
+- Focus on data quality rather than infrastructure
 
 ### 2. On-Premise Deployment
 
-This option is ideal for organizations that prefer to keep their data within their own data centers. By deploying Qualytics on-premise, you maintain complete control over your data and its security, ensuring compliance with internal policies and regulations.
+For organizations that prefer complete control over their data environment, our on-premise deployment option allows you to:
+- Maintain data within your own data centers
+- Ensure compliance with internal policies and regulations
+- Exercise complete control over your data and security
 
 !!! tip
     This deployment option is recommended for customers with sensitive data
@@ -48,11 +61,11 @@ This option is ideal for organizations that prefer to keep their data within the
 
 **Q 3: What type of data should we use for a POC?**
 
-**A 3:** In most cases, potential customers use their actual data during a POC. This provides the best representation of a live instance of Qualytics. Some customers use cleaned data to remove PII or sample test data.
+**A 3:** In most cases, potential customers use their actual data during a POC for the most realistic evaluation. Some customers opt to use cleaned data (removing PII) or sample test data.
 
 **Q 4: Are there limitations to data size for POC?**
 
-**A 4:** There are no limitations to data size for a Proof of Concept (POC)
+**A 4:** There are no limitations to data size for a Proof of Concept (POC).
 
 **Q 5: What type of support is provided during the Onboarding process?**
 
@@ -60,56 +73,48 @@ This option is ideal for organizations that prefer to keep their data within the
 
 **Q 6: What types of data stacks does Qualytics support?**
 
-**A 6:** Qualytics supports two types of data stacks: modern solutions and legacy systems.
+**A 6:** Qualytics supports both modern solutions and legacy systems:
 
 - Modern Solutions
-  > Qualytics supports modern data platforms to ensure robust data quality management across infrastructures. This includes solutions like Snowflake, Amazon S3, BigQuery, etc.
+  > Qualytics seamlessly integrates with modern data platforms like Snowflake, Amazon S3, BigQuery, and more to ensure robust data quality management.
 
 - Legacy Systems
-  > Qualytics also integrates with legacy systems to maintain high standards of data quality across all data sources. This includes reliable and scalable relational database management systems MySQL, Microsoft SQL Server, etc.
+  > We maintain high data quality standards across legacy systems including MySQL, Microsoft SQL Server, and other reliable relational database management systems.
 
-To integrate these data stacks refer to the [<u>quick start guide</u>](https://userguide.qualytics.io/quick-start-guide/).
+For detailed integration instructions, please refer to the [<u>quick start guide</u>](https://userguide.qualytics.io/quick-start-guide/).
 
 **Q 7: What types of database technology can you connect in Qualytics?**
 
-**A 7:** Qualytics supports connecting to any Apache Spark-compatible datastore, including relational databases (RDBMS) and raw file formats such as CSV, XLSX, JSON, Avro, and Parquet.
+**A 7:** Qualytics supports any Apache Spark-compatible datastore, including:
+- Relational databases (RDBMS)
+- Raw file formats (CSV, XLSX, JSON, Avro, Parquet)
 
 **Q 8: What is an enrichment datastore?**
 
-**A 8:** An Enrichment Datastore is a user-managed storage location where the Qualytics platform records and accesses metadata through a set of system-defined tables. It is purpose-built to capture metadata generated by the platform's profiling and scanning operations.
+**A 8:** An Enrichment Datastore is a user-managed storage location where Qualytics records and accesses metadata through system-defined tables. It's specifically designed to capture metadata generated during profiling and scanning operations.
 
 **Q 9: Can I download my metadata and data quality checks?**
 
-**A 9:** Yes, Qualytics's metadata export feature is specifically designed to capture the mutable states of various data entities. This functionality enables the export of Quality Checks, Field Profiles, and Anomalies metadata from selected profiles into a designated enrichment datastore.
+**A 9:** Yes, Qualytics's metadata export feature captures the mutable states of various data entities. You can export Quality Checks, Field Profiles, and Anomalies metadata from selected profiles into your designated enrichment datastore.
 
 **Q 10: How is the Quality Score calculated?**
 
-**A 10:** Quality Scores are measures of data quality calculated at the field, container, and datastore level and recorded as a time series enabling you to track movement over time. A quality score ranges from 0-100, with higher scores indicating higher quality.
+**A 10:** Quality Scores measure data quality at the field, container, and datastore levels, recorded as a time series to track improvements. Scores range from 0-100, with higher scores indicating better quality.
 
 **Q 11: What is a catalog operation?**
 
-**A 11:** The Catalog Operation is run on a datastore to import the named collections (e.g., tables, views and files) of data available within it. The operation will also attempt to automatically identify the best way to support:
-
+**A 11:** A Catalog Operation scans your datastore to import named collections (tables, views, files). It automatically identifies optimal approaches for:
 - Incremental scanning
-
 - Data partitioning
-
 - Record identification
 
 **Q 12: What is a profiling operation?**
 
-**A 12:** A Profile Operation will analyze every available record in all available containers in a datastore. Full Profiles provide the benefit of generating metadata with 100% fidelity at the cost of maximum compute
-time.
+**A 12:** A Profile Operation analyzes every available record across all containers in a datastore. Full Profiles deliver 100% fidelity metadata at the cost of maximum compute time.
 
 **Q 13: What is a scan operation?**
 
-**A 13:** The Scan Operation is executed on a datastore to assert the data quality checks defined for the named collections of data (e.g., tables, views and files) within it. The operation will:
-
-- Produce a record anomaly for any record where anomalous values are
-  > detected.
-
-- Produce a shape anomaly for anomalous values that span multiple
-  > records.
-
-- Record the anomaly data along with related analysis in the associated
-  > Enrichment Datastore.
+**A 13:** The Scan Operation evaluates data quality checks across your datastore's collections, producing:
+- Record anomalies for individual anomalous values
+- Shape anomalies for multi-record anomalies
+- Detailed analysis in your Enrichment Datastore

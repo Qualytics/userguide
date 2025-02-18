@@ -210,7 +210,7 @@ Currently, the following assets are available for exporting:
 !!! Note
 	The strategy used for managing these metadata tables employs a `create or replace` approach, meaning that the export process will create a new table if one does not exist, or replace it entirely if it does. This means that any previous data will be overwritten.
 	
-	For more detailed information on exporting metadata, please refer to the [export documentation](/container/export-metadata/).
+	For more detailed information on exporting metadata, please refer to the [export documentation](../container/export-metadata.md).
 
 #### _EXPORT_ANOMALIES Table
 
@@ -344,8 +344,8 @@ Contains metadata from field profiles.
 
 The diagram below provides a visual representation of the associations between various tables in the Enrichment Datastore. It illustrates how tables can be joined to track and analyze data across different processes.
 
-![Screenshot](../assets/enrichment/diagram-light.png#only-light)
-![Screenshot](../assets/enrichment/diagram-dark.png#only-dark)
+![Screenshot](../assets/enrichment/diagram-01-29-2025.light.png#only-light)
+![Screenshot](../assets/enrichment/diagram-01-29-2025.dark.png#only-dark)
 
 ## Handling JSON and string splitting
 
