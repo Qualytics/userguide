@@ -280,3 +280,15 @@ After exporting, the data appears in a structured format, making it easy to save
 
 ![download](../assets/explore/insights/download-29-light.png#only-light)
 ![dowmnload](../assets/explore/insights/download-29-dark.png#only-dark)
+
+## Refresh
+
+**Refresh** button allows users to quickly update the Insights data. When clicked, it fetches the latest information, ensuring that users always have the most up-to-date insights.
+
+![refresh](../assets/explore/insights/refresh-30-light.png#only-light)
+![refresh](../assets/explore/insights/refresh-30-dark.png#only-dark)
+
+A label indicates when the page was last refreshed, helping users track data updates. This feature ensures accuracy and keeps the insights current without requiring a full page reload.
+
+![refresh label](../assets/explore/insights/refresh-label-31-light.png#only-light)
+![refresh label](../assets/explore/insights/refresh-label-31-dark.png#only-dark)
