@@ -189,7 +189,10 @@ nav:
 
   # - glossary.md
   - API docs: https://demo.qualytics.io/api/docs
-  - changelog.md
+  - Change Log:
+    - changelog2025.md
+    - changelog2024.md
+    - changelog2023.md
 
 extra_css:
   - stylesheets/extra.css
