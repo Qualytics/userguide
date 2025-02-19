@@ -10,14 +10,14 @@ providing a granular analysis of the attributes that impact the overall data qua
 Each field receives a total quality score based on eight key factors each evaluated on a 0-100 scale. The overall score
 is a composite reflecting the relative importance and configured weights of these factors:
 
-- **Completeness**: Measures the average completeness of a field across all profiles.
-- **Coverage**: Assesses the adequacy of data quality checks for the field.
-- **Conformity**: Checks alignment with standards defined by quality checks.
-- **Consistency**: Ensures uniformity in type and scale across all data representations.
-- **Precision**: Evaluates the resolution of field values against defined quality checks.
-- **Timeliness**: Gauges data availability according to schedule inheriting the container's timeliness.
-- **Volumetrics**: Analyzes consistency in data size and shape over time inheriting the container's volumetrics.
-- **Accuracy**: Determines the fidelity of field values to their real-world counterparts.
+- **Completeness**: Measures the percentage of non-null values in a field across all records. For example, if a "phone_number" field has values present in 90 out of 100 records, its completeness score would be 90%.
+- **Coverage**: Evaluates whether appropriate quality rules and checks are in place to monitor the field's quality. By default, Qualytics expects at least three checks for each field.
+- **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern. The rule types that measure conformity are listed below.
+- **Consistency**: Ensures uniformity in type and scale across all data representations. Verifies that data maintains the same type and representation over time. For example, ensuring that a typed numeric column does not change over time to a string.
+- **Precision**: Evaluates the resolution of field values against defined quality checks. The rule types that measure precision are listed below.
+- **Timeliness**: Gauges data availability according to schedule inheriting the container's timeliness. This is explicitly measured as the percentage of time that a table does not adhere to its defined volumetric checks.
+- **Volumetrics**: Analyzes consistency in data size and shape over time inheriting the container's volumetrics. This is measured as the ratio of records scanned to volumetric anomalies. The rule types that measure volumetrics are listed below.
+- **Accuracy**: Determines the fidelity of field values to their real-world counterparts. This is the ratio of records scanned to anomalies detected on the field for any check (regardless of rule type).
 
 ## Quality Scoring a Container
 

@@ -47,7 +47,7 @@
   color: var(--md-default-fg-color);
 }
 
-.md-nav--lifted>.md-nav__list>.md-nav__item>[for], .md-nav__item--section>.md-nav__link[for] { 
+.md-nav--lifted>.md-nav__list>.md-nav__item>[for], .md-nav__item--section>.md-nav__link[for] {
   color: var(--md-default-fg-color);
 }
 
@@ -84,4 +84,13 @@
 
 .text-negative {
   color: #FF4714;
+}
+
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  max-width: 100%;
 }

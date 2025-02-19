@@ -147,6 +147,16 @@ This section shows important information about the records and fields in the con
 ![not-asserted](../assets/explore/insights/not-asserted-10-light.png#only-light)
 ![not-asserted](../assets/explore/insights/not-asserted-10-dark.png#only-dark)
 
+**4. Inferred Checks:** This shows the real-time number of system-generated [**Inferred Checks**](../checks/inferred-check.md).These checks are automatically created during a Profile operation using statistical analysis and machine learning methods.
+
+![inferred-check](../assets/explore/insights/inferred-light.png#only-light)
+![inferred-check](../assets/explore/insights/inferred-dark.png#only-dark)
+
+**5. Authored Check:** This shows the [**Authored Checks**](../checks/authored-check.md) that are manually created by users within the Qualytics platform or API. These checks can range from simple templates for common validations to complex rules using Spark SQL and User-Defined Functions (UDF) in Scala. 
+
+![authored-check](../assets/explore/insights/authored-light.png#only-light)
+![authored-check](../assets/explore/insights/authored-dark.png#only-dark)
+
 The count for each category can be viewed by hovering over the relevant check, providing real-time ratios of checks. Users can also click on these checks to navigate directly to the corresponding checks’ dedicated page in the Explore section. 
 
 ## Anomalies
@@ -172,6 +182,9 @@ Anomalies Identified shows the total issues found, divided into **active**, **ac
 
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-light.png#only-light)
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-dark.png#only-dark)
+
+!!! info
+    Users can see the checks using the redirect link (the redirect only show the current check statuses).
 
 The count for each category can be viewed by hovering over the relevant anomalies, providing real-time ratios of anomalies. Users can also click on these anomalies to navigate directly to the corresponding anomalies’ dedicated page in the Explore section. 
 
@@ -267,3 +280,15 @@ After exporting, the data appears in a structured format, making it easy to save
 
 ![download](../assets/explore/insights/download-29-light.png#only-light)
 ![dowmnload](../assets/explore/insights/download-29-dark.png#only-dark)
+
+## Refresh
+
+**Refresh** button allows users to quickly update the Insights data. When clicked, it fetches the latest information, ensuring that users always have the most up-to-date insights.
+
+![refresh](../assets/explore/insights/refresh-30-light.png#only-light)
+![refresh](../assets/explore/insights/refresh-30-dark.png#only-dark)
+
+A label indicates when the page was last refreshed, helping users track data updates. This feature ensures accuracy and keeps the insights current without requiring a full page reload.
+
+![refresh label](../assets/explore/insights/refresh-label-31-light.png#only-light)
+![refresh label](../assets/explore/insights/refresh-label-31-dark.png#only-dark)

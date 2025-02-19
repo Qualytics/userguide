@@ -38,7 +38,14 @@ The **Edit Datastore** setting allows users to modify the connection details of 
 ![connection-details](../assets/datastore-settings/connection-details-light-4.png#only-light)
 ![connection-details](../assets/datastore-settings/connection-details-dark-4.png#only-dark)
 
-**Step 3**: After editing the connection details, click on the **Save** button. 
+**Step 3:** After editing the connection details, click on the **Test Connection** button to check and verify its connection.
+
+![test](../assets/datastore-settings/test-light.png#only-light)
+![test](../assets/datastore-settings/test-dark.png#only-dark)
+
+If the credentials and provided connection details are verified, a success message will be displayed indicating that the connection has been verified.
+
+**Step 4**: Click on the **Save** button. 
 
 ![save-datastore](../assets/datastore-settings/save-datastore-light-5.png#only-light)
 ![save-datastore](../assets/datastore-settings/save-datastore-dark-5.png#only-dark)
@@ -207,6 +214,18 @@ The **Delete Datastore** action permanently removes a datastore and all associat
 
 ![confirm-delete](../assets/datastore-settings/confirm-delete-light-24.png#only-light)
 ![confirm-delete](../assets/datastore-settings/confirm-delete-dark-24.png#only-dark)
+
+## View Team
+
+**Step 1**: Select the datastores from the side menu to view the respective datastore team.
+
+![add-datastore](../assets/datastore-settings/add-datastore-light-1.png#only-light)
+![add-datastore](../assets/datastore-settings/add-datastore-dark-1.png#only-dark)
+
+In the **Details Panel** of the selected datastore, the **"Assigned Teams"** section in the footer displays the list of teams assigned to that datastore.
+
+![teams](../assets/datastore-settings/teams-light-1.png#only-light)
+![teams](../assets/datastore-settings/teams-dark-1.png#only-dark)
 
 ## Mark Datastore as Favorite
 

@@ -9,3 +9,5 @@ Once setup - simply run `mkdocs serve` locally for a live preview. Another optio
 
 We are using the [mkdocs-print-site-plugin](https://github.com/timvink/mkdocs-print-site-plugin) plugin to add a 
 print page that combines all the docs, allowing for easy export to PDF and standalone HTML.
+
+cd ..
