@@ -2,6 +2,44 @@
 
 ## Release Notes
 
+### 2025.02.26 { id=2025.02.26 }
+
+#### Feature Enhancements
+
+- Enrichment Operations
+    - Introducing Materialize Operation
+        - This will "capture a snapshot" of selected containers from your source datastore and export them to the enrichment datastore for seamless data loading.
+        - Users can define the maximum number of records to be materialized per table.
+        - A schedule option is available for users to set up and schedule the operation according to their needs.
+    - Introducing Export Operation
+        - Users can extract metadata from selected assets in their source datastore and export it to the enrichment datastore for seamless integration.
+        - Assets metadata options are available to export to the enrichment datastore. Users can export:
+        - Anomalies
+        - Quality checks
+        - Field profiles
+    - These operations are available in Flow Action.
+
+- Flows
+    - Introduced a cloning feature for actions in flow.
+        - Users can now clone a simple action by clicking the vertical ellipses.
+
+- Scan Operation
+    - Introducing Anomaly Rollup Threshold
+        - Users can now roll up anomalies that will be created per check before they are merged into a single rolled-up anomaly.
+
+- Error Messages
+     - Improved custom messages when users receive 502 and 503 status codes.
+
+#### General Fixes and Improvements
+
+- System Timestamp
+    - Standardized timestamps across the platform.
+
+- External Integrations
+    - Fixed an issue where external tags should be updated instead of being deleted and dropped during sync.
+
+- General Fixes and Improvements.
+
 ### 2025.02.13 { id=2025.02.13 }
 
 #### Feature Enhancements
