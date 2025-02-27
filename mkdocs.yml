@@ -50,7 +50,6 @@ nav:
         - add-datastores/google-cloud-storage.md
         - add-datastores/qfs.md
       - connections/overview-of-a-connection.md
-      - enrichment-support/enrichment-support-datastores.md
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
@@ -65,6 +64,7 @@ nav:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Add Enrichment: enrichment/enrichment-datastore-creation.md
+      - enrichment-support/enrichment-support-datastores.md
 
     - Containers:
       - Overview: container/container.md
