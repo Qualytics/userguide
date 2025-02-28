@@ -197,6 +197,10 @@ Users can execute specific operations when the trigger activates. They can choos
 
 * Scan.
 
+* Export.
+
+* Materialize.
+
 ![operations](.././assets/flows/operations-light-24.png#only-light)
 ![operations](.././assets/flows/operations-dark-24.png#only-dark)
 
@@ -293,6 +297,11 @@ A panel  **Scan Settings** will appear on the right-hand side, This window allow
 ![scan](.././assets/flows/scan-light-39.png#only-light)
 ![scan](.././assets/flows/scan-dark-39.png#only-dark)
 
+**Anomaly Rollup Threshold:** Set the Rollup Threshold to limit how many anomalies are created per check. When the limit is reached, anomalies will be merged into one for easier management.
+
+![rollup](.././assets/flows/rollup-light-39.png#only-light)
+![rollup](.././assets/flows/rollup-dark-39.png#only-dark)
+
 **Anomaly Options:** Automatically archive duplicate anomalies from previous scans.
 
 ![scan](.././assets/flows/scan-light-40.png#only-light)
@@ -312,6 +321,70 @@ A panel  **Scan Settings** will appear on the right-hand side, This window allow
 
 ![save](.././assets/flows/save-light-43.png#only-light)
 ![save](.././assets/flows/save-dark-43.png#only-dark)
+
+**Export**
+
+**Step 1:** Click on **Export.**
+
+![export](.././assets/flows/export-light.png#only-light)
+![export](.././assets/flows/export-dark.png#only-dark)
+
+A panel **Export Settings** will appear on the right-hand side, This window allows you to configure the Export settings.
+
+![pannel](.././assets/flows/export-setting-light.png#only-light)
+![pannel](.././assets/flows/export-setting-dark.png#only-dark)
+
+**Source Datastore:** Select the datastore to export data from.
+
+![source](.././assets/flows/source-light.png#only-light)
+![source](.././assets/flows/source-dark.png#only-dark)
+
+**Select profiles to export:** **All** (all tables, including future ones), **Specific** (manually chosen tables), or **Tag** (tables based on selected tags).
+
+![profile](.././assets/flows/profiles-light.png#only-light)
+![profile](.././assets/flows/profiles-dark.png#only-dark)
+
+**Export Setting:** Choose metadata to export **anomalies**, **quality checks**, or **field profiles**. Anomalies detect data issues, quality checks validate data, and field profiles store field metadata.
+
+![exportt](.././assets/flows/exportt-light.png#only-light)
+![exportt](.././assets/flows/exportt-dark.png#only-dark)
+
+**Step 2:** Click Save to finalize the export configuration.
+
+![save](.././assets/flows/savee-light.png#only-light)
+![save](.././assets/flows/savee-dark.png#only-dark)
+
+**Materialize**
+
+**Step 1:** Click on **Materialize.**
+
+![materialize](.././assets/flows/materialize-light.png#only-light)
+![materialize](.././assets/flows/materialize-dark.png#only-dark)
+
+A panel **Materialize Settings** will appear on the right-hand side, This window allows you to configure the Materialize settings.
+
+![setting](.././assets/flows/setting-light.png#only-light)
+![setting](.././assets/flows/setting-dark.png#only-dark)
+
+**Source Datastore:** Select the datastore to materialize data from.
+
+![source](.././assets/flows/sourcee-light.png#only-light)
+![source](.././assets/flows/sourcee-dark.png#only-dark)
+
+**Select Tables:** Choose which tables (all, specific, or tagged) to extract from your source datastore and export to the enrichment datastore.
+
+![select](.././assets/flows/select-light.png#only-light)
+![select](.././assets/flows/select-dark.png#only-dark)
+
+**Read Settings:** Select the record limit to control how much data is materialized per table.
+
+![read](.././assets/flows/read-light.png#only-light)
+![read](.././assets/flows/read-dark.png#only-dark)
+
+**Step 2:** Click Save to finalize the materialize configuration.
+
+![save](.././assets/flows/saveee-light.png#only-light)
+![save](.././assets/flows/saveee-dark.png#only-dark)
 
 #### Notification
 
@@ -743,6 +816,20 @@ After clicking on the **Delete** button, your flow will be deleted and a confirm
 
 ![delete](.././assets/flows/delete-light-98.png#only-light)
 ![delete](.././assets/flows/delete-dark-98.png#only-dark)
+
+## Clone a Action
+
+User can duplicate an existing action in just a few clicks. Cloning an action allows you to quickly replicate its configuration without manually setting it up again.
+
+**Step 1** Click the vertical ellipsis (**⋮**) on the action you want to clone, then select the **Clone** option from the menu.
+
+![vertical](.././assets/flows/vertical-light.png#only-light)
+![vertical](.././assets/flows/vertical-dark.png#only-dark)
+
+**Step 2** After clicking the Clone option, a cloned action will be created.
+
+![clone](.././assets/flows/clones-light.png#only-light)
+![clone](.././assets/flows/clones-dark.png#only-dark)
 
 ## Flows Execution
 
