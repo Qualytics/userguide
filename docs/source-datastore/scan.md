@@ -123,7 +123,9 @@ This option enables you to automatically scan file patterns associated with the 
 ![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
 ![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
 
-**2. Anomaly Options:** Enable the option to automatically archive duplicate anomalies detected in previous scans that overlap with the current scan. This feature helps improve data management by minimizing redundancy and ensuring a more organized anomaly record.
+**2. Anomaly Options:** Manage anomalies efficiently by setting a rollup threshold to merge excess anomalies and enabling automatic archiving to remove duplicates from overlapping scans.
+
+- **Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review. 
 
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
