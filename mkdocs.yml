@@ -72,6 +72,8 @@ nav:
       - Computed Tables and Files: container/computed-tables-and-files.md
       - Manage Tables and Files: container/manage-tables-and-files.md
       - Computed Fields: container/overview-of-a-computed-field.md
+      - Enrichment Operation:
+        - Materialize Operation: container/materialize-operation.md
       - Export Metadata: container/export-metadata.md
       - Settings:
         - Identifiers: container/overview-of-identifiers.md
