@@ -166,6 +166,7 @@ nav:
       - Tokens: settings/tokens/overview-of-tokens.md
       - Health: settings/health/overview-of-health.md
     - Qualytics CLI:
+        - Installing Python: cli/python-installation.md
         - Overview: cli/overview-of-qualytics-cli.md
     - Integrations:
         - Overview: integrations/overview.md
