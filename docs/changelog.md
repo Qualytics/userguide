@@ -2,6 +2,28 @@
 
 ## Release Notes
 
+### 2025.03.05 { id=2025.03.05 }
+
+#### General Fixes and Improvements
+
+- Tag Updating
+  - Fixed an issue where some containers failed to receive tag changes when updating tags across multiple containers or performing bulk updates.
+
+- Is Replica Of Check
+  - Fixed an issue where `Last Asserted` incorrectly displayed as not asserted in the UI, while the rollover information showed it had been executed.
+  - Fixed an issue where the same native type was read as different Spark types. In Oracle, it was declared as Integral, while in Snowflake, it was read as Fraction.
+
+- Edit Scheduled Materialized Operation
+  - Fixed an issue where the modal did not appear when users attempted to edit a scheduled materialized operation.
+
+- Restart Analytics Engine
+  - Fixed an issue where restarting the Analytics Engine did not take effect.
+
+- Anomaly Count
+  - Fixed an inconsistency in the anomaly count.
+
+- General Fixes and Improvements.
+
 ### 2025.02.26 { id=2025.02.26 }
 
 #### Feature Enhancements
