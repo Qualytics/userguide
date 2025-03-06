@@ -2,6 +2,24 @@
 
 ## Release Notes
 
+### 2025.03.05 { id=2025.03.05 }
+
+#### General Fixes and Improvements
+
+- Tag Updating
+    - Fixed an issue where some containers failed to receive tag changes when updating tags across multiple containers or performing bulk updates.
+
+- Edit Scheduled Materialized Operation
+    - Fixed an issue where the modal did not appear when users attempted to edit a scheduled materialized operation.
+
+- Restart Analytics Engine
+    - Fixed an issue where restarting the Analytics Engine did not take effect.
+
+- Anomaly Count
+    - Fixed an inconsistency in the anomaly count.
+
+- General Fixes and Improvements.
+
 ### 2025.02.26 { id=2025.02.26 }
 
 #### Feature Enhancements
