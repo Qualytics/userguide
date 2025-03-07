@@ -1,0 +1,6964 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User Guide for the Qualytics data quality platform">
+      
+      
+        <meta name="author" content="Qualytics Team">
+      
+      
+        <link rel="canonical" href="http://localhost:8001/userguide/flows/flows/">
+      
+      
+        <link rel="prev" href="../../explore/anomalies/">
+      
+      
+        <link rel="next" href="../../tags/overview-of-tag/">
+      
+      
+      <link rel="icon" href="../../assets/Q_sm_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Overview - User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-46N5E3NXG0"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-46N5E3NXG0",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-46N5E3NXG0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://qualytics.ai" title="User Guide" class="md-header__button md-logo" aria-label="User Guide" data-md-component="logo">
+      
+  <img src="../../assets/Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Qualytics/userguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../onboarding/" class="md-tabs__link">
+          
+  
+    
+  
+  Using the Platform
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://demo.qualytics.io/api/docs" class="md-tabs__link">
+        
+  
+    
+  
+  API docs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../changelog/" class="md-tabs__link">
+          
+  
+    
+  
+  Change Log
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://qualytics.ai" title="User Guide" class="md-nav__button md-logo" aria-label="User Guide" data-md-component="logo">
+      
+  <img src="../../assets/Logo.png" alt="logo">
+
+    </a>
+    User Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Qualytics/userguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Using the Platform
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Using the Platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Add Datastores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Add Datastores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/overview-of-a-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JDBC Datastores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            JDBC Datastores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/overview-of-a-jdbc-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JDBC Datastore Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/athena/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Athena
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/bigquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BigQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/databricks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databricks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/db2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DB2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/hive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/maria-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MariaDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/microsoft-sql-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft SQL Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/oracle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oracle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/postgresql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/presto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/redshift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redshift
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/snowflake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Snowflake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/synapse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synapse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/teradata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teradata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/timescale-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TimescaleDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/trino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/dremio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dremio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DFS Datastores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DFS Datastores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/overview-of-a-dfs-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFS Datastore Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/amazon-s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/azure-blob-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Blob Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/azure-datalake-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Datalake Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/google-cloud-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Cloud Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/qfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualytics File System (QFS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connections/overview-of-a-connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connections Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Source Datastores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Source Datastores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/right-click-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Right Click Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/associate-enrichment-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Link Enrichment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/assign-tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assign Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/scan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/external-scan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Scan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-datastore/datastore-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datastore Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Enrichment Datastores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Enrichment Datastores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enrichment/overview-of-an-enrichment-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enrichment/enrichment-datastore-preview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enrichment/enrichment-datastore-creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add Enrichment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enrichment-support/enrichment-support-datastores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrichment Support Datastores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/data-preview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/computed-tables-and-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computed Tables and Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/manage-tables-and-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Tables and Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/overview-of-a-computed-field/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computed Fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_6" id="__nav_2_7_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Enrichment Operation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Enrichment Operation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/export-operation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/materialize-operation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Materialize Operation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/export-metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_8" id="__nav_2_7_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/overview-of-identifiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/overview-of-grouping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grouping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container/overview-of-infer-data-type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Weight
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Weight
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../weight/weighting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weight Mechanism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Quality Checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Data Quality Checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/overview-of-a-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/manage-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/authored-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authored
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/inferred-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inferred
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_5" id="__nav_2_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rule Types
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rule Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/rule-types-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rule Types Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/after-date-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Date
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/aggregation-comparison-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aggregation Comparison
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/any-not-null-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Any Not Null
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/before-date-time-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Before Date Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/between-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Between
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/between-times-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Between Times
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/contains-credit-card-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contains Credit Card
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/contains-email-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contains Email
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/contains-social-security-number-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contains Social Security Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/contains-url/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contains Url
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/distinct-count-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distinct Count
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/entity-resolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entity Resolution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/equal-to-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equal to
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/equal-to-field-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equal to Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/exists-in-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exists In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/expected-schema-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expected Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/expected-values-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expected Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/field-count-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Field Count
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/freshness-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freshness Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/greater-than-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greater Than
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/greater-than-field-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greater Than Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/is-address/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is Address
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/is-credit-card-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is Credit Card
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/is-replica-of-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is Replica Of
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/is-type-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is Type
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/less-than-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Less Than
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/less-than-field-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Less Than Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/matches-pattern-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matches Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/max-length-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Max Length
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/max-partition-size-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Max Partition Size
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/max-value-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Max Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/metric-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/min-length-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Min Length
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/min-partition-size-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Min Partition Size
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/min-value-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Min Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/not-exists-in-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Not Exists In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/not-future-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Not Future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/not-negative-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Not Negative
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/not-null-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Not Null
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/positive-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Positive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/predicted-by-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Predicted By
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/required-values-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Required Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/satisfies-expression-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Satisfies Expression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/sum-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/time-distribution-size-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time Distribution Size
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/unique-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/user-defined-function-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Defined Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/volumetric-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volumetric Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/checks-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Check Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/apply-check-template-for-quality-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apply Check Template for Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checks/export-check-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Check Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Observability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../observability/observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Anomalies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            Anomalies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anomalies/anomalies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anomaly Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anomalies/manage-anomalies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Anomalies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Explore
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/overview-of-explore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/profiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/anomalies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anomalies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Flows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            Flows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-to-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation to Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trigger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation-completes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Completes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomalous-table-and-file-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomalous Table and File Detected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomaly Detected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-created-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Created Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sort Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-manual-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Manual Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manage Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivate-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deactivate Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flows Execution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#see-a-flow-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      See a Flow Execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-flow-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Flow States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-operation-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Operation Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-flow-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Flow Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-and-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter and Sort
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter and Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
+            <span class="md-nav__icon md-icon"></span>
+            Tags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/overview-of-tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/connections/manage-connections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_15_2" id="__nav_2_15_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_15_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15_2">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/security/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/security/team-permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team Permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/security/directory-sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/tokens/overview-of-tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/health/overview-of-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Qualytics CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
+            <span class="md-nav__icon md-icon"></span>
+            Qualytics CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/python-installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/overview-of-qualytics-cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_17" id="__nav_2_17_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../add-datastores/overview-of-a-datastore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_17_3" id="__nav_2_17_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Catalogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Catalogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/catalog-integrations/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/catalog-integrations/atlan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atlan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/catalog-integrations/alation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/catalog-integrations/external-tag-propagation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Tag Propagation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/sso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Single Sign-On
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/compute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/alerting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alerting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/ticketing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ticketing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quality-scores/what-are-quality-scores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Scores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing This Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_19" id="__nav_2_19_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_19">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployments/deployments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deployment options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrades/qualytics-single-tenant-instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Our Helm chart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation-automation/automated-tasks-with-cron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheduled Operations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dfs-globbing/how-dfs-filename-globbing-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filename Globbing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://demo.qualytics.io/api/docs" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Change Log
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Change Log
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog-2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-to-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation to Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trigger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation-completes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Completes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomalous-table-and-file-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomalous Table and File Detected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomaly Detected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-created-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Created Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sort-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sort Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-manual-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Manual Flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manage Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivate-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deactivate Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-a-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone a Action
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flows-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flows Execution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flows Execution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#see-a-flow-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      See a Flow Execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-flow-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Flow States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-operation-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Operation Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-flow-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Flow Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-and-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter and Sort
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter and Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Qualytics/userguide/edit/main/docs/flows/flows.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Qualytics/userguide/raw/main/docs/flows/flows.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="flows">Flows</h1>
+<p>Flows enable users to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, offering a flexible and efficient way to automate processes. These actions can be notifications or operations, allowing users to inform various notification channels or execute tasks based on specific operations. </p>
+<h2 id="navigation-to-flows">Navigation to Flows</h2>
+<p><strong>Step 1</strong>: Log in to your Qualytics account and click on the <strong>Flows</strong> on the left side panel of the interface.  </p>
+<p><img alt="flows" src="../../assets/flows/flow-light-1.png#only-light" />
+<img alt="flows" src="../../assets/flows/flow-dark-1.png#only-dark" /></p>
+<p>You will navigate to the Flows interface, where you can add and manage flows. At the top, you will see two tabs:</p>
+<ul>
+<li><strong>Definitions:</strong> Displays a list of all flows along with details like triggers, actions, tags, and the last triggered time.</li>
+</ul>
+<p><img alt="definition" src="../../assets/flows/definitions-light-2.png#only-light" />
+<img alt="definition" src="../../assets/flows/definitions-dark-2.png#only-dark" /></p>
+<ul>
+<li><strong>Executions:</strong> Provides the execution history of flows, including their status and timestamps.</li>
+</ul>
+<p><img alt="execution" src="../../assets/flows/execution-light-3.png#only-light" />
+<img alt="execution" src="../../assets/flows/execution-dark-3.png#only-dark" /></p>
+<h2 id="add-flow">Add Flow</h2>
+<p><strong>Step 1</strong>: Click on the <strong>Add Flow</strong> button from the top right corner.</p>
+<p><img alt="addflow" src="../../assets/flows/addflow-light-4.png#only-light" />
+<img alt="addflow" src="../../assets/flows/addflow-dark-4.png#only-dark" /></p>
+<p>A modal window, <strong>Add Flow</strong>, will appear, providing options to create a flow. Each flow starts by default with two nodes: <strong>Flow</strong> and <strong>Trigger</strong>.</p>
+<p><img alt="flowchart" src="../../assets/flows/flowchart-light-5.png#only-light" />
+<img alt="flowchart" src="../../assets/flows/flowchart-dark-5.png#only-dark" /></p>
+<h3 id="flow">Flow</h3>
+<p><strong>Step 1:</strong> Click on the <strong>Flow</strong> node.  </p>
+<p><img alt="flow" src="../../assets/flows/flow-light-6.png#only-light" />
+<img alt="flow" src="../../assets/flows/flow-dark-6.png#only-dark" /></p>
+<p>A panel will appear on the right-hand side, allowing you to:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;"><strong>Name</strong></td>
+<td style="text-align: left;">Enter the name for the flow.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: left;">Provide a brief description of the flow (optional) to clarify its purpose or functionality.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;"><strong>Deactivated</strong></td>
+<td style="text-align: left;">Check the box to deactivate the flow. If selected, the flow won't start even if the trigger conditions are met.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="flow" src="../../assets/flows/flowsetting-light-7.png#only-light" />
+<img alt="flow" src="../../assets/flows/flowsetting-dark-7.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Once the details are filled in, click the <strong>Save</strong> button to save the flow settings.  </p>
+<p><img alt="save" src="../../assets/flows/save-light-8.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-8.png#only-dark" /></p>
+<h3 id="trigger">Trigger</h3>
+<p><strong>Step 1:</strong> After completing the <strong>"Flow"</strong> node setup, users can click on the <strong>"Trigger"</strong> node.</p>
+<p><img alt="trigger" src="../../assets/flows/trigger-light-9.png#only-light" />
+<img alt="trigger" src="../../assets/flows/trigger-dark-9.png#only-dark" /></p>
+<p>A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides four options for initiating the flow. Users can choose one of the following options:</p>
+<ul>
+<li>
+<p>Operation Completes.</p>
+</li>
+<li>
+<p>Anomalous Table and File Detection.</p>
+</li>
+<li>
+<p>Anomaly Detected.</p>
+</li>
+<li>
+<p>Manual</p>
+</li>
+</ul>
+<p><img alt="triggersetting" src="../../assets/flows/triggersetting-light-10.png#only-light" />
+<img alt="triggersetting" src="../../assets/flows/triggersetting-dark-10.png#only-dark" /></p>
+<h4 id="operation-completes">Operation Completes</h4>
+<p>This type of flow is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app messages and, if configured, via external notification channels such as email, Slack, Microsoft Teams, and others. For example, the team is notified whenever the catalog operation is completed, helping them proceed with the profile operation on the datastore.</p>
+<p><img alt="operation" src="../../assets/flows/operation-light-11.png#only-light" />
+<img alt="operation" src="../../assets/flows/operation-dark-11.png#only-dark" /></p>
+<p><strong>Filter Conditions</strong></p>
+<p>Filters can be set to narrow down which operations should trigger the flow execution:</p>
+<ol>
+<li>
+<p><strong>Source Datastore Tags</strong>: The flow is triggered only for source datastores that have all the selected tags assigned.</p>
+</li>
+<li>
+<p><strong>Source Datastores</strong>: The flow is triggered only for the selected source datastores.</p>
+</li>
+<li>
+<p><strong>Operation Types</strong>: The flow is triggered only for operations that match one or more of the selected types.</p>
+</li>
+<li>
+<p><strong>Operation Status</strong>: The flow is triggered for operations with a status of either Success or Failure.</p>
+</li>
+</ol>
+<p><img alt="operation" src="../../assets/flows/operation-light-12.png#only-light" />
+<img alt="operation" src="../../assets/flows/operation-dark-12.png#only-dark" /></p>
+<p>After defining the conditions, users must click the <strong>Save</strong> button to finalize the trigger configuration.</p>
+<p><img alt="save" src="../../assets/flows/save-light-13.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-13.png#only-dark" /></p>
+<h4 id="anomalous-table-and-file-detected">Anomalous Table and File Detected</h4>
+<p>This flow is triggered when anomalies are detected within a specific table, file and check rule types. It includes information about the number of anomalies found and the specific scan target within the datastore. This is useful for assessing the overall health of a particular datastore.  </p>
+<p><img alt="table" src="../../assets/flows/table-light-14.png#only-light" />
+<img alt="table" src="../../assets/flows/table-dark-14.png#only-dark" /></p>
+<p><strong>Filter Conditions</strong></p>
+<p>Users can optionally set filters to specify which tables or files should trigger the flow execution.</p>
+<ol>
+<li>
+<p><strong>Tables / Files Tags</strong>: Only tables or files with all the selected tags assigned will trigger the flow.</p>
+</li>
+<li>
+<p><strong>Source Datastores</strong>: The flow is triggered only for the selected source datastores.</p>
+</li>
+<li>
+<p><strong>Check Rule Types</strong>: Only anomalies identified by one or more of the selected check rule types will initiate the flow.</p>
+</li>
+</ol>
+<p><img alt="table" src="../../assets/flows/table-light-15.png#only-light" />
+<img alt="table" src="../../assets/flows/table-dark-15.png#only-dark" /></p>
+<p>After defining the conditions, users must click the <strong>Save</strong> button to finalize the trigger configuration.  </p>
+<p><img alt="save" src="../../assets/flows/save-light-16.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-16.png#only-dark" /></p>
+<h4 id="anomaly-detected">Anomaly Detected</h4>
+<p>This type of flow is triggered when any single anomaly is identified in the data. The flow message typically includes the type of anomaly detected and the datastore where it was found. It provides specific information about the anomaly type, which helps quickly understand the issue's nature.</p>
+<p><img alt="anomaly" src="../../assets/flows/anomaly-light-17.png#only-light" />
+<img alt="anomaly" src="../../assets/flows/anomaly-dark-17.png#only-dark" /></p>
+<p><strong>Filter Condition</strong></p>
+<p>Users can define specific conditions to determine when the flow should be initiated.</p>
+<ol>
+<li>
+<p><strong>Anomaly’s Tags</strong>: Only anomalies with all selected tags assigned will trigger the flow.</p>
+</li>
+<li>
+<p><strong>Source Datastores</strong>: Only triggered when anomalies are detected in the selected datastores.</p>
+</li>
+<li>
+<p><strong>Check Rule Types</strong>: Only anomalies identified by one or more of the selected check rule types will initiate the flow.</p>
+</li>
+<li>
+<p><strong>Anomaly Weight (Min)</strong>: Only anomalies with a weight equal to or greater than the specified value will trigger the flow.</p>
+</li>
+</ol>
+<p><img alt="anomaly" src="../../assets/flows/anomaly-light-18.png#only-light" />
+<img alt="anomaly" src="../../assets/flows/anomaly-dark-18.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Once the filter conditions are set, users must click the <strong>Save</strong> button to finalize the configuration.</p>
+<p><img alt="save" src="../../assets/flows/save-light-19.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-19.png#only-dark" /></p>
+<h4 id="manual">Manual</h4>
+<p>The flow starts only when the user manually triggers it. It doesn’t depend on any automatic conditions or detections, giving the user full control.  </p>
+<p><img alt="manual" src="../../assets/flows/manual-light-20.png#only-light" />
+<img alt="manual" src="../../assets/flows/manual-dark-20.png#only-dark" /></p>
+<p>Once selected, users must click the <strong>Save</strong> button to confirm the manual trigger configuration.</p>
+<p><img alt="save" src="../../assets/flows/save-light-21.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-21.png#only-dark" /></p>
+<h3 id="actions">Actions</h3>
+<p>Actions define the specific steps the system will execute after a flow is triggered. They allow users to automate tasks, send notifications, or interact with external systems. </p>
+<p><strong>Step 1:</strong> After completing the <strong>"Trigger"</strong> node setup, users can click on the <strong>"Actions"</strong> node.  </p>
+<p><img alt="action" src="../../assets/flows/action-light-22.png#only-light" />
+<img alt="action" src="../../assets/flows/action-dark-22.png#only-dark" /></p>
+<p>A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into three groups:</p>
+<ul>
+<li>
+<p>Operations.</p>
+</li>
+<li>
+<p>Notifications.</p>
+</li>
+<li>
+<p>HTTP.</p>
+</li>
+</ul>
+<p><img alt="actionlist" src="../../assets/flows/actionlist-light-23.png#only-light" />
+<img alt="actionlist" src="../../assets/flows/actionlist-dark-23.png#only-dark" /></p>
+<h4 id="operation">Operation</h4>
+<p>Users can execute specific operations when the trigger activates. They can choose from the following options:</p>
+<ul>
+<li>
+<p>Catalog.</p>
+</li>
+<li>
+<p>Profile.</p>
+</li>
+<li>
+<p>Scan.</p>
+</li>
+<li>
+<p>Export.</p>
+</li>
+<li>
+<p>Materialize.</p>
+</li>
+</ul>
+<p><img alt="operations" src="../../assets/flows/operations-light-24.png#only-light" />
+<img alt="operations" src="../../assets/flows/operations-dark-24.png#only-dark" /></p>
+<p><strong>Catalog</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Catalog.</strong>  </p>
+<p><img alt="catalog" src="../../assets/flows/catalog-light-25.png#only-light" />
+<img alt="catalog" src="../../assets/flows/catalog-dark-25.png#only-dark" /></p>
+<p>A panel  <strong>Catalog Settings</strong> will appear on the right-hand side, This window allows you to configure the catalog operation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Source Datastore</td>
+<td style="text-align: left;">Select the source datastore to catalog.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Prune</td>
+<td style="text-align: left;">Checkbox to enable or disable the removal of named collections (tables, views, files, etc.) that no longer exist in the datastore.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Recreate</td>
+<td style="text-align: left;">Checkbox to enable or disable the recreation of previously deleted named collections in Qualytics for the catalog.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Include</td>
+<td style="text-align: left;">Checkboxes to select Tables, Views, or both, specifying the resources to include in the catalog.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="catalog" src="../../assets/flows/catalog-light-26.png#only-light" />
+<img alt="catalog" src="../../assets/flows/catalog-dark-26.png#only-dark" /></p>
+<p><strong>Step 2:</strong> After configuring the settings, click Save to apply and proceed with the catalog operation.</p>
+<p><img alt="save" src="../../assets/flows/save-light-27.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-27.png#only-dark" /></p>
+<p><strong>Profile</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Profile.</strong>  </p>
+<p><img alt="profile" src="../../assets/flows/profile-light-28.png#only-light" />
+<img alt="profile" src="../../assets/flows/profile-dark-28.png#only-dark" /></p>
+<p>A panel  <strong>Profile Settings</strong> will appear on the right-hand side, This window allows you to configure the Profile operation.</p>
+<p><img alt="profile" src="../../assets/flows/profile-light-29.png#only-light" />
+<img alt="profile" src="../../assets/flows/profile-dark-29.png#only-dark" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Source Datastore</td>
+<td style="text-align: left;">Select the source datastore to catalog.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Select Tables</td>
+<td style="text-align: left;">Allows users to select all tables, specific tables, or tables associated with selected tags to profile.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Read Settings</td>
+<td style="text-align: left;">Configure the starting point for profiling and set a maximum record limit per table for profiling.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Inference Settings</td>
+<td style="text-align: left;">Set the level of automated checks and decide whether inferred checks should be saved in draft mode.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="profile" src="../../assets/flows/profile-light-30.png#only-light" />
+<img alt="profile" src="../../assets/flows/profile-dark-30.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click Save to finalize the profile configuration.</p>
+<p><img alt="save" src="../../assets/flows/save-light-31.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-31.png#only-dark" /></p>
+<p><strong>Scan</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Scan.</strong></p>
+<p><img alt="scan" src="../../assets/flows/scan-light-32.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-32.png#only-dark" /></p>
+<p>A panel  <strong>Scan Settings</strong> will appear on the right-hand side, This window allows you to configure the Scan operation.  </p>
+<p><img alt="scan" src="../../assets/flows/scan-light-33.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-33.png#only-dark" /></p>
+<p><strong>Source Datastore:</strong> Select the datastore to be scanned.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-34.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-34.png#only-dark" /></p>
+<p><strong>Selected Tables:</strong> Choose all tables, specific tables, or tables associated with selected tags to include in the scan .</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-35.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-35.png#only-dark" /></p>
+<p><strong>Read Settings:</strong> Define the scan strategy: incremental scans updated records; full scans all records.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-36.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-36.png#only-dark" /></p>
+<p><strong>Starting Threshold:</strong> Set a starting point for scanning based on an incremental identifier.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-37.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-37.png#only-dark" /></p>
+<p><strong>Record Limit:</strong> Specify the maximum number of records to scan per table.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-38.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-38.png#only-dark" /></p>
+<p><strong>Scan Settings:</strong> Select categories of checks to include, such as table properties (Metadata) or value checks (Data Integrity).</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-39.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-39.png#only-dark" /></p>
+<p><strong>Anomaly Rollup Threshold:</strong> Set the Rollup Threshold to limit how many anomalies are created per check. When the limit is reached, anomalies will be merged into one for easier management.</p>
+<p><img alt="rollup" src="../../assets/flows/rollup-light-39.png#only-light" />
+<img alt="rollup" src="../../assets/flows/rollup-dark-39.png#only-dark" /></p>
+<p><strong>Anomaly Options:</strong> Automatically archive duplicate anomalies from previous scans.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-40.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-40.png#only-dark" /></p>
+<p><strong>Enrichment Settings:</strong> Select a remediation strategy for anomalies and source tables: no replication, append, or overwrite.</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-41.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-41.png#only-dark" /></p>
+<p><strong>Source Record Limit:</strong> Define the number of source records to include in the enrichment operation</p>
+<p><img alt="scan" src="../../assets/flows/scan-light-42.png#only-light" />
+<img alt="scan" src="../../assets/flows/scan-dark-42.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click Save to finalize the scan configuration.</p>
+<p><img alt="save" src="../../assets/flows/save-light-43.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-43.png#only-dark" /></p>
+<p><strong>Export</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Export.</strong></p>
+<p><img alt="export" src="../../assets/flows/export-light.png#only-light" />
+<img alt="export" src="../../assets/flows/export-dark.png#only-dark" /></p>
+<p>A panel <strong>Export Settings</strong> will appear on the right-hand side, This window allows you to configure the Export settings.</p>
+<p><img alt="pannel" src="../../assets/flows/export-setting-light.png#only-light" />
+<img alt="pannel" src="../../assets/flows/export-setting-dark.png#only-dark" /></p>
+<p><strong>Source Datastore:</strong> Select the datastore to export data from.</p>
+<p><img alt="source" src="../../assets/flows/source-light.png#only-light" />
+<img alt="source" src="../../assets/flows/source-dark.png#only-dark" /></p>
+<p><strong>Select profiles to export:</strong> <strong>All</strong> (all tables, including future ones), <strong>Specific</strong> (manually chosen tables), or <strong>Tag</strong> (tables based on selected tags).</p>
+<p><img alt="profile" src="../../assets/flows/profiles-light.png#only-light" />
+<img alt="profile" src="../../assets/flows/profiles-dark.png#only-dark" /></p>
+<p><strong>Export Setting:</strong> Choose metadata to export <strong>anomalies</strong>, <strong>quality checks</strong>, or <strong>field profiles</strong>. Anomalies detect data issues, quality checks validate data, and field profiles store field metadata.</p>
+<p><img alt="exportt" src="../../assets/flows/exportt-light.png#only-light" />
+<img alt="exportt" src="../../assets/flows/exportt-dark.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click Save to finalize the export configuration.</p>
+<p><img alt="save" src="../../assets/flows/savee-light.png#only-light" />
+<img alt="save" src="../../assets/flows/savee-dark.png#only-dark" /></p>
+<p><strong>Materialize</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Materialize.</strong></p>
+<p><img alt="materialize" src="../../assets/flows/materialize-light.png#only-light" />
+<img alt="materialize" src="../../assets/flows/materialize-dark.png#only-dark" /></p>
+<p>A panel <strong>Materialize Settings</strong> will appear on the right-hand side, This window allows you to configure the Materialize settings.</p>
+<p><img alt="setting" src="../../assets/flows/setting-light.png#only-light" />
+<img alt="setting" src="../../assets/flows/setting-dark.png#only-dark" /></p>
+<p><strong>Source Datastore:</strong> Select the datastore to materialize data from.</p>
+<p><img alt="source" src="../../assets/flows/sourcee-light.png#only-light" />
+<img alt="source" src="../../assets/flows/sourcee-dark.png#only-dark" /></p>
+<p><strong>Select Tables:</strong> Choose which tables (all, specific, or tagged) to extract from your source datastore and export to the enrichment datastore.</p>
+<p><img alt="select" src="../../assets/flows/select-light.png#only-light" />
+<img alt="select" src="../../assets/flows/select-dark.png#only-dark" /></p>
+<p><strong>Read Settings:</strong> Select the record limit to control how much data is materialized per table.</p>
+<p><img alt="read" src="../../assets/flows/read-light.png#only-light" />
+<img alt="read" src="../../assets/flows/read-dark.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click Save to finalize the materialize configuration.</p>
+<p><img alt="save" src="../../assets/flows/saveee-light.png#only-light" />
+<img alt="save" src="../../assets/flows/saveee-dark.png#only-dark" /></p>
+<h4 id="notification">Notification</h4>
+<p>Users can configure the application to send notifications through various channels. The available notification options include:</p>
+<ul>
+<li>
+<p>In App.</p>
+</li>
+<li>
+<p>Email.</p>
+</li>
+<li>
+<p>Slack.</p>
+</li>
+<li>
+<p>Microsoft Teams.</p>
+</li>
+<li>
+<p>PagerDuty.</p>
+</li>
+</ul>
+<p><img alt="notification" src="../../assets/flows/notification-light-44.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-44.png#only-dark" /></p>
+<p><strong>In App</strong></p>
+<p>This will send an app notification to all users that use Qualytics. Users can set a custom message using variables and modify the standard text.</p>
+<p><strong>Step 1:</strong> Click on <strong>In App.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-45.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-45.png#only-dark" /></p>
+<p>A panel <strong>In App Settings</strong> will appear on the right-hand side, allowing you to configure the notification message.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-46.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-46.png#only-dark" /></p>
+<p><strong>Message:</strong> Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-47.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-47.png#only-dark" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ container_name }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. </p>
+</div>
+<p><strong>Step 2:</strong> After configuring the message, click <strong>Save</strong> to finalize the settings.</p>
+<p><img alt="save" src="../../assets/flows/save-light-48.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-48.png#only-dark" /></p>
+<p><strong>Email</strong></p>
+<p>Adding email notifications allows users to receive timely updates or alerts directly in their inbox. By setting up notifications with specific triggers and channels, you can ensure that you are promptly informed about critical events, such as operation completions or detected anomalies. This proactive approach allows you to take immediate action when necessary, helping to address issues quickly and maintain the smooth and efficient operation of your processes.</p>
+<p><strong>Step 1:</strong> Click on <strong>Email.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-49.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-49.png#only-dark" /></p>
+<p>A panel <strong>Email Settings</strong> will appear on the right-hand side, allowing you to add email address and  configure the notification message.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-50.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-50.png#only-dark" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Email Address</td>
+<td style="text-align: left;">Enter the email address where the notification should be sent.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Message</td>
+<td style="text-align: left;">Text area to customize the notification message content with dynamic placeholders like <strong><code>{{ flow_name }}</code></strong>, <strong><code>{{ operation_type }}</code>,</strong> and <strong><code>{{ operation_result }}</code></strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="notification" src="../../assets/flows/notification-light-51.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-51.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click the Test Notification button to send a test email to the provided address. If the email is successfully sent, you will receive a confirmation message indicating <strong>Notification successfully sent.</strong></p>
+<p><img alt="test" src="../../assets/flows/test-light-52.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-52.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Once all fields are configured, click the <strong>Save</strong> button to finalize the email notification setup.</p>
+<p><img alt="save" src="../../assets/flows/save-light-53.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-53.png#only-dark" /></p>
+<p><strong>Slack</strong></p>
+<p>Slack notifications keep your team informed by sending updates directly to your Slack workspace. With a webhook, you can deliver customized messages to specific channels, including key details about events and operations.</p>
+<p><strong>Step 1:</strong> Click on <strong>Slack.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-54.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-54.png#only-dark" /></p>
+<p>A panel <strong>Slack Settings</strong> will appear on the right-hand side, allowing you to add a webhook url and configure the notification message.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-55.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-55.png#only-dark" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Webhook URL</td>
+<td style="text-align: left;">Enter the webhook url where the notification should be sent.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Message</td>
+<td style="text-align: left;">Text area to customize the notification message content with dynamic placeholders like <strong><code>{{ flow_name }}</code></strong>, <strong><code>{{ operation_type }}</code>,</strong> and <strong><code>{{ operation_result }}</code></strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="notification" src="../../assets/flows/notification-light-56.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-56.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click the <strong>"Test Notification"</strong> button to send a test message to the provided <strong>Webhook URL.</strong> If the message is successfully sent, you will receive a confirmation notification indicating <strong>"Notification successfully sent".</strong></p>
+<p><img alt="test" src="../../assets/flows/test-light-57.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-57.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Once all fields are configured, click the <strong>Save</strong> button to finalize the slack notification setup.</p>
+<p><img alt="save" src="../../assets/flows/save-light-58.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-58.png#only-dark" /></p>
+<p><strong>Microsoft Teams</strong></p>
+<p><strong>Step 1:</strong> Click on <strong>Microsoft Teams.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-59.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-59.png#only-dark" /></p>
+<p>A panel <strong>Microsoft Teams Settings</strong> will appear on the right-hand side, allowing you to add a webhook url and configure the notification message.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-60.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-60.png#only-dark" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Teams Webhook URL</td>
+<td style="text-align: left;">Enter the teams webhook url where the notification should be sent.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Message</td>
+<td style="text-align: left;">Text area to customize the notification message content with dynamic placeholders like <strong><code>{{ flow_name }}</code></strong>, <strong><code>{{ operation_type }}</code>,</strong> and <strong><code>{{ operation_result }}</code></strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="notification" src="../../assets/flows/notification-light-61.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-61.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click the <strong>"Test Notification"</strong> button to send a test message to the provided <strong>“Webhook URL”.</strong> If the message is successfully sent, you will receive a confirmation notification indicating <strong>"Notification successfully sent".</strong></p>
+<p><img alt="test" src="../../assets/flows/test-light-62.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-62.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Once all fields are configured, click the <strong>Save</strong> button to finalize the microsoft teams notification setup.</p>
+<p><img alt="save" src="../../assets/flows/save-light-63.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-63.png#only-dark" /></p>
+<p><strong>PagerDuty</strong></p>
+<p>Integrating PagerDuty with Qualytics ensures that your team gets instant alerts for critical data events and system issues. With this connection, you can automatically receive real-time notifications about anomalies, operation completions and other important events directly in your PagerDuty account. By categorizing alerts based on severity, it ensures the right people are notified at the right time, speeding up decision-making and resolving incidents efficiently. This helps your team respond quickly to issues, reducing downtime and keeping data operations on track.</p>
+<p><strong>Step 1:</strong> Click on <strong>PagerDuty.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-64.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-64.png#only-dark" /></p>
+<p>A <strong>PagerDuty Settings</strong> panel will appear on the right-hand side, enabling users to configure and send PagerDuty notifications.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-65.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-65.png#only-dark" /></p>
+<p><strong>Integration Key:</strong> Enter the <strong>Integration Key</strong> where you want the notification to be sent.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-66.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-66.png#only-dark" /></p>
+<p><strong>Severity:</strong> Select the appropriate PagerDuty severity level to categorize incidents based on their urgency and impact. The available severity levels are:</p>
+<ul>
+<li>
+<p><strong>Info:</strong> For informational messages that don't require immediate action but provide helpful context.</p>
+</li>
+<li>
+<p><strong>Warning:</strong> For potential issues that may need attention but aren't immediately critical.</p>
+</li>
+<li>
+<p><strong>Error:</strong> For significant problems that require prompt resolution to prevent disruption.</p>
+</li>
+<li>
+<p><strong>Critical:</strong> For urgent issues that demand immediate attention due to their severe impact on system operations.</p>
+</li>
+</ul>
+<p><img alt="notification" src="../../assets/flows/notification-light-67.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-67.png#only-dark" />
+<strong>Message:</strong> Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-68.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-68.png#only-dark" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ operation_type }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |</p>
+</div>
+<p><strong>Step 2:</strong> Click on the <strong>Test notification</strong> button to check if the integration key is functioning correctly. Once the test notification is sent, you will see a success message, <strong>"Notification successfully sent."</strong></p>
+<p><img alt="test" src="../../assets/flows/test-light-69.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-69.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Once you have entered all the values, then click on the <strong>Save</strong> button.</p>
+<p><img alt="save" src="../../assets/flows/save-light-70.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-70.png#only-dark" /></p>
+<h4 id="http">HTTP</h4>
+<p>User can connect to external apps for notifications using one of these services: </p>
+<ul>
+<li>
+<p>Webhook.</p>
+</li>
+<li>
+<p>HTTP Action.</p>
+</li>
+</ul>
+<p><img alt="notification" src="../../assets/flows/notification-light-71.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-71.png#only-dark" /></p>
+<p><strong>Webhook</strong></p>
+<p>Qualytics allows you to connect external apps for notifications using webhooks, making it easy to stay updated in real time. When you set up a webhook, it sends an instant alert to the connected app whenever a specific event or condition occurs. This means you can quickly notify about important events as they happen and respond right away. By using webhook notifications, you can keep your system running smoothly, keep everyone informed, and manage your operations more efficiently.</p>
+<p><strong>Step 1:</strong> Click on <strong>Webhook.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-72.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-72.png#only-dark" /></p>
+<p>A <strong>Webhook Settings</strong> panel will appear on the right-hand side, enabling users to configure and send PagerDuty notifications.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-73.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-73.png#only-dark" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Webhook URL</td>
+<td style="text-align: left;">Enter the desired <strong>"Webhook URL"</strong> of the target system where you want to receive notifications.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Message</td>
+<td style="text-align: left;">Text area to customize the notification message content with dynamic placeholders like <strong><code>{{ flow_name }}</code></strong>, <strong><code>{{ operation_type }}</code>,</strong> and <strong><code>{{ operation_result }}</code></strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="notification" src="../../assets/flows/notification-light-74.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-74.png#only-dark" /></p>
+<p><strong>Step 2</strong>: Click on the <strong>"Test HTTP"</strong> button to send a test notification to the webhook URL you provided. If the webhook URL is correct, you will receive a confirmation message saying <strong>"Notification successfully sent."</strong> This indicates that the webhook is functioning correctly.</p>
+<p><img alt="test" src="../../assets/flows/test-light-75.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-75.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Once you have entered all the values, then click on the <strong>Save</strong> button.</p>
+<p><img alt="save" src="../../assets/flows/save-light-76.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-76.png#only-dark" /></p>
+<p><strong>HTTP Action</strong></p>
+<p>Integrating HTTP Action notifications allows users to receive timely updates or alerts directly to a specified server endpoint. By setting up HTTP Action notifications with specific trigger conditions, you can ensure that you are instantly informed about critical events, such as operation completions or anomalies detected. This approach enables you to take immediate action when necessary, helping to address issues quickly and maintain the smooth and efficient operation of your processes.</p>
+<p><strong>Step 1:</strong> Click on <strong>HTTP Action.</strong></p>
+<p><img alt="notification" src="../../assets/flows/notification-light-77.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-77.png#only-dark" /></p>
+<p>A <strong>HTTP Action Settings</strong> panel will appear on the right-hand side, enabling users to configure and send HTTP Action notifications.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-78.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-78.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Enter the following detail where you want the notification to be sent.</p>
+<p><strong>1. Action URL:</strong> Enter the <strong>“Action URL”</strong> in this field, which specifies the server endpoint for the HTTP request, defining where data will be sent or retrieved. It must be correctly formatted and accessible, including the protocol (http or https), domain, and path.</p>
+<p><strong>2. HTTP Verbs:</strong> HTTP verbs specify the actions performed on server resources. Common verbs include:</p>
+<ul>
+<li><strong>POST:</strong> Use POST to send data to the server to create something new. For example, it's used for submitting forms or uploading files. The server processes this data and creates a new resource.  </li>
+<li><strong>PUT:</strong> Updates or creates a resource, replacing it entirely if it already exists. For example, updating a user’s profile information or creating a new record with specific details.  </li>
+<li><strong>GET:</strong> Retrieves data from the server without making any modifications. For example, requesting a webpage or fetching user details from a database.</li>
+</ul>
+<p><strong>3. Username:</strong> Enter the username needed for authentication.</p>
+<p><strong>4. Auth Type:</strong> This field specifies how to authenticate requests. Choose the method that fits your needs:</p>
+<ul>
+<li><strong>Basic:</strong> Uses a username and password sent with each request. Example: <strong>“Authorization: Basic ”.</strong>  </li>
+<li><strong>Bearer:</strong> Uses a token included in the request header to access resources. Example: <strong>“Authorization: Bearer ”.</strong>  </li>
+<li><strong>Digest:</strong> Provides a more secure authentication method by using a hashed combination of the username, password, and request details. Example: <strong>Authorization: Digest username=" ", realm=" ", nonce=" ", uri=" ", response=" ".</strong></li>
+</ul>
+<p><strong>5. Secret:</strong> Enter the password or token used for authentication. This is paired with the <strong>Username</strong> and <strong>Auth Type</strong> to securely access the server. Keep the secret confidential to ensure security.</p>
+<p><strong>6. Message:</strong> Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.</p>
+<p><img alt="notification" src="../../assets/flows/notification-light-79.png#only-light" />
+<img alt="notification" src="../../assets/flows/notification-dark-79.png#only-dark" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ operation_type }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |</p>
+</div>
+<p><strong>Step 3:</strong> Click the <strong>"Test HTTP"</strong> button to verify the correctness of the Action URL. If the URL is correct, a confirmation message saying <strong>"Notification successfully sent"</strong> will appear, confirming that the HTTP action is set up and functioning properly.</p>
+<p><img alt="test" src="../../assets/flows/test-light-80.png#only-light" />
+<img alt="test" src="../../assets/flows/test-dark-80.png#only-dark" /></p>
+<p><strong>Step 4:</strong> Once you have entered all the values, then click on the <strong>Save</strong> button.</p>
+<p><img alt="save" src="../../assets/flows/save-light-81.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-81.png#only-dark" /></p>
+<p><strong>Step 3:</strong> After completing all the required details in the <strong>"Add Flow"</strong> section, click on the <strong>Publish</strong> button to finalize the process. </p>
+<p><img alt="publish" src="../../assets/flows/publish-light-82.png#only-light" />
+<img alt="publish" src="../../assets/flows/publish-dark-82.png#only-dark" /></p>
+<p><strong>Step 4:</strong> Once published, a success message will appear, stating, <strong>"Your flow has been successfully added.</strong></p>
+<p><img alt="sucess" src="../../assets/flows/sucess-light-83.png#only-light" />
+<img alt="sucess" src="../../assets/flows/sucess-dark-83.png#only-dark" /></p>
+<h2 id="view-created-flows">View Created Flows</h2>
+<p>Once a flow is added, it will be visible in the <strong>Definitions</strong> tab, where you can view all the created flows.</p>
+<p><img alt="panel" src="../../assets/flows/panel-light-84.png#only-light" />
+<img alt="panel" src="../../assets/flows/panel-dark-84.png#only-dark" /></p>
+<h2 id="clone-a-flow">Clone a Flow</h2>
+<p>Users can duplicate existing flows to simplify the reuse and modification of flow configurations for similar scenarios.</p>
+<p><strong>Step 1</strong>: Click on the existing flow you want to clone.</p>
+<p><img alt="panel" src="../../assets/flows/exisiting-doc-light.png#only-light" />
+<img alt="panel" src="../../assets/flows/exisiting-doc-dark.png#only-dark" /></p>
+<p><strong>Step 2</strong>:  A new window will open displaying the flow's detailed configuration. Click the settings icon and select <strong>Clone</strong>.</p>
+<p><img alt="panel" src="../../assets/flows/clone-light.png#only-light" />
+<img alt="panel" src="../../assets/flows/clone-dark.png#only-dark" /></p>
+<p><strong>Step 3:</strong> After selecting the clone button. Click the Publish button to publish it.</p>
+<p><img alt="panel" src="../../assets/flows/publishh-light.png#only-light" />
+<img alt="panel" src="../../assets/flows/publishh-dark.png#only-dark" /></p>
+<p>Once published, a success message will appear: "<strong>Your flow has been successfully added</strong>" .</p>
+<p><img alt="panel" src="../../assets/flows/added-light.png#only-light" />
+<img alt="panel" src="../../assets/flows/added-dark.png#only-dark" /></p>
+<h2 id="sort-flows">Sort Flows</h2>
+<p>Qualytics allows you to sort your flows by <strong>Created Date</strong> and  <strong>Name</strong> to easily organize and prioritize them according to your needs.  </p>
+<p><img alt="sort" src="../../assets/flows/sort-light-85.png#only-light" />
+<img alt="sort" src="../../assets/flows/sort-dark-85.png#only-dark" /></p>
+<p>Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.  </p>
+<p><img alt="sort" src="../../assets/flows/sort-light-86.png#only-light" />
+<img alt="sort" src="../../assets/flows/sort-dark-86.png#only-dark" /></p>
+<h2 id="execute-manual-flows">Execute Manual Flows</h2>
+<p>Users can start a manual flow from the vertical ellipsis menu for greater flexibility in executing flows.</p>
+<p><strong>Step 1:</strong> Locate the manual flow in your list of flows.</p>
+<p><img alt="manual-flow" src="../../assets/flows/manuall-flow-light.png#only-light" />
+<img alt="manual-flow" src="../../assets/flows/manuall-flow-dark.png#only-dark" /></p>
+<p><strong>Step 2:</strong> Click the <strong>vertical ellipsis (⋮)</strong> next to the manual flow you wish to execute, then select <strong>"Execute"</strong> from the dropdown menu to trigger the flow.</p>
+<p><img alt="manual-flow" src="../../assets/flows/verticall-light.png#only-light" />
+<img alt="manual-flow" src="../../assets/flows/verticall-dark.png#only-dark" /></p>
+<p>After clicking the execute button, a confirmation message will appear saying <strong>The Flow has been successfully executed</strong>.</p>
+<p><img alt="sort" src="../../assets/flows/flow-msg-light.png#only-light" />
+<img alt="sort" src="../../assets/flows/flow-msg-dark.png#only-dark" /></p>
+<h2 id="manage-flows">Manage Flows</h2>
+<p><strong>Manage Flow</strong>  allows users to edit, delete, or deactivate flows. Users can update configurations, remove outdated flows, or pause triggers to maintain an organized and efficient workflow system.</p>
+<h3 id="edit-flow">Edit Flow</h3>
+<p><strong>Edit Flow</strong> feature lets users update existing flows by modifying configurations or adding actions.</p>
+<p><strong>Step 1:</strong> Click the flow you want to edit.</p>
+<p><img alt="panel" src="../../assets/flows/panel-light-87.png#only-light" />
+<img alt="panel" src="../../assets/flows/panel-dark-87.png#only-dark" /></p>
+<p><strong>Step 2:</strong> After clicking the flow, a new window will open displaying the flow's detailed configuration. Click on the boxes you want to edit.</p>
+<p>For demonstration purposes we have selected the Flow node.</p>
+<p><img alt="result" src="../../assets/flows/result-light-88.png#only-light" />
+<img alt="result" src="../../assets/flows/result-dark-88.png#only-dark" /></p>
+<p><strong>Step 3:</strong> Click the <strong><code>Save</code></strong> button to apply the updates.</p>
+<p><img alt="save" src="../../assets/flows/save-light-89.png#only-light" />
+<img alt="save" src="../../assets/flows/save-dark-89.png#only-dark" /></p>
+<p><strong>Step 4:</strong> After clicking the <strong><code>Save</code></strong> button, click the <strong><code>Publish</code></strong> button located in the top right corner to finalize and publish the changes.</p>
+<p><img alt="publish" src="../../assets/flows/publish-light-90.png#only-light" />
+<img alt="publish" src="../../assets/flows/publish-dark-90.png#only-dark" /></p>
+<h3 id="delete-flow">Delete Flow</h3>
+<p><strong>Delete Flow</strong> feature allows you to permanently remove unwanted or outdated flows from the system. This helps in maintaining a clean and organized list of active flows. </p>
+<p><strong>Step 1</strong>: Click the <strong>vertical ellipsis (⋮)</strong> next to the flows that you want to delete, then click on <strong>Delete</strong> from the dropdown menu. </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-91.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-91.png#only-dark" /></p>
+<p>After clicking the delete button, a confirmation modal window <strong>Delete Flow</strong> will appear.</p>
+<p><img alt="delete" src="../../assets/flows/delete-light-92.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-92.png#only-dark" /></p>
+<p><strong>Step 2</strong>: Click on the <strong>Delete</strong> button to delete the flow. </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-93.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-93.png#only-dark" /></p>
+<p>After clicking on the <strong>Delete</strong> button, your flow will be deleted and a confirmation message will display saying <strong>The flow has been successfully deleted</strong>.  </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-94.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-94.png#only-dark" /></p>
+<h3 id="deactivate-flow">Deactivate Flow</h3>
+<p>User can deactivate a flow to pause its triggers by simply disabling it. This prevents the flow from being executed until it is reactivated.</p>
+<p><strong>Step 1</strong>: Click the <strong>vertical ellipsis (⋮)</strong> next to the flows that you want to deactivate, then click on <strong>Deactivate</strong> from the dropdown menu.</p>
+<p><img alt="deactivate" src="../../assets/flows/deactivate-light-95.png#only-light" />
+<img alt="deactivate" src="../../assets/flows/deactivate-dark-95.png#only-dark" /></p>
+<p>After clicking the deactivate button, a confirmation message will appear saying <strong>The Flow has been successfully deactivated</strong>.  </p>
+<p><img alt="deactivate" src="../../assets/flows/deactivate-light-96.png#only-light" />
+<img alt="deactivate" src="../../assets/flows/deactivate-dark-96.png#only-dark" /></p>
+<p><strong>Step 2</strong>: Click on the <strong>Delete</strong> button to delete the flow.</p>
+<p><img alt="delete" src="../../assets/flows/delete-light-97.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-97.png#only-dark" /></p>
+<p>After clicking on the <strong>Delete</strong> button, your flow will be deleted and a confirmation message will display saying <strong>The flow has been successfully deleted</strong>.  </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-98.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-98.png#only-dark" /></p>
+<h2 id="clone-a-action">Clone a Action</h2>
+<p>User can duplicate an existing action in just a few clicks. Cloning an action allows you to quickly replicate its configuration without manually setting it up again.</p>
+<p><strong>Step 1</strong> Click the vertical ellipsis (<strong>⋮</strong>) on the action you want to clone, then select the <strong>Clone</strong> option from the menu.</p>
+<p><img alt="vertical" src="../../assets/flows/vertical-light.png#only-light" />
+<img alt="vertical" src="../../assets/flows/vertical-dark.png#only-dark" /></p>
+<p><strong>Step 2</strong> After clicking the Clone option, a cloned action will be created.</p>
+<p><img alt="clone" src="../../assets/flows/clones-light.png#only-light" />
+<img alt="clone" src="../../assets/flows/clones-dark.png#only-dark" /></p>
+<h2 id="flows-execution">Flows Execution</h2>
+<p>Execution tab allows users to view the execution history and current status of a flow. It provides detailed timestamps, status updates, and a comprehensive record of flow executions for efficient tracking and analysis.</p>
+<p>Click on the <strong>Execution</strong> tab.</p>
+<p><img alt="executions" src="../../assets/flows/executions-light-99.png#only-light" />
+<img alt="executions" src="../../assets/flows/executions-dark-99.png#only-dark" /></p>
+<p>You will be navigated to the <strong>Execution</strong> tab, where you can view the complete execution history of all created flows.</p>
+<p><img alt="executions" src="../../assets/flows/executions-light-100.png#only-light" />
+<img alt="executions" src="../../assets/flows/executions-dark-100.png#only-dark" /></p>
+<h3 id="see-a-flow-execution">See a Flow Execution</h3>
+<p>Users can view flow execution in real-time by clicking on the desired flow operation. The page shows detailed operations but does not allow editing. </p>
+<p><strong>Step 1:</strong> Click on the flow operation you want to view.  </p>
+<p><img alt="manual-flow" src="../../assets/flows/manuall-flow-light.png#only-light" />
+<img alt="manual-flow" src="../../assets/flows/manuall-flow-dark.png#only-dark" /></p>
+<p>After clicking, the user will navigate to the selected flow operation details.The page displays all operational details in real-time. Note that this page is for viewing only, and no edits can be made here.  </p>
+<p><img alt="flow" src="../../assets/flows/flow-light-1001.png#only-light" />
+<img alt="flow" src="../../assets/flows/flow-dark-1001.png#only-dark" /></p>
+<h3 id="understanding-flow-states">Understanding Flow States</h3>
+<p>On the bottom-right corner, there is a <strong>Legend</strong> indicating the possible states of an action, such as:</p>
+<ul>
+<li>
+<p><strong>Success</strong> (Green)</p>
+</li>
+<li>
+<p><strong>Failure</strong> (Red)</p>
+</li>
+<li>
+<p><strong>Aborted</strong> (Orange)</p>
+</li>
+<li>
+<p><strong>Skipped</strong> (Yellow)</p>
+</li>
+<li>
+<p><strong>Running</strong> (Blue with dotted lines animation)</p>
+</li>
+<li>
+<p><strong>Pending</strong> (Gray)</p>
+</li>
+</ul>
+<p><img alt="chart" src="../../assets/flows/chart-light-101.png#only-light" />
+<img alt="chart" src="../../assets/flows/chart-dark-101.png#only-dark" /></p>
+<p>If a step is running, you will see a <strong>dot-line animation</strong>, signaling that the step is in progress.<br />
+Once completed, the Action box will change its color to reflect the final state.  </p>
+<p><img alt="chart" src="../../assets/flows/chart-light-102.png#only-light" />
+<img alt="chart" src="../../assets/flows/chart-dark-102.png#only-dark" /></p>
+<h3 id="accessing-operation-results">Accessing Operation Results</h3>
+<p>To view detailed results of specific operations:</p>
+<p><strong>Step 1:</strong> Click the <strong>Top Right Arrow</strong> button within the action operation box.  </p>
+<p><img alt="chart" src="../../assets/flows/chart-light-103.png#only-light" />
+<img alt="chart" src="../../assets/flows/chart-dark-103.png#only-dark" /></p>
+<p><strong>Step 2:</strong> You will navigate to the Activity page, where a Result Modal will open, displaying in-depth details of the operation.</p>
+<p><img alt="result" src="../../assets/flows/result-light-104.png#only-light" />
+<img alt="result" src="../../assets/flows/result-dark-104.png#only-dark" /></p>
+<h3 id="delete-flow-execution">Delete Flow Execution</h3>
+<p><strong>Step 1:</strong> Click the Delete icon next to the flow execution you want to remove. </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-105.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-105.png#only-dark" /></p>
+<p>A confirmation modal window <strong>Delete Flow Execution</strong> will appear.</p>
+<p><img alt="delete" src="../../assets/flows/delete-light-106.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-106.png#only-dark" /></p>
+<p><strong>Step 2</strong>: Click on the <strong>Delete</strong> button to delete the flow execution.</p>
+<p><img alt="delete" src="../../assets/flows/delete-light-107.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-107.png#only-dark" /></p>
+<p>After clicking on the <strong>Delete</strong> button, your flow execution will be deleted and a confirmation message will display saying <strong>The flow execution has been successfully deleted</strong>.  </p>
+<p><img alt="delete" src="../../assets/flows/delete-light-108.png#only-light" />
+<img alt="delete" src="../../assets/flows/delete-dark-108.png#only-dark" /></p>
+<h2 id="filter-and-sort">Filter and Sort</h2>
+<p><strong>Filter and Sort</strong>  in the <strong><code>Executions</code></strong> tab help organize flow execution data. Users can sort by creation date or duration and filter by flow name, status, or trigger type for quick access to specific details.</p>
+<h3 id="sort">Sort</h3>
+<p><strong>Sort By</strong> feature allows users to organize executions by <strong>Created Date</strong> or <strong>Duration</strong>, simplifying the process of reviewing flow executions based on their creation or runtime.</p>
+<p><img alt="sort" src="../../assets/flows/sort-light-109.png#only-light" />
+<img alt="sort" src="../../assets/flows/sort-dark-109.png#only-dark" /></p>
+<h3 id="filter">Filter</h3>
+<p><strong>Filter</strong> feature allows users to refine flow execution results based on specific criteria. By clicking the filter icon, users can choose from the following options:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Filter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Flows</td>
+<td style="text-align: left;">Select a specific flow to view its executions.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Status</td>
+<td style="text-align: left;">Filter executions by their completion status (e.g., success, failure and running).</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Trigger When</td>
+<td style="text-align: left;">Filter executions based on their trigger condition.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="filter" src="../../assets/flows/filter-light-110.png#only-light" />
+<img alt="filter" src="../../assets/flows/filter-dark-110.png#only-dark" /></p>
+<h2 id="operations">Operations</h2>
+<p>In the Activity tab, users can easily identify flow executions. The <strong><code>Flow</code></strong> column shows the flow name and includes a button to redirect users to the flow's operation. This feature is available in <strong>Explore Activities, Datastore Activity,</strong> and <strong>Container Activity</strong>.</p>
+<p><img alt="explore" src="../../assets/flows/explore-light-111.png#only-light" />
+<img alt="explore" src="../../assets/flows/explore-dark-111.png#only-dark" /></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 7, 2025 15:07:22">March 7, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/Qualytics/userguide/issues" target="_blank" rel="noopener">issue tracker for this user guide</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../explore/anomalies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Anomalies">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Anomalies
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../tags/overview-of-tag/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Qualytics
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tables.sortable"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
