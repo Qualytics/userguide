@@ -10,7 +10,7 @@
     - Fixed an issue where some containers failed to receive tag changes when updating tags across multiple containers or performing bulk updates.
 
 - Edit Scheduled Materialize Operation
-    - Fixed an issue where the modal did not appear when users attempted to edit a scheduled materialized operation.
+    - Fixed an issue where the modal did not appear when users attempted to edit a scheduled materialize operation.
 
 - Restart Analytics Engine
     - Fixed an issue where restarting the Analytics Engine did not take effect.
