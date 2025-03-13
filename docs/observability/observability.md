@@ -337,6 +337,16 @@ Based on the chosen comparison type, the system flags any deviations from the de
 ![observability](../assets/observability/percentage-light-25.png#only-light)
 ![observability](../assets/observability/percentage-dark-25.png#only-dark)
 
+### Minimum Measurements for Chart Rendering
+
+To display metric charts in the UI, a minimum number of measurements must be recorded. If the required number of measurements is not met, the chart remains empty even though some measurements exist.
+
+* **Absolute Value:** Requires at least 2 measurements to render.
+
+* **Absolute Change:** Requires at least 3 measurements to render.
+
+These thresholds ensure meaningful visual representation by preventing incomplete or misleading chart data.
+
 ### Edit Check
 
 **Edit Check** allows users to modify the parameters of an existing metric check. It enables adjusting values, thresholds, or comparison logic to ensure that the metric accurately reflects current monitoring needs. 
