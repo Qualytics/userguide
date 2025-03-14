@@ -275,6 +275,9 @@ plugins:
   - git-revision-date-localized
   - include-markdown
   - macros
+  - redirects:
+      redirect_maps:
+        'settings/integrations/atlan.md': 'settings/catalog-integrations/atlan.md'
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'
