@@ -39,7 +39,7 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
-!!! note: Once the HashiCorp Vault is set up, use the $ format in Connection form to reference a Vault secret. 
+!!! note: After configuring HashiCorp Vault integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically. 
 
 | REF. | FIELDS | ACTION |
 | :---- | :---- | :---- |
