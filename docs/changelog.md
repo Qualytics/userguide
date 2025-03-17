@@ -6,7 +6,7 @@
 
 #### Feature Enhancements
 
-- Activity  Operation
+- Activity Operation
     - Added a column showing the anomaly rollup threshold.
 
 - Export Operations
@@ -19,16 +19,12 @@
 
 - Anomaly Rollup Threshold
     - Fixed an issue where the field was not accepting the maximum value.
-    - Updated the label to support a maximum threshold of 1,000,000.
 
 - Volumetric Tracking Observability
     - Fixed an issue where inferred check validation errors disrupted observability measurements.
 
 - Export Operation
     - Updated wording on the Export dialog.
-
-- Is Replica Of Check
-    - Fixed a bug where the same native type was read as different Spark types.
 
 - Scan and External Scan
     - Fixed an issue where schema checks were failing along with other checks but were not persisting in the enrichment of source records for anomalies.
