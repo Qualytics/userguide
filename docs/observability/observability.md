@@ -345,6 +345,8 @@ To display metric charts in the UI, a minimum number of measurements must be rec
 
 * **Absolute Change:** Requires at least 3 measurements to render.
 
+* **Percentage Change:** Requires at least 3 measurements to render.
+
 These thresholds ensure meaningful visual representation by preventing incomplete or misleading chart data.
 
 ### Edit Check
