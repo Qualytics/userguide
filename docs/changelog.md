@@ -2,6 +2,41 @@
 
 ## Release Notes
 
+### 2025.03.17 { id=2025.03.17 }
+
+#### Feature Enhancements
+
+- Activity Operation
+    - Added a column showing the anomaly rollup threshold.
+
+- Export Operations
+    - Added an option allowing users to schedule Export Operations.
+
+- DFS Enrichment Datastore
+    - Normalized delta file names to lowercase.
+
+#### General Fixes and Improvements
+
+- Anomaly Rollup Threshold
+    - Fixed an issue where the field was not accepting the maximum value.
+
+- Volumetric Tracking Observability
+    - Fixed an issue where inferred check validation errors disrupted observability measurements.
+
+- Export Operation
+    - Updated wording on the Export dialog.
+
+- Scan and External Scan
+    - Fixed an issue where schema checks were failing along with other checks but were not persisting in the enrichment of source records for anomalies.
+
+- External Scan
+    - Fixed an issue where CSV data was not being properly cast for non-text fields.
+
+- Enrichment Datastore
+    - Fixed a bug where exported tables were not appearing in the UI.
+
+- General Fixes and Improvements.
+
 ### 2025.03.05 { id=2025.03.05 }
 
 #### General Fixes and Improvements
