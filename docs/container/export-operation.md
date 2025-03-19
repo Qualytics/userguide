@@ -33,7 +33,7 @@ For demonstration purposes, we have selected the **“COVID-19 Data”** Snowfla
 ![operation](../assets/container/export-operation/operation-light.png#only-light)
 ![operation](../assets/container/export-operation/operation-dark.png#only-dark)
 
-**Step 4:** Select the profiles you wish to export. **All**, **Specific**, or **Tag** and click **Next** to proceed.
+**Step 4:** Select the tables you wish to export. **All**, **Specific**, or **Tag** and click **Next** to proceed.
 
 ![proflie2](../assets/container/export-operation/profile2-light.png#only-light)
 ![prfile2](../assets/container/export-operation/profile2-dark.png#only-dark)
@@ -47,6 +47,43 @@ After clicking **Export**, a confirmation message appears stating **"Export in m
 
 ![msg](../assets/container/export-operation/msg-light.png#only-light)
 ![msg](../assets/container/export-operation/msg-dark.png#only-dark)
+
+## Schedule Operation
+
+**Step 1:** Click **Schedule** to configure scheduling options for the Export Operation.
+
+![schedule](../assets/container/export-operation/schedule-light-1.png#only-light)
+![schedule](../assets/container/export-operation/schedule-dark-1.png#only-dark)
+
+**Step 2:** Configure the scheduling preferences for the Export Operation.
+
+* **Hourly:** Runs every set number of hours at a specified minute. (e.g., Every 1 hour at 00 minutes).
+
+* **Daily:** Runs once per day at a specific UTC time. (e.g., Every day at 00:00 UTC).
+
+* **Weekly:** Runs on selected weekdays at a set time. (e.g., Every Sunday and Friday at 00:00 UTC).
+
+* **Monthly:** Runs on a specific day of the month at a set time. (e.g., 1st day of every month at 00:00 UTC).
+
+* **Advanced:** Use Cron expressions for custom scheduling. (e.g., `0 12 * * 1-5` runs at 12 PM, Monday to Friday).
+
+![time](../assets/container/export-operation/time-light-1.png#only-light)
+![time](../assets/container/export-operation/time-dark-1.png#only-dark)
+
+**Step 3:** Define the Schedule Name to identify the scheduled Export Operation when it runs.
+
+![name](../assets/container/export-operation/name-light-1.png#only-light)
+![name](../assets/container/export-operation/name-dark-1.png#only-dark)
+
+**Step 4:** Click **Schedule** to finalize and schedule the Export Operation.
+
+![schedule2](../assets/container/export-operation/schedule-light.png#only-light)
+![schedule2](../assets/container/export-operation/schedule-dark.png#only-dark)
+
+After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**.In a couple of minutes, the metadata will be available in your Enrichment Datastore.
+
+![schedule2](../assets/container/export-operation/operation-scheduled-light.png#only-light)
+![schedule2](../assets/container/export-operation/operation-scheduled-dark.png#only-dark)
 
 ## Review Exported Data
 

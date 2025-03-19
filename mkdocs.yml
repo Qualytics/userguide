@@ -75,7 +75,6 @@ nav:
       - Enrichment Operation:
         - Export Operation: container/export-operation.md
         - Materialize Operation: container/materialize-operation.md
-      - Export Metadata: container/export-metadata.md
       - Settings:
         - Identifiers: container/overview-of-identifiers.md
         - Grouping: container/overview-of-grouping.md
