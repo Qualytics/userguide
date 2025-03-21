@@ -2,6 +2,57 @@
 
 ## Release Notes
 
+### 2025.03.21 { id=2025.03.21 }
+
+#### Feature Enhancements
+
+- Slack Integration
+    - We are excited to introduce a new enhancement to Slack Integration.
+    - Users can now add the new Qualytics Slack App to stay informed about platform activities.
+        - Configuring the Slack Integration requires two steps.
+            - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
+    - Users can select a Slack channel for receiving Qualytics notifications.
+        - Different types of messages will be sent for each trigger in Flow operations.
+            - The text and actions will vary depending on the selected trigger.
+            - The message state (Slack message color) will change based on the message status.
+    - Users can now interact with notifications:
+        - Click a link to be redirected to Qualytics for more details.
+        - View anomalous tables and files detected.
+        - Interact with anomalies by acknowledging, commenting, or archiving them.
+    
+- Anomaly Fingerprint
+    - We are thrilled to introduce support for identifying duplicate anomalies.
+    - Users can now define duplicate anomaly handling.
+        - This feature helps maintain the history and timeline of anomalies by recording a unique fingerprint per anomaly, allowing users to track how long a specific anomaly has persisted.
+
+#### General Fixes and Improvements
+
+- External Scan
+    - Users can now use and rerun external scans only within the Profile Context.
+
+- Check Last Asserted
+    - Fixed an issue where checks were still being marked as never asserted even after producing anomalies.
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- `POST api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `PUT api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `POST api/operations/run`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
+- `POST api/operations/schedule`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
 ### 2025.03.17 { id=2025.03.17 }
 
 #### Feature Enhancements
