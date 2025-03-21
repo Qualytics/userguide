@@ -2,6 +2,36 @@
 
 ## Release Notes
 
+### 2025.03.21 { id=2025.03.21 }
+
+#### Feature Enhancements
+
+- Slack Integration
+    - Introduced a new enhancement to Slack integration.
+    - Users can now add the Qualytics Slack App to stay informed about platform activities.
+        - Users can select a Slack channel to receive Qualytics notifications.
+            - A Slack administrator must approve the Qualytics Slack App.
+        - For each trigger in a Flow operation, the app will send different types of messages.
+            - Message text and actions will change based on the selected trigger.
+            - The message state (Slack message color) will vary depending on the status.
+        - Users can now interact with notifications:
+            - Click a link to view the operation in Qualytics.
+            - Click a link to view detected anomalous tables and files.
+            - Acknowledge, comment on, or archive anomalies directly from Slack.
+
+- Anomaly Fingerprint
+    - Added support for identifying duplicate anomalies.
+    - Users can now enable the `Reactive Recurring Anomalies` checkbox in the scan form to activate Anomaly Fingerprint.
+        - This feature provides insight into anomaly history and timelines, allowing users to track how long a specific anomaly persists.
+
+#### General Fixes and Improvements
+
+- External Scan
+    - Users can now only use and rerun external scans in Profile Context.
+
+- General Fixes and Improvements.
+
+
 ### 2025.03.17 { id=2025.03.17 }
 
 #### Feature Enhancements
