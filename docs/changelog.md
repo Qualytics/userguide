@@ -19,10 +19,11 @@
         - Click a link to be redirected to Qualytics for more details.
         - View anomalous tables and files detected.
         - Interact with anomalies by acknowledging, commenting, or archiving them.
-    - Anomaly Fingerprint
-        - We are thrilled to introduce support for identifying duplicate anomalies.
-        - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
-            - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
+    
+- Anomaly Fingerprint
+    - We are thrilled to introduce support for identifying duplicate anomalies.
+    - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
+        - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
 
 #### General Fixes and Improvements
 
