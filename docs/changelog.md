@@ -35,6 +35,24 @@
 
 - General Fixes and Improvements.
 
+#### API Changes
+
+- `POST api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `PUT api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `POST api/operations/run`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
+- `POST api/operations/schedule`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
 ### 2025.03.17 { id=2025.03.17 }
 
 #### Feature Enhancements
