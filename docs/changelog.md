@@ -7,30 +7,30 @@
 #### Feature Enhancements
 
 - Slack Integration
-    - Introduced a new enhancement to Slack integration.
-    - Users can now add the Qualytics Slack App to stay informed about platform activities.
-        - Users can select a Slack channel to receive Qualytics notifications.
-            - A Slack administrator must approve the Qualytics Slack App.
-        - For each trigger in a Flow operation, the app will send different types of messages.
-            - Message text and actions will change based on the selected trigger.
-            - The message state (Slack message color) will vary depending on the status.
-        - Users can now interact with notifications:
-            - Click a link to view the operation in Qualytics.
-            - Click a link to view detected anomalous tables and files.
-            - Acknowledge, comment on, or archive anomalies directly from Slack.
+  - We are excited to introduce a new enhancement to Slack Integration.
+  - Users can now add the new Qualytics Slack App to stay informed about platform activities.
+    - Configuring the Slack Integration requires two steps.
+      - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
+  - Users can select a Slack channel for receiving Qualytics notifications.
+    - Different types of messages will be sent for each trigger in Flow operations.
+      - The text and actions will vary depending on the selected trigger.
+      - The message state (Slack message color) will change based on the message status.
+  - Users can now interact with notifications:
+    - Click a link to be redirected to Qualytics for more details.
+    - View anomalous tables and files detected.
+    - Interact with anomalies by acknowledging, commenting, or archiving them.
 
 - Anomaly Fingerprint
-    - Added support for identifying duplicate anomalies.
-    - Users can now enable the `Reactive Recurring Anomalies` checkbox in the scan form to activate Anomaly Fingerprint.
-        - This feature provides insight into anomaly history and timelines, allowing users to track how long a specific anomaly persists.
+  - We are thrilled to introduce support for identifying duplicate anomalies.
+  - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
+    - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
 
 #### General Fixes and Improvements
 
 - External Scan
-    - Users can now only use and rerun external scans in Profile Context.
+  - Users can now use and rerun external scans only within the Profile Context.
 
 - General Fixes and Improvements.
-
 
 ### 2025.03.17 { id=2025.03.17 }
 
