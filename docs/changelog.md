@@ -7,23 +7,22 @@
 #### Feature Enhancements
 
 - Slack Integration
-  - We are excited to introduce a new enhancement to Slack Integration.
-  - Users can now add the new Qualytics Slack App to stay informed about platform activities.
-    - Configuring the Slack Integration requires two steps.
-      - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
-  - Users can select a Slack channel for receiving Qualytics notifications.
-    - Different types of messages will be sent for each trigger in Flow operations.
-      - The text and actions will vary depending on the selected trigger.
-      - The message state (Slack message color) will change based on the message status.
-  - Users can now interact with notifications:
-    - Click a link to be redirected to Qualytics for more details.
-    - View anomalous tables and files detected.
-    - Interact with anomalies by acknowledging, commenting, or archiving them.
-
-- Anomaly Fingerprint
-  - We are thrilled to introduce support for identifying duplicate anomalies.
-  - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
-    - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
+    - We are excited to introduce a new enhancement to Slack Integration.
+    - Users can now add the new Qualytics Slack App to stay informed about platform activities.
+        - Configuring the Slack Integration requires two steps.
+            - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
+    - Users can select a Slack channel for receiving Qualytics notifications.
+        - Different types of messages will be sent for each trigger in Flow operations.
+            - The text and actions will vary depending on the selected trigger.
+            - The message state (Slack message color) will change based on the message status.
+    - Users can now interact with notifications:
+        - Click a link to be redirected to Qualytics for more details.
+        - View anomalous tables and files detected.
+        - Interact with anomalies by acknowledging, commenting, or archiving them.
+    - Anomaly Fingerprint
+        - We are thrilled to introduce support for identifying duplicate anomalies.
+        - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
+            - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
 
 #### General Fixes and Improvements
 
