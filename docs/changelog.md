@@ -22,13 +22,16 @@
     
 - Anomaly Fingerprint
     - We are thrilled to introduce support for identifying duplicate anomalies.
-    - Users can now enable a checkbox, `Reactive Recurring Anomalies`, in the scan form to activate the Anomaly Fingerprint.
-        - This feature provides a history and timeline of anomalies, allowing users to track how long a specific anomaly has persisted.
+    - Users can now define duplicate anomaly handling.
+        - This feature helps maintain the history and timeline of anomalies by recording a unique fingerprint per anomaly, allowing users to track how long a specific anomaly has persisted.
 
 #### General Fixes and Improvements
 
 - External Scan
-  - Users can now use and rerun external scans only within the Profile Context.
+    - Users can now use and rerun external scans only within the Profile Context.
+
+- Check Last Asserted
+    - Fixed an issue where checks were still being marked as never asserted even after producing anomalies.
 
 - General Fixes and Improvements.
 
