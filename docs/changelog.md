@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### 2025.03.21 { id=2025.03.21 }
+### 2025.03.23 { id=2025.03.23 }
 
 #### Feature Enhancements
 
@@ -10,8 +10,8 @@
     - We are excited to introduce a new enhancement to Slack Integration.
     - Users can now add the new Qualytics Slack App to stay informed about platform activities.
         - Configuring the Slack Integration requires two steps.
-            - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
-    - Users can select a Slack channel for receiving Qualytics notifications.
+            - A Slack administrator must approve the Qualytics Slack App after configuring the integration.
+    - Users can select a Slack channel to receive Qualytics notifications.
         - Different types of messages will be sent for each trigger in Flow operations.
             - The text and actions will vary depending on the selected trigger.
             - The message state (Slack message color) will change based on the message status.
@@ -187,7 +187,7 @@
 #### General Fixes and Improvements
 
 - Flow Graph
-    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow node.
+    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow-node.
 
 - Observability Chart
     - Fixed an issue where threshold calculations incorrectly referenced measurement values that did not account for grouping.
@@ -281,7 +281,7 @@
 
     - Setup Made Simple
         - Add and configure flows using the “Add Flow” button in the top-right corner.
-        - Deactivate, delete, or edit flows via the vertical ellipses or node configurations.
+        - Deactivate, delete or edit flows via the vertical ellipses or node configurations.
 
     - Enhanced Triggering Options
         - Operations Complete, Anomalous Table/File Detected, and Anomaly Detected triggers provide flexible, event-driven automation.
@@ -306,7 +306,7 @@
 - Anomalous Record Integer out of Range
     - Updated check metrics to use BigInteger, addressing large value handling.
 
-- Fix Last Asserted Date
+- Fix the Last Asserted Date
     - Resolved inconsistencies in the Last Asserted Date logic for partition and container scans.
 
 - General Fixes and Improvements.
@@ -315,4 +315,4 @@
 
 - Notification Rules Replaced by Flows.
     - Existing notification rules have been migrated to Flows and will continue to function as before.
-    - For new notifications the users must create a flow leveraging the Flows functionality.
+    - For new notifications, the users must create a flow leveraging the Flows functionality.
