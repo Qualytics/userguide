@@ -2,6 +2,57 @@
 
 ## Release Notes
 
+### 2025.03.23 { id=2025.03.23 }
+
+#### Feature Enhancements
+
+- Slack Integration
+    - We are excited to introduce a new enhancement to Slack Integration.
+    - Users can now add the new Qualytics Slack App to stay informed about platform activities.
+        - Configuring the Slack Integration requires two steps.
+            - A Slack administrator must approve the Qualytics Slack App after configuring the integration.
+    - Users can select a Slack channel to receive Qualytics notifications.
+        - Different types of messages will be sent for each trigger in Flow operations.
+            - The text and actions will vary depending on the selected trigger.
+            - The message state (Slack message color) will change based on the message status.
+    - Users can now interact with notifications:
+        - Click a link to be redirected to Qualytics for more details.
+        - View anomalous tables and files detected.
+        - Interact with anomalies by acknowledging, commenting, or archiving them.
+    
+- Anomaly Fingerprint
+    - We are thrilled to introduce support for identifying duplicate anomalies.
+    - Users can now define duplicate anomaly handling.
+        - This feature helps maintain the history and timeline of anomalies by recording a unique fingerprint per anomaly, allowing users to track how long a specific anomaly has persisted.
+
+#### General Fixes and Improvements
+
+- External Scan
+    - Users can now use and rerun external scans only within the Profile Context.
+
+- Check Last Asserted
+    - Fixed an issue where checks were still being marked as never asserted even after producing anomalies.
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- `POST api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `PUT api/integrations`
+    - DEPRECATED PARAMETER: `name` and `api_token`
+    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+
+- `POST api/operations/run`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
+- `POST api/operations/schedule`
+    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
+    - NEW PARAMETER: `archive_duplicate_anomalies`
+
 ### 2025.03.17 { id=2025.03.17 }
 
 #### Feature Enhancements
@@ -136,7 +187,7 @@
 #### General Fixes and Improvements
 
 - Flow Graph
-    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow node.
+    - Fixed an issue where the flow graph position was randomly changing when a user updated a flow-node.
 
 - Observability Chart
     - Fixed an issue where threshold calculations incorrectly referenced measurement values that did not account for grouping.
@@ -230,7 +281,7 @@
 
     - Setup Made Simple
         - Add and configure flows using the “Add Flow” button in the top-right corner.
-        - Deactivate, delete, or edit flows via the vertical ellipses or node configurations.
+        - Deactivate, delete or edit flows via the vertical ellipses or node configurations.
 
     - Enhanced Triggering Options
         - Operations Complete, Anomalous Table/File Detected, and Anomaly Detected triggers provide flexible, event-driven automation.
@@ -255,7 +306,7 @@
 - Anomalous Record Integer out of Range
     - Updated check metrics to use BigInteger, addressing large value handling.
 
-- Fix Last Asserted Date
+- Fix the Last Asserted Date
     - Resolved inconsistencies in the Last Asserted Date logic for partition and container scans.
 
 - General Fixes and Improvements.
@@ -264,4 +315,4 @@
 
 - Notification Rules Replaced by Flows.
     - Existing notification rules have been migrated to Flows and will continue to function as before.
-    - For new notifications the users must create a flow leveraging the Flows functionality.
+    - For new notifications, the users must create a flow leveraging the Flows functionality.
