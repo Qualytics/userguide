@@ -17,7 +17,7 @@ Use Computed Tables when you want to perform the following operation on your sel
 
 ## Add Computed Tables
 
-**Step 1:** Sign in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add computed table.
+**Step 1:** Log in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add computed table.
 
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png#only-light)
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-dark.png#only-dark)
@@ -52,7 +52,7 @@ Use Computed Files when you want to perform the following operation on your sele
 
 ## Add Computed Files
 
-**Step 1:** Sign in to your Qualytics account and select a DFS-type source datastore from the side menu on which you would like to add computed file.
+**Step 1:** Log in to your Qualytics account and select a DFS-type source datastore from the side menu on which you would like to add computed file.
 
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png#only-light)
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-dark.png#only-dark)
@@ -70,7 +70,6 @@ Use Computed Files when you want to perform the following operation on your sele
 | 2.   | Source File Pattern (Required) | Select a source file pattern from the dropdown menu to match files that have a similar naming convention. |
 | 3.   | Select Expression (Required)  | Select the expression to define the data you want to include in the computed file.|
 | 4.   | Filter Clause (Optional)   | Add a WHERE clause to filter the data that meets certain conditions. |
-After configuring the **computed file** details, it will look like this:
 
 ![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-light.png#only-light)
 ![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-dark.png#only-dark)
