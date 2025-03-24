@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.
 
-!![setting](../../assets/integrations/external-tag-propagation/setting-light-1.png#only-light)
+![setting](../../assets/integrations/external-tag-propagation/setting-light-1.png#only-light)
 ![setting](../../assets/integrations/external-tag-propagation/setting-dark-1.png#only-dark)
 
 **Step 2:** You will be directed to the Settings page, then click on the **Integration** tab.
