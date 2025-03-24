@@ -7,51 +7,51 @@
 #### Feature Enhancements
 
 - Slack Integration
-    - We are excited to introduce a new enhancement to Slack Integration.
-    - Users can now add the new Qualytics Slack App to stay informed about platform activities.
-        - Configuring the Slack Integration requires two steps.
-            - A Slack administrator must approve the Qualytics Slack App after configuring the integration.
-    - Users can select a Slack channel to receive Qualytics notifications.
+
+    - We are excited to introduce a major enhancement to our integration with Slack.
+    - Users can now add the new Qualytics Slack App for enhanced capabilities.
+        - Qualytics admins can configure the Slack Integration with two easy steps.
+            - After configuring the integration, a Slack administrator must approve the Qualytics Slack App.
+    - The Qualytics Slack App supports selecting specific Slack channels for receiving Qualytics notifications in the context of a Qualytics Flow.
         - Different types of messages will be sent for each trigger in Flow operations.
             - The text and actions will vary depending on the selected trigger.
-            - The message state (Slack message color) will change based on the message status.
-    - Users can now interact with notifications:
-        - Click a link to be redirected to Qualytics for more details.
-        - View anomalous tables and files detected.
-        - Interact with anomalies by acknowledging, commenting, or archiving them.
-    
+            - The message state (Slack message color) will change based upon the message status.
+    - The Qualytics Slack App allows users to interact with Qualytics from the Slack interface:
+        - Interact with anomalies by acknowledging, commenting, or archiving them without leaving the Slack UI where the flow notification is received.
+        - Click a link in Slack to be redirected to the Qualytics UI for more details regarding a specific notification.
+        - View anomalous tables and files detected without leaving Slack.
+
 - Anomaly Fingerprint
-    - We are thrilled to introduce support for identifying duplicate anomalies.
-    - Users can now define duplicate anomaly handling.
-        - This feature helps maintain the history and timeline of anomalies by recording a unique fingerprint per anomaly, allowing users to track how long a specific anomaly has persisted.
+    - We are thrilled to introduce support for a new feature that will begin identifying duplicate anomalies.
+    - Anomalies created after this release will be "fingerprinted" so that re-detection of that same anomaly can be readily identified as a duplicate detection.
+        - New Scan Operation options allow users to define how detected duplicates should be handled.
+        - This feature helps maintain the history and timeline of specific data errors, allowing users to track how long a specific issue has persisted and a log of detections over time.
+        - Anomaly fingerprints will also be exposed in API responses and written to enrichment 
 
 #### General Fixes and Improvements
 
 - External Scan
-    - Users can now use and rerun external scans only within the Profile Context.
-
+    - Users can now use and rerun external scans only from the activity listing for the targeted asset.
 - Check Last Asserted
     - Fixed an issue where checks were still being marked as never asserted even after producing anomalies.
 
-- General Fixes and Improvements.
-
 #### API Changes
 
-- `POST api/integrations`
-    - DEPRECATED PARAMETER: `name` and `api_token`
-    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+- Integration Impacting Changes
+    - POST & PUT api/integrations
+        - REMOVED PARAMETERS: name and api_token
+        - NEW PARAMETERS: api_access_token, api_refresh_token and api_service_token
+    - POSTs to api/flows/actions/notifications/ endpoints
+        - MODIFIED PARAMETERS: tokenized_message is now a json object instead of a string
+    - All requests to api/datastores endpoints
+        - REMOVED RESPONSE PROPERTY METRIC: The metric for archived_anomalies previously returned as metrics.archived_anomalies has been removed from responses
 
-- `PUT api/integrations`
-    - DEPRECATED PARAMETER: `name` and `api_token`
-    - NEW PARAMETER: `api_access_token`, `api_refresh_token` and `api_service_token`
+- Deprecation Notices
+    - POST api/operations/run
+        - DEPRECATED PARAMETER: archive_overlapping_anomalies (migrate to the new parameter archive_duplicate_anomalies for enhanced functionality)
+    - POST api/operations/schedule
+        - DEPRECATED PARAMETER: archive_overlapping_anomalies (migrate to the new parameter archive_duplicate_anomalies for enhanced functionality)
 
-- `POST api/operations/run`
-    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
-    - NEW PARAMETER: `archive_duplicate_anomalies`
-
-- `POST api/operations/schedule`
-    - DEPRECATED PARAMETER: `archive_overlapping_anomalies`
-    - NEW PARAMETER: `archive_duplicate_anomalies`
 
 ### 2025.03.17 { id=2025.03.17 }
 
