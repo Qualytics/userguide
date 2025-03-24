@@ -56,7 +56,7 @@
 - Better handling of Oracle Date and Numeric columns during Catalog operations for improved partition field selection.
 - General Fixes and Improvements.
 
-### 2024.11.21 { id=2024.11.2210 }
+### 2024.11.21 { id=2024.11.21 }
 
 #### Feature Enhancements
 
@@ -99,7 +99,7 @@
 
 - General Fixes and Improvements.
 
-### 2024.11.01 { id=2024.11.01 }
+### 2024.11.1 { id=2024.11.1 }
 
 #### Feature Enhancements
 
@@ -188,7 +188,7 @@
 
 - General Fixes and Improvements.
 
-### 2024.10.04 { id=2024.10.04 }
+### 2024.10.4 { id=2024.10.4 }
 
 #### Feature Enhancements
 
@@ -220,7 +220,7 @@
 
 - General Fixes and Improvements
 
-### 2024.09.25 { id=2024.09.25 }
+### 2024.9.25 { id=2024.9.25 }
 
 #### Feature Enhancements
 
@@ -267,7 +267,7 @@
 
 - Freshness and SLA references have been removed from user notifications and notification rules, users should migrate to Observability using volumetric checks.
 
-### 2024.09.14 { id=2024.09.14 }
+### 2024.9.14 { id=2024.9.14 }
 
 #### Feature Enhancements
 
@@ -303,7 +303,7 @@
 - Fixed a bug where the `Last Editor` field was empty after a user was deactivated by an admin.
 - General Fixes and Improvements.
 
-### 2024.09.10 { id=2024.09.10 }
+### 2024.9.10 { id=2024.9.10 }
 
 #### Feature Enhancements
 
@@ -317,7 +317,7 @@
 
 - General Fixes and Improvements
 
-### 2024.09.06 { id=2024.09.06 }
+### 2024.9.6 { id=2024.9.6 }
 
 #### Feature Enhancements
 
@@ -343,7 +343,7 @@
     - PUT /operations/schedule/{id}: `type` is now required.
     - POST /operations/run: `type` is now required.
 
-### 2024.09.03 { id=2024.09.03 }
+### 2024.9.3 { id=2024.9.3 }
 
 #### Feature Enhancements
 
@@ -354,7 +354,7 @@
 
 - General Fixes and Improvements
 
-### 2024.08.31 { id=2024.08.31 }
+### 2024.8.31 { id=2024.8.31 }
 
 #### Feature Enhancements
 
@@ -385,7 +385,7 @@
 
 - General Fixes and Improvements
 
-### 2024.08.19 { id=2024.08.19 }
+### 2024.8.19 { id=2024.8.19 }
 
 #### Feature Enhancements
 
@@ -408,7 +408,7 @@
 
 - General Fixes and Improvements
 
-### 2024.08.10 { id=2024.08.10 }
+### 2024.8.10 { id=2024.8.10 }
 
 #### Feature Enhancements
 
@@ -421,7 +421,7 @@
 
 - General Fixes and Improvements
 
-### 2024.07.31 { id=2024.07.31 }
+### 2024.7.31 { id=2024.7.31 }
 
 #### Feature Enhancements
 
@@ -448,7 +448,7 @@
 
 - General Fixes and Improvements
 
-### 2024.07.26 { id=2024.07.26 }
+### 2024.7.26 { id=2024.7.26 }
 
 #### Feature Enhancements
 
@@ -480,7 +480,7 @@
 
 - General Fixes and Improvements
 
-### 2024.07.19 { id=2024.07.19 }
+### 2024.7.19 { id=2024.7.19 }
 
 #### Feature Enhancements
 
@@ -496,7 +496,7 @@
 
 - General Fixes and Improvements
 
-### 2024.07.15 { id=2024.07.15 }
+### 2024.7.15 { id=2024.7.15 }
 
 #### Feature Enhancements
 
@@ -514,7 +514,7 @@
 
 - General Fixes and Improvements
 
-### 2024.07.05 { id=2024.07.05 }
+### 2024.7.5 { id=2024.7.5 }
 
 #### Feature Enhancements
 
@@ -528,7 +528,7 @@
 
 - General Fixes and Improvements
 
-### 2024.06.29 { id=2024.06.29 }
+### 2024.6.29 { id=2024.6.29 }
 
 #### Feature Enhancements
 
@@ -567,7 +567,7 @@
 
 - General Fixes and Improvements
 
-### 2024.06.18 { id=2024.06.18 }
+### 2024.6.18 { id=2024.6.18 }
 
 #### Feature Enhancements
 
@@ -590,7 +590,7 @@
 
 - General Fixes and Improvements
 
-### 2024.06.14 { id=2024.06.14 }
+### 2024.6.14 { id=2024.6.14 }
 
 #### Feature Enhancements
 
@@ -643,7 +643,7 @@
     
 - General Fixes and Improvements
 
-### 2024.06.07 { id=2024.06.07 }
+### 2024.6.7 { id=2024.6.7 }
 
 #### Feature Enhancements
 
@@ -670,7 +670,7 @@
 
 - General Fixes and Improvements
 
-### 2024.06.04 { id=2024.06.04 }
+### 2024.6.4 { id=2024.6.4 }
 
 #### Feature Enhancements
 
@@ -703,7 +703,7 @@
   
 - General Fixes and Improvements
 
-### 2024.05.22 { id=2024.05.22 }
+### 2024.5.22 { id=2024.5.22 }
 
 #### Feature Enhancements
 
@@ -730,7 +730,7 @@
 - General Fixes and Improvements
 
 
-### 2024.05.16 { id=2024.05.16 }
+### 2024.5.16 { id=2024.5.16 }
 
 #### Feature Enhancements
 
@@ -750,7 +750,7 @@
 
 - General Fixes and Improvements
 
-### 2024.05.13 { id=2024.05.13}
+### 2024.5.13 { id=2024.5.13}
 
 #### General Fixes
 
@@ -759,7 +759,7 @@
 
 - General Fixes and Improvements
 
-### 2024.05.11 { id=2024.05.11}
+### 2024.5.11 { id=2024.5.11}
 
 #### Feature Enhancements
 
@@ -780,7 +780,7 @@
 
 - General Fixes and Improvements
 
-### 2024.05.02 { id=2024.05.02}
+### 2024.5.2 { id=2024.5.2}
 
 #### Feature Enhancements
 
@@ -800,7 +800,7 @@
 
 - General Fixes and Improvements
 
-### 2024.04.25 { id=2024.04.25}
+### 2024.4.25 { id=2024.4.25}
 
 #### Feature Enhancements
 
@@ -814,7 +814,7 @@
 
 - General Fixes and Improvements
 
-### 2024.04.23 { id=2024.04.23}
+### 2024.4.23 { id=2024.4.23}
 
 #### Feature Enhancements
 
@@ -847,7 +847,7 @@
 
 - General Fixes and Improvements
 
-### 2024.04.12 { id=2024.04.12}
+### 2024.4.12 { id=2024.4.12}
 
 #### Feature Enhancements
 
@@ -867,7 +867,7 @@
 
 - General Fixes and Improvements
 
-### 2024.04.06 { id=2024.04.06 }
+### 2024.4.6 { id=2024.4.6 }
 
 #### Breaking Changes
 
@@ -904,7 +904,7 @@
 
 - General Fixes and Improvements
 
-### 2024.03.29 { id=2024.03.29}
+### 2024.3.29 { id=2024.3.29}
 
 #### Feature Enhancements
 
@@ -939,7 +939,7 @@
 
 - General Fixes and Improvements
 
-### 2024.03.15 { id=2024.03.15}
+### 2024.3.15 { id=2024.3.15}
 
 #### Feature Enhancements
 
@@ -981,7 +981,7 @@
 
 - General Fixes and Improvements
 
-### 2024.03.07 { id=2024.03.07}
+### 2024.3.7 { id=2024.3.7}
 
 #### General Fixes
 
@@ -996,7 +996,7 @@
 
 - General Fixes and Improvements
 
-### 2024.03.05 { id=2024.03.05}
+### 2024.3.5 { id=2024.3.5}
 
 #### Feature Enhancements
 
@@ -1010,7 +1010,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.28 { id=2024.02.28 }
+### 2024.2.28 { id=2024.2.28 }
 
 #### Feature Enhancements
 
@@ -1030,7 +1030,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.23 { id=2024.02.23 }
+### 2024.2.23 { id=2024.2.23 }
 
 #### Feature Enhancements
 
@@ -1053,7 +1053,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.19 { id=2024.02.19 }
+### 2024.2.19 { id=2024.2.19 }
 
 #### Feature Enhancements
 
@@ -1070,7 +1070,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.17 { id=2024.02.17}
+### 2024.2.17 { id=2024.2.17}
 
 #### General Fixes
 
@@ -1085,7 +1085,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.15 { id=2024.02.15}
+### 2024.2.15 { id=2024.2.15}
 
 #### Feature Enhancements
 
@@ -1120,7 +1120,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.10 { id=2024.02.10}
+### 2024.2.10 { id=2024.2.10}
 
 #### Feature Enhancements
 
@@ -1144,7 +1144,7 @@
 
 - General Fixes and Improvements
 
-### 2024.02.02 { id=2024.02.02}
+### 2024.2.2 { id=2024.2.2}
 
 #### Feature Enhancements
 
@@ -1176,7 +1176,7 @@
 
 - General Fixes and Improvements
 
-### 2024.01.30 { id=2024.01.30}
+### 2024.1.30 { id=2024.1.30}
 
 #### Feature Enhancements
 
@@ -1193,7 +1193,7 @@
 
 - General Fixes and Improvements
 
-### 2024.01.26 { id=2024.01.26}
+### 2024.1.26 { id=2024.1.26}
 
 #### Feature Enhancements
 
@@ -1215,7 +1215,7 @@
 
 - General Fixes and Improvements
 
-### 2024.01.23 { id=2024.01.23}
+### 2024.1.23 { id=2024.1.23}
 
 #### Feature Enhancements
 
@@ -1241,7 +1241,7 @@
 
 - General Fixes and Improvements
 
-### 2024-01-11 { id=2024.01.11}
+### 2024.1.11 { id=2024.1.11}
 
 #### Feature Enhancements
 
@@ -1267,7 +1267,7 @@
 
 - General Fixes and Improvements
 
-### 2024.01.04 { id=2024.01.04}
+### 2024.1.4 { id=2024.1.4}
 
 #### Feature Enhancements
 

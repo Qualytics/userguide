@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### 2025.03.23 { id=2025.03.23 }
+### 2025.3.23 { id=2025.3.23 }
 
 #### Feature Enhancements
 
@@ -53,7 +53,7 @@
         - DEPRECATED PARAMETER: archive_overlapping_anomalies (migrate to the new parameter archive_duplicate_anomalies for enhanced functionality)
 
 
-### 2025.03.17 { id=2025.03.17 }
+### 2025.3.17 { id=2025.3.17 }
 
 #### Feature Enhancements
 
@@ -88,7 +88,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.03.05 { id=2025.03.05 }
+### 2025.3.5 { id=2025.3.5 }
 
 #### General Fixes and Improvements
 
@@ -106,7 +106,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.02.26 { id=2025.02.26 }
+### 2025.2.26 { id=2025.2.26 }
 
 #### Feature Enhancements
 
@@ -144,7 +144,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.02.13 { id=2025.02.13 }
+### 2025.2.13 { id=2025.2.13 }
 
 #### Feature Enhancements
 
@@ -170,7 +170,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.02.06 { id=2025.02.06 }
+### 2025.2.6 { id=2025.2.6 }
 
 #### Feature Enhancements
 
@@ -201,7 +201,7 @@
         - Added the sampling percentage next to the spark chart to indicate that derived metrics are based on this sampling percentage.
         - Updated titles and labels for better clarity.
 
-### 2025.01.31 { id=2025.01.31 }
+### 2025.1.31 { id=2025.1.31 }
 
 #### Feature Enhancements
 
@@ -223,7 +223,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.01.24 { id=2025.01.24 }
+### 2025.1.24 { id=2025.1.24 }
 
 #### Feature Enhancements
 
@@ -252,7 +252,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.01.20 { id=2025.12.20 }
+### 2025.1.20 { id=2025.1.20 }
 
 #### Feature Enhancements
 
@@ -269,7 +269,7 @@
 
 - General Fixes and Improvements.
 
-### 2025.01.16 { id=2025.01.16 }
+### 2025.1.16 { id=2025.1.16 }
 
 #### Feature Enhancements
 

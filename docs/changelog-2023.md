@@ -57,7 +57,7 @@
 
 - General Fixes and Improvements
 
-### 2023.12.08 { id=2023.12.08}
+### 2023.12.8 { id=2023.12.8}
 
 #### Breaking Changes
 
@@ -87,7 +87,7 @@
 
 - General Fixes and Improvements
 
-### 2023.12.05 { id=2023.12.05}
+### 2023.12.5 { id=2023.12.5}
 
 #### Feature Enhancements
 
@@ -98,7 +98,7 @@
 
 - General Fixes and Improvements
 
-### 2023.12.01 { id=2023.12.01}
+### 2023.12.1 { id=2023.12.1}
 
 #### Feature Enhancements
 
@@ -180,7 +180,7 @@
 - `isAddress` now supports defining multiple checks against the same field with different required label permutations
 - General Fixes and Improvements
 
-### 2023.11.08 { id=2023.11.08}
+### 2023.11.8 { id=2023.11.8}
 
 #### Feature Enhancements
 
@@ -203,7 +203,7 @@
 
 - General Fixes and Improvements
 
-### 2023.11.02 { id=2023.11.02}
+### 2023.11.2 { id=2023.11.2}
 
 #### Feature Enhancements
 
@@ -307,7 +307,7 @@
     - Enhanced logging for catalog operations, ensuring that logs are visible and accessible even for catalogs with a warning status, facilitating improved tracking and resolution of issues.
 - General Fixes and Improvements
 
-### 2023.10.09 { id=2023.10.09}
+### 2023.10.9 { id=2023.10.9}
 
 #### Feature Enhancements
 
@@ -335,7 +335,7 @@
 
 - General Fixes and Improvements
 
-### 2023.10.04 { id=2023.10.04}
+### 2023.10.4 { id=2023.10.4}
 
 #### Feature Enhancements
 
@@ -361,7 +361,7 @@
     - Certain datastores may fail to properly coerce types into Spark-compatible partition column values if that column itself contains anomalous values. When this occurs, an attempt will be made to load the data without a partition column and a warning will be generated for the user.
 - General Fixes and Improvements
 
-### 2023.09.29 { id=2023.09.29}
+### 2023.9.29 { id=2023.9.29}
 
 #### Feature Enhancements
   
@@ -390,7 +390,7 @@
     - Fixed an inconsistency issue with the datastore filter that was affecting a couple of charts in Insights
 - General Fixes and Improvements
 
-### 2023.09.21 { id=2023.09.21}
+### 2023.9.21 { id=2023.9.21}
 
 #### Feature Enhancements
 
@@ -413,7 +413,7 @@
 - Improve performance of the Containers endpoint
 - General Fixes and Improvements
 
-### 2023.09.16 { id=2023.09.16}
+### 2023.9.16 { id=2023.9.16}
 
 #### Feature Enhancements
 
@@ -435,7 +435,7 @@
 
 - General Fixes and Improvements
 
-### 2023.09.14 { id=2023.09.14 }
+### 2023.9.14 { id=2023.9.14 }
 
 #### Feature Enhancements
 
@@ -460,7 +460,7 @@
     - Resolved a bug where users were unable to clear optional inputs such as "min" or "max".
 - General Fixes and Improvements
 
-### 2023.09.08 { id=2023.09.08 }
+### 2023.9.8 { id=2023.9.8 }
 
 #### Feature Enhancements
 
@@ -473,7 +473,7 @@
     - Resolved an issue where the scan operation would fail during the "Exists In Check" if there were no records to be processed.
 - General Fixes and Improvements
 
-### 2023.09.07 { id=2023.09.07 }
+### 2023.9.7 { id=2023.9.7 }
 
 #### Feature Enhancements
 
@@ -497,7 +497,7 @@
 - Addressed issues for 'Is Replica Of' failed checks in source record handling
 - General Fixes and Improvements
 
-### 2023.08.31 { id=2023.08.31}
+### 2023.8.31 { id=2023.8.31}
 
 #### General Fixes
 
@@ -506,7 +506,7 @@
 - Fixed a bug in the Check Form where the field input wouldn’t display when cloning a check that hasn’t been part of a scan yet
 - Resolved an issue where failed checks for shape anomalies were not receiving violation messages
 
-### 2023.08.30 { id=2023.08.30}
+### 2023.8.30 { id=2023.8.30}
 
 #### Feature Enhancements
 
@@ -524,7 +524,7 @@
     - Addressed an issue where the check dialog was not opening as expected when accessed through a direct link from the profile page.
 - General Fixes and Improvements
 
-### 2023.08.23 { id=2023.08.23}
+### 2023.8.23 { id=2023.8.23}
 
 #### Feature Enhancements
 
@@ -549,7 +549,7 @@
 
 - General Fixes and Improvements
 
-### 2023.08.18 { id=2023.08.18}
+### 2023.8.18 { id=2023.8.18}
 
 #### Feature Enhancements
 
@@ -576,7 +576,7 @@
 - Pagination issues:
     - Resolved an issue with paginated endpoints returning 500 instead of 422 on requests with invalid parameters.
 
-### 2023.08.11 { id=2023.08.11}
+### 2023.8.11 { id=2023.8.11}
 
 #### Feature Enhancements
 
@@ -597,7 +597,7 @@
 - SparkSQL Expressions: Added support to field names with special characters to SparkSQL expressions using backticks
 - Pagination Adjustment: The pagination limit has been fine-tuned to support a maximum of 100 items per page, improving readability and navigation.
 
-### 2023.08.03 { id=2023.08.03}
+### 2023.8.3 { id=2023.8.3}
 
 #### Maintenance Release ####
 - Updated enrichment sidebar details design.
@@ -607,7 +607,7 @@
 - Fixed exclude fields to throw exceptions on errors.
 - Improved performance when using DFS to load reference data.
 
-### 2023.07.31 { id=2023.07.31}
+### 2023.7.31 { id=2023.7.31}
 
 #### Maintenance Release ####
 - Changed UX verbiage and iconography for Anomaly status updates.
@@ -617,7 +617,7 @@
 - Fixed Hadoop authentication conflicts with ABFS.
 - Fixed an issue where a Profile operation run on an empty container threw a runtime exception.
 
-### 2023.07.29 { id=2023.07.29}
+### 2023.7.29 { id=2023.7.29}
 
 #### Feature Enhancements ####
 
@@ -628,7 +628,7 @@
 - Change in default linkage between Checks and Anomalies: Filters now default to "Active" status, providing more refined results and support for specific use cases.
 
 
-### 2023.07.25 { id=2023.07.25}
+### 2023.7.25 { id=2023.7.25}
 
 #### Feature Enhancements #####
 
@@ -649,7 +649,7 @@
 - Enhanced Sampling Source Records Anomaly Detection: For shape anomalies, sampling source records now explicitly exclude replacement, leading to more precise anomaly detection and preserving data integrity during analysis.
 
 
-### 2023.07.23 { id=2023.07.23}
+### 2023.7.23 { id=2023.7.23}
 
 #### Bug Fixes
 
@@ -657,7 +657,7 @@
 
 
 
-### 2023.07.21 { id=2023.07.21}
+### 2023.7.21 { id=2023.7.21}
 
 #### Feature Enhancements
 
@@ -670,7 +670,7 @@
 
 
 
-### 2023.07.19 { id=2023.07.19}
+### 2023.7.19 { id=2023.7.19}
 
 #### General Fixes
 
@@ -678,7 +678,7 @@
 
 
 
-### 2023.07.14 { id=2023.07.14}
+### 2023.7.14 { id=2023.7.14}
 
 #### Feature Enhancements
 
@@ -698,7 +698,7 @@
 - Date Picker fix for Authored Checks
 - Allow tags with special characters to be edited
 
-### 2023.07.03 { id=2023.07.03 }
+### 2023.7.3 { id=2023.7.3 }
 
 
 #### Feature Enhancements
@@ -731,7 +731,7 @@
     - The issue causing vertical misalignment between Check and Anomaly icons on the Field Profile page has been fixed, resulting in a visually pleasing and intuitive user interface.
 
 
-### 2023.06.24 { id=2023.06.24 }
+### 2023.6.24 { id=2023.6.24 }
 
 #### Feature Enhancements
 
@@ -751,7 +751,7 @@
     - Added effect when a datastore is configured successfully, enhancing the user experience by providing visual confirmation of a successful configuration process.
 
 
-### 2023.06.20 { id=2023.06.20 }
+### 2023.6.20 { id=2023.6.20 }
 
 #### Feature Enhancements
 
@@ -788,7 +788,7 @@
 - Enhanced File Input Component
     - Upgraded the file input component in the Datastore form dialog, providing a more intuitive and user-friendly interface for uploading files. Simplifies attaching files to data entries and improves overall usability.
 
-### 2023.06.12 { id=2023.06.12 }
+### 2023.6.12 { id=2023.6.12 }
 
 #### Feature Enhancements
 
@@ -816,7 +816,7 @@
 - Incorporated functionality to execute delete operations and their related results.
 - Renamed "Rerun" button to "Retry" in the operation list
 
-### 2023.06.02 { id=2023.06.02 }
+### 2023.6.2 { id=2023.6.2 }
 #### General Fixes
 - Added GCS connector with Keyfile support:
     - The GCS connector now supports Keyfile authentication, allowing users to securely connect to Google Cloud Storage.
@@ -840,7 +840,7 @@
     - It also enables users to set a higher count rollup threshold for anomalies in scan.
     - This customization capability helps users fine-tune the behavior of the system according to their specific needs and preferences.
     
-### 2023.05.26 { id=2023.05.26 }
+### 2023.5.26 { id=2023.5.26 }
 #### Usability
 
 - Improved the navigation in the Activity tab’s side panel for easier and more intuitive browsing including exposing the ability to comment directly into an anomaly
@@ -851,7 +851,7 @@
 - Fixed a problem with scheduled operations when the configured timing was corrupted.
 - Addressed an issue where filtered checks were causing unexpected errors outside of the intended dataset.
 
-### 2023.05.23 { id=2023.05.23 }
+### 2023.5.23 { id=2023.5.23 }
 #### Feature Enhancements
 
 - Scheduled operation editing
@@ -875,7 +875,7 @@
 - Enrichment to Redshift and string data types
     - Fixed an issue with enrichment to Redshift and string data types. This issue caused enrichment to fail for tables that contained string data types
 
-### 2023.05.10 { id="2023.05.10" }
+### 2023.5.10 { id="2023.5.10" }
 
 #### Feature Enhancements
 - Container Settings
@@ -914,7 +914,7 @@
 - Implemented general bug fixes and made various improvements to enhance overall performance and user experience.
 
 
-### 2023.04.19 { id=2023.04.19 }
+### 2023.4.19 { id=2023.4.19 }
 
 We're pleased to announce the latest update that includes enhancements to UI for an overall better experience:
 #### Feature Enhancements
@@ -940,7 +940,7 @@ We're pleased to announce the latest update that includes enhancements to UI for
 - General Fixes and Performance Improvements
 
 
-### 2023.04.07 { id=2023.04.07 }
+### 2023.4.7 { id=2023.4.7 }
 
 #### Feature Enhancements
 
