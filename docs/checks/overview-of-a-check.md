@@ -98,6 +98,7 @@ For more details about check rule types, please refer to the [**Rule Types Overv
 | Rule Type                                                                             | Description                                                                                        |
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | [After Date Time](../checks/after-date-check.md)                                      | Asserts that the field is a timestamp later than a specific date and time.                         |
+| [Aggregation Comparison](../checks/aggregation-comparison-check.md)                                   | Verifies that the specified comparison operator evaluates true when applied to two aggregation expressions.                                                 |
 | [Any Not Null](../checks/any-not-null-check.md)                                       | Asserts that one of the fields must not be null.                                                    |
 | [Before DateTime](../checks/before-date-time-check.md)                                | Asserts that the field is a timestamp earlier than a specific date and time.                       |
 | [Between](../checks/between-check.md)                                                 | Asserts that values are equal to or between two numbers.                                           |
@@ -108,11 +109,13 @@ For more details about check rule types, please refer to the [**Rule Types Overv
 | [Contains Url](../checks/contains-url.md)                                             | Asserts that the values contain valid URLs.                                                        |
 | [Distinct Count](../checks/distinct-count-check.md)                                   | Asserts on the approximate count distinct of the given column.                                      |
 | [Entity Resolution](../checks/entity-resolution.md)                                   | Asserts that every distinct entity is appropriately represented once and only once                                                 |
+| [Equal to](../checks/equal-to-check.md)                                   | Asserts that all of the selected fields' equal a value.                                                |
 | [Equal To Field](../checks/equal-to-field-check.md)                                   | Asserts that this field is equal to another field.                                                 |
 | [Exists in](../checks/exists-in-check.md)                                             | Asserts if the rows of a compared table/field of a specific Datastore exists in the selected table/field.|
 | [Expected Schema](../checks/expected-schema-check.md)                                 | Asserts that all selected fields are present and that all declared data types match expectations.                                 |
 | [Expected Values](../checks/expected-values-check.md)                                 | Asserts that values are contained within a list of expected values.                                 |
 | [Field Count](../checks/field-count-check.md)                                         | Asserts that there must be exactly a specified number of fields.                                    |
+| [Freshness Check](../checks/freshness-check.md)                                         | Asserts that data was added or updated in the data asset after a declared time.                                    |
 | [Greater Than](../checks/greater-than-check.md)                                       | Asserts that the field is a number greater than (or equal to) a value.                              |
 | [Greater Than Field](../checks/greater-than-field-check.md)                           | Asserts that this field is greater than another field.                                              |
 | [Is Address](../checks/is-address.md)                                                 | Asserts that the values contain the specified required elements of an address.|
@@ -123,6 +126,7 @@ For more details about check rule types, please refer to the [**Rule Types Overv
 | [Less Than Field](../checks/less-than-field-check.md)                                 | Asserts that this field is less than another field.                                                 |
 | [Matches Pattern](../checks/matches-pattern-check.md)                                 | Asserts that a field must match a pattern.                                                          |
 | [Max Length](../checks/max-length-check.md)                                           | Asserts that a string has a maximum length.                                                         |
+| [Max Partition Size](../checks/max-partition-size-check.md)                                             | Asserts the maximum number of records that should be loaded from each file or table partition.                                                           |
 | [Max Value](../checks/max-value-check.md)                                             | Asserts that a field has a maximum value.                                                           |
 | [Metric](../checks/metric-check.md)                                                   | Records the value of the selected field during each scan operation and asserts that the value is within a specified range (inclusive).|
 | [Min Length](../checks/min-length-check.md)                                           | Asserts that a string has a minimum length.                                                         |
