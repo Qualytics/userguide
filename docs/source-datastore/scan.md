@@ -123,14 +123,19 @@ This option enables you to automatically scan file patterns associated with the 
 ![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
 ![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
 
-**2. Anomaly Options:** Manage anomalies efficiently by setting a rollup threshold to merge excess anomalies and enabling automatic archiving to remove duplicates from overlapping scans.
-
-- **Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review. 
-
+**2. Anomaly Options:** Manage duplicate anomalies efficiently by archiving duplicates or reactivating recurring ones. These settings help streamline anomaly tracking and maintain data accuracy.
+ 
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
+
+- **Reactivate Recurring Anomalies:** Marks new anomalies as duplicates of archived ones and reactivates the original anomaly to ensure recurring issues are tracked.
 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png#only-light)
 ![anomaly-option](../assets/datastores/scan/anomaly-option-dark.png#only-dark)
+
+**3. Anomaly Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
+
+![anomaly-option](../assets/datastores/scan/anomalyy-light.png#only-light)
+![anomaly-option](../assets/datastores/scan/anomalyy-dark.png#only-dark)
 
 **Step 7:** Click on the **Next** button to Configure the **Enrichment Settings**.
 
