@@ -464,35 +464,122 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 
 **Slack**
 
-Slack notifications keep your team informed by sending updates directly to your Slack workspace. With a webhook, you can deliver customized messages to specific channels, including key details about events and operations.
+Qualytics integrates with Slack to deliver real-time notifications on scan completions, anomalies, and operational statuses, ensuring teams stay informed and can act quickly. With this integration, users receive instant alerts for system events, monitor scan results, and manage data anomalies directly within Slack. They can view notifications, acknowledge issues, and take necessary actions without switching platforms. 
 
-**Step 1:** Click on **Slack.**
+**Step 1**: Click on **Slack.**
 
-![notification](.././assets/flows/notification-light-54.png#only-light)
-![notification](.././assets/flows/notification-dark-54.png#only-dark)
+![click-slack](.././assets/flows/click-slack-light.png#only-light)
+![click-slack](.././assets/flows/click-slack-dark.png#only-dark)
 
-A panel **Slack Settings** will appear on the right-hand side, allowing you to add a webhook url and configure the notification message.
+A **Slack Settings** panel appears on the right side of the screen.
 
-![notification](.././assets/flows/notification-light-55.png#only-light)
-![notification](.././assets/flows/notification-dark-55.png#only-dark)
+![slack-settings](.././assets/flows/slack-settings-light.png#only-light)
+![slack-settings](.././assets/flows/slack-settings-dark.png#only-dark)
 
-| No. |                  Field  |                         Description |
+| No. |       Field | Description |
 | :---- | :---- | :---- |
-| 1. | Webhook URL | Enter the webhook url where the notification should be sent.  |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`,** and **`{{operation_result}}`**. |
+| **1.** |    Channel | Choose the channel where notifications should be sent using the **Channel** dropdown. For demonstration purposes, the channel **#demo** is selected. |
+| **2.** |    Preview | Shows a preview of the Slack notification that will be sent when the flow runs. |
 
-![notification](.././assets/flows/notification-light-56.png#only-light)
-![notification](.././assets/flows/notification-dark-56.png#only-dark)
+![slack-options](.././assets/flows/slack-options-light.png#only-light)
+![slack-options](.././assets/flows/slack-options-dark.png#only-dark)
 
-**Step 2:** Click the **"Test Notification"** button to send a test message to the provided **Webhook URL.** If the message is successfully sent, you will receive a confirmation notification indicating **"Notification successfully sent".**
+**Step 2:** Click the **Test Notification** button to send a sample notification to the selected Slack channel.
 
-![test](.././assets/flows/test-light-57.png#only-light)
-![test](.././assets/flows/test-dark-57.png#only-dark)
+![test-notification](.././assets/flows/test-notification-light.png#only-light)
+![test-notification](.././assets/flows/test-notification-dark.png#only-dark)
 
-**Step 3:** Once all fields are configured, click the **Save** button to finalize the slack notification setup.
+A prompt appears stating **Notification successfully sent** once the notification is successfully delivered.
 
-![save](.././assets/flows/save-light-58.png#only-light)
-![save](.././assets/flows/save-dark-58.png#only-dark)
+![successfully-notified](.././assets/flows/successfully-notified-light.png#only-light)
+![successfully-notified](.././assets/flows/successfully-notified-dark.png#only-dark)
+
+**Step 3:** Once the notification is successfully sent, check your connected Slack workspace to ensure it is linked to Qualytics. You will see the test notification in the selected Slack channel.
+
+!!! note 
+    Each trigger generates a different type of Slack notification message. The content and format of the message vary based on the specific trigger event. 
+
+![anomaly-detected](.././assets/flows/anomaly-detected.png)
+
+**Step 4:** After confirming that the notification was received successfully, return and click the Save button.
+
+![save](.././assets/flows/save-light.png#only-light)
+![save](.././assets/flows/save-dark.png#only-dark)
+
+#### Examples of Trigger Messages
+
+Trigger messages in Slack provide real-time notifications for various system events, ensuring timely awareness and action. Each trigger message follows a unique format and conveys different types of information based on the operation performed. Below are examples highlighting distinct scenarios:
+
+**Scenario 1: Scan Completion Notification**
+
+When a data cataloging or scan operation completes successfully, a notification is sent to Slack. The message includes details such as the dataset name, operation type (e.g., Catalog Operation), and the result of the operation. 
+
+![scan-completed](.././assets/flows/scan-completed.png)
+
+**Scenario 2: Anomalous Table or File Detected**
+
+When a scan detects a critical data anomaly, Slack sends a detailed notification highlighting the issue. The notification includes the dataset name, flow (such as Quality Monitor), and source datastore. It also provides a summary of the anomaly, specifying the number of records that differ between datasets and the container where the discrepancy was found. Additionally, the message offers an option to view detailed results.
+
+![anomalous-scan](.././assets/flows/anomalous-scan.png)
+
+**Scenario 3: Anomaly Detected**
+
+When a scan detects record anomalies, Slack sends a notification highlighting the affected container, flow, and source datastore. It specifies the number of records that differ between datasets and provides options to view or acknowledge the anomaly.
+
+![anomaly-detected](.././assets/flows/anomaly-detected.png)
+
+#### Managing Qualytics Alerts in Slack
+
+Qualytics Slack integration enables real-time monitoring and quick action on data quality issues directly from Slack. This guide outlines the different types of alerts and the actions you can take without leaving Slack.
+
+**When an Operation Success or failure** 
+
+**Step 1:** A Slack notification confirms the scan completion with a **Success/failure** status.
+
+For demonstration purposes we are using Success operation.
+
+![scan-completed](.././assets/flows/scan-completed.png)
+
+**Step 2:** Click **View Operation** to be redirected automatically to the result section in Qualytics.
+
+![view-operation](.././assets/flows/view-operation.png)
+
+**When an Anomalous File or Table is Detected** 
+
+**Step 1:** A Slack alert notifies about anomalies in a dataset.
+
+![anomalous-scan](.././assets/flows/anomalous-scan.png)
+
+**Step 2:** Click **View Results** to examine the identified discrepancies directly in Qualytics.
+
+![view-results](.././assets/flows/view-results.png)
+
+**When a Record Anomaly is Detected** 
+
+If a **shape or record anomaly** is found, you'll receive a Slack notification. You can take the following actions:
+
+![anomaly-detected](.././assets/flows/anomaly-detected.png)
+
+* **View Anomaly** –  Click on view anomaly to open the details in Qualytics to investigate further.  
+    
+![view-anomaly](.././assets/flows/view-anomaly.png)
+
+* **Acknowledge** – Click on Acknowledge to mark it as reviewed to avoid duplicate alerts.  
+    
+![acknowledge-anomaly](.././assets/flows/acknowledge-anomaly.png)  
+    
+* **Horizontal ellipsis(⋯)**  – Click on horizontal ellipsis.
+
+![horizontal-ellipsis](.././assets/flows/horizontal-ellipsis.png)
+
+  A dropdown will open with option **comment** and **archive** :  
+    
+![comment-archive](.././assets/flows/comment-archive.png)
+
+| No. |                Action |              Description |
+| :---- | :---- | :---- |
+| **1.** |        Comment | Add Comment to collaborate with your team. |
+| **2.** |       Archive | Archive if no further action is needed. |
 
 **Microsoft Teams**
 
