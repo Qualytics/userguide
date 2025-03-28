@@ -2,12 +2,35 @@
 
 ## Release Notes
 
+### 2025.03.28 { id=2025.03.28 }
+
+#### Feature Enhancements
+
+- Anomalies
+    - The “Anomalies Identified” count now shows the sum of Open and Archived anomalies.
+    - Anomalies are now categorized into two groups:
+        - Open: anomalies currently active (Active, Acknowledged).
+        - Archived: anomalies that have been archived (Resolved, Duplicated, Invalid).
+    - In the Overview tab under the Explore page, users can now view the total counts of Duplicate and Invalid anomalies.
+    - Users can now see the total counts of Open and Archived anomalies directly in Scan Operations.
+    - The Scan Results modal now displays the totals for Open and Archived anomalies.
+        - Users can filter anomalies by status using a new dropdown selector.
+
+- Quality Checks
+    - Users can now sort the Quality Checks list by the “Last Asserted” date.
+
+#### General Fixes and Improvements
+
+- Teams Permissions
+    - Fixed an issue where users with the Drafter role were unable to restore a check as a draft.
+
+- General Fixes and Improvements.
+
 ### 2025.3.23 { id=2025.3.23 }
 
 #### Feature Enhancements
 
 - Slack Integration
-
     - We are excited to introduce a major enhancement to our integration with Slack.
     - Users can now add the new Qualytics Slack App for enhanced capabilities.
         - Qualytics admins can configure the Slack Integration with two easy steps.
