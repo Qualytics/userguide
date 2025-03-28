@@ -127,7 +127,7 @@ This option enables you to automatically scan file patterns associated with the 
  
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
-- **Reactivate Recurring Anomalies:** Marks new anomalies as duplicates of archived ones and reactivates the original anomaly to ensure recurring issues are tracked.
+- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [FingerPrint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png#only-light)
 ![anomaly-option](../assets/datastores/scan/anomaly-option-dark.png#only-dark)
