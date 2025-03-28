@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### 2025.03.28 { id=2025.03.28 }
+### 2025.3.28 { id=2025.3.28 }
 
 #### Feature Enhancements
 
