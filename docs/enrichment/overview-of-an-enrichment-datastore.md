@@ -79,6 +79,7 @@ Acts as an associative entity that consolidates information on failed checks, as
 | SOURCE_CONTAINER                | STRING             | Name of the source data container.               |
 | SOURCE_PARTITION                | STRING             | Partition of the source data.                    |
 | SOURCE_DATASTORE                | STRING             | Datastore where the source data resides.         |
+| FINGERPRINT                     | INTEGER            | Unique identifier created when Reactivate Recurring Anomalies is enabled.         |
 
 !!! info
 	This table is not characterized by unique `ANOMALY_UUID` or `QUALITY_CHECK_ID` values alone. Instead, the combination of `ANOMALY_UUID` and `QUALITY_CHECK_ID` serves as a composite key, uniquely identifying each record in the table.
