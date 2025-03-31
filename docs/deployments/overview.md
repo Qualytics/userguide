@@ -32,7 +32,7 @@ This model requires that the provisioned VPC have the ability to access Customer
 
 <figure markdown>
   [![PaaS Deployment Architecture](../assets/deployments/paas_architectura_diagram.jpg)](../assets/deployments/paas_architectura_diagram.jpg)
-  <figcaption>PaaS Deployment Architecture</figcaption>
+  <figcaption>Deployment Architecture</figcaption>
 </figure>
 
 #### Considerations
