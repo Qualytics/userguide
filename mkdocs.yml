@@ -106,7 +106,7 @@ nav:
         - Expected Schema: checks/expected-schema-check.md
         - Expected Values: checks/expected-values-check.md
         - Field Count: checks/field-count-check.md
-        - Freshness Checks: checks/freshness-check.md 
+        - Freshness Checks: checks/freshness-check.md
         - Greater Than: checks/greater-than-check.md
         - Greater Than Field: checks/greater-than-field-check.md
         - Is Address: checks/is-address.md
@@ -186,7 +186,7 @@ nav:
       - quality-scores/what-are-quality-scores.md
       - printing.md
     - Misc:
-      - deployments/deployments.md
+      - deployments/overview.md
       - upgrades/qualytics-single-tenant-instance.md
       - operation-automation/automated-tasks-with-cron.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
@@ -278,6 +278,7 @@ plugins:
   - redirects:
       redirect_maps:
         'settings/integrations/atlan.md': 'settings/catalog-integrations/atlan.md'
+        'deployments/deployments.md': 'deployments/overview.md'
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'
