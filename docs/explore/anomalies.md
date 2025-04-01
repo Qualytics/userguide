@@ -23,28 +23,31 @@ You will be navigated to the **Anomalies** tab, where you'll see a list of all t
 
 ## Categories Anomalies
 
-Anomalies can be classified into different categories based on their status and actions taken. These categories include All, Active, Acknowledged, and Archived anomalies. Managing anomalies effectively helps in maintaining data integrity and ensuring quick response to issues.
+Anomalies can be classified into different categories based on their status and actions taken. These categories include Open and Archived anomalies. Managing anomalies effectively helps in maintaining data integrity and ensuring quick response to issues.
 
-### All
+### Open
 
-By selecting **All Anomalies**, you can view the complete list of anomalies, regardless of their status. This option helps you get a comprehensive overview of all issues that have been detected, whether they are currently active, acknowledged, or archived.
+By selecting **Open Anomalies**, you can view anomalies that have been detected but remain unacknowledged or unresolved. These anomalies require attention and may need further investigation or corrective action. 
 
-![all](../assets/explore/anomalies/all-light.png#only-light)
-![all](../assets/explore/anomalies/all-dark.png#only-dark)
+![open](../assets/explore/anomalies/open-light.png#only-light)
+![open](../assets/explore/anomalies/open-dark.png#only-dark)
 
-### Active
+This option helps focus on unaddressed issues while allowing seamless navigation to **All**, **Active**, or **Acknowledged** anomalies as needed.
 
-By selecting **Active Anomalies**, you can focus on anomalies that are currently unresolved or require immediate attention. These are the anomalies that are still in play and have not yet been acknowledged, archived, or resolved.
+**1. Active**: By selecting **Active Anomalies**, you can focus on anomalies that are currently unresolved or require immediate attention. These are the anomalies that are still in play and have not yet been acknowledged, archived, or resolved.
 
 ![active](../assets/explore/anomalies/active-light.png#only-light)
 ![active](../assets/explore/anomalies/active-dark.png#only-dark)
 
-### Acknowledge
-
-By selecting **Acknowledged Anomalies**, you can see all anomalies that have been reviewed and marked as acknowledged. This status indicates that the anomalies have been noted, though they may still require further action.
+**2. Acknowledge**: By selecting **Acknowledged Anomalies**, you can see all anomalies that have been reviewed and marked as acknowledged. This status indicates that the anomalies have been noted, though they may still require further action.
 
 ![acknowledge](../assets/explore/anomalies/acknowledge-light.png#only-light)
 ![acknowledge](../assets/explore/anomalies/acknowledge-dark.png#only-dark)
+
+**3. All**: By selecting **All Anomalies**, you can view the complete list of anomalies, regardless of their status. This option helps you get a comprehensive overview of all issues that have been detected, whether they are currently active, acknowledged, or archived.
+
+![all](../assets/explore/anomalies/all-light.png#only-light)
+![all](../assets/explore/anomalies/all-dark.png#only-dark)
 
 ### Archived
 
