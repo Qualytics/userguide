@@ -132,12 +132,12 @@ This section shows important information about the records and fields in the con
 ![Screenshot](../assets/explore/insights/checks-7-light.png#only-light)
 ![Screenshot](../assets/explore/insights/checks-7-dark.png#only-dark)
 
-**1. Passed Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating that the data met the set quality criteria.
+**1. Passing Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating that the data met the set quality criteria.
 
 ![passed-check](../assets/explore/insights/passed-check-8-light.png#only-light)
 ![passed-check](../assets/explore/insights/passed-check-8-dark.png#only-dark)
 
-**2. Failed Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating data that did not meet the quality criteria.
+**2. Failing Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating data that did not meet the quality criteria.
 
 ![failed-check](../assets/explore/insights/failed-check-9-light.png#only-light)
 ![failed-check](../assets/explore/insights/failed-check-9-dark.png#only-dark)
@@ -166,7 +166,7 @@ The count for each category can be viewed by hovering over the relevant check, p
 ![anomalies](../assets/explore/insights/anomalies-11-light.png#only-light)
 ![anomalies](../assets/explore/insights/anomalies-11-dark.png#only-dark)
 
-Anomalies Identified shows the total issues found, divided into **active**, **acknowledged**, and **resolved**, helping users quickly manage and fix problems.
+Anomalies Identified shows the total issues found, divided into **active**, **acknowledged**, **resolved**, **duplicate** and **invalid**, helping users quickly manage and fix problems.
 
 **1. Active Anomalies:** Shows the number of unresolved anomalies that require immediate attention. These anomalies are still present and have not been acknowledged, archived, or resolved in the system.
 
@@ -182,6 +182,17 @@ Anomalies Identified shows the total issues found, divided into **active**, **ac
 
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-light.png#only-light)
 ![resolved-anomalies](../assets/explore/insights/resolved-anomalies-14-dark.png#only-dark)
+
+**4. Duplicate Anomalies:** These anomalies have been identified as duplicates of existing anomalies. This status helps prevent redundant issue tracking and ensures that duplicate records are consolidated into a single entry.
+
+![duplicate-anomalies](../assets/explore/insights/duplicate-anomalies-15-light.png#only-light)
+![duplicate-anomalies](../assets/explore/insights/duplicate-anomalies-15-dark.png#only-dark)
+
+**5. Invalid Anomalies:** These anomalies have been reviewed and determined to be false positives or not relevant. Marking an anomaly as invalid removes it from active consideration, preventing unnecessary investigations.
+
+![invalid-anomalies](../assets/explore/insights/invalid-anomalies-16-light.png#only-light)
+![invalid-anomalies](../assets/explore/insights/invalid-anomalies-16-dark.png#only-dark)
+
 
 !!! info
     Users can see the checks using the redirect link (the redirect only show the current check statuses).
