@@ -91,6 +91,8 @@ Anomaly status is a crucial feature for managing and addressing data quality iss
 
 **Resolved:** This status indicates that the anomaly was a legitimate data quality concern that has been addressed and fixed. 
 
+**Duplicate:** This status indicates that the anomaly is a duplicate of an existing one, meaning it has already been reported and does not require separate action.
+
 **Invalid:** This status indicates that the anomaly is not a legitimate data quality concern, possibly due to it being a false positive or an error in the detection process.
 
 ## Anomaly Details
@@ -99,19 +101,23 @@ The anomaly identified during the scan operation illustrates the following detai
 
 **1. Anomaly ID:** A numerical identifier (e.g. #75566) used for quick search and easy identification of anomalies within the Qualytics interface.
 
-**2. Status:** Reflects the status of the Anomaly. It can be **active**, **acknowledged**, **resolved**, or **invalid**.
+**2. Status:** Reflects the status of the Anomaly. It can be **active**, **acknowledged**, **resolved**, **duplicate** or **invalid**.
 
 **3. Share:** Copy a shareable link to a specific anomaly. This can be shared with other users or stakeholders for collaboration.
 
 **4. Anomaly UID:** A longer, standardized, and globally unique identifier, displayed as a string of hexadecimal characters. This can be copied to the clipboard.
 
-**5. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
+**5. Acknowledge:** Use this option to mark an anomaly as reviewed. Acknowledging an anomaly means it has been identified and noted, but it remains active until resolved.
 
-**6. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
+**6. Archive:** Use this option to remove an anomaly from the active list. Archiving an anomaly does not delete it but stores it for historical tracking and future reference.
 
-**7. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+**7. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
 
-**8. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
+**8. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
+
+**9. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+
+**10. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
 
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-light.png#only-light)
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-dark.png#only-dark)
