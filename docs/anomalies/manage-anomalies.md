@@ -1,6 +1,6 @@
 # Manage Anomalies
 
-You can manage anomalies to ensure your data remains accurate and any quality issues are addressed efficiently. Anomalies, which occur due to errors or inconsistencies in data, can be categorized as **All**, **Active**, **Acknowledged**, or **Archived**, helping you track their status and take the appropriate actions. You can acknowledge anomalies that have been reviewed, archive those that no longer need attention, and delete any that are irrelevant or logged by mistake. 
+You can manage anomalies to ensure your data remains accurate and any quality issues are addressed efficiently. Anomalies, which occur due to errors or inconsistencies in data, can be categorized as **Open** or **Archived**, helping you track their status and take the appropriate actions. You can acknowledge anomalies that have been reviewed, archive those that no longer need attention, and delete any that are irrelevant or logged by mistake. 
 
 Bulk actions further simplify the process, allowing you to manage multiple anomalies at once, saving time and effort. This guide will walk you through the steps of acknowledging, archiving, restoring, editing, and deleting anomalies, whether individually or in bulk.
 
@@ -20,28 +20,31 @@ Let's get started 🚀
 
 ## Categories Anomalies
 
-Anomalies can be classified into different categories based on their status and actions taken. These categories include All, Active, Acknowledged, and Archived anomalies. Managing anomalies effectively helps in maintaining data integrity and ensuring quick response to issues.
+Anomalies can be classified into different categories based on their status and actions taken. These categories include Open and Archived anomalies. Managing anomalies effectively helps in maintaining data integrity and ensuring quick response to issues.
 
-### All
+### Open
 
-By selecting **All Anomalies**, you can view the complete list of anomalies, regardless of their status. This option helps you get a comprehensive overview of all issues that have been detected, whether they are currently active, acknowledged, or archived.
+By selecting Open Anomalies, you can view anomalies that have been detected but remain unacknowledged or unresolved. These anomalies require attention and may need further investigation or corrective action. 
 
-![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-light-3.png#only-light)
-![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-dark-3.png#only-dark)
+![open-anomalies](../assets/datastores/manage-anomalies/open-anomalies-light-2.png#only-light)
+![open-anomalies](../assets/datastores/manage-anomalies/open-anomalies-dark-2.png#only-dark)
 
-### Active
+This option helps focus on unaddressed issues while allowing seamless navigation to **All**, **Active**, or **Acknowledged** anomalies as needed.
 
-By selecting **Active Anomalies**, you can focus on anomalies that are currently unresolved or require immediate attention. These are the anomalies that are still in play and have not yet been acknowledged, archived, or resolved.
+**1. Active**: By selecting **Active Anomalies**, you can focus on anomalies that are currently unresolved or require immediate attention. These are the anomalies that are still in play and have not yet been acknowledged, archived, or resolved.
 
 ![active-anomalies](../assets/datastores/manage-anomalies/active-anomalies-light-4.png#only-light)
 ![active-anomalies](../assets/datastores/manage-anomalies/active-anomalies-dark-4.png#only-dark)
 
-### Acknowledge
-
-By selecting **Acknowledged Anomalies**, you can see all anomalies that have been reviewed and marked as acknowledged. This status indicates that the anomalies have been noted, though they may still require further action.
+**2. Acknowledged**: By selecting **Acknowledged Anomalies**, you can see all anomalies that have been reviewed and marked as acknowledged. This status indicates that the anomalies have been noted, though they may still require further action.
 
 ![acknowledged-anomalies](../assets/datastores/manage-anomalies/acknowledged-anomalies-light-5.png#only-light)
 ![acknowledged-anomalies](../assets/datastores/manage-anomalies/acknowledged-anomalies-dark-5.png#only-dark)
+
+**3. All**: By selecting **All Anomalies**, you can view the complete list of anomalies, regardless of their status. This option helps you get a comprehensive overview of all issues that have been detected, whether they are currently active, acknowledged, or archived.
+
+![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-light-3.png#only-light)
+![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-dark-3.png#only-dark)
 
 ### Archived
 
@@ -90,19 +93,7 @@ You can acknowledge individual anomalies either directly or through the action m
 ![acknowledge-directly](../assets/datastores/manage-anomalies/acknowledge-directly-light-10.png#only-light)
 ![acknowledge-directly](../assets/datastores/manage-anomalies/acknowledge-directly-dark-10.png#only-dark)
 
-A modal window titled **“Acknowledge Anomaly”** will appear, confirming that this action acknowledges the anomaly as a legitimate data quality concern.
-
-You also have the option to leave a comment in the provided field to provide additional context or details. 
-
-![acknowledge-anomaly](../assets/datastores/manage-anomalies/acknowledge-anomaly-light-11.png#only-light)
-![acknowledge-anomaly](../assets/datastores/manage-anomalies/acknowledge-anomaly-dark-11.png#only-dark)
-
-**Step 2:** Click on the **Acknowledge** button to move the anomaly to the acknowledged state.
-
-![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-light-12.png#only-light)
-![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-dark-12.png#only-dark)
-
-**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
+**Step 2:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
 
 ![acknowledge-msg](../assets/datastores/manage-anomalies/acknowledge-msg-light-13.png#only-light)
 ![acknowledge-msg](../assets/datastores/manage-anomalies/acknowledge-msg-dark-13.png#only-dark)
@@ -114,24 +105,7 @@ You also have the option to leave a comment in the provided field to provide add
 ![active-anomaly](../assets/datastores/manage-anomalies/active-anomaly-light-14.png#only-light)
 ![active-anomaly](../assets/datastores/manage-anomalies/active-anomaly-dark-14.png#only-dark)
 
-**Step 2:** A modal window will appear displaying the anomaly details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on **“Acknowledge”** from the drop-down menu. 
-
-![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-light-15.png#only-light)
-![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-dark-15.png#only-dark)
-
-A modal window titled **“Acknowledge Anomaly”** will appear, confirming that this action acknowledges the anomaly as a legitimate data quality concern.
-
-You also have the option to leave a comment in the provided field to provide additional context or details. 
-
-![acknowledge-anomaly](../assets/datastores/manage-anomalies/acknowledge-anomaly-light-16.png#only-light)
-![acknowledge-anomaly](../assets/datastores/manage-anomalies/acknowledge-anomaly-dark-16.png#only-dark)
-
-**Step 3:** Click on the **Acknowledge** button to move the anomaly to the acknowledged state.
-
-![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-light-17.png#only-light)
-![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-dark-17.png#only-dark)
-
-**Step 4:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
+**Step 2:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
 
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-light-18.png#only-light)
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-dark-18.png#only-dark)
