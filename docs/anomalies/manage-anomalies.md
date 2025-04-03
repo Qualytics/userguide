@@ -105,7 +105,12 @@ You can acknowledge individual anomalies either directly or through the action m
 ![active-anomaly](../assets/datastores/manage-anomalies/active-anomaly-light-14.png#only-light)
 ![active-anomaly](../assets/datastores/manage-anomalies/active-anomaly-dark-14.png#only-dark)
 
-**Step 2:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
+**Step 2:** A modal window will appear displaying the anomaly details. Click on the **Acknowledge** icon ( represented by an **eye** icon ) located in the upper-right corner of the modal window.
+
+![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-light-15.png#only-light)
+![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-dark-15.png#only-dark)
+
+**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged.”**
 
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-light-18.png#only-light)
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-dark-18.png#only-dark)
@@ -189,7 +194,7 @@ You can archive individual anomalies either directly or through the action menu.
 ![archive-action](../assets/datastores/manage-anomalies/archive-action-light-29.png#only-light)
 ![archive-action](../assets/datastores/manage-anomalies/archive-action-dark-29.png#only-dark)
 
-**Step 2:** A modal window will appear displaying the anomaly details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on the **“Archive”** from the drop-down menu. 
+**Step 2:** A modal window will appear displaying the anomaly details. Click on the **Archive** icon ( represented by a box with a downward arrow ) located in the upper-right corner of the modal window.
 
 ![vertical-archive](../assets/datastores/manage-anomalies/vertical-archive-light-30.png#only-light)
 ![vertical-archive](../assets/datastores/manage-anomalies/vertical-archive-dark-30.png#only-dark)
