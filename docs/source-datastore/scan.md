@@ -323,11 +323,12 @@ This status indicates that the scan operation is still running at the moment and
 | 9   | Read Record Limit        | Defines the maximum number of records to be scanned per table after initial filtering.|
 | 10  | Check Categories        | Indicates which categories should be included in the scan (e.g., Metadata, Data Integrity).|
 | 11  | Archive Duplicate Anomalies | Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation.
-| 12  | Source Record Limit     | Indicates the limit on records stored in the enrichment datastore for each detected anomaly.|
-| 13  | Results                 | View the details of the ongoing scan operation. This includes information on which tables are currently being scanned, the anomalies identified so far (if any), and other related data collected during the active scan.|
-| 14  | Abort                   | The Abort button enables you to stop the ongoing scan operation.|
-| 15  | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
-| 16  | Summary | The summary section provides an overview of the scan operation in progress. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the ongoing operation.</li><li> **Records Scanned**: The total number of records processed up to this point. </li><li> **Anomalies Identified**: The number of anomalies detected so far during the scan. </li></ul>|
+| 12  | Reactivate Recurring Anomalies | Indicates whether previously detected anomalies that reappear in subsequent scans will be reactivated. |
+| 13  | Source Record Limit     | Indicates the limit on records stored in the enrichment datastore for each detected anomaly.|
+| 14  | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
+| 15  | Results                 | View the details of the ongoing scan operation. This includes information on which tables are currently being scanned, the anomalies identified so far (if any), and other related data collected during the active scan.|
+| 16  | Abort                   | The Abort button enables you to stop the ongoing scan operation.|
+| 17  | Summary | The summary section provides an overview of the scan operation in progress. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the ongoing operation.</li><li> **Records Scanned**: The total number of records processed up to this point. </li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul>|
 
 #### Aborted
 
@@ -349,13 +350,14 @@ This status indicates that the scan operation was manually stopped before it cou
 | 9       | Read Record Limit          | Defines the maximum number of records to be scanned per table after initial filtering|
 | 10      | Check Categories          | Indicates which categories should be included in the scan (Metadata, Data Integrity)|
 | 11      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
-| 12      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 13      | Results                   | View the details of the scan operation that was aborted, including tables scanned and anomalies identified|
-| 14      | Resume                    | Provides an option to continue the scan operation from where it left off            |
-| 15      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan|
-| 16      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
-| 17  | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
-| 18      |  Summary                  | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted. </li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul> |
+| 12      | Reactivate Recurring Anomalies | Indicates whether previously detected anomalies that reappear in subsequent scans will be reactivated. |
+| 13      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
+| 14      | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
+| 15      | Results                   | View the details of the scan operation that was aborted, including tables scanned and anomalies identified|
+| 16      | Resume                    | Provides an option to continue the scan operation from where it left off            |
+| 17      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the aborted scan|
+| 18      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
+| 19      |  Summary                  | The summary section provides an overview of the scan operation up to the point it was aborted. It includes: <br> <ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned before the operation was aborted. </li><li> **Records Scanned**: The total number of records processed before the scan was stopped. </li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul> |
 
 #### Warning
 
@@ -378,11 +380,11 @@ This status signals that the scan operation encountered some issues and displays
 | 10      | Check Categories          | Indicates which categories should be included in the scan (Metadata, Data Integrity)|
 | 11      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
 | 12      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 13      | Result                         | View the details of the scan operation that was completed with warning, including tables scanned and anomalies identified|
-| 14      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the warning scan|
-| 15      | Delete                    | Removes the record of the warning operation from the system, permanently deleting scan results and anomalies|
-| 16  | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
-| 17      |Summary                    | The summary section provides an overview of the scan operation, highlighting any warnings encountered. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the operation, including any partitions that triggered warnings. </li><li> **Records Scanned**: The total number of records processed during the scan, along with any records that raised warnings. </li><li> **Anomalies Identified**: The number of anomalies detected during the partial scan. </li></ul>|
+| 13      | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
+| 14      | Result                         | View the details of the scan operation that was completed with warning, including tables scanned and anomalies identified|
+| 15      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the warning scan|
+| 16      | Delete                    | Removes the record of the warning operation from the system, permanently deleting scan results and anomalies|
+| 17      |Summary                    | The summary section provides an overview of the scan operation, highlighting any warnings encountered. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned so far. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned during the operation, including any partitions that triggered warnings. </li><li> **Records Scanned**: The total number of records processed during the scan, along with any records that raised warnings. </li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul>|
 | 18       |Logs                      | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Scan Operation.|
 
 #### Success
@@ -406,11 +408,11 @@ The summary section provides an overview of the **scan** operation upon successf
 | 10      | Check Categories          | Indicates which categories should be included in the scan (Metadata, Data Integrity)|
 | 11      | Archive Duplicate Anomalies| Indicates whether Archive Duplicate Anomalies was enabled or disabled in the operation|
 | 12      | Source Record Limit       | Indicates the limit on records stored in the enrichment datastore for each detected anomaly|
-| 13      | Results                   | View the details of the completed scan operation. This includes information on which tables were scanned, the anomalies identified (if any), and other relevant data collected throughout the successful completion of the scan.|
-| 14      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the success scan|
-| 15      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
-| 16  | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
-| 17     | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The number of anomalies detected. </li></ul>|
+| 13      | Anomaly Rollup Threshold | Number of anomalies grouped together for rollup reporting.|
+| 14      | Results                   | View the details of the completed scan operation. This includes information on which tables were scanned, the anomalies identified (if any), and other relevant data collected throughout the successful completion of the scan.|
+| 15      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the success scan|
+| 16      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
+| 17     | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul>|
 
 #### Full View of Metrics in Operation Summary
 
@@ -441,6 +443,11 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 | 6.   | Status | The status of the anomaly. Active, Acknowledged, Resolved, or Invalid |
 | 7.   | Type | The type of anomaly (e.g., Record or Shape) |
 | 8.   | Date time | The date and time when the anomaly was found. |
+
+**Step 3:** By clicking the **dropdown** button next to the **All** button, you can filter anomalies based on their status.
+
+![drop-down](../assets/datastores/scan/drop-down-light.png#only-light)
+![drop-down](../assets/datastores/scan/drop-down-dark.png#only-dark)
 
 ## API Payload Examples
 
