@@ -175,18 +175,19 @@ Filter and Sort options allow you to organize your checks by various criteria, s
 
 ### Sort
 
-You can sort your checks by **Anomalies**, **Coverage**, **Created Date**, **Rules**, and **Weight** to easily organize and prioritize them according to your needs.
+You can sort your checks by **Active Anomalies**, **Coverage**, **Created Date**, **Last Asserted**, **Rules**, and **Weight** to easily organize and prioritize them according to your needs.
 
 ![sort](../assets/explore/checks/sort-light.png#only-light)
 ![sort](../assets/explore/checks/sort-dark.png#only-dark)
 
 | No  | Sort By Option | Description |
 | :---- | :---- | :---- |
-| **1** | **Anomalies** | Sort checks based on the number of active anomalies. |
+| **1** | **Active Anomalies** | Sort checks based on the number of active anomalies. |
 | **2** | **Coverage** | Sort checks by data coverage percentage. |
 | **3** | **Created Date** | Sort checks according to the date they were created. |
-| **4** | **Rules** | Sort checks based on specific rules applied to the checks. |
-| **5** | **Weight** | Sort checks by their assigned weight or importance level. |
+| **4** | **Last Asserted** | Sorts by the last time the check was executed. |
+| **5** | **Rules** | Sort checks based on specific rules applied to the checks. |
+| **6** | **Weight** | Sort checks by their assigned weight or importance level. |
 
 Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.
 
