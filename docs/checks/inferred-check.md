@@ -4,7 +4,7 @@ Qualytics automatically generates inferred checks during a Profile operation. Th
 
 Let's get started 🚀
 
-## Navigtion
+## Navigation
 
 **Step 1:** Log in to your Qualytics account and select the datastore from the left menu.
 
