@@ -1,6 +1,8 @@
 # Observability
 
-Observability in the Explore section provides structured tracking through **Measures** and **Metrics**, enabling users to monitor data behavior, detect anomalies, and identify trends. **Volume Tracking** analyzes daily data volumes, **Freshness Tracking** ensures data timeliness, and **Metric Tracking** monitors field-specific values against predefined thresholds. Automated scans and visual insights help maintain data integrity. Visual tools like heatmaps and customizable checks make it easy to identify issues, set thresholds, set maximum energy, and adjust monitoring parameters for efficient data management.
+Observability in the Explore section provides structured tracking through **Measures** and **Metrics**, enabling users to monitor data behavior, detect anomalies, and identify trends across multiple datastores. **Volume Tracking** analyzes daily data volumes, **Freshness Tracking** ensures data timeliness, and **Metric Tracking** monitors field-specific values against predefined thresholds. Automated scans and visual insights help maintain data integrity. Visual tools like heatmaps and customizable checks make it easy to identify issues, set thresholds, and adjust monitoring parameters for efficient data management.
+
+Users can access the Observability tab in the Explore section to get an overview of observability metrics across multiple source datastores and tables. However, to analyze a specific datastore in detail, navigate to the [**Observability**](../observability/observability.md) documentation for detailed insights at the source level.
 
 Let’s get started 🚀
 
@@ -15,6 +17,11 @@ Let’s get started 🚀
 
 ![observability](../assets/explore/observability/observability-light.png#only-light)
 ![observability](../assets/explore/observability/observability-dark.png#only-dark)
+
+Observability metrics for multiple source datastores and tables are shown, enabling you to view their detailed insights.
+
+![observability-metrics](../assets/explore/observability/observability-metrics-light.png#only-light)
+![observability-metrics](../assets/explore/observability/observability-metrics-dark.png#only-dark)
 
 ## Observability Categorized
 
@@ -32,6 +39,11 @@ Observability in data checks is divided into two key categories: **Measures** an
 
 ![metric](../assets/explore/observability/metric-light.png#only-light)
 ![metric](../assets/explore/observability/metric-dark.png#only-dark)
+
+For demonstration purposes, we have selected the **partsupp_clone** table of **TPCH Postgres** datastore.
+
+![particular-datastore](../assets/explore/observability/particular-datastore-light.png#only-light)
+![particular-datastore](../assets/explore/observability/particular-datastore-dark.png#only-dark)
 
 ## **Measures**
 
