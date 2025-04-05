@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### 2025.4.5 { id=2025.4.5 }
+
+#### General Fixes and Improvements
+
+- Quality Score
+    - Enhanced the descriptions for each Factor Weight to provide clearer guidance on how they impact the overall score.
+
+- General Fixes and Improvements.
+
 ### 2025.3.28 { id=2025.3.28 }
 
 #### Feature Enhancements
