@@ -4,7 +4,7 @@ A token is a secure way to access the Qualytics API instead of using a password.
 
 Let’s get Started 🚀
 
-Navigation to Tokens
+## Navigation to Tokens
 
 **Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
 
@@ -34,7 +34,6 @@ A modal window will appear providing the options for generating the token.
 
 1. **Name**: Enter the name for the Token ( e.g., DataAccessToken) 
 2. **Expiration**: Set the expiration period for the token (e.g., 30 days)
-3. **SCIM Administration Token**: If the SCIM Administration Token is checked, the token is restricted to SCIM endpoints only. If unchecked, it may allow broader access based on assigned permissions.
 
 ![enter-values](../../assets/tokens/enter-values-light-5.png#only-light)
 ![enter-values](../../assets/tokens/enter-values-dark-5.png#only-dark)
