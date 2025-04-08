@@ -155,15 +155,15 @@ Filter and Sort options allow you to organize your fields by various criteria, s
 
 ### Sort
 
-You can sort your checks by Anomalies, Checks, Completeness,  Created Date,  Name, Quality Score, and Type to easily organize and prioritize them according to your needs.
+You can sort your checks by Active Anomalies, Active Checks, Completeness,  Created Date,  Name, Quality Score, and Type to easily organize and prioritize them according to your needs.
 
 ![Sort](../assets/container/computed-field/sort-light-12.png#only-light)
 ![Sort](../assets/container/computed-field/sort-dark-12.png#only-dark)
 
 | **No** | **Sort By**           | **Description**                                                                 |
 |--------|-----------------------|---------------------------------------------------------------------------------|
-| 1      | Anomalies              | Sorts fields based on the number of detected anomalies.                          |
-| 2      | Checks                 | Sorts fields by the number of active validation checks applied.                  |
+| 1      | Active Anomalies       | Sorts fields based on the number of currently active anomalies detected.                          |
+| 2      | Active Checks          | Sorts fields by the number of active validation checks applied.                  |
 | 3      | Completeness           | Sorts fields based on their data completeness percentage.                       |
 | 4      | Created Date           | Sorts fields by the date they were created, showing the newest or oldest fields first. |
 | 5      | Name                   | Sorts fields alphabetically by their names.                                     |
