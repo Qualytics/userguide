@@ -238,9 +238,9 @@ A modal window **“Observability Settings”** will appear. Here you can view t
 ![observability-setting](../assets/container/manage-tables-files/observability-light-19.png#only-light)
 ![observability-setting](../assets/container/manage-tables-files/observability-dark-19.png#only-dark)
 
-**Step 2:** Check the "**Allow Tracking**" to enable daily volumetric measurement tracking for the data asset.
+**Step 2:** Check the "**Volume Tracking**" to enable trend analysis and anomaly detection in data volumes over time and check the "**Freshness Tracking**" to ensure data timeliness and to identify pipeline delays.
 
-You can enable or disable volumetric tracking by checking or unchecking the "**Allow Tracking**" option. This feature monitors and records the daily volume of data in the selected table. When enabled, it helps track how much data is being processed and stored over time, providing valuable insights into the data asset's growth and usage.
+**Volume Tracking** monitors and records daily volume metrics for this data asset. This feature enables trend analysis and anomaly detection in data volumes over time. **Freshness Tracking** measures and records the last time data was added or updated in the data asset. This feature helps ensure data timeliness and identifies pipeline delays.
 
 ![allow-tracking](../assets/container/manage-tables-files/tracking-light-20.png#only-light)
 ![allow-tracking](../assets/container/manage-tables-files/tracking-dark-20.png#only-dark)
@@ -264,12 +264,28 @@ After clicking on the Save button, a success flash message will appear stating *
 ![export-button](../assets/container/manage-tables-files/export-light-23.png#only-light)
 ![export-button](../assets/container/manage-tables-files/export-dark-23.png#only-dark)
 
-A modal window will appear with the **Export Metadata** setting.
+A modal window will appear with the **Export Operation** setting.
 
 ![observability-window](../assets/container/manage-tables-files/export-light-24.png#only-light)
 ![observability-window](../assets/container/manage-tables-files/export-dark-24.png#only-dark)
 
-For the next steps, detailed information on the export metadata is available in the [Export Metadata](https://userguide.qualytics.io/container/export-metadata/) section of the documentation.
+For the next steps, detailed information on the export operation is available in the [Export Operation](https://userguide.qualytics.io/container/export-operation/) section of the documentation.
+
+## Materialize
+
+**Materialize Operation** captures snapshots of selected containers from a source datastore and exports them to an enrichment datastore for seamless data loading. Users can run it instantly or schedule it at set intervals, ensuring structured data is readily available for analysis and integration.
+
+**Step 1:** Select the tables in your JDBC datastore that you would like to capture and export containers for the Materialize Operation, then click on **Materialize**.
+
+![materialize-button](../assets/container/manage-tables-files/materialize-light-24.png#only-light)
+![materialize-button](../assets/container/manage-tables-files/materialize-dark-24.png#only-dark)
+
+A modal window will appear with the **Materialize Operation** setting.
+
+![observability-materialize](../assets/container/manage-tables-files/materialize-light-30.png#only-light)
+![observability-materialize](../assets/container/manage-tables-files/materialize-dark-30.png#only-dark)
+
+For the next steps, detailed information on the materialize operation is available in the [Materialize Operation](https://userguide.qualytics.io/container/materialize-operation/) section of the documentation.
 
 ## Delete
 
