@@ -176,7 +176,7 @@ The **Quality Score Settings** allow users to tailor the impact of each quality 
 ![score](../assets/datastore-settings/score-light-17.png#only-light)
 ![score](../assets/datastore-settings/score-dark-17.png#only-dark)
 
-**Step 2**: A modal window "Quality Score Settings" will appear. 
+**Step 2**: A modal window "**Quality Score Settings**" will appear. 
 
 ![score-settings](../assets/datastore-settings/score-settings-light-18.png#only-light)
 ![score-settings](../assets/datastore-settings/score-settings-dark-18.png#only-dark)
