@@ -1,6 +1,8 @@
 # Observability
 
-Observability helps users track changes in data volume and quality over time, ensuring accuracy and integrity. It introduces two main categories: **Measures** and **Metric Checks**. Measures include **Volumetric Checks**, which monitor row count fluctuations, and **Freshness Tracking**, which ensures data is updated on time. Metric Checks focus on specific fields, providing deeper insights from scan operations. Together, these tools help detect anomalies early and maintain reliable data.
+Observability helps users track changes in data volume and quality over time, ensuring data accuracy and integrity. Within the Source Datastore section, the Observability tab provides visibility into observability metrics across tables or files within a specific datastore. It introduces two main categories: **Measures** and **Metric** Checks. Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. **Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
+
+Users can access the Observability tab in the Source Datastore section to analyze particular datastore in detail. However, to get an overview of observability metrics across multiple source datastores and tables, navigate to the [**Observability**](../explore/observability.md) documentation for centralized overview of data behavior across your entire environment.
 
 Let’s get started 🚀
 
@@ -15,6 +17,11 @@ Let’s get started 🚀
 
 ![observability](../assets/observability/observability-light-2.png#only-light)
 ![observability](../assets/observability/observability-dark-2.png#only-dark)
+
+Observability metrics for tables of the selected source datastore are shown, enabling you to view their detailed insights.
+
+![observability-metrics](../assets/observability/observability-metrics-light.png#only-light)
+![observability-metrics](../assets/observability/observability-metrics-dark.png#only-dark)
 
 ## Observability Categories
 
@@ -32,6 +39,11 @@ Observability in data checks is divided into two key categories: **Measures** an
 
 ![metric](../assets/observability/metric-light-5.png#only-light)
 ![metric](../assets/observability/metric-dark-5.png#only-dark)
+
+For demonstration purposes, we have selected the **partsupp_clone** table of **TPCH Postgres** datastore.
+
+![selected-table](../assets/observability/selected-table-light.png#only-light)
+![selected-table](../assets/observability/selected-table-dark.png#only-dark)
 
 ## **Measures**
 
@@ -80,7 +92,7 @@ The heatmap provides a visual overview of data anomalies by day, using color cod
 ![heatmap-square](../assets/observability/hover-light.png#only-light)
 ![heatmap-square](../assets/observability/hover-dark.png#only-dark)
 
-By hovering over each square, you can view additional details for that specific day, including the **date**, **last row count**, and **anomaly count**, allowing you to easily pinpoint and analyze data issues over time.
+By hovering over each square, you can view additional details for that specific day, including the **date**, **anomaly count**, **last row count**,and **last modification time** allowing you to easily pinpoint and analyze data issues over time.
 
 ### Edit Check
 
