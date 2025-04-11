@@ -2,6 +2,26 @@
 
 ## Release Notes
 
+### 2025.4.11 { id=2025.4.11 }
+
+#### Feature Enhancements
+
+- Anomalies and Checks Filter
+    - The Rule filter is now dynamically populated based on the types present in the current view.
+    - Each rule type displayed in the filter now includes a counter showing the total number of occurrences.
+
+- Status Page
+    - The Health page has been renamed to Status page.
+    - Users can view additional information like Cloud Platform and Deployment Size.
+    - Deployment size details are now displayed to provide better visibility into environment configurations.
+
+#### General Fixes and Improvements
+
+- Anomaly
+    - Resolved a bug when handling `NaN` values in float-type data.
+
+- General Fixes and Improvements.
+
 ### 2025.4.5 { id=2025.4.5 }
 
 #### General Fixes and Improvements
@@ -20,7 +40,7 @@
     - Anomalies are now categorized into two groups:
         - Open: anomalies currently active (Active, Acknowledged).
         - Archived: anomalies that have been archived (Resolved, Duplicated, Invalid).
-    - In the Overview tab under the Explore page, users can now view the total counts of Duplicate and Invalid anomalies.
+    - Users can now view the total counts of Duplicate and Invalid anomalies in the Overview tab under the Explore page.
     - Users can now see the total counts of Open and Archived anomalies directly in Scan Operations.
     - The Scan Results modal now displays the totals for Open and Archived anomalies.
         - Users can filter anomalies by status using a new dropdown selector.
