@@ -6,19 +6,19 @@
 
 #### Feature Enhancements
 
-- Anomalies Filter
-    - The Rule filter is now dynamically populated based on the types currently present in the results.
-    - Each rule type in the filter displays a counter showing the total number of occurrences for that type.
+- Anomalies and Checks Filter
+    - The Rule filter is now dynamically populated based on the types present in the current view.
+    - Each rule type displayed in the filter now includes a counter showing the total number of occurrences.
 
 - Status Page
-    - The Health page has been renamed to Status page for improved clarity.
+    - The Health page has been renamed to Status page.
     - Users can now view Cloud Platform type information.
-    - Deployment size details are also displayed on the Status page.
+    - Deployment size details are now displayed to provide better visibility into environment configurations.
 
 #### General Fixes and Improvements
 
 - Anomaly
-    - Resolved a bug that caused issues when handling `NaN` values in float fields.
+    - Resolved a bug that occurred when handling `NaN` values in float-type data.
 
 - General Fixes and Improvements.
 
