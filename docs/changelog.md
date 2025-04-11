@@ -2,6 +2,26 @@
 
 ## Release Notes
 
+### 2025.4.11 { id=2025.4.11 }
+
+#### Feature Enhancements
+
+- Anomalies Filter
+    - The Rule filter is now dynamically populated based on the types currently present in the results.
+    - Each rule type in the filter displays a counter showing the total number of occurrences for that type.
+
+- Status Page
+    - The Health page has been renamed to Status page for improved clarity.
+    - Users can now view Cloud Platform type information.
+    - Deployment size details are also displayed on the Status page.
+
+#### General Fixes and Improvements
+
+- Anomaly
+    - Resolved a bug that caused issues when handling `NaN` values in float fields.
+
+- General Fixes and Improvements.
+
 ### 2025.4.5 { id=2025.4.5 }
 
 #### General Fixes and Improvements
