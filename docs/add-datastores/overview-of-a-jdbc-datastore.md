@@ -50,7 +50,7 @@ After adding a JDBC Datastore, you can initiate a **Catalog operation** to extra
 
 For more information about how to run catalog operation, refer to the [**Catalog Operation**](../source-datastore/catalog.md) documentation.
 
-##  Field Types Intferance
+##  Field Types Inference
 
 Qualytics employs weighted histogram analysis during the Catalog operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
 
