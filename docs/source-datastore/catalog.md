@@ -108,6 +108,11 @@ Click on the “**Run Now**” button, and perform the catalog operation immedia
 ![run](../assets/catalog-operations/run-light.png#only-light)
 ![run](../assets/catalog-operations/run-dark.png#only-dark)
 
+After clicking **Run Now**, a confirmation message appears stating **"Operation Triggered"**.
+
+![operation-triggered](../assets/catalog-operations/operation-triggered-light.png#only-light)
+![operation-triggered](../assets/catalog-operations/operation-triggered-dark.png#only-dark)
+
 ### Schedule
 
 **Step 1:** Click on the **“Schedule”** button to configure the available schedule options in the catalog operation.
@@ -178,10 +183,15 @@ To define a custom schedule, enter the appropriate Cron expression in the **"Cus
 ![schedule](../assets/catalog-operations/schedule-light.png#only-light)
 ![schedule](../assets/catalog-operations/schedule-dark.png#only-dark)
 
+After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**.
+
+![operation-scheduled](../assets/catalog-operations/operation-scheduled-light.png#only-light)
+![operation-scheduled](../assets/catalog-operations/operation-scheduled-dark.png#only-dark)
+
 Once the catalog operation is triggered, your view will be automatically switched to the Activity tab, allowing you to explore post-operation details on your ongoing/completed catalog operation.
 
-![completwd-catalog](../assets/catalog-operations/completed-catalog-light.png#only-light)
-![completwd-catalog](../assets/catalog-operations/completed-catalog-dark.png#only-dark)
+![completed-catalog](../assets/catalog-operations/completed-catalog-light.png#only-light)
+![completed-catalog](../assets/catalog-operations/completed-catalog-dark.png#only-dark)
 
 ## Operations Insights
 
