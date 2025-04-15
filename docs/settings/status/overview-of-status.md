@@ -29,9 +29,9 @@ The **Summary** section displays the current platform version, along with the da
 ![summary](../../assets/health/summary-light-3.png#only-light)
 ![summary](../../assets/health/summary-dark-3.png#only-dark)
 
-## Health Indicator
+## Status Indicator
 
-The health status indicator reflects the overall system resources health.For example, in the image below, a green checkmark indicates that our system resources are healthy.
+The status status indicator reflects the overall system resources health.For example, in the image below, a green checkmark indicates that our system resources are healthy.
 
 !!! note
     Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical."
@@ -70,7 +70,7 @@ You can perform essential tasks such as copying the status summary, refreshing i
 
 ### Copy Status Summary
 
-The **Copy Status Summary** feature lets you duplicate all data from the Status Section for easy sharing or saving.
+The **Copy Status Summary** feature lets you duplicate all data from the Health Section for easy sharing or saving.
 
 **Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Copy Status Summary** from the drop-down menu.
 
@@ -84,7 +84,7 @@ The **Copy Status Summary** feature lets you duplicate all data from the Status 
 
 ### Refresh Status Summary
 
-The **Refresh Status Summary** option updates the Status Section with the latest data. This ensures that you see the most current performance metrics and system status.
+The **Refresh Status Summary** option updates the Health Section with the latest data. This ensures that you see the most current performance metrics and system status.
 
 **Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Refresh Status Summary** to update the latest data.  
 
