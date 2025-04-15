@@ -41,6 +41,11 @@ Click **Run Now** to instantly materialize selected containers.
 ![run](../assets/container/materialize-operation/run-light.png#only-light)
 ![run](../assets/container/materialize-operation/run-dark.png#only-dark)
 
+After clicking **Run Now**, a confirmation message appears stating **"Operation Triggered"**. Go to the Activity tab to see the progress of materialize operation.
+
+![operation-triggered](../assets/container/materialize-operation/operation-triggered-light.png#only-light)
+![operation-triggered](../assets/container/materialize-operation/operation-triggered-dark.png#only-dark)
+
 ## Schedule
 
 **Step 1:** Click **Schedule** to configure scheduling options for the Materialize Operation.
@@ -72,6 +77,11 @@ Click **Run Now** to instantly materialize selected containers.
 
 ![schedule2](../assets/container/materialize-operation/schedule2-light.png#only-light)
 ![schedule2](../assets/container/materialize-operation/schedule2-dark.png#only-dark)
+
+After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**. Go to the Activity tab to see the progress of materialize operation.
+
+![operation-scheduled](../assets/container/materialize-operation/operation-scheduled-light.png#only-light)
+![operation-scheduled](../assets/container/materialize-operation/operation-scheduled-dark.png#only-dark)
 
 ## Review Materialized Data
 
