@@ -80,7 +80,7 @@ After clicking **Export**, a confirmation message appears stating **"Export in m
 ![schedule2](../assets/container/export-operation/schedule-light.png#only-light)
 ![schedule2](../assets/container/export-operation/schedule-dark.png#only-dark)
 
-After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**.In a couple of minutes, the metadata will be available in your Enrichment Datastore.
+After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**. Go to the Activity tab to see the progress of export operation.
 
 ![schedule2](../assets/container/export-operation/operation-scheduled-light.png#only-light)
 ![schedule2](../assets/container/export-operation/operation-scheduled-dark.png#only-dark)
