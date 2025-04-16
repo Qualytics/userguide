@@ -22,7 +22,7 @@ The **Summary** section displays the current platform version, along with the da
 |----- |-------|--------|---------|
 | 1 | Current Platform Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
 | 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services (AWS) |
-| 3 | Deployment Size | Verifies your database connection. An "OK" status means it’s connected. | Medium |
+| 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Medium |
 | 4 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
 | 5 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
 
