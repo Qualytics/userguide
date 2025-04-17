@@ -163,7 +163,7 @@ nav:
         - Team Permissions: settings/security/team-permissions.md
         - Directory Sync: settings/security/directory-sync.md
       - Tokens: settings/tokens/overview-of-tokens.md
-      - Health: settings/health/overview-of-health.md
+      - Status: settings/status/overview-of-status.md
     - Qualytics CLI:
         - Installing Python: cli/python-installation.md
         - Overview: cli/overview-of-qualytics-cli.md
