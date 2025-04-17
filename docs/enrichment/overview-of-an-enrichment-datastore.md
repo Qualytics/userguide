@@ -155,7 +155,7 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 | COMMENT                    | STRING       | Comments related to the order.                                     |
 
 !!! Note
-	In addition to capturing the original container fields, the platform includes three metadata columns designed to assist in the analysis and remediation process.
+	In addition to capturing the original container fields, the platform includes two metadata columns designed to assist in the analysis and remediation process.
 
     - _QUALYTICS_SOURCE_PARTITION
     - ANOMALY_UUID
