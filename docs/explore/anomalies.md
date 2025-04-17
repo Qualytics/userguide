@@ -275,7 +275,7 @@ You can filter your anomalies based on values like **Source Datastores, Timefram
 | **2** | **Select Tags** | Filter anomalies by specific tags to categorize and prioritize issues effectively. |
 | **3** | **Timeframe** | Filtering anomalies detected within specific time ranges (e.g., anomalies detected in the last week or year). |
 | **4** | **Type** | Filter anomalies based on anomaly type (Record or Shape). |
-| **5** | **Rule** |  Filter anomalies based on specific rules applied to the anomaly. |
+| **5** | **Rule** | Filter anomalies based on specific rules applied to the anomaly. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results. The rules displayed are based on the current dataset and provide more granular control over filtering. <br> <br> Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br> For example, the rule type **After Date Time** is displayed with a total of **14** occurrences. |
 
 
 
