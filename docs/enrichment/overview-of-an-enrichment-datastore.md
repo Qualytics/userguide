@@ -142,8 +142,8 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 
 | Name                       | Data Type          | Description                                                         |
 |----------------------------|--------------------|---------------------------------------------------------------------|
-| <span class="text-primary">_QUALYTICS_SOURCE_PARTITION</span> | STRING            | The partition from the source data container.                      |
-| <span class="text-primary">ANOMALY_UUID</span>                | STRING            | Unique identifier of the anomaly.                                  |
+|_QUALYTICS_SOURCE_PARTITION | STRING            | The partition from the source data container.                      |
+| ANOMALY_UUID                | STRING            | Unique identifier of the anomaly.                                  |
 | ORDERKEY                   | NUMBER       | Unique identifier of the order.                                    |
 | CUSTKEY                    | NUMBER       | The customer key related to the order.                             |
 | ORDERSTATUS                | CHAR         | The status of the order (e.g., 'F' for 'finished').                |
@@ -155,7 +155,7 @@ This remediation table is an illustrative snapshot of the "Orders" container for
 | COMMENT                    | STRING       | Comments related to the order.                                     |
 
 !!! Note
-	In addition to capturing the original container fields, the platform includes three metadata columns designed to assist in the analysis and remediation process.
+	In addition to capturing the original container fields, the platform includes two metadata columns designed to assist in the analysis and remediation process.
 
     - _QUALYTICS_SOURCE_PARTITION
     - ANOMALY_UUID
