@@ -218,7 +218,7 @@ You can filter your checks based on values like **Source Datastores Check Type**
 |  |  | **Passed** | Shows checks that have been asserted successfully, meaning no active anomalies were found during the validation process. |
 |  |  | **Failed** | Displays checks that have failed assertion, indicating active anomalies or issues that need attention. |
 |  |  | **Not Asserted** | Filters out checks that have not yet been asserted, either because they haven’t been processed or validated yet. |
-| **5** | **Rule** | **N/A** | Select this to filter the checks based on specific rule type for data validation, such as checking non-null values, matching patterns, comparing numerical ranges, or verifying date-time constraints.  |
+| **5** | **Rule** | **N/A** | Select this to filter the checks based on specific rule type for data validation, such as checking non-null values, matching patterns, comparing numerical ranges, or verifying date-time constraints. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results.<br> <br>The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br>For example, the rule type **After Date Time** is displayed with a total of **46** occurrences.|
 | **6** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
 
 
