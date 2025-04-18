@@ -563,7 +563,54 @@ After clicking on the "Delete" button, your selected checks will be permanently 
 ![delete-msg](../assets/checks/manage-checks/delete-msg-light-74.png#only-light)
 ![delete-msg](../assets/checks/manage-checks/delete-msg-dark-74.png#only-dark)
 
-### Mark Check as Favorite
+## Filter and Sort
+
+Filter and Sort options allow you to organize your checks by various criteria, such as Weight, Active Anomalies, Coverage, Created Date, and Rules. You can also apply filters to refine your list of checks based on Check Type, Asserted State (Passed, Failed, Not Asserted), Rules, Tags, Tables, and Fields.
+
+### Sort
+
+You can sort your checks by **Active Anomalies**, **Coverage**, **Created Date**, **Last Asserted**, **Rules**, and **Weight** to easily organize and prioritize them according to your needs.
+
+![sort](../assets/checks/manage-checks/sort-light.png#only-light)
+![sort](../assets/checks/manage-checks/sort-dark.png#only-dark)
+
+| No  | Sort By Option | Description |
+| :---- | :---- | :---- |
+| **1** | **Active Anomalies** | Sort checks based on the number of active anomalies. |
+| **2** | **Coverage** | Sort checks by data coverage percentage. |
+| **3** | **Created Date** | Sort checks according to the date they were created. |
+| **4** | **Last Asserted** | Sorts by the last time the check was executed. |
+| **5** | **Rules** | Sort checks based on specific rules applied to the checks. |
+| **6** | **Weight** | Sort checks by their assigned weight or importance level. |
+
+Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.
+
+![arrange](../assets/checks/manage-checks/arrange-light.png#only-light)
+![arrange](../assets/checks/manage-checks/arrange-dark.png#only-dark)
+
+### Filter
+
+You can filter your checks based on values like **Check Type**, **Asserted State**, **Rule**, **Tags**, **Table**, **Field**, and **Template**.
+
+![filter](../assets/checks/manage-checks/filter-light.png#only-light)
+![filter](../assets/checks/manage-checks/filter-dark.png#only-dark)
+
+|No     |     Filter  |   Filter Value  |  Description|
+| :---- |  :----       |  :----         |  :----      |
+| **1** | **Check Type** | **All** | Displays all types of checks, both [inferred](../checks/inferred-check.md) and [authored](../checks/authored-check.md). |
+|  |  | **Inferred** | Shows system-generated checks that automatically validate data based on detected patterns or logic. |
+|  |  | **Authored** | Displays user-created checks, allowing the user to focus on custom validations tailored to specific requirements. |
+| **2** | **Asserted State** | **All** | Displays all checks, regardless of their asserted status. This provides a full overview of both passed, failed, and not asserted checks. |
+|  |  | **Passed** | Shows checks that have been asserted successfully, meaning no active anomalies were found during the validation process. |
+|  |  | **Failed** | Displays checks that have failed assertion, indicating active anomalies or issues that need attention. |
+|  |  | **Not Asserted** | Filters out checks that have not yet been asserted, either because they haven’t been processed or validated yet. |
+| **3** | **Rule** | **N/A** | Select this to filter the checks based on specific rule type for data validation, such as checking non-null values, matching patterns, comparing numerical ranges, or verifying date-time constraints. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results.<br> <br>The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br>For example, the rule type **After Date Time** is displayed with a total of **3** occurrences.|
+| **4** | **Tags**  | **N/A** |Filter checks by specific tags to categorize and refine results. |
+| **5** | **Table** | **N/A** | Filters checks by the table to which they are applied. |
+| **6** | **Field** | **N/A** | Filters checks by the specific field/column name within a table. |
+| **7** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
+
+## Mark Check as Favorite
 
 Marking a check as a favorite allows you to quickly access and prioritize the checks that are most important to your data validation process. This helps streamline workflows by keeping frequently used or critical checks easily accessible, ensuring you can monitor and manage them efficiently. By marking a check as a favorite, it will appear in the "Favorite" category for faster retrieval and management.
 
