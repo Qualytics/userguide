@@ -48,7 +48,7 @@ You can edit connections to update details like name, account, role, warehouse, 
 ![save-connection](../../assets/connections/save-connection-light-5.png#only-light)
 ![save-connection](../../assets/connections/save-connection-dark-5.png#only-dark)
 
-**Step 4**: After clicking the **Save** button, your connection will be updated, and a success message will display saying **Connection successfully updated**.
+**Step 4**: After clicking the **Save** button, your connection will be updated, and a success message will display saying **The Connection has been successfully updated**.
 
 ![connection-updated](../../assets/connections/connection-updated-light-6.png#only-light)
 ![connection-updated](../../assets/connections/connection-updated-dark-6.png#only-dark)
