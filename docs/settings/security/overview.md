@@ -140,7 +140,7 @@ You can edit user details to update their role, and team assignments, ensuring t
 ![save-user](../../assets/security/save-user-light-10.png#only-light)
 ![save-user](../../assets/security/save-user-dark-10.png#only-dark)
 
-After clicking the **Save** button, your changes will be updated, and a success message will display saying, **User successfully updated**.
+After clicking the **Save** button, your changes will be updated, and a success message will display saying, **The User has been successfully updated**.
 
 ![user-updated](../../assets/security/user-updated-light-11.png#only-light)
 ![user-updated](../../assets/security/user-updated-dark-11.png#only-dark)
@@ -211,7 +211,7 @@ You can edit a team to update its permissions, name, manage users within the tea
 ![save-team](../../assets/security/save-team-light-20.png#only-light)
 ![save-team](../../assets/security/save-team-dark-20.png#only-dark)
 
-After clicking on the **Save** button, your team is successfully updated, and a success message will be displayed saying, **Team successfully updated**
+After clicking on the **Save** button, your team is successfully updated, and a success message will be displayed saying, **The Team has been successfully updated**.
 
 ![team-updated](../../assets/security/team-updated-light-21.png#only-light)
 ![team-updated](../../assets/security/team-updated-dark-21.png#only-dark)
