@@ -142,8 +142,6 @@ You can edit user details to update their role, and team assignments, ensuring t
 
 After clicking the **Save** button, your changes will be updated, and a success message will display saying, **The User has been successfully updated**.
  
- 
- 
 ![user-updated](../../assets/security/user-updated-light-11.png#only-light)
 ![user-updated](../../assets/security/user-updated-dark-11.png#only-dark)
 
