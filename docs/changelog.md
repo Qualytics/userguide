@@ -2,6 +2,52 @@
 
 ## Release Notes
 
+### 2025.4.24 { id=2025.4.24 }
+
+#### Feature Enhancements
+
+- Datastore Filter
+    - Tag Filter
+        - Users will now only see tag options that correspond to items currently visible in the list pages (Datastore List, Container List, and Filter List).
+        - The same filtering behavior has been applied to Anomalies and Checks within the datastore context.
+        - If no visible items contain a specific tag, a `No option found` message will be displayed in the filter dropdown.
+
+- Scan Operation
+    - Scan form
+        - The scan form has been reorganized to improve user experience.
+        - The second step users can choose Check Categories
+        - The third step users can configure the Reading Settings
+        - The fourth step users can configure the Scan Settings
+    - Enrichment Settings
+        - The Remediation Strategy option is now in the Enrichment Datastore Settings.
+        - The option will be a Datastore global value.
+        - Also the Anomaly Rollup Threshold and Source Record Limit can be configured as defaults.
+        - During scan operations, these options will be pre-filled but can still be edited within the scan form.
+
+- Tree View
+    - The tree view layout is now adjustable, allowing users to customize it to their preferences.
+    - The footer in the tree view can be expanded or collapsed based on user needs.
+
+#### General Fixes and Improvements
+
+- Filters
+    - Fixed an issue where filters behaved inconsistently when navigating between different datastores.
+
+- Container page is not loading
+    - Fixed a bug that caused the container page to fail to load under certain conditions.
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- Potentially Breaking Changes
+    - POST /datastores and PUT /datastores/{id}
+        - REQUEST PARAMETER: these parameters were renamed enrich_only to enrichment_only and  enrich_container_prefix to enrichment_prefix
+    - GET /anomalies/{id}, PUT /anomalies/{id}, POST /containers, GET /containers/{id}, PUT /containers/{id}, GET /containers/{id}/profile, GET /containers/{id}/scan, POST /containers/{id}/scan, PATCH /containers/{id}/favorite, GET /container-profiles/{id}, GET /container-scans/{id}, POST /datastores, PUT /datastores/{id}, GET /datastores/{id}, PATCH /datastores/{id}/favorite, PATCH /datastores/{datastore_id}/enrichment/{enrich_store_id}, GET /field-profiles/{id}, POST /operations/schedule, PUT /operations/schedule/{id}, GET /operations/schedule/{id}, GET /operations/{id}, POST /operations/run, PUT /operations/run/{id}, PUT /operations/rerun/{id}, PUT /operations/abort/{id}
+        - RESPONSE PAYLOAD: these parameters were renamed `enrich_only` to `enrichment_only` and `enrich_container_prefix` to `enrichment_prefix`
+    - POST /operations/run, POST /operations/schedule, PUT /operations/schedule/{id}, POST /flows and PUT /flows/{id}
+        - DEPRECATE PARAMETER: `remediation` (To specify a remediation strategy going forward, use the new `enrichment_remediation_strategy` field available in the POST /datastores and PUT /datastores/{id} endpoints.)
+
 ### 2025.4.11 { id=2025.4.11 }
 
 #### Feature Enhancements
