@@ -200,7 +200,7 @@ Manage global configurations with the following options:
 
 - **Tokens**: Create tokens for secure API interactions.
 
-- **Health**: Monitor and restart the Qualytics deployment.
+- **Status**: Monitor and restart the Qualytics deployment.
 
 ![global-settings](assets/dashboard/global-settings-light.png#only-light)
 ![global-settings](assets/dashboard/global-settings-dark.png#only-dark)
