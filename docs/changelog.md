@@ -15,9 +15,7 @@
 - Scan Operation
     - Scan form
         - The scan form has been reorganized to improve user experience.
-        - The second step users can choose Check Categories
-        - The third step users can configure the Reading Settings
-        - The fourth step users can configure the Scan Settings
+        - Now the following steps to configure the Scan Flow are Check Categories, Reading Settings and Scan Settings.
     - Enrichment Settings
         - The Remediation Strategy option is now in the Enrichment Datastore Settings.
         - The option will be a Datastore global value.
@@ -40,11 +38,36 @@
 
 #### API Changes
 
-- Potentially Breaking Changes
-    - POST /datastores and PUT /datastores/{id}
-        - REQUEST PARAMETER: these parameters were renamed enrich_only to enrichment_only and  enrich_container_prefix to enrichment_prefix
-    - GET /anomalies/{id}, PUT /anomalies/{id}, POST /containers, GET /containers/{id}, PUT /containers/{id}, GET /containers/{id}/profile, GET /containers/{id}/scan, POST /containers/{id}/scan, PATCH /containers/{id}/favorite, GET /container-profiles/{id}, GET /container-scans/{id}, POST /datastores, PUT /datastores/{id}, GET /datastores/{id}, PATCH /datastores/{id}/favorite, PATCH /datastores/{datastore_id}/enrichment/{enrich_store_id}, GET /field-profiles/{id}, POST /operations/schedule, PUT /operations/schedule/{id}, GET /operations/schedule/{id}, GET /operations/{id}, POST /operations/run, PUT /operations/run/{id}, PUT /operations/rerun/{id}, PUT /operations/abort/{id}
-        - RESPONSE PAYLOAD: these parameters were renamed `enrich_only` to `enrichment_only` and `enrich_container_prefix` to `enrichment_prefix`
+- Incoming Breaking Changes
+    - REQUEST PAYLOAD: The fields `enrich_only` and `enrichment_only` will be replaced by `enrich_container_prefix` and `enrichment_prefix` and will affect the following endpoints:
+        - `POST /datastores`
+        - `PUT /datastores/{id}`
+    - RESPONSE PAYLOAD: The fields `enrich_only` and `enrichment_only` will be replaced by `enrich_container_prefix` and `enrichment_prefix` and will affect the following endpoints:
+        - `GET /anomalies/{id}`
+        - `PUT /anomalies/{id}`
+        - `POST /containers`
+        - `GET /containers/{id}`
+        - `PUT /containers/{id}`
+        - `GET /containers/{id}/profile`
+        - `GET /containers/{id}/scan`
+        - `POST /containers/{id}/scan`
+        - `PATCH /containers/{id}/favorite`
+        - `GET /container-profiles/{id}`
+        - `GET /container-scans/{id}`
+        - `POST /datastores`
+        - `PUT /datastores/{id}`
+        - `GET /datastores/{id}`
+        - `PATCH /datastores/{id}/favorite`
+        - `PATCH /datastores/{datastore_id}/enrichment/{enrich_store_id}`
+        - `GET /field-profiles/{id}`
+        - `POST /operations/schedule`
+        - `PUT /operations/schedule/{id}`
+        - `GET /operations/schedule/{id}`
+        - `GET /operations/{id}`
+        - `POST /operations/run`
+        - `PUT /operations/run/{id}`
+        - `PUT /operations/rerun/{id}`
+        - `PUT /operations/abort/{id}`
     - POST /operations/run, POST /operations/schedule, PUT /operations/schedule/{id}, POST /flows and PUT /flows/{id}
         - DEPRECATE PARAMETER: `remediation` (To specify a remediation strategy going forward, use the new `enrichment_remediation_strategy` field available in the POST /datastores and PUT /datastores/{id} endpoints.)
 
