@@ -44,6 +44,11 @@ You will be navigated to the **Tags** section, where you can view all the tags a
 ![save-tag](../assets/tags/save-tag-light-5.png#only-light)
 ![save-tag](../assets/tags/save-tag-dark-5.png#only-dark)
 
+**Step 4**: After clicking the **Save** button, the tag will be added to the system and a success message will appear saying **Tag successfully created**.
+
+![tag-created](../assets/tags/tag-created-light.png#only-light)
+![tag-created](../assets/tags/tag-created-dark.png#only-dark)
+
 ## View Created Tags
 
 Once you have created a tag, you can view it in the tags list.
@@ -107,6 +112,11 @@ This allows you to keep your tags updated with current information and relevance
 ![save-edit](../assets/tags/save-edit-light-11.png#only-light)
 ![save-edit](../assets/tags/save-edit-dark-11.png#only-dark)
 
+**Step 4**: After clicking the **Save** button, a success message will appear saying **Tag successfully updated**.
+
+![tag-updated](../assets/tags/tag-updated-light.png#only-light)
+![tag-updated](../assets/tags/tag-updated-dark.png#only-dark)
+
 ### Delete Tags
 
 This allows you to remove outdated or unnecessary tags to maintain a clean and efficient tag system.
@@ -116,7 +126,7 @@ This allows you to remove outdated or unnecessary tags to maintain a clean and e
 ![delete](../assets/tags/delete-light-12.png#only-light)
 ![delete](../assets/tags/delete-dark-12.png#only-dark)
 
-**Step 2**: After clicking the **Delete** button, your tag will be removed from the system, and a success message saying **Tag successfully deleted**.
+**Step 2**: After clicking the **Delete** button, your tag will be removed from the system, and a success message will appear saying **The Tag has been successfully deleted**.
 
 ![tag-deleted](../assets/tags/tag-deleted-light-13.png#only-light)
 ![tag-deleted](../assets/tags/tag-deleted-dark-13.png#only-dark)
