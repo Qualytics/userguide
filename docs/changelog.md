@@ -68,7 +68,7 @@
         - `PUT /operations/run/{id}`
         - `PUT /operations/rerun/{id}`
         - `PUT /operations/abort/{id}`
-    - POST /operations/run, POST /operations/schedule, PUT /operations/schedule/{id}, POST /flows, and PUT /flows/{id}
+    - `POST /operations/run`, `POST /operations/schedule`, `PUT /operations/schedule/{id}`, `POST /flows, and PUT /flows/{id}`
         - DEPRECATE PARAMETER: `remediation` (To specify a remediation strategy going forward, use the new `enrichment_remediation_strategy` field available in the POST /datastores and PUT /datastores/{id} endpoints.)
 
 ### 2025.4.11 { id=2025.4.11 }
