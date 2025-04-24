@@ -6,20 +6,20 @@
 
 #### Feature Enhancements
 
-- Datastore Filter
+- Improved Filters
     - Tag Filter
-        - Users will now only see tag options that correspond to items currently visible in the list pages (Datastore List, Container List, and Filter List).
+        - Users will only see tag options corresponding to items currently visible in the list pages (Datastore List, Container List, and Filter List).
         - The same filtering behavior has been applied to Anomalies and Checks within the datastore context.
         - If no visible items contain a specific tag, a `No option found` message will be displayed in the filter dropdown.
 
 - Scan Operation
     - Scan form
-        - The scan form has been reorganized to improve user experience.
-        - Now the following steps to configure the Scan Flow are Check Categories, Reading Settings and Scan Settings.
+        - The scan form has been reorganized to improve the user experience.
+        - Now, the following steps to configure the Scan Flow are Check Categories, Reading Settings and Scan Settings.
     - Enrichment Settings
         - The Remediation Strategy option is now in the Enrichment Datastore Settings.
         - The option will be a Datastore global value.
-        - Also the Anomaly Rollup Threshold and Source Record Limit can be configured as defaults.
+        - Also, the Anomaly Rollup Threshold and Source Record Limit can be configured as defaults.
         - During scan operations, these options will be pre-filled but can still be edited within the scan form.
 
 - Tree View
@@ -31,7 +31,7 @@
 - Filters
     - Fixed an issue where filters behaved inconsistently when navigating between different datastores.
 
-- Container page is not loading
+- The container page is not loading
     - Fixed a bug that caused the container page to fail to load under certain conditions.
 
 - General Fixes and Improvements.
@@ -68,7 +68,7 @@
         - `PUT /operations/run/{id}`
         - `PUT /operations/rerun/{id}`
         - `PUT /operations/abort/{id}`
-    - POST /operations/run, POST /operations/schedule, PUT /operations/schedule/{id}, POST /flows and PUT /flows/{id}
+    - POST /operations/run, POST /operations/schedule, PUT /operations/schedule/{id}, POST /flows, and PUT /flows/{id}
         - DEPRECATE PARAMETER: `remediation` (To specify a remediation strategy going forward, use the new `enrichment_remediation_strategy` field available in the POST /datastores and PUT /datastores/{id} endpoints.)
 
 ### 2025.4.11 { id=2025.4.11 }
