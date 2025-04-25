@@ -212,12 +212,16 @@ The Explore interface provides comprehensive visibility:
 - Quality monitoring metrics
 - Filterable by source, tags, dates
   ![explore-insights](./assets/quick-start-guide/explore-insights-light.png#only-light)
+  ![explore-insights](./assets/quick-start-guide/explore-insights-dark.png#only-dark)
+  
 
 #### 2. Activity
 - Operation history and status
 - Data volume heatmaps
 - Anomaly tracking
   ![explore-activity](./assets/quick-start-guide/explore-activity-light.png#only-light)
+  ![explore-activity](./assets/quick-start-guide/explore-activity-dark.png#only-dark)
+
 
 #### 3. Profiles
 Unified view of all data assets:
@@ -225,6 +229,7 @@ Unified view of all data assets:
 - Computed Assets
 - Field-level Details
   ![explore-profiles](./assets/quick-start-guide/explore-profiles-light.png#only-light)
+  ![explore-profiles](./assets/quick-start-guide/explore-profiles-dark.png#only-dark)
 
 #### 4. Observability
 Monitor platform health and performance:
@@ -232,6 +237,7 @@ Monitor platform health and performance:
 - Quality trends
 - System health
   ![Observability](./assets/quick-start-guide/observability-light.png#only-light)
+  ![Observability](./assets/quick-start-guide/observability-dark.png#only-dark)
 
 ## Configuration & Management
 
@@ -241,13 +247,15 @@ Organize and prioritize:
 - Drive notifications
 - Weight importance
   ![settings-tags](./assets/quick-start-guide/settings-tags-light.png#only-light)
+  ![settings-tags](./assets/quick-start-guide/settings-tags-dark.png#only-dark)
 
-### Notifications
-Stay informed about:
-- Operation completion
-- Anomaly detection
-- Quality threshold breaches
-  ![settings-notifications](./assets/quick-start-guide/settings-notifications-light.png#only-light)
+### Flows
+Automate and streamline:
+- Trigger actions based on specific events
+- Manage workflows efficiently
+- Monitor and track execution status
+  ![flows](./assets/quick-start-guide/flows-light.png#only-light)
+  ![flows](./assets/quick-start-guide/flows-dark.png#only-dark)
 
 ### Platform Settings
 
@@ -256,26 +264,35 @@ Access key configuration areas:
 1. **Connections**
     - Manage datastores
     - Configure integrations
+
       ![settings-connection](./assets/quick-start-guide/settings-connections-light.png#only-light)
+      ![settings-connection](./assets/quick-start-guide/settings-connections-dark.png#only-dark)
 
 2. **Security**
     - User management
     - Role assignments
+
       ![settings-security](./assets/quick-start-guide/settings-security-light.png#only-light)
+      ![settings-security](./assets/quick-start-guide/settings-security-dark.png#only-dark)
 
 3. **Integrations**
     - External tool setup
     - API configuration
-      ![settings-integrations](./assets/quick-start-guide/settings-integrations-light.png#only-light)
 
-4. **System Health**
+      ![settings-integrations](./assets/quick-start-guide/settings-integrations-light.png#only-light)
+      ![settings-integrations](./assets/quick-start-guide/settings-integrations-dark.png#only-dark)
+
+4. **Status**
     - Deployment status
     - Analytics engine management
-      ![settings-health](./assets/quick-start-guide/settings-health-light.png#only-light)
+
+      ![settings-status](./assets/quick-start-guide/settings-status-light.png#only-light)
+      ![settings-status](./assets/quick-start-guide/settings-status-dark.png#only-dark)
 
 ## Next Steps
 
 Now that you're familiar with Qualytics basics, consider:
+
 1. Setting up additional datastores
 2. Creating custom quality checks
 3. Configuring notifications
