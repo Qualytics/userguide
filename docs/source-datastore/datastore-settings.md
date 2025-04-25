@@ -236,12 +236,17 @@ Marking a datastore as a favorite allows you to quickly access important data so
 ![mark-favorite](../assets/datastore-settings/mark-favorite-light-24.png#only-light)
 ![mark-favorite](../assets/datastore-settings/mark-favorite-dark-24.png#only-dark)
 
-After Clicking on the bookmark icon your datastore is successfully marked as a favorite and a success flash message will appear stating “The datastore has been favorited”.
+After Clicking on the bookmark icon your datastore is successfully marked as a favorite and a success flash message will appear stating **“The Datastore has been favorited”**.
 
 ![msg](../assets/datastore-settings/msg-light-25.png#only-light)
 ![msg](../assets/datastore-settings/msg-dark-25.png#only-dark)
 
-**Step 2**: To unmark a datastore, simply click on the bookmark icon of the marked datastore. This will remove it from your favorites
+**Step 2**: To unmark a datastore, simply click on the bookmark icon of the marked datastore.
 
 ![unmark-favorite](../assets/datastore-settings/unmark-fav-light-26.png#only-light)
 ![unmark-favorite](../assets/datastore-settings/unmark-fav-dark-26.png#only-dark)
+
+This will remove it from your favorites and a success flash message will appear stating **“The Datastore has been unfavorited”**.
+
+![datastore-unfavorited](../assets/datastore-settings/datastore-unfavorited-light.png#only-light)
+![datastore-unfavorited](../assets/datastore-settings/datastore-unfavorited-dark.png#only-dark)
