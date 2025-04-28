@@ -188,7 +188,7 @@ You can filter your checks based on values like Type and Tag to easily organize 
 | **No** | **Filter**            | **Description**                                                                 |
 |--------|-----------------------|---------------------------------------------------------------------------------|
 | 1      | Type                  | Filters fields based on the data type (e.g., string, boolean, date, etc.).        |
-| 2      | Tag                   | Select this to filter the fields based on specific tags, such as Healthcare, Compliance, or Sensitive. |
+| 2      | Tag                   | Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a No option found message is displayed.|
 
 ## Types of Transformations
 
