@@ -64,14 +64,30 @@ This option enables you to automatically scan file patterns associated with the 
 ![tag](../assets/datastores/scan/tag-light.png#only-light)
 ![tag](../assets/datastores/scan/tag-dark.png#only-dark)
 
-**Step 3:** Click on the **Next** button to Configure **Read Settings**.
+**Step 3:** Click on the **Next** button to Configure **Select Check Categories**.
 
 ![next](../assets/datastores/scan/next-light.png#only-light)
 ![next](../assets/datastores/scan/next-dark.png#only-dark)
 
-**Step 4:** Configure Read Settings, Starting Threshold (Optional), and the Record Limit.
+**Step 4:** Configure **Select Check Categories** Setting
 
-1.Select the **Read Strategy** for your scan operation.
+Users can choose one or more check categories when initiating a scan. This allows for flexible selection based on the desired scope of the operation:
+
+-  **Metadata**: Include checks that define the expected properties of the table, such as volume. It belongs to the Volumetric rule type.
+
+- **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
+
+![next](../assets/datastores/scan/select-check-light.png#only-light)
+![next](../assets/datastores/scan/select-check-dark.png#only-dark)
+
+**Step 5:** Click on the **Next** button to Configure the **Read Settings**.
+
+![next](../assets/datastores/scan/nextt-light.png#only-light)
+![next](../assets/datastores/scan/nextt-dark.png#only-dark)
+
+**Step 6:** Configure Read Settings, Starting Threshold (Optional), and the Record Limit.
+
+ 1.Select the **Read Strategy** for your scan operation.
 
 - **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation.  On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources. 
 
@@ -93,7 +109,7 @@ This option enables you to automatically scan file patterns associated with the 
     - This approach optimizes the scanning process while maintaining data quality and consistency.
 
 
-2.Define the Starting Threshold **(Optional)** i.e. - specify a minimum incremental identifier value to set a starting point for the scan.
+ 2.Define the Starting Threshold **(Optional)** i.e. - specify a minimum incremental identifier value to set a starting point for the scan.
 
 * **Greater Than Time:** This option applies only to tables with an incremental timestamp strategy. Users can specify a timestamp to scan records that were modified after this time.
 
@@ -102,28 +118,19 @@ This option enables you to automatically scan file patterns associated with the 
 ![starting-threshold](../assets/datastores/scan/starting-threshold-light.png#only-light)
 ![starting-threshold](../assets/datastores/scan/starting-threshold-dark.png#only-dark)
 
-3.Define the **record limit**- the maximum number of records to be scanned per table after any initial filtering.
+ 3.Define the **record limit**- the maximum number of records to be scanned per table after any initial filtering.
 
 ![record-limit-line](../assets/datastores/scan/record-limit-line-light.png#only-light)
 ![record-limit-line](../assets/datastores/scan/record-limit-line-dark.png#only-dark)
 
-**Step 5:** Click on the **Next** button to Configure the **Scan Settings**.
+**Step 7:** Click on the **Next** button to Configure the **Scan Settings**.
 
 ![next-button](../assets/datastores/scan/next-button-light.png#only-light)
 ![next-button](../assets/datastores/scan/next-button-dark.png#only-dark)
 
 **Step 6:** Configure the **Scan Settings**.
 
-1. **Check Categories:** Users can choose one or more check categories when initiating a scan. This allows for flexible selection based on the desired scope of the operation:
-
-    -  **Metadata**: Include checks that define the expected properties of the table, such as volume. It belongs to the Volumetric rule type.
-
-    - **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
-
-![scan-settings](../assets/datastores/scan/scan-settings-light.png#only-light)
-![scan-settings](../assets/datastores/scan/scan-settings-dark.png#only-dark)
-
-**2. Anomaly Options:** Manage duplicate anomalies efficiently by archiving duplicates or reactivating recurring ones. These settings help streamline anomaly tracking and maintain data accuracy.
+**1. Anomaly Options:** Manage duplicate anomalies efficiently by archiving duplicates or reactivating recurring ones. These settings help streamline anomaly tracking and maintain data accuracy.
  
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
@@ -132,31 +139,12 @@ This option enables you to automatically scan file patterns associated with the 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png#only-light)
 ![anomaly-option](../assets/datastores/scan/anomaly-option-dark.png#only-dark)
 
-**3. Anomaly Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
+**2. Anomaly Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
 
 ![anomaly-option](../assets/datastores/scan/anomalyy-light.png#only-light)
 ![anomaly-option](../assets/datastores/scan/anomalyy-dark.png#only-dark)
 
-**Step 7:** Click on the **Next** button to Configure the **Enrichment Settings**.
-
-![next-button](../assets/datastores/scan/next-buttonn-light.png#only-light)
-![next-button](../assets/datastores/scan/next-buttonn-dark.png#only-dark)
-
-
-**Step 8:** Configure the **Enrichment Settings**.  
-
-1. **Remediation Strategy:** This strategy dictates how your source tables are replicated in your enrichment datastore:
-
-       - **None:** This option does not replicate source tables. It only writes anomalies and associated source data to the enrichment datastore. This is useful when the primary goal is to track anomalies without duplicating the entire dataset.  
-
-       - **Append:** This option replicates source tables using an append-first strategy. It adds new records to the enrichment datastore, maintaining a history of all data changes over time. This approach is beneficial for auditing and historical analysis.
-
-       - **Overwrite:** This option replicates source tables using an overwrite strategy, replacing existing data in the enrichment datastore with the latest data from the source. This method ensures the enrichment datastore always contains the most current data, which is useful for real-time analysis and reporting.
-
-![scan-operation](../assets/datastores/scan/scan-operation-light.png#only-light)
-![scan-operation](../assets/datastores/scan/scan-operation-dark.png#only-dark)
-
-**2. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
+**3. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
 
 ![source-record-limit](../assets/datastores/scan/source-record-limit-light.png#only-light)
 ![souce-record-limit](../assets/datastores/scan/source-record-limit-dark.png#only-dark)
