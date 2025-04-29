@@ -15,6 +15,7 @@ The [Qualytics onboarding process](./onboarding.md) ensures your environment is 
 ### 1. Screening and Criteria Gathering
 
 Our team works with you to understand your specific needs, including:
+
 - Evaluating sample data requirements
 - Identifying primary success criteria
 - Exploring relevant use cases for your environment
@@ -23,6 +24,7 @@ Our team works with you to understand your specific needs, including:
 ### 2. Environment Setup
 
 Based on your requirements, we:
+
 - Create your custom deployment URL
 - Configure your preferred cloud provider and region
 - Set up initial security parameters
@@ -31,6 +33,7 @@ Based on your requirements, we:
 ### 3. User Access
 
 Once deployment is complete:
+
 - Team members receive email invitations
 - Roles are assigned based on your specifications
 - Access credentials are securely distributed
@@ -47,6 +50,7 @@ Qualytics supports two authentication methods:
 ### Method 1: Direct Credentials
 
 Ideal for:
+
 - Initial platform evaluation
 - Proof of Concept (POC) phases
 - Environments without SSO integration
@@ -56,6 +60,7 @@ Ideal for:
 ### Method 2: Enterprise SSO
 
 For production deployments:
+
 - Integrates with your organization's Identity Provider
 - Supports standard SSO protocols
 - Provides seamless access management
@@ -78,11 +83,13 @@ Let's walk through each step in detail.
 In Qualytics, a Datastore represents your data source connection. Qualytics supports any Apache Spark-compatible data source, including:
 
 ### JDBC Datastores
+
 - Traditional relational databases (RDBMS)
 - Data warehouses
 - Analytical databases
 
 ### Distributed File System (DFS) Datastores
+
 - Cloud storage (AWS S3, Azure Blob, GCP)
 - Raw files (CSV, XLSX, JSON, Avro, Parquet)
 - Local file systems
@@ -106,12 +113,14 @@ In Qualytics, a Datastore represents your data source connection. Qualytics supp
 ### Enrichment Datastores
 
 An Enrichment Datastore serves as the storage location for:
+
 - Anomaly detection results
 - Metadata and profiling information
 - Quality check outcomes
 - Historical analysis data
 
 You can either:
+
 1. Configure a new Enrichment Datastore
 2. Select an existing one from the dropdown
 
@@ -125,6 +134,7 @@ After connecting your datastore, three fundamental operations manage data qualit
 ### 1. Catalog Operation
 
 The first step in understanding your data:
+
 - Systematically collects data structures
 - Analyzes existing metadata
 - Prepares for profiling and scanning
@@ -136,6 +146,7 @@ The first step in understanding your data:
 ### 2. Profile Operation
 
 The Profile operation performs deep analysis of your data:
+
 - Generates comprehensive metadata
 - Calculates statistical measures:
     - Basic metrics (type, min/max, lengths)
@@ -148,6 +159,7 @@ The Profile operation performs deep analysis of your data:
 ![profile-operation](./assets/quick-start-guide/profile-operation-dark.png#only-dark)
 
 Our profiling engine analyzes:
+
 - Field types and patterns
 - Value distributions
 - Statistical relationships
@@ -155,6 +167,7 @@ Our profiling engine analyzes:
 - Structural consistency
 
 The engine uses machine learning to:
+
 - Identify column data types
 - Discover relationships
 - Generate quality rules
@@ -163,6 +176,7 @@ The engine uses machine learning to:
 ### 3. Scan Operation
 
 The Scan operation actively monitors data quality:
+
 - Asserts all defined quality checks
 - Identifies anomalies and violations
 - Records results in the Enrichment Datastore
@@ -172,6 +186,7 @@ The Scan operation actively monitors data quality:
 ![scan-operation](./assets/quick-start-guide/scan-operation-dark.png#only-dark)
 
 The first scan runs as a "Full" scan to establish baselines. After completion, you can review:
+
 - Start and finish times
 - Records processed
 - Anomalies detected
@@ -184,6 +199,7 @@ The first scan runs as a "Full" scan to establish baselines. After completion, y
 Qualytics uses two types of quality checks:
 
 #### 1. Inferred Checks
+
 - Automatically generated during profiling
 - Cover 80-90% of common quality rules
 - Based on statistical analysis and ML
@@ -193,6 +209,7 @@ Qualytics uses two types of quality checks:
 ![inferred-check-details](./assets/quick-start-guide/inferred-check-details-dark.png#only-dark)
 
 #### 2. Authored Checks
+
 - Manually created by users
 - Support complex business rules
 - Use Spark SQL or Scala UDFs
@@ -208,34 +225,42 @@ Qualytics uses two types of quality checks:
 The Explore interface provides comprehensive visibility:
 
 #### 1. Insights
+
 - Overview of anomaly detection
 - Quality monitoring metrics
 - Filterable by source, tags, dates
+
   ![explore-insights](./assets/quick-start-guide/explore-insights-light.png#only-light)
   ![explore-insights](./assets/quick-start-guide/explore-insights-dark.png#only-dark)
   
 
 #### 2. Activity
+
 - Operation history and status
 - Data volume heatmaps
 - Anomaly tracking
+
   ![explore-activity](./assets/quick-start-guide/explore-activity-light.png#only-light)
   ![explore-activity](./assets/quick-start-guide/explore-activity-dark.png#only-dark)
 
 
 #### 3. Profiles
 Unified view of all data assets:
+
 - Tables and Views
 - Computed Assets
 - Field-level Details
+
   ![explore-profiles](./assets/quick-start-guide/explore-profiles-light.png#only-light)
   ![explore-profiles](./assets/quick-start-guide/explore-profiles-dark.png#only-dark)
 
 #### 4. Observability
 Monitor platform health and performance:
+
 - Volume metrics
 - Quality trends
 - System health
+
   ![Observability](./assets/quick-start-guide/observability-light.png#only-light)
   ![Observability](./assets/quick-start-guide/observability-dark.png#only-dark)
 
@@ -243,17 +268,21 @@ Monitor platform health and performance:
 
 ### Tags
 Organize and prioritize:
+
 - Categorize data assets
 - Drive notifications
 - Weight importance
+
   ![settings-tags](./assets/quick-start-guide/settings-tags-light.png#only-light)
   ![settings-tags](./assets/quick-start-guide/settings-tags-dark.png#only-dark)
 
 ### Flows
 Automate and streamline:
+
 - Trigger actions based on specific events
 - Manage workflows efficiently
 - Monitor and track execution status
+
   ![flows](./assets/quick-start-guide/flows-light.png#only-light)
   ![flows](./assets/quick-start-guide/flows-dark.png#only-dark)
 
