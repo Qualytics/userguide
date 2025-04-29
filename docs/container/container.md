@@ -73,10 +73,10 @@ Users can perform various operations on containers to manage datasets effectivel
 | No. |           Options |                                Description |
 | :---- | :---- | :---- |
 | **1.** |        Settings | Configure incremental strategy, partitioning fields, and exclude specific fields from analysis. |
-| **2.** |          Edit | Edit allowing you edit computed file/table to modify the file name, select expressions, and apply filter clauses. |
-| **3.** |         Score | Score allowing you to adjust the decay period and factor weights for metrics like completeness, accuracy, and consistency. |
-| **4.** |     Observability | Enables or disables tracking for data volume and freshness.<br> **Volume Tracking:** Monitors daily volume metrics to identify trends and detect anomalies over time.<br>**Freshness Tracking:** Records the last update timestamp to ensure data timeliness and detect pipeline delays. |
-| **5.** |         Export | Export quality checks, field profiles and Anomalies to an enrichment datastore for further action or analysis. |
+| **2.** |         Score | Score allowing you to adjust the decay period and factor weights for metrics like completeness, accuracy, and consistency. |
+| **3.** |     Observability | Enables or disables tracking for data volume and freshness.<br> **Volume Tracking:** Monitors daily volume metrics to identify trends and detect anomalies over time.<br>**Freshness Tracking:** Records the last update timestamp to ensure data timeliness and detect pipeline delays. |
+| **4.** |         Export | Export quality checks, field profiles and Anomalies to an enrichment datastore for further action or analysis. |
+| **5.** |         Materialize | Captures snapshots of data from a source datastore and exports it to an enrichment datastore for faster access and analysis. |
 | **6.** |         Delete | Delete the selected container from the system. |
 
 ### Add
