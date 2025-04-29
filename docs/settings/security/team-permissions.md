@@ -183,7 +183,7 @@ Reporter role provides access to all report-related information, including dashb
 ![save-new-team](../../assets/security/save-new-team-light-5.png#only-light)
 ![save-new-team](../../assets/security/save-new-team-dark-5.png#only-dark)
 
-After clicking on the **Save** button, your team is created, and a success message will appear saying, **Team successfully created**.
+After clicking on the **Save** button, your team is created, and a success message will appear saying, **The Team has been successfully created**.
 
 ![team-created](../../assets/security/team-created-light-6.png#only-light)
 ![team-created](../../assets/security/team-created-dark-6.png#only-dark)
