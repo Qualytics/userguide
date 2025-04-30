@@ -1,4 +1,4 @@
-# Enrichment Support Datastores
+# Supported Enrichment Datastores
 
 Qualytics offers a variety of connectors, some of which support enrichment capabilities while others do not. These connectors are grouped into two main categories: JDBC (Java Database Connectivity) and DFS (Distributed File System) datastores.
 
