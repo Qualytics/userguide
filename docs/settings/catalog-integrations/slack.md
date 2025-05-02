@@ -16,7 +16,6 @@ Let's get started 🚀
 ![integrations-tab](../../assets/integrations/slack/integrations-tab-light.png#only-light)
 ![integrations-tab](../../assets/integrations/slack/integrations-tab-dark.png#only-dark)
 
-**Step 3:** After clicking the "**Integrations**" tab, a list of external tools like **Atlan**, **Alation**, and **Slack** appears, showing options to connect or a "**Connected**" status with sync details.
 
 ![external-tools](../../assets/integrations/slack/external-tools-light.png#only-light)
 ![external-tools](../../assets/integrations/slack/external-tools-dark.png#only-dark)
@@ -124,7 +123,7 @@ A confirmation message will appear on the screen displaying “**The Integration
 
 Disconnecting the Slack integration removes all associated synced assets and disables further data exchange between the platforms. To ensure a smooth disconnection process, follow the steps below to terminate the integration safely and confirm the action.
 
-**Step 1 :** Click on the **vertical ellipses(⋮)** next to the connected button  and select the **Disconnect** option to disconnect the integration.
+**Step 1 :** Click on the **vertical ellipses(⋮)** next to the connected button and select the **Disconnect** option to disconnect the integration.
 
 ![disconnect](../../assets/integrations/slack/disconnect-light.png#only-light)
 ![disconnect](../../assets/integrations/slack/disconnect-dark.png#only-dark)
