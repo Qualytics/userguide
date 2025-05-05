@@ -2,6 +2,29 @@
 
 ## Release Notes
 
+### Release Notes - Version 2025.5.5 { id=2025.5.5 }
+
+#### Feature Enhancements
+
+- Tokens
+    - Users can now view the last time a token was used, providing better visibility into token activity.
+
+#### General Fixes and Improvements
+
+- Is Replica Of Check
+    - Fixed a bug where anomalies using pass-through fields on both the left and right side were not handled correctly.
+
+- Action Operations
+    - Fixed an issue where cloning an Action Operation could exceed the allowed action limit.
+
+- Group By
+    - Fixed a bug that occurred when users added single quotes to string columns in the Group By clause.
+
+- Atlan Sync
+    - Updated and created custom metadata objects to align with the latest schema.
+
+- General Fixes and Improvements.
+
 ### 2025.4.24 { id=2025.4.24 }
 
 #### Feature Enhancements
