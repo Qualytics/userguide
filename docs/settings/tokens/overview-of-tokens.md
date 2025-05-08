@@ -51,6 +51,20 @@ A modal window will appear providing the options for generating the token.
 ![token-generated](../../assets/tokens/token-generated-light-7.png#only-light)
 ![token-generated](../../assets/tokens/token-generated-dark-7.png#only-dark)
 
+## Token Usage Status
+
+Each personal API token displays a usage status to indicate whether it has been used for interaction with the Qualytics API:
+
+**Last Used**: Its show the token has been successfully used recently and is actively in use.
+
+![Last-Used](../../assets/tokens/last-used-light-7.png#only-light)
+![Last-Used](../../assets/tokens/last-used-dark-7.png#only-dark)
+
+**Not Used**: The token has been generated but has not been used for any API requests since creation.
+
+![Last-Used](../../assets/tokens/not-used-light-7.png#only-light)
+![Last-Used](../../assets/tokens/not-used-dark-7.png#only-dark)
+
 ## Revoke Token
 
 You can revoke your token to prevent unauthorized access or actions, especially if the token has been compromised, is no longer needed, or to enhance security by limiting the duration of access.
