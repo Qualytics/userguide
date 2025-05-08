@@ -178,7 +178,9 @@ nav:
           - External Tag Propagation: settings/catalog-integrations/external-tag-propagation.md
         - Single Sign-On: integrations/sso.md
         - Compute: integrations/compute.md
-        - Alerting: integrations/alerting.md
+        - Alerting: 
+          - Overview: integrations/alerting.md
+          - Microsoft Teams: integrations/alerting/msft_teams.md
         - Ticketing: integrations/ticketing.md
         - Workflow: integrations/workflow.md
         - Analytics: integrations/analytics.md
