@@ -51,6 +51,8 @@ Captures and logs detailed metrics for every data quality check performed within
 | SOURCE_DATASTORE        | STRING        | Datastore where the source data resides.                |
 | SOURCE_CONTAINER        | STRING        | Name of the source data container.                      |
 | SOURCE_PARTITION        | STRING        | Partition of the source data.                           |
+| ASSERTION_RESULT        | STRING        | Result of the check assertion: one of `passed`, `failed`, or `unasserted`.  |
+| ASSERTION_DETAILS       | STRING        | Text description explaining any warnings, errors, or notes from the check.                           |
 | QUALITY_CHECK_ID        | NUMBER        | Unique identifier for the quality check performed.      |
 | ASSERTED_RECORDS_COUNT  | NUMBER        | Count of records expected or asserted in the source.    |
 | ANOMALOUS_RECORDS_COUNT | NUMBER        | Count of records identified as anomalous.               |
