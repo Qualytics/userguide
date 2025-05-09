@@ -1,8 +1,42 @@
-# 2025 
+# 2025
 
 ## Release Notes
 
-### Release Notes - Version 2025.5.5 { id=2025.5.5 }
+### 2025.5.9 { id=2025.5.9 }
+
+#### Feature Enhancements
+
+- Microsoft Teams Integration
+    - We're excited to announce a native integration with Microsoft Teams, bringing powerful collaboration features directly into your Teams workspace.
+    - Users can now:
+        - Share Qualytics links to datastores, containers, or fields and see rich previews directly in Teams.
+        - Receive proactive notifications when:
+            - An operation completes
+            - An anomalous table or file is detected
+            - A specific anomaly is triggered
+        - Note that the message content and actions will adapt based on the trigger type defined in the Flow.
+        - Manage anomalies without leaving Teams:
+            - View, acknowledge, comment on, or archive anomalies from within the Teams UI
+            - Click to open linked anomalies directly in Qualytics
+    - The integration must be configured by a Qualytics admin. A dedicated setup guide is available in our User Guide.
+    - As part of this rollout:
+        - Any Flows previously configured to send Teams notifications via incoming webhooks or workflows (Teams) have been automatically migrated to the Webhook action.
+        - The Teams notification action is now only available through the new integration.
+
+- Tokens
+    - Users can now view the last time a token was used.
+
+- Session Expiration
+    - Improved handling of session expiration for users who are logged in but inactive for an extended period.
+
+#### General Fixes and Improvements
+
+- Check Template
+    - Fixed an issue with the message displayed when a user archives a check that has associated checks.
+
+- General Fixes and Improvements.
+
+### 2025.5.5 { id=2025.5.5 }
 
 #### Feature Enhancements
 
@@ -170,7 +204,7 @@
     - Anomalies created after this release will be "fingerprinted" so that re-detection of that same anomaly can be readily identified as a duplicate detection.
         - New Scan Operation options allow users to define how detected duplicates should be handled.
         - This feature helps maintain the history and timeline of specific data errors, allowing users to track how long a specific issue has persisted and a log of detections over time.
-        - Anomaly fingerprints will also be exposed in API responses and written to enrichment 
+        - Anomaly fingerprints will also be exposed in API responses and written to enrichment
 
 #### General Fixes and Improvements
 
@@ -195,7 +229,6 @@
         - DEPRECATED PARAMETER: archive_overlapping_anomalies (migrate to the new parameter archive_duplicate_anomalies for enhanced functionality)
     - POST api/operations/schedule
         - DEPRECATED PARAMETER: archive_overlapping_anomalies (migrate to the new parameter archive_duplicate_anomalies for enhanced functionality)
-
 
 ### 2025.3.17 { id=2025.3.17 }
 
@@ -276,7 +309,7 @@
         - Users can now roll up anomalies that will be created per check before they are merged into a single rolled-up anomaly.
 
 - Error Messages
-     - Improved custom messages when users receive 502 and 503 status codes.
+    - Improved custom messages when users receive 502 and 503 status codes.
 
 #### General Fixes and Improvements
 
