@@ -93,8 +93,8 @@ An application that protects a system from contamination due to inputs, reducing
 
 A Field that can be used to group the records in the Table Container into distinct ordered Qualytics Partitions in support of incremental operations upon those partitions:
 
-  * a whole number - then all records with the same partition_id value are considered part of the same partition
-  * a float or timestamp - then all records between two defined values are considered part of the same partition (the defining values will be set by incremental scan/profile business logic) Since Qualytics Partitions are required to support Incremental Operations, an Incremental Identifier is required for a Table Container to support incremental Operations.
+* a whole number - then all records with the same partition_id value are considered part of the same partition
+* a float or timestamp - then all records between two defined values are considered part of the same partition (the defining values will be set by incremental scan/profile business logic) Since Qualytics Partitions are required to support Incremental Operations, an Incremental Identifier is required for a Table Container to support incremental Operations.
 
 ### <a name="incremental-scan-operation"></a>__Incremental Scan Operation__
 
@@ -160,7 +160,7 @@ aka "Compute Daemon" this is the layer of our Product that connects to Datastore
 
 A customer’s Deployment plus any associated integrations
 
-### <a name="hub"></a>__Controlplane__
+### <a name="controlplane"></a>__Controlplane__
 
 aka "controlplane" this is the layer of our Product that exposes an Application Programming Interface (API).
 
@@ -201,9 +201,9 @@ Data acquired from a source outside of your company which may not be controlled 
 It can be calculated as the time between when information should be available and when it is actually available, focused on if data is available when it’s expected.
 
 ### <a name="volumetrics"></a>__Volumetrics__
- 
+
 Data has the same size and shape across similar cycles. It includes statistics about the size of a data set including calculations or predictions on the rate of change over time.
 
 ### <a name="weight"></a>__Weight__
- 
+
 The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
