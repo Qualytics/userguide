@@ -150,7 +150,7 @@ aka "App" this is the user interface for our Product delivered as a web applicat
 
 ### <a name="deployment"></a>__Qualytics Deployment__
 
-A single instance of our product (the k8s cluster, postgres database, hub/app/compute daemon pods, etc…)
+A single instance of our product (the k8s cluster, postgres database, controlplane/app/compute daemon pods, etc…)
 
 ### <a name="compute_daemon"></a>__Qualytics Compute Daemon__
 
@@ -160,9 +160,9 @@ aka "Compute Daemon" this is the layer of our Product that connects to Datastore
 
 A customer’s Deployment plus any associated integrations
 
-### <a name="hub"></a>__Qualytics Surveillance Hub__
+### <a name="hub"></a>__Controlplane__
 
-aka "Hub" this is the layer of our Product that exposes an Application Programming Interface (API).
+aka "controlplane" this is the layer of our Product that exposes an Application Programming Interface (API).
 
 ### <a name="qualytics"></a>__Qualytics Partition__
 
