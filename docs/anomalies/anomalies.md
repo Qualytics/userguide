@@ -168,8 +168,8 @@ When shape anomalies are fingerprinted, the system considers:
 - The maximum value of the incremental identifier in the scanned dataset
 
 !!! tip
-    A data asset must have an incremental identifier to support fingerprinting of shape anomalies. This is because the maximum value of that identifier in the scanned dataset is used to generate the shape anomaly's fingerprint.
-This requirement helps ensure that only shape anomalies derived from the same underlying data are considered identical. Shape anomalies with the same details derived from different ranges of data are not considered identical.
+    A data asset must have an incremental identifier to support fingerprinting of shape anomalies. This is because the maximum value of that identifier in the scanned dataset is used to generate the shape anomaly's fingerprint. This requirement helps ensure that only shape anomalies derived from the same underlying data are considered identical. Shape anomalies with the same details derived from different ranges of data are not considered identical.
+
 
 
 ## Source Records
