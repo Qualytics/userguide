@@ -18,13 +18,12 @@ Let's get started 🚀
 ![anomalies](../assets/datastores/manage-anomalies/anomalies-light-2.png#only-light)
 ![anomalies](../assets/datastores/manage-anomalies/anomalies-dark-2.png#only-dark)
 
-## Categories Anomalies
+## Anomaly Status Categories
 
-Anomalies can be classified into different categories based on their status and actions taken. These categories include Open and Archived anomalies. Managing anomalies effectively helps in maintaining data integrity and ensuring quick response to issues.
+Anomalies exist in one of five distinct statuses, which are grouped into two broad categories:
 
-### Open
-
-By selecting Open Anomalies, you can view anomalies that have been detected but remain unacknowledged or unresolved. These anomalies require attention and may need further investigation or corrective action. 
+### Open Anomalies
+By selecting Open Anomalies, you can view anomalies that have been detected but remain unacknowledged or unresolved. These anomalies require attention and may need further investigation or corrective action.
 
 ![open-anomalies](../assets/datastores/manage-anomalies/open-anomalies-light-2.png#only-light)
 ![open-anomalies](../assets/datastores/manage-anomalies/open-anomalies-dark-2.png#only-dark)
@@ -46,7 +45,8 @@ This option helps focus on unaddressed issues while allowing seamless navigation
 ![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-light-3.png#only-light)
 ![all-anomalies](../assets/datastores/manage-anomalies/all-anomalies-dark-3.png#only-dark)
 
-### Archived
+
+### Archived Anomalies
 
 By selecting **Archived Anomalies**, you can view anomalies that have been resolved or moved out of active consideration. Archiving anomalies allows you to keep a record of past issues without cluttering the active list.
 
@@ -260,7 +260,7 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 ![archive-message](../assets/datastores/manage-anomalies/archive-message-light-39.png#only-light)
 ![archive-message](../assets/datastores/manage-anomalies/archive-message-dark-39.png#only-dark)
 
-## Restore Archive Anomalies
+## Restore Archived Anomalies
 
 By restoring archived anomalies, you can bring them back into the **acknowledged** state for further investigation or review. These anomalies will not return to the **active** state once they have been acknowledged.
 
