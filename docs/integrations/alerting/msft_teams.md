@@ -15,23 +15,25 @@ This section provides a comprehensive walkthrough to help you configure the nece
 
 The Microsoft Entra App Registration is used by Qualytics to provision Teams bot resources in your environment.
 
-**Step 1:** Navigate to the [Microsoft Entra App Registrations](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in the Azure Portal.
-
-**Step 2:** Click on **New registration** to create a new app.
+**Step 1:** Log in to to the [Microsoft Entra App Registrations](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade), and select New registration from the main menu to create a new application.
 
 ![new-app-registration](../../assets/integrations/msft_teams/new-app-registration.png)
 
-**Step 3:** Fill in the required details for the app registration:
+**Step 2:** You will be navigated to the **App registrations** dashboard. Fill in the required details for the app registration**:**
 
-- **Name**: Provide a name for your app (e.g., "Qualytics Bot Manager")
-- **Supported account types**: Select "Accounts in this organizational directory only (Single tenant)"
-- **Redirect URI**: Leave blank as it's not required for this integration
+* **Name:** Enter a name for your app (e.g., *Qualytics Bot Manager*).
+
+* **Supported account types:**Select Accounts in this organizational directory only (Single tenant).
+
+* **Redirect URI:** Leave this field blank, as it is not required for this integration.
 
 ![app-registration-form](../../assets/integrations/msft_teams/app-registration-form.png)
 
-**Step 4:** Click **Register** to create the app registration.
+**Step 3:** Click **Register** button to complete the app registration.
 
-**Step 5:** After the app is created, note the **Application (client) ID** from the Overview page. This will be used as the **App Client ID** for the Qualytics integration.
+![app-registration-form](../../assets/integrations/msft_teams/registration-form.png)
+
+**Step 4:** After the app is registered, you’ll be redirected to the **Overview** page, where the **Application (client) ID** is displayed. Copy this ID it will be needed later for the Qualytics integration.
 
 ![app-client-id](../../assets/integrations/msft_teams/app-client-id.png)
 
@@ -39,29 +41,29 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 The Microsoft Entra App needs the "Application.ReadWrite.All" permission to create and manage bot resources.
 
-**Step 1:** In your app registration, select **Manage** > **API permissions** from the left menu.
+**Step 1:** Click on **Manage** from the side panel, then select **API permissions** from the dropdown.
 
-**Step 2:** Click **Add a permission**
+![add-permission](../../assets/integrations/msft_teams/manage.png)
+
+**Step 2:** Click on **Add permission** to begin configuring access permissions for the app.
 
 ![add-permission](../../assets/integrations/msft_teams/add-permission.png)
 
-**Step 3:** Select **Microsoft Graph** from the options.
+**Step 3:** A modal window titled **Request API permissions** will appear. Select **Microsoft Graph** from the list of options.
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/add-permission-msft-graph.png)
 
-**Step 4:** Choose **Application permissions**.
+**Step 4:** After selecting **Microsoft Graph,** choose **Application permissions** to allow the app to run without a signed-in user.
 
-![msft-graph-application-permission](../../assets/integrations/msft_teams/msft-graph-application-permission.png)
+![add-permission-msft-graph](../../assets/integrations/msft_teams/application-permission-msft-graph.png)
 
-**Step 5:** Search for and select **Application.ReadWrite.All**.
+A dropdown appears search for **Application.ReadWrite.All**, check the box under **Application permissions**, and click **Add permissions**.
 
-**Step 6:** Click **Add permissions**.
+![msft-graph-application-permission](../../assets/integrations/msft_teams/add-permissions.png)
 
-![app-readwrite-all](../../assets/integrations/msft_teams/app-readwrite-all.png)
+**Step 5:** Once the permission is added, you'll return to the API permissions page. Click **Grant admin consent for [Your Organization]** to approve the selected permissions and enable them for use across your organization.
 
-**Step 7:** Click on **Grant admin consent for [Your Organization]** to approve these permissions.
-
-![grant-admin-consent](../../assets/integrations/msft_teams/grant-admin-consent.png)
+![app-readwrite-all](../../assets/integrations/msft_teams/admin.png)
 
 #### Creating a Client Secret
 
