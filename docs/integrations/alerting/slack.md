@@ -16,10 +16,6 @@ Let's get started 🚀
 ![integrations-tab](../../assets/integrations/slack/integrations-tab-light.png#only-light)
 ![integrations-tab](../../assets/integrations/slack/integrations-tab-dark.png#only-dark)
 
-
-![external-tools](../../assets/integrations/slack/external-tools-light.png#only-light)
-![external-tools](../../assets/integrations/slack/external-tools-dark.png#only-dark)
-
 ## Connect Slack Integration
 
 Connect Slack by generating tokens, configuring connection properties, and authorizing the integration using OAuth for secure communication and seamless app configuration.
