@@ -49,7 +49,7 @@ The Microsoft Entra App needs the "Application.ReadWrite.All" permission to crea
 
 ![add-permission](../../assets/integrations/msft_teams/add-permission.png)
 
-**Step 3:** A modal window titled **Request API permissions** will appear. Select **Microsoft Graph** from the list of options.
+**Step 3:** A right side pannel titled **Request API permissions** will appear. Select **Microsoft Graph** from the list of options.
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/add-permission-msft-graph.png)
 
