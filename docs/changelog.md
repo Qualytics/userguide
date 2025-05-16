@@ -7,12 +7,12 @@
 #### Feature Enhancements
 
 - Anomaly
-    - Users can now view the `Anomaly Fingerprint` directly in the Anomaly Details page to improve traceability and analysis.
+    - Users can now view the Anomaly Fingerprint directly in the Anomaly Details page.
     - A new button allows users to quickly copy the fingerprint value.
     - A link to the User Guide has been added to explain how this feature works.
 
 - Datastore Connection
-    - A new validation was added to the MySQL connector to verify if the specified schema exists and is accessible during connection validation.
+    - A new validation step was added to several connectors to verify if the specified schema exists.
 
 #### General Fixes and Improvements
 
@@ -20,7 +20,7 @@
     - Fixed a bug in scheduled operations that allowed `None` as a value for `max_records_analyzed_per_partition` when updating.
 
 - Check
-    - Fixed an issue where creating a metric check with a non-existent comparison value (e.g., `Absolute Value` vs `Absolute value`) would fail.
+    - Fixed an issue where creating a metric check with a non-existent comparison value would fail..
     - Fixed a bug where checks would fail if the filtered set was empty — now the check will pass in this case.
 
 - Catalog Operation
