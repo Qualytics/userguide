@@ -202,8 +202,8 @@ Connect Microsoft Teams by providing necessary Azure credentials, configuring bo
 **Step 1:** Click on the **Connect** button next to Microsoft Teams to connect to the Teams Integration.
 
 <!-- TODO: Consider adding images to follow Slack approach -->
-![connect](../../assets/integrations/msft_teams/connect-light.png#only-light) -->
-![connect](../../assets/integrations/msft_teams/connect-dark.png#only-dark) -->
+![connect](../../assets/integrations/msft_teams/connect-light.png#only-light) 
+![connect](../../assets/integrations/msft_teams/connect-dark.png#only-dark)
 
 A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the connection properties to connect to Microsoft Teams.
 
@@ -232,26 +232,18 @@ A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the
 
 Once the app resources have been successfully provisioned, a confirmation message will appear stating, **"The Teams app resources have been successfully provisioned."**
 
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![created-successfully](../../assets/integrations/msft_teams/created-successfully-light.png#only-light) -->
-<!-- ![created-successfully](../../assets/integrations/msft_teams/created-successfully-dark.png#only-dark) -->
+![settings](../../assets/integrations/msft_teams/msgs-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/msgs-dark.png#only-dark)
 
 **Step 4:** Click the **Publish** button to publish the Qualytics app to your organization's Microsoft Teams App Catalog.
 
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![publish-app](../../assets/integrations/msft_teams/publish-app-light.png#only-light) -->
-<!-- ![publish-app](../../assets/integrations/msft_teams/publish-app-dark.png#only-dark) -->
+![settings](../../assets/integrations/msft_teams/published-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/published-dark.png#only-dark)
 
 A dialog will appear asking you to accept the requested permissions. Click **Accept** to proceed with the publication.
 
 <!-- TODO: Consider adding images to follow Slack approach -->
 <!-- ![authorize-publish](../../assets/integrations/msft_teams/authorize-publish.png) -->
-
-Once the app has been successfully published, a confirmation message will appear stating, **"The Teams app has been successfully published to your organization's App Catalog."**
-
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![published-successfully](../../assets/integrations/msft_teams/published-successfully-light.png#only-light) -->
-<!-- ![published-successfully](../../assets/integrations/msft_teams/published-successfully-dark.png#only-dark) -->
 
 !!! warning
     Microsoft may take up to 24 hours to make the app available in Teams after it's published.
@@ -260,9 +252,8 @@ Once the app has been successfully published, a confirmation message will appear
 
 After publishing the app to your organization's Teams App Catalog, the integration will show a **"Pending"** status in Qualytics until the app is installed in a Teams channel.
 
-<!-- TODO: Polish later -->
-![pending-integration](../../assets/integrations/msft_teams/pending-integration-light.png)
-<!-- ![pending-integration](../../assets/integrations/msft_teams/pending-integration-dark.png#only-dark) -->
+![settings](../../assets/integrations/msft_teams/pending-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/pending-dark.png#only-dark)
 
 ### Installing the App in Microsoft Teams
 
@@ -289,8 +280,8 @@ To complete the integration, you need to install the Qualytics app in Microsoft 
 
 When you add the app to a team and channel, Qualytics will automatically detect the installation. You may need to refresh your browser to see the status update from **"Pending"** to **"Connected"** in the Qualytics Integrations page.
 
-![connect](../../assets/integrations/msft_teams/connected-light.png#only-light) -->
-![connect](../../assets/integrations/msft_teams/connected-dark.png#only-dark) -->
+![connect](../../assets/integrations/msft_teams/connected-light.png#only-light)
+![connect](../../assets/integrations/msft_teams/connected-dark.png#only-dark)
 
 ### Manual Verification (optional)
 
@@ -299,16 +290,12 @@ When you add the app to a team and channel, Qualytics will automatically detect 
 
 To manually verify the integration:
 
-**Step 1:** Return to the Qualytics Integrations page.
+**Step 1:** Return to the Qualytics Integrations page and click on the **Verify app installation** button next to the Microsoft Teams integration.
 
-**Step 2:** Click on the **Verify app installation** button next to the Microsoft Teams integration.
-
-<!-- TODO: Polish later -->
-![verify-installation](../../assets/integrations/msft_teams/verify-installation-light.png)
-<!-- ![verify-installation](../../assets/integrations/msft_teams/verify-installation-dark.png#only-dark) -->
+![verify-installation](../../assets/integrations/msft_teams/verify-installation-light.png#only-light)
+![verify-installation](../../assets/integrations/msft_teams/verify-installation-dark.png#only-dark)
 
 When the verification is successful, the integration status will change to **"Connected"**, indicating that Qualytics can now send notifications to your Microsoft Teams workspace.
 
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![integration-connected](../../assets/integrations/msft_teams/integration-connected-light.png#only-light) -->
-<!-- ![integration-connected](../../assets/integrations/msft_teams/integration-connected-dark.png#only-dark) -->
+![connect](../../assets/integrations/msft_teams/connected-light.png#only-light)
+![connect](../../assets/integrations/msft_teams/connected-dark.png#only-dark)
