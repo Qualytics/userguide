@@ -2,6 +2,38 @@
 
 ## Release Notes
 
+### 2025.5.16 { id=2025.5.16 }
+
+#### Feature Enhancements
+
+- Anomaly
+    - Users can now view the Anomaly Fingerprint directly in the Anomaly Details page.
+    - A new button allows users to quickly copy the fingerprint value.
+    - A link to the User Guide has been added to explain how this feature works.
+
+- Datastore Connection
+    - A new validation step was added to several connectors to verify if the specified schema exists.
+
+#### General Fixes and Improvements
+
+- Schedule Operation
+    - Fixed a bug in scheduled operations that allowed `None` as a value for `max_records_analyzed_per_partition` when updating.
+
+- Check
+    - Fixed an issue where creating a metric check with a non-existent comparison value would fail..
+    - Fixed a bug where checks would fail if the filtered set was empty — now the check will pass in this case.
+
+- Catalog Operation
+    - Fixed an issue in DB2 where evaluating the distribution of values caused an error.
+
+- Scheduled Scan
+    - Fixed an issue that occurred when adding connection retries related to the Secrets Manager.
+
+- Anomaly
+    - Fixed an issue where some triggered anomalies had no data available.
+
+- General Fixes and Improvements.
+
 ### 2025.5.9 { id=2025.5.9 }
 
 #### Feature Enhancements
