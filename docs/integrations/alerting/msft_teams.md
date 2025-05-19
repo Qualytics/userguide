@@ -207,9 +207,8 @@ Connect Microsoft Teams by providing necessary Azure credentials, configuring bo
 
 A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the connection properties to connect to Microsoft Teams.
 
-<!-- TODO: Polish later -->
-![add-teams-integration](../../assets/integrations/msft_teams/add-teams-integration-light.png)
-<!-- ![add-teams-integration](../../assets/integrations/msft_teams/add-teams-integration-dark.png#only-dark) -->
+![settings](../../assets/integrations/msft_teams/windowsss-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/windowsss-dark.png#only-dark)
 
 **Step 2:** Fill out the required provisioning properties for the Microsoft Teams integration:
 
@@ -221,14 +220,16 @@ A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the
 | 4. | Azure Resource Group Name | The name of the Resource Group you created or selected for bot resources. |
 | 5. | Microsoft Teams Link | The team link you copied from Microsoft Teams using the "Get link to team" option. |
 
+![settings](../../assets/integrations/msft_teams/table-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/table-dark.png#only-dark)
+
 **Step 3:** Click the **Provision and Next** button to provision the app resources and proceed with publishing the Qualytics app to the Microsoft Teams App Catalog.
 
 !!! note
     Provisioning the app resources may take around 15 seconds to complete.
 
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![create-integration](../../assets/integrations/msft_teams/create-integration-light.png#only-light) -->
-<!-- ![create-integration](../../assets/integrations/msft_teams/create-integration-dark.png#only-dark) -->
+![settings](../../assets/integrations/msft_teams/provision-light.png#only-light)
+![settings](../../assets/integrations/msft_teams/provision-dark.png#only-dark)
 
 Once the app resources have been successfully provisioned, a confirmation message will appear stating, **"The Teams app resources have been successfully provisioned."**
 
@@ -239,11 +240,6 @@ Once the app resources have been successfully provisioned, a confirmation messag
 
 ![settings](../../assets/integrations/msft_teams/published-light.png#only-light)
 ![settings](../../assets/integrations/msft_teams/published-dark.png#only-dark)
-
-A dialog will appear asking you to accept the requested permissions. Click **Accept** to proceed with the publication.
-
-<!-- TODO: Consider adding images to follow Slack approach -->
-<!-- ![authorize-publish](../../assets/integrations/msft_teams/authorize-publish.png) -->
 
 !!! warning
     Microsoft may take up to 24 hours to make the app available in Teams after it's published.
