@@ -107,17 +107,19 @@ The anomaly identified during the scan operation illustrates the following detai
 
 **4. Anomaly UID:** A longer, standardized, and globally unique identifier, displayed as a string of hexadecimal characters. This can be copied to the clipboard.
 
-**5. Acknowledge:** Use this option to mark an anomaly as reviewed. Acknowledging an anomaly means it has been identified and noted, but it remains active until resolved.
+**5. Fingerprint:** The fingerprint icon indicates whether an anomaly has an associated fingerprint. If present, clicking the icon copies the fingerprint number to the clipboard. Hovering over the icon displays a tooltip with a link to the user guide.
 
-**6. Archive:** Use this option to remove an anomaly from the active list. Archiving an anomaly does not delete it but stores it for historical tracking and future reference.
+**6. Acknowledge:** Use this option to mark an anomaly as reviewed. Acknowledging an anomaly means it has been identified and noted, but it remains active until resolved.
 
-**7. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
+**7. Archive:** Use this option to remove an anomaly from the active list. Archiving an anomaly does not delete it but stores it for historical tracking and future reference.
 
-**8. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
+**8. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
 
-**9. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+**9. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
 
-**10. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
+**10. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+
+**11. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
 
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-light.png#only-light)
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-dark.png#only-dark)
