@@ -16,7 +16,7 @@
 #### General Fixes and Improvements
 
 - Create User
-    - Fixed a bug that occurred when creating a Machine-to-Machine user with automatic admin permission enabled.
+    - Fixed a bug that occurred when creating a service user with automatic admin permission enabled.
 
 - General Fixes and Improvements.
 
