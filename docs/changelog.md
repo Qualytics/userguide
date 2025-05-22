@@ -19,7 +19,7 @@
     - Fixed a bug that occurred when creating a service user with automatic admin permission enabled.
 
 - Rerun Operations
-    - Catalog, export, and materialize operations will now only display rerun operations,
+    - Catalog, export, and materialize operations will now only display rerun operations.
 
 - General Fixes and Improvements.
 
