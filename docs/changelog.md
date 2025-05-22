@@ -2,6 +2,24 @@
 
 ## Release Notes
 
+### 2025.5.22 { id=2025.5.22 }
+
+#### Feature Enhancements
+
+- Atlan Integration
+    - Users can now choose whether or not to receive notifications in the Atlan platform, giving more control over their notification preferences.
+
+- Freshness Heatmap
+    - The freshness chart has been redesigned for an improved user experience.
+    - Milliseconds are now displayed in a more readable date/time format for better comprehension, while the underlying data still uses milliseconds.
+
+#### General Fixes and Improvements
+
+- Create User
+    - Fixed a bug that occurred when creating a Machine-to-Machine user with automatic admin permission enabled.
+
+- General Fixes and Improvements.
+
 ### 2025.5.16 { id=2025.5.16 }
 
 #### Feature Enhancements
