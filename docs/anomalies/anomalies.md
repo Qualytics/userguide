@@ -138,11 +138,13 @@ In addition to the above details, the users can also explore the following addit
 
 **3. Location:** Full path or location within the data hierarchy where the table resides. It gives a complete reference to the exact position of the data in the database or data warehouse.
 
-![detials](../assets/datastores/anomalies/details-light.png#only-light)
+![details](../assets/datastores/anomalies/details-light.png#only-light)
 ![details](../assets/datastores/anomalies/details-dark.png#only-dark)
 
 ## Anomaly Fingerprints
-
+anomalyes
+annomalies
+annomalyes
 Anomalies are uniquely fingerprinted to allow the system to recognize duplicates. This fingerprinting mechanism helps streamline anomaly management by preventing redundant work on identical problems.
 
 ### Duplicate Handling Configuration
@@ -561,7 +563,9 @@ For more details on how to archive anomalies, please refer to the documentation 
 ```
 
 ### Retrieving Anomaly Source Records
-
+anomalyes
+annomalies
+annomalyes
 **Endpoint (Get)**
 ```/api/anomalies/{id}/source-record (get)```
 
