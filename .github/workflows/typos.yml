@@ -1,0 +1,26 @@
+# .github/workflows/spellcheck.yml
+name: Spell Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+env:
+  CLICOLOR: 1
+
+jobs:
+  spelling:
+    name: Spell Check with typos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run typos with config
+        uses: crate-ci/typos@v1.32.0
+        with:
+          config: ./typos.toml
