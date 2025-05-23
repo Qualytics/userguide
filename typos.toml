@@ -4,10 +4,9 @@ extend-ignore-re = [
   "(?i)datastore",
   ".*\\.svg",
   ".*\\.lock",
-  "docs/generated/.*"
 ]
 
 [files]
 extend-exclude = [
-  "CHANGELOG.md"
+  "docs/assets/**"
 ]
