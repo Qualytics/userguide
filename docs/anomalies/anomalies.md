@@ -564,6 +564,9 @@ For more details on how to archive anomalies, please refer to the documentation 
 
 **Endpoint (Get)**
 ```/api/anomalies/{id}/source-record (get)```
+anommalyes
+anomalyy
+annommallyy
 
 **Example Result Response**
 
