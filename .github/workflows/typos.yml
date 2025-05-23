@@ -1,5 +1,4 @@
-# .github/workflows/spellcheck.yml
-name: Spell Check
+name: Typos Check
 
 on:
   pull_request:
@@ -13,8 +12,8 @@ env:
   CLICOLOR: 1
 
 jobs:
-  spelling:
-    name: Spell Check with typos
+  typos:
+    name: Typos Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
