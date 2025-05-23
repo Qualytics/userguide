@@ -142,9 +142,7 @@ In addition to the above details, the users can also explore the following addit
 ![details](../assets/datastores/anomalies/details-dark.png#only-dark)
 
 ## Anomaly Fingerprints
-anomalyes
-annomalies
-annomalyes
+
 Anomalies are uniquely fingerprinted to allow the system to recognize duplicates. This fingerprinting mechanism helps streamline anomaly management by preventing redundant work on identical problems.
 
 ### Duplicate Handling Configuration
