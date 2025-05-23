@@ -54,7 +54,7 @@ However, it is highly recommended to setup autoscaling for Apache Spark operatio
 | Scaling  | Fixed (1 node on-demand pricing)    | Autoscaling (1 - 21 nodes spot pricing)         |
 | EKS      | t3.2xlarge                          | r5d.2xlarge                                     |
 | GKE      | n2-standard-8                       | c2d-highmem-8                                   |
-| AKS      | Standard_D8_v5                      | Standard_E8s_v5                                 |
+| ASK      | Standard_D8_v5                      | Standard_E8s_v5                                 |
 
 #### Docker Registry Secrets
 
@@ -86,7 +86,7 @@ Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assist
 
 ### 3. Deploy Qualytics to your cluster
 
-The following command will first ensure that all chart dependencies are availble and then proceed with an installation of the Qualytics platform.
+The following command will first ensure that all chart dependencies are available and then proceed with an installation of the Qualytics platform.
 
 ```bash
 helm repo add qualytics https://qualytics.github.io/qualytics-helm-public

@@ -73,7 +73,7 @@ Specify the exact number of fields expected in the profile.
     | O_ORDERPRIORITY | STRING     |
     | O_CLERK         | STRING     |
     | O_COMMENT       | STRING     |
-    | EXTRA_FIELD     | UNKOWN     |
+    | EXTRA_FIELD     | UNKNOWN     |
 
 === "Payload example"
     ``` json

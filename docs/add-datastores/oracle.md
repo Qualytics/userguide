@@ -37,14 +37,14 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 ![add-source-datastore-details](../assets/datastores/oracle/add-source-datastore-details-light.png#only-light)
 ![add-source-datastore-details](../assets/datastores/oracle/add-source-datastore-details-dark.png#only-dark)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note 
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
+    After configuring **HashCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 1.  | Login URL            | Enter the URL used to authenticate with HashCorp Vault.                |
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
@@ -130,8 +130,8 @@ If the toggles **Add new connection** is turned on, then this will prompt you to
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![carret-button](../assets/datastores/oracle/add-enrichments-light.png#only-light)
-![carret-button](../assets/datastores/oracle/add-enrichments-dark.png#only-dark)
+![caret-button](../assets/datastores/oracle/add-enrichments-light.png#only-light)
+![caret-button](../assets/datastores/oracle/add-enrichments-dark.png#only-dark)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
@@ -165,8 +165,8 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 When the configuration process is finished, a modal will display a **success  message** indicating that **your datastore has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
+![success-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![success-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 **Step 5:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -212,8 +212,8 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
+![success-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![success-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 

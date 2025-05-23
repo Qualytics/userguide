@@ -1,0 +1,12 @@
+[default]
+extend-ignore-re = [
+  "(?i)qualytics",
+  "(?i)datastore",
+  ".*\\.svg",
+  ".*\\.lock",
+]
+
+[files]
+extend-exclude = [
+  "docs/assets/**"
+]

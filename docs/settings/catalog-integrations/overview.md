@@ -56,8 +56,8 @@ Qualytics provides flexible synchronization methods to match your workflow:
 ### Manual Sync
 
 Trigger complete metadata synchronization on-demand:
-![mannual](../../assets/integrations/overview/mannual-light.png#only-light)
-![mannual](../../assets/integrations/overview/mannual-dark.png#only-dark)
+![manual](../../assets/integrations/overview/mannual-light.png#only-light)
+![manual](../../assets/integrations/overview/mannual-dark.png#only-dark)
 
 For detailed steps, see the [**Synchronization**](atlan.md/#synchronization) section.
 
