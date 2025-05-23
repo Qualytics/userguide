@@ -120,14 +120,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 ![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-dark.png#only-dark)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note 
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
+    After configuring **HashCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 1.  | Login URL            | Enter the URL used to authenticate with HashCorp Vault.                |
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
@@ -227,14 +227,14 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 ![enrichment-datastore-explain](../assets/datastores/bigquery/new-detailss-light.png#only-light)
 ![enrichment-datastore-explain](../assets/datastores/bigquery/new-detailss-dark.png#only-dark)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
-    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+    Once the **HashCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 1.  | Login URL            | Enter the URL used to authenticate with HashCorp Vault.                |
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |

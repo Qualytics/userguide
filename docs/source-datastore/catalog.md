@@ -59,8 +59,8 @@ A modal window will display **Operation Triggered** and you will be notified onc
 !!! note
     You will receive a notification when the catalog operation is completed.
 
-![opertaion-triggered](../assets/catalog-operations/operation-triggred-light.png#only-light)
-![opertaion-triggered](../assets/catalog-operations/operation-triggred-dark.png#only-dark)
+![operation-triggered](../assets/catalog-operations/operation-triggred-light.png#only-light)
+![operation-triggered](../assets/catalog-operations/operation-triggred-dark.png#only-dark)
 
 **Step 3**: Close the **Success** modal window and you will observe in the UI that the Catalog operation has been completed and it has gathered the data structures, file patterns, and corresponding metadata from your configured datastore.  
   

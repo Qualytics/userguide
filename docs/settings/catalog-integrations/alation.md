@@ -91,8 +91,8 @@ The Alation synchronization supports both push and pull operations. This include
 
 **Step 1:** To sync tags, simply click the **"Sync"** button next to the relevant integration card.
 
-![syncronization](../../assets/integrations/alation/alation-syncronization-light-14.png#only-light)
-![syncronization](../../assets/integrations/alation/alation-syncronization-dark-14.png#only-dark)
+![synchronization](../../assets/integrations/alation/alation-syncronization-light-14.png#only-light)
+![synchronization](../../assets/integrations/alation/alation-syncronization-dark-14.png#only-dark)
 
 **Step 2:** After clicking the **Sync** button, you will have the following options:
 

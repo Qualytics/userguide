@@ -41,7 +41,7 @@ Since we are applying a check template to create quality checks, it's important 
 
 **2. Template:** Choose a **Template** from the dropdown menu that you want to associate with the quality check. The check will inherit properties from the selected template.
 
-* **Locked**: If the template is locked, it will automatically sync with any future updates made to the template. However, you won't be able to modify the check's properties directly, except for specific fields like **Datastore**, **Table**, and **Fileds**, which can still be updated while maintaining synchronization with the template.
+* **Locked**: If the template is locked, it will automatically sync with any future updates made to the template. However, you won't be able to modify the check's properties directly, except for specific fields like **Datastore**, **Table**, and **Fields**, which can still be updated while maintaining synchronization with the template.
 
 * **Unlocked**: If the template is unlocked, you are free to modify the check's properties as needed. However, any future updates to the template will no longer affect this check, as it will no longer be synced with the template.
 

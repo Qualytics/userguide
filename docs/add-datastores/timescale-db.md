@@ -21,7 +21,7 @@ A source datastore is a storage location used to connect to and access data from
 ![select-a-connector](../assets/datastores/timescale-db/select-a-connector-light.png#only-light)
 ![select-a-connector](../assets/datastores/timescale-db/select-a-connector-dark.png#only-dark)
 
-| 1. | Name | Specify the name of the datastore (e.g., The specified name eill appear on the datastore cards) |
+| 1. | Name | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
 | --- | --------------------- | --------------------- |
 | 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection |
 | 3. | Connector | Select **TimescaleDB** from the dropdown list. |
@@ -35,14 +35,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 ![add-datastore-credentials](../assets/datastores/timescale-db/add-datastore-credentials-light.png#only-light)
 ![add-datastore-credentials](../assets/datastores/timescale-db/add-datastore-credentials-dark.png#only-dark)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note 
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
+    After configuring **HashCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
-| 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
+| 1.  | Login URL            | Enter the URL used to authenticate with HashCorp Vault.                |
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
@@ -66,7 +66,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. |  Database | Specify the database name. |
 | 6. | Schema | Define the schema within the database that should be used.
 | 7. | Teams  | Select one or more teams from the dropdown to associate wit this source datastore. |
-| 8. | Initial cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and coressponding metadata. |                                                                                       
+| 8. | Initial cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and corresponding metadata. |                                                                                       
 
 **Step 3 :** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -123,8 +123,8 @@ If the toggles **Add new connection** is turned on, then this will prompt you to
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![carret-button](../assets/datastores/timescale-db/add-enrichments-light.png#only-light)
-![carret-button](../assets/datastores/timescale-db/add-enrichments-dark.png#only-dark)
+![caret-button](../assets/datastores/timescale-db/add-enrichments-light.png#only-light)
+![caret-button](../assets/datastores/timescale-db/add-enrichments-dark.png#only-dark)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 

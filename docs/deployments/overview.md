@@ -23,7 +23,7 @@ In this model, the Qualytics platform is deployed to a single-tenant virtual pri
 Depending on Customer's cloud infrastructure, this option uses one of the following:
 
 - EKS (Elastic Kubernetes Service)
-- AKS (Azure Kubernetes Service)
+- ASK (Azure Kubernetes Service)
 - GKE (Google Kubernetes Engine)
 - Oracle OKE (Oracle Container Engine for Kubernetes)
 
@@ -57,4 +57,4 @@ This model requires that the kubernetes nodes supporting Qualytics' analytics en
 #### Considerations
 This model supports organizations that due to regulatory or other restrictions cannot permit READ access to their datastore(s) from a third-party hosted product. This model requires Customer to manage and operate the appropriate infrastructure and ensure it is granted all necessary access to the targeted datastore(s).
 
-For deployments to supported commercial kubernetes control planes (EKS, AKS, GKE, OKE) and at the Customer's discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer. Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](../upgrades/qualytics-single-tenant-instance.md).
+For deployments to supported commercial kubernetes control planes (EKS, ASK, GKE, OKE) and at the Customer's discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer. Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](../upgrades/qualytics-single-tenant-instance.md).

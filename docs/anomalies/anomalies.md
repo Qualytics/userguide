@@ -561,9 +561,9 @@ For more details on how to archive anomalies, please refer to the documentation 
 ```
 
 ### Retrieving Anomaly Source Records
-anomalyes
-annomalies
-annomalyes
+These are some common anomalyes.
+This contains annomalies.
+Here we test annomalyes.
 **Endpoint (Get)**
 ```/api/anomalies/{id}/source-record (get)```
 

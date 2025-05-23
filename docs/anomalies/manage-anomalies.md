@@ -7,7 +7,7 @@ Bulk actions further simplify the process, allowing you to manage multiple anoma
 Let's get started 🚀
 
 ## Navigation
-test typo
+
 **Step 1:** Log in to your Qualytics account and select the datastore from the left menu on which you want to manage your anomalies.
 
 ![datastore](../assets/datastores/manage-anomalies/datastore-light-1.png#only-light)

@@ -266,7 +266,7 @@ Contains metadata from quality checks.
 | DATASTORE_ID          | NUMBER         	 | Identifier of the datastore used in the check.                  |
 | CONTAINER_ID          | NUMBER         	 | Identifier of the container used in the check.                  |
 | TEMPLATE_ID           | NUMBER         	 | Identifier of the template id associated tothe check.           |
-| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                |
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates whether the check is a template or not.                |
 | SOURCE_CONTAINER      | STRING             | Name of the container used in the check.                        |
 | SOURCE_DATASTORE      | STRING             | Name of the datastore used in the check.                        |
 
@@ -289,13 +289,13 @@ Contains metadata from check templates.
 | GLOBAL_TAGS           | STRING             | Represents the global tags of the check separated by comma.     | ok
 | ID                    | NUMBER             | Unique identifier for the check.                                | ok
 | IS_NEW                | BOOLEAN            | Flags if the check is new.                                      | ok
-| IS_TEMPLATE           | BOOLEAN         	 | Indicates wheter the check is a template or not.                | ok
+| IS_TEMPLATE           | BOOLEAN         	 | Indicates whether the check is a template or not.                | ok
 | LAST_EDITOR           | STRING             | Represents the last editor of the check.                        | ok
 | LAST_UPDATED          | STRING             | Represents the last updated timestamp of the check.             | ok
 | PROPERTIES            | STRING             | Specific properties for the check in a JSON format.             | ok
 | RULE_TYPE             | STRING             | Type of rule applied in the check.                              | ok
 | TEMPLATE_CHECKS_COUNT | NUMBER             | The count of associated checks to the template.                 | ok
-| TEMPLATE_LOCKED       | BOOLEAN            | Indicates wheter the check template is locked or not.           | ok
+| TEMPLATE_LOCKED       | BOOLEAN            | Indicates whether the check template is locked or not.           | ok
 | WEIGHT                | FLOAT              | Represents the weight of the check.                             |
 
 #### _EXPORT_FIELD_PROFILES Table
