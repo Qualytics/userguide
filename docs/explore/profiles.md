@@ -181,7 +181,7 @@ For more information on creating tags, refer to the [Add Tag section](../usergui
 
 ### Filter and Sort
 
-Filter and Sort options allow you to organize your fileds by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
+Filter and Sort options allow you to organize your fields by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
 
 #### Sort
 
@@ -193,7 +193,7 @@ You can sort your containers by various criteria, such as Active Anomalies, Acti
 | No | Sort By | Description |
 | :---- | :---- | :---- |
 | 1. | Active Anomalies | Sorts fields based on the number of currently active anomalies detected. |
-| 2. | Ative Checks | Sorts fields by the number of active validation checks applied. |
+| 2. | Active Checks | Sorts fields by the number of active validation checks applied. |
 | 3. | Completeness | Sorts fields based on their data completeness percentage. |
 | 4. | Created Date | Sorts fields by the date they were created, showing the newest or oldest fields first. |
 | 5. | Name | Sorts fields alphabetically by their names. |

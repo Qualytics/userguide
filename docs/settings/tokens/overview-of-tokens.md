@@ -76,8 +76,8 @@ You can revoke your token to prevent unauthorized access or actions, especially 
 
 **Step 2**: After clicking the **Revoke** button, your user token will be successfully revoked. A success message will display saying **User token successfully revoked**. Following revocation, the token's status color will change from green to orange.
 
-![revoked-sucessfully](../../assets/tokens/revoked-sucessfully-light-9.png#only-light)
-![revoked-sucessfully](../../assets/tokens/revoked-sucessfully-dark-9.png#only-dark)
+![revoked-successfully](../../assets/tokens/revoked-sucessfully-light-9.png#only-light)
+![revoked-successfully](../../assets/tokens/revoked-sucessfully-dark-9.png#only-dark)
 
 ## Restore Token
 

@@ -37,14 +37,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 ![add-source-datastore-details](../assets/datastores/dremio/add-source-datastore-details-light-3.png#only-light)
 ![add-source-datastore-details](../assets/datastores/dremio/add-source-datastore-details-dark-3.png#only-dark)
 
-**Secrets Management:** This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Secrets Management:** This is an optional connection property that allows you to securely store and manage credentials by integrating with HashCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note 
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
+    After configuring **HashCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
-| 1. | Login URL | Enter the URL used to authenticate with HashiCorp Vault. |
+| 1. | Login URL | Enter the URL used to authenticate with HashCorp Vault. |
 | 2. | Credentials Payload | Input a valid JSON containing credentials for Vault authentication. |
 | 3. | Token JSONPath | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4 | Secret URL | Enter the URL where the secret is stored in Vault. |
@@ -141,7 +141,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | ---- | ---- | ---- |
 | 1 | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2 | Name | Give a name for the enrichment datastore. |
-| 3 | Toggel Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 3 | Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
 | 4 | Connector | Select a datastore connector from the dropdown list. |
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
