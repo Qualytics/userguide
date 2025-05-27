@@ -198,7 +198,7 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 
 ### **Freshness**   
 
-This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
+This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. Users can view timestamp values in a clear date and time format, making it easier to analyze data freshness while maintaining millisecond-level precision in the background. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
 
 ![freshness](../assets/observability/freshness-detail-light-666.png#only-light)
 ![freshness](../assets/observability/freshness-detail-dark-666.png#only-dark)
