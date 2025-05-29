@@ -190,10 +190,8 @@ In the next section, we'll walk through the steps to access the Qualytics integr
 
 **Step 2:** By default, Connections tab will open. Click on the **Integrations** tab.
 
-<!-- TODO: Polish later -->
 ![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-light.png#only-light)
 ![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-dark.png#only-dark)
-<!-- ![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-dark.png#only-dark) -->
 
 ## Connect Microsoft Teams Integration
 
@@ -201,7 +199,6 @@ Connect Microsoft Teams by providing necessary Azure credentials, configuring bo
 
 **Step 1:** Click on the **Connect** button next to Microsoft Teams to connect to the Teams Integration.
 
-<!-- TODO: Consider adding images to follow Slack approach -->
 ![connect](../../assets/integrations/msft_teams/connect-light.png#only-light)
 ![connect](../../assets/integrations/msft_teams/connect-dark.png#only-dark)
 
