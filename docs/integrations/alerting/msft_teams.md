@@ -15,7 +15,7 @@ This section provides a comprehensive walkthrough to help you configure the nece
 
 The Microsoft Entra App Registration is used by Qualytics to provision Teams bot resources in your environment.
 
-**Step 1:** Log in to to the [Microsoft Entra App Registrations](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade), and select New registration from the main menu to create a new application.
+**Step 1:** Log in to to the <a href="https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade" target="_blank" rel="noopener">Microsoft Entra App Registrations</a>, and select New registration from the main menu to create a new application.
 
 ![new-app-registration](../../assets/integrations/msft_teams/new-app-registration.png)
 
@@ -90,7 +90,7 @@ The Client Secret authorizes Qualytics to programmatically create bot resources.
 
 The Subscription ID is required to manage bot resources in your Azure environment.
 
-**Step 1:**  Navigate to **[Subscriptions in the Azure Portal](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2)** and select the subscription you want to use for the Teams integration.
+**Step 1:**  Navigate to **<a href="https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2" target="_blank" rel="noopener">Subscriptions in the Azure Portal</a>** and select the subscription you want to use for the Teams integration.
 
 ![subscription-id](../../assets/integrations/msft_teams/select.png)
 
@@ -121,7 +121,7 @@ You need to verify if the Microsoft Bot Service resource provider is registered 
 
 The Resource Group will hold and manage the bot resources created by Qualytics.
 
-**Step 1:** Navigate to  [Resource Groups in the Azure Portal](https://portal.azure.com/#browse/resourcegroups) and click **Create a resource** to set up a new resource group if you don’t already have one.
+**Step 1:** Navigate to <a href="https://portal.azure.com/#browse/resourcegroups" target="_blank" rel="noopener">Resource Groups in the Azure Portal</a> and click **Create a resource** to set up a new resource group if you don’t already have one.
 
 ![resource-group-form](../../assets/integrations/msft_teams/form.png)
 
@@ -202,7 +202,7 @@ Connect Microsoft Teams by providing necessary Azure credentials, configuring bo
 **Step 1:** Click on the **Connect** button next to Microsoft Teams to connect to the Teams Integration.
 
 <!-- TODO: Consider adding images to follow Slack approach -->
-![connect](../../assets/integrations/msft_teams/connect-light.png#only-light) 
+![connect](../../assets/integrations/msft_teams/connect-light.png#only-light)
 ![connect](../../assets/integrations/msft_teams/connect-dark.png#only-dark)
 
 A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the connection properties to connect to Microsoft Teams.
