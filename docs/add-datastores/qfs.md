@@ -26,7 +26,7 @@ A Qualytics File System (QFS) datastore serves as a managed storage solution for
 | :---- | :---- | :---- |
 | 1. | Name (Required) | Specify the name of the datastore. Example: The specified name will appear on the datastore cards. |
 | 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
-| 3. | Connector (Required) | Select **Qualytics File System (QFS)** from the dropedown list. |
+| 3. | Connector (Required) | Select **Qualytics File System (QFS)** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
