@@ -1,0 +1,8 @@
+[files]
+extend-exclude = [
+  "venv/*",
+  ".env.local",
+  ".gitignore",
+  "mkdocs.yml",
+  "requirements.txt",
+  ]
