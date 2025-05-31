@@ -1,25 +1,19 @@
-name: Typos Check
+name: Check Typos
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    branches:
-      - main
-
-permissions:
-  contents: read
-
-env:
-  CLICOLOR: 1
+    branches: [main]
 
 jobs:
   typos:
     name: Typos Check
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run typos with config
-        uses: crate-ci/typos@v1.32.0
-        with:
-          config: ./typos.toml
+      - name: Run typos
+        uses: crate-ci/typos@v1.17.0
