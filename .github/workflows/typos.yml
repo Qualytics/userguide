@@ -17,5 +17,3 @@ jobs:
 
       - name: Run typos
         uses: crate-ci/typos@v1.32.0
-        with:
-          args: "--write-changes=false"
