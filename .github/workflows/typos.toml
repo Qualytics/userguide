@@ -3,7 +3,7 @@ extend-ignore-identifiers = [
   "MyApp",
   "OpenAPIv3",
   "Hashi",
-  "HashiCorp",
+  "HashiCorp"
   ]
 
 [files]
