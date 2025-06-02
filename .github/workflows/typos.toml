@@ -1,11 +1,9 @@
 [default]
 extend-ignore-identifiers = [
   "MyApp",
-  "OpenAPIv3"
-  ]
-
-ignore-words = [
-  "Hashi"
+  "OpenAPIv3",
+  "Hashi",
+  "HashiCorp",
   ]
 
 [files]
