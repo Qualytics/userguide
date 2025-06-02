@@ -3,6 +3,7 @@ Hashi = "Hashi"
 HashiCorp = "HashiCorp"
 MyApp = "MyApp"
 OpenAPIv3 = "OpenAPIv3"
+AKS = "AKS"
 
 [files]
 extend-exclude = [
