@@ -1,5 +1,5 @@
 [default]
-extend-ignore-identifiers = [
+extend_words = [
   "MyApp",
   "OpenAPIv3",
   "Hashi",
@@ -7,7 +7,7 @@ extend-ignore-identifiers = [
   ]
 
 [files]
-extend-exclude = [
+extend_exclude = [
   "docs/legacy/*",
   "scripts/ignore_this.sh",
   "venv/*",
