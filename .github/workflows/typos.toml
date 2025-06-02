@@ -1,5 +1,17 @@
 [default]
-extend-ignore-identifiers = ["MyApp", "OpenAPIv3"]
+extend-ignore-identifiers = [
+  "MyApp",
+  "OpenAPIv3",
+  "Hashi"
+  ]
 
 [files]
-extend-exclude = ["docs/legacy/*", "scripts/ignore_this.sh"]
+extend-exclude = [
+  "docs/legacy/*",
+  "scripts/ignore_this.sh",
+  "venv/*",
+  ".env.local",
+  ".gitignore",
+  "mkdocs.yml",
+  "requirements.txt"
+  ]
