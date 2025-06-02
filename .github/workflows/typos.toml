@@ -7,7 +7,7 @@ extend_words = [
   ]
 
 [files]
-extend_exclude = [
+extend-exclude = [
   "docs/legacy/*",
   "scripts/ignore_this.sh",
   "venv/*",
