@@ -1,0 +1,21 @@
+name: Check Typos
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typos:
+    name: Typos Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run typos
+        uses: crate-ci/typos@v1.32.0
+        with:
+          args: "--write-changes=false"

@@ -1,0 +1,5 @@
+[default]
+extend-ignore-identifiers = ["MyApp", "OpenAPIv3"]
+
+[files]
+extend-exclude = ["docs/legacy/*", "scripts/ignore_this.sh"]
