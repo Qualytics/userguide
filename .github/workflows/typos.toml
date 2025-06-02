@@ -1,10 +1,8 @@
-[default]
-extend_words = [
-  "MyApp",
-  "OpenAPIv3",
-  "Hashi",
-  "HashiCorp"
-  ]
+[default.extend-words]
+Hashi = "Hashi"
+HashiCorp = "HashiCorp"
+MyApp = "MyApp"
+OpenAPIv3 = "OpenAPIv3"
 
 [files]
 extend-exclude = [
@@ -15,4 +13,4 @@ extend-exclude = [
   ".gitignore",
   "mkdocs.yml",
   "requirements.txt"
-  ]
+]
