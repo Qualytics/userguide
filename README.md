@@ -17,7 +17,10 @@ This project requires the following tools:
 
 ### Running the Project Locally
 
-To preview the documentation locally:
+To preview the documentation locally
+
+1. Activate the virtual environment
+2. Run the following command:
 
 ```bash
 mkdocs serve
