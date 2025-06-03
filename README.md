@@ -19,7 +19,7 @@ This project requires the following tools:
 
 To preview the documentation locally
 
-1. Activate the virtual environment
+1. Activate the [virtual environment](#setting-up-the-local-environment)
 2. Run the following command:
 
 ```bash
