@@ -105,3 +105,27 @@ To run the pre-commit checks manually:
 ```bash
 pre-commit run --all-files
 ```
+
+## Run on Save (Opctional)
+
+If you are using Visual Studio Code, it's recommended to install the [Run on Save](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave) extension.
+
+With this extension, every time you save a file in the project, it automatically executes `Typos` to check for misspelled words throughout the codebase. The results will be shown in the Output panel under the `Run On Save` section.
+
+To configure it, add the following snippet to your `.vscode/settings.json`:
+
+```json
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "pre-commit run --all-files"
+      }
+    ]
+  }
+}
+```
+
+> [!NOTE]
+> Make sure `pre-commit` is installed and the virtual environment is activated in your terminal when using this setup.
