@@ -1,0 +1,10 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "venv/bin/pre-commit run --all-files"
+      }
+    ]
+  }
+}
