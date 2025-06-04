@@ -2,6 +2,33 @@
 
 ## Release Notes
 
+### 2025.6.5 { id=2025.6.5 }
+
+#### Feature Enhancements
+
+- Check Details
+    - We are excited to announce a new check page visualization.
+        - Users can view all check properties in read-only mode; tags can be added or removed.
+        - Assertion Over Time: Users can monitor check assertion metrics over time via a timeline. Hovering over a point displays the assertion metrics for that moment.
+        - Check Activity: Displays check activity history, showing which user edited the check and which field was modified.
+
+- Anomaly Details
+    - We are thrilled to introduce the new anomaly page visualization.
+        - Users can view all anomaly summaries in read-only mode; tags can be added or removed.
+        - Clicking on a failed check item opens a right-side panel with check information in read-only mode, without leaving the page.
+        - Anomaly Activity: Shows anomaly activity history and user comments.
+
+- Scan Operation
+    - Added support for handling incremental scans on Iceberg tables.
+
+- Datastore
+    - Users can now see the datastore connection status in the Datastore context.
+        - A badge with the datastore icon will be displayed on breadcrumbs and in the tree view footer.
+
+#### General Fixes and Improvements
+
+- General Fixes and Improvements.
+
 ### 2025.5.23 { id=2025.5.23 }
 
 #### Feature Enhancements
