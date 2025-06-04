@@ -27,7 +27,7 @@ Settings allow you to edit how data is processed and analyzed for a specific tab
 
 **Step 1:** Click on the vertical ellipse next to the table of your choice and select **Settings** from the dropdown list.
 
-![verical-setting](../assets/container/manage-tables-files/setting-light-4.png#only-light)
+![vertical-setting](../assets/container/manage-tables-files/setting-light-4.png#only-light)
 ![vertical-setting](../assets/container/manage-tables-files/setting-dark-4.png#only-dark)
 
 A modal window will appear for **“Table Settings”**.
@@ -120,7 +120,7 @@ Settings allow you to edit how data is processed and analyzed for a specific fil
 
 **Step 1:** Click on the vertical ellipse next to the file pattern of your choice and select **Settings** from the dropdown list.
 
-![verical-setting](../assets/container/manage-tables-files/setting-light-44.png#only-light)
+![vertical-setting](../assets/container/manage-tables-files/setting-light-44.png#only-light)
 ![vertical-setting](../assets/container/manage-tables-files/setting-dark-44.png#only-dark)
 
 A modal window will appear for **“File Pattern Settings”**.
