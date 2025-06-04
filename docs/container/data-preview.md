@@ -37,7 +37,7 @@ Alternatively, you can access the tables or files by clicking the drop-down arro
 You will see a tabular view of the data, displaying the field names (columns) and their corresponding data values, allowing you to review the data's structure, types, and sample records.
 
 ![tabular](../assets/container/data-preview/tabular-light.png#only-light)
-![tablular](../assets/container/data-preview/tabular-dark.png#only-dark)
+![tabular](../assets/container/data-preview/tabular-dark.png#only-dark)
 
 ## UI Caching
 
