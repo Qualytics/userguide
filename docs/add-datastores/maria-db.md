@@ -67,7 +67,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 4. | Password | Enter the **password** to connect to the database. |
 | 5. | Database | Specify the database name. |
 | 6. | Teams | Select one or more teams from the dropdown to associate wit this source datastore. |
-| 7. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and coressponding metadata. |
+| 7. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
