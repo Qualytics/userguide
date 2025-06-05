@@ -2,51 +2,29 @@
 
 ## Release Notes
 
-### 2025.6.5 { id=2025.6.5 }
+### 2025.6.6 { id=2025.6.6 }
 
 #### Feature Enhancements
 
-- Check Details
-    - We are excited to announce a new check page visualization.
-        - Users can now view all check metrics and properties.
-    - Check Metrics section
-        - Displays key metrics based on the check type: Rule Type, Last Asserted, Weight, Coverage, and Active Anomalies.
-        - Includes the check description.
-        - Users can add or remove tags directly from this view, without needing to open a modal.
-    - Observability section
-        - Shows Assertion Over Time to help users monitor assertion results over time.
-        - A timeline is provided to visualize the check assertions.
-        - Hovering over a timeline point shows the Latest Assertion and Totals.
-    - Properties section
-        - Displays all check properties.
-        - To make changes, users must click the Edit button.
-    - Activity section
-        - Shows the full activity history for the check, including field edits and updates.
-        - If a check metric was updated, the previous and new values are shown.
+- Introducing the new Quality Check dedicated page, enabling users to analyze check properties and metrics.
+    - A Check Assert Visualization is provided to analyze assertions over time, helping users monitor assertion results, with the ability to hover over a timeline point to view the latest assertion and totals.
+    - Displays key metrics such as Status, Rule Type, Last Asserted, Weight, Coverage, and Active Anomalies and including the check description.
+    - Exposes all relevant check properties to provide a comprehensive view of each check's configuration without opening the edit modal.
+    - Shows the full activity history for the check, including property updates, and exposes previous and new values when a check setting is modified.
+    - Supports inline check tag editing by clicking the tag badge, allowing users to add or remove tags without opening a modal.
 
-- Anomaly Details
-    - We are thrilled to introduce the new anomaly page visualization.
-        - Provides a read-only summary of each anomaly.
-    - Anomaly Metrics section
-        - Displays detailed anomaly context: status, anomalous records, failed checks, weight, detected time, and scan.
-        - Shows additional details such as source datastore, table, and location.
-    - Failed Checks section
-        - Lists failed checks associated with the anomaly.
-        - Clicking on a failed check opens a right-side panel with check information.
-    - Source Records section
-        - If available, displays records that failed the checks.
-        - Users can filter and sort the data to customize the view.
-    - Anomaly Activity section
-        - Shows activity history of the anomaly and what information was updated.
-        - Includes user comments related to the anomaly.
+- Announcing the Anomaly exclusive page: This new page will allow users to get detailed information about Anomaly metrics, Failed Checks and Source Records.
+    - Exposes detailed anomaly information, including Status, Anomalous Records, Total Failed Checks, Weight, Detected DateTime, and Scan Operation, as well as Source Datastore, Computed Table, and Location.
+    - Lists the Failed Checks that were violated and led to the creation of the anomaly. Clicking on a failed check opens a right-side panel with the corresponding quality check information, eliminating the need to navigate to a different page.
+    - Show Source Records from your data that failed the checks when available. Users can apply filters and sorting options to personalize the data display according to their preferences.
+    - Displays the complete activity history, including all updates made to the anomaly over time. User comments are also shown, making it easier to follow discussions and decisions.
+    - Similar to the dedicated Quality Check page, users can edit Anomaly Tags inline.
 
-- Scan Operation
-    - Iceberg table support
-        - Incremental scan handling is now supported for Iceberg tables.
+- Scan Operation: Iceberg Table Support
+    - Incremental scans now support Iceberg tables, expanding the range of asset types eligible for incremental scanning.
 
-- Datastore
-    - Datastore connection status visibility
-        - A badge with the datastore icon now appears in the breadcrumb and tree view footer to indicate connection status.
+- Datastore Connection Status Visibility
+    - A badge attached to the datastore icon now appears in both the breadcrumb and the tree view footer, clearly indicating the connection status of the datastore.
 
 #### General Fixes and Improvements
 
