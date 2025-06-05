@@ -13,8 +13,8 @@ Let’s get started 🚀
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-!!! note 
-    Before accessing the Data Preview tab, ensure the container is profiled. If not, run a profile operation on the container. Profiling collects important information about the table structure, like column types and field names. Without profiling, no data will be shown in the Data Preview section. 
+!!! note
+    Before accessing the Data Preview tab, ensure the container is profiled. If not, run a profile operation on the container. Profiling collects important information about the table structure, like column types and field names. Without profiling, no data will be shown in the Data Preview section.
 
 ![table](../assets/container/data-preview/table-light.png#only-light)
 ![table](../assets/container/data-preview/table-dark.png#only-dark)
@@ -37,7 +37,7 @@ Alternatively, you can access the tables or files by clicking the drop-down arro
 You will see a tabular view of the data, displaying the field names (columns) and their corresponding data values, allowing you to review the data's structure, types, and sample records.
 
 ![tabular](../assets/container/data-preview/tabular-light.png#only-light)
-![tablular](../assets/container/data-preview/tabular-dark.png#only-dark)
+![tabular](../assets/container/data-preview/tabular-dark.png#only-dark)
 
 ## UI Caching
 
@@ -45,7 +45,7 @@ Upon initial access, data in the Data Preview section, the data may not be store
 
 ## Filter Clause and Refresh
 
-**Data Preview** tab includes a filter functionality that enables users to focus on a specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data. 
+**Data Preview** tab includes a filter functionality that enables users to focus on a specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data.
 
 ### Filter Clause
 

@@ -35,13 +35,13 @@ For demonstration purposes, we have selected the **“COVID-19 Data”** Snowfla
 
 **Step 4:** Select the tables you wish to export. **All**, **Specific**, or **Tag** and click **Next** to proceed.
 
-![proflie2](../assets/container/export-operation/profile2-light.png#only-light)
-![prfile2](../assets/container/export-operation/profile2-dark.png#only-dark)
+![profile](../assets/container/export-operation/profile2-light.png#only-light)
+![profile](../assets/container/export-operation/profile2-dark.png#only-dark)
 
 **Step 5:** After clicking **Next**, select the assets you want to export to your Enrichment Datastore: Anomalies, Quality Checks, or Field Profiles, and click **Export** to proceed with the export process.
 
-![assest](../assets/container/export-operation/assest-light.png#only-light)
-![assest](../assets/container/export-operation/assest-dark.png#only-dark)
+![asset](../assets/container/export-operation/assest-light.png#only-light)
+![asset](../assets/container/export-operation/assest-dark.png#only-dark)
 
 After clicking **Export**, a confirmation message appears stating **"Export in motion."** In a couple of minutes, the metadata will be available in your Enrichment Datastore.
 

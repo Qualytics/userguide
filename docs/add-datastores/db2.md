@@ -127,8 +127,8 @@ If the toggles **Add new connection** is turned on, then this will prompt you to
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![carret-button](../assets/datastores/db2/add-enrichment-light.png#only-light)
-![carret-button](../assets/datastores/db2/add-enrichment-dark.png#only-dark)
+![caret-button](../assets/datastores/db2/add-enrichment-light.png#only-light)
+![caret-button](../assets/datastores/db2/add-enrichment-dark.png#only-dark)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 

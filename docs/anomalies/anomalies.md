@@ -138,7 +138,7 @@ In addition to the above details, the users can also explore the following addit
 
 **3. Location:** Full path or location within the data hierarchy where the table resides. It gives a complete reference to the exact position of the data in the database or data warehouse.
 
-![detials](../assets/datastores/anomalies/details-light.png#only-light)
+![details](../assets/datastores/anomalies/details-light.png#only-light)
 ![details](../assets/datastores/anomalies/details-dark.png#only-dark)
 
 ## Anomaly Fingerprints

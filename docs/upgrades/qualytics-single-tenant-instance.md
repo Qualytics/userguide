@@ -86,7 +86,7 @@ Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assist
 
 ### 3. Deploy Qualytics to your cluster
 
-The following command will first ensure that all chart dependencies are availble and then proceed with an installation of the Qualytics platform.
+The following command will first ensure that all chart dependencies are available and then proceed with an installation of the Qualytics platform.
 
 ```bash
 helm repo add qualytics https://qualytics.github.io/qualytics-helm-public
