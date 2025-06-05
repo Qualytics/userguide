@@ -130,8 +130,8 @@ If the toggles **Add new connection** is turned on, then this will prompt you to
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![carret-button](../assets/datastores/oracle/add-enrichments-light.png#only-light)
-![carret-button](../assets/datastores/oracle/add-enrichments-dark.png#only-dark)
+![caret-button](../assets/datastores/oracle/add-enrichments-light.png#only-light)
+![caret-button](../assets/datastores/oracle/add-enrichments-dark.png#only-dark)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
@@ -165,8 +165,8 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 When the configuration process is finished, a modal will display a **success  message** indicating that **your datastore has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
+![success-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![success-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 **Step 5:** Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -212,8 +212,8 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![sucess-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
-![sucess-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
+![success-datastore](../assets/datastores/oracle/success-datastore-light.png#only-light)
+![success-datastore](../assets/datastores/oracle/success-datastore-dark.png#only-dark)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 

@@ -85,7 +85,7 @@ If the credentials and provided details are verified, a success message will be 
 ![save](../assets/enrichment/add-enrichment/save-light.png#only-light)
 ![save](../assets/enrichment/add-enrichment/save-dark.png#only-dark)
 
-A modal window apperars display a **success message** indicating that **your enrichment has been successfully updated**.
+A modal window appears display a **success message** indicating that **your enrichment has been successfully updated**.
 
 ![success](../assets/enrichment/add-enrichment/success-light.png#only-light)
 ![success](../assets/enrichment/add-enrichment/success-dark.png#only-dark)
@@ -119,7 +119,7 @@ If the credentials and provided details are verified, a success message will be 
 ![save2](../assets/enrichment/add-enrichment/save2-light.png#only-light)
 ![save2](../assets/enrichment/add-enrichment/save2-dark.png#only-dark)
 
-A modal window apperars display a **success message** indicating that **your enrichment has been successfully updated**.
+A modal window appears display a **success message** indicating that **your enrichment has been successfully updated**.
 
 ![success](../assets/enrichment/add-enrichment/success-light.png#only-light)
 ![success](../assets/enrichment/add-enrichment/success-dark.png#only-dark)

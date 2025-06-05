@@ -44,7 +44,7 @@ This check leverages machine learning powered by the [libpostal library](https:/
 - country: Sovereign nations and their dependent territories, anything with an ISO-3166 code
 - postcode: Postal codes used for mail sorting
 
-This check allows the user to define any combination of these labels as required elements of the value held in each record. Any value thse does not contain every required element will be identified as anomalous.
+This check allows the user to define any combination of these labels as required elements of the value held in each record. Any value these does not contain every required element will be identified as anomalous.
 
 
 ### Anomaly Types

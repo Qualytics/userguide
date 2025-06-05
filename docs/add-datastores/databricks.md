@@ -159,7 +159,7 @@ A source datastore is a storage location used to connect to and access data from
 
 | REF. | FIELDS         | ACTIONS              |
 |------|----------------|----------------------|
-| 1.   | Name (Reqired) | Specify the datastore name (e.g., This name will appear on the datastore cards) |
+| 1.   | Name (Required) | Specify the datastore name (e.g., This name will appear on the datastore cards) |
 | 2.   | Toggle Button  | Toggle ON to create a new source datastore from scratch, or toggle OFF to reuse credentials from an existing connection. |
 | 3.   | Connector (Required)     | Select **Databricks** from the dropdown list. |                  
 
@@ -260,8 +260,8 @@ If the toggles **Add new connection** is turned on, then this will prompt you to
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![carret-button](../assets/datastores/databricks/add-enrichment-light.png#only-light)
-![carret-button](../assets/datastores/databricks/add-enrichment-dark.png#only-dark)
+![caret-button](../assets/datastores/databricks/add-enrichment-light.png#only-light)
+![caret-button](../assets/datastores/databricks/add-enrichment-dark.png#only-dark)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 

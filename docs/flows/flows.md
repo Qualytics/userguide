@@ -331,8 +331,8 @@ A panel  **Scan Settings** will appear on the right-hand side, This window allow
 
 A panel **Export Settings** will appear on the right-hand side, This window allows you to configure the Export settings.
 
-![pannel](.././assets/flows/export-setting-light.png#only-light)
-![pannel](.././assets/flows/export-setting-dark.png#only-dark)
+![panel](.././assets/flows/export-setting-light.png#only-light)
+![panel](.././assets/flows/export-setting-dark.png#only-dark)
 
 **Source Datastore:** Select the datastore to export data from.
 
@@ -761,8 +761,8 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 
 **Step 4:** Once published, a success message will appear, stating, **"Your flow has been successfully added.**
 
-![sucess](.././assets/flows/sucess-light-83.png#only-light)
-![sucess](.././assets/flows/sucess-dark-83.png#only-dark)
+![success](.././assets/flows/sucess-light-83.png#only-light)
+![success](.././assets/flows/sucess-dark-83.png#only-dark)
 
 ## View Created Flows
 
