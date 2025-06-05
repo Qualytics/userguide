@@ -23,7 +23,7 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 * **Name:** Enter a name for your app (e.g., *Qualytics Bot Manager*).
 
-* **Supported account types:**Select Accounts in this organizational directory only (Single tenant).
+* **Supported account types:** Select "Accounts in this organizational directory only (Single tenant)".
 
 * **Redirect URI:** Leave this field blank, as it is not required for this integration.
 
@@ -33,7 +33,7 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 ![app-registration-form](../../assets/integrations/msft_teams/registration-form.png)
 
-**Step 4:** After the app is registered, you’ll be redirected to the **Overview** page, where the **Application (client) ID** is displayed. Copy this ID it will be needed later for the Qualytics integration.
+**Step 4:** After the app is registered, you’ll be redirected to the **Overview** page, where the **Application (client) ID** is displayed. Copy this ID since it will be needed later for the Qualytics integration.
 
 ![app-client-id](../../assets/integrations/msft_teams/app-client-id.png)
 
@@ -41,7 +41,7 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 The Microsoft Entra App needs the "Application.ReadWrite.All" permission to create and manage bot resources.
 
-**Step 1:** Click on **Manage** from the side panel, then select **API permissions** from the dropdown.
+**Step 1:** In your app registration, go to the side panel and click **Manage**, then select **API permissions** from the dropdown.
 
 ![add-permission](../../assets/integrations/msft_teams/manage.png)
 
@@ -53,7 +53,7 @@ The Microsoft Entra App needs the "Application.ReadWrite.All" permission to crea
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/add-permission-msft-graph.png)
 
-**Step 4:** After selecting **Microsoft Graph,** choose **Application permissions** to allow the app to run without a signed-in user.
+**Step 4:** After selecting **Microsoft Graph,** choose **Application permissions**.
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/application-permission-msft-graph.png)
 
@@ -61,7 +61,7 @@ A dropdown appears search for **Application.ReadWrite.All**, check the box under
 
 ![msft-graph-application-permission](../../assets/integrations/msft_teams/add-permissions.png)
 
-**Step 5:** Once the permission is added, you'll return to the API permissions page. Click **Grant admin consent for [Your Organization]** to approve the selected permissions and enable them for use across your organization.
+**Step 5:** Once the permission is added, you'll return to the API permissions page. Click **Grant admin consent for [Your Organization]** to approve the selected permissions.
 
 ![app-readwrite-all](../../assets/integrations/msft_teams/admin.png)
 
@@ -69,7 +69,7 @@ A dropdown appears search for **Application.ReadWrite.All**, check the box under
 
 The Client Secret authorizes Qualytics to programmatically create bot resources.
 
-**Step 1:**  Click on **Manage** from the side panel, then select **Certificates & secrets** from the dropdown.
+**Step 1:** In your app registration, go to the side panel and click **Manage**, then select **Certificates & secrets** from the dropdown.
 
 ![new-client-secret](../../assets/integrations/msft_teams/secret.png)
 
@@ -102,7 +102,7 @@ The Subscription ID is required to manage bot resources in your Azure environmen
 
 You need to verify if the Microsoft Bot Service resource provider is registered in your subscription.
 
-**Step 1:** Click on **Settings** in the left-hand menu, then select **Resource providers** from the dropdown.
+**Step 1:** In your subscription, click **Settings** from the left-hand menu, then select **Resource providers** from the dropdown.
 
 ![bot-service-provider](../../assets/integrations/msft_teams/provider.png)
 
@@ -113,7 +113,7 @@ You need to verify if the Microsoft Bot Service resource provider is registered 
 !!! note
     The step 3 is only required if the resource provider is not already registered. If the Microsoft.BotService provider is already marked as "Registered" in your subscription, you can skip this step.
 
-**Step 3:** Click **Register** to enable the resource provider if it's not already registered.
+**Step 3 (maybe optional):** Click **Register** to enable the resource provider if it's not already registered.
 
 ![bot-service-provider](../../assets/integrations/msft_teams/providers.png)
 
@@ -238,6 +238,10 @@ Once the app resources have been successfully provisioned, a confirmation messag
 ![settings](../../assets/integrations/msft_teams/published-light.png#only-light)
 ![settings](../../assets/integrations/msft_teams/published-dark.png#only-dark)
 
+_A microsoft dialog will appear asking you to accept the requested permissions. Click Accept to proceed with the publication._
+
+Once the app has been successfully published, a confirmation message will appear stating, **"The Teams app has been successfully published to your organization's App Catalog."**.
+
 !!! warning
     Microsoft may take up to 24 hours to make the app available in Teams after it's published.
 
@@ -256,7 +260,7 @@ To complete the integration, you need to install the Qualytics app in Microsoft 
 
 ![add-to-workspace](../../assets/integrations/msft_teams/apps.png)
 
-**Step 2:** After click on apps you will navigated to app dashboard. Select Built for your org to see custom apps for your organization and select the "Qualytics" app.
+**Step 2:** After click on apps you will navigated to app dashboard. Select **Built for your org** to see custom apps for your organization and select the **"Qualytics"** app.
 
 !!! note
     If you don't see the app immediately, it might still be propagating through Microsoft's systems. This can take up to 24 hours.
@@ -267,7 +271,7 @@ To complete the integration, you need to install the Qualytics app in Microsoft 
 
 ![add-to-workspace](../../assets/integrations/msft_teams/adds.png)
 
-**Step 4:** After clicking the Add button, a window will appear prompting you to select a team and channel where you want to add the Qualytics app. Once selected, click Go to complete the installation.
+**Step 4:** After clicking the Add button, a window will appear prompting you to select a team and channel where you want to add the Qualytics app. Once selected, click **Go** to complete the installation.
 
 ![add-to-team](../../assets/integrations/msft_teams/add-to-team.png)
 
