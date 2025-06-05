@@ -7,23 +7,46 @@
 #### Feature Enhancements
 
 - Check Details
-    - We are excited to announce a new check page visualization.
-        - Users can view all check properties in read-only mode; tags can be added or removed.
-        - Assertion Over Time: Users can monitor check assertion metrics over time via a timeline. Hovering over a point displays the assertion metrics for that moment.
-        - Check Activity: Displays check activity history, showing which user edited the check and which field was modified.
+    - We are excited to announce a new check page visualization bringing a new visualization.
+        - Users can now view all check metrics and properties in a read-only mode.
+    - Check Metrics section
+        - Displays key metrics based on the check type: Typo, Last Asserted, Weight, Coverage, and Active Anomalies.
+        - Includes the check description.
+        - Users can add or remove tags directly from this view, without needing to open a modal.
+    - Observability section
+        - Shows Assertion Over Time to help users monitor assertion results over time.
+        - A timeline is provided to visualize the check history.
+        - Hovering over a timeline point shows the Latest Assertion and Totals.
+    - Properties section
+        - Displays all check properties in read-only mode.
+        - To make changes, users must click the Edit button.
+    - Activity section
+        - Shows the full activity history for the check, including field edits and updates.
+        - If a check metric was updated, the previous and new values are shown.
 
 - Anomaly Details
     - We are thrilled to introduce the new anomaly page visualization.
-        - Users can view all anomaly summaries in read-only mode; tags can be added or removed.
-        - Clicking on a failed check item opens a right-side panel with check information in read-only mode, without leaving the page.
-        - Anomaly Activity: Shows anomaly activity history and user comments.
+        - Provides a read-only summary of each anomaly.
+    - Anomaly Metrics section
+        - Displays detailed anomaly context: status, anomalous records, failed checks, weight, detected time, and scan.
+        - Shows additional details such as source datastore, table, and location.
+    - Failed Checks section
+        - Lists failed checks associated with the anomaly.
+        - Clicking on a failed check opens a right-side panel with check information in read-only mode.
+    - Source Records section
+        - If available, displays records that failed the checks.
+        - Users can filter and sort the data to customize the view.
+    - Anomaly Activity section
+        - Shows activity history of the anomaly and what information was updated.
+        - Includes user comments related to the anomaly.
 
 - Scan Operation
-    - Added support for handling incremental scans on Iceberg tables.
+    - Iceberg table support
+        - Incremental scan handling is now supported for Iceberg tables.
 
 - Datastore
-    - Users can now see the datastore connection status in the Datastore context.
-        - A badge with the datastore icon will be displayed on breadcrumbs and in the tree view footer.
+    - Datastore connection status visibility
+        - A badge with the datastore icon now appears in the breadcrumb and tree view footer to indicate connection status.
 
 #### General Fixes and Improvements
 
