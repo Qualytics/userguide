@@ -7,18 +7,18 @@
 #### Feature Enhancements
 
 - Check Details
-    - We are excited to announce a new check page visualization bringing a new visualization.
-        - Users can now view all check metrics and properties in a read-only mode.
+    - We are excited to announce a new check page visualization.
+        - Users can now view all check metrics and properties.
     - Check Metrics section
-        - Displays key metrics based on the check type: Typo, Last Asserted, Weight, Coverage, and Active Anomalies.
+        - Displays key metrics based on the check type: Rule Type, Last Asserted, Weight, Coverage, and Active Anomalies.
         - Includes the check description.
         - Users can add or remove tags directly from this view, without needing to open a modal.
     - Observability section
         - Shows Assertion Over Time to help users monitor assertion results over time.
-        - A timeline is provided to visualize the check history.
+        - A timeline is provided to visualize the check assertions.
         - Hovering over a timeline point shows the Latest Assertion and Totals.
     - Properties section
-        - Displays all check properties in read-only mode.
+        - Displays all check properties.
         - To make changes, users must click the Edit button.
     - Activity section
         - Shows the full activity history for the check, including field edits and updates.
@@ -32,7 +32,7 @@
         - Shows additional details such as source datastore, table, and location.
     - Failed Checks section
         - Lists failed checks associated with the anomaly.
-        - Clicking on a failed check opens a right-side panel with check information in read-only mode.
+        - Clicking on a failed check opens a right-side panel with check information.
     - Source Records section
         - If available, displays records that failed the checks.
         - Users can filter and sort the data to customize the view.
