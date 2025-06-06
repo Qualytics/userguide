@@ -23,6 +23,9 @@
 - Datastore Connection Status Visibility
     - A badge attached to the datastore icon now appears in both the breadcrumb and the tree view footer, clearly indicating the connection status of the datastore.
 
+- Adding support for gzipped and .txt files in Catalog Operation
+    - Users can now use gzipped (.gz) and .txt files in DFS Datastores for Catalog Operations.
+
 #### General Fixes and Improvements
 
 - General Fixes and Improvements.
