@@ -20,9 +20,6 @@
     - Displays the complete activity history, including all updates made to the anomaly over time. User comments are also shown, making it easier to follow discussions and decisions.
     - Similar to the dedicated Quality Check page, users can edit Anomaly Tags inline.
 
-- Scan Operation: Iceberg Table Support
-    - Incremental scans now support Iceberg tables, expanding the range of asset types eligible for incremental scanning.
-
 - Datastore Connection Status Visibility
     - A badge attached to the datastore icon now appears in both the breadcrumb and the tree view footer, clearly indicating the connection status of the datastore.
 
