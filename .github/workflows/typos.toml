@@ -13,5 +13,6 @@ extend-exclude = [
   ".env.local",
   ".gitignore",
   "mkdocs.yml",
-  "requirements.txt"
+  "requirements.txt",
+  "**/.*"
 ]

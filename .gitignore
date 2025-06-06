@@ -67,5 +67,8 @@ target/
 # Local environment
 .env.Local
 
+# VSCode extensions
+.markdownlint.json
+
 .idea/
 site/

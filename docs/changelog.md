@@ -2,6 +2,34 @@
 
 ## Release Notes
 
+### 2025.6.6 { id=2025.6.6 }
+
+#### Feature Enhancements
+
+- Introducing the new Quality Check dedicated page, enabling users to analyze check properties and metrics.
+    - A Check Assert Visualization is provided to analyze assertions over time, helping users monitor assertion results, with the ability to hover over a timeline point to view the latest assertion and totals.
+    - Displays key metrics such as Status, Rule Type, Last Asserted, Weight, Coverage, and Active Anomalies and including the check description.
+    - Exposes all relevant check properties to provide a comprehensive view of each check's configuration without opening the edit modal.
+    - Shows the full activity history for the check, including property updates, and exposes previous and new values when a check setting is modified.
+    - Supports inline check tag editing by clicking the tag badge, allowing users to add or remove tags without opening a modal.
+
+- Announcing the Anomaly exclusive page: This new page will allow users to get detailed information about Anomaly metrics, Failed Checks and Source Records.
+    - Exposes detailed anomaly information, including Status, Anomalous Records, Total Failed Checks, Weight, Detected DateTime, and Scan Operation, as well as Source Datastore, Computed Table, and Location.
+    - Lists the Failed Checks that were violated and led to the creation of the anomaly. Clicking on a failed check opens a right-side panel with the corresponding quality check information, eliminating the need to navigate to a different page.
+    - Show Source Records from your data that failed the checks when available. Users can apply filters and sorting options to personalize the data display according to their preferences.
+    - Displays the complete activity history, including all updates made to the anomaly over time. User comments are also shown, making it easier to follow discussions and decisions.
+    - Similar to the dedicated Quality Check page, users can edit Anomaly Tags inline.
+
+- Datastore Connection Status Visibility
+    - A badge attached to the datastore icon now appears in both the breadcrumb and the tree view footer, clearly indicating the connection status of the datastore.
+
+- Adding support for gzipped and .txt files in Catalog Operation
+    - Users can now use gzipped (.gz) and .txt files in DFS Datastores for Catalog Operations.
+
+#### General Fixes and Improvements
+
+- General Fixes and Improvements.
+
 ### 2025.5.23 { id=2025.5.23 }
 
 #### Feature Enhancements
