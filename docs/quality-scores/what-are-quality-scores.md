@@ -42,11 +42,11 @@ most relevant data quality insights.
 ### Most Impactful Factors
 While the specific weights can be configured based on your use case, in general the factors that most heavily influence quality scores are:
 
-Coverage - Applying frequent, comprehensive quality checks is critical.
-Accuracy - Large volumes of anomalies or pattern violations severely impact scores.
-Completeness - Significant null rates are a major detractor, especially for key fields.
-Consistency - Erratic or unstable data characteristics over time reduce confidence.
-Timeliness - Stale or temporally skewed data can undermine many use cases.
+- Coverage - Applying frequent, comprehensive quality checks is critical.
+- Accuracy - Large volumes of anomalies or pattern violations severely impact scores.
+- Completeness - Significant null rates are a major detractor, especially for key fields.
+- Consistency - Erratic or unstable data characteristics over time reduce confidence.
+- Timeliness - Stale or temporally skewed data can undermine many use cases.
 
 ## Factor Impacting Rule Types
 
