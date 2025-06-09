@@ -1,6 +1,0 @@
-repos:
-  - repo: https://github.com/crate-ci/typos
-    rev: v1.33.1
-    hooks:
-      - id: typos
-        args: ["--config", ".github/workflows/typos.toml"]
