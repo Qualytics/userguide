@@ -251,9 +251,9 @@ Microsoft Teams integration enables smooth communication between your platform a
 
 ### Edit Integration
 
-Edit Integration feature allows users to modify Microsoft Teams connection settings directly from the integration panel. By selecting the Edit option from the menu, users can update configuration details and reauthorize the connection if needed.
+Edit Integration feature allows users to modify Microsoft Teams connection settings directly from the integration panel. By selecting the Edit option from the menu, users can update configuration details and reauthorize the connection if needed .
 
-**Step 1:** Click on the vertical ellipses(⋮) next to the Connected button and select the Edit option.
+**Step 1:** Click on the vertical ellipses(⋮) next to the Connected button and select the Edit option .
 
 ![vertical-ellipse](../../assets/integrations/msft_teams/vertical-light.png#only-light)
 ![vertical-ellipse](../../assets/integrations/msft_teams/vertical-dark.png#only-dark)
