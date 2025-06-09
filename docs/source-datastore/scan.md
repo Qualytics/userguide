@@ -42,7 +42,7 @@ Let's get started! 🚀
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
 
 !!! note
-    Scan operation also supports files with .gz (Gzip) and .txt extensions in DFS datastores.
+    Scan operation also supports .txt.gz and .csv.gz files in DFS datastores.
 
 **1. All Tables/File Patterns**
 
