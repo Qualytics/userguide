@@ -41,6 +41,9 @@ Let's get started! 🚀
 
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
 
+!!! note
+    Scan operation also supports files with .gz (Gzip) and .txt extensions in DFS datastores.
+
 **1. All Tables/File Patterns**
 
 This option includes all tables or file patterns currently available for scanning in the datastore. It means that every table or file pattern recognized in your datastore will be subjected to the defined data quality checks. Use this when you want to perform a comprehensive scan covering all the available data without any exclusions.
