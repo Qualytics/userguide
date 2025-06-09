@@ -245,6 +245,58 @@ Once the app has been successfully published, a confirmation message will appear
 !!! warning
     Microsoft may take up to 24 hours to make the app available in Teams after it's published.
 
+## Manage Slack Integration
+
+Microsoft Teams integration enables smooth communication between your platform and Teams channels. Users can easily modify connection settings, update authorization details, or disconnect the integration based on their requirements.
+
+### Edit Integration
+
+Edit Integration feature allows users to modify Microsoft Teams connection settings directly from the integration panel. By selecting the Edit option from the menu, users can update configuration details and reauthorize the connection if needed.
+
+**Step 1:** Click on the vertical ellipses(⋮) next to the Connected button and select the Edit option.
+
+![vertical-ellipse](../../assets/integrations/msft_teams/vertical-light.png#only-light)
+![vertical-ellipse](../../assets/integrations/msft_teams/vertical-dark.png#only-dark)
+
+**Step 2:** A modal window Edit Microsoft Teams Integration will appear providing you with options to edit the connection properties.
+
+![window](../../assets/integrations/msft_teams/window-light.png#only-light)
+![window](../../assets/integrations/msft_teams/window-dark.png#only-dark)
+
+**Step 3:** After editing the connection properties, click on the Update button to apply the changes.
+
+![update](../../assets/integrations/msft_teams/update-light.png#only-light)
+![update](../../assets/integrations/msft_teams/update-dark.png#only-dark)
+
+A confirmation message will appear on the screen displaying **“The Integration has been successfully updated”**.
+
+![message](../../assets/integrations/msft_teams/message-light.png#only-light)
+![message](../../assets/integrations/msft_teams/message-dark.png#only-dark)
+
+### Disconnect Integration
+
+Disconnecting the Microsoft Teams integration will remove its connection from your platform. This means any existing workflows, notifications, or actions relying on Microsoft Teams may stop working, though they won’t be deleted. Make sure to review any dependent flows before proceeding.
+
+**Step 1:** Click on the **vertical ellipses(⋮)** next to the connected button and select the **Disconnect** option to disconnect the integration.
+
+![disconnect](../../assets/integrations/msft_teams/disconnect-light.png#only-light)
+![disconnect](../../assets/integrations/msft_teams/disconnect-dark.png#only-dark)
+
+**Step 2:** A modal window **Disconnect Integration** will appear allowing you to disconnect the microsoft teams integration.
+
+![windows](../../assets/integrations/msft_teams/windows-light.png#only-light)
+![windows](../../assets/integrations/msft_teams/windows-dark.png#only-dark)
+
+**Step 3:** Click on the **Disconnect** button to proceed.
+
+![disconnects](../../assets/integrations/msft_teams/disconnects-light.png#only-light)
+![disconnects](../../assets/integrations/msft_teams/disconnects-dark.png#only-dark)
+
+A confirmation message will appear on the screen displaying **“The Integration has been successfully disconnected”**.
+
+![msgs](../../assets/integrations/msft_teams/messgs-light.png#only-light)
+![msgs](../../assets/integrations/msft_teams/messgs-dark.png#only-dark)
+
 ## Completing the Teams Integration
 
 After publishing the app to your organization's Teams App Catalog, the integration will show a **"Pending"** status in Qualytics until the app is installed in a Teams channel.
