@@ -238,7 +238,7 @@ Once the app resources have been successfully provisioned, a confirmation messag
 ![settings](../../assets/integrations/msft_teams/published-light.png#only-light)
 ![settings](../../assets/integrations/msft_teams/published-dark.png#only-dark)
 
-*A microsoft dialog will appear asking you to accept the requested permissions. Click Accept to proceed with the publication.*
+_A microsoft dialog will appear asking you to accept the requested permissions. Click Accept to proceed with the publication._
 
 Once the app has been successfully published, a confirmation message will appear stating, **"The Teams app has been successfully published to your organization's App Catalog."**.
 
