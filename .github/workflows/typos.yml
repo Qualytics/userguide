@@ -25,7 +25,7 @@ jobs:
           typos --version
 
       - name: Debug - List files that will be checked
-        run: typos . --config .typos.toml --files
+        run: typos --config .typos.toml --files
 
       - name: Run typos
-        run: typos . --config .typos.toml
+        run: typos --config .typos.toml
