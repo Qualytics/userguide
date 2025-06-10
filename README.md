@@ -132,9 +132,3 @@ To configure it, add the following snippet to your `.vscode/settings.json`:
 
 > [!NOTE]
 > Make sure `pre-commit` is installed and the virtual environment is activated in your terminal when using this setup.
-
-tetss
-
-datasto er
-
-pannel
