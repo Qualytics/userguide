@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "emeraldwalk.runonsave"
+    "emeraldwalk.runonsave",
+    "DavidAnson.vscode-markdownlint"
   ]
 }
