@@ -25,4 +25,4 @@ jobs:
           typos --version
 
       - name: Run typos
-        run: typos . --config .github/workflows/typos.toml --debug
+        run: typos . --config .github/workflows/typos.toml
