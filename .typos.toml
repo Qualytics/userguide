@@ -7,13 +7,14 @@ AKS = "AKS"
 
 [files]
 extend-exclude = [
-  "**/.*",
-  "**/.**",
-  "./**",
-  "./docs/**",
-  "./docs/*",
   "./README.md",
-  "venv/*",
+  "./docs/**",
+  "./doc/**",
+  
+  ".*",
+  ".*/**",
+  
+  "venv/**",
   ".env.local",
   ".gitignore",
   "mkdocs.yml",
