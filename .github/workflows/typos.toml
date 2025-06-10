@@ -7,17 +7,7 @@ AKS = "AKS"
 
 [files]
 extend-exclude = [
-  "**/.*",
-  "**/*.png",
-  "**/*.jpg",
-  "**/*.jpeg",
-  "**/*.svg",
-  "**/*.gif",
-  "**/*.ico",
-  "doc/**",
-  "README.md",
-  "docs/legacy/*",
-  "docs/assets/**/*",
+  "docs/**",
   "venv/*",
   ".env.local",
   ".gitignore",
