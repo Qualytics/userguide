@@ -14,6 +14,35 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Ensure we have a clean checkout
+          fetch-depth: 0
+          clean: true
+          
+      # Clean workspace to ensure no cached files
+      - name: Clean workspace
+        run: |
+          git clean -ffdx
+          git reset --hard HEAD
+          
+      - name: Debug - Show current state
+        run: |
+          echo "=== Current branch and commit ==="
+          git branch --show-current
+          git log -1 --oneline
+          echo ""
+          echo "=== Git status ==="
+          git status
+          echo ""
+          echo "=== Check if files exist ==="
+          ls -la
+          echo ""
+          echo "=== Show .typos.toml if exists ==="
+          if [ -f .typos.toml ]; then
+            cat .typos.toml
+          else
+            echo ".typos.toml not found!"
+          fi
 
       - name: Install latest typos
         run: |
@@ -25,7 +54,10 @@ jobs:
           typos --version
 
       - name: Debug - List files that will be checked
-        run: typos --config .typos.toml --files
+        run: |
+          echo "=== Files that typos will check ==="
+          typos --config .typos.toml --files | head -20
+          echo "... (showing first 20 files)"
 
       - name: Run typos
         run: typos --config .typos.toml
