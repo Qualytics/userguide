@@ -3,4 +3,4 @@ repos:
     rev: v1.33.1
     hooks:
       - id: typos
-        args: ["--config", ".github/workflows/typos.toml"]
+        args: ["--config", ".typos.toml"]
