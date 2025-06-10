@@ -233,7 +233,6 @@ The Explore interface provides comprehensive visibility:
   ![explore-insights](./assets/quick-start-guide/explore-insights-light.png#only-light)
   ![explore-insights](./assets/quick-start-guide/explore-insights-dark.png#only-dark)
   
-
 #### 2. Activity
 
 - Operation history and status
@@ -243,8 +242,8 @@ The Explore interface provides comprehensive visibility:
   ![explore-activity](./assets/quick-start-guide/explore-activity-light.png#only-light)
   ![explore-activity](./assets/quick-start-guide/explore-activity-dark.png#only-dark)
 
-
 #### 3. Profiles
+
 Unified view of all data assets:
 
 - Tables and Views
@@ -255,6 +254,7 @@ Unified view of all data assets:
   ![explore-profiles](./assets/quick-start-guide/explore-profiles-dark.png#only-dark)
 
 #### 4. Observability
+
 Monitor platform health and performance:
 
 - Volume metrics
@@ -267,6 +267,7 @@ Monitor platform health and performance:
 ## Configuration & Management
 
 ### Tags
+
 Organize and prioritize:
 
 - Categorize data assets
@@ -277,6 +278,7 @@ Organize and prioritize:
   ![settings-tags](./assets/quick-start-guide/settings-tags-dark.png#only-dark)
 
 ### Flows
+
 Automate and streamline:
 
 - Trigger actions based on specific events
@@ -328,5 +330,3 @@ Now that you're familiar with Qualytics basics, consider:
 4. Exploring advanced features
 
 For detailed information on any topic, explore the relevant sections in our documentation.
-
-Supress
