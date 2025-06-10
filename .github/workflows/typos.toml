@@ -14,5 +14,6 @@ extend-exclude = [
   ".env.local",
   ".gitignore",
   "mkdocs.yml",
+  "README.md",
   "requirements.txt"
 ]
