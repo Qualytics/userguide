@@ -8,8 +8,13 @@ AKS = "AKS"
 [files]
 extend-exclude = [
   "./README.md",
-  "./docs/**",
-  "./doc/**",
+  "./docs/**/*",
+  "./doc/**/*",
+  "./includes/**/*",
+  
+  "*/README.md",
+  "*/docs/**",
+  "*/doc/**",
   
   ".*",
   ".*/**",

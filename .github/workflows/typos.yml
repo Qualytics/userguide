@@ -24,5 +24,8 @@ jobs:
           sudo mv typos /usr/local/bin/
           typos --version
 
+      - name: Debug - List files that will be checked
+        run: typos . --config .typos.toml --files
+
       - name: Run typos
-        run: typos . --config .typos.toml  -v --files
+        run: typos . --config .typos.toml
