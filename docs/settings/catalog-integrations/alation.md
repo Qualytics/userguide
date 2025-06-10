@@ -145,5 +145,3 @@ On the Alation tables page, there's a tab called “Data Health” where Qualyti
 | Value | The current amount of active anomalies |
 | Description | The data quality check description |
 | Last Updated | The last synced timestamp |
-
-Teh
