@@ -25,4 +25,4 @@ jobs:
           typos --version
 
       - name: Run typos
-        run: typos . --config .typos.toml
+        run: typos . --config .typos.toml  -v --files
