@@ -2,6 +2,87 @@
 
 ## Release Notes
 
+### 2025.6.6 { id=2025.6.6 }
+
+#### Feature Enhancements
+
+- Introducing the new Quality Check dedicated page, enabling users to analyze check properties and metrics.
+    - A Check Assert Visualization is provided to analyze assertions over time, helping users monitor assertion results, with the ability to hover over a timeline point to view the latest assertion and totals.
+    - Displays key metrics such as Status, Rule Type, Last Asserted, Weight, Coverage, and Active Anomalies and including the check description.
+    - Exposes all relevant check properties to provide a comprehensive view of each check's configuration without opening the edit modal.
+    - Shows the full activity history for the check, including property updates, and exposes previous and new values when a check setting is modified.
+    - Supports inline check tag editing by clicking the tag badge, allowing users to add or remove tags without opening a modal.
+
+- Announcing the Anomaly exclusive page: This new page will allow users to get detailed information about Anomaly metrics, Failed Checks and Source Records.
+    - Exposes detailed anomaly information, including Status, Anomalous Records, Total Failed Checks, Weight, Detected DateTime, and Scan Operation, as well as Source Datastore, Computed Table, and Location.
+    - Lists the Failed Checks that were violated and led to the creation of the anomaly. Clicking on a failed check opens a right-side panel with the corresponding quality check information, eliminating the need to navigate to a different page.
+    - Show Source Records from your data that failed the checks when available. Users can apply filters and sorting options to personalize the data display according to their preferences.
+    - Displays the complete activity history, including all updates made to the anomaly over time. User comments are also shown, making it easier to follow discussions and decisions.
+    - Similar to the dedicated Quality Check page, users can edit Anomaly Tags inline.
+
+- Datastore Connection Status Visibility
+    - A badge attached to the datastore icon now appears in both the breadcrumb and the tree view footer, clearly indicating the connection status of the datastore.
+
+- Adding support for gzipped and .txt files in Catalog Operation
+    - Users can now use gzipped (.gz) and .txt files in DFS Datastores for Catalog Operations.
+
+#### General Fixes and Improvements
+
+- General Fixes and Improvements.
+
+### 2025.5.23 { id=2025.5.23 }
+
+#### Feature Enhancements
+
+- Atlan Integration
+    - Users can now choose whether or not to receive notifications in the Atlan platform, giving more control over their notification preferences.
+
+- Freshness Heatmap
+    - The freshness chart has been redesigned for an improved user experience.
+    - Milliseconds are now displayed in a more readable date/time format for better comprehension, while the underlying data still uses milliseconds.
+
+#### General Fixes and Improvements
+
+- Create User
+    - Fixed a bug that occurred when creating a service user with automatic admin permission enabled.
+
+- Rerun Operations
+    - Catalog, export, and materialize operations will now only display rerun operations.
+
+- General Fixes and Improvements.
+
+### 2025.5.16 { id=2025.5.16 }
+
+#### Feature Enhancements
+
+- Anomaly
+    - Users can now view the Anomaly Fingerprint directly in the Anomaly Details page.
+    - A new button allows users to quickly copy the fingerprint value.
+    - A link to the User Guide has been added to explain how this feature works.
+
+- Datastore Connection
+    - A new validation step was added to several connectors to verify if the specified schema exists.
+
+#### General Fixes and Improvements
+
+- Schedule Operation
+    - Fixed a bug in scheduled operations that allowed `None` as a value for `max_records_analyzed_per_partition` when updating.
+
+- Check
+    - Fixed an issue where creating a metric check with a non-existent comparison value would fail..
+    - Fixed a bug where checks would fail if the filtered set was empty — now the check will pass in this case.
+
+- Catalog Operation
+    - Fixed an issue in DB2 where evaluating the distribution of values caused an error.
+
+- Scheduled Scan
+    - Fixed an issue that occurred when adding connection retries related to the Secrets Manager.
+
+- Anomaly
+    - Fixed an issue where some triggered anomalies had no data available.
+
+- General Fixes and Improvements.
+
 ### 2025.5.9 { id=2025.5.9 }
 
 #### Feature Enhancements

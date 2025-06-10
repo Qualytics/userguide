@@ -48,7 +48,6 @@ nav:
         - add-datastores/azure-blob-storage.md
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
-        - add-datastores/qfs.md
       - connections/overview-of-a-connection.md
     # new page tree structure end
     - Source Datastores:

@@ -39,6 +39,15 @@ system to align with your organization’s data governance priorities. Additiona
 data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the
 most relevant data quality insights.
 
+### Most Impactful Factors
+While the specific weights can be configured based on your use case, in general the factors that most heavily influence quality scores are:
+
+- Coverage - Applying frequent, comprehensive quality checks is critical.
+- Accuracy - Large volumes of anomalies or pattern violations severely impact scores.
+- Completeness - Significant null rates are a major detractor, especially for key fields.
+- Consistency - Erratic or unstable data characteristics over time reduce confidence.
+- Timeliness - Stale or temporally skewed data can undermine many use cases.
+
 ## Factor Impacting Rule Types
 
 Specific check rule types are considered for factor score calculations at the field level for the following factors.

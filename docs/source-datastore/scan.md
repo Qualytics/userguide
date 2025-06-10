@@ -41,6 +41,9 @@ Let's get started! 🚀
 
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
 
+!!! note
+    Scan operation also supports .txt.gz and .csv.gz files in DFS datastores.
+
 **1. All Tables/File Patterns**
 
 This option includes all tables or file patterns currently available for scanning in the datastore. It means that every table or file pattern recognized in your datastore will be subjected to the defined data quality checks. Use this when you want to perform a comprehensive scan covering all the available data without any exclusions.
@@ -55,7 +58,7 @@ This option allows you to manually select the individual table(s) or file patter
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purpoaes
 
 ![specific](../assets/datastores/scan/specfic-light.png#only-light)
-![specfic](../assets/datastores/scan/specfic-dark.png#only-dark)
+![specific](../assets/datastores/scan/specfic-dark.png#only-dark)
 
 **3. Tag**
 
@@ -147,7 +150,7 @@ Users can choose one or more check categories when initiating a scan. This allow
 **3. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
 
 ![source-record-limit](../assets/datastores/scan/source-record-limit-light.png#only-light)
-![souce-record-limit](../assets/datastores/scan/source-record-limit-dark.png#only-dark)
+![source-record-limit](../assets/datastores/scan/source-record-limit-dark.png#only-dark)
 
 ## Run Instantly
 
@@ -272,7 +275,7 @@ When the scan operation is completed, you will receive the notification and can 
 **5. Filter:** Narrow down the list of operations based on:
 
 -   Operation Type
--   Oeration Status   
+-   Operation Status   
 -   Table
 
 ![activity-operation](../assets/datastores/scan/activity-operation-light.png#only-light)

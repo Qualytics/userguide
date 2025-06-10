@@ -71,7 +71,7 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 11 | Edit Checks | Edit the check to modify settings, or add tags for better customization and monitoring. |
 | 12 | Group By  | Users can also Group By specific intervals, such as day, week, or month, to observe trends over different periods. |
 | 13 |  Measurement Period  | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
-| 14 |  Comparision  | These indicate the type of comparison used, indicating the "Absolute Value" method |
+| 14 |  Comparison  | These indicate the type of comparison used, indicating the "Absolute Value" method |
 | 15 |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows) |
 | 16 |  Max Values. | These indicate the maximum thresholds for the row count of the table being checked |
 | 17 |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
@@ -115,7 +115,7 @@ A modal window will appear with the check details.
 
 | No | Fields | Description |
 | :---- | :---- | :---- |
-| 1 | Comparision | Edits the type of comparison to Absolute Change, Absolute Value, or Percentage Change. |
+| 1 | Comparison | Edits the type of comparison to Absolute Change, Absolute Value, or Percentage Change. |
 | 2 | Measurement Periods Days | Edit the **Measurement Period Days** to change how often the check runs (e.g., 1 day, 2 days, etc). |
 | 3 | Min Value and Max Value | Edit the **Min Value** and **Max Value** to set new row count limits. If the row count exceeds these limits, an alert will be triggered. |
 | 4 | Description | Edit the **Description** to better explain what the check does. |
@@ -198,7 +198,7 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 
 ### **Freshness**   
 
-This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
+This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. Users can view timestamp values in a clear date and time format, making it easier to analyze data freshness while maintaining millisecond-level precision in the background. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
 
 ![freshness](../assets/observability/freshness-detail-light-666.png#only-light)
 ![freshness](../assets/observability/freshness-detail-dark-666.png#only-dark)

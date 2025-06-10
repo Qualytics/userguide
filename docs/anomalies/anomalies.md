@@ -81,7 +81,7 @@ A shape anomaly identifies anomalous structure within the analyzed data. The sim
 !!! note
     When a shape anomaly affects only a portion of the dataset, Qualytics can count the number of rows that have the structural problem. This count is stored in the **anomalous_record_count** field, providing a clear measure of how widespread the issue is within the dataset. Example: Imagine a dataset that is supposed to have columns for **id**, **name**, **age**, and **salary**. If some rows are missing the **salary** column, this would be flagged as a shape anomaly. If this issue only affects 50 out of 1,000 rows, the **anomalous_record_count** would be 50, indicating that 50 rows have a structural issue.
 
-## Anomaly Status 
+## Anomaly Status
 
 Anomaly status is a crucial feature for managing and addressing data quality issues. It provides a structured way to track and resolve anomalies detected in your data, ensuring that data integrity is maintained. Here's a breakdown of the different anomaly statuses:
 
@@ -89,7 +89,7 @@ Anomaly status is a crucial feature for managing and addressing data quality iss
 
 **Acknowledged:** This status indicates that the anomaly has been verified as a legitimate data quality concern but has not yet been resolved.  
 
-**Resolved:** This status indicates that the anomaly was a legitimate data quality concern that has been addressed and fixed. 
+**Resolved:** This status indicates that the anomaly was a legitimate data quality concern that has been addressed and fixed.
 
 **Duplicate:** This status indicates that the anomaly is a duplicate of an existing one, meaning it has already been reported and does not require separate action.
 
@@ -107,17 +107,19 @@ The anomaly identified during the scan operation illustrates the following detai
 
 **4. Anomaly UID:** A longer, standardized, and globally unique identifier, displayed as a string of hexadecimal characters. This can be copied to the clipboard.
 
-**5. Acknowledge:** Use this option to mark an anomaly as reviewed. Acknowledging an anomaly means it has been identified and noted, but it remains active until resolved.
+**5. Fingerprint:** The fingerprint icon indicates whether an anomaly has an associated fingerprint. If present, clicking the icon copies the fingerprint number to the clipboard. Hovering over the icon displays a tooltip with a link to the user guide.
 
-**6. Archive:** Use this option to remove an anomaly from the active list. Archiving an anomaly does not delete it but stores it for historical tracking and future reference.
+**6. Acknowledge:** Use this option to mark an anomaly as reviewed. Acknowledging an anomaly means it has been identified and noted, but it remains active until resolved.
 
-**7. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
+**7. Archive:** Use this option to remove an anomaly from the active list. Archiving an anomaly does not delete it but stores it for historical tracking and future reference.
 
-**8. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
+**8. Type:** This reflects the **type** to which the anomaly belongs (e.g. Record or Shape).
 
-**9. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+**9. Weight:** A metric that indicates the severity or importance of the anomaly. Higher weights indicate more critical issues.
 
-**10. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
+**10. Detected:** Reflects the **timestamp** when the anomaly was first detected.
+
+**11. Scan:** Click on this to view the outcome of a data quality scan. It includes the scan status, the time taken, the user who triggered it, the schedule status, and a detailed list of anomalies detected across various tables.
 
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-light.png#only-light)
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-dark.png#only-dark)
@@ -136,7 +138,7 @@ In addition to the above details, the users can also explore the following addit
 
 **3. Location:** Full path or location within the data hierarchy where the table resides. It gives a complete reference to the exact position of the data in the database or data warehouse.
 
-![detials](../assets/datastores/anomalies/details-light.png#only-light)
+![details](../assets/datastores/anomalies/details-light.png#only-light)
 ![details](../assets/datastores/anomalies/details-dark.png#only-dark)
 
 ## Anomaly Fingerprints
@@ -144,23 +146,26 @@ In addition to the above details, the users can also explore the following addit
 Anomalies are uniquely fingerprinted to allow the system to recognize duplicates. This fingerprinting mechanism helps streamline anomaly management by preventing redundant work on identical problems.
 
 ### Duplicate Handling Configuration
+
 When configuring a scan operation to identify anomalies in your data, you can specify how duplicates should be treated:
 
-- **Duplicate Status**: You can elect to set the status of newly identified anomalies that are identical to existing open anomalies to "duplicate" so that they will be automatically archived in favor of the existing anomaly.
+- **Duplicate Status**: You can select to set the status of newly identified anomalies that are identical to existing open anomalies to "duplicate" so that they will be automatically archived in favor of the existing anomaly.
 - **Re-opening Option**: You can also optionally re-open any identical anomalies that were previously identified but marked archived.
 
 ### Fingerprinting Criteria
 
 #### Record Anomalies
+
 When record anomalies are fingerprinted, the system considers:
 
 - The identifying check
 - All source data from the anomalous record
 
 !!! note
-    Identical rows will generate identical anomalies. 
+    Identical rows will generate identical anomalies.
 
 #### Shape Anomalies
+
 When shape anomalies are fingerprinted, the system considers:
 
 - The identifying check(s)
@@ -170,23 +175,21 @@ When shape anomalies are fingerprinted, the system considers:
 !!! tip
     A data asset must have an incremental identifier to support fingerprinting of shape anomalies. This is because the maximum value of that identifier in the scanned dataset is used to generate the shape anomaly's fingerprint. This requirement helps ensure that only shape anomalies derived from the same underlying data are considered identical. Shape anomalies with the same details derived from different ranges of data are not considered identical.
 
-
-
 ## Source Records
 
 The **Source Records** section displays all the data and fields related to the detected anomaly from the dataset. It is an **Enrichment Datastore** that is used to store the analyzed results, including any anomalies and additional metadata in files, hence it is recommended to add/link an enrichment datastore with your connected source datastore.
 
-If the Anomaly Type is **Shape**, you will find the highlighted column(s) having anomalies in the source record. 
+If the Anomaly Type is **Shape**, you will find the highlighted column(s) having anomalies in the source record.
 
 ![source-record](../assets/datastores/anomalies/source-record-light.png#only-light)
 ![source-record](../assets/datastores/anomalies/source-record-dark.png#only-dark)
 
-If the Anomaly Type is **Record**, you will find the highlighted row(s) in the source record indicating failed checks. In the snippet below, it can be observed that 7 checks have been failed in the row. 
+If the Anomaly Type is **Record**, you will find the highlighted row(s) in the source record indicating failed checks. In the snippet below, it can be observed that 7 checks have been failed in the row.
 
 ![record](../assets/datastores/anomalies/record-light.png#only-light)
 ![record](../assets/datastores/anomalies/record-dark.png#only-dark)
 
-!!! note 
+!!! note
     In anomaly detection, source records are displayed as part of the Anomaly Details. For a Record anomaly, the specific record is highlighted. For a Shape anomaly, 10 samples from the underlying anomalous records are highlighted.
 
 ## Comparison Source Records
@@ -196,7 +199,7 @@ Anomalies identified by the **Is Replica Of** data quality rule type, configured
 ![in-replica](../assets/datastores/anomalies/in-replica-light.png#only-light)
 ![in-replica](../assets/datastores/anomalies/in-replica-dark.png#only-dark)
 
-Structure of the Comparison Source Records: 
+Structure of the Comparison Source Records:
 
 **1. Left and Right Fields:**
 
@@ -206,7 +209,7 @@ If the value in the right column (reference) differs from the value in the left 
 
 **2. _qualytics_diff Column:** This column provides the status of each row, which can be one of the following:
 
-**Added:** The row is missing on the left side (target) but found on the right side (reference). 
+**Added:** The row is missing on the left side (target) but found on the right side (reference).
 
 **Removed:** The row is present on the left side (target) but missing on the right side (reference).
 
@@ -225,7 +228,6 @@ This allows users to view detailed explanations of each failed check by hovering
 
 ![failed-check-description](../assets/datastores/anomalies/failed-check-description-light.png#only-light)
 ![failed-check-description](../assets/datastores/anomalies/failed-check-description-dark.png#only-dark)
-
 
 ### Download Source Records
 
@@ -257,7 +259,7 @@ You can update the status of anomalies by acknowledging them to confirm they are
 
 ### Acknowledge Anomalies
 
-You can acknowledge anomalies to confirm that they represent real data issues that need attention. By acknowledging an anomaly, you provide feedback to the system, validating the detection and helping it improve future checks. 
+You can acknowledge anomalies to confirm that they represent real data issues that need attention. By acknowledging an anomaly, you provide feedback to the system, validating the detection and helping it improve future checks.
 
 For more details on how to acknowledge anomalies, please refer to the documentation on [Acknowledge Anomalies](./manage-anomalies.md/#acknowledge).
 
@@ -268,7 +270,6 @@ You can archive the anomalies when they are determined to be false positives or 
 For instance, if an anomaly is marked as invalid, the tolerances of the checks that identified the anomaly will be updated to prevent similar false positives in the future. This continuous feedback loop enhances the accuracy and relevance of data quality checks over time.
 
 For more details on how to archive anomalies, please refer to the documentation on [Archive Anomalies](./manage-anomalies.md/#archived)
-
 
 ## API Payload Examples  
 

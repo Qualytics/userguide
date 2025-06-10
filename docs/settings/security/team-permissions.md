@@ -6,7 +6,7 @@ hide:
 
 # Team Permissions
 
-Admins are not subject to Team permissions and can therefore access all data assets. By contrast, users assigned the Member and Manager roles are subject to Team permissions which control the data assets they can interact with. 
+Admins are not subject to Team permissions and can therefore access all data assets. By contrast, users assigned the Member and Manager roles are subject to Team permissions which control the data assets they can interact with.
 
 Team permissions are granted at the Datastore level and extend to all data assets under that Datastore (Tables/View/Files, Fields, Quality Checks, Anomalies, etc...)
 
@@ -43,18 +43,16 @@ Legend:
 | View Enrichment Datastore    | -          | X        | X         | X        | X             |
 | Preview Enrichment Datastore | -          | X        | X         | X        | X             |
 
-
 ## Add Team
 
 You can create a new team for efficient and secure data management. Teams make it easier to control who has access to what, help people work together better, keep things secure with consistent rules, and simplify managing and expanding user groups. You can assign permissions to the team, such as Editor, Author, Drafter, Viewer and Reporter access, by selecting the datastore and enrichment datastore to which you want them to have access. This makes data management easier.
-
 
 **Step 1**: Click on the **Add Team** button located in the top right corner.
 
 ![add-team](../../assets/security/add-team-light-3.png#only-light)
 ![add-team](../../assets/security/add-team-dark-3.png#only-dark)
 
-**Step 2**: A modal window will appear, providing the options for creating the team. Enter the required values to get started. 
+**Step 2**: A modal window will appear, providing the options for creating the team. Enter the required values to get started.
 
 | REF.     | FIELD        | ACTION     | EXAMPLE          |
 |----------|--------------|------------|------------------|
@@ -80,7 +78,7 @@ Editor role allows users to manage datastore functions comprehensively. They can
 
 | Feature | Operation | Can View/Can Run | Can Manage |
 | :---- | :---- | :---- | :---- |
-| **Datastoes** | Add Datastore |  | **✓** |
+| **Datastores** | Add Datastore |  | **✓** |
 |  | Edit Settings |  | **✓** |
 | **Enrichment** | Add Enrichment |  | **✓** |
 |  | Edit Enrichment |  | **✓** |

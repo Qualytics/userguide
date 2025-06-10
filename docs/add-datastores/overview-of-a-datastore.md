@@ -31,7 +31,7 @@ Qualytics integrates with these data sources through a layered architecture:
 ![datastore](../assets/datastores/what-is/datastore.png#only-light)
 ![datastore](../assets/datastores/what-is/datastore.png#only-dark)
 
-## Configuring Data Source 
+## Configuring Data Source
 
 Configure your data sources in Qualytics by connecting them through a new datastore.
 
@@ -77,7 +77,6 @@ Qualytics supports a range of datasource, including but not limited to:
 |      18. |         [Google Cloud Storage](../add-datastores/google-cloud-storage.md) |
 |     19. |      [Window Azure Storage Blob](../add-datastores/azure-datalake-storage.md) |
 |     20. |        [Azure Blob File System](../add-datastores/azure-blob-storage.md) |
-|     21. |      [Qualytics File System (QFS)](../add-datastores/qfs.md) |
 
 ## Connection Management
 
@@ -108,7 +107,7 @@ Once a datastore is added in Qualytics, you can perform three key operations to 
 **1.Catalog Operation**
 
    This operation imports named data collections such as tables, views, and files into the source datastore. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.  
-     
+
    For more details about the catalog operation, refer to the "[**Catalog Operation**](../source-datastore/catalog.md)" document.
 
 **2. Profile Operation**
@@ -133,7 +132,6 @@ Once the datastores are connected, you can run operations on the selected datast
 
 ![home](../assets/datastores/what-is/home-light-5.png#only-light)
 ![home](../assets/datastores/what-is/home-dark-5.png#only-dark)
-
 
 **Step 2:** After click on datastore, select the "Activity" tab to view the ongoing operation.
 

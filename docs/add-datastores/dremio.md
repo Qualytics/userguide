@@ -141,7 +141,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | ---- | ---- | ---- |
 | 1 | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2 | Name | Give a name for the enrichment datastore. |
-| 3 | Toggel Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 3 | Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
 | 4 | Connector | Select a datastore connector from the dropdown list. |
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
