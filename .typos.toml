@@ -7,7 +7,7 @@ AKS = "AKS"
 
 [files]
 extend-exclude = [
-  "assets/*",
+  "docs/assets/*",
   "docs/legacy/*",
   "scripts/ignore_this.sh",
   "venv/*",
