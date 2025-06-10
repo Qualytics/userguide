@@ -8,7 +8,9 @@ AKS = "AKS"
 [files]
 extend-exclude = [
   "**/.*",
+  "**/.**",
   "./**",
+  "./docs/**",
   "venv/*",
   ".env.local",
   ".gitignore",
