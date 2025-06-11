@@ -678,6 +678,71 @@ After clicking the **"Template"** button, the check will be saved and created as
 ![quality-check](../assets/checks/manage-checks/quality-check-light-93.png#only-light)
 ![quality-check](../assets/checks/manage-checks/quality-check-dark-93.png#only-dark)
 
+## Check Details
+
+Check Detail View displays all key information related to a specific data quality check. It shows what the check is monitoring, how it's configured, where it's applied in the dataset, and whether any issues have been found. It also includes sections for viewing the check’s recent performance, related activities, and any additional metadata. This view helps users easily understand the purpose and current state of the check.
+
+**Step 1:** Click on the check that you want to see the details of.
+
+![success-msg](../assets/checks/manage-checks/see-light-98.png#only-light)
+![success-msg](../assets/checks/manage-checks/see-dark-98.png#only-dark)
+
+You will be navigated to the detail section, where you can view the **Summary**, **Observability,** **Properties**, **Activity**, and **Metadata** information.
+
+![detail](../assets/checks/manage-checks/detail-light-98.png#only-light)
+![detail](../assets/checks/manage-checks/detail-dark-98.png#only-dark)
+
+### Summary Section
+
+The Summary section shows that a data quality check is applied to a field and is currently active. It indicates that the check was created automatically by the system, is being applied to the entire dataset, and has a set importance level. It also shows when the check last ran and whether there are any current issues found in the data.
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| 1. | Check & Status| The type of check applied to the data. In this case, it's a **Unique** check to ensure no duplicate values and the check is **Active**, meaning it's currently being applied. |
+| 2. | Type | This check is **Inferred**, meaning it was automatically created by the system. |
+| 3. | Last Asserted | Shows when the check was last run – **13 hours ago** in this case. |
+| 4. | Weight | Indicates the importance or priority of this check – the weight is **8**. |
+| 5. | Coverage | How much data this check applies to – here it's **100%**, meaning it applies to the whole dataset. |
+| 6. | Active Anomalies | Number of current issues found – **5 anomalies** are active right now. |
+| 7. | Description | Explains the rule or condition that the check is validating. |
+| 8. | Tags | Displays any tags linked to the check. Users can also add new tags by clicking on the tag area. |
+
+![summary-msg](../assets/checks/manage-checks/summary-light-98.png#only-light)
+![summary-msg](../assets/checks/manage-checks/summary-dark-98.png#only-dark)
+
+### Observability Section
+
+**Observability** provides a visual overview of how a check performs over time by tracking assertion results. It helps identify trends, failures, or anomalies using daily status indicators across a selected timeframe.
+
+![observability](../assets/checks/manage-checks/observability-light-98.png#only-light)
+![observability](../assets/checks/manage-checks/observability-dark-98.png#only-dark)
+
+Users can hover over any date in the timeline to view detailed assertion information, including result status, number of asserted records, and anomalous records for that day.
+
+![hover](../assets/checks/manage-checks/hover-light-98.png#only-light)
+![hover](../assets/checks/manage-checks/hover-dark-98.png#only-dark)
+
+### Properties Section
+
+The Properties section explains where this check is applied. In this case, the check is applied to a table called **customer**. It's focused on the **phone string** field to ensure that no two records have the same phone number. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
+
+![properties](../assets/checks/manage-checks/properties-light-98.png#only-light)
+![properties](../assets/checks/manage-checks/properties-dark-98.png#only-dark)
+
+### Activity Section
+
+The Activity section shows a brief history of what has happened with this check. First, the system (Qualytics) created the check one day ago. Later, the system also changed the weight of the check to 8. These changes help keep track of how the check is evolving over time and who made the updates.
+
+![activity](../assets/checks/manage-checks/activity-light-98.png#only-light)
+![activity](../assets/checks/manage-checks/activity-dark-98.png#only-dark)
+
+### Metadata Section
+
+Currently, there is no extra metadata added to this check. Metadata can include additional notes or properties, but in this case, it's left blank.
+
+![metadata](../assets/checks/manage-checks/metadata-light-98.png#only-light)
+![metadata](../assets/checks/manage-checks/metadata-dark-98.png#only-dark)
+
 ## Filter and Sort
 
 Filter and Sort options allow you to organize your checks by various criteria, such as Weight, Active Anomalies, Coverage, Created Date, and Rules. You can also apply filters to refine your list of checks based on Check Type, Asserted State (Passed, Failed, Not Asserted), Tags, Tables, and Fields.
