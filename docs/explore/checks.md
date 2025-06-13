@@ -38,7 +38,23 @@ By selecting **Active**, you can view checks that are currently applied and bein
 
 You can also categorize the active checks based on their importance, favorites, or specific metrics to streamline your data quality monitoring.
 
-For more details on Active Checks, please refer to the [**Active Checks**](../checks/manage-checks.md/#active) section in the documentation.
+**1. Important:** Shows only checks that are marked as important. These checks are prioritized based on their significance, typically assigned a weight of 7 or higher.
+
+!!! note 
+    Important checks are prioritized based on a weight of 7 or higher.
+
+![important](../assets/explore/checks/important-light-5.png#only-light)
+![important](../assets/explore/checks/important-dark-5.png#only-dark)
+
+**2. Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently. 
+
+![favorite](../assets/explore/checks/favorite-light-6.png#only-light)
+![favorite](../assets/explore/checks/favorite-dark-6.png#only-dark)
+
+**3. All:** Displays a comprehensive view of all active checks, including important, favorite and any checks that do not fall under these specific categories. 
+
+![all](../assets/explore/checks/all-light-8.png#only-light)
+![all](../assets/explore/checks/all-dark-8.png#only-dark)
 
 ### Draft Checks
 
@@ -49,7 +65,20 @@ By selecting **Draft**, you can view checks that have been created but have not 
 
 You can also categorize the draft checks based on their importance, favorites, or specific metrics to prioritize and organize them effectively during the review and adjustment process.
 
-For more details on Draft Checks, please refer to the [**Draft Checks**](../checks/manage-checks.md/#draft-checks) section in the documentation.
+**1. Important:** Shows only checks that are marked as important. These checks are prioritized based on their significance, typically assigned a weight of 7 or higher.
+
+![important](../assets/explore/checks/important-light-10.png#only-light)
+![important](../assets/explore/checks/important-dark-10.png#only-dark)
+
+**2 Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently.  
+
+![favorite](../assets/explore/checks/favorite-light-11.png#only-light)
+![favorite](../assets/explore/checks/favorite-dark-11.png#only-dark)
+
+**3. All:** Displays a comprehensive view of all draft checks, including important, favorite and any checks that do not fall under these specific categories.
+
+![all](../assets/explore/checks/all-light-13.png#only-light)
+![all](../assets/explore/checks/all-dark-13.png#only-dark)
 
 ### Archived Checks
 
@@ -60,7 +89,20 @@ By selecting **Archived**, you can view checks that have been marked as discarde
 
 You can also categorize the archived checks based on their status as **Discarded**, **Invalid**, or view **All** archived checks to manage and review them effectively.
 
-For more details on Archived Checks, please refer to the [**Archived Checks**](../checks/manage-checks.md/#archived-checks) section in the documentation.
+**1. Discarded**: Shows checks that have been marked as no longer useful or relevant and have been discarded from use.
+
+![discarded](../assets/explore/checks/discarded-light-15.png#only-light)
+![discarded](../assets/explore/checks/discarded-dark-15.png#only-dark)
+
+**2. Invalid**: Displays checks that are deemed invalid due to errors or misconfigurations, requiring review or deletion.
+
+![invalid](../assets/explore/checks/invalid-light-16.png#only-light)
+![invalid](../assets/explore/checks/invalid-dark-16.png#only-dark)
+
+**3. All**: Provides a view of all archive checks within this category including discarded and invalid checks.
+
+![all](../assets/explore/checks/all-light-17.png#only-light)
+![all](../assets/explore/checks/all-dark-17.png#only-dark)
 
 ## Check Details
 
@@ -71,7 +113,40 @@ Check Details provides important information about each check in the system. It 
 ![check-detail](../assets/explore/checks/check-detail-light.png#only-light)
 ![check-detail](../assets/explore/checks/check-detail-dark.png#only-dark)
 
-For more steps and further information, please refer to the [**Check Details**](../checks/manage-checks.md/#check-details) section in the documentation.
+A popup will appear with additional details about the check.
+
+![popup](../assets/explore/checks/popup-light-17.png#only-light)
+![popup](../assets/explore/checks/popup-dark-17.png#only-dark)
+
+### Last Asserted
+Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **Oct 17, 2023, at 2:37 AM (GMT+5:30).**
+
+![popup](../assets/explore/checks/asserted-light-17.png#only-light)
+![popup](../assets/explore/checks/asserted-dark-17.png#only-dark)
+
+### Scans
+Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **30 operations.**
+
+![scan](../assets/explore/checks/scan-light-17.png#only-light)
+![scan](../assets/explore/checks/scan-dark-17.png#only-dark)
+
+### Updated At
+Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Sep 9, 2024, at 3:18 PM (GMT+5:30).**
+
+![update](../assets/explore/checks/update-light-17.png#only-light)
+![update](../assets/explore/checks/update-dark-17.png#only-dark)
+
+### Last Editor
+Last Editor indicates who most recently made changes to the check. It helps track who is responsible for the latest updates or modifications. This is useful for accountability and collaboration within teams.
+
+![editor](../assets/explore/checks/editor-light-17.png#only-light)
+![editor](../assets/explore/checks/editor-dark-17.png#only-dark)
+
+### Created At
+Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 2:19 PM (GMT+5:30).**
+
+![created](../assets/explore/checks/created-light-17.png#only-light)
+![created](../assets/explore/checks/created-dark-17.png#only-dark)
 
 ## Status Management of Checks
 
@@ -84,7 +159,15 @@ You can move an active check into a draft state, allowing you to work on the che
 ![draft](../assets/explore/checks/draft-check-light.png#only-light)
 ![draft](../assets/explore/checks/draft-check-dark.png#only-dark)
 
-To understand how to draft checks, you can follow the remaining steps from the documentation [**Draft Specific Check.**](../checks/manage-checks.md/#method-i-draft-specific-check)
+**Step 2**: A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Draft"** from the drop-down menu.
+
+![draft](../assets/explore/checks/draft-light-19.png#only-light)
+![draft](../assets/explore/checks/draft-dark-19.png#only-dark)
+
+**Step 3:** After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success flash message will appear stating, **"The checks have been successfully updated."**
+
+![success-updated](../assets/explore/checks/success-updated-light-20.png#only-light)
+![success-updated](../assets/explore/checks/success-updated-dark-20.png#only-dark)
 
 ### Activate Draft Check
 
@@ -95,7 +178,20 @@ You can activate the draft checks after when you have worked on the check, make 
 ![activate](../assets/explore/checks/activate-light.png#only-light)
 ![activate](../assets/explore/checks/activate-dark.png#only-dark)
 
-To understand how to activate draft checks, you can follow the remaining steps from the documentation [**Activate Draft Checks.**](../checks/manage-checks.md/#activate-draft-check)
+A modal window will appear with the check details. If you want to make any changes to the [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A), you can edit them.
+
+![check-details](../assets/explore/checks/check-details-light-27.png#only-light)
+![check-details](../assets/explore/checks/check-details-dark-27.png#only-dark)
+
+**Step 2:** Click on the **down arrow** icon with the **Update** button. A dropdown menu will appear, click on the **Activate** button.  
+
+![activate](../assets/explore/checks/activate-light-28.png#only-light)
+![activate](../assets/explore/checks/activate-dark-28.png#only-dark)
+
+**Step 3:** After clicking on the activate button, your check is now successfully moved to the active checks and a success flash message will appear stating **"Check successfully updated"**.
+
+![success-updated](../assets/explore/checks/success-updated-light-29.png#only-light)
+![success-updated](../assets/explore/checks/success-updated-dark-29.png#only-dark)
 
 ### Set Check as Archived 
 
@@ -103,12 +199,32 @@ You can move an active or draft check into the archive when it is no longer rele
 
 **Step 1**: Click on the check from the list of available (whether Active or Draft) checks that you want to archive.
 
-For Demonstration purposes, we have selected the **"Metric"** check.
-
 ![archived](../assets/explore/checks/archived-checks-light.png#only-light)
 ![archived](../assets/explore/checks/archived-checks-dark.png#only-dark)
 
-To understand how to set check as archived, you can follow the remaining steps from the documentation [**Set Check As Archived.**](../checks/manage-checks.md/#2-archive-from-action-menu)
+**Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on the **"Archive"** from the drop-down menu. 
+
+![archive](../assets/explore/checks/archive-light-35.png#only-light)
+![archive](../assets/explore/checks/archive-dark-35.png#only-dark)
+
+**Step 3:** A modal window titled **“Archive Check”** will appear, providing you with the following archive options:
+
+* **Discarded**: Select this option if the check is no longer relevant or suitable for the current business rules or data requirements. This helps in archiving checks that are obsolete but still exist for historical reference.
+
+* **Invalid**: Choose this option if the check is not valid and should be retired from future inference. This helps the system learn from invalid checks and improves its ability to infer valid checks in the future.
+
+![archive-check](../assets/explore/checks/archive-check-light-36.png#only-light)
+![archive-check](../assets/explore/checks/archive-check-dark-36.png#only-dark)
+
+**Step 4:** Once you've made your selection, click the **Archive** button to proceed.
+
+![archive](../assets/explore/checks/archive-light-37.png#only-light)
+![archive](../assets/explore/checks/archive-dark-37.png#only-dark)
+
+**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **"The Check has been successfully archived"**.
+
+![success-archive](../assets/explore/checks/success-archive-light-38.png#only-light)
+![success-archive](../assets/explore/checks/success-archive-dark-38.png#only-dark)
 
 ### Restore Archived Checks 
 
@@ -119,7 +235,32 @@ If a check has been archived, then you can restore it back to an active state or
 ![restore](../assets/explore/checks/restore-light.png#only-light)
 ![restore](../assets/explore/checks/restore-dark.png#only-dark)
 
-To understand how to restore archived checks, you can follow the remaining steps from the documentation [**Restore Archived Checks.**](../checks/manage-checks.md/#restore-archived-checks)
+**Step 2**: Click on the archived check which you want to restore as an active or draft check.
+
+For Demonstration purpose, we have selected the **"Metric"** check.
+
+![archive-checks](../assets/explore/checks/archive-checks-light-46.png#only-light)
+![archive-checks](../assets/explore/checks/archive-checks-dark-46.png#only-dark)
+
+A modal window will appear with the check details.
+
+![check-details](../assets/explore/checks/check-details-light-47.png#only-light)
+![check-details](../assets/explore/checks/check-details-dark-47.png#only-dark)
+
+**Step 3**: If you want to make any changes to the check, you can edit it. Otherwise, click on the **Restore** button to restore it as an active check.
+
+![restore-check](../assets/explore/checks/restore-check-light-48.png#only-light)
+![restore-check](../assets/explore/checks/restore-check-dark-48.png#only-dark)
+
+To restore the check as a draft, click on the arrow icon next to the **Restore** button. A dropdown menu will appear—select **Restore as Draft** from the options.
+
+![restore-as-draft](../assets/explore/checks/restore-as-draft-light-49.png#only-light)
+![restore-as-draft](../assets/explore/checks/restore-as-draft-dark-49.png#only-dark)
+
+After clicking the **Restore** button, the check will be successfully restored as either an active or draft check, depending on your selection. A success message will appear confirming, **"Check successfully updated."**
+
+![success-updated](../assets/explore/checks/success-updated-light-50.png#only-light)
+![success-updated](../assets/explore/checks/success-updated-dark-50.png#only-dark)
 
 ### Edit Check
 
@@ -127,12 +268,43 @@ You can edit an existing check to modify its properties, such as the rule type, 
 
 **Step 1:** Click on the check you want to edit, whether it is an active or draft check.
 
-For Demonstration purposes, we have selected the **"Metric"** check.
-
 ![edit-check](../assets/explore/checks/edit-checks-light.png#only-light)
 ![edit-check](../assets/explore/checks/edit-checks-dark.png#only-dark)
 
-To understand how to edit checks, you can follow the remaining steps from the [**Edit Checks**](../checks/manage-checks.md/#edit-check) section in the documentation.
+A modal window will appear with the check details. 
+
+![modal-win](../assets/explore/checks/modal-win-light-52.png#only-light)
+![modal-win](../assets/explore/checks/modal-win-dark-52.png#only-dark)
+
+**Step 2:** Modify the [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as needed based on your preferences.
+
+![check-detail](../assets/explore/checks/check-detail-light-53.png#only-light)
+![check-detail](../assets/explore/checks/check-detail-dark-53.png#only-dark)
+
+**Step 3:** Once you have edited the check details, then click on the **Validate** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct.
+
+![validate-btn](../assets/explore/checks/validate-btn-light-54.png#only-light)
+![validate-btn](../assets/explore/checks/validate-btn-dark-54.png#only-dark)
+
+If the validation is successful, a green message saying **"Validation Successful"** will appear. 
+
+![validate-msg](../assets/explore/checks/validate-msg-light-55.png#only-light)
+![validate-msg](../assets/explore/checks/validate-msg-dark-55.png#only-dark)
+
+If the validation fails, a red message saying **"Failed Validation"** will appear. This typically occurs when the check logic or parameters do not match the data properly.
+
+![failed-msg](../assets/explore/checks/failed-msg-light-56.png#only-light)
+![failed-msg](../assets/explore/checks/failed-msg-dark-56.png#only-dark)
+
+**Step 3:** Once you have a successful validation, click the **"Update"** button. The system will update the changes you've made to the check, including changes to the fields, filter clause, coverage, description, tags, or metadata.
+
+![update-btn](../assets/explore/checks/update-btn-light-57.png#only-light)
+![update-btn](../assets/explore/checks/update-btn-dark-57.png#only-dark)
+
+After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"Check successfully updated"**.
+
+![update-msg](../assets/explore/checks/update-msg-light-58.png#only-light)
+![update-msg](../assets/explore/checks/update-msg-dark-58.png#only-dark)
 
 ### Mark Check as Favorite
 
@@ -143,7 +315,20 @@ Marking a check as a favorite allows you to quickly access and prioritize the ch
 ![favorite](../assets/explore/checks/favorite-light.png#only-light)
 ![favorite](../assets/explore/checks/favorite-dark.png#only-dark)
 
-To understand how to mark check as favorite, you can follow the remaining steps from the [**Mark Check as Favorite**](../checks/manage-checks.md/#mark-check-as-favorite) section in the documentation.
+After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"Check has been favorited"**.
+
+![fav-msg](../assets/explore/checks/fav-msg-light-76.png#only-light)
+![fav-msg](../assets/explore/checks/fav-msg-dark-76.png#only-dark)
+
+To unmark a check, simply click on the bookmark icon of the marked check.
+
+![remove-fav](../assets/explore/checks/remove-fav-light-77.png#only-light)
+![remove-fav](../assets/explore/checks/remove-fav-dark-77.png#only-dark)
+
+This will remove it from your favorites.A success flash message will appear stating **"The Check has been unfavorited"**.
+
+![successfully-unfav](../assets/explore/checks/successfully-unfav-light.png#only-light)
+![successfully-unfav](../assets/explore/checks/successfully-unfav-dark.png#only-dark)
 
 ## Clone Check
 
@@ -151,12 +336,72 @@ You can clone both active and draft checks to create a duplicate copy of an exis
 
 **Step 1**: Click on the check (whether Active or Draft) that you want to clone.
 
-For Demonstration purposes, we have selected the **"Metric"** check.
-
 ![clone](../assets/explore/checks/clone-checks-light.png#only-light)
 ![clone](../assets/explore/checks/clone-checks-dark.png#only-dark)
 
-To understand how to clone check, you can follow the remaining steps from the [**Clone Check**](../checks/manage-checks.md/#clone-check) section in the documentation.
+**Step 2**: A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Clone"** from the drop-down menu.
+
+![clone-btn](../assets/explore/checks/clone-btn-light-79.png#only-light)
+![clone-btn](../assets/explore/checks/clone-btn-dark-79.png#only-dark)
+
+**Step 3:** After clicking the Clone button, a modal window will appear. This window allows you to adjust the cloned check's details.
+
+![modal-window](../assets/explore/checks/modal-window-light-80.png#only-light)
+![modal-window](../assets/explore/checks/modal-window-dark-80.png#only-dark)
+
+**1.** If you toggle on the **"Associate with a Check Template"** option, the cloned check will be linked to a specific template.
+
+![toggle-on](../assets/explore/checks/toggle-on-light-81.png#only-light)
+![toggle-on](../assets/explore/checks/toggle-on-dark-81.png#only-dark)
+
+Choose a **Template** from the dropdown menu that you want to associate with the cloned check. The check will inherit properties from the selected template.
+
+* **Locked:** The check will automatically sync with any future updates made to the template, but you won't be able to modify the check's properties directly.
+
+* **Unlocked:** You can modify the check, but future updates to the template will no longer affect this check.
+
+![associate-check](../assets/explore/checks/associate-check-light-82.png#only-light)
+![associate-check](../assets/explore/checks/associate-check-dark-82.png#only-dark)
+
+**2.** If you toggle off the **"Associate with a Check Template"** option, the cloned check will not be linked to any template, which allows you full control to modify the properties independently.
+
+![toggle-off](../assets/explore/checks/toggle-off-light-83.png#only-light)
+![toggle-off](../assets/explore/checks/toggle-off-dark-83.png#only-dark)
+
+Select the appropriate **Rule type** for the check from the dropdown menu.
+
+![rule-type](../assets/explore/checks/rule-type-light-84.png#only-light)
+![rule-type](../assets/explore/checks/rule-type-dark-84.png#only-dark)
+
+**Step 4:** Once you have selected the template or rule type, fill up the remaining [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as required. 
+
+![check-detail](../assets/explore/checks/check-detail-light-85.png#only-light)
+![check-detail](../assets/explore/checks/check-detail-dark-85.png#only-dark)
+
+**Step 5:** After completing all the check details, click on the **"Validate"** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
+
+![validate-btn](../assets/explore/checks/validate-btn-light-86.png#only-light)
+![validate-btn](../assets/explore/checks/validate-btn-dark-86.png#only-dark)
+
+If the validation is successful, a green message saying **"Validation Successful"** will appear. 
+
+![validation-success](../assets/explore/checks/validation-success-light-87.png#only-light)
+![validation-success](../assets/explore/checks/validation-success-dark-87.png#only-dark)
+
+If the validation fails, a red message saying **"Failed Validation"** will appear. This typically occurs when the check logic or parameters do not match the data properly.
+
+![failed-validation](../assets/explore/checks/failed-validation-light-88.png#only-light)
+![failed-validation](../assets/explore/checks/failed-validation-dark-88.png#only-dark)
+
+**Step 6:** Once you have a successful validation, click the **"Save"** button. The system will save any modifications you've made to the check, and create a clone of that check on basis of your changes.  
+
+![save-btn](../assets/explore/checks/save-btn-light-89.png#only-light)
+![save-btn](../assets/explore/checks/save-btn-dark-89.png#only-dark)
+
+After clicking on the **"Save"** button your check is successfully created and a success flash message will appear stating **"Check successfully created".**
+
+![success-msgs](../assets/explore/checks/success-msgs-light-90.png#only-light)
+![success-msgs](../assets/explore/checks/success-msgs-dark-90.png#only-dark)
 
 ## Create a Quality Check template
 
@@ -167,7 +412,15 @@ You can add checks as a Template, which allows you to create a reusable framewor
 ![quality-check](../assets/explore/checks/quality-checks-light.png#only-light)
 ![quality-check](../assets/explore/checks/quality-checks-dark.png#only-dark)
 
-To understand how to create a quality check template, you can follow the remaining steps from the [**Quality Check Template**](../checks/manage-checks.md/#create-a-quality-check-template) section in the documentation.
+**Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Template"** from the drop-down menu.
+
+![template-btn](../assets/explore/checks/template-btn-light-92.png#only-light)
+![template-btn](../assets/explore/checks/template-btn-dark-92.png#only-dark)
+
+After clicking the **"Template"** button, the check will be saved and created as a template in the library, and a success flash message will appear stating, **"The quality check template has been successfully created."** This allows you to reuse the template for future checks, streamlining the validation process.
+
+![quality-check](../assets/explore/checks/quality-check-light-93.png#only-light)
+![quality-check](../assets/explore/checks/quality-check-dark-93.png#only-dark)
 
 ## Filter and Sort
 
@@ -220,7 +473,3 @@ You can filter your checks based on values like **Source Datastores Check Type**
 |  |  | **Not Asserted** | Filters out checks that have not yet been asserted, either because they haven’t been processed or validated yet. |
 | **5** | **Rule** | **N/A** | Select this to filter the checks based on specific rule type for data validation, such as checking non-null values, matching patterns, comparing numerical ranges, or verifying date-time constraints. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results.<br> <br>The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br>For example, the rule type **After Date Time** is displayed with a total of **46** occurrences.|
 | **6** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
-
-
-
-
