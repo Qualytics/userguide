@@ -156,9 +156,9 @@ You can move an active check into a draft state, allowing you to work on the che
 
 #### Method I: Draft Specific Check
 
-**Step 1:** Click on the active check that you want to move to the draft state.
+**Step 1:** Click on the vertical ellipsis (⋮) next to the active check you want to move to draft state, and select Edit from the dropdown menu.
 
-For Demonstration purpose, we have selected the **"Between"** check.
+For Demonstration purpose, we have selected the **"After Date Time"** check.
 
 ![checks-list](../assets/checks/manage-checks/checks-list-light-18.png#only-light)
 ![checks-list](../assets/checks/manage-checks/checks-list-dark-18.png#only-dark)
@@ -168,7 +168,7 @@ For Demonstration purpose, we have selected the **"Between"** check.
 ![draft](../assets/checks/manage-checks/draft-light-19.png#only-light)
 ![draft](../assets/checks/manage-checks/draft-dark-19.png#only-dark)
 
-**Step 3:** After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success flash message will appear stating, **"Selected checks have been successfully updated."**
+**Step 3:** After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success flash message will appear stating, **"The checks have been successfully updated."**
 
 ![success-updated](../assets/checks/manage-checks/success-updated-light-20.png#only-light)
 ![success-updated](../assets/checks/manage-checks/success-updated-dark-20.png#only-dark)
@@ -197,7 +197,7 @@ A confirmation modal window titled **Bulk Update Checks to Draft** will appear, 
 ![update](../assets/checks/manage-checks/update-light-24.png#only-light)
 ![update](../assets/checks/manage-checks/update-dark-24.png#only-dark)
 
-After clicking the **"Update"** button, your selected checks will be moved to draft, and a success message will appear stating, **"Selected checks have been successfully updated."**
+After clicking the **"Update"** button, your selected checks will be moved to draft, and a success message will appear stating, **"The checks have been successfully updated."**
 
 ![success-updated](../assets/checks/manage-checks/success-updated-light-25.png#only-light)
 ![success-updated](../assets/checks/manage-checks/success-updated-dark-25.png#only-dark)
@@ -208,7 +208,7 @@ You can activate the draft checks after when you have worked on the check, make 
  
 #### Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click on the drafted check that you want to activate, whether you have made changes or wish to activate it as is.
+**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select Edit from the dropdown menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -252,7 +252,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![modal-window](../assets/checks/manage-checks/modal-window-light-97.png#only-light)
 ![modal-window](../assets/checks/manage-checks/modal-window-dark-97.png#only-dark)
 
-After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“Selected checks have been successfully updated”**
+After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“The checks have been successfully updated”**
 
 ![success-msg](../assets/checks/manage-checks/success-msg-light-98.png#only-light)
 ![success-msg](../assets/checks/manage-checks/success-msg-dark-98.png#only-dark)
@@ -267,9 +267,9 @@ You can archive a specific check using two ways: either by directly clicking the
 
 ##### 1. Archive Directly
 
-**Step 1:** Locate the check (whether Active or Draft) which you want to archive and click on the **Archive** icon (represented by a box with a downward arrow) located on the right side of the check. 
+**Step 1:** Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Archive from the dropdown menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purpose, we have selected the **"After Date Time"** check.
 
 ![archive-icon](../assets/checks/manage-checks/archive-icon-light-30.png#only-light)
 ![archive-icon](../assets/checks/manage-checks/archive-icon-dark-30.png#only-dark)
@@ -288,14 +288,14 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 ![archive](../assets/checks/manage-checks/archive-light-32.png#only-light)
 ![archive](../assets/checks/manage-checks/archive-dark-32.png#only-dark)
 
-**Step 4:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **"Check has been successfully archived"**
+**Step 4:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived"**
 
 ![archive-success](../assets/checks/manage-checks/archive-success-light-33.png#only-light)
 ![archive-success](../assets/checks/manage-checks/archive-success-dark-33.png#only-dark)
 
 ##### 2. Archive from Action Menu
 
-**Step 1**: Click on the check from the list of available (whether Active or Draft) checks that you want to archive.
+**Step 1**: Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Edit from the dropdown menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -321,7 +321,7 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 ![archive](../assets/checks/manage-checks/archive-light-37.png#only-light)
 ![archive](../assets/checks/manage-checks/archive-dark-37.png#only-dark)
 
-**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **"Check has been successfully archived"**
+**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived"**
 
 ![success-archive](../assets/checks/manage-checks/success-archive-light-38.png#only-light)
 ![success-archive](../assets/checks/manage-checks/success-archive-dark-38.png#only-dark)
@@ -363,7 +363,7 @@ A modal window will appear, providing you with the following archive options:
 ![archive](../assets/checks/manage-checks/archive-light-43.png#only-light)
 ![archive](../assets/checks/manage-checks/archive-dark-43.png#only-dark)
 
-**Step 4:** After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be archived successfully and a success flash message will appear stating, **"Checks have been successfully archived."**
+**Step 4:** After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be archived successfully and a success flash message will appear stating, **"The checks have been successfully archived."**
 
 ![success-archive](../assets/checks/manage-checks/success-archive-light-44.png#only-light)
 ![success-archive](../assets/checks/manage-checks/success-archive-dark-44.png#only-dark)
@@ -377,7 +377,7 @@ If a check has been archived, then you can restore it back to an active state or
 ![archive](../assets/checks/manage-checks/archive-light-45.png#only-light)
 ![archive](../assets/checks/manage-checks/archive-dark-45.png#only-dark)
 
-**Step 2**: Click on the archived check which you want to restore as an active or draft check.
+**Step 2**: Click on the vertical ellipsis (⋮) next to the active check you want to restore as an active or draft check and select edit form the drop down menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -413,7 +413,7 @@ You can edit an existing check to modify its properties, such as the rule type, 
 
 #### Method I. Edit Specific Check
 
-**Step 1:** Click on the check you want to edit, whether it is an active or draft check.
+**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop down menu
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -450,7 +450,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 ![update-btn](../assets/checks/manage-checks/update-btn-light-57.png#only-light)
 ![update-btn](../assets/checks/manage-checks/update-btn-dark-57.png#only-dark)
 
-After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"Check successfully updated"**.
+After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"The check has been successfully updated"**.
 
 ![update-msg](../assets/checks/manage-checks/update-msg-light-58.png#only-light)
 ![update-msg](../assets/checks/manage-checks/update-msg-dark-58.png#only-dark)
@@ -492,7 +492,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![save-btn](../assets/checks/manage-checks/save-btn-light-64.png#only-light)
 ![save-btn](../assets/checks/manage-checks/save-btn-dark-64.png#only-dark)
 
-After clicking the "Save" button, your selected checks will be updated with the new changes. A success message will appear stating, **"Selected checks have been successfully updated."**
+After clicking the "Save" button, your selected checks will be updated with the new changes. A success message will appear stating, **"The checks have been successfully updated."**
 
 ![update-msg](../assets/checks/manage-checks/update-msg-light-65.png#only-light)
 ![update-msg](../assets/checks/manage-checks/update-msg-dark-65.png#only-dark)
@@ -514,7 +514,7 @@ You can delete a check permanently, removing it from the system, and this is an 
 ![archived-btn](../assets/checks/manage-checks/archived-btn-light-66.png#only-light)
 ![archived-btn](../assets/checks/manage-checks/archived-btn-dark-66.png#only-dark)
 
-**Step 2:** Locate the check, that you want to delete and click on the **Delete** icon located on the right side of the check.
+**Step 2:** Locate the check, that you want to delete and click on the vertical ellipsis (⋮) and select **Delete** from the drop-down menu. 
 
 For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
 
@@ -526,7 +526,7 @@ For Demonstration purpose, we have selected the **"Time Distribution Size"** che
 ![delete-btn](../assets/checks/manage-checks/delete-btn-light-68.png#only-light)
 ![delete-btn](../assets/checks/manage-checks/delete-btn-dark-68.png#only-dark)
 
-**Step 4:** After clicking on the delete button, your check is successfully deleted and a success flash message will appear saying **"Check has been successfully deleted"**
+**Step 4:** After clicking on the delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted"**
 
 ![success-msg](../assets/checks/manage-checks/success-msg-light-69.png#only-light)
 ![success-msg](../assets/checks/manage-checks/success-msg-dark-69.png#only-dark)
@@ -558,7 +558,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![delete-btn](../assets/checks/manage-checks/delete-btn-light-73.png#only-light)
 ![delete-btn](../assets/checks/manage-checks/delete-btn-dark-73.png#only-dark)
 
-After clicking on the "Delete" button, your selected checks will be permanently deleted, and a success flash message will appear stating, **"Checks have been successfully deleted."**  
+After clicking on the "Delete" button, your selected checks will be permanently deleted, and a success flash message will appear stating, **"The checks have been successfully deleted."**  
    
 ![delete-msg](../assets/checks/manage-checks/delete-msg-light-74.png#only-light)
 ![delete-msg](../assets/checks/manage-checks/delete-msg-dark-74.png#only-dark)
@@ -572,7 +572,7 @@ Marking a check as a favorite allows you to quickly access and prioritize the ch
 ![mark-fav](../assets/checks/manage-checks/mark-fav-light-75.png#only-light)
 ![mark-fav](../assets/checks/manage-checks/mark-fav-dark-75.png#only-dark)
 
-After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"Check has been favorited"**
+After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited"**
 
 ![fav-msg](../assets/checks/manage-checks/fav-msg-light-76.png#only-light)
 ![fav-msg](../assets/checks/manage-checks/fav-msg-dark-76.png#only-dark)
@@ -586,7 +586,7 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 
 You can clone both active and draft checks to create a duplicate copy of an existing check. This is useful when you want to create a new check based on the structure of an existing one, allowing you to make adjustments without affecting the original check.
 
-**Step 1**: Click on the check (whether Active or Draft) that you want to clone.
+**Step 1**: Click the vertical ellipsis(⋮) next to the check (whether Active or Draft) that you want to clone and select **Edit** from the drop-down menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -665,8 +665,8 @@ You can add checks as a Template, which allows you to create a reusable framewor
 
 For Demonstration purpose, we have selected the **"Not Exists In"** check.
 
-![select-check](../assets/checks/manage-checks/select-check-light-91.png#only-light)
-![select-check](../assets/checks/manage-checks/select-check-dark-91.png#only-dark)
+![select-check](../assets/checks/manage-checks/clone-check-light-78.png#only-light)
+![select-check](../assets/checks/manage-checks/clone-check-dark-78.png#only-dark)
 
 **Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Template"** from the drop-down menu.
 
@@ -678,34 +678,183 @@ After clicking the **"Template"** button, the check will be saved and created as
 ![quality-check](../assets/checks/manage-checks/quality-check-light-93.png#only-light)
 ![quality-check](../assets/checks/manage-checks/quality-check-dark-93.png#only-dark)
 
-#### Method II: Activate Draft Checks in Bulk
+## Check Details
 
-Once you have completed refining the validation rules and made the necessary adjustments, you can activate multiple draft checks in bulk. Activating these checks in bulk ensures that all the defined criteria are enforced across the data simultaneously.
+Check Detail View displays all key information related to a specific data quality check. It shows what the check is monitoring, how it's configured, where it's applied in the dataset, and whether any issues have been found. It also includes sections for viewing the check’s recent performance, related activities, and any additional metadata. This view helps users easily understand the purpose and current state of the check.
 
-**Step 1**. Hover over the draft checks and click on the checkbox to select multiple checks in bulk.
+**Step 1:** Click on the check that you want to see the details of.
 
-![bulk-draft](../assets/checks/manage-checks/bulk-draft-light-94.png#only-light)
-![bulk-draft](../assets/checks/manage-checks/bulk-draft-dark-94.png#only-dark)
- 
-When multiple checks are selected, an action toolbar appears, displaying the total number of checks chosen along with a vertical ellipsis for additional bulk action options.
+![success-msg](../assets/checks/manage-checks/see-light-98.png#only-light)
+![success-msg](../assets/checks/manage-checks/see-dark-98.png#only-dark)
 
-![action-toolbar](../assets/checks/manage-checks/action-toolbar-light-95.png#only-light)
-![action-toolbar](../assets/checks/manage-checks/action-toolbar-dark-95.png#only-dark)
+You will be navigated to the detail section, where you can view the **Summary**, **Observability,** **Properties**, **Activity**, and **Metadata** information.
 
-**Step 2**. Click on the vertical ellipsis (⋮) and choose **"Activate"** from the dropdown menu to activate the selected checks.
+![detail](../assets/checks/manage-checks/detail-light-98.png#only-light)
+![detail](../assets/checks/manage-checks/detail-dark-98.png#only-dark)
 
-![activate-btn](../assets/checks/manage-checks/activate-btn-light-96.png#only-light)
-![activate-btn](../assets/checks/manage-checks/activate-btn-dark-96.png#only-dark)
+!!! info 
+       In addition to viewing the check details, you can also monitor and manage any anomalies associated with this check — all from the same page, without needing to navigate elsewhere.
 
-**Step 3**. A confirmation modal window “Bulk Activate Check” will appear, click on the **“Activate”** button to activate the draft checks.
+### Summary Section
 
-![modal-window](../assets/checks/manage-checks/modal-window-light-97.png#only-light)
-![modal-window](../assets/checks/manage-checks/modal-window-dark-97.png#only-dark)
+The Summary section shows that a data quality check is applied to a field and is currently active. It indicates whether the check was created automatically by the system or manually by a user and is being applied to the entire dataset and has a defined importance level. It also shows when the check last ran and whether there are any current issues found in the data.
 
-After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“Selected checks have been successfully updated”**
+**1. Check & Status** : The type of check applied to the data. In this case, it's a **Volumetric** check and the check is **Active**, meaning it's currently being applied.
 
-![success-msg](../assets/checks/manage-checks/success-msg-light-98.png#only-light)
-![success-msg](../assets/checks/manage-checks/success-msg-dark-98.png#only-dark)
+![check](../assets/checks/manage-checks/check-light.png#only-light)
+![check](../assets/checks/manage-checks/check-dark.png#only-dark)
+
+**2. Type** : This check is **Authored**, meaning it was manually created by the users.
+
+![type](../assets/checks/manage-checks/type-light.png#only-light)
+![type](../assets/checks/manage-checks/type-dark.png#only-dark)
+
+When you hover over the time period written below the type of the check, a pop-up appears displaying the complete date and time.
+
+![type-complete-date](../assets/checks/manage-checks/type-complete-date-light.png#only-light)
+![type-complete-date](../assets/checks/manage-checks/type-complete-date-dark.png#only-dark)
+
+**3. Last Asserted** : Shows when the check was last run – **3 months ago** in this case.
+
+![last-asserted](../assets/checks/manage-checks/last-asserted-light.png#only-light)
+![last-asserted](../assets/checks/manage-checks/last-asserted-dark.png#only-dark)
+
+When you hover over the time the check last ran, a pop-up appears displaying the complete date and time.
+
+![asserted-date](../assets/checks/manage-checks/asserted-date-light.png#only-light)
+![asserted-date](../assets/checks/manage-checks/asserted-date-dark.png#only-dark)
+
+**Last Asserted Details**
+
+Click on the info icon to view the last asserted details.
+
+![details](../assets/checks/manage-checks/details-light.png#only-light)
+![details](../assets/checks/manage-checks/details-dark.png#only-dark)
+
+A popup will appear with **Scans** details. Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in 19 operations.
+
+![scan-details](../assets/checks/manage-checks/scan-details-light.png#only-light)
+![scan-details](../assets/checks/manage-checks/scan-details-dark.png#only-dark)
+
+**4. Weight** : Indicates the importance or priority of this check – the weight is **13**.
+
+![weight](../assets/checks/manage-checks/weight-light.png#only-light)
+![weight](../assets/checks/manage-checks/weight-dark.png#only-dark)
+
+**5. Coverage** : How much data this check applies to – here it's **100%**, meaning it applies to the whole dataset.
+
+![coverage](../assets/checks/manage-checks/coverage-light.png#only-light)
+![coverage](../assets/checks/manage-checks/coverage-dark.png#only-dark)
+
+**6. Active Anomalies** : Number of current issues found – **0 anomalies** are active right now.
+
+![active-anomaly](../assets/checks/manage-checks/active-anomaly-light.png#only-light)
+![active-anomaly](../assets/checks/manage-checks/active-anomaly-dark.png#only-dark)
+
+**7. Description** : Explains the rule or condition that the check is validating.
+
+![description](../assets/checks/manage-checks/description-light.png#only-light)
+![description](../assets/checks/manage-checks/description-dark.png#only-dark)
+
+**8. Tags** : Displays any tags linked to the check. Users can also add new tags by clicking on the tag area.
+
+![tags](../assets/checks/manage-checks/tags-light.png#only-light)
+![tags](../assets/checks/manage-checks/tags-dark.png#only-dark)
+
+### Copy the Check Link
+
+Click on the **Copy Check Link** icon(represented by share icon) located at the right corner of the summary section to copy a direct link to the selected check.This link can be shared with other users for quick access to the specific check within the platform.
+
+![copy-link](../assets/checks/manage-checks/copy-link-light.png#only-light)
+![copy-link](../assets/checks/manage-checks/copy-link-dark.png#only-dark)
+
+### Favorite the check
+
+Click on the bookmark icon located at the right corner of the summary section to mark the check as favorite.
+
+![fav](../assets/checks/manage-checks/fav-light.png#only-light)
+![fav](../assets/checks/manage-checks/fav-dark.png#only-dark)
+
+To unmark a check, simply click on the bookmark icon of the marked check. This will remove it from your favorites.
+
+![unfav](../assets/checks/manage-checks/unfav-light.png#only-light)
+![unfav](../assets/checks/manage-checks/unfav-dark.png#only-dark)
+
+### Observability Section
+
+**Observability** provides a visual overview of how a check performs over time by tracking assertion results. It helps identify trends, failures, or anomalies using daily status indicators across a selected timeframe.
+
+![observability](../assets/checks/manage-checks/observability-light-98.png#only-light)
+![observability](../assets/checks/manage-checks/observability-dark-98.png#only-dark)
+
+Users can hover over any date in the timeline. It provides a comprehensive view of assertion statuses, including passed, failed, and anomalous results. By hovering over a specific date, users can access detailed information such as the result status, the number of asserted records, and any anomalies identified. Highlighting all available status types ensures a clearer understanding of the data quality over time.
+
+![hover](../assets/checks/manage-checks/hover-light-98.png#only-light)
+![hover](../assets/checks/manage-checks/hover-dark-98.png#only-dark)
+
+Additionally, clicking the Latest Assertion Scan button (e.g., #48151) will navigate users directly to the **Scan Results** page for that specific assertion.
+
+![scan-results](../assets/checks/manage-checks/scan-results-light.png#only-light)
+![scan-results](../assets/checks/manage-checks/scan-results-dark.png#only-dark)
+
+### Selecting Report Date and Timeframe
+
+The Observability section helps you monitor how your check assertion metrics change over time. You can customize the view by selecting a specific report date and timeframe to analyze trends over different periods.
+
+#### Select the Report Date
+
+**Step 1:** Locate the **Report Date** field at the top-right of the Observability section.
+
+![report-date](../assets/checks/manage-checks/report-date-light.png#only-light)
+![report-date](../assets/checks/manage-checks/report-date-dark.png#only-dark)
+
+**Step 2 :** Click on the **calendar** icon. A date picker will appear. Select the desired report date to update the Assertion Over Time graph accordingly.
+
+![calendar](../assets/checks/manage-checks/calendar-light.png#only-light)
+![calendar](../assets/checks/manage-checks/calendar-dark.png#only-dark)
+
+#### Choose the Timeframe
+
+**Step 1:** Locate the **Timeframe** field at the top-right of the Observability section.
+
+![timeframe](../assets/checks/manage-checks/timeframe-light.png#only-light)
+![timeframe](../assets/checks/manage-checks/timeframe-dark.png#only-dark)
+
+**Step 2:** Choose a timeframe for your assertion data view:
+
+* **Week** – Shows assertion metrics distributed over a 7-day period.
+
+* **Month** – Displays daily or weekly assertions throughout the selected month.
+
+* **Quarter** – Covers a three-month range (e.g., Q1: Jan–Mar, Q2: Apr–Jun), useful for quarterly reporting and insights.
+
+* **Year** – Presents assertion data trends for an entire calendar year, allowing for broad, high-level performance monitoring.
+
+![select-time](../assets/checks/manage-checks/select-time-light.png#only-light)
+![select-time](../assets/checks/manage-checks/select-time-dark.png#only-dark)
+
+Once a timeframe is selected, the Assertion Over Time chart below will automatically adjust to reflect assertion activity within the chosen window.
+
+### Properties Section
+
+The Properties section explains where this check is applied. In this case, the check is applied to a table called **supplier**, specifically to the **s_comment** field of type **String**. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
+
+![properties](../assets/checks/manage-checks/properties-light-98.png#only-light)
+![properties](../assets/checks/manage-checks/properties-dark-98.png#only-dark)
+
+### Activity Section
+
+The Activity section shows a brief history of what has happened with this check. First, the system (Qualytics) created the check one day ago. Later, the system also changed the weight of the check to 8. These changes help keep track of how the check is evolving over time and who made the updates.
+
+![activity](../assets/checks/manage-checks/activity-light-98.png#only-light)
+![activity](../assets/checks/manage-checks/activity-dark-98.png#only-dark)
+
+### Metadata Section
+
+Currently, there is no extra metadata added to this check. Metadata can include additional notes or properties, but in this case, it's left blank.
+
+![metadata](../assets/checks/manage-checks/metadata-light-98.png#only-light)
+![metadata](../assets/checks/manage-checks/metadata-dark-98.png#only-dark)
 
 ## Filter and Sort
 
