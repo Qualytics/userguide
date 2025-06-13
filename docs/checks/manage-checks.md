@@ -586,7 +586,7 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 
 You can clone both active and draft checks to create a duplicate copy of an existing check. This is useful when you want to create a new check based on the structure of an existing one, allowing you to make adjustments without affecting the original check.
 
-**Step 1**: Click the vertical ellipsis (⋮) next to the check (whether Active or Draft) that you want to clone and select **Edit** from the drop- down menu.
+**Step 1**: Click the vertical ellipsis(⋮) next to the check (whether Active or Draft) that you want to clone and select **Edit** from the drop-down menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -692,23 +692,93 @@ You will be navigated to the detail section, where you can view the **Summary**,
 ![detail](../assets/checks/manage-checks/detail-light-98.png#only-light)
 ![detail](../assets/checks/manage-checks/detail-dark-98.png#only-dark)
 
+!!! info 
+       In addition to viewing the check details, you can also monitor and manage any anomalies associated with this check — all from the same page, without needing to navigate elsewhere.
+
 ### Summary Section
 
-The Summary section shows that a data quality check is applied to a field and is currently active. It indicates that the check was created automatically by the system, is being applied to the entire dataset, and has a set importance level. It also shows when the check last ran and whether there are any current issues found in the data.
+The Summary section shows that a data quality check is applied to a field and is currently active. It indicates whether the check was created automatically by the system or manually by a user and is being applied to the entire dataset and has a defined importance level. It also shows when the check last ran and whether there are any current issues found in the data.
 
-| No. | Field | Description |
-| :---- | :---- | :---- |
-| 1. | Check & Status| The type of check applied to the data. In this case, it's a **Unique** check to ensure no duplicate values and the check is **Active**, meaning it's currently being applied. |
-| 2. | Type | This check is **Inferred**, meaning it was automatically created by the system. |
-| 3. | Last Asserted | Shows when the check was last run – **13 hours ago** in this case. |
-| 4. | Weight | Indicates the importance or priority of this check – the weight is **8**. |
-| 5. | Coverage | How much data this check applies to – here it's **100%**, meaning it applies to the whole dataset. |
-| 6. | Active Anomalies | Number of current issues found – **5 anomalies** are active right now. |
-| 7. | Description | Explains the rule or condition that the check is validating. |
-| 8. | Tags | Displays any tags linked to the check. Users can also add new tags by clicking on the tag area. |
+**1. Check & Status** : The type of check applied to the data. In this case, it's a **Volumetric** check and the check is **Active**, meaning it's currently being applied.
 
-![summary-msg](../assets/checks/manage-checks/summary-light-98.png#only-light)
-![summary-msg](../assets/checks/manage-checks/summary-dark-98.png#only-dark)
+![check](../assets/checks/manage-checks/check-light.png#only-light)
+![check](../assets/checks/manage-checks/check-dark.png#only-dark)
+
+**2. Type** : This check is **Authored**, meaning it was manually created by the users.
+
+![type](../assets/checks/manage-checks/type-light.png#only-light)
+![type](../assets/checks/manage-checks/type-dark.png#only-dark)
+
+When you hover over the time period written below the type of the check, a pop-up appears displaying the complete date and time.
+
+![type-complete-date](../assets/checks/manage-checks/type-complete-date-light.png#only-light)
+![type-complete-date](../assets/checks/manage-checks/type-complete-date-dark.png#only-dark)
+
+**3. Last Asserted** : Shows when the check was last run – **3 months ago** in this case.
+
+![last-asserted](../assets/checks/manage-checks/last-asserted-light.png#only-light)
+![last-asserted](../assets/checks/manage-checks/last-asserted-dark.png#only-dark)
+
+When you hover over the time the check last ran, a pop-up appears displaying the complete date and time.
+
+![asserted-date](../assets/checks/manage-checks/asserted-date-light.png#only-light)
+![asserted-date](../assets/checks/manage-checks/asserted-date-dark.png#only-dark)
+
+**Last Asserted Details**
+
+Click on the info icon to view the last asserted details.
+
+![details](../assets/checks/manage-checks/details-light.png#only-light)
+![details](../assets/checks/manage-checks/details-dark.png#only-dark)
+
+A popup will appear with **Scans** details. Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in 19 operations.
+
+![scan-details](../assets/checks/manage-checks/scan-details-light.png#only-light)
+![scan-details](../assets/checks/manage-checks/scan-details-dark.png#only-dark)
+
+**4. Weight** : Indicates the importance or priority of this check – the weight is **13**.
+
+![weight](../assets/checks/manage-checks/weight-light.png#only-light)
+![weight](../assets/checks/manage-checks/weight-dark.png#only-dark)
+
+**5. Coverage** : How much data this check applies to – here it's **100%**, meaning it applies to the whole dataset.
+
+![coverage](../assets/checks/manage-checks/coverage-light.png#only-light)
+![coverage](../assets/checks/manage-checks/coverage-dark.png#only-dark)
+
+**6. Active Anomalies** : Number of current issues found – **0 anomalies** are active right now.
+
+![active-anomaly](../assets/checks/manage-checks/active-anomaly-light.png#only-light)
+![active-anomaly](../assets/checks/manage-checks/active-anomaly-dark.png#only-dark)
+
+**7. Description** : Explains the rule or condition that the check is validating.
+
+![description](../assets/checks/manage-checks/description-light.png#only-light)
+![description](../assets/checks/manage-checks/description-dark.png#only-dark)
+
+**8. Tags** : Displays any tags linked to the check. Users can also add new tags by clicking on the tag area.
+
+![tags](../assets/checks/manage-checks/tags-light.png#only-light)
+![tags](../assets/checks/manage-checks/tags-dark.png#only-dark)
+
+### Copy the Check Link
+
+Click on the **Copy Check Link** icon(represented by share icon) located at the right corner of the summary section to copy a direct link to the selected check.This link can be shared with other users for quick access to the specific check within the platform.
+
+![copy-link](../assets/checks/manage-checks/copy-link-light.png#only-light)
+![copy-link](../assets/checks/manage-checks/copy-link-dark.png#only-dark)
+
+### Favorite the check
+
+Click on the bookmark icon located at the right corner of the summary section to mark the check as favorite.
+
+![fav](../assets/checks/manage-checks/fav-light.png#only-light)
+![fav](../assets/checks/manage-checks/fav-dark.png#only-dark)
+
+To unmark a check, simply click on the bookmark icon of the marked check. This will remove it from your favorites.
+
+![unfav](../assets/checks/manage-checks/unfav-light.png#only-light)
+![unfav](../assets/checks/manage-checks/unfav-dark.png#only-dark)
 
 ### Observability Section
 
@@ -717,14 +787,57 @@ The Summary section shows that a data quality check is applied to a field and is
 ![observability](../assets/checks/manage-checks/observability-light-98.png#only-light)
 ![observability](../assets/checks/manage-checks/observability-dark-98.png#only-dark)
 
-Users can hover over any date in the timeline to view detailed assertion information, including result status, number of asserted records, and anomalous records for that day.
+Users can hover over any date in the timeline. It provides a comprehensive view of assertion statuses, including passed, failed, and anomalous results. By hovering over a specific date, users can access detailed information such as the result status, the number of asserted records, and any anomalies identified. Highlighting all available status types ensures a clearer understanding of the data quality over time.
 
 ![hover](../assets/checks/manage-checks/hover-light-98.png#only-light)
 ![hover](../assets/checks/manage-checks/hover-dark-98.png#only-dark)
 
+Additionally, clicking the Latest Assertion Scan button (e.g., #48151) will navigate users directly to the **Scan Results** page for that specific assertion.
+
+![scan-results](../assets/checks/manage-checks/scan-results-light.png#only-light)
+![scan-results](../assets/checks/manage-checks/scan-results-dark.png#only-dark)
+
+### Selecting Report Date and Timeframe
+
+The Observability section helps you monitor how your check assertion metrics change over time. You can customize the view by selecting a specific report date and timeframe to analyze trends over different periods.
+
+#### Select the Report Date
+
+**Step 1:** Locate the **Report Date** field at the top-right of the Observability section.
+
+![report-date](../assets/checks/manage-checks/report-date-light.png#only-light)
+![report-date](../assets/checks/manage-checks/report-date-dark.png#only-dark)
+
+**Step 2 :** Click on the **calendar** icon. A date picker will appear. Select the desired report date to update the Assertion Over Time graph accordingly.
+
+![calendar](../assets/checks/manage-checks/calendar-light.png#only-light)
+![calendar](../assets/checks/manage-checks/calendar-dark.png#only-dark)
+
+#### Choose the Timeframe
+
+**Step 1:** Locate the **Timeframe** field at the top-right of the Observability section.
+
+![timeframe](../assets/checks/manage-checks/timeframe-light.png#only-light)
+![timeframe](../assets/checks/manage-checks/timeframe-dark.png#only-dark)
+
+**Step 2:** Choose a timeframe for your assertion data view:
+
+* **Week** – Shows assertion metrics distributed over a 7-day period.
+
+* **Month** – Displays daily or weekly assertions throughout the selected month.
+
+* **Quarter** – Covers a three-month range (e.g., Q1: Jan–Mar, Q2: Apr–Jun), useful for quarterly reporting and insights.
+
+* **Year** – Presents assertion data trends for an entire calendar year, allowing for broad, high-level performance monitoring.
+
+![select-time](../assets/checks/manage-checks/select-time-light.png#only-light)
+![select-time](../assets/checks/manage-checks/select-time-dark.png#only-dark)
+
+Once a timeframe is selected, the Assertion Over Time chart below will automatically adjust to reflect assertion activity within the chosen window.
+
 ### Properties Section
 
-The Properties section explains where this check is applied. In this case, the check is applied to a table called **customer**. It's focused on the **phone string** field to ensure that no two records have the same phone number. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
+The Properties section explains where this check is applied. In this case, the check is applied to a table called **supplier**, specifically to the **s_comment** field of type **String**. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
 
 ![properties](../assets/checks/manage-checks/properties-light-98.png#only-light)
 ![properties](../assets/checks/manage-checks/properties-dark-98.png#only-dark)
