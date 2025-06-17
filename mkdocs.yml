@@ -82,7 +82,6 @@ nav:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:
       - Overview: checks/overview-of-a-check.md
-      - Manage Checks: checks/manage-checks.md
       - Authored: checks/authored-check.md
       - Inferred: checks/inferred-check.md
       - Rule Types:
@@ -138,6 +137,9 @@ nav:
       - Check Templates: checks/checks-template.md
       - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
       - Export Check Templates: checks/export-check-templates.md
+    - Datastore Checks:
+      - Checks : datastore-checks/checks-datastore.md 
+      - Manage Checks : datastore-checks/manage-checks.md
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:
