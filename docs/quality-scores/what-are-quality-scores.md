@@ -5,9 +5,7 @@ Scores range from 0-100 with higher values indicating superior quality for the i
 providing a granular analysis of the attributes that impact the overall data quality.
 
 !!! Important
-A data asset's quality score is **a measure of its fitness for the intended use case**.  
-It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental factors of data quality as described below. 
-Quality scores are dynamic and will evolve as your data and business needs change over time.
+    A data asset's quality score is **a measure of its fitness for the intended use case**. It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental factors of data quality as described below.  Quality scores are dynamic and will evolve as your data and business needs change over time.
 
 
 ## Quality Scoring a Field
@@ -125,7 +123,7 @@ To further explore how to respond to Quality Scores, let's consider the business
 - On the other hand, if the primary use case for this address is to reliably ship a physical product to an intended recipient, ensuring a higher level of quality for the "Street 2" field becomes necessary. In this scenario, you may take actions such as defining additional data quality checks for the field, increasing the frequency of profiling and scanning, establishing a completeness goal, and working with upstream systems to enforce it over time.
 
 !!! Important
-The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
+    The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
 
 
 ## Customizing Quality Score Weights and Decay Time
