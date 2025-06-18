@@ -143,7 +143,7 @@ Last Editor indicates who most recently made changes to the check. It helps trac
 ![editor](../assets/explore/checks/editor-dark-17.png#only-dark)
 
 ### Created At
-Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 11:13 AM (GMT+5:30).**
+Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2024, at 11:13 AM (GMT+5:30).**
 
 ![created](../assets/explore/checks/created-light-17.png#only-light)
 ![created](../assets/explore/checks/created-dark-17.png#only-dark)
