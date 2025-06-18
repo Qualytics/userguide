@@ -18,7 +18,7 @@ Let's get started 🚀
 
 You will be navigated to the Checks section within the selected datastore. Here, you can view checks categorized as Active, Draft, Archived (including Invalid and Discarded), or All.
 
-[checks](../assets/datastore-checks/manage-checks/navigated-light.png#only-dark)
+![checks](../assets/datastore-checks/manage-checks/navigated-light.png#only-light)
 ![checks](../assets/datastore-checks/manage-checks/navigated-dark.png#only-dark)
 
 ## Status Management of Checks
