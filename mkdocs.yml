@@ -142,6 +142,7 @@ nav:
       - Overview: observability/observability.md
     - Anomalies:
       - Anomaly Analysis: anomalies/anomalies.md
+      - Anomaly: anomalies/anomalies-in-datastore.md
       - Manage Anomalies: anomalies/manage-anomalies.md
     - Explore:
       - Overview: explore/overview-of-explore.md
