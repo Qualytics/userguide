@@ -2,6 +2,18 @@
 
 ## Release Notes
 
+### 2025.6.20 { id=2025.6.20 }
+
+#### Feature Enhancements
+
+- Added Source Records Download for Check Dry Run: Users can now download the source records as a CSV file after executing a Dry Run.
+
+- Improving Source Records Performance: Implemented caching for anomaly source records, significantly reducing load times and improving in user session level.
+
+#### General Fixes and Improvements
+
+- General Fixes and Improvements.
+
 ### 2025.6.13 { id=2025.6.13 }
 
 #### Feature Enhancements
