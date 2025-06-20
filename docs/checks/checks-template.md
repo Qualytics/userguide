@@ -83,7 +83,7 @@ Enter the desired key-value pairs (e.g., **DataSourceType: SQL Database** and **
 
 **6. Template Locked:** Check or uncheck the **"Template Locked"** option to determine whether all checks created from this template will have their properties automatically synced to any changes made to the template.
 
-For more information about the template state, jump to the "[**Template State**](#template-state)section below.  
+For more information about the template state, jump to the "[**Template State**](#template-state)" section below.  
 
 ![template](../assets/checks/add-check-template/template-light-10.png#only-light)
 ![template](../assets/checks/add-check-template/template-dark-10.png#only-dark)
