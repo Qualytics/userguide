@@ -94,6 +94,9 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation.  On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources. 
 
+!!! note
+    Incremental scans now fully support **Iceberg-datastore** table formats, significantly expanding the range of asset types eligible for incremental scanning operations.
+
 - **Full**: This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data. 
 
 ![incremental](../assets/datastores/scan/incremental-light.png#only-light)
