@@ -436,6 +436,86 @@ After clicking on the "Delete" button, your selected checks will be permanently 
 ![delete-msg](../assets/datastore-checks/manage-checks/delete-msg-light-74.png#only-light)
 ![delete-msg](../assets/datastore-checks/manage-checks/delete-msg-dark-74.png#only-dark)
 
+### Dry Run
+
+The **Dry Run** feature allows users to simulate the behavior of a Data Quality Check before enforcing it during a scan. This helps validate the check logic and preview potential anomalies without persisting the results or affecting any data.
+
+**Step 1:** Click on the specific check you want to test using the Dry Run feature.
+
+![click-check](../assets/datastore-checks/manage-checks/click-check-light.png#only-light)
+![click-check](../assets/datastore-checks/manage-checks/click-check-dark.png#only-dark)
+
+**Step 2:** Click on the **Settings** icon located at the top-right corner of the interface and select **“Dry Run”** from the dropdown menu.
+
+![dry-run](../assets/datastore-checks/manage-checks/dry-run-light.png#only-light)
+![dry-run](../assets/datastore-checks/manage-checks/dry-run-dark.png#only-dark)
+
+A modal window titled **Dry Run Results** will appear.
+
+![results](../assets/datastore-checks/manage-checks/results-light.png#only-light)
+![results](../assets/datastore-checks/manage-checks/results-dark.png#only-dark)
+
+This window enables you to confidently evaluate and refine data quality checks before running full scans, helping maintain high-quality standards without unnecessary noise or misconfiguration.
+
+![fields](../assets/datastore-checks/manage-checks/fields-light.png#only-light)
+![fields](../assets/datastore-checks/manage-checks/fields-dark.png#only-dark)
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| **1** | **Status** | Indicates whether the dry run completed successfully. |
+| **2** | **Timing** | Displays the total time taken to execute the dry run. |
+| **3** | **Sampling Limit** | Shows the number of records sampled during the dry run (default is 1,000 records). |
+| **4** | **Check ID and Name** | The unique identifier and name of the data quality check. This provides both a reference ID and a descriptive label indicating the rule type. |
+| **5** | **Description** | A concise explanation of the check rule being tested. For example, “PS_SUPPLYCOST is greater than PS_AVAILQTY.” |
+| **6** | **Table** | The name of the table on which the check is being applied. |
+| **7** | **Field** | The specific column or field within the table that the rule targets. |
+
+#### Anomalies
+
+Highlights any violations detected during the dry run, such as constraint breaches or unexpected value patterns.
+
+![anomalies](../assets/datastore-checks/manage-checks/anomalies-light.png#only-light)
+![anomalies](../assets/datastore-checks/manage-checks/anomalies-dark.png#only-dark)
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| **1** | **Violation** | Clearly states the reason for failure. This message helps users quickly understand what went wrong and why the data didn't pass the quality check. |
+| **2** | **Asserted Records** | Displays the total number of records evaluated in the dry run. |
+| **3** | **Anomalous Records** | Shows how many of those records violated the constraint logic. |
+
+![fields](../assets/datastore-checks/manage-checks/fields-light-1.png#only-light)
+![fields](../assets/datastore-checks/manage-checks/fields-dark-1.png#only-dark)
+
+#### Source Records
+
+The **Source Records** section presents a detailed, tabular view of all records that were evaluated by the selected quality check. This section is designed to help users investigate the underlying data issues that may have led to anomalies, offering clear visibility into the records that failed to meet the defined constraint.
+
+![source-records](../assets/datastore-checks/manage-checks/source-records-light.png#only-light)
+![source-records](../assets/datastore-checks/manage-checks/source-records-dark.png#only-dark)
+
+**Sort Options**
+
+Users can sort the records based on different fields using the **Sort By** dropdown.
+
+![sort-options](../assets/datastore-checks/manage-checks/sort-options-light.png#only-light)
+![sort-options](../assets/datastore-checks/manage-checks/sort-options-dark.png#only-dark)
+
+| No. | Sort By | Description |
+| :---- | :---- | :---- |
+| **1** | **Name** | Sorts the records alphabetically based on the field name. |
+| **2** | **Weight** | Sorts records based on the weight or severity of the failure. Higher-weighted issues appear first. |
+| **3** | **Quality Score** | Sorts records by their quality score, helping you prioritize records with the lowest data quality. |
+
+**Download Source Records**
+
+The Download Source Records option allows users to export the records evaluated during the Dry Run process for further offline analysis or documentation purposes. A file containing the asserted records and their anomaly status will be downloaded in a CSV format.
+
+![download-records](../assets/datastore-checks/manage-checks/download-records-light.png#only-light)
+![download-records](../assets/datastore-checks/manage-checks/download-records-dark.png#only-dark)
+
+!!! note
+    When no issues are detected, users receive a clear confirmation message indicating no anomalies were identified.
+
 ### Mark Check as Favorite
 
 Marking a check as a favorite allows you to quickly access and prioritize the checks that are most important to your data validation process. This helps streamline workflows by keeping frequently used or critical checks easily accessible, ensuring you can monitor and manage them efficiently. By marking a check as a favorite, it will appear in the "Favorite" category for faster retrieval and management.
