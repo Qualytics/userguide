@@ -1,0 +1,3 @@
+Contact: mailto:security@qualytics.ai
+Expires: 2029-03-31T09:00:00.000Z
+Preferred-Languages: en
