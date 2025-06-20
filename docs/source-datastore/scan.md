@@ -55,7 +55,7 @@ This option includes all tables or file patterns currently available for scannin
 
 This option allows you to manually select the individual table(s) or file pattern(s) in your datastore to scan. Upon selecting this option, all the tables or file patterns associated with your datastore will be automatically populated allowing you to select the datasets you want to scan.
 
-You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purpoaes
+You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purposes.
 
 ![specific](../assets/datastores/scan/specfic-light.png#only-light)
 ![specific](../assets/datastores/scan/specfic-dark.png#only-dark)
