@@ -229,7 +229,7 @@ A right-side panel will open, allowing you to view the details without navigatin
 ![right-panel](../assets/datastores/anomalies-datastore/right-panel-light.png#only-light)
 ![right-panel](../assets/datastores/anomalies-datastore/right-panel-dark.png#only-dark)
 
-| No. | Filter | Description |
+| No. | Field | Description |
 | :---- | :---- | :---- |
 | **1** | **Check ID & Name** | This is the name and unique number of the check. It’s checking if dates fall within a specific range. |
 | **2** | **Description** | Tells you what this check is doing. Here it is making sure values are between a minimum and maximum time. |
