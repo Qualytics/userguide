@@ -464,7 +464,7 @@ This window enables you to confidently evaluate and refine data quality checks b
 | :---- | :---- | :---- |
 | **1** | **Status** | Indicates whether the dry run completed successfully. |
 | **2** | **Timing** | Displays the total time taken to execute the dry run. |
-| **3** | **Sampling Limit** | Shows the number of records sampled during the dry run (default is 1,000 records). |
+| **3** | **Sampling Limit** | Shows the number of records sampled during the dry run (default is 10K records). |
 | **4** | **Check ID and Name** | The unique identifier and name of the data quality check. This provides both a reference ID and a descriptive label indicating the rule type. |
 | **5** | **Description** | A concise explanation of the check rule being tested. For example, “PS_SUPPLYCOST is greater than PS_AVAILQTY.” |
 | **6** | **Table** | The name of the table on which the check is being applied. |
