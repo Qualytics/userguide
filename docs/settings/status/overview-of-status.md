@@ -105,7 +105,7 @@ The **Restart Analytics Engine** option restarts the analytics processing system
 ![restart](../../assets/health/restart-light-10.png#only-light)
 ![restart](../../assets/health/restart-dark-10.png#only-dark)
 
-**Step 3:** After clicking on **Restart**button a success message saying **Successfully triggered Analytics Engine restart.**
+**Step 3:** After clicking on **Restart** button a success message saying **Successfully triggered Analytics Engine restart.**
 
 ![successfully-triggered](../../assets/health/successfully-triggered-light-11.png#only-light)
 ![successfully-triggered](../../assets/health/successfully-triggered-dark-11.png#only-dark)
