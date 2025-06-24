@@ -124,6 +124,9 @@ The anomaly identified during the scan operation illustrates the following detai
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-light.png#only-light)
 ![anomalies-details](../assets/datastores/anomalies/anomalies-details-dark.png#only-dark)
 
+!!! note
+    Clicking on the expand icon navigates to the anomaly details page, providing key insights into a specific data anomaly.
+
 In addition to the above details, the users can also explore the following additional details of the Anomaly:  
 
 **1. Name:** This indicates the name of the source datastore where the anomaly was detected.
@@ -174,6 +177,8 @@ When shape anomalies are fingerprinted, the system considers:
 
 !!! tip
     A data asset must have an incremental identifier to support fingerprinting of shape anomalies. This is because the maximum value of that identifier in the scanned dataset is used to generate the shape anomaly's fingerprint. This requirement helps ensure that only shape anomalies derived from the same underlying data are considered identical. Shape anomalies with the same details derived from different ranges of data are not considered identical.
+
+For more details on Anomaly Fingerprints, please refer to the [**Copy Anomaly Fingerprint**](../anomalies/anomalies-in-datastore.md#copy-anomaly-fingerprint) section in the documentation.
 
 ## Source Records
 
