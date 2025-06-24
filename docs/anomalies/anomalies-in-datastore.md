@@ -130,7 +130,7 @@ When you hover over the time the anomaly was detected, a pop-up appears displayi
 ![scan](../assets/datastores/anomalies-datastore/scan-dark.png#only-dark)
 
 !!! info 
-    When you click on the expand icon , then you will be directed to the Scan Results page where you can view the specific scan that detected the anomaly.
+    When you click on the expand icon, then you will be directed to the Scan Results page where you can view the specific scan that detected the anomaly.
 
 **7. Source Datastore:** Identifies the dataset where the anomaly was found. This anomaly was found in the **Qualytics Databricks POC** datastore.
 
@@ -163,9 +163,14 @@ You can click on the **copy** icon to copy the full location path of the table w
 ![tags](../assets/datastores/anomalies-datastore/tags-light.png#only-light)
 ![tags](../assets/datastores/anomalies-datastore/tags-dark.png#only-dark)
 
+You can add or remove tags from the anomaly by clicking on the tag badge.
+
+![tag-badge](../assets/datastores/anomalies-datastore/tag-badge-light.png#only-light)
+![tag-badge](../assets/datastores/anomalies-datastore/tag-badge-dark.png#only-dark)
+
 #### Copy Anomaly Link
 
-Click on the **Copy Anomaly Link** icon(represented by share icon) located at the right corner of the summary section to copy a direct link to the selected anomaly. 
+Click on the **Copy Anomaly Link** icon (represented by share icon) located at the right corner of the summary section to copy a direct link to the selected anomaly. 
 
 ![copy-anomaly](../assets/datastores/anomalies-datastore/copy-anomaly-light.png#only-light)
 ![copy-anomaly](../assets/datastores/anomalies-datastore/copy-anomaly-dark.png#only-dark)

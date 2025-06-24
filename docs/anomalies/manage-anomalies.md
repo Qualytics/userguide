@@ -41,7 +41,7 @@ You can acknowledge individual anomalies either directly or through the action m
 ![acknowledge-option](../assets/datastores/manage-anomalies/acknowledge-option-light.png#only-light)
 ![acknowledge-option](../assets/datastores/manage-anomalies/acknowledge-option-dark.png#only-dark)
 
-**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
+**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
 
 ![acknowledge-msg](../assets/datastores/manage-anomalies/acknowledge-msg-light-13.png#only-light)
 ![acknowledge-msg](../assets/datastores/manage-anomalies/acknowledge-msg-dark-13.png#only-dark)
@@ -58,7 +58,7 @@ You can acknowledge individual anomalies either directly or through the action m
 ![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-light-15.png#only-light)
 ![vertical-acknowledge](../assets/datastores/manage-anomalies/vertical-acknowledge-dark-15.png#only-dark)
 
-**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledge and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
+**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
 
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-light-18.png#only-light)
 ![acknowledge-message](../assets/datastores/manage-anomalies/acknowledge-message-dark-18.png#only-dark)
@@ -94,7 +94,7 @@ You also have the option to leave a comment in the provided field to provide add
 ![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-light-23.png#only-light)
 ![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-dark-23.png#only-dark)
 
-**Step 4:** After clicking on the **Acknowledge** button your anomalies are successfully moved to the acknowledge state and a flash message will appear saying **“The Anomalies have been successfully acknowledged”.**
+**Step 4:** After clicking on the **Acknowledge** button your anomalies are successfully moved to the acknowledged state and a flash message will appear saying **“The Anomalies have been successfully acknowledged”.**
 
 ![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-light-24.png#only-light)
 ![acknowledge-button](../assets/datastores/manage-anomalies/acknowledge-button-dark-24.png#only-dark)
@@ -281,7 +281,7 @@ After clicking the **Save** button, the selected anomalies will be updated with 
 Deleting anomalies allows you to permanently remove records that are no longer relevant or were logged in error. This can be done individually or for multiple anomalies at once, ensuring that your anomaly records remain clean and up to date.
 
 !!! note 
-    You can only delete archived anomalies, not active or acknowledged checks. If you want to delete an active or acknowledged anomaly, you must first move it to the archive, and then you can delete it.
+    You can only delete archived anomalies, not active or acknowledged anomalies. If you want to delete an active or acknowledged anomaly, you must first move it to the archive, and then you can delete it.
 
 !!! warning 
     Deleting an anomaly is a one-time action. It cannot be restored after deletion.
@@ -369,7 +369,7 @@ Filter and Sort options allow you to organize your anomaly by various criteria, 
 
 ### Sort
 
-You can sort your anomalies by **Anomalous Record**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
+You can sort your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
 
 ![sort](../assets/datastores/manage-anomalies/sort-light-1.png#only-light)
 ![sort](../assets/datastores/manage-anomalies/sort-dark-1.png#only-dark)
@@ -406,4 +406,4 @@ You can filter your anomalies based on values like **Timeframe**, **Type**, **Ru
 
 | No. | Filter | Description |
 | :---- | :---- | :---- |
-| **7** | **Tags** | Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a No option found message is displayed. |
+| **7** | **Tags** | Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a No options found message is displayed. |
