@@ -46,8 +46,8 @@ If automatic cataloging is disabled while adding the datastore, users can initia
 
 **Step 1**: Select a source datastore from the side menu on which you would like to perform the catalog operation.
 
-![add-source-datadtore](../assets/catalog-operations/add-source-datastore-light.png#only-light)
-![add-source-datadtore](../assets/catalog-operations/add-source-datastore-dark.png#only-dark)
+![add-source-datastore](../assets/catalog-operations/add-source-datastore-light.png#only-light)
+![add-source-datastore](../assets/catalog-operations/add-source-datastore-dark.png#only-dark)
 
 **Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Catalog** to initiate the catalog operation.
 
@@ -59,8 +59,8 @@ A modal window will display **Operation Triggered** and you will be notified onc
 !!! note
     You will receive a notification when the catalog operation is completed.
 
-![operation-triggered](../assets/catalog-operations/operation-triggred-light.png#only-light)
-![operation-triggered](../assets/catalog-operations/operation-triggred-dark.png#only-dark)
+![operation-triggered](../assets/catalog-operations/operation-triggered-light.png#only-light)
+![operation-triggered](../assets/catalog-operations/operation-triggered-dark.png#only-dark)
 
 **Step 3**: Close the **Success** modal window and you will observe in the UI that the Catalog operation has been completed and it has gathered the data structures, file patterns, and corresponding metadata from your configured datastore.  
   
@@ -122,7 +122,7 @@ After clicking **Run Now**, a confirmation message appears stating **"Operation 
 
 **Step 2:** Set the scheduling preferences for the catalog operation. 
 
-**1. Hourly:** This option allows you to schedule the catalog operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the cataloging should start. Example: If set to "Every 1 hour(s) on minute 0," the catalog operation will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00). 
+**1. Hourly:** This option allows you to schedule the catalog operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the cataloging should start. Example: If set to "Every 1 hour(s) on minute 0," the catalog operation will run every hour at the top of *the hour (e.g., 1:00, 2:00, 3:00). 
 
 ![hourly](../assets/catalog-operations/hourly-light.png#only-light)
 ![hourly](../assets/catalog-operations/hourly-dark.png#only-dark)
@@ -276,7 +276,7 @@ This status indicates that the catalog operation was manually stopped before it 
 
 This status signals that the catalog operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A catalog operation having a **warning** status reflects the following details and actions:
 
-| Parameter      | Interpretatio  |
+| Parameter      | Interpretation |
 |----------------|-------------------------------------------------------------------------|
 | Operation ID   | Unique identifier |
 | Operation Type | Type of operation performed (catalog, profile, or scan) |
