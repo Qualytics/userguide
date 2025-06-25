@@ -122,7 +122,7 @@ After clicking **Run Now**, a confirmation message appears stating **"Operation 
 
 **Step 2:** Set the scheduling preferences for the catalog operation. 
 
-**1. Hourly:** This option allows you to schedule the catalog operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the cataloging should start. Example: If set to "Every 1 hour(s) on minute 0," the catalog operation will run every hour at the top of *the hour (e.g., 1:00, 2:00, 3:00). 
+**1. Hourly:** This option allows you to schedule the catalog operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the cataloging should start. Example: If set to "Every 1 hour(s) on minute 0," the catalog operation will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00). 
 
 ![hourly](../assets/catalog-operations/hourly-light.png#only-light)
 ![hourly](../assets/catalog-operations/hourly-dark.png#only-dark)
