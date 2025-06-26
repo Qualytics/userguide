@@ -4,12 +4,12 @@
 
 Let’s get started 🚀
 
-**Step 1:** Select a source datastore from the side menu to capture and export containers for the Materialize Operation. 
+**Step 1:** Select a source datastore from the side menu to capture and export containers for the Materialize Operation.
 
 ![select](../assets/container/materialize-operation/select-light.png#only-light)
 ![select](../assets/container/materialize-operation/select-dark.png#only-dark)
 
-For demonstration purposes, we have selected the **“COVID-19 Data”** Snowflake source datastores.
+For demonstration purposes, we have selected the **“COVID-19 Data”** Snowflake source datastore.
 
 ![datastore](../assets/container/materialize-operation/datastore-light.png#only-light)
 ![datastore](../assets/container/materialize-operation/datastore-dark.png#only-dark)
@@ -29,7 +29,7 @@ For demonstration purposes, we have selected the **“COVID-19 Data”** Snowfla
 ![next](../assets/container/materialize-operation/next-light.png#only-light)
 ![next](../assets/container/materialize-operation/next-dark.png#only-dark)
 
-**Step 5:** Configure Record Limit set the maximum number of records to be materialized per table.
+**Step 5:** Configure Record Limit: set the maximum number of records to be materialized per table.
 
 ![record](../assets/container/materialize-operation/record-light.png#only-light)
 ![record](../assets/container/materialize-operation/record-dark.png#only-dark)
