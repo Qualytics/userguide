@@ -143,9 +143,22 @@ nav:
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:
-      - Anomaly Analysis: anomalies/anomalies.md
-      - Anomaly: anomalies/anomalies-in-datastore.md
-      - Manage Anomalies: anomalies/manage-anomalies.md
+      - Overview: anomalies/anomalies-overview.md
+      - Anomaly Detection: anomalies/anomaly-detection-process.md
+      - Anomaly Types: anomalies/anomaly-types.md
+      - Anomaly Details: 
+        - Anomaly Insights: anomalies/anomaly-insights.md
+        - Anomaly Fingerprint: anomalies/fingerprints.md
+        - Source Records: anomalies/records.md
+        - API Payload Examples: anomalies/payloads.md
+      - Anomaly Status: anomalies/anomaly-status.md
+      - Manage Anomalies:
+        - Acknowledge Anomalies: anomalies/acknowledge-anomalies.md
+        - Archive Anomalies: anomalies/archived-anomalies.md
+        - Restore Anomalies: anomalies/restore-anomalies.md
+        - Edit Anomalies: anomalies/edit-anomalies.md
+        - Delete Anomalies: anomalies/delete-anomalies.md 
+        - Filter and Sort: anomalies/filter-sort.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
