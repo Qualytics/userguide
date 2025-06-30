@@ -127,6 +127,6 @@ You will be navigated to the **Anomalies** tab, where you'll see a list of all t
 
 ## FAQs
 
-**Can I revert the Ackowledged Anomaly Status?**
+**Can I revert the Acknowledged Anomaly Status?**
 
 No, once an anomaly is acknowledged, it cannot be reverted to the active state. The acknowledgment is permanent.
