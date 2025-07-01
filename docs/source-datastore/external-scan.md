@@ -99,7 +99,7 @@ This overview highlights common issues such as data type mismatches, missing ref
 
 ### CSV Table (Sales Data):
 
-This dataset includes transaction records with details such as **Transaction_ID**, **Customer_ID**, **Product_ID**, **Transaction_Date**, **Quantit**y, and **Unit_Price**. It provides essential information for tracking and analyzing sales activities.
+This dataset includes transaction records with details such as **Transaction_ID**, **Customer_ID**, **Product_ID**, **Transaction_Date**, **Quantity**, and **Unit_Price**. It provides essential information for tracking and analyzing sales activities.
 
 | Transaction_ID | Customer_ID | Product_ID | Transaction_Date | Quantity | Unit_Price |
 |-----------------|-------------|------------|-------------------|----------|------------|
