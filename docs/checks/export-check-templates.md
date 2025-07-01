@@ -31,12 +31,12 @@ After clicking **“Export,”** the process starts, and a message will confirm 
 
 ## Review Exported Check Templates
 
-**Step 1:** Once the checks has been exported, navigate to the **“Enrichment Datastores”** located on the left menu.
+**Step 1:** Once the checks have been exported, navigate to the **“Enrichment Datastores”** located on the left menu.
 
 ![enrichment-datastore](../assets/checks/export-check-templates/enrichment-datastore-light-6.png#only-light)
 ![enrichment-datastore](../assets/checks/export-check-templates/enrichment-datastore-dark-6.png#only-dark)
 
-**Step 2:** In the **“Enrichment Datastores”** section, select the datastore where you exported the checks templates. The exported checks templates will now be visible in the selected datastore.
+**Step 2:** In the **“Enrichment Datastores”** section, select the datastore where you exported the checks templates. The exported check templates will now be visible in the selected datastore.
 
 When you export check templates, you can reuse them for other datastores, share them with teams, or save them as a backup. Once exported, the templates can be imported and customized to fit different datasets, making them versatile and easy to adapt.
 
