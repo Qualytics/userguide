@@ -73,7 +73,7 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 13 |  Measurement Period  | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
 | 14 |  Comparison  | These indicate the type of comparison used, indicating the "Absolute Value" method. |
 | 15 |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows). |
-| 16 |  Max Values. | These indicate the maximum thresholds for the row count of the table being checked. |
+| 16 |  Max Values | These indicate the maximum thresholds for the row count of the table being checked. |
 | 17 |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
 | 18 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
 | 19. | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
