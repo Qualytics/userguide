@@ -2,6 +2,47 @@
 
 ## Release Notes
 
+### 2025.7.2 { id=2025.7.2 }
+
+#### Feature Enhancements
+
+- Introduced Failed Check Version display, providing visibility into the exact check configuration that triggered each anomaly.
+    - Failed Check now displays the specific check properties and configuration that were active when the anomaly was generated.
+
+- Enhanced Check Activities visualization.
+    - Users can now view historical check configurations directly from the timeline, including all properties and tags as they were at that point in time.
+
+- Enhanced flow nodes with improved visual design and contextual information display for better user experience.
+    - Action nodes now show inline summaries with relevant details based on their type (e.g., datastore names for operation actions, channel names for Slack or Teams, URLs for webhooks, etc).
+    - Export nodes now display asset types in their titles (e.g., "Export Anomalies").
+    - Added filter tooltips to trigger nodes displaying applied conditions (tags, datastores, operation types) for quick configuration visibility.
+
+- Supports Data Preview functionality for containers that haven't been profiled yet, removing the requirement to profile first before viewing data.
+
+- Enhanced editing flexibility for Asserted Checks.
+    - Users can now edit SparkSQL expressions that define calculated fields.
+    - Row Identifiers and Passthrough Fields are now editable for Is Replica Of Check.
+
+- Improving Computed Assets:
+    - Users can now add Additional Metadata to computed Tables/files and computed fields.
+    - Display the Last Editor information in the tree footer to provide context on who last modified the asset.
+
+- Added Last Profile visibility in Field Overview and Field Details.
+    - Users can now see the last time a field was profiled, helping clarify the timeframe of the metrics shown in the Profile section.
+
+- Improved Anomaly Bulk Archive with comment support.
+    - Similar to Acknowledge Anomaly, users can now add optional comments when bulk archiving anomalies.
+
+- Improve dry run result message readability.
+
+#### General Fixes and Improvements
+
+- Fix a bug when user selected a date in Date Picker and this return user's timezone instead of UTC timezone.
+
+- Fixed an issue with Metadata Checks Dry Run execution where status messages were not displaying properly.
+
+- General Fixes and Improvements.
+
 ### 2025.6.20 { id=2025.6.20 }
 
 #### Feature Enhancements
