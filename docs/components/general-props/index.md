@@ -1,8 +1,3 @@
----
-search:
-  exclude: true
----
-
 <!-- all-props--start -->
 === "Details"
     | Name    | Supported                |

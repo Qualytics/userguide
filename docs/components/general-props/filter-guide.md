@@ -1,8 +1,3 @@
----
-search:
-  exclude: true
----
-
 The filter allows you to define a subset of data upon which the rule will operate.
 
 It requires a valid **Spark SQL** expression that determines the criteria rows in the DataFrame should meet. This means the expression specifies which rows the DataFrame should include based on those criteria. Since it's applied directly to the Spark DataFrame, traditional SQL constructs like WHERE clauses **are not** supported.

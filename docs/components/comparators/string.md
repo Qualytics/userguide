@@ -1,8 +1,3 @@
----
-search:
-  exclude: true
----
-
 #### String
 
 String comparators facilitate comparisons of textual data by allowing variations in spacing. This capability is essential for ensuring data consistency, particularly where minor text inconsistencies may occur.
