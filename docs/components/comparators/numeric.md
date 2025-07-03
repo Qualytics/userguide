@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 #### Numeric
 
 Numeric comparators enable you to compare numbers with a specified margin, which can be a fixed absolute value or a percentage. This allows for minor numerical differences that are often acceptable in real-world data.
