@@ -1,8 +1,3 @@
----
-search:
-  exclude: true
----
-
 #### Duration
 
 Duration comparators support time-based comparisons, allowing for flexibility in how duration differences are managed. This flexibility is crucial for datasets where time measurements are essential but can vary slightly.
