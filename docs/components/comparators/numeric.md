@@ -21,7 +21,7 @@ The threshold is the value you set to define the margin of error:
 
 ??? example "Illustration using Absolute Value"
     
-    In this example, it is being compared `Value A` and `Value B` according to the defined **Threshold** of **50**.
+    In this example, it compares `Value A` and `Value B` according to the defined **Threshold** of **50**.
 
     | Value A | Value B | Difference | Are equal? |
     |---------|---------|------------|------------------|
@@ -33,7 +33,7 @@ The threshold is the value you set to define the margin of error:
 
 ??? example "Illustration using Percentage Value"
 
-    In this example, it is being compared `Value A` and `Value B` according to the defined **Threshold** of **10%**.
+    In this example, it compares `Value A` and `Value B` according to the defined **Threshold** of **10%**.
 
     **Percentage Change Formula**: [ (`Value B` - `Value A`) / `Value A` ] * 100
 

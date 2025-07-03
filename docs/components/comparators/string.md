@@ -13,7 +13,7 @@ When enabled, this setting allows the comparator to ignore differences in whites
 
 ??? example "Illustration"
 
-    In this example, it is being compared `Value A` and `Value B` according to the defined string comparison to `ignore whitespace` as `True`.
+    In this example, it compares `Value A` and `Value B` according to the defined string comparison to `ignore whitespace` as `True`.
 
     | Value A   | Value B   | Are equal?                              | Has whitespace?|
     |-----------|-----------|-----------------------------------------|----------------|
