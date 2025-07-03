@@ -276,6 +276,11 @@ markdown_extensions:
 
 plugins:
   - search
+  - exclude:
+      glob:
+      - components/anomaly-support/*
+      - components/comparators/*
+      - components/general-props/*
   - git-revision-date-localized
   - include-markdown
   - macros
