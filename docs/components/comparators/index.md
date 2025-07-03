@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 <div style="margin-top: -12px;">
 ### Comparators
 </div>

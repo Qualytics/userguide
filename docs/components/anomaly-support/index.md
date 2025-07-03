@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 <!-- all-types--start -->
 | Type    | Supported                |
 |---------|--------------------------|
