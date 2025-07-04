@@ -53,7 +53,7 @@ Configure your data sources in Qualytics by connecting them through a new datast
 
 ## Available Datastores Connector
 
-Qualytics supports a range of datasource, including but not limited to:
+Qualytics supports a range of datasources, including but not limited to:
 
 |          No. |                       Datasource |
 | :---- | :---- |
@@ -75,7 +75,7 @@ Qualytics supports a range of datasource, including but not limited to:
 |      16.  |             [Dremio](../add-datastores/dremio.md) |
 |      17.  |             [Amazon S3](../add-datastores/amazon-s3.md) |
 |      18. |         [Google Cloud Storage](../add-datastores/google-cloud-storage.md) |
-|     19. |      [Window Azure Storage Blob](../add-datastores/azure-datalake-storage.md) |
+|     19. |      [Windows Azure Storage Blob](../add-datastores/azure-datalake-storage.md) |
 |     20. |        [Azure Blob File System](../add-datastores/azure-blob-storage.md) |
 
 ## Connection Management
@@ -104,7 +104,7 @@ Once a datastore is verified and created, it appears in your source datastores.
 
 Once a datastore is added in Qualytics, you can perform three key operations to manage and ensure data quality effectively:
 
-**1.Catalog Operation**
+**1. Catalog Operation**
 
    This operation imports named data collections such as tables, views, and files into the source datastore. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.  
 
