@@ -54,12 +54,12 @@ For demonstration purposes, we have selected the **partsupp_clone** table of **T
 Volumetric help monitor data volumes over time to keep data accurate and reliable. They automatically count rows in a table and spot any unusual changes, like problems with data loading. This makes it easier to catch issues early and keep everything running smoothly. Volumetric checks also let you track data over different time periods, like daily or weekly. The system sets limits based on past data, and if the row count goes above or below those limits, an anomaly alert is triggered.
 
 ![details](../assets/observability/volumetric-detail-light-6.png#only-light)
-![detail](../assets/observability/volumetric-detail-dark-6.png#only-dark)
+![details](../assets/observability/volumetric-detail-dark-6.png#only-dark)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
 | 1 | Search  | This feature helps users quickly find specific identifiers or names in the data. |
-| 2 | Report Data | **Report Date** lets users pick a specific date to view data trends for that day. |
+| 2 | Report Date | **Report Date** lets users pick a specific date to view data trends for that day. |
 | 3 | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year) to view data trends. |
 | 4 | Sort By |  **Sort By** option helps users organize data by criteria like Volumetrics Count, Name, or Last Scanned for quick access. |
 | 5 |  Filter | The filter lets users easily refine results by choosing specific tags or tables to view. |
@@ -98,8 +98,8 @@ By hovering over each square, you can view additional details for that specific 
 
 Editing a Volumetric Check lets users customize settings like measurement period, row count limits, and description. This helps improve data monitoring and anomaly detection, ensuring the check fits specific needs. Users can also add tags for better organization.
 
-!!! note 
-    When editing checks, only the properties and metadata can be modified. 
+!!! note
+    When editing checks, only the properties and metadata can be modified.
 
 **Step 1:** Click the edit icon to modify the check.
 
@@ -317,7 +317,7 @@ Metric track changes in data over time to ensure accuracy and reliability. They 
 | 12 | Max | This field shows the maximum threshold for the metric, set at **8**. Exceeding this may indicate an issue or anomaly. |
 | 13 | Created Date | This field shows when the metric was first set up, in this case, **June 18, 2024.** |
 | 14 |  Last Asserted |  Last Asserted field shows the last time the metric was checked, in this case **July 25, 2024.** |
-| 15 | Group By  Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
+| 15 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
 | 16 | Group By  | This option lets users group data by periods like **Day,** **Week,** or **Month**. In this example, it's set to **Day.**  |
 
 ### Comparisons
@@ -384,7 +384,7 @@ A modal window will appear with the check details.
 | :---- | :---- | :---- |
 | 1 | Min Value and Max Value   | Edit the **Min Value** and **Max Value** to set new row count limits. If the row count exceeds these limits, an alert will be triggered. |
 | 2 | Description | Edit the **Description** to better explain what the check does.  |
-| 3 | Tags |  Edit the **Tags** to organize and easily find the check later. |
+| 3 | Tags | Edit the **Tags** to organize and easily find the check later. |
 | 4 | Additional Metadata(Optional) |  Edit the **Additional Metadata** section to add any new custom details for more context.  |
 
 ![observability](../assets/observability/check-detail-light-28.png#only-light)
