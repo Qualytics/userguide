@@ -190,7 +190,7 @@ The **Quality Score Settings** allow users to tailor the impact of each quality 
 ![score-settings](../assets/datastore-settings/score-settings-light-18.png#only-light)
 ![score-settings](../assets/datastore-settings/score-settings-dark-18.png#only-dark)
 
-**Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the most relevant data quality insights. 
+**Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the most relevant data quality insights.
 
 ![decay-period](../assets/datastore-settings/decay-period-light-19.png#only-light)
 ![decay-period](../assets/datastore-settings/decay-period-dark-19.png#only-dark)
@@ -226,7 +226,7 @@ The **Delete Datastore** action permanently removes a datastore and all associat
 
 ## View Team
 
-**Step 1**: Select the datastores from the side menu to view the respective datastore team.
+**Step 1**: Select the datastore from the side menu to view the respective datastore team.
 
 ![add-datastore](../assets/datastore-settings/add-datastore-light-1.png#only-light)
 ![add-datastore](../assets/datastore-settings/add-datastore-dark-1.png#only-dark)
