@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 ## Navigation
 
-**Step 1:** Log in to your Qualytics account and select the datastore from the left menu that you want to monitor
+**Step 1:** Log in to your Qualytics account and select the datastore from the left menu that you want to monitor.
 
 ![datastore](../assets/observability/source-light-1.png#only-light)
 ![datastore](../assets/observability/source-dark-1.png#only-dark)
@@ -30,7 +30,7 @@ Observability in data checks is divided into two key categories: **Measures** an
 ![category](../assets/observability/category-light-3.png#only-light)
 ![category](../assets/observability/category-dark-3.png#only-dark)
 
-1. **Measures:** Measures focus on monitoring overall data trends to ensure consistency and reliability. This includes **Volumetric Checks**, which track data volume to identify trends and detect anomalies, and **Freshness** Tracking, which measures the last update or addition of data to ensure timeliness. These checks help maintain data integrity by highlighting unexpected changes in volume or delays in data updates.
+**1. Measures:** Measures focus on monitoring overall data trends to ensure consistency and reliability. This includes **Volumetric Checks**, which track data volume to identify trends and detect anomalies, and **Freshness** Tracking, which measures the last update or addition of data to ensure timeliness. These checks help maintain data integrity by highlighting unexpected changes in volume or delays in data updates.
 
 ![volumetric](../assets/observability/volumetric-light-4.png#only-light)
 ![volumetric](../assets/observability/volumetric-dark-4.png#only-dark)
@@ -54,13 +54,13 @@ For demonstration purposes, we have selected the **partsupp_clone** table of **T
 Volumetric help monitor data volumes over time to keep data accurate and reliable. They automatically count rows in a table and spot any unusual changes, like problems with data loading. This makes it easier to catch issues early and keep everything running smoothly. Volumetric checks also let you track data over different time periods, like daily or weekly. The system sets limits based on past data, and if the row count goes above or below those limits, an anomaly alert is triggered.
 
 ![details](../assets/observability/volumetric-detail-light-6.png#only-light)
-![detail](../assets/observability/volumetric-detail-dark-6.png#only-dark)
+![details](../assets/observability/volumetric-detail-dark-6.png#only-dark)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
 | 1 | Search  | This feature helps users quickly find specific identifiers or names in the data. |
-| 2 | Report Data | **Report Date** lets users pick a specific date to view data trends for that day. |
-| 3 | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year.) to view data trends. |
+| 2 | Report Date | **Report Date** lets users pick a specific date to view data trends for that day. |
+| 3 | Time Frame | The **time frame** option lets users choose a period (week, month, quarter, or year) to view data trends. |
 | 4 | Sort By |  **Sort By** option helps users organize data by criteria like Volumetrics Count, Name, or Last Scanned for quick access. |
 | 5 |  Filter | The filter lets users easily refine results by choosing specific tags or tables to view. |
 | 6 |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
@@ -71,9 +71,9 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 11 | Edit Checks | Edit the check to modify settings, or add tags for better customization and monitoring. |
 | 12 | Group By  | Users can also Group By specific intervals, such as day, week, or month, to observe trends over different periods. |
 | 13 |  Measurement Period  | Defines the time period over which the volumetric check is evaluated. It can be customized to 1 day, week, or other timeframes. |
-| 14 |  Comparison  | These indicate the type of comparison used, indicating the "Absolute Value" method |
-| 15 |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows) |
-| 16 |  Max Values. | These indicate the maximum thresholds for the row count of the table being checked |
+| 14 |  Comparison  | These indicate the type of comparison used, indicating the "Absolute Value" method. |
+| 15 |  Min Values  | These indicate the minimum thresholds for the row count of the table being checked (e.g., 150,139 Rows). |
+| 16 |  Max Values | These indicate the maximum thresholds for the row count of the table being checked. |
 | 17 |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
 | 18 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
 | 19. | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
@@ -98,8 +98,8 @@ By hovering over each square, you can view additional details for that specific 
 
 Editing a Volumetric Check lets users customize settings like measurement period, row count limits, and description. This helps improve data monitoring and anomaly detection, ensuring the check fits specific needs. Users can also add tags for better organization.
 
-!!! note 
-    When editing checks, only the properties and metadata can be modified. |
+!!! note
+    When editing checks, only the properties and metadata can be modified.
 
 **Step 1:** Click the edit icon to modify the check.
 
@@ -155,7 +155,7 @@ After clicking on the Update button, your check is successfully updated and a su
 Edit thresholds to set specific row count limits for your data checks. By defining minimum and maximum values, you ensure alerts are triggered when data goes beyond the expected range. This helps you monitor unusual changes in data volume. It gives you better control over tracking your data's behavior.
 
 !!! note
-    When editing the threshold, only the min and max values can be modified. 
+    When editing the threshold, only the min and max values can be modified.
 
 **Step 1:** Click the **Edit Thresholds** button on the right side of the graph.
 
@@ -196,7 +196,7 @@ To unmark a check, simply click on the bookmark icon of the marked check. This w
 ![observability](../assets/observability/fav-btn-light-21.png#only-light)
 ![observability](../assets/observability/fav-btn-dark-21.png#only-dark)
 
-### **Freshness**   
+### **Freshness**
 
 This measures the timeliness of data by monitoring when new data was last added or updated. It helps ensure that data remains up-to-date and relevant for decision-making. Users can view timestamp values in a clear date and time format, making it easier to analyze data freshness while maintaining millisecond-level precision in the background. If data updates are delayed or missing, it may indicate pipeline failures, system lag, or unexpected data source changes. Regular freshness checks prevent outdated information from impacting analytics, reporting, or automated workflows.
 
@@ -306,27 +306,27 @@ Metric track changes in data over time to ensure accuracy and reliability. They 
 | 1 | Search   | The search bar helps users find specific metrics or data by entering an identifier or description. |
 | 2 | Sort By  |  Sort By allows users to organize data by **Weight, Anomalies,** or **Created Date** for easier analysis and prioritization. |
 | 3 | Filter | Filter lets users refine data by **Tags** or **Tables**. Use **Apply** to filter or **Clear** to reset. |
-| 4 |  Metric(ID) | Represents the tracked data metric with a unique ID**.** |
-| 5 |  Description  |  A brief label or note about the metric, in this case, it's labeled as **test** |
+| 4 |  Metric(ID) | Represents the tracked data metric with a unique **ID**. |
+| 5 |  Description  |  A brief label or note about the metric, in this case, it's labeled as **test**. |
 | 6 |  Weight | Weight shows how important a check is for finding anomalies and sending alerts. |
 | 7 | Anomalies  |  Anomalies show unexpected changes or issues in the data that need attention. |
 | 8 |  Favorite | Mark this as a favorite for quick access and easy monitoring in the future. |
 | 9 | Edit Checks  |  Edit the check to modify settings, or add tags for better customization and monitoring. |
-| 10 |  Field | This refers to the specific field being measured, here the **max\_value,** which tracks the highest value observed for the metric. |
+| 10 |  Field | This refers to the specific field being measured, here the **max_value,** which tracks the highest value observed for the metric. |
 | 11 |  Min  | This indicates the minimum value for the metric, which is set to **1**. If not defined, no lower limit is applied. |
 | 12 | Max | This field shows the maximum threshold for the metric, set at **8**. Exceeding this may indicate an issue or anomaly. |
-| 13 | Created Date | This field shows when the metric was first set up, in this case, **June 18, 2024\.** |
-| 14 |  Last Asserted |  Last Asserted field shows the last time the metric was checked, in this case **July 25, 2024\.** |
-| 15 | Group By  Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
+| 13 | Created Date | This field shows when the metric was first set up, in this case, **June 18, 2024.** |
+| 14 |  Last Asserted |  Last Asserted field shows the last time the metric was checked, in this case **July 25, 2024.** |
+| 15 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
 | 16 | Group By  | This option lets users group data by periods like **Day,** **Week,** or **Month**. In this example, it's set to **Day.**  |
 
 ### Comparisons
 
-When you [add a metric](https://userguide.qualytics.io/checks/metric-check/) check, you can choose from three comparison options: 
+When you [add a metric](https://userguide.qualytics.io/checks/metric-check/) check, you can choose from three comparison options:
 
 * Absolute Change  
 * Absolute Value  
-* Percentage Change. 
+* Percentage Change
 
 These options help define how the system will evaluate your data during scan operations on the datastore.
 
@@ -363,10 +363,10 @@ These thresholds ensure meaningful visual representation by preventing incomplet
 
 ### Edit Check
 
-**Edit Check** allows users to modify the parameters of an existing metric check. It enables adjusting values, thresholds, or comparison logic to ensure that the metric accurately reflects current monitoring needs. 
+**Edit Check** allows users to modify the parameters of an existing metric check. It enables adjusting values, thresholds, or comparison logic to ensure that the metric accurately reflects current monitoring needs.
 
-!!! note 
-    When editing checks, only the properties and metadata can be modified. 
+!!! note
+    When editing checks, only the properties and metadata can be modified.
 
 **Step 1:** Click the edit icon to modify the check.
 
@@ -384,7 +384,7 @@ A modal window will appear with the check details.
 | :---- | :---- | :---- |
 | 1 | Min Value and Max Value   | Edit the **Min Value** and **Max Value** to set new row count limits. If the row count exceeds these limits, an alert will be triggered. |
 | 2 | Description | Edit the **Description** to better explain what the check does.  |
-| 3 | Tags |  Edit the **Tags** to organize and easily find the check later. |
+| 3 | Tags | Edit the **Tags** to organize and easily find the check later. |
 | 4 | Additional Metadata(Optional) |  Edit the **Additional Metadata** section to add any new custom details for more context.  |
 
 ![observability](../assets/observability/check-detail-light-28.png#only-light)
@@ -414,8 +414,8 @@ After clicking on the Update button, your check is successfully updated and a su
 
 **Edit Threshold** allows you to change the upper and lower limits of a metric. This ensures the metric tracks data within the desired range and only triggers alerts when those limits are exceeded.
 
-!!! note 
-    When editing the threshold, only the min and max values can be modified. |
+!!! note
+    When editing the threshold, only the min and max values can be modified.
 
 **Step 1:** Click the **Edit Thresholds** button on the right side of the graph.
 
@@ -446,13 +446,12 @@ Marking a Metric Check as a favorite allows you to easily access important check
 ![observability](../assets/observability/fav-light-37.png#only-light)
 ![observability](../assets/observability/fav-dark-37.png#only-dark)
 
-After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **“Check has been favorited”**
+After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **“Check has been favorited”**.
 
 ![observability](../assets/observability/success-msg-light-38.png#only-light)
 ![observability](../assets/observability/success-msg-dark-38.png#only-dark)
 
-To unmark a check, simply click on the bookmark icon of the marked check. This will remove it from your favorites 
+To unmark a check, simply click on the bookmark icon of the marked check. This will remove it from your favorites.
 
 ![observability](../assets/observability/unfav-light-39.png#only-light)
 ![observability](../assets/observability/unfav-dark-39.png#only-dark)
-
