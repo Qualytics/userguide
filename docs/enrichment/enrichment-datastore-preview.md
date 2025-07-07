@@ -16,25 +16,25 @@ Let’s get started 🚀
 ![specific](../assets/enrichment/data-preview/specific-light.png#only-light)
 ![specific](../assets/enrichment/data-preview/specific-dark.png#only-dark)
 
-For Demonstaration purpose we are selected **Netsuite Financials Enrich** enrichment datastore.
+For Demonstration purposes, we have selected **Netsuite Financials Enrich** enrichment datastore.
 
-**Step 3:** After clicking on your selected enrichment datastore, you will be able to preview its enrichment, metadata, remediation, all data tables, and unlinked data tables.
+**Step 3:** After clicking on your selected enrichment datastore, you will be able to preview its enrichment, export, materialize, remediation, all data tables, and unlinked data tables.
 
 ![preview](../assets/enrichment/data-preview/preview-light.png#only-light)
 ![preview](../assets/enrichment/data-preview/preview-dark.png#only-dark)
 
 ## Data Preview Tab
 
-Data Preview Tab provides a clear visualization of enriched datasets tables and fields like `_FAILED_CHECKS`, `_SOURCE_RECORDS`, and `_SCAN_OPERATIONS`. Users can explore remediation data, metadata, and unlinked objects, refine data with filters, select specific fields, and download records for further analysis. This tab ensures efficient data review and management for enhanced insights.
+Data Preview Tab provides a clear visualization of enriched datasets tables and fields like  `_FAILED_CHECKS`, `_SOURCE_RECORDS`, and `_SCAN_OPERATIONS`. Users can explore remediation data, export data, materialized datasets, and unlinked objects, refine data with filters, select specific fields, and download records for further analysis. This tab ensures efficient data review and management for enhanced insights.
 
 ### All
 
-By selecting **All**, users can access a comprehensive list of data table associated with the selected enrichment datastore. This includes all relevant tables categorized under Enrichment, Remediation, Metadata, and Unlinked sections, enabling users to efficiently explore and manage the data. Click on specific table or dataset within the all section to access its detailed information.
+By selecting **All**, users can access a comprehensive list of data tables associated with the selected enrichment datastore. This includes all relevant tables categorized under Enrichment, Remediation, Export, Materialize, and Unlinked sections, enabling users to efficiently explore and manage the data. Click on a specific table or dataset within the All section to access its detailed information.
 
 ![all](../assets/enrichment/data-preview/all-light.png#only-light)
 ![all](../assets/enrichment/data-preview/all-dark.png#only-dark)
 
-After clicking on a specific table or dataset, a detailed view opens, displaying fields such as `_FAILED_CHECKS`, `_SOURCE_RECORDS`, `_SCAN_OPERATIONS`, remediation tables (e.g., `_ENRICHMENT_CONTAINER_PREFIX_REMEDIATION_CONTAINER_ID`), metadata from export containers, and unlinked objects (orphaned data) for review and action.
+After clicking on a specific table or dataset, a detailed view opens, displaying fields such as `_FAILED_CHECKS`, `_SOURCE_RECORDS`, `_SCAN_OPERATIONS`, remediation tables (e.g., `_ENRICHMENT_CONTAINER_PREFIX_REMEDIATION_CONTAINER_ID`), exported tables, materialized outputs, and unlinked objects (orphaned data) for review and action.
 
 ![data](../assets/enrichment/data-preview/data-light.png#only-light)
 ![data](../assets/enrichment/data-preview/data-dark.png#only-dark)
@@ -53,7 +53,7 @@ After clicking on a specific table or dataset, a detailed view opens, displaying
 
 ### Remediation
 
-By selecting **Remediation** users can access a comprehensive view of the table or data associated with the selected enrichment datastore. Click on specific table or dataset within the Remedation section to access its detailed information.
+By selecting **Remediation** users can access a comprehensive view of the table or data associated with the selected enrichment datastore. Click on specific table or dataset within the Remediation section to access its detailed information.
 
 ![remediation](../assets/enrichment/data-preview/remediation-light.png#only-light)
 ![remediation](../assets/enrichment/data-preview/remediation-dark.png#only-dark)
@@ -63,12 +63,24 @@ After clicking on a table or dataset, a detailed view opens, displaying all the 
 ![data3](../assets/enrichment/data-preview/data3-light.png#only-light)
 ![data3](../assets/enrichment/data-preview/data3-dark.png#only-dark)
 
-### Metadata
+### Export
 
-By selecting **Metadata** users can access a comprehensive view of the table or data associated with the selected enrichment datastore.Click on specific table or dataset within the Metadata section to access its detailed information.
+By selecting **Export**, users can access a comprehensive view of the exported tables or data associated with the selected enrichment datastore. Click on a specific table or dataset within the Export section to access its detailed information.
 
-![metadata](../assets/enrichment/data-preview/metadata-light.png#only-light)
-![metadata](../assets/enrichment/data-preview/metadata-dark.png#only-dark)
+![export](../assets/enrichment/data-preview/export-light.png#only-light)
+![export](../assets/enrichment/data-preview/export-dark.png#only-dark)
+
+After clicking on a table or dataset, a detailed view opens, displaying all the fields and data associated with the selected table or dataset.
+
+![data1](../assets/enrichment/data-preview/data1-light.png#only-light)
+![data1](../assets/enrichment/data-preview/data1-dark.png#only-dark)
+
+### Materialize
+
+By selecting **Materialize**, users can access a comprehensive view of the materialized tables or data associated with the selected enrichment datastore. Click on a specific table or dataset within the Materialize section to access its detailed information.
+
+![materialize](../assets/enrichment/data-preview/materialize-light.png#only-light)
+![materialize](../assets/enrichment/data-preview/materialize-dark.png#only-dark)
 
 After clicking on a table or dataset, a detailed view opens, displaying all the fields and data associated with the selected table or dataset.
 
@@ -89,7 +101,7 @@ After clicking on a table or dataset, a detailed view opens, displaying all the 
 
 ## Filter Clause and Refresh
 
-**Data Preview** tab includes a filter functionality that enables users to focus on specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data. 
+**Data Preview** tab includes a filter functionality that enables users to focus on specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data.
 
 ### Filter Clause
 
