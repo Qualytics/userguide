@@ -29,7 +29,7 @@ Alternatively, you can access the tables or files by clicking the drop-down arro
 ![alter](../assets/container/data-preview/alter-light.png#only-light)
 ![alter](../assets/container/data-preview/alter-dark.png#only-dark)
 
-**Step 4:** After selecting the specific table or file, click on the Data Preview tab.
+**Step 4:** After selecting the specific table or file, click on the **Data Preview** tab.
 
 ![preview](../assets/container/data-preview/preview-light.png#only-light)
 ![preview](../assets/container/data-preview/preview-dark.png#only-dark)
@@ -63,7 +63,7 @@ Click **Refresh** button to update the data view with the latest information, en
 
 ## Select Specific Fields
 
-Select specific fields to display, allowing you to focus on the most relevant data for analysis.To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
+Select specific fields to display, allowing you to focus on the most relevant data for analysis. To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
 
 ![field](../assets/container/data-preview/field-light.png#only-light)
 ![field](../assets/container/data-preview/field-dark.png#only-dark)
