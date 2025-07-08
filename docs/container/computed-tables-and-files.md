@@ -10,8 +10,8 @@ Let's get started 🚀
 
 Use Computed Tables when you want to perform the following operation on your selected source datastore:
 
--   Data Preparation and Transformation: Clean, shape, and restructure raw data from JDBC source datastores.           
--   Complex Calculations and Aggregations: Perform calculations not easily supported by standard containers.      
+-   Data Preparation and Transformation: Clean, shape, and restructure raw data from JDBC source datastores.
+-   Complex Calculations and Aggregations: Perform calculations not easily supported by standard containers.
 -   Data Subsetting: Extract specific data subsets based on filters using SQL's WHERE clause.     
 -   Joining Data Across source datastores: Combine data from multiple JDBC source datastores using SQL joins.
 
@@ -27,17 +27,18 @@ Use Computed Tables when you want to perform the following operation on your sel
 ![computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-light.png#only-light)
 ![computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-dark.png#only-dark)
 
-**Step 3:** A modal window will appear prompting you to enter the name for your computed table and a valid SQL query that supports your selected source datastore.
+**Step 3:** A modal window will appear prompting you to enter the name for your computed table, a valid SQL query that supports your selected source datastore, and optionally, additional metadata.
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1.   | Name   | Enter a name for your compute table. The name should be descriptive and meaningful to help you easily identify the table later (e.g., add a meaningful name like `Customer_Order_Statistics`). |
-| 2.   | Query  | Write the valid SQL queries that support your selected source datastore. The query helps to perform joins and aggregations on your selected source datastore. |
+| 1.   | Name (Required)  | Enter a name for your computed table. The name should be descriptive and meaningful to help you easily identify the table later (e.g., add a meaningful name like `Customer_Order_Statistics`). |
+| 2.   | Query (Required)  | Write the valid SQL queries that support your selected source datastore. The query helps to perform joins and aggregations on your selected source datastore. |
+| 3.   | Additional Metadata (Optional)  | Add custom metadata to enhance the definition of your computed table. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
 ![add-computed-table](../assets/datastores/add-computed-tables-files/add-computed-table-light.png#only-light)
 ![add-computed-table](../assets/datastores/add-computed-tables-files/add-computed-table-dark.png#only-dark)
 
-**Step 4:** Click on the **Add** button to add the computed file table with your selected source datastore.
+**Step 4:** Click on the **Add** button to add the computed table with your selected source datastore.
 
 ![click-add](../assets/datastores/add-computed-tables-files/click-add-light.png#only-light)
 ![click-add](../assets/datastores/add-computed-tables-files/click-add-dark.png#only-dark)
@@ -57,19 +58,20 @@ Use Computed Files when you want to perform the following operation on your sele
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png#only-light)
 ![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-dark.png#only-dark)
 
-**Step 2:** After clicking on your preferred source datastore, it will navigate you to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed files** option from the dropdown menu.
+**Step 2:** After clicking on your preferred source datastore, it will navigate you to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed File** option from the dropdown menu.
 
 ![select-computed-file](../assets/datastores/add-computed-tables-files/select-computed-file-light.png#only-light)
 ![select-computed-file](../assets/datastores/add-computed-tables-files/select-computed-file-dark.png#only-dark)
 
-**Step 3:** A modal window will appear prompting you to enter the name for your computed file, select a source file pattern, select the expression, and define the filter clause (optional).
+**Step 3:** A modal window will appear prompting you to enter the name for your computed file, select a source file pattern, choose the expression, and optionally define a filter clause and add additional metadata.
 
 | REF. | FIELDS  | ACTION  |
 |------|----------------------------|---------------------------------------|
-| 1.   | Name (Required) | Enter a name for your computed table. The name should be descriptive and meaningful to help you easily identify the table later (e.g., add a meaningful name like Customer_Order_Statistics). |
+| 1.   | Name (Required) | Enter a name for your computed file. The name should be descriptive and meaningful to help you easily identify the table later (e.g., add a meaningful name like Customer_Order_Statistics). |
 | 2.   | Source File Pattern (Required) | Select a source file pattern from the dropdown menu to match files that have a similar naming convention. |
 | 3.   | Select Expression (Required)  | Select the expression to define the data you want to include in the computed file.|
 | 4.   | Filter Clause (Optional)   | Add a WHERE clause to filter the data that meets certain conditions. |
+| 5.   | Additional Metadata (Optional)   | Enhance the computed file definition by setting custom metadata. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
 ![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-light.png#only-light)
 ![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-dark.png#only-dark)
@@ -84,7 +86,7 @@ After clicking on the **Add** button, a flash message for successful operation w
 ![created-file](../assets/datastores/add-computed-tables-files/created-file-light.png#only-light)
 ![created-file](../assets/datastores/add-computed-tables-files/created-file-dark.png#only-dark)
 
-## Computed Table Vs. Computed Files
+## Computed Table Vs. Computed File
 
 | Feature             | Computed Table (JDBC)                 | Computed File (DFS)                        |
 |---------------------|---------------------------------------|--------------------------------------------|
