@@ -13,7 +13,7 @@ Let's get started 🚀
 
 **Step 2:** Select the **Container** within the chosen datastore where you want to create the computed field. This container holds the data to which the new computed field will be applied, enabling you to enhance your data analysis within that specific datastore.
 
-For demonstration purposes, we have selected the **`Bank Dataset-Staging`** source datastore and the **`bank_transactions_.csv`** container within it to create a computed field.
+For demonstration purposes, we have selected the **Bank Dataset-Staging** source datastore and the **bank_transactions_.csv** container within it to create a computed field.
 
 ![container](../assets/container/computed-field/container-light-2.png#only-light)
 ![container](../assets/container/computed-field/container-dark-2.png#only-dark)
@@ -28,15 +28,19 @@ A modal window will appear, allowing you to enter the details for your computed 
 ![add-field](../assets/container/computed-field/add-field-light-4.png#only-light)
 ![add-field](../assets/container/computed-field/add-field-dark-4.png#only-dark)
 
-**Step 4:** Enter the **Name** for the computed field and select **Transformation Type** from the dropdown menu. 
+**Step 4:** Enter the **Name** for the computed field, select **Transformation Type** from the dropdown menu, and optionally add **Additional Metadata**.
 
 | REF. | FIELDS | ACTION |
 |------|--------|--------|
 | 1. | Field Name (Required) | Add a unique name for your computed field. |
 | 2. | Transformation Type (Required) | The type of transformation you want to apply from the available options. |
+| 3. | Additional Metadata (Optional) | Enhance the computed field definition by setting custom metadata. Click the plus icon **(+)** to open the metadata input form and add key-value pairs. |
+
+![fields](../assets/container/computed-field/fields-light-1.png#only-light)
+![fields](../assets/container/computed-field/fields-dark-1.png#only-dark)
 
 !!! info
-    Transformations are changes made to data, like converting formats, doing calculations, or cleaning up fields. In Qualytics, you can use transformations to meet specific needs, such as cleaning entity names, converting formatted numbers, or applying custom expressions. With various transformation types available, Qualytics enables you to customize your data directly within the platform, ensuring it’s accurate and ready for analysis. 
+    Transformations are changes made to data, like converting formats, doing calculations, or cleaning up fields. In Qualytics, you can use transformations to meet specific needs, such as cleaning entity names, converting formatted numbers, or applying custom expressions. With various transformation types available, Qualytics enables you to customize your data directly within the platform, ensuring it’s accurate and ready for analysis.
 
 | Transformation Types | Purpose | Reference |
 |------|--------|---------|
@@ -52,7 +56,7 @@ A modal window will appear, allowing you to enter the details for your computed 
 ![save](../assets/container/computed-field/save-light-6.png#only-light)
 ![save](../assets/container/computed-field/save-dark-6.png#only-dark)
 
-**Step 6:** After clicking on the **Save** button, your computed field is created and a success flash message will display saying **A computed field has been created successfully**.
+**Step 6:** After clicking on the **Save** button, your computed field is created and a success flash message will display saying **The computed field has been successfully created**.
 
 ![success](../assets/container/computed-field/success-light-7.png#only-light)
 ![success](../assets/container/computed-field/success-dark-7.png#only-dark)
@@ -125,7 +129,7 @@ Tags can now be directly managed in the field profile within the Explore section
 ![specific](../assets/container/computed-field/specific-light.png#only-light)
 ![specific](../assets/container/computed-field/specific-dark.png#only-dark)
 
-A Field Details modal window will appear. Click on the + button to assign tags to the selected field.
+A **Field Details** modal window will appear. Click on the plus button **(+)** to assign tags to the selected field.
 
 ![field](../assets/container/computed-field/fields-light.png#only-light)
 ![field](../assets/container/computed-field/fields-dark.png#only-dark)
@@ -180,7 +184,7 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 ### Filter
 
-You can filter your checks based on values like Type and Tag to easily organize and prioritize them according to your needs.
+You can filter your fields based on values like Type and Tag to easily organize and prioritize them according to your needs.
 
 ![caret](../assets/container/computed-field/filter-light-15.png#only-light)
 ![caret](../assets/container/computed-field/filter-dark-15.png#only-dark)
