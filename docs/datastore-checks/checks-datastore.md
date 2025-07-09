@@ -20,7 +20,7 @@ Let's get started 🚀
 
 You can categorize your checks based on their status, such as Active, Draft, Archived (Invalid and Discarded), or All, according to your preference. This categorization offers a clear view of the data quality validation process, helping you manage checks efficiently and maintain data integrity.
 
-### All 
+### All
 
 By selecting **All Checks**, you can view a comprehensive list of all the checks in the datastore, including both **active** and **draft** checks, allowing you to focus on the checks that are currently being managed or are in progress. However, archived checks are not displayed in this.  
 
@@ -38,18 +38,18 @@ You can also categorize the active checks based on their importance and favorite
 
 **1. Important:** Shows only checks that are marked as important. These checks are prioritized based on their significance, typically assigned a weight of 7 or higher.
 
-!!! note 
+!!! note
     Important checks are prioritized based on a weight of 7 or higher.
 
 ![important](../assets/datastore-checks/checks-datastore/important-light-5.png#only-light)
 ![important](../assets/datastore-checks/checks-datastore/important-dark-5.png#only-dark)
 
-**2. Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently. 
+**2. Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently.
 
 ![favorite](../assets/datastore-checks/checks-datastore/favorite-light-6.png#only-light)
 ![favorite](../assets/datastore-checks/checks-datastore/favorite-dark-6.png#only-dark)
 
-**3. All:** Displays a comprehensive view of all active checks, including important, favorite and any checks that do not fall under these specific categories. 
+**3. All:** Displays a comprehensive view of all active checks, including important, favorite, and any checks that do not fall under these specific categories.
 
 ![all](../assets/datastore-checks/checks-datastore/all-light-8.png#only-light)
 ![all](../assets/datastore-checks/checks-datastore/all-dark-8.png#only-dark)
@@ -68,12 +68,12 @@ You can also categorize the draft checks based on their importance and favorites
 ![important](../assets/datastore-checks/checks-datastore/important-light-10.png#only-light)
 ![important](../assets/datastore-checks/checks-datastore/important-dark-10.png#only-dark)
 
-**2 Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently.  
+**2. Favorite:** Displays checks that have been marked as favorites. This allows you to quickly access checks that you use or monitor frequently.  
 
 ![favorite](../assets/datastore-checks/checks-datastore/favorite-light-11.png#only-light)
 ![favorite](../assets/datastore-checks/checks-datastore/favorite-dark-11.png#only-dark)
 
-**3. All:** Displays a comprehensive view of all draft checks, including important, favorite and any checks that do not fall under these specific categories.   
+**3. All:** Displays a comprehensive view of all draft checks, including important, favorite, and any checks that do not fall under these specific categories.
 
 ![all](../assets/datastore-checks/checks-datastore/all-light-13.png#only-light)
 ![all](../assets/datastore-checks/checks-datastore/all-dark-13.png#only-dark)
@@ -97,7 +97,7 @@ You can also categorize the archived checks based on their status as **Discarded
 ![invalid](../assets/datastore-checks/checks-datastore/invalid-light-16.png#only-light)
 ![invalid](../assets/datastore-checks/checks-datastore/invalid-dark-16.png#only-dark)
 
-**3. All**: Provides a view of all archive checks within this category including discarded and invalid checks.
+**3. All**: Provides a view of all archived checks within this category, including discarded and invalid checks.
 
 ![all](../assets/datastore-checks/checks-datastore/all-light-17.png#only-light)
 ![all](../assets/datastore-checks/checks-datastore/all-dark-17.png#only-dark)
@@ -106,8 +106,7 @@ You can also categorize the archived checks based on their status as **Discarded
 
 Check Details provides important information about each check in the system. It shows when a check was last run, how often it has been used, when it was last updated, who made changes to it, and when it was created. This section helps users understand the status and history of the check, making it easier to manage and track its use over time.
 
-**Step 1:** 
-Locate the check you want to review, then hover over the info icon to view the Check Details. 
+**Step 1:** Locate the check you want to review, then hover over the info icon to view the Check Details.
 
 ![hover](../assets/datastore-checks/checks-datastore/hover-light-17.png#only-light)
 ![hover](../assets/datastore-checks/checks-datastore/hover-dark-17.png#only-dark)
@@ -118,19 +117,19 @@ A popup will appear with additional details about the check.
 ![popup](../assets/datastore-checks/checks-datastore/popup-dark-17.png#only-dark)
 
 ### Last Asserted
-Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **Oct 17, 2023, at 2:37 AM (GMT+5:30).**
+Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **Oct 17, 2023, at 2:37 AM (GMT+5:30)**.
 
 ![popup](../assets/datastore-checks/checks-datastore/asserted-light-17.png#only-light)
 ![popup](../assets/datastore-checks/checks-datastore/asserted-dark-17.png#only-dark)
 
 ### Scans
-Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **30 operations.**
+Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **30 operations**.
 
 ![scan](../assets/datastore-checks/checks-datastore/scan-light-17.png#only-light)
 ![scan](../assets/datastore-checks/checks-datastore/scan-dark-17.png#only-dark)
 
 ### Updated At
-Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Sep 9, 2024, at 3:18 PM (GMT+5:30).**
+Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Sep 9, 2024, at 3:18 PM (GMT+5:30)**.
 
 ![update](../assets/datastore-checks/checks-datastore/update-light-17.png#only-light)
 ![update](../assets/datastore-checks/checks-datastore/update-dark-17.png#only-dark)
@@ -142,7 +141,7 @@ Last Editor indicates who most recently made changes to the check. It helps trac
 ![editor](../assets/datastore-checks/checks-datastore/editor-dark-17.png#only-dark)
 
 ### Created At
-Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 2:19 PM (GMT+5:30).**
+Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 2:19 PM (GMT+5:30)**.
 
 ![created](../assets/datastore-checks/checks-datastore/created-light-17.png#only-light)
 ![created](../assets/datastore-checks/checks-datastore/created-dark-17.png#only-dark)
@@ -161,7 +160,7 @@ You will be navigated to the detail section, where you can view the **Summary**,
 ![detail](../assets/datastore-checks/checks-datastore/detail-light-98.png#only-light)
 ![detail](../assets/datastore-checks/checks-datastore/detail-dark-98.png#only-dark)
 
-!!! info 
+!!! info
        In addition to viewing the check details, you can also monitor and manage any anomalies associated with this check — all from the same page, without needing to navigate elsewhere.
 
 ### Summary Section
@@ -232,7 +231,7 @@ A popup will appear with **Scans** details. Scans show how many times the check 
 
 ### Copy the Check Link
 
-Click on the **Copy Check Link** icon(represented by share icon) located at the right corner of the summary section to copy a direct link to the selected check.This link can be shared with other users for quick access to the specific check within the platform.
+Click on the **Copy Check Link** icon(represented by share icon) located at the right corner of the summary section to copy a direct link to the selected check. This link can be shared with other users for quick access to the specific check within the platform.
 
 ![copy-link](../assets/datastore-checks/checks-datastore/copy-link-light.png#only-light)
 ![copy-link](../assets/datastore-checks/checks-datastore/copy-link-dark.png#only-dark)
@@ -277,7 +276,7 @@ The Observability section helps you monitor how your check assertion metrics cha
 ![report-date](../assets/datastore-checks/checks-datastore/report-date-light.png#only-light)
 ![report-date](../assets/datastore-checks/checks-datastore/report-date-dark.png#only-dark)
 
-**Step 2 :** Click on the **calendar** icon. A date picker will appear. Select the desired report date to update the Assertion Over Time graph accordingly.
+**Step 2:** Click on the **calendar** icon. A date picker will appear. Select the desired report date to update the Assertion Over Time graph accordingly.
 
 ![calendar](../assets/datastore-checks/checks-datastore/calendar-light.png#only-light)
 ![calendar](../assets/datastore-checks/checks-datastore/calendar-dark.png#only-dark)
@@ -313,10 +312,25 @@ The Properties section explains where this check is applied. In this case, the c
 
 ### Activity Section
 
-The Activity section shows a brief history of what has happened with this check. First, the system (Qualytics) created the check one day ago. Later, the system also changed the weight of the check to 8. These changes help keep track of how the check is evolving over time and who made the updates.
+The **Activity** section displays a chronological history of all actions performed on the quality check, including creation, updates, and automated adjustments. It provides visibility into how the check has evolved over time, capturing the exact configuration, properties, and tags associated with each event.
 
 ![activity](../assets/datastore-checks/checks-datastore/activity-light-98.png#only-light)
 ![activity](../assets/datastore-checks/checks-datastore/activity-dark-98.png#only-dark)
+
+You can view the exact version of the check as it existed at that point in time by clicking the **check icon** on the right side of the activity entry.
+
+![check-version](../assets/datastore-checks/checks-datastore/check-version-light.png#only-light)
+![check-version](../assets/datastore-checks/checks-datastore/check-version-dark.png#only-dark)
+
+A right side panel will open with the historical configuration of the check.
+
+![right-panel](../assets/datastore-checks/checks-datastore/right-panel-light.png#only-light)
+![right-panel](../assets/datastore-checks/checks-datastore/right-panel-dark.png#only-dark)
+
+The **Version At** field displays the exact date and time when that version of the check was created. For example, **July 8, 2025, at 5:42 AM (GMT+5:30)** indicates when the configuration shown was active in the system.
+
+![version](../assets/datastore-checks/checks-datastore/version-light.png#only-light)
+![version](../assets/datastore-checks/checks-datastore/version-dark.png#only-dark)
 
 ### Metadata Section
 
