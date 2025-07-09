@@ -105,10 +105,19 @@ This provides detailed insights into the characteristics of the field, including
 ![Profile](../assets/container/computed-field/profile-light-10.png#only-light)
 ![Profile](../assets/container/computed-field/profile-dark-10.png#only-dark)
 
-You can hover over the (i) button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
+You can hover over the **(i)** button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
 
 ![Hover](../assets/container/computed-field/hover-light-11.png#only-light)
 ![Hover](../assets/container/computed-field/hover-dark-11.png#only-dark)
+
+#### Last Profile
+
+The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "8 months ago"), a tooltip displays the complete date and time the field was last profiled.
+
+![last-profile](../assets/container/computed-field/last-profile-light.png#only-light)
+![last-profile](../assets/container/computed-field/last-profile-dark.png#only-dark)
+
+This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
 
 ## Manage Tags in field details
 
