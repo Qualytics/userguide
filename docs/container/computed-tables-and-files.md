@@ -81,7 +81,7 @@ Use Computed Files when you want to perform the following operation on your sele
 ![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-light.png#only-light)
 ![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-dark.png#only-dark)
 
-After clicking on the **Add** button, a flash message for successful operation will display
+After clicking on the **Add** button, a flash message for successful operation will display.
 
 ![created-file](../assets/datastores/add-computed-tables-files/created-file-light.png#only-light)
 ![created-file](../assets/datastores/add-computed-tables-files/created-file-dark.png#only-dark)
@@ -94,8 +94,8 @@ After clicking on the **Add** button, a flash message for successful operation w
 | Query Language      | SQL (database-specific functions)     | Spark SQL                                  |
 | Supported Operations| Joins, where clauses, and database functions | Column transforms, where clauses (no joins), Spark SQL functions |
 
-!!! note   
-    Computed tables and files function like regular tables. You can profile them, create checks, and detect anomalies.   
+!!! note
+    Computed tables and files function like regular tables. You can profile them, create checks, and detect anomalies.
 
     - Updating a computed table's query will trigger a profiling operation.      
     - Updating a computed file's select or where clause will trigger a profiling operation.  
