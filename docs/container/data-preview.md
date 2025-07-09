@@ -13,9 +13,6 @@ Let’s get started 🚀
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-!!! note
-    Before accessing the Data Preview tab, ensure the container is profiled. If not, run a profile operation on the container. Profiling collects important information about the table structure, like column types and field names. Without profiling, no data will be shown in the Data Preview section.
-
 ![table](../assets/container/data-preview/table-light.png#only-light)
 ![table](../assets/container/data-preview/table-dark.png#only-dark)
 
@@ -24,12 +21,12 @@ Let’s get started 🚀
 ![list](../assets/container/data-preview/list-light.png#only-light)
 ![list](../assets/container/data-preview/list-dark.png#only-dark)
 
-Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datasource. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
+Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datastore. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
 
 ![alter](../assets/container/data-preview/alter-light.png#only-light)
 ![alter](../assets/container/data-preview/alter-dark.png#only-dark)
 
-**Step 4:** After selecting the specific table or file, click on the Data Preview tab.
+**Step 4:** After selecting the specific table or file, click on the **Data Preview** tab.
 
 ![preview](../assets/container/data-preview/preview-light.png#only-light)
 ![preview](../assets/container/data-preview/preview-dark.png#only-dark)
@@ -41,7 +38,7 @@ You will see a tabular view of the data, displaying the field names (columns) an
 
 ## UI Caching
 
-Upon initial access, data in the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
+Upon initial access to the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
 
 ## Filter Clause and Refresh
 
@@ -63,7 +60,7 @@ Click **Refresh** button to update the data view with the latest information, en
 
 ## Select Specific Fields
 
-Select specific fields to display, allowing you to focus on the most relevant data for analysis.To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
+Select specific fields to display, allowing you to focus on the most relevant data for analysis. To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
 
 ![field](../assets/container/data-preview/field-light.png#only-light)
 ![field](../assets/container/data-preview/field-dark.png#only-dark)
