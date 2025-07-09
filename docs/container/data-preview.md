@@ -13,9 +13,6 @@ Let’s get started 🚀
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-!!! note
-    Before accessing the Data Preview tab, ensure the container is profiled. If not, run a profile operation on the container. Profiling collects important information about the table structure, like column types and field names. Without profiling, no data will be shown in the Data Preview section.
-
 ![table](../assets/container/data-preview/table-light.png#only-light)
 ![table](../assets/container/data-preview/table-dark.png#only-dark)
 
