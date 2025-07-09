@@ -18,14 +18,14 @@ Let’s get started 🚀
 
 For Demonstration purposes, we have selected **Netsuite Financials Enrich** enrichment datastore.
 
-**Step 3:** After clicking on your selected enrichment datastore, you will be able to preview its enrichment, export, materialize, remediation, all data tables, and unlinked data tables.
+**Step 3:** After clicking on your selected enrichment datastore, you will be able to preview its enrichment, export, materialize, remediation, including all data tables, and unlinked data tables.
 
 ![preview](../assets/enrichment/data-preview/preview-light.png#only-light)
 ![preview](../assets/enrichment/data-preview/preview-dark.png#only-dark)
 
 ## Data Preview Tab
 
-Data Preview Tab provides a clear visualization of enriched datasets tables and fields like  `_FAILED_CHECKS`, `_SOURCE_RECORDS`, and `_SCAN_OPERATIONS`. Users can explore remediation data, export data, materialized datasets, and unlinked objects, refine data with filters, select specific fields, and download records for further analysis. This tab ensures efficient data review and management for enhanced insights.
+Data Preview Tab provides a clear visualization of enriched dataset tables and fields like  `_FAILED_CHECKS`, `_SOURCE_RECORDS`, and `_SCAN_OPERATIONS`. Users can explore remediation data, export data, materialized datasets, and unlinked objects, refine data with filters, select specific fields, and download records for further analysis. This tab ensures efficient data review and management for enhanced insights.
 
 ### All
 
@@ -101,7 +101,7 @@ After clicking on a table or dataset, a detailed view opens, displaying all the 
 
 ## Filter Clause and Refresh
 
-**Data Preview** tab includes a filter functionality that enables users to focus on specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data.
+**Data Preview** tab includes a filter functionality that enables users to focus on specific fields by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data.
 
 ### Filter Clause
 
