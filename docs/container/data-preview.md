@@ -24,7 +24,7 @@ Let’s get started 🚀
 ![list](../assets/container/data-preview/list-light.png#only-light)
 ![list](../assets/container/data-preview/list-dark.png#only-dark)
 
-Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datasource. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
+Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datastore. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
 
 ![alter](../assets/container/data-preview/alter-light.png#only-light)
 ![alter](../assets/container/data-preview/alter-dark.png#only-dark)
@@ -41,7 +41,7 @@ You will see a tabular view of the data, displaying the field names (columns) an
 
 ## UI Caching
 
-Upon initial access, data in the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
+Upon initial access to the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
 
 ## Filter Clause and Refresh
 
