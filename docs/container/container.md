@@ -121,7 +121,7 @@ After profiling a container, individual field profiles offer granular insights:
 **5. Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
 ![totals](../assets/container/containers/totalss-light.png#only-light)
-![totlas](../assets/container/containers/totalss-dark.png#only-dark)
+![totals](../assets/container/containers/totalss-dark.png#only-dark)
 
 ### Profile
 
@@ -132,7 +132,7 @@ This provides detailed insights into the characteristics of the field, including
 | 1 | Declared Type | Indicates whether the type is declared by the source or inferred. |
 | 2 | Distinct Values | Count of distinct values observed in the dataset. |
 | 3 | Min Length | Shortest length of the observed string values or lowest value for numerics. |
-| 4 | Max Length | Greatest length of the observed string values or lowest value for numerics. |
+| 4 | Max Length | Greatest length of the observed string values or highest value for numerics. |
 | 5 | Mean | Mathematical average of the observed numeric values. |
 | 6 | Median | The median of the observed numeric values. |
 | 7 | Standard Deviation | Measure of the amount of variation in observed numeric values. |
@@ -147,7 +147,7 @@ This provides detailed insights into the characteristics of the field, including
 
 #### Last Profile
 
-The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
+The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
 ![last-profiled](../assets/container/containers/last-profiled-light.png#only-light)
 ![last-profiled](../assets/container/containers/last-profiled-dark.png#only-dark)
