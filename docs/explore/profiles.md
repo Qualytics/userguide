@@ -1,6 +1,6 @@
 # Profiles
 
-**Profiles** in Qualytics helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quickly, informed decisions.
+**Profiles** in Qualytics helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quick, informed decisions.
 
 Let’s get started 🚀
 
@@ -125,7 +125,7 @@ Marking a container as a favorite allows you to quickly access and prioritize th
 ![mark](../assets/explore/profiles/mark-light.png#only-light)
 ![mark](../assets/explore/profiles/mark-dark.png#only-dark)
 
-After Clicking on the bookmark icon your container is successfully marked as a favorite and a success flash message will appear stating **"The Table has been favorited"**
+After clicking on the bookmark icon your container is successfully marked as a favorite and a success flash message will appear stating **"The Table has been favorited"**
 
 ![msg](../assets/explore/profiles/msg-light.png#only-light)
 ![msg](../assets/explore/profiles/msg-dark.png#only-dark)
@@ -139,16 +139,16 @@ To unmark, simply click on the bookmark icon of the marked container. This will 
 
 By selecting the Fields section in the Qualytics platform, you can view all the fields across your data sources, including their quality scores, completeness, and metadata, for streamlined data management.
 
-### Fields Details
+### Field Details
 
 Field Details view in the Qualytics platform provides in-depth insights into a selected field. It displays key information, including the field’s declared type, number of distinct values, minimum and maximum length of observed values, entropy, and unique/distinct ratio. This detailed profiling allows you to understand the field's data structure, quality, and variability, enabling better data governance and decision-making.
 
-**Step 1:** Click on the specific field whose fields details you want to preview.
+**Step 1:** Click on the specific field whose field details you want to preview.
 
 ![field](../assets/explore/profiles/field-light.png#only-light)
-![filed](../assets/explore/profiles/field-dark.png#only-dark)
+![field](../assets/explore/profiles/field-dark.png#only-dark)
 
-A modal window will appear, providing detailed information about the selected field, such as its declared type, distinct values, length range, and more.
+A modal window will appear, providing detailed information about the selected field, such as its declared type, distinct values, length range, the Last Profile timestamp to indicate when the field was last profiled, and more.
 
 ![window](../assets/explore/profiles/window-light.png#only-light)
 ![window](../assets/explore/profiles/window-dark.png#only-dark)
