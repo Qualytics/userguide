@@ -26,7 +26,7 @@ A modal window titled **“Authored Check Details”** will appear, providing yo
 ![window](../assets/checks/authored-checks/window-light.png#only-light)
 ![window](../assets/checks/authored-checks/window-dark.png#only-dark)
 
-**Step 3:** Enter the following details to add the authored check:
+**Step 4:** Enter the following details to add the authored check:
 
 **1. Associate with a Check Template:**
 
@@ -39,7 +39,7 @@ A modal window titled **“Authored Check Details”** will appear, providing yo
 
 **2. Rule Type (Required)**: Select a Rule from the dropdown menu, such as checking for non-null values, matching patterns, comparing numerical values, or verifying date-time constraints. Each rule type defines the specific validation logic to be applied.
 
-For demonstration purposes we have selected the **after date time** rule type.
+For demonstration purposes we have selected the **After Date Time** rule type.
 
 ![rule](../assets/checks/authored-checks/rule-type-light.png#only-light)
 ![rule](../assets/checks/authored-checks/rule-type-dark.png#only-dark)
@@ -71,10 +71,13 @@ The filter clause defines the conditions under which the check will be applied. 
 ![date](../assets/checks/authored-checks/date-light.png#only-light)
 ![date](../assets/checks/authored-checks/date-dark.png#only-dark)
 
-**7. Coverage**: Adjust the **Coverage setting** to specify the percentage of records that must comply with the check. 
+!!! note
+    Spark SQL expressions used in calculated fields are editable, enabling greater flexibility in configuration.
 
-!!! note 
-    The Coverage setting applies to most rule types and allows you to specify the percentage of records that must meet the validation criteria. 
+**7. Coverage**: Adjust the **Coverage setting** to specify the percentage of records that must comply with the check.
+
+!!! note
+    The Coverage setting applies to most rule types and allows you to specify the percentage of records that must meet the validation criteria.
 
 ![coverage](../assets/checks/authored-checks/coverage-light.png#only-light)
 ![coverage](../assets/checks/authored-checks/coverage-dark.png#only-dark)
@@ -133,4 +136,3 @@ After clicking on the **“Save”** button your check is successfully created a
 Users are able to author and interact with Checks through the API by passing JSON Payloads. Please refer to the API documentation on details: `acme.qualytics.io/api/docs`
 
 ![Screenshot](../assets/checks/quality-checks-doc.png)
-
