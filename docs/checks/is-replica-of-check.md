@@ -48,6 +48,9 @@ Specify the datastore and table/file where the replica of the targeted fields is
 | <div class="text-primary">Table/file</div> | The table, view or file in the source datastore that should serve as the replica. |
 | <div class="text-primary">Comparators</div> | {{ comparator_short_desc }} |
 
+!!! info
+    The `IsReplicaOf` rule supports editing of `Row Identifiers` and `Passthrough Fields`, allowing for more tailored configuration.
+
 !!! note "Details"
     <div style="margin-top: -12px;">
     ### Row Identifiers
@@ -158,4 +161,4 @@ The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the ori
 **Potential Violation Messages**
 
 !!! example "Shape Anomaly"
-    There is 1 record that differ between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`
+    There is 1 record that differs between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`
