@@ -84,9 +84,9 @@ The filter clause defines the conditions under which the check will be applied. 
 
 **8. Description (Required)**: Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the **"💡" lightbulb** icon to apply a suggested description based on the rule type.
 
-**Example:** The **Date of Birth** must be a timestamp later than **<date_time>.**
+**Example:** The **Date of Birth** must be a timestamp later than **< date_time >**.
 
-This description specifies that the **Date of Birth** field must have a timestamp later than the specified **<date_time>.**
+This description specifies that the **Date of Birth** field must have a timestamp later than the specified **< date_time >**.
 
 ![description](../assets/checks/authored-checks/description-light.png#only-light)
 ![description](../assets/checks/authored-checks/description-dark.png#only-dark)
@@ -133,6 +133,6 @@ After clicking on the **“Save”** button your check is successfully created a
 
 ## Author a Check via API
 
-Users are able to author and interact with Checks through the API by passing JSON Payloads. Please refer to the API documentation on details: `acme.qualytics.io/api/docs`
+Users are able to author and interact with Checks through the API by passing JSON Payloads. Please refer to the API documentation on details: `qualytics.io/api/docs`
 
 ![Screenshot](../assets/checks/quality-checks-doc.png)
