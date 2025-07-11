@@ -1,6 +1,14 @@
 repos:
   - repo: https://github.com/crate-ci/typos
-    rev: v1.33.1
+    rev: v1.34.0
     hooks:
       - id: typos
         args: ["--config", ".typos.toml"]
+  - repo: local
+    hooks:
+      - id: check-docs-links
+        name: Check documentation links
+        entry: mkdocs build
+        language: system
+        files: '^docs/.*\.(md|markdown)$'
+        pass_filenames: false
