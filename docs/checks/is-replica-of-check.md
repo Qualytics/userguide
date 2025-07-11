@@ -60,7 +60,7 @@ Specify the datastore and table/file where the replica of the targeted fields is
 
     !!! info
         Anomalies produced by a `IsReplicaOf` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
-        See more at: *[Comparison Source Records](https://userguide.qualytics.io/anomalies/anomalies/#anomaly-status)*
+        See more at: *[Comparison Source Records](../anomalies/anomalies.md/#comparison-source-records)*
 
     {%
         include-markdown "components/comparators/index.md"
