@@ -78,11 +78,11 @@ To explore the data in more detail, you can view the corresponding table of a se
 
 ### Filter and Sort
 
-Filter and Sort options allow you to organize your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records and Type. You can also apply filters to refine your list of containers based on Type 
+Filter and Sort options allow you to organize your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records, and Type. You can also apply filters to refine your list of containers based on Type.
 
 #### Sort
 
-You can sort your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records and Type to easily organize and prioritize them according to your needs.
+You can sort your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records, and Type to easily organize and prioritize them according to your needs.
 
 ![sort](../assets/explore/profiles/sort-light.png#only-light)
 ![sort](../assets/explore/profiles/sort-dark.png#only-dark)
@@ -111,7 +111,7 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 #### Filter
 
-You can filter your containers based on values Type (Table, View, File, Computed Table and Computed File) to easily organize and prioritize them according to your needs.
+You can filter your containers based on values like Type (Table, View, File, Computed Table and Computed File) to easily organize and prioritize them according to your needs.
 
 ![filter](../assets/explore/profiles/filter-light.png#only-light)
 ![filter](../assets/explore/profiles/filter-dark.png#only-dark)
@@ -177,15 +177,15 @@ A modal window will appear, providing the options to create the tag. Enter the r
 ![create](../assets/explore/profiles/create-light.png#only-light)
 ![create](../assets/explore/profiles/create-dark.png#only-dark)
 
-For more information on creating tags, refer to the [Add Tag section](../userguide/docs/settings/tags/overview-of-a-tag.md/#add-a-tag).
+For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md/#add-tag).
 
 ### Filter and Sort
 
-Filter and Sort options allow you to organize your fields by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
+Filter and Sort options allow you to organize your fields by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score, and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
 
 #### Sort
 
-You can sort your containers by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type to easily organize and prioritize them according to your needs.
+You can sort your containers by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score, and Type to easily organize and prioritize them according to your needs.
 
 ![sort2](../assets/explore/profiles/sort2-light.png#only-light)
 ![sort2](../assets/explore/profiles/sort2-dark.png#only-dark)
