@@ -286,7 +286,7 @@ plugins:
       - components/comparators/*
       - components/general-props/*
   - htmlproofer:
-      raise_error: False
+      raise_error: True
       verbose: True
       validate_external_urls: True
       validate_internal_urls: True
