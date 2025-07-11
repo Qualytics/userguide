@@ -1,0 +1,199 @@
+# .github/workflows/check-links-pr.yml
+
+name: Check Links in PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    name: Verify documentation links
+    
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
+          pip install mkdocs-htmlproofer-plugin
+      
+      - name: Check links
+        id: linkcheck
+        run: |
+          echo "### 🔍 Checking documentation links" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Run build and capture output
+          if mkdocs build 2>&1 | tee /tmp/build_output.txt; then
+            echo "✅ **All links are working correctly!**" >> $GITHUB_STEP_SUMMARY
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "❌ **Broken links found!**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            grep -E "(HTMLProofer:|External link|internally linking|anchor)" /tmp/build_output.txt >> $GITHUB_STEP_SUMMARY || true
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            echo "status=failure" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+      
+      - name: Comment PR - Success
+        if: steps.linkcheck.outputs.status == 'success'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            // Find previous bot comments
+            const comments = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('### 🔍 Link Verification')
+            );
+            
+            const body = `### 🔍 Link Verification
+            
+            ✅ **All links are working correctly!**
+            
+            _Last checked: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })}_`;
+            
+            // Update or create comment
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
+      
+      - name: Comment PR - Failure
+        if: failure() && steps.linkcheck.outputs.status == 'failure'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            // Read build output
+            const fs = require('fs');
+            let buildOutput = '';
+            try {
+              buildOutput = fs.readFileSync('/tmp/build_output.txt', 'utf8');
+              // Extract only relevant lines
+              const lines = buildOutput.split('\n');
+              const relevantLines = lines.filter(line => 
+                line.includes('HTMLProofer:') || 
+                line.includes('External link') || 
+                line.includes('internally linking') ||
+                line.includes('anchor')
+              );
+              buildOutput = relevantLines.slice(0, 20).join('\n'); // Limit to 20 lines
+            } catch (e) {
+              buildOutput = 'Error reading broken links details.';
+            }
+            
+            // Find previous comments
+            const comments = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('### 🔍 Link Verification')
+            );
+            
+            const body = `### 🔍 Link Verification
+            
+            ❌ **Broken links found!**
+            
+            Please fix the following links before merging:
+            
+            <details>
+            <summary>Click to see details</summary>
+            
+            \`\`\`
+            ${buildOutput}
+            \`\`\`
+            
+            </details>
+            
+            **How to fix:**
+            1. Run \`mkdocs build\` locally to see all errors
+            2. Fix the broken links
+            3. Commit the fixes
+            
+            _Last checked: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })}_`;
+            
+            // Update or create comment
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
+
+  # Additional job: quick check with markdown-link-check
+  quick-check:
+    runs-on: ubuntu-latest
+    name: Quick markdown link check
+    
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+      
+      - name: Check links with markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          folder-path: 'docs'
+          file-extension: '.md'
+          check-modified-files-only: 'yes'  # Only check modified files in PR
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          config-file: |
+            {
+              "ignorePatterns": [
+                { "pattern": "^http://localhost" },
+                { "pattern": "^http://127.0.0.1" },
+                { "pattern": "^#" }
+              ],
+              "timeout": "20s",
+              "retryOn429": true,
+              "retryCount": 3,
+              "aliveStatusCodes": [200, 206, 403]
+            }

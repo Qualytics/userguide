@@ -285,6 +285,20 @@ plugins:
       - components/anomaly-support/*
       - components/comparators/*
       - components/general-props/*
+  - htmlproofer:
+      raise_error: False
+      verbose: True
+      validate_external_urls: True
+      validate_internal_urls: True
+      ignore_urls:
+        - "http://localhost.*"
+        - "http://127.0.0.1.*"
+        - "#"
+        - "https://your-company.atlan.com"
+        - "mailto://hello@qualytics.co"
+        - "../print_page/"
+      ignore_missing_images: False
+      output_file: "broken_links.txt"
   - git-revision-date-localized
   - include-markdown
   - macros
