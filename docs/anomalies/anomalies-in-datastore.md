@@ -73,7 +73,7 @@ You can also categorize the archived anomalies based on their status as **Resolv
 ![all](../assets/datastores/anomalies-datastore/all-light-9.png#only-light)
 ![all](../assets/datastores/anomalies-datastore/all-dark-9.png#only-dark)
 
-## Anomaly Details
+## Anomaly Review
 
 Anomaly Details View provides key insights into a specific data anomaly, including its status, anomalous record count, failed checks, and weight. It also shows when the anomaly was detected, the triggering scan, and the related datastore, table, and location. This view helps users quickly understand the scope and source of the anomaly for easier investigation and resolution.
 
