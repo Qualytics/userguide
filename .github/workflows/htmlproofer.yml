@@ -11,7 +11,7 @@ on:
       - 'requirements.txt'
   push:
     branches: [main]
-  workflow_dispatch:  # Permite executar manualmente
+  workflow_dispatch:
 
 jobs:
   check-links:
@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
@@ -34,31 +36,132 @@ jobs:
           pip install -r requirements.txt
           pip install mkdocs-htmlproofer-plugin
       
-      - name: Run link checker
+      - name: Update mkdocs.yml to fix warnings
+        run: |
+          cp mkdocs.yml mkdocs.yml.bak
+          
+          sed -i '/ignore_missing_images:/d' mkdocs.yml
+          sed -i '/output_file:/d' mkdocs.yml
+          sed -i '/validate_internal_urls:/d' mkdocs.yml
+          sed -i '/verbose:/d' mkdocs.yml
+      
+      - name: Run link checker with strict mode
         id: linkcheck
         run: |
           echo "## 🔍 Link Check Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
-          # Executar mkdocs build e capturar resultado
-          if mkdocs build 2>&1 | tee build_log.txt; then
+          mkdocs build 2>&1 | tee build_log.txt
+          BUILD_EXIT_CODE=${PIPESTATUS[0]}
+          
+          BROKEN_LINKS=$(grep -c "invalid url" build_log.txt || echo "0")
+          MISSING_ANCHORS=$(grep -c "does not contain an anchor" build_log.txt || echo "0")
+          MISSING_FILES=$(grep -c "is not found among documentation files" build_log.txt || echo "0")
+          CONFIG_WARNINGS=$(grep -c "Unrecognised configuration name" build_log.txt || echo "0")
+          
+          TOTAL_ISSUES=$((BROKEN_LINKS + MISSING_ANCHORS + MISSING_FILES))
+          
+          if [ $TOTAL_ISSUES -eq 0 ] && [ $BUILD_EXIT_CODE -eq 0 ]; then
             echo "✅ **All links are valid!**" >> $GITHUB_STEP_SUMMARY
             echo "link_check_passed=true" >> $GITHUB_OUTPUT
+            FINAL_EXIT_CODE=0
           else
-            echo "❌ **Broken links detected!**" >> $GITHUB_STEP_SUMMARY
+            echo "❌ **Issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### Errors found:" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            grep -E "(HTMLProofer:|External link|internally linking)" build_log.txt >> $GITHUB_STEP_SUMMARY || true
-            echo '```' >> $GITHUB_STEP_SUMMARY
+            
+            if [ $BROKEN_LINKS -gt 0 ]; then
+              echo "### 🔗 Broken Links: $BROKEN_LINKS" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              grep "invalid url" build_log.txt >> $GITHUB_STEP_SUMMARY || true
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            if [ $MISSING_ANCHORS -gt 0 ]; then
+              echo "### ⚓ Missing Anchors: $MISSING_ANCHORS" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              grep "does not contain an anchor" build_log.txt >> $GITHUB_STEP_SUMMARY || true
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            if [ $MISSING_FILES -gt 0 ]; then
+              echo "### 📄 Missing Files: $MISSING_FILES" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              grep "is not found among documentation files" build_log.txt >> $GITHUB_STEP_SUMMARY || true
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Total issues: $TOTAL_ISSUES**" >> $GITHUB_STEP_SUMMARY
+            
             echo "link_check_passed=false" >> $GITHUB_OUTPUT
-            exit 1
+            FINAL_EXIT_CODE=1
           fi
+          
+          # Restaurar mkdocs.yml original
+          mv mkdocs.yml.bak mkdocs.yml
+          
+          exit $FINAL_EXIT_CODE
       
       - name: Upload build log
-        if: failure()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: link-check-log
           path: build_log.txt
           retention-days: 7
+      
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const fs = require('fs');
+            const buildLog = fs.readFileSync('build_log.txt', 'utf8');
+            
+            const brokenLinks = (buildLog.match(/invalid url/g) || []).length;
+            const missingAnchors = (buildLog.match(/does not contain an anchor/g) || []).length;
+            const missingFiles = (buildLog.match(/is not found among documentation files/g) || []).length;
+            const totalIssues = brokenLinks + missingAnchors + missingFiles;
+            
+            let body = '### 🔍 Link Check Results\n\n';
+            
+            if (totalIssues === 0) {
+              body += '✅ **All links are valid!**\n';
+            } else {
+              body += `❌ **Found ${totalIssues} issues:**\n\n`;
+              
+              if (brokenLinks > 0) body += `- 🔗 Broken links: ${brokenLinks}\n`;
+              if (missingAnchors > 0) body += `- ⚓ Missing anchors: ${missingAnchors}\n`;
+              if (missingFiles > 0) body += `- 📄 Missing files: ${missingFiles}\n`;
+              
+              body += '\n**Please fix these issues before merging.**\n';
+              body += '\nRun `mkdocs build` locally to see detailed errors.\n';
+            }
+            
+            const comments = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('### 🔍 Link Check Results')
+            );
+            
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
