@@ -430,8 +430,8 @@ A panel **In App Settings** will appear on the right-hand side, allowing you to 
 ![notification](.././assets/flows/notification-light-47.png#only-light)
 ![notification](.././assets/flows/notification-dark-47.png#only-dark)
 
-!!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. 
+!!! tip
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 2:** After configuring the message, click **Save** to finalize the settings.
 
@@ -614,7 +614,7 @@ A panel **Microsoft Teams Settings** will appear on the right-hand side, allowin
 ![test](.././assets/flows/test-light-62.png#only-light)
 ![test](.././assets/flows/test-dark-62.png#only-dark)
 
-**Step 3:** Once all fields are configured, click the **Save** button to finalize the microsoft teams notification setup.
+**Step 3:** Once all fields are configured, click the **Save** button to finalize the Microsoft Teams notification setup.
 
 ![save](.././assets/flows/save-light-63.png#only-light)
 ![save](.././assets/flows/save-dark-63.png#only-dark)
@@ -654,8 +654,9 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 
 ![notification](.././assets/flows/notification-light-68.png#only-light)
 ![notification](.././assets/flows/notification-dark-68.png#only-dark)
+
 !!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 2:** Click on the **Test notification** button to check if the integration key is functioning correctly. Once the test notification is sent, you will see a success message, **"Notification successfully sent."**
 
@@ -749,8 +750,8 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 ![notification](.././assets/flows/notification-light-79.png#only-light)
 ![notification](.././assets/flows/notification-dark-79.png#only-dark)
 
-!!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
+!!! tip
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 3:** Click the **"Test HTTP"** button to verify the correctness of the Action URL. If the URL is correct, a confirmation message saying **"Notification successfully sent"** will appear, confirming that the HTTP action is set up and functioning properly.
 
