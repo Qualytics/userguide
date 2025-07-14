@@ -280,7 +280,7 @@ A panel  **Scan Settings** will appear on the right-hand side, This window allow
 ![scan](.././assets/flows/scan-light-34.png#only-light)
 ![scan](.././assets/flows/scan-dark-34.png#only-dark)
 
-**Select Tables:** Choose all tables, specific tables, or tables associated with selected tags to include in the scan .
+**Select Tables:** Choose all tables, specific tables, or tables associated with selected tags to include in the scan.
 
 ![scan](.././assets/flows/scan-light-35.png#only-light)
 ![scan](.././assets/flows/scan-dark-35.png#only-dark)
@@ -431,7 +431,7 @@ A panel **In App Settings** will appear on the right-hand side, allowing you to 
 ![notification](.././assets/flows/notification-dark-47.png#only-dark)
 
 !!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ container_name }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. 
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. 
 
 **Step 2:** After configuring the message, click **Save** to finalize the settings.
 
@@ -455,7 +455,7 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 | No. |                  Field  |                         Description |
 | :---- | :---- | :---- |
 | 1. | Email Address | Enter the email address where the notification should be sent.  |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`,** and **`{{operation_result}}`**. |
+| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
 ![notification](.././assets/flows/notification-light-51.png#only-light)
 ![notification](.././assets/flows/notification-dark-51.png#only-dark)
@@ -604,7 +604,7 @@ A panel **Microsoft Teams Settings** will appear on the right-hand side, allowin
 | No. |                  Field  |                         Description |
 | :---- | :---- | :---- |
 | 1. | Teams Webhook URL | Enter the Teams webhook URL where the notification should be sent.  |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`,** and **`{{operation_result}}`**. |
+| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
 ![notification](.././assets/flows/notification-light-61.png#only-light)
 ![notification](.././assets/flows/notification-dark-61.png#only-dark)
@@ -655,7 +655,7 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 ![notification](.././assets/flows/notification-light-68.png#only-light)
 ![notification](.././assets/flows/notification-dark-68.png#only-dark)
 !!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ operation_type }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
 
 **Step 2:** Click on the **Test notification** button to check if the integration key is functioning correctly. Once the test notification is sent, you will see a success message, **"Notification successfully sent."**
 
@@ -695,7 +695,7 @@ A **Webhook Settings** panel will appear on the right-hand side, enabling users 
 | No. |             Field |                            Description |
 | :---- | :---- | :---- |
 | 1. |  Webhook URL | Enter the desired **"Webhook URL"** of the target system where you want to receive notifications. |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`,** and **`{{operation_result}}`**. |
+| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
 ![notification](.././assets/flows/notification-light-74.png#only-light)
 ![notification](.././assets/flows/notification-dark-74.png#only-dark)
@@ -750,7 +750,7 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 ![notification](.././assets/flows/notification-dark-79.png#only-dark)
 
 !!! tip 
-    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as {{ flow_name }}, {{ operation_type }}, and {{ datastore_name }}. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
+    You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown. |
 
 **Step 3:** Click the **"Test HTTP"** button to verify the correctness of the Action URL. If the URL is correct, a confirmation message saying **"Notification successfully sent"** will appear, confirming that the HTTP action is set up and functioning properly.
 
@@ -769,8 +769,8 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 
 **Step 4:** Once published, a success message will appear, stating, **"Your flow has been successfully added.**
 
-![success](.././assets/flows/sucess-light-83.png#only-light)
-![success](.././assets/flows/sucess-dark-83.png#only-dark)
+![success](.././assets/flows/success-light-83.png#only-light)
+![success](.././assets/flows/success-dark-83.png#only-dark)
 
 ## View Created Flows
 
@@ -868,7 +868,7 @@ For demonstration purposes we have selected the Flow node.
 
 **Delete Flow** feature allows you to permanently remove unwanted or outdated flows from the system. This helps in maintaining a clean and organized list of active flows. 
 
-**Step 1**: Click the **vertical ellipsis (⋮)** next to the flows that you want to delete, then click on **Delete** from the dropdown menu. 
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to delete, then click on **Delete** from the dropdown menu.
 
 ![delete](.././assets/flows/delete-light-91.png#only-light)
 ![delete](.././assets/flows/delete-dark-91.png#only-dark)
@@ -892,7 +892,7 @@ After clicking on the **Delete** button, your flow will be deleted and a confirm
 
 User can deactivate a flow to pause its triggers by simply disabling it. This prevents the flow from being executed until it is reactivated.
 
-**Step 1**: Click the **vertical ellipsis (⋮)** next to the flows that you want to deactivate, then click on **Deactivate** from the dropdown menu.
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
 ![deactivate](.././assets/flows/deactivate-light-95.png#only-light)
 ![deactivate](.././assets/flows/deactivate-dark-95.png#only-dark)
@@ -921,7 +921,7 @@ User can duplicate an existing action in just a few clicks. Cloning an action al
 ![vertical](.././assets/flows/vertical-light.png#only-light)
 ![vertical](.././assets/flows/vertical-dark.png#only-dark)
 
-**Step 2** After clicking the Clone option, a cloned action will be created.
+**Step 2:** After clicking the Clone option, a cloned action will be created.
 
 ![clone](.././assets/flows/clones-light.png#only-light)
 ![clone](.././assets/flows/clones-dark.png#only-dark)
@@ -1005,7 +1005,7 @@ A confirmation modal window **Delete Flow Execution** will appear.
 ![delete](.././assets/flows/delete-light-106.png#only-light)
 ![delete](.././assets/flows/delete-dark-106.png#only-dark)
 
-**Step 2**: Click on the **Delete** button to delete the flow execution.
+**Step 2:** Click on the **Delete** button to delete the flow execution.
 
 ![delete](.././assets/flows/delete-light-107.png#only-light)
 ![delete](.././assets/flows/delete-dark-107.png#only-dark)
