@@ -82,7 +82,7 @@ auth0_user_client_id: m2m_user_client_id
 auth0_user_client_secret: m2m_user_client_secret
 ```
 
-Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assistance.
+Contact your [Qualytics account manager](mailto:support@qualytics.co) for assistance.
 
 ### 3. Deploy Qualytics to your cluster
 
@@ -97,7 +97,7 @@ As part of the install process, an nginx ingress will be configured with an inbo
 
 ### 4. Register your deployment's web application
 
-Send your [account manager](mailto://hello@qualytics.co) the IP address for your cluster ingress gathered from step 3. Qualytics will assign a DNS record to it under `*.qualytics.io` so that your end users can securely access the deployed web application from a URL such as `https://acme.qualytics.io`
+Send your [account manager](mailto:support@qualytics.co) the IP address for your cluster ingress gathered from step 3. Qualytics will assign a DNS record to it under `*.qualytics.io` so that your end users can securely access the deployed web application from a URL such as `https://acme.qualytics.io`
 
 ## Upgrade Qualytics Helm chart
 
