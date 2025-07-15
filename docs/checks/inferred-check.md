@@ -69,7 +69,7 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 ![check-actions](../assets/checks/inferred-checks/check-actions-light.png#only-light)
 ![check-actions](../assets/checks/inferred-checks/check-actions-dark.png#only-dark)
 
-**2. Target**: Specifies the dataset and file that the inferred check will be applied to. This section ensures that the validation rules are correctly assigned to the intended data source.Users can select a different file if needed by clicking the dropdown.
+**2. Target**: Specifies the dataset and file that the inferred check will be applied to. This section ensures that the validation rules are correctly assigned to the intended source datastore. Users can select a different file if needed by clicking the dropdown.
 
 ![target](../assets/checks/inferred-checks/target-light.png#only-light)
 ![target](../assets/checks/inferred-checks/target-dark.png#only-dark)
