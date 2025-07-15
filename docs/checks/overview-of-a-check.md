@@ -31,7 +31,7 @@ For more details on Authored Checks, please refer to the [**Authored Checks**](.
 ![datastore](../assets/checks/checks-overview/datastores-light-1.png#only-light)
 ![datastore](../assets/checks/checks-overview/datastores-dark-1.png#only-dark)
 
-**Step 2:** Click on the "Checks" from the Navigation Tab.
+**Step 2:** Click on the **"Checks"** from the Navigation Tab.
 
 ![tab](../assets/checks/checks-overview/tab-light-2.png#only-light)
 ![tab](../assets/checks/checks-overview/tab-dark-2.png#only-dark)
@@ -75,7 +75,7 @@ For more details about check templates, please refer to the [**Check Templates**
 
 You can export check templates to make quality checks easier and more consistent. Using a set template lets you quickly verify that your data meets specific standards, reducing mistakes and improving data quality. Exporting these templates simplifies the process, making finding and fixing errors more efficient, and ensuring your quality checks are applied across different projects or systems without starting from scratch.
 
-For more details on how to apply check templates for quality check, please refer to the [**Apply Checks Template for Quality Check**](../checks/apply-check-template-for-quality-checks.md) documentation.
+For more details on how to apply check templates for quality check, please refer to the [**Apply Check Template for Quality Checks**](../checks/apply-check-template-for-quality-checks.md) documentation.
 
 ## Export Check Templates
 
