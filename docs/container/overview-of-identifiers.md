@@ -1,6 +1,6 @@
-# Identifiers 
+# Identifiers
 
-An **Identifier** is a field that can be used to help load the desired data from a Table in support of analysis.There are two types of identifiers can be declared for a Table:
+An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers can be declared for a table:
 
 * **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
@@ -37,7 +37,7 @@ A modal window will appear for **“Table Settings”**, where you can manage id
 
 The **Incremental Strategy** configuration in Qualytics is crucial for tracking changes at the row level within tables.
 
-This approach is essential for efficient data processing, as it is specifically used to track which records have already been scanned. 
+This approach is essential for efficient data processing, as it is specifically used to track which records have already been scanned.
 
 This allows for scan operations to focus exclusively on new records that have not been previously scanned, thereby optimizing the scanning process and ensuring that only the most recent and relevant data is analyzed.
 
@@ -59,11 +59,9 @@ Availability based on technologies:
 | **Batch Value**                           | All           |
 | **Postgres Commit Timestamp Tracking**    | PostgreSQL    |
 
-
 !!! info
     - All options are useful for incremental strategy, it depends on the availability of the data and how it is modeled. 
     - The 3 options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
-
 
 ### Incremental Strategy with DFS (Distributed File System)
 
@@ -77,7 +75,7 @@ This automated process means that DFS users do not need to manually configure th
 
 **Sample Data**
 
-| O_ORDERKEY | O_PAYMENT_DETAILS                                                                |LAST_MODIFIED          
+| O_ORDERKEY | O_PAYMENT_DETAILS                                                                |LAST_MODIFIED          |
 |------------|----------------------------------------------------------------------------------|-------------------------
 | 1          | {"date": "2023-09-25", "amount": 250.50, "credit_card": "5105105105105100"}      | 2023-09-25 10:00:00
 | 2          | {"date": "2023-09-25", "amount": 150.75, "credit_card": "4111-1111-1111-1111"}   | 2023-09-25 10:30:00
@@ -115,9 +113,9 @@ In this example, an Incremental Strategy would focus on processing records that 
 
 The **Partition Field** is a fundamental feature for organizing and managing large datasets. It is specifically designed to divide the data within a table into separate, distinct dataframes. 
 
-This segmentation is a key strategy for handling and analyzing data more effectively. By creating these individual dataframes, Qualytics allows for parallel processing, which significantly accelerates the analysis. 
+This segmentation is a key strategy for handling and analyzing data more effectively. By creating these individual dataframes, Qualytics allows for parallel processing, which significantly accelerates the analysis.
 
-Each partition can be analyzed independently, enabling simultaneous examination of different segments of the dataset. 
+Each partition can be analyzed independently, enabling simultaneous examination of different segments of the dataset.
 
 This not only increases the efficiency of data processing but also ensures a more streamlined and scalable approach to handling large volumes of data, making it an indispensable tool in data analysis and management.
 
@@ -135,7 +133,7 @@ The ideal Partition Identifier is an Incremental Identifier of type **datetime**
 
 ### Example
 
-**Objective**: *Identify the efficient process and analyze the ORDERS table by partitioning the data based on the O'ORDERDATE field, allowing parallel processing of different date segments.*
+**Objective**: *Identify the efficient process and analyze the ORDERS table by partitioning the data based on the O_ORDERDATE field, allowing parallel processing of different date segments.*
 
 **Sample Data**
 
