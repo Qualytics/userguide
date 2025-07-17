@@ -143,9 +143,21 @@ nav:
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:
-      - Anomaly Analysis: anomalies/anomalies.md
-      - Anomaly: anomalies/anomalies-in-datastore.md
-      - Manage Anomalies: anomalies/manage-anomalies.md
+      - Overview: anomalies/anomalies.md
+      - Anomaly Types: anomalies/anomaly-types.md
+      - Anomaly Detection: anomalies/anomaly-detection.md
+      - Anomaly Details:
+        - Anomaly Insights: anomalies/anomaly-insights.md
+        - Source Record: anomalies/source-record.md
+      - Anomaly Status: anomalies/anomaly-status.md
+      - Anomaly Fingerprints: anomalies/anomaly-fingerprints.md
+      - Anomaly Navigation:
+        - Acknowledge Anomalies: anomalies/acknowledge-anomalies.md
+        - Archive Anomalies: anomalies/archive-anomalies.md
+        - Restore Anomalies: anomalies/restore-anomalies.md
+        - Edit Anomalies: anomalies/edit-anomalies.md
+        - Delete Anomalies: anomalies/delete-anomalies.md
+        - Filter & Sort: anomalies/filter-and-sort.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
@@ -171,7 +183,7 @@ nav:
         - Overview: cli/overview-of-qualytics-cli.md
     - Integrations:
         - Overview: integrations/overview.md
-        - Data Sources: add-datastores/overview-of-a-datastore.md
+        - Source Datastore: add-datastores/source-datastore.md
         - Data Catalogs:
           - Overview: settings/catalog-integrations/overview.md
           - Atlan: settings/catalog-integrations/atlan.md
