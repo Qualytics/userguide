@@ -1,4 +1,4 @@
-# Data Source
+# Source Datastore
 
 Qualytics connects to data sources using "Datastores," a framework that enables organizations to:
 
