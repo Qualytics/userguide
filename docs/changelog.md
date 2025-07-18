@@ -2,6 +2,82 @@
 
 ## Release Notes
 
+### 2025.7.18 { id=2025.7.18 }
+
+#### Feature Enhancements
+
+- Introducing Computed Join for creating new containers by joining data across different datastores
+    - Users can now create computed joins between any two containers, even from different datastores either a JDBC or DFS, enabling cross-datastore data analysis
+    - Supports multiple join types: Inner Join, Left Join, Right Join, and Full Outer Join to accommodate various data combination needs
+    - Configure joins using intuitive left and right reference selections with field mapping and optional prefixes
+    - Add custom SELECT expressions and WHERE clauses to refine the joined data output
+
+- Introducing Dry Run operation for draft checks. Users are able to quickly evaluate the impact of a draft quality check without persisting results and necessity to activate the check.
+
+- Enhanced Check Management: Bulk Operations and Individual Actions
+    - Added metadata field to bulk update dialog, enabling users to update check metadata across multiple checks simultaneously without opening each individually
+    - Extended bulk operations to support archived checks, previously limited to active checks only
+    - Bulk activate and draft actions now available for archived checks, expanding beyond the previous delete-only option.
+
+- Adding Subject Field to Email Notifications
+    - Email notifications now support customizable subject lines, allowing users to add meaningful context to their messages.
+
+- Enhanced Record Limit Configuration
+    - Users can now manually input custom record limit values in Profile and Scan operations, as well as Flow operations through a text field, providing flexibility beyond the predefined options.
+    - A dropdown menu provides quick access to common values (1M, 10M, 100M, All).
+
+- Enhanced "Run Now" Operation Feedback
+    - Added toaster notifications that display when manually triggering scheduled operations, providing immediate feedback on operation status.
+
+- Adding Unlink Enrichment Datastore
+    - Users can now unlink enrichment datastores directly from the "Enrichment Datastore Settings" dialog.
+
+- Improved Datastore Deletion Experience
+    - Error messages during deletion now appear directly within the confirmation dialog instead of temporary toast notifications.
+    - When deleting an Enrichment Datastore, the dialog now displays the number of linked source datastores and uses clear labeling to distinguish between datastore types.
+
+- Enhanced catalog operation to properly recognize subdirectories within partitioned file structures, ensuring more accurate container identification for complex directory hierarchies.
+
+#### General Fixes and Improvements
+
+- Addressed modal dismissal issues across multiple dialogs where clicking outside or pressing ESC would cause accidental closure and data loss. Affected dialogs now remain open: Computed Table, Computed File, Computed Field, Computed Join, Filter Clause, and Check dialogs.
+
+- Fixed "Open in new tab" and "Copy link" actions for checks and anomalies that were not functioning correctly.
+
+- Fixed source record formatting for 'Is Replica Of' anomalies when check configuration changes after anomaly detection.
+
+- Fixed an issue where creating computed fields with the same name across different containers would incorrectly return the computed field and container ID of the first one created, rather than properly scoping computed fields to their respective containers.
+
+- Fixed an issue where anomaly URLs generated from check sidepanels were not functioning correctly when shared.
+
+- Fixed incorrect redirection after creating checks from templates, ensuring users remain in the template context instead of being redirected to the Explore view.
+
+- Fixed an issue where source records weren't displaying correctly during dry run operations.
+
+- Corrected cloning behavior to preserve tags from the rule being cloned.
+
+- Corrected connection stability issues for Snowflake datastores configured with KeyPair authentication.
+
+- Fixed scan operations failing after deleting or unlinking enrichment datastores.
+
+- Corrected failed checks information in anomaly responses to accurately reflect the historical check version at the time the anomaly was detected, rather than showing the current check version.
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- Breaking Change
+    - In the response payload, the `failed_checks` object no longer includes the following properties:
+        - `description`
+        - `coverage`
+        - `properties`
+        - `additional_metadata`
+    - The following endpoints are affected:
+        - `GET /anomalies`
+        - `GET /anomalies/{id}`
+        - `PUT /anomalies/{id}`
+        - `PATCH /anomalies`
+
 ### 2025.7.2 { id=2025.7.2 }
 
 #### Feature Enhancements
