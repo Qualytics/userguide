@@ -87,7 +87,7 @@ For more details about export checks template, please refer to the [**Export Che
 
 Managing your checks within a datastore is important to maintain data integrity and ensure quality. You can categorize, create, update, archive, restore, delete, and clone checks, making it easier to apply validation rules across the datastores. The system allows for checks to be set as active, draft, or archived based on their current state of use. You can also define reusable templates for quality checks to streamline the creation of multiple checks with similar criteria. With options for important and favorite, users have full flexibility to manage data quality efficiently.
 
-For more details how to manage checks in datastore, please refer to the [**Manage Checks in Datastore**](../checks/manage-checks.md) documentation.
+For more details how to manage checks in datastore, please refer to the [**Manage Checks in Datastore**](../datastore-checks/manage-checks.md) documentation.
 
 ## Check Rule Types
 

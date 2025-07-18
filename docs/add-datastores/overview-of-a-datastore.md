@@ -1,6 +1,6 @@
 # Source Datastore
 
-Qualytics connects to data sources using "Datastores," a framework that enables organizations to:
+Qualytics connects to source datastore using "Datastores," a framework that enables organizations to:
 
 * Connect with Apache Spark-compatible data sources.
 
@@ -18,7 +18,7 @@ These data source integrations ensure comprehensive quality management across yo
 
 ## Understanding Datastores
 
-A Datastore in Qualytics represents any structured data source, such as:
+A Datastore in Qualytics represents any structured source datastores, such as:
 
 * Relational databases (RDBMS)
 
@@ -31,9 +31,9 @@ Qualytics integrates with these data sources through a layered architecture:
 ![datastore](../assets/datastores/what-is/datastore.png#only-light)
 ![datastore](../assets/datastores/what-is/datastore.png#only-dark)
 
-## Configuring Data Source
+## Configuring Source Datastores
 
-Configure your data sources in Qualytics by connecting them through a new datastore.
+Configure your source datastores in Qualytics by connecting them through a new datastore.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -49,13 +49,13 @@ Configure your data sources in Qualytics by connecting them through a new datast
 | :---- | :---- | :---- |
 | 1. | Name | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
 | 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection |
-| 3. | Connector | Select **Any Data source** from the dropdown list. |
+| 3. | Connector | Select **Any source datastore** from the dropdown list. |
 
 ## Available Datastores Connector
 
 Qualytics supports a range of datasources, including but not limited to:
 
-|          No. |                       Datasource |
+|          No. |                       Source Datastores |
 | :---- | :---- |
 |         1. |                         [Athena](../add-datastores/athena.md) |
 |         2. |                      [Databricks](../add-datastores/databricks.md) |
