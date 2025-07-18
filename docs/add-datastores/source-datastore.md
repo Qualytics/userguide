@@ -1,19 +1,19 @@
-# **Data Source**
+# Source Datastore
 
-Qualytics connects to data sources using "Datastores," a framework that enables organizations to:
+Qualytics connects to Source Datastore using "Datastores," a framework that enables organizations to:
 
-* Connect with Apache Spark-compatible data sources.  
+* Connect with Apache Spark-compatible source datastore.  
 * Support both traditional databases and modern object storage.  
 * Profile and monitor structured data across systems.  
 * Ensure secure and fast access to data.  
 * Scale data quality operations across platforms.  
 * Manage data quality centrally across all sources.
 
-These data source integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
+These source datastore integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
 
 ## **Understanding Datastores**
 
-A Datastore in Qualytics represents any structured data source, such as:
+A Datastore in Qualytics represents any structured source datastore, such as:
 
 * Relational databases (RDBMS)  
 * Raw files like CSV, XLSX, JSON, Avro, or Parquet  
@@ -26,9 +26,9 @@ Qualytics integrates with these data sources through a layered architecture:
 
 ## Available Datastores Connector
 
-Qualytics supports a range of datasources, including but not limited to:
+Qualytics supports a range of source datastores, including but not limited to:
 
-|          No. |                       Datasource |
+|          No. |                       Source Datastores |
 | :---- | :---- |
 |         1. |                         [Athena](../add-datastores/athena.md) |
 |         2. |                      [Databricks](../add-datastores/databricks.md) |

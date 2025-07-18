@@ -9,7 +9,7 @@ Let’s get started 🚀
 By setting up a datastore and establishing a connection to your data source (database or file system), you create a robust foundation for effective data management and analysis in Qualytics. This setup enables you to access, manipulate, and utilize your data efficiently, paving the way for advanced data quality checks, profiling, scanning, anomaly surveillance, and other analytics tasks.
 
 !!! note 
-    For more information, please refer to the [Configuring Datasource](../add-datastores/overview-of-a-datastore.md#configuring-data-source) documentation.
+    For more information, please refer to the [Configuring Source Datastores](../add-datastores/overview-of-a-datastore.md#configuring-source-datastores) documentation.
 
 **2. Catalog Operation**
 
