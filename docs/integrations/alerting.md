@@ -20,7 +20,7 @@ Integrate Qualytics with Slack to send real-time alerts directly to your Slack c
 
 For more detail you can refer to the [slack integration](./alerting/slack.md) documentation.
 
-![resource-group-form](../../assets/integrations/alerting/slack.png)
+![resource-group-form](../assets/integrations/alerting/slack.png)
 
 ### Microsoft Teams
 
@@ -28,4 +28,4 @@ Connect Microsoft Teams to receive automated alerts about failed checks, system 
 
 For more detail you can refer to the [microsoft teams](./alerting/msft_teams.md) documentation.
 
-![resource-group-form](../../assets/integrations/alerting/microsoft.png)
+![resource-group-form](../assets/integrations/alerting/microsoft.png)

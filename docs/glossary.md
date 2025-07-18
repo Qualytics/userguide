@@ -1,3 +1,5 @@
+# Glossary
+
 ### <a name="anomaly"></a>__Anomaly__
 
 Something that deviates from the standard, normal, or expected. This can be in the form of a single data point, record, or a batch of data
