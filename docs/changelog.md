@@ -7,27 +7,24 @@
 #### Feature Enhancements
 
 - Introducing Computed Join for creating new containers by joining data across different datastores
-    - Users can now create computed joins between any two containers, even from different datastores either a JDBC or DFS, enabling cross-datastore data analysis
-    - Supports multiple join types: Inner Join, Left Join, Right Join, and Full Outer Join to accommodate various data combination needs
-    - Configure joins using intuitive left and right reference selections with field mapping and optional prefixes
-    - Add custom SELECT expressions and WHERE clauses to refine the joined data output
+    - Users can now create computed joins between two containers, even from different datastores, enabling cross-datastore data analysis.
+    - Supports multiple join types: Inner Join, Left Join, Right Join, and Full Outer Join to accommodate various data combination needs.
+    - Configure joins using intuitive left and right reference selections with field mapping and optional prefixes.
+    - Add custom SELECT expressions and WHERE clauses to refine the joined data output.
 
-- Introducing Dry Run operation for draft checks. Users are able to quickly evaluate the impact of a draft quality check without persisting results and necessity to activate the check.
+- Introducing Dry Run operation for draft checks
 
-- Enhanced Check Management: Bulk Operations and Individual Actions
-    - Added metadata field to bulk update dialog, enabling users to update check metadata across multiple checks simultaneously without opening each individually
-    - Extended bulk operations to support archived checks, previously limited to active checks only
+- Enhanced Bulk Check Operations and Management Capabilities
+    - Added metadata field to bulk update dialog, enabling users to update metadata across multiple checks simultaneously without opening each individually.
+    - Extended bulk operations to support archived checks, previously limited to active only.
     - Bulk activate and draft actions now available for archived checks, expanding beyond the previous delete-only option.
 
-- Adding Subject Field to Email Notifications
+- Added Subject Field to Email Notifications
     - Email notifications now support customizable subject lines, allowing users to add meaningful context to their messages.
 
 - Enhanced Record Limit Configuration
     - Users can now manually input custom record limit values in Profile and Scan operations, as well as Flow operations through a text field, providing flexibility beyond the predefined options.
     - A dropdown menu provides quick access to common values (1M, 10M, 100M, All).
-
-- Enhanced "Run Now" Operation Feedback
-    - Added toaster notifications that display when manually triggering scheduled operations, providing immediate feedback on operation status.
 
 - Adding Unlink Enrichment Datastore
     - Users can now unlink enrichment datastores directly from the "Enrichment Datastore Settings" dialog.
@@ -40,23 +37,19 @@
 
 #### General Fixes and Improvements
 
-- Addressed modal dismissal issues across multiple dialogs where clicking outside or pressing ESC would cause accidental closure and data loss. Affected dialogs now remain open: Computed Table, Computed File, Computed Field, Computed Join, Filter Clause, and Check dialogs.
+- Addressed modal dismissal issues across multiple dialogs where clicking outside or pressing ESC would cause accidental closure and data loss.
 
 - Fixed "Open in new tab" and "Copy link" actions for checks and anomalies that were not functioning correctly.
 
 - Fixed source record formatting for 'Is Replica Of' anomalies when check configuration changes after anomaly detection.
 
-- Fixed an issue where creating computed fields with the same name across different containers would incorrectly return the computed field and container ID of the first one created, rather than properly scoping computed fields to their respective containers.
+- Fixed an issue where anomaly URLs generated from check side panels were not functioning correctly when shared.
 
-- Fixed an issue where anomaly URLs generated from check sidepanels were not functioning correctly when shared.
-
-- Fixed incorrect redirection after creating checks from templates, ensuring users remain in the template context instead of being redirected to the Explore view.
+- Fixed incorrect redirection after creating checks from templates.
 
 - Fixed an issue where source records weren't displaying correctly during dry run operations.
 
-- Corrected cloning behavior to preserve tags from the rule being cloned.
-
-- Corrected connection stability issues for Snowflake datastores configured with KeyPair authentication.
+- Corrected cloning behavior to preserve tags from the check being cloned.
 
 - Fixed scan operations failing after deleting or unlinking enrichment datastores.
 
@@ -67,7 +60,7 @@
 #### API Changes
 
 - Breaking Change
-    - In the response payload, the `failed_checks` object no longer includes the following properties:
+    - In the response payload, the failed_checks object no longer includes the following properties:
         - `description`
         - `coverage`
         - `properties`
