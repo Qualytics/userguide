@@ -57,20 +57,6 @@
 
 - General Fixes and Improvements.
 
-#### API Changes
-
-- Breaking Change
-    - In the response payload, the failed_checks object no longer includes the following properties:
-        - `description`
-        - `coverage`
-        - `properties`
-        - `additional_metadata`
-    - The following endpoints are affected:
-        - `GET /anomalies`
-        - `GET /anomalies/{id}`
-        - `PUT /anomalies/{id}`
-        - `PATCH /anomalies`
-
 ### 2025.7.2 { id=2025.7.2 }
 
 #### Feature Enhancements
