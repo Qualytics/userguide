@@ -148,7 +148,7 @@ Once a Tag is created, it's ready to be associated with a ```Datastore```, ```Pr
 
 - When a new data asset is created, it inherits the ```Tags``` from the owning data asset. For example, if a user creates a new Computed Table, it inherits all the ```Tags``` that are applied to the Datastore in which it is created.
 
-### Tagging Anomales
+### Tagging Anomalies
 
 - Anomalies also inherit ```Tags``` at the time they are created. They inherit all the ```Tags``` of all the associated failed checks.
 
