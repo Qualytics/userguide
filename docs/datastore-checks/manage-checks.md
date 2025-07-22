@@ -29,9 +29,9 @@ You can move an active check into a draft state, allowing you to work on the che
 
 #### Method I: Draft Specific Check
 
-**Step 1:** Click on the vertical ellipsis (⋮) next to the active check you want to move to draft state, and select Edit from the dropdown menu.
+**Step 1:** Click on the vertical ellipsis (⋮) next to the active check you want to move to draft state, and select Edit from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"After Date Time"** check.
+For Demonstration purposes, we have selected the **"After Date Time"** check.
 
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-light-18.png#only-light)
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-dark-18.png#only-dark)
@@ -55,7 +55,7 @@ You can move multiple checks into the draft state in one action, allowing you to
 ![check-box](../assets/datastore-checks/manage-checks/check-box-light-21.png#only-light)
 ![check-box](../assets/datastore-checks/manage-checks/check-box-dark-21.png#only-dark)
 
-**Step 2:** Click on the vertical ellipses **(⋮)** and select **"Draft"** from the dropdown menu to move active checks to the draft state.
+**Step 2:** Click on the vertical ellipsis **(⋮)** and select **"Draft"** from the drop-down menu to move active checks to the draft state.
 
 ![draft](../assets/datastore-checks/manage-checks/draft-light-22.png#only-light)
 ![draft](../assets/datastore-checks/manage-checks/draft-dark-22.png#only-dark)
@@ -81,9 +81,9 @@ You can activate the draft checks after when you have worked on the check, make 
  
 #### Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select Edit from the dropdown menu.
+**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select Edit from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-light-26.png#only-light)
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-dark-26.png#only-dark)
@@ -98,14 +98,14 @@ A modal window will appear with the check details. If you want to make any chang
 ![activate](../assets/datastore-checks/manage-checks/activate-light-28.png#only-light)
 ![activate](../assets/datastore-checks/manage-checks/activate-dark-28.png#only-dark)
 
-**Step 3:** After clicking on the activate button, your check is now successfully moved to the active checks and a success flash message will appear stating **"Check successfully updated"**  
+**Step 3:** After clicking on the activate button, your check is now successfully moved to the active checks and a success flash message will appear stating **"Check successfully updated".**
 
 ![success-updated](../assets/datastore-checks/manage-checks/success-updated-light-29.png#only-light)
 ![success-updated](../assets/datastore-checks/manage-checks/success-updated-dark-29.png#only-dark)
 
 #### Method II. Activate Draft Checks in Bulk
 
-**Step 1**. Hover over the draft checks and click on the checkbox to select multiple checks in bulk.
+**Step 1:** Hover over the draft checks and click on the checkbox to select multiple checks in bulk.
 
 ![bulk-draft](../assets/datastore-checks/manage-checks/bulk-draft-light-94.png#only-light)
 ![bulk-draft](../assets/datastore-checks/manage-checks/bulk-draft-dark-94.png#only-dark)
@@ -115,17 +115,17 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![action-toolbar](../assets/datastore-checks/manage-checks/action-toolbar-light-95.png#only-light)
 ![action-toolbar](../assets/datastore-checks/manage-checks/action-toolbar-dark-95.png#only-dark)
 
-**Step 2**. Click on the vertical ellipsis **(⋮)** and choose **"Activate"** from the dropdown menu to activate the selected checks.
+**Step 2:** Click on the vertical ellipsis **(⋮)** and choose **"Activate"** from the dropdown menu to activate the selected checks.
 
 ![activate-btn](../assets/datastore-checks/manage-checks/activate-btn-light-96.png#only-light)
 ![activate-btn](../assets/datastore-checks/manage-checks/activate-btn-dark-96.png#only-dark)
 
-**Step 3**. A confirmation modal window **“Bulk Activate Check”** will appear, click on the **“Activate”** button to activate the draft checks.
+**Step 3:** A confirmation modal window **“Bulk Activate Check”** will appear, click on the **“Activate”** button to activate the draft checks.
 
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-light-97.png#only-light)
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-dark-97.png#only-dark)
 
-After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“The checks have been successfully updated”**
+After clicking on the activate button, your draft checks will be activated and a success message flash will appear stating **“The checks have been successfully updated”.**
 
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-98.png#only-light)
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-98.png#only-dark)
@@ -142,7 +142,7 @@ You can archive a specific check using two ways: either by directly clicking the
 
 **Step 1:** Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Archive from the dropdown menu.
 
-For Demonstration purpose, we have selected the **"After Date Time"** check.
+For Demonstration purposes, we have selected the **"After Date Time"** check.
 
 ![archive-icon](../assets/datastore-checks/manage-checks/archive-icon-light-30.png#only-light)
 ![archive-icon](../assets/datastore-checks/manage-checks/archive-icon-dark-30.png#only-dark)
@@ -161,21 +161,21 @@ For Demonstration purpose, we have selected the **"After Date Time"** check.
 ![archive](../assets/datastore-checks/manage-checks/archive-light-32.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-32.png#only-dark)
 
-**Step 4:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived"**
+**Step 4:** After clicking on the **Archive** button, your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived".**
 
 ![archive-success](../assets/datastore-checks/manage-checks/archive-success-light-33.png#only-light)
 ![archive-success](../assets/datastore-checks/manage-checks/archive-success-dark-33.png#only-dark)
 
 ##### 2. Archive from Action Menu
 
-**Step 1**: Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Edit from the dropdown menu.
+**Step 1:** Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Edit from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-light-34.png#only-light)
 ![checks-list](../assets/datastore-checks/manage-checks/checks-list-dark-34.png#only-dark)
 
-**Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on the **"Archive"** from the drop-down menu. 
+**Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and click on the **"Archive"** from the drop-down menu. 
 
 ![archive](../assets/datastore-checks/manage-checks/archive-light-35.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-35.png#only-dark)
@@ -194,7 +194,7 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 ![archive](../assets/datastore-checks/manage-checks/archive-light-37.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-37.png#only-dark)
 
-**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived"**
+**Step 5:** After clicking on the **Archive** button, your check is moved to the archive and a flash message will appear saying **"The check has been successfully archived".**
 
 ![success-archive](../assets/datastore-checks/manage-checks/success-archive-light-38.png#only-light)
 ![success-archive](../assets/datastore-checks/manage-checks/success-archive-dark-38.png#only-dark)
@@ -213,7 +213,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![action-menu](../assets/datastore-checks/manage-checks/action-menu-light-40.png#only-light)
 ![action-menu](../assets/datastore-checks/manage-checks/action-menu-dark-40.png#only-dark)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Archive"** from the dropdown menu to archive the selected checks.
+**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Archive"** from the drop-down menu to archive the selected checks.
 
 ![archive](../assets/datastore-checks/manage-checks/archive-light-41.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-41.png#only-dark)
@@ -250,9 +250,9 @@ If a check has been archived, then you can restore it back to an active state or
 ![archive](../assets/datastore-checks/manage-checks/archive-light-45.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-45.png#only-dark)
 
-**Step 2**: Click on the vertical ellipsis (⋮) next to the active check you want to restore as an active or draft check and select edit form the drop down menu.
+**Step 2**: Click on the vertical ellipsis (⋮) next to the active check you want to restore as an active or draft check and select Edit from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![archive-checks](../assets/datastore-checks/manage-checks/archive-checks-light-46.png#only-light)
 ![archive-checks](../assets/datastore-checks/manage-checks/archive-checks-dark-46.png#only-dark)
@@ -286,9 +286,9 @@ You can edit an existing check to modify its properties, such as the rule type, 
 
 #### Method I. Edit Specific Check
 
-**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop down menu
+**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![edit-check](../assets/datastore-checks/manage-checks/edit-check-light-51.png#only-light)
 ![edit-check](../assets/datastore-checks/manage-checks/edit-check-dark-51.png#only-dark)
@@ -323,7 +323,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 ![update-btn](../assets/datastore-checks/manage-checks/update-btn-light-57.png#only-light)
 ![update-btn](../assets/datastore-checks/manage-checks/update-btn-dark-57.png#only-dark)
 
-After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"The check has been successfully updated"**.
+After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"The check has been successfully updated".**
 
 ![update-msg](../assets/datastore-checks/manage-checks/update-msg-light-58.png#only-light)
 ![update-msg](../assets/datastore-checks/manage-checks/update-msg-dark-58.png#only-dark)
@@ -342,7 +342,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![select](../assets/datastore-checks/manage-checks/select-light-60.png#only-light)
 ![select](../assets/datastore-checks/manage-checks/select-dark-60.png#only-dark)
 
-**Step 2:** Click on the vertical ellipses **(⋮)** and select **"Edit"** from the dropdown menu to make changes to the selected checks.
+**Step 2:** Click on the vertical ellipsis **(⋮)** and select **"Edit"** from the drop-down menu to make changes to the selected checks.
 
 ![edit-btn](../assets/datastore-checks/manage-checks/edit-btn-light-61.png#only-light)
 ![edit-btn](../assets/datastore-checks/manage-checks/edit-btn-dark-61.png#only-dark)
@@ -389,7 +389,7 @@ You can delete a check permanently, removing it from the system, and this is an 
 
 **Step 2:** Locate the check, that you want to delete and click on the vertical ellipsis (⋮) and select **Delete** from the drop-down menu. 
 
-For Demonstration purpose, we have selected the **"Time Distribution Size"** check.
+For Demonstration purposes, we have selected the **"Time Distribution Size"** check.
 
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-light-67.png#only-light)
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-dark-67.png#only-dark)
@@ -399,7 +399,7 @@ For Demonstration purpose, we have selected the **"Time Distribution Size"** che
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-light-68.png#only-light)
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-dark-68.png#only-dark)
 
-**Step 4:** After clicking on the delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted"**
+**Step 4:** After clicking on the Delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted."**
 
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-69.png#only-light)
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-69.png#only-dark)
@@ -407,9 +407,6 @@ For Demonstration purpose, we have selected the **"Time Distribution Size"** che
 #### Method II. Delete Check in Bulk
 
 You can permanently delete multiple checks from the system in one action. This process is irreversible, so it should be used when you are certain that the checks are no longer needed.
-
-!!! note 
-       For bulk archiving checks, the only available option is Bulk Delete. There is no option to Bulk Restore to draft or activate archived checks.
 
 **Step 1:** Hover over the archived checks and click on the checkbox to select checks in bulk.  
 
@@ -421,7 +418,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![select](../assets/datastore-checks/manage-checks/select-light-71.png#only-light)
 ![select](../assets/datastore-checks/manage-checks/select-dark-71.png#only-dark)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Delete"** from the dropdown menu to delete the selected checks.  
+**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Delete"** from the drop-down menu to delete the selected checks.  
 
 ![delete-ellp](../assets/datastore-checks/manage-checks/delete-ellp-light-72.png#only-light)
 ![delete-ellp](../assets/datastore-checks/manage-checks/delete-ellp-dark-72.png#only-dark)
@@ -440,12 +437,15 @@ After clicking on the "Delete" button, your selected checks will be permanently 
 
 The **Dry Run** feature allows users to simulate the behavior of a Data Quality Check before enforcing it during a scan. This helps validate the check logic and preview potential anomalies without persisting the results or affecting any data.
 
+!!! note
+    You can perform a Dry Run on draft checks to validate the logic before they are finalized and published.
+
 **Step 1:** Click on the specific check you want to test using the Dry Run feature.
 
 ![click-check](../assets/datastore-checks/manage-checks/click-check-light.png#only-light)
 ![click-check](../assets/datastore-checks/manage-checks/click-check-dark.png#only-dark)
 
-**Step 2:** Click on the **Settings** icon located at the top-right corner of the interface and select **“Dry Run”** from the dropdown menu.
+**Step 2:** Click on the **Settings** icon located at the top-right corner of the interface and select **“Dry Run”** from the drop-down menu.
 
 ![dry-run](../assets/datastore-checks/manage-checks/dry-run-light.png#only-light)
 ![dry-run](../assets/datastore-checks/manage-checks/dry-run-dark.png#only-dark)
@@ -495,7 +495,7 @@ The **Source Records** section presents a detailed, tabular view of all records 
 
 **Sort Options**
 
-Users can sort the records based on different fields using the **Sort By** dropdown.
+Users can sort the records based on different fields using the **Sort By** drop-down.
 
 ![sort-options](../assets/datastore-checks/manage-checks/sort-options-light.png#only-light)
 ![sort-options](../assets/datastore-checks/manage-checks/sort-options-dark.png#only-dark)
@@ -525,7 +525,7 @@ Marking a check as a favorite allows you to quickly access and prioritize the ch
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-light-75.png#only-light)
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-dark-75.png#only-dark)
 
-After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited"**
+After clicking on the bookmark icon, your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited."**
 
 ![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-light-76.png#only-light)
 ![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-dark-76.png#only-dark)
@@ -541,7 +541,7 @@ You can clone both active and draft checks to create a duplicate copy of an exis
 
 **Step 1**: Click the vertical ellipsis(⋮) next to the check (whether Active or Draft) that you want to clone and select **Edit** from the drop-down menu.
 
-For Demonstration purpose, we have selected the **"Metric"** check.
+For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![clone-check](../assets/datastore-checks/manage-checks/clone-check-light-78.png#only-light)
 ![clone-check](../assets/datastore-checks/manage-checks/clone-check-dark-78.png#only-dark)
@@ -561,7 +561,7 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 ![toggle-on](../assets/datastore-checks/manage-checks/toggle-on-light-81.png#only-light)
 ![toggle-on](../assets/datastore-checks/manage-checks/toggle-on-dark-81.png#only-dark)
 
-Choose a **Template** from the dropdown menu that you want to associate with the cloned check. The check will inherit properties from the selected template.
+Choose a **Template** from the drop-down menu that you want to associate with the cloned check. The check will inherit properties from the selected template.
 
 * **Locked:** The check will automatically sync with any future updates made to the template, but you won't be able to modify the check's properties directly.
 
@@ -575,7 +575,7 @@ Choose a **Template** from the dropdown menu that you want to associate with the
 ![toggle-off](../assets/datastore-checks/manage-checks/toggle-off-light-83.png#only-light)
 ![toggle-off](../assets/datastore-checks/manage-checks/toggle-off-dark-83.png#only-dark)
 
-Select the appropriate **Rule type** for the check from the dropdown menu.
+Select the appropriate **Rule type** for the check from the drop-down menu.
 
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-light-84.png#only-light)
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-dark-84.png#only-dark)
@@ -605,7 +605,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-light-89.png#only-light)
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-dark-89.png#only-dark)
 
-After clicking on the **"Save"** button your check is successfully created and a success flash message will appear stating **"Check successfully created".**
+After clicking on the **"Save"** button, your check is successfully created and a success flash message will appear stating **"Check successfully created".**
 
 ![success-msgs](../assets/datastore-checks/manage-checks/success-msgs-light-90.png#only-light)
 ![success-msgs](../assets/datastore-checks/manage-checks/success-msgs-dark-90.png#only-dark)
@@ -616,7 +616,7 @@ You can add checks as a Template, which allows you to create a reusable framewor
 
 **Step 1:** Locate the check (whether Active or Draft) which you want to archive and click on that check.
 
-For Demonstration purpose, we have selected the **"Not Exists In"** check.
+For Demonstration purposes, we have selected the **"Not Exists In"** check.
 
 ![select-check](../assets/datastore-checks/manage-checks/clone-check-light-78.png#only-light)
 ![select-check](../assets/datastore-checks/manage-checks/clone-check-dark-78.png#only-dark)
@@ -679,7 +679,7 @@ You can filter your checks based on values like **Check Type**, **Asserted State
 
 |No     |     Filter  |   Filter Value  |  Description|
 | :---- |  :----       |  :----         |  :----      |
-| **4** | Tag | **N/A**| Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a No option found message is displayed.|
+| **4** | **Tag** | **N/A**| Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a No option found message is displayed.|
 | **5** | **Table** | **N/A** | Filters checks by the table to which they are applied. |
 | **6** | **Field** | **N/A** | Filters checks by the specific field/column name within a table. |
 | **7** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
