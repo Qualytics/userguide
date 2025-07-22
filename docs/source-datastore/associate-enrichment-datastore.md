@@ -1,4 +1,3 @@
-
 # Link Enrichment Datastore
 
 An enrichment datastore is a database used to enhance your existing data by adding additional, relevant information. This helps you to provide more comprehensive insight into data and improve data accuracy. 
@@ -77,7 +76,7 @@ If the credentials and provided details are verified, a success message will be 
 ![Screenshot](../assets/enrichment/link-datastore/save-light.png#only-light)
 ![Screenshot](../assets/enrichment/link-datastore/save-dark.png#only-dark)
 
-**Step 5**: After clicking on the **Save** button a modal window will appear **Your Datastore has been successfully updated.**
+**Step 5**: After clicking on the **Save** button, a modal window will appear **Your Datastore has been successfully updated.**
 
 ![Screenshot](../assets/enrichment/link-datastore/window-light.png#only-light)
 ![Screenshot](../assets/enrichment/link-datastore/window-dark.png#only-dark)
@@ -109,12 +108,12 @@ If the **Use an existing enrichment datastore** option is selected from the drop
 ![Screenshot](../assets/enrichment/link-datastore/save2-light.png#only-light)
 ![Screenshot](../assets/enrichment/link-datastore/save2-dark.png#only-dark)
 
-**Step 4:** After clicking on the **Save** button a modal window will appear **Your Datastore has been successfully updated.**
+**Step 4:** After clicking on the **Save** button, a modal window will appear **Your Datastore has been successfully updated.**
 
 ![Screenshot](../assets/enrichment/link-datastore/window-light.png#only-light)
 ![Screenshot](../assets/enrichment/link-datastore/window-dark.png#only-dark)
 
-When an Enrichment Datastore is linked, you can see a **green** light showing that the connection between the **Datastore** and the Enrichment Datastore are stable or red if it's unstable.
+When an Enrichment Datastore is linked, you can see a **green** light showing that the connection between the **Datastore** and the Enrichment Datastore is stable or red if it's unstable.
 
 ![Screenshot](../assets/enrichment/link-datastore/signal-light.png#only-light)
 ![Screenshot](../assets/enrichment/link-datastore/signal-dark.png#only-dark)
