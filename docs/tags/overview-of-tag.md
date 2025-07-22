@@ -136,7 +136,7 @@ Once a Tag is created, it's ready to be associated with a ```Datastore```, ```Pr
 
 ### Tag Inheritance
 
-- When a ```Tag``` is applied to a data asset, all the descendents of that data asset also receive the ```Tag```.
+- When a ```Tag``` is applied to a data asset, all the descendants of that data asset also receive the ```Tag```.
 
     - For example, if a ```Tag``` named **Critical** is applied to a Datastore then all the Tables, Fields, and Checks under that Datastore also receive the ```Tag```.
 
@@ -152,6 +152,6 @@ Once a Tag is created, it's ready to be associated with a ```Datastore```, ```Pr
 
 - Anomalies also inherit ```Tags``` at the time they are created. They inherit all the ```Tags``` of all the associated failed checks.
 
-- Thus Anomalies do not inherit subsequent tag changes from those checks. They only inherit checks one time - at creation time.
+- Thus Anomalies do not inherit subsequent tag changes from those checks. They only inherit tags one time - at creation time.
 
 - ```Tags``` can be directly applied to or removed from Anomalies at any time after creation.
