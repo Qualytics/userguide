@@ -19,7 +19,7 @@ A Datastore in Qualytics represents any structured source datastore, such as:
 * Raw files like CSV, XLSX, JSON, Avro, or Parquet  
 * Cloud storage platforms like AWS S3, Azure Blob Storage, or GCP Cloud Storage
 
-Qualytics integrates with these data sources through a layered architecture:
+Qualytics integrates with these source datastores through a layered architecture:
 
 ![datastore](../assets/datastores/what-is/datastore.png#only-light)
 ![datastore](../assets/datastores/what-is/datastore.png#only-dark)
