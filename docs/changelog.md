@@ -10,16 +10,17 @@
     - Select expressions automatically adjust when prefixes change, eliminating manual field name updates.
 
 - Added User Guide links to Check Creation form
-    - Users can now access the User Guide directly from the Rule Type field when creating checks.
-
-- Enhanced source record display for high-precision decimal values
-    - Source records now display full decimal precision on hover for truncated numeric values.
+    - Selecting a Rule Type provides a direct link to that specific rule's documentation in the User Guide.
 
 #### General Fixes and Improvements
 
 - Corrected Quality Check Update errors affecting `Greater Than Field`, `Less Than Field`, and `Equal To Field` rule types.
 
+- Fixed source record display for high-precision decimal values
+    - Source records now display full decimal precision on hover for truncated numeric values.
+
 - General Fixes and Improvements.
+
 
 ### 2025.7.18 { id=2025.7.18 }
 
