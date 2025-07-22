@@ -1,6 +1,6 @@
 # Right Click Options
 
-Once you add a source datastore, whether **JDBC** or **DFS**, Qualytics provides your right-click options on the following:  
+Once you add a source datastore, whether **JDBC** or **DFS**, Qualytics provides right-click options on the following:  
 
 - Added source datastore
 - Tables or files within the source datastore  
@@ -27,7 +27,7 @@ Log in to your Qualytics account and right-click on the source datastore whether
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Open in New Tab | Opens the selected source datastore in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies, etc.** |
+| 1 | Open in New Tab | Opens the selected source datastore in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc. |
 | 2 | Copy Link | Copy the unique URL of the selected source datastore to your clipboard. |
 | 3 | Copy ID | Copy the unique ID of the selected source datastore. |
 | 4 | Copy Name | Copy the name of the selected source datastore to your clipboard. |
@@ -56,7 +56,7 @@ A dropdown list of options will appear:
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected table from the datastore in a new browser tab,  where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies, etc.** |
+| 1 | Open in New Tab | Open the selected table from the datastore in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
 | 2 | Copy Link | Copy the unique URL of the selected table to your clipboard. |
 | 3 | Copy ID | Copy the unique identifier (ID) of the selected table. |
 | 4 | Copy Name | Copy the name of the selected table to your clipboard. |
@@ -85,7 +85,7 @@ A dropdown list of options will appear:
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected field in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies, etc.** |
+| 1 | Open in New Tab | Open the selected field in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
 | 2 | Copy Link | Copy the unique URL of the selected field to your clipboard. |
 | 3 | Copy ID | Copy the unique identifier (ID) of the selected field. |
 | 4 | Copy Name | Copy the name of the selected field to your clipboard. |
@@ -97,7 +97,7 @@ Alternatively, you can access these right-click options by opening the dedicated
 
 ### Right Click Checks
 
-Right-click on the specific check whether **All, Active**, **Draft** and **Archived** within a connected source datastore.
+Right-click on the specific check from **All, Active**, **Draft** and **Archived** within a connected source datastore.
 
 A dropdown list of options will appear:
 
@@ -114,10 +114,10 @@ A dropdown list of options will appear:
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected check in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies, etc.** |
-| 2 | Copy Link | Copy the unique URL of the selected field to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected field. |
-| 4 | Copy Name | Copy the name of the selected field to your clipboard. |
+| 1 | Open in New Tab | Open the selected check in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
+| 2 | Copy Link | Copy the unique URL of the selected check to your clipboard. |
+| 3 | Copy ID | Copy the unique identifier (ID) of the selected check. |
+| 4 | Copy Name | Copy the name of the selected check to your clipboard. |
 
 Alternatively, you can access these right-click options by navigating to the Checks from the Explore section.   
 
@@ -126,7 +126,7 @@ Alternatively, you can access these right-click options by navigating to the Che
 
 ### Right Click Anomalies
 
-Right-click on the specific anomalies whether **All, Active**, **Acknowledged** and **Archived** within a connected source datastore.
+Right-click on the specific anomaly from **All, Active**, **Acknowledged** and **Archived** within a connected source datastore.
 
 A dropdown list of options will appear:
 
@@ -143,10 +143,10 @@ A dropdown list of options will appear:
 
 | No | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected anomaly in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies, etc.** |
-| 2 | Copy Link | Copy the unique URL of the selected field to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected field. |
-| 4 | Copy Name | Copy the name of the selected field to your clipboard. |
+| 1 | Open in New Tab | Open the selected anomaly in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
+| 2 | Copy Link | Copy the unique URL of the selected anomaly to your clipboard. |
+| 3 | Copy ID | Copy the unique identifier (ID) of the selected anomaly. |
+| 4 | Copy Name | Copy the name of the selected anomaly to your clipboard. |
 
 Alternatively, you can access these right-click options by navigating to the Anomalies from the Explore section. 
 
