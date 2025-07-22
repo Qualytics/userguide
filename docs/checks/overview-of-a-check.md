@@ -12,7 +12,7 @@ In Qualytics, you will come across two types of checks:
 
 Qualytics automatically generates inferred checks during a Profile operation. These checks typically cover 80-90% of the rules needed by users. They are created and maintained through profiling, which involves statistical analysis and machine learning methods.
 
-For more details on Inferred Checks, please refer to the [**Inferrred Check**](../checks/inferred-check.md) documentation.
+For more details on Inferred Checks, please refer to the [**Inferred Check**](../checks/inferred-check.md) documentation.
 
 ### Authored Checks
 

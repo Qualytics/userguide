@@ -23,7 +23,7 @@ The **Summary** section provides a quick overview of the anomaly's key attribute
 | 1 | Status and Type | Shows the current state and category of the anomaly. In this case, the anomaly is **Active** and of type **Shape**, indicating it relates to the structure or distribution of the data. |
 | 2 | Anomalous Records | Indicates the total number of records affected by the anomaly. Here, **102** records were identified as anomalous. |
 | 3 | Failed Check | Displays the number of data quality checks that were violated and triggered this anomaly. In this instance, **1** check was failed. |
-| 4 | Weight | Represents the significance or impact of the anomaly. A higher weight value implies a more critical issue. This anomaly has a weight of **8.** |
+| 4 | Weight | Represents the significance or impact of the anomaly. A higher weight value implies a more critical issue. This anomaly has a weight of **8**. |
 | 5 | Detected | Shows how long ago the anomaly was first detected. When you hover over the time the anomaly was detected, a pop-up appears displaying the complete date and time. |
 | 6 | Scan | Indicates the scan operation that detected the anomaly. Scan ID **#21379** is shown here, and it was an incremental scan. When you click on the expand icon, then you will be directed to the Scan Results page where you can view the specific scan that detected the anomaly. |
 | 7 | Source Datastore | Identifies the dataset where the anomaly was found. This anomaly was found in the Qualytics Databricks POC datastore. Clicking on the expand icon opens a detailed view and navigates to the dataset’s page, providing more information about the source datastore where the anomaly was found. |

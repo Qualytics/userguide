@@ -1,6 +1,6 @@
 # Filter and Sort
 
-Filter and Sort options allow you to organize your anomaly by various criteria, such as Weight, Anomalous Record, Created Date. You can also apply filters to refine your list of anomaly based on Timeframe, Type and Rule etc.
+Filter and Sort options allow you to organize your anomalies by various criteria, such as Weight, Anomalous Record, Created Date. You can also apply filters to refine your list of anomaly based on Timeframe, Type and Rule etc.
 
 ## Sort
 
