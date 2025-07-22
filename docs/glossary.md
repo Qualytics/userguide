@@ -1,6 +1,8 @@
+# Glossary
+
 ### <a name="anomaly"></a>__Anomaly__
 
-Something that deviates from the standard, normal, or expected. This can be in the form of a single data point, record, or a batch of data
+Something that deviates from the standard, normal, or expected. This can be in the form of a single data point, record, or a batch of data.
 
 ### <a name="accuracy"></a>__Accuracy__
 
@@ -8,15 +10,15 @@ The data represents the real-world values they are expected to model.
 
 ### <a name="catalog"></a>__Catalog Operation__
 
-Used to read fundamental metadata from a Datastore required for the proper functioning of subsequent Operations such as Profile, Hash and Scan
+Used to read fundamental metadata from a Datastore required for the proper functioning of subsequent Operations such as Profile, Hash, and Scan.
 
 ### <a name="comparison"></a>__Comparison__
 
-An evaluation to determine if the structure and content of the source and target Datastores match
+An evaluation to determine if the structure and content of the source and target Datastores match.
 
 ### <a name="comparison"></a>__Comparison Runs__
 
-An action to perform a comparison
+An action to perform a comparison.
 
 ### <a name="completeness"></a>__Completeness__
 
@@ -31,7 +33,7 @@ Alignment of the content to the required standards, schemas, and formats.
 Components that can be easily connected to and used to integrate with other applications and databases. Common uses include sending and receiving data.
 
 !!! info
-    We can connect to any Apache Spark accessible datastore. If you have a datastore we don’t yet support, talk to us! We currently support: Files (CSV, JSON, XLSX, Parquet) on Object Storage (S3, Azure Blob, GCS); ETL/ELT Providers (Fivetran, Stitch, Airbyte, Matillion – and any of their connectors!); Data Warehouses (BigQuery, Snowflake, Redshift); Data Pipelining (Airflow, DBT, Prefect), Databases (MySQL, PostgreSQL, MSSQL, SQLite, etc.) and any other JDBC source
+    We can connect to any Apache Spark accessible datastore. If you have a datastore we don’t yet support, talk to us! We currently support: Files (CSV, JSON, XLSX, Parquet) on Object Storage (S3, Azure Blob, GCS); ETL/ELT Providers (Fivetran, Stitch, Airbyte, Matillion – and any of their connectors!); Data Warehouses (BigQuery, Snowflake, Redshift); Data Pipelining (Airflow, DBT, Prefect); Databases (MySQL, PostgreSQL, MSSQL, SQLite, etc.) and any other JDBC source.
 
 ### <a name="consistency"></a>__Consistency__
 
@@ -39,7 +41,7 @@ The value is the same across all datastores within the organization.
 
 ### <a name="container"></a>__Container (of a Datastore)__
 
-The uniquely named abstractions within a Datastore that hold data adhering to a known schema.  The Containers within a RDBMS are tables, the containers in a filesystem are well formatted files, etc…
+The uniquely named abstractions within a Datastore that hold data adhering to a known schema. The Containers within a RDBMS are tables, the containers in a filesystem are well formatted files, etc.
 
 ### <a name="dataatrest"></a>__Data-at-rest__
 
@@ -51,11 +53,11 @@ Changes in a data set’s properties or characteristics over time.
 
 ### <a name="datainflight"></a>__Data-in-flight__
 
-Data that is on the move, transporting from one location to another, such as through a message queue, API, or other pipeline
+Data that is on the move, transporting from one location to another, such as through a message queue, API, or other pipeline.
 
 ### <a name="datalake"></a>__Data Lake__
 
-​​A centralized repository that allows you to store all your structured and unstructured data at any scale. (**)
+​​A centralized repository that allows you to store all your structured and unstructured data at any scale.
 
 ### <a name="dataquality"></a>__Data Quality__
 
@@ -75,7 +77,7 @@ A system that aggregates data from different sources into a single, central, con
 
 ### <a name="distinctness"></a>__Distinctness (of a Field)__
 
-The fraction of distinct values (appear at least once) to total values that appear in a Field
+The fraction of distinct values (appear at least once) to total values that appear in a Field.
 
 ### <a name="enrichment"></a>__Enrichment Datastore__
 
@@ -83,7 +85,7 @@ Additional properties that are added to a data set to enhance its meaning. Qualy
 
 ### <a name="favorite"></a>__Favorite__
 
-Users can mark instances of an abstraction (Field, Container, Datastore, Check, Anomaly, etc..) as a personalized favorite to ensure it ranks higher in default ordering and is prioritized in other personalized views & workflows.
+Users can mark instances of an abstraction (Field, Container, Datastore, Check, Anomaly, etc.) as a personalized favorite to ensure it ranks higher in default ordering and is prioritized in other personalized views & workflows.
 
 ### <a name="compute_daemon"></a>__Compute Daemon__
 
@@ -93,8 +95,8 @@ An application that protects a system from contamination due to inputs, reducing
 
 A Field that can be used to group the records in the Table Container into distinct ordered Qualytics Partitions in support of incremental operations upon those partitions:
 
-* a whole number - then all records with the same partition_id value are considered part of the same partition
-* a float or timestamp - then all records between two defined values are considered part of the same partition (the defining values will be set by incremental scan/profile business logic) Since Qualytics Partitions are required to support Incremental Operations, an Incremental Identifier is required for a Table Container to support incremental Operations.
+* a whole number - then all records with the same partition_id value are considered part of the same partition.
+* a float or timestamp - then all records between two defined values are considered part of the same partition (the defining values will be set by incremental scan/profile business logic). Since Qualytics Partitions are required to support Incremental Operations, an Incremental Identifier is required for a Table Container to support incremental Operations.
 
 ### <a name="incremental-scan-operation"></a>__Incremental Scan Operation__
 
@@ -102,7 +104,7 @@ A Scan Operation where only new records (inserted since the last Scan Operation)
 
 ### <a name="inference"></a>__Inference Engine__
 
-After Compute Daemon gathers all the metadata generated by a profiling operation, it feeds that metadata into our Inference Engine. The inference engine then initiates a "true machine learning" (specifically, this is referred to as Inductive Learning) process whereby the available customer data is partitioned into a training set and a testing set.  The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to inferred data quality Checks.
+After Compute Daemon gathers all the metadata generated by a profiling operation, it feeds that metadata into our Inference Engine. The inference engine then initiates a "true machine learning" (specifically, this is referred to as Inductive Learning) process whereby the available customer data is partitioned into a training set and a testing set. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true are converted to inferred data quality Checks.
 
 ### <a name="metadata"></a>__Metadata__
 
@@ -114,7 +116,7 @@ A type of data storage used for handling large amounts of unstructured data mana
 
 ### <a name="operation"></a>__Operation__
 
-the asynchronous (often long running) tasks that operate on Datastores are collectively referred to as "Operations."  Examples include Catalog, Profile, Hash, and Scan
+The asynchronous (often long-running) tasks that operate on Datastores are collectively referred to as "Operations". Examples include Catalog, Profile, Hash, and Scan.
 
 ### <a name="partition"></a>__Partition Identifier__
 
@@ -142,15 +144,15 @@ A procedure utilizing a combination of processes, tools, or systems of interrela
 
 ### <a name="quality"></a>__Quality Score__
 
-A measure of data quality calculated at the Field, Container, and Datastore level.  Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](quality-scores/what-are-quality-scores.md).
+A measure of data quality calculated at the Field, Container, and Datastore level. Quality Scores are recorded as time-series enabling you to track movement over time. You can read more in [Quality Scoring](quality-scores/what-are-quality-scores.md).
 
 ### <a name="app"></a>__Qualytics App__
 
-aka "App" this is the user interface for our Product delivered as a web application
+aka "App" this is the user interface for our Product delivered as a web application.
 
 ### <a name="deployment"></a>__Qualytics Deployment__
 
-A single instance of our product (the k8s cluster, postgres database, controlplane/app/compute daemon pods, etc…)
+A single instance of our product (the k8s cluster, postgres database, controlplane/app/compute daemon pods, etc).
 
 ### <a name="compute_daemon"></a>__Qualytics Compute Daemon__
 
@@ -158,7 +160,7 @@ aka "Compute Daemon" this is the layer of our Product that connects to Datastore
 
 ### <a name="implementation"></a>__Qualytics Implementation__
 
-A customer’s Deployment plus any associated integrations
+A customer’s Deployment plus any associated integrations.
 
 ### <a name="controlplane"></a>__Controlplane__
 
@@ -170,7 +172,7 @@ The smallest grouping of records that can be incrementally processed. For DFS da
 
 ### <a name="record"></a>__Record (of a Container)__
 
-A distinct set of values for all Fields defined for a Container (e.g. a row of a table)
+A distinct set of values for all Fields defined for a Container (e.g. a row of a table).
 
 ### <a name="schema"></a>__Schema__
 
@@ -186,7 +188,7 @@ The origin of data in a pipeline, migration, or other ELT/ETL process. It’s wh
 
 ### <a name="tag"></a>__Tag__
 
-Users can assign Tags Datastores, Profiles (Files, Tables, Containers), Checks and Anomalies. Add a Description and Assign a Weight #. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
+Users can assign Tags to Datastores, Profiles (Files, Tables, Containers), Checks and Anomalies. Add a Description and Assign a Weight. The weight value directly correlates with the level of importance, where a higher weight indicates higher significance.
 
 ### <a name="target"></a>__Target__
 
