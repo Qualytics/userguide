@@ -24,7 +24,7 @@ Let's get started 🚀
 !!! note
     Inferred checks will be automatically updated with the next Profiling run. Manually updating an inferred check will take it out of the automatic update workflow.
 
-To understand how to Inferred checks, you can follow the steps from the documentation [**Profile Operation.**](../source-datastore/profile.md)
+To understand how Inferred checks work, you can follow the steps from the documentation [**Profile Operation.**](../source-datastore/profile.md)
 
 After the profiling run is complete, inferred checks will be automatically created based on the analysis of your data.
 
@@ -82,7 +82,7 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 | **No.** | **Fields**             | **Description**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
 | 1       | Date of Birth          |Stores date and time values, ensuring precise representation of birth dates.     |
-| 2       | Created Date           | Holds the record’s creation date as a text value rather than a structured date format.                                           |                                       |
+| 2       | Created Date           | Holds the record’s creation date as a text value rather than a structured date format.            |
 
 **4. Allow Other Fields (Checkbox)**:
 
@@ -141,6 +141,6 @@ After clicking on the **“Update”** button, your check is successfully update
      
 2. Available data is partitioned into a training set and a testing set.  
      
-3. The engine applies numerous machine learning models & techniques to the training data in an effort to discover well-fitting data quality constraints.
+3. The engine applies numerous machine learning models and techniques to the training data in an effort to discover well-fitting data quality constraints.
 
-4. Those inferred constraints are then filtered by testing them against the held out testing set & only those that assert true above a certain threshold are converted and exposed to users as Inferred Checks.
+4. Those inferred constraints are then filtered by testing them against the held out testing set and only those that assert true above a certain threshold are converted and exposed to users as Inferred Checks.
