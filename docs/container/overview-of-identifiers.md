@@ -4,7 +4,7 @@ An **Identifier** is a field that can be used to help load the desired data from
 
 * **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
-* **Partition Field:** Divide the data in the table into distinct dataframes that can be analyzed in parallel.
+* **Partition Field:** Divides the data in the table into distinct dataframes that can be analyzed in parallel.
 
 ## Managing an Identifier
 
@@ -119,7 +119,7 @@ Each partition can be analyzed independently, enabling simultaneous examination 
 
 This not only increases the efficiency of data processing but also ensures a more streamlined and scalable approach to handling large volumes of data, making it an indispensable tool in data analysis and management.
 
-The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however alternatives are automatically identified and set during a Catalog operation.
+The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however, alternatives are automatically identified and set during a Catalog operation.
 
 ![partition](../assets/identifiers/identifiers-overview/partition-light.png#only-light)
 ![partition](../assets/identifiers/identifiers-overview/partition-dark.png#only-dark)
@@ -133,7 +133,7 @@ The ideal Partition Identifier is an Incremental Identifier of type **datetime**
 
 ### Example
 
-**Objective**: *Identify the efficient process and analyze the ORDERS table by partitioning the data based on the O_ORDERDATE field, allowing parallel processing of different date segments.*
+**Objective**: *Identify an efficient process and analyze the ORDERS table by partitioning the data based on the O_ORDERDATE field, allowing parallel processing of different date segments.*
 
 **Sample Data**
 
