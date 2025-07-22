@@ -77,11 +77,11 @@ After clicking the **"Update"** button, your selected checks will be moved to dr
 
 ### Activate Draft Check
 
-You can activate the draft checks after when you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate specific checks or activate multiple checks in bulk.
+You can activate the draft checks after you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate specific checks or activate multiple checks in bulk.
  
 #### Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select Edit from the dropdown menu.
+**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select **Edit** from the dropdown menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -125,7 +125,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-light-97.png#only-light)
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-dark-97.png#only-dark)
 
-After clicking on the activate button, your drafts checks will be activated and a success message flash will appear stating **“The checks have been successfully updated”**
+After clicking on the activate button, your draft checks will be activated and a success message flash will appear stating **“The checks have been successfully updated”**.
 
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-98.png#only-light)
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-98.png#only-dark)
@@ -194,7 +194,7 @@ For Demonstration purpose, we have selected the **"Metric"** check.
 ![archive](../assets/datastore-checks/manage-checks/archive-light-37.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-37.png#only-dark)
 
-**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **" The check has been successfully archived"**
+**Step 5:** After clicking on the **Archive** button your check is moved to the archive and a flash message will appear saying **"The check has been successfully archived"**.
 
 ![success-archive](../assets/datastore-checks/manage-checks/success-archive-light-38.png#only-light)
 ![success-archive](../assets/datastore-checks/manage-checks/success-archive-dark-38.png#only-dark)
@@ -250,7 +250,7 @@ If a check has been archived, then you can restore it back to an active state or
 ![archive](../assets/datastore-checks/manage-checks/archive-light-45.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-45.png#only-dark)
 
-**Step 2**: Click on the vertical ellipsis (⋮) next to the active check you want to restore as an active or draft check and select edit form the drop down menu.
+**Step 2**: Click on the vertical ellipsis (⋮) next to the active check you want to restore as an active or draft check and select **Edit** from the drop down menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -286,7 +286,7 @@ You can edit an existing check to modify its properties, such as the rule type, 
 
 #### Method I. Edit Specific Check
 
-**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop down menu
+**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop down menu.
 
 For Demonstration purpose, we have selected the **"Metric"** check.
 
@@ -399,7 +399,7 @@ For Demonstration purpose, we have selected the **"Time Distribution Size"** che
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-light-68.png#only-light)
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-dark-68.png#only-dark)
 
-**Step 4:** After clicking on the delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted"**
+**Step 4:** After clicking on the delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted"**.
 
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-69.png#only-light)
 ![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-69.png#only-dark)
@@ -525,7 +525,7 @@ Marking a check as a favorite allows you to quickly access and prioritize the ch
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-light-75.png#only-light)
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-dark-75.png#only-dark)
 
-After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited"**
+After Clicking on the bookmark icon your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited"**.
 
 ![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-light-76.png#only-light)
 ![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-dark-76.png#only-dark)
@@ -580,7 +580,7 @@ Select the appropriate **Rule type** for the check from the dropdown menu.
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-light-84.png#only-light)
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-dark-84.png#only-dark)
 
-**Step 4:** Once you have selected the template or rule type, fill up the remaining [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as required. 
+**Step 4:** Once you have selected the template or rule type, fill in the remaining [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as required. 
 
 ![check-detail](../assets/datastore-checks/manage-checks/check-detail-light-85.png#only-light)
 ![check-detail](../assets/datastore-checks/manage-checks/check-detail-dark-85.png#only-dark)
@@ -626,7 +626,7 @@ For Demonstration purpose, we have selected the **"Not Exists In"** check.
 ![template-btn](../assets/datastore-checks/manage-checks/template-btn-light-92.png#only-light)
 ![template-btn](../assets/datastore-checks/manage-checks/template-btn-dark-92.png#only-dark)
 
-After clicking the **"Template"** button, the check will be saved and created as a template in the library, and a success flash message will appear stating, **"The quality check template has been created successfully."** This allows you to reuse the template for future checks, streamlining the validation process.
+After clicking the **"Template"** button, the check will be saved as a template in the library, and a success flash message will appear stating, **"The quality check template has been created successfully."** This allows you to reuse the template for future checks, streamlining the validation process.
 
 ![quality-check](../assets/datastore-checks/manage-checks/quality-check-light-93.png#only-light)
 ![quality-check](../assets/datastore-checks/manage-checks/quality-check-dark-93.png#only-dark)
