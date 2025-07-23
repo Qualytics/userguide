@@ -1,6 +1,6 @@
 # Profiles
 
-**Profiles** in Qualytics helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quickly, informed decisions.
+**Profiles** in Qualytics helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quick, informed decisions.
 
 Let’s get started 🚀
 
@@ -78,11 +78,11 @@ To explore the data in more detail, you can view the corresponding table of a se
 
 ### Filter and Sort
 
-Filter and Sort options allow you to organize your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records and Type. You can also apply filters to refine your list of containers based on Type 
+Filter and Sort options allow you to organize your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records, and Type. You can also apply filters to refine your list of containers based on Type.
 
 #### Sort
 
-You can sort your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records and Type to easily organize and prioritize them according to your needs.
+You can sort your containers by various criteria, such as Name, Last Profiled, Last Scanned, Quality Score, Records, and Type to easily organize and prioritize them according to your needs.
 
 ![sort](../assets/explore/profiles/sort-light.png#only-light)
 ![sort](../assets/explore/profiles/sort-dark.png#only-dark)
@@ -111,7 +111,7 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 #### Filter
 
-You can filter your containers based on values Type (Table, View, File, Computed Table and Computed File) to easily organize and prioritize them according to your needs.
+You can filter your containers based on values like Type (Table, View, File, Computed Table and Computed File) to easily organize and prioritize them according to your needs.
 
 ![filter](../assets/explore/profiles/filter-light.png#only-light)
 ![filter](../assets/explore/profiles/filter-dark.png#only-dark)
@@ -125,7 +125,7 @@ Marking a container as a favorite allows you to quickly access and prioritize th
 ![mark](../assets/explore/profiles/mark-light.png#only-light)
 ![mark](../assets/explore/profiles/mark-dark.png#only-dark)
 
-After Clicking on the bookmark icon your container is successfully marked as a favorite and a success flash message will appear stating **"The Table has been favorited"**
+After clicking on the bookmark icon your container is successfully marked as a favorite and a success flash message will appear stating **"The Table has been favorited"**
 
 ![msg](../assets/explore/profiles/msg-light.png#only-light)
 ![msg](../assets/explore/profiles/msg-dark.png#only-dark)
@@ -139,16 +139,16 @@ To unmark, simply click on the bookmark icon of the marked container. This will 
 
 By selecting the Fields section in the Qualytics platform, you can view all the fields across your data sources, including their quality scores, completeness, and metadata, for streamlined data management.
 
-### Fields Details
+### Field Details
 
 Field Details view in the Qualytics platform provides in-depth insights into a selected field. It displays key information, including the field’s declared type, number of distinct values, minimum and maximum length of observed values, entropy, and unique/distinct ratio. This detailed profiling allows you to understand the field's data structure, quality, and variability, enabling better data governance and decision-making.
 
-**Step 1:** Click on the specific field whose fields details you want to preview.
+**Step 1:** Click on the specific field whose field details you want to preview.
 
 ![field](../assets/explore/profiles/field-light.png#only-light)
-![filed](../assets/explore/profiles/field-dark.png#only-dark)
+![field](../assets/explore/profiles/field-dark.png#only-dark)
 
-A modal window will appear, providing detailed information about the selected field, such as its declared type, distinct values, length range, and more.
+A modal window will appear, providing detailed information about the selected field, such as its declared type, distinct values, length range, the Last Profile timestamp to indicate when the field was last profiled, and more.
 
 ![window](../assets/explore/profiles/window-light.png#only-light)
 ![window](../assets/explore/profiles/window-dark.png#only-dark)
@@ -177,15 +177,15 @@ A modal window will appear, providing the options to create the tag. Enter the r
 ![create](../assets/explore/profiles/create-light.png#only-light)
 ![create](../assets/explore/profiles/create-dark.png#only-dark)
 
-For more information on creating tags, refer to the [Add Tag section](../userguide/docs/settings/tags/overview-of-a-tag.md/#add-a-tag).
+For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md/#add-tag).
 
 ### Filter and Sort
 
-Filter and Sort options allow you to organize your fields by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
+Filter and Sort options allow you to organize your fields by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score, and Type. You can also apply filters to refine your list of fields based on Profile and Type. 
 
 #### Sort
 
-You can sort your containers by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score and Type to easily organize and prioritize them according to your needs.
+You can sort your containers by various criteria, such as Active Anomalies, Active Checks, Completeness, Created Date, Name, Quality Score, and Type to easily organize and prioritize them according to your needs.
 
 ![sort2](../assets/explore/profiles/sort2-light.png#only-light)
 ![sort2](../assets/explore/profiles/sort2-dark.png#only-dark)

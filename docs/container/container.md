@@ -16,7 +16,7 @@ JDBC containers are virtual representations of database objects, making it easie
 
 DFS containers are used to represent files stored in distributed file systems, such as Hadoop or cloud storage. These files can include formats like CSV, JSON, or Parquet, which are commonly used for storing and organizing data. DFS containers make it easier for applications to work with these files by providing a structured way to access and process data in large-scale storage systems.
 
-## Containers Attributes
+## Container Attributes
 
 ### Totals
 
@@ -36,7 +36,7 @@ DFS containers are used to represent files stored in distributed file systems, s
 6. **Active Checks**: Represents the number of ongoing checks applied to the dataset. These checks monitor data quality, consistency, and correctness.
 
 7. **Active Anomalies**: Displays the total number of anomalies found during the data profiling process. Anomalies can indicate inconsistencies, outliers, or potential data quality issues that need resolution.  
-   
+
 ![totals](../assets/container/containers/totals-light.png#only-light)
 ![totals](../assets/container/containers/totals-dark.png#only-dark)
 
@@ -88,7 +88,7 @@ Users can perform various operations on containers to manage datasets effectivel
 
 | No. | Options | Description |
 | :---- | :---- | :---- |
-| **1.** | Checks | Checks allow you to Add new checks or validation rules for the container. |
+| **1.** | Checks | Checks allow you to add new checks or validation rules for the container. |
 | **2.** | Computed Field | Allows you to add computed field. |
 
 ### Run
@@ -121,7 +121,7 @@ After profiling a container, individual field profiles offer granular insights:
 **5. Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
 ![totals](../assets/container/containers/totalss-light.png#only-light)
-![totlas](../assets/container/containers/totalss-dark.png#only-dark)
+![totals](../assets/container/containers/totalss-dark.png#only-dark)
 
 ### Profile
 
@@ -132,15 +132,24 @@ This provides detailed insights into the characteristics of the field, including
 | 1 | Declared Type | Indicates whether the type is declared by the source or inferred. |
 | 2 | Distinct Values | Count of distinct values observed in the dataset. |
 | 3 | Min Length | Shortest length of the observed string values or lowest value for numerics. |
-| 4 | Max Length | Greatest length of the observed string values or lowest value for numerics. |
+| 4 | Max Length | Greatest length of the observed string values or highest value for numerics. |
 | 5 | Mean | Mathematical average of the observed numeric values. |
 | 6 | Median | The median of the observed numeric values. |
 | 7 | Standard Deviation | Measure of the amount of variation in observed numeric values. |
 | 8 | Kurtosis | Measure of the ‘tailedness’ of the distribution of observed numeric values. |
-| 9 | Skewness | Measure of the asymmetry of the distribution observed numeric values. |
+| 9 | Skewness | Measure of the asymmetry of the distribution of observed numeric values. |
 | 10 | Q1 | The first quartile; the central point between the minimum and the median. |
 | 11 | Q3 | The third quartile; the central point between the median and the maximum. |
 | 12 | Sum | Total sum of all observed numeric values. |
 
 ![profile](../assets/container/containers/profile-light.png#only-light)
 ![profile](../assets/container/containers/profile-dark.png#only-dark)
+
+#### Last Profile
+
+The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
+
+![last-profiled](../assets/container/containers/last-profiled-light.png#only-light)
+![last-profiled](../assets/container/containers/last-profiled-dark.png#only-dark)
+
+This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
