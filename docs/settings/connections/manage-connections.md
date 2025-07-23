@@ -84,7 +84,7 @@ You can add new or existing datastores and enrichment datastores directly from t
 ![add-datastore](../../assets/connections/add-datastore-light-10.png#only-light)
 ![add-datastore](../../assets/connections/add-datastore-dark-10.png#only-dark)
 
-A modal window labeled **Add Datastore** will appear, giving you options to connect a datastore. For more information on adding a datastore, please refer to the [Configuring Source Datastores](../../add-datastores/overview-of-a-datastore.md#configuring-source-datastores) section.
+A modal window labeled **Add Datastore** will appear, giving you options to connect a datastore. For more information on adding a datastore, please refer to the [Configuring Datastores](https://userguide.qualytics.io/quick-start-guide/#datastore:~:text=the%20Qualytics%20platform.-,Configuring%20Datastores,-Qualytics%20allows%20you) section.
 
 Once you have successfully added a datastore to the connection, a success message will appear saying, **Your datastore has been successfully added.**
 
