@@ -6,12 +6,12 @@ Let's get started 🚀
 
 ## Navigation to Settings 
 
-**Step 1**: Select a source **datastore** from the side menu for which you would like to manage the settings. 
+**Step 1:** Select a source **datastore** from the side menu for which you would like to manage the settings. 
 
 ![add-datastore](../assets/datastore-settings/add-datastore-light-1.png#only-light)
 ![add-datastore](../assets/datastore-settings/add-datastore-dark-1.png#only-dark)
 
-**Step 2**: Click on the **Settings** icon from the top right window. A drop-down menu will appear with the following options:
+**Step 2:** Click on the **Settings** icon from the top right window. A drop-down menu will appear with the following options:
 
 1. Edit
 2. Enrichment
@@ -28,12 +28,12 @@ The **Edit Datastore** setting allows users to modify the connection details of 
 !!! note
     Connection details can vary based on the type of datastore being edited. For example, details for BigQuery will differ from Snowflake or Athena.
 
-**Step 1**: Click on the **Edit** option
+**Step 1:** Click on the **Edit** option.
 
 ![edit-datastore](../assets/datastore-settings/edit-datastore-light-3.png#only-light)
 ![edit-datastore](../assets/datastore-settings/edit-datastore-dark-3.png#only-dark)
 
-**Step 2**: After selecting the **Edit** option, a modal window will appear, displaying the connection details. This window allows you to modify any specific connection details. 
+**Step 2:** After selecting the **Edit** option, a modal window will appear, displaying the connection details. This window allows you to modify any specific connection details. 
 
 ![connection-details](../assets/datastore-settings/connection-details-light-4.png#only-light)
 ![connection-details](../assets/datastore-settings/connection-details-dark-4.png#only-dark)
@@ -45,7 +45,7 @@ The **Edit Datastore** setting allows users to modify the connection details of 
 
 If the credentials and provided connection details are verified, a success message will be displayed indicating that the connection has been verified.
 
-**Step 4**: Click on the **Save** button. 
+**Step 4:** Click on the **Save** button. 
 
 ![save-datastore](../assets/datastore-settings/save-datastore-light-5.png#only-light)
 ![save-datastore](../assets/datastore-settings/save-datastore-dark-5.png#only-dark)
@@ -56,7 +56,7 @@ An enrichment datastore is a database used to enhance your existing data by addi
 
 You have the option to link an enrichment datastore to your existing source datastore. However, some datastores cannot be linked as enrichment datastores. For example, Oracle, Athena, and Timescale cannot be used for this purpose.
 
-**Step 1**: Click on the **Enrichment** from the dropdown list.
+**Step 1:** Click on the **Enrichment** from the drop-down list.
 
 ![enrichment](../assets/datastore-settings/enrichment-light-6.png#only-light)
 ![enrichment](../assets/datastore-settings/enrichment-dark-6.png#only-dark)
@@ -79,7 +79,7 @@ A modal window-**Link Enrichment Datastore** will appear, providing you with two
 
 If the toggle for **Add new connection** is turned on, then this will prompt you to link a new enrichment datastore from scratch without using existing connection details.
 
-**Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
+**Step 1:** Click on the caret button and select **Add Enrichment Datastore**.
 
 ![caret](../assets/datastore-settings/caret-light-8.png#only-light)
 ![caret](../assets/datastore-settings/caret-dark-8.png#only-dark)
@@ -99,7 +99,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 6. | Source Record Limit| Sets the maximum number of records written to the enrichment for each detected anomaly. The value must be between 1 and 1,000,000,000.|
 | 7.| Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data).|
 
-**Step 2**: Add connection details for your selected **enrichment datastore** connector.
+**Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
 !!! note
     Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking BigQuery as a new enrichment datastore.
@@ -107,33 +107,30 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 ![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-light-9.png#only-light)
 ![select-new-enrichment](../assets/datastore-settings/select-new-enrichment-dark-9.png#only-dark)
 
-**Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
+**Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
 ![connector-creds](../assets/datastore-settings/connector-creds-light-10.png#only-light)
 ![connector-creds](../assets/datastore-settings/connector-creds-dark-10.png#only-dark)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
-**Step 4**: Click on the **Save** button.
+**Step 4:** Click on the **Save** button.
 
 ![save-enrichment](../assets/datastore-settings/save-enrichment-light-11.png#only-light)
 ![save-enrichment](../assets/datastore-settings/save-enrichment-dark-11.png#only-dark)
 
-**Step 5**: After clicking on the **Save** button a modal window will appear  **Your Datastore has been successfully updated**
-
-![success](../assets/datastore-settings/success-light-12.png#only-light)
-![success](../assets/datastore-settings/success-dark-12.png#only-dark)
+After clicking the **Save** button, a success notification will appear confirming the update.
 
 ### Option II: Link Existing Connection
 
-If the **Use an existing enrichment datastore** option is selected from the dropdown menu, you will be prompted to link the enrichment datastore using existing connection details.
+If the **Use an existing enrichment datastore** option is selected from the drop-down menu, you will be prompted to link the enrichment datastore using existing connection details.
 
-**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+**Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
 ![caret](../assets/datastore-settings/caret2-light.png#only-light)
 ![caret](../assets/datastore-settings/caret2-dark.png#only-dark)
 
-**Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 ![modal](../assets/datastore-settings/modal-light.png#only-light)
 ![modal](../assets/datastore-settings/modal-dark.png#only-dark)
@@ -146,15 +143,43 @@ If the **Use an existing enrichment datastore** option is selected from the drop
 | 4. | Source Record Limit| Sets the maximum number of records written to the enrichment for each detected anomaly. The value must be between 1 and 1,000,000,000.|
 | 5.| Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data).|
 
-**Step 3**: View and check the connection details of the enrichment and click on the **Save** button.
+**Step 3:** View and check the connection details of the enrichment and click on the **Save** button.
 
 ![save](../assets/datastore-settings/save-light-15.png#only-light)
 ![save](../assets/datastore-settings/save-dark-15.png#only-dark)
 
-**Step 4**: After clicking on the **Save** button a modal window will appear **Your Datastore has been successfully updated**
+After clicking the **Save** button, a success notification will appear confirming the update.
 
-![success](../assets/datastore-settings/success-light-12.png#only-light)
-![success](../assets/datastore-settings/success-dark-12.png#only-dark)
+### Unlink Enrichment Datastore
+
+If an enrichment datastore is already linked to a source datastore, you can remove the connection using the Unlink Enrichment Datastore option. This action stops the enrichment process and ensures that no further data is enhanced using the unlinked datastore.
+
+**Step 1:** Click on the **Enrichment** from the drop-down list.
+
+![enrichment-option](../assets/datastore-settings/enrichment-option-light.png#only-light)
+![enrichment-option](../assets/datastore-settings/enrichment-option-dark.png#only-dark)
+
+A modal window titled **Enrichment Datastore Settings** will appear, displaying configuration options for the linked enrichment datastore.
+
+![enrichment-settings](../assets/datastore-settings/enrichment-settings-light.png#only-light)
+![enrichment-settings](../assets/datastore-settings/enrichment-settings-dark.png#only-dark)
+
+**Step 2:** Click the **Unlink Enrichment Datastore** option ( represented by **unlink** icon ) located on the right side of the Details section to remove the linked enrichment datastore.
+
+![unlink-option](../assets/datastore-settings/unlink-option-light.png#only-light)
+![unlink-option](../assets/datastore-settings/unlink-option-dark.png#only-dark)
+
+A modal window titled **Unlink Enrichment Datastore** will appear.
+
+![unlink-window](../assets/datastore-settings/unlink-window-light.png#only-light)
+![unlink-window](../assets/datastore-settings/unlink-window-dark.png#only-dark)
+
+**Step 3:** Click the **Unlink** button to remove the enrichment datastore connection.
+
+![unlink](../assets/datastore-settings/unlink-light.png#only-light)
+![unlink](../assets/datastore-settings/unlink-dark.png#only-dark)
+
+After clicking the **Unlink** button, a success message confirms that the datastore has been updated successfully.
 
 ## Quality Score Settings
 
@@ -180,27 +205,27 @@ Each field receives a total quality score based on eight key factors each evalua
 
 The **Quality Score Settings** allow users to tailor the impact of each quality factor on the total score by adjusting their weights allowing the scoring system to align with your organization’s data governance priorities.
 
-**Step 1**: Click on the **Score** option in the settings icon.
+**Step 1:** Click on the **Score** option in the settings icon.
 
 ![score](../assets/datastore-settings/score-light-17.png#only-light)
 ![score](../assets/datastore-settings/score-dark-17.png#only-dark)
 
-**Step 2**: A modal window "**Quality Score Settings**" will appear. 
+**Step 2:** A modal window "**Quality Score Settings**" will appear. 
 
 ![score-settings](../assets/datastore-settings/score-settings-light-18.png#only-light)
 ![score-settings](../assets/datastore-settings/score-settings-dark-18.png#only-dark)
 
-**Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the most relevant data quality insights.
+**Step 3:** The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days but can be customized to fit your operational needs ensuring the scores reflect the most relevant data quality insights.
 
 ![decay-period](../assets/datastore-settings/decay-period-light-19.png#only-light)
 ![decay-period](../assets/datastore-settings/decay-period-dark-19.png#only-dark)
 
-**Step 4**: Adjust the **Factor Weights** using the sliding bar. The factor weights determine the importance of different data quality aspects. 
+**Step 4:** Adjust the **Factor Weights** using the sliding bar. The factor weights determine the importance of different data quality aspects. 
 
 ![factor-weights](../assets/datastore-settings/factor-weights-light-20.png#only-light)
 ![factor-weights](../assets/datastore-settings/factor-weights-dark-20.png#only-dark)
 
-**Step 5**: Click on the **Save** button to save the quality score settings.
+**Step 5:** Click on the **Save** button to save the quality score settings.
 
 ![score-save](../assets/datastore-settings/score-save-light-21.png#only-light)
 ![score-save](../assets/datastore-settings/score-save-dark-21.png#only-dark)
@@ -209,24 +234,24 @@ The **Quality Score Settings** allow users to tailor the impact of each quality 
 
 The **Delete Datastore** action permanently removes a datastore and all associated profiles, checks, and anomalies. This action cannot be undone and requires confirmation by typing the datastore name before proceeding.
 
-**Step 1**: Click on the **Delete** option in the settings icon.
+**Step 1:** Click on the **Delete** option in the settings icon.
 
 ![delete](../assets/datastore-settings/delete-light-22.png#only-light)
 ![delete](../assets/datastore-settings/delete-dark-22.png#only-dark)
 
-**Step 2**: A modal window **Delete Datastore** will appear.
+**Step 2:** A modal window **Delete Datastore** will appear.
 
 ![delete-datastore](../assets/datastore-settings/delete-datastore-light-23.png#only-light)
 ![delete-datastore](../assets/datastore-settings/delete-datastore-dark-23.png#only-dark)
 
-**Step 3**: Enter the **Name of the datastore** in the given field (confirmation check) and then click on the **I’M SURE, DELETE THIS DATASTORE** button to delete the datastore.
+**Step 3:** Enter the **Name of the datastore** in the given field (confirmation check) and then click on the **I’M SURE, DELETE THIS DATASTORE** button to delete the datastore.
 
 ![confirm-delete](../assets/datastore-settings/confirm-delete-light-24.png#only-light)
 ![confirm-delete](../assets/datastore-settings/confirm-delete-dark-24.png#only-dark)
 
 ## View Team
 
-**Step 1**: Select the datastore from the side menu to view the respective datastore team.
+**Step 1:** Select the datastore from the side menu to view the respective datastore team.
 
 ![add-datastore](../assets/datastore-settings/add-datastore-light-1.png#only-light)
 ![add-datastore](../assets/datastore-settings/add-datastore-dark-1.png#only-dark)
@@ -240,22 +265,16 @@ In the **Details Panel** of the selected datastore, the **"Assigned Teams"** sec
 
 Marking a datastore as a favorite allows you to quickly access important data sources. This feature helps you prioritize and manage the datastores you frequently use, making data management more efficient.
 
-**Step 1**: Click on the bookmark icon to mark the Datastores as a favorite.
+**Step 1:** Click on the bookmark icon to mark the datastore as a favorite.
 
 ![mark-favorite](../assets/datastore-settings/mark-favorite-light-24.png#only-light)
 ![mark-favorite](../assets/datastore-settings/mark-favorite-dark-24.png#only-dark)
 
-After Clicking on the bookmark icon your datastore is successfully marked as a favorite and a success flash message will appear stating **“The Datastore has been favorited”**.
+After clicking the bookmark icon, the datastore is marked as a favorite, and a success message will appear confirming the action.
 
-![msg](../assets/datastore-settings/msg-light-25.png#only-light)
-![msg](../assets/datastore-settings/msg-dark-25.png#only-dark)
-
-**Step 2**: To unmark a datastore, simply click on the bookmark icon of the marked datastore.
+**Step 2:** To unmark a datastore, simply click on the bookmark icon of the marked datastore.
 
 ![unmark-favorite](../assets/datastore-settings/unmark-fav-light-26.png#only-light)
 ![unmark-favorite](../assets/datastore-settings/unmark-fav-dark-26.png#only-dark)
 
-This will remove it from your favorites and a success flash message will appear stating **“The Datastore has been unfavorited”**.
-
-![datastore-unfavorited](../assets/datastore-settings/datastore-unfavorited-light.png#only-light)
-![datastore-unfavorited](../assets/datastore-settings/datastore-unfavorited-dark.png#only-dark)
+This will remove the datastore from your favorites, and a success notification will appear confirming the change.
