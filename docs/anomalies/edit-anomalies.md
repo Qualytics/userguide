@@ -17,7 +17,7 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 
 ![vertical-edit](../assets/datastores/edit-anomalies/vertical-edit.png)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Edit"** from the dropdown menu to edit the selected anomalies.
+**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Edit"** from the drop-down menu to edit the selected anomalies.
 
 ![vertical-edit-options](../assets/datastores/edit-anomalies/vertical-edit-options.png)
 
