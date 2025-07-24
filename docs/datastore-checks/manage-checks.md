@@ -41,10 +41,7 @@ For Demonstration purposes, we have selected the **"Between"** check.
 ![draft](../assets/datastore-checks/manage-checks/draft-light-19.png#only-light)
 ![draft](../assets/datastore-checks/manage-checks/draft-dark-19.png#only-dark)
 
-**Step 3:** After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success flash message will appear stating, **"The checks have been successfully updated."**
-
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-light-20.png#only-light)
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-dark-20.png#only-dark)
+After clicking **Draft**, the selected item will move to the draft state, and a success message will appear on the screen.
 
 Alternatively, you can move an active check to the draft state by clicking the **vertical ellipsis (⋮)** next to the check and select **“Draft”** from the drop-down menu.
 
@@ -75,10 +72,7 @@ A confirmation modal window titled **Bulk Update Checks to Draft** will appear, 
 ![update](../assets/datastore-checks/manage-checks/update-light-24.png#only-light)
 ![update](../assets/datastore-checks/manage-checks/update-dark-24.png#only-dark)
 
-After clicking the **"Update"** button, your selected checks will be moved to draft, and a success flash message will appear stating, **"The checks have been successfully updated."**
-
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-light-25.png#only-light)
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-dark-25.png#only-dark)
+After clicking the **Update** button, your selected checks will be moved to draft, and a success will appear on the screen.
 
 ### Activate Draft Check
 
@@ -103,10 +97,7 @@ A modal window will appear with the check details. If you want to make any chang
 ![activate](../assets/datastore-checks/manage-checks/activate-light-28.png#only-light)
 ![activate](../assets/datastore-checks/manage-checks/activate-dark-28.png#only-dark)
 
-**Step 3:** After clicking on the activate button, your check has been successfully moved to the active checks and a success flash message will appear stating **"Check successfully updated".**
-
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-light-29.png#only-light)
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-dark-29.png#only-dark)
+After clicking on the **Activate** button, your check has been successfully moved to the active checks and a success message will appear on the screen.
 
 Alternatively, you can activate a draft check by clicking the **vertical ellipsis (⋮)** next to the draft check and select **"Activate"** from the drop-down menu.
 
@@ -140,10 +131,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-light-97.png#only-light)
 ![modal-window](../assets/datastore-checks/manage-checks/modal-window-dark-97.png#only-dark)
 
-After clicking on the activate button, your draft checks will be activated and a success flash message will appear stating **“The checks have been successfully updated”.**
-
-![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-98.png#only-light)
-![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-98.png#only-dark)
+After clicking on the **Activate** button, your draft checks will be activated and a success message will appear on the screen.
 
 ### Set Check as Archived 
 
@@ -176,10 +164,7 @@ For Demonstration purposes, we have selected the **"Metric"** check.
 ![archive](../assets/datastore-checks/manage-checks/archive-light-32.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-32.png#only-dark)
 
-**Step 4:** After clicking on the **Archive** button, your check is moved to the archive and a success flash message will appear saying **"The check has been successfully archived".**
-
-![archive-success](../assets/datastore-checks/manage-checks/archive-success-light-33.png#only-light)
-![archive-success](../assets/datastore-checks/manage-checks/archive-success-dark-33.png#only-dark)
+After clicking on the **Archive** button, your check is moved to the archive and a success message will appear on the screen.
 
 ##### 2. Archive from Action Menu
 
@@ -209,10 +194,7 @@ For Demonstration purposes, we have selected the **"Between"** check.
 ![archive](../assets/datastore-checks/manage-checks/archive-light-37.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-37.png#only-dark)
 
-**Step 5:** After clicking on the **Archive** button, your check is moved to the archive and a success flash message will appear saying **"The check has been successfully archived".**
-
-![success-archive](../assets/datastore-checks/manage-checks/success-archive-light-38.png#only-light)
-![success-archive](../assets/datastore-checks/manage-checks/success-archive-dark-38.png#only-dark)
+After clicking on the **Archive** button, your check is moved to the archive and a success message will appear on the screen.
 
 #### Method II: Archive Checks in Bulk
 
@@ -246,15 +228,12 @@ A modal window will appear, providing you with the following archive options:
 ![archive-check](../assets/datastore-checks/manage-checks/archive-check-light-42.png#only-light)
 ![archive-check](../assets/datastore-checks/manage-checks/archive-check-dark-42.png#only-dark)
 
-**Step 3:**  Once you've made your selections, click the **"Archive"** button to confirm and archive the checks.  
+**Step 3:** Once you've made your selections, click the **"Archive"** button to confirm and archive the checks.  
 
 ![archive](../assets/datastore-checks/manage-checks/archive-light-43.png#only-light)
 ![archive](../assets/datastore-checks/manage-checks/archive-dark-43.png#only-dark)
 
-**Step 4:** After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be archived successfully and a success flash message will appear stating, **"The checks have been successfully archived."**
-
-![success-archive](../assets/datastore-checks/manage-checks/success-archive-light-44.png#only-light)
-![success-archive](../assets/datastore-checks/manage-checks/success-archive-dark-44.png#only-dark)
+After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be archived successfully and a success message will appear on the screen.
 
 ### Activate Archived Checks
 
@@ -274,10 +253,7 @@ For Demonstration purposes, we have selected the **"Metric"** check.
 ![activate-btn](../assets/datastore-checks/manage-checks/activate-btn-light.png#only-light)
 ![activate-btn](../assets/datastore-checks/manage-checks/activate-btn-dark.png#only-dark)
 
-**Step 3:** After clicking on the activate button, your check has been successfully moved to the active checks and a success flash message will appear stating **"The check has been successfully updated."**
-
-![success-activate](../assets/datastore-checks/manage-checks/success-activate-light.png#only-light)
-![success-activate](../assets/datastore-checks/manage-checks/success-activate-dark.png#only-dark)
+**Step 3:** After clicking on the **Activate** button, your check has been successfully moved to the active checks and a success message will appear on the screen.
 
 #### Method II: Activate Archived Checks in Bulk
 
@@ -301,10 +277,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![activate-button](../assets/datastore-checks/manage-checks/activate-button-light.png#only-light)
 ![activate-button](../assets/datastore-checks/manage-checks/activate-button-dark.png#only-dark)
 
-After clicking on the activate button, your archived checks will be activated and a success flash message will appear stating **“The checks have been successfully updated.”**
-
-![successfully-activate](../assets/datastore-checks/manage-checks/successfully-activate-light.png#only-light)
-![successfully-activate](../assets/datastore-checks/manage-checks/successfully-activate-dark.png#only-dark)
+After clicking on the **Activate** button, your archived checks will be activated and a success message will appear on the screen.
 
 ### Draft Archived Checks
 
@@ -319,10 +292,7 @@ For Demonstration purposes, we have selected the **"Not Null"** check.
 ![draft-archive](../assets/datastore-checks/manage-checks/draft-archive-light.png#only-light)
 ![draft-archive](../assets/datastore-checks/manage-checks/draft-archive-dark.png#only-dark)
 
-**Step 2:** After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success flash message will appear stating, **"The check has been successfully updated."**
-
-![success-draft](../assets/datastore-checks/manage-checks/success-draft-light.png#only-light)
-![success-draft](../assets/datastore-checks/manage-checks/success-draft-dark.png#only-dark)
+After clicking on **"Draft"**, the check will be successfully moved to the draft state, and a success message will appear on the screen.
 
 #### Method II: Draft Archived Checks in Bulk
 
@@ -346,10 +316,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![draft-button](../assets/datastore-checks/manage-checks/draft-button-light.png#only-light)
 ![draft-button](../assets/datastore-checks/manage-checks/draft-button-dark.png#only-dark)
 
-After clicking on the update button, your archived checks will be moved to draft and a success flash message will appear stating **“The checks have been successfully updated.”**
-
-![successfully-drafted](../assets/datastore-checks/manage-checks/successfully-drafted-light.png#only-light)
-![successfully-drafted](../assets/datastore-checks/manage-checks/successfully-drafted-dark.png#only-dark)
+After clicking on the **Update** button, your archived checks will be moved to draft and a success message will appear on the screen.
 
 ### Restore Archived Checks
 
@@ -385,10 +352,7 @@ To restore the check as a draft, click on the arrow icon next to the **Restore**
 ![restore-as-draft](../assets/datastore-checks/manage-checks/restore-as-draft-light-49.png#only-light)
 ![restore-as-draft](../assets/datastore-checks/manage-checks/restore-as-draft-dark-49.png#only-dark)
 
-After clicking the **Restore** button, the check will be successfully restored as either an active or draft check, depending on your selection. A success flash message will appear confirming, **"Check successfully updated."**
-
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-light-50.png#only-light)
-![success-updated](../assets/datastore-checks/manage-checks/success-updated-dark-50.png#only-dark)
+After clicking the **Restore** button, the check will be successfully restored as either an active or draft check, depending on your selection and a success message will appear on the screen.
 
 ### Edit Check
 
@@ -436,10 +400,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 ![update-btn](../assets/datastore-checks/manage-checks/update-btn-light-57.png#only-light)
 ![update-btn](../assets/datastore-checks/manage-checks/update-btn-dark-57.png#only-dark)
 
-After clicking on the Update button, your check is successfully updated and a success flash message will appear stating **"The check has been successfully updated".**
-
-![update-msg](../assets/datastore-checks/manage-checks/success-draft-light.png#only-light)
-![update-msg](../assets/datastore-checks/manage-checks/success-draft-dark.png#only-dark)
+After clicking on the **Update** button, your check is successfully updated and a success message will appear on the screen.
 
 #### Method II. Edit Checks in Bulk
 
@@ -478,10 +439,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-light-64.png#only-light)
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-dark-64.png#only-dark)
 
-After clicking the **"Save"** button, your selected checks will be updated with the new changes. A success flash message will appear stating, **"The checks have been successfully updated."**
-
-![update-msg](../assets/datastore-checks/manage-checks/update-msg-light-65.png#only-light)
-![update-msg](../assets/datastore-checks/manage-checks/update-msg-dark-65.png#only-dark)
+After clicking the **"Save"** button, your selected checks will be updated with the new changes and a success message will appear on the screen.
 
 ### Delete Checks
 
@@ -512,10 +470,7 @@ For Demonstration purposes, we have selected the **"Not Null"** check.
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-light-68.png#only-light)
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-dark-68.png#only-dark)
 
-**Step 4:** After clicking on the Delete button, your check is successfully deleted and a success flash message will appear saying **"The check has been successfully deleted."**
-
-![success-msg](../assets/datastore-checks/manage-checks/success-msg-light-69.png#only-light)
-![success-msg](../assets/datastore-checks/manage-checks/success-msg-dark-69.png#only-dark)
+After clicking on the **Delete** button, your check is successfully deleted and a success message will appear on the screen.
 
 #### Method II. Delete Checks in Bulk
 
@@ -541,10 +496,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-light-73.png#only-light)
 ![delete-btn](../assets/datastore-checks/manage-checks/delete-btn-dark-73.png#only-dark)
 
-After clicking on the "Delete" button, your selected checks will be permanently deleted, and a success flash message will appear stating, **"The checks have been successfully deleted."**  
-   
-![delete-msg](../assets/datastore-checks/manage-checks/delete-msg-light-74.png#only-light)
-![delete-msg](../assets/datastore-checks/manage-checks/delete-msg-dark-74.png#only-dark)
+After clicking on the **Delete** button, your selected checks will be permanently deleted, and a success message will appear on the screen.mk
 
 ### Dry Run
 
@@ -638,10 +590,7 @@ Marking a check as a favorite allows you to quickly access and prioritize the ch
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-light-75.png#only-light)
 ![mark-fav](../assets/datastore-checks/manage-checks/mark-fav-dark-75.png#only-dark)
 
-After clicking on the bookmark icon, your check is successfully marked as a favorite and a success flash message will appear stating **"The check has been favorited."**
-
-![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-light-76.png#only-light)
-![fav-msg](../assets/datastore-checks/manage-checks/fav-msg-dark-76.png#only-dark)
+After clicking on the **Bookmark** icon, your check is successfully marked as a favorite and a success message will appear on the screen.
 
 To unmark a check, simply click on the bookmark icon of the marked check. This will remove it from your favorites.
 
@@ -718,10 +667,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-light-89.png#only-light)
 ![save-btn](../assets/datastore-checks/manage-checks/save-btn-dark-89.png#only-dark)
 
-After clicking on the **"Save"** button, your check is successfully created and a success flash message will appear stating **"Check successfully created".**
-
-![success-msgs](../assets/datastore-checks/manage-checks/success-msgs-light-90.png#only-light)
-![success-msgs](../assets/datastore-checks/manage-checks/success-msgs-dark-90.png#only-dark)
+After clicking on the **"Save"** button, your check is successfully created and a success message will appear on the screen.
 
 ## Create a Quality Check template
 
@@ -739,10 +685,7 @@ For Demonstration purposes, we have selected the **"Between"** check.
 ![template-btn](../assets/datastore-checks/manage-checks/template-btn-light-92.png#only-light)
 ![template-btn](../assets/datastore-checks/manage-checks/template-btn-dark-92.png#only-dark)
 
-After clicking the **"Template"** button, the check will be saved and created as a template in the library, and a success flash message will appear stating, **"The quality check template has been created successfully."** This allows you to reuse the template for future checks, streamlining the validation process.
-
-![quality-check](../assets/datastore-checks/manage-checks/quality-check-light-93.png#only-light)
-![quality-check](../assets/datastore-checks/manage-checks/quality-check-dark-93.png#only-dark)
+After clicking the **"Template"** button, the check will be saved and created as a template in the library, and a success message will appear on the screen. This allows you to reuse the template for future checks, streamlining the validation process.
 
 ## Filter and Sort
 
