@@ -2,7 +2,7 @@
 
 The Profile Operation is a comprehensive analysis conducted on every record within all available containers in a datastore. This process is aimed at understanding and improving data quality by generating metadata for each field within the collections of data (like tables or files).
 
-By gathering detailed statistical data and interacting with the Qualytics Inference Engine, the operation not only identifies and evaluates data quality but also suggests and refines checks to ensure ongoing data integrity. Executing Profile Operations periodically helps maintain up-to-date and accurate data quality checks based on the latest data.
+By gathering detailed statistical data and interacting with the Qualytics Inference Engine, the operation not only identifies and evaluates data quality but also suggests and refines checks to ensure ongoing data integrity. Executing profile operations periodically helps maintain up-to-date and accurate data quality checks based on the latest data.
 
 This guide explains how to configure the profile operation with available functionalities such as tables, tags, and schedule options.
 
@@ -46,7 +46,7 @@ The inferred data quality checks are rigorously tested against the actual source
 ![run-profile](../assets/profile-operations/run-profile-dark.png#only-dark)
   
 !!! note
-    You can run Profile Operation anytime to update the inferred data quality checks, automatically based on new data in the Datastore. It is recommended to schedule the profile operations periodically to update inferred rules. More details are discussed in the **Schedule** section below.
+    You can run Profile Operation anytime to update the inferred data quality checks, automatically based on new data in the datastore. It is recommended to schedule the profile operations periodically to update inferred rules. More details are discussed in the **Schedule** section below.
 
 **Step 2**: Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be profiled.
 
@@ -97,10 +97,18 @@ This setting allows users to specify a minimum incremental identifier value to s
 
 ### Record Limit 
 
-Define the maximum number of records to be profiled: This slider allows users to set a limit on the number of records to be profiled per table. The range can be adjusted from 1 million to all available records. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
+Define the number of records to be profiled per table: This feature allows users to manually enter a custom record limit value using a text field in the profile operation. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
 
 ![record-limit](../assets/profile-operations/record-limit-light.png#only-light)
 ![record-limit](../assets/profile-operations/record-limit-dark.png#only-dark)
+
+You can also use a drop-down menu to quickly select from commonly used limits such as 1M, 10M, 100M, and All.
+
+![record-dropdown](../assets/profile-operations/record-dropdown-light.png#only-light)
+![record-dropdown](../assets/profile-operations/record-dropdown-dark.png#only-dark)
+
+!!! note
+    The number of records must be between **1** and **1,000,000,000**.
 
 **Step 5:** After making the relevant selections, click on the **Next** button to configure the **Inference Settings**. 
 
@@ -125,7 +133,7 @@ By default, the Inference Threshold is set to **2**, which provides a comprehens
 
 #### Levels of Check Inference
 
-The Inference Threshold ranges from **0** to **5**, with each level including progressively more complex and comprehensive checks. Below is an explanation of each level:               
+The Inference Threshold ranges from **0** to **5**, with each level including progressively more complex and comprehensive checks. Below is an explanation of each level:
 
 !!! note 
     Each level includes all the checks from the previous levels and adds new checks specific to that level. For example, at Level 1, there are five basic checks. At Level 2, you get those five checks plus additional ones for Level 2. By the time you reach Level 5, it covers all the checks from Levels 1 to 4 and adds its own new checks for complete review. 
@@ -240,11 +248,11 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 **Level 5: Shape Checks**
 
-The most comprehensive level, includes all previous checks plus checks that validate the shape of certain distribution patterns that can be identified in your data. Included Checks:
+The most comprehensive level includes all previous checks plus checks that validate the shape of certain distribution patterns that can be identified in your data. Included Checks:
 
 - **Shape Checks:** Checks that define an expectation for some percentage of your data less than 100%.  The property “coverage” holds the percentage of your data for which the expressed check should be true.
 
-**Use Case:** Ideal for scenarios where each incremental set of scanned data should exhibit the same distributions of values as the training set.  For example, a transactions table is configured for a weekly incremental scan after each week’s data is loaded.  A shape check could define that 80% of all transactions are expected to be performed using “cash” or “credit” 
+**Use Case:** Ideal for scenarios where each incremental set of scanned data should exhibit the same distributions of values as the training set.  For example, a transactions table is configured for a weekly incremental scan after each week’s data is loaded. A shape check could define that 80% of all transactions are expected to be performed using “cash” or “credit”.
 
 This table shows the inferred checks that the Analytics Engine can generate based on the user's data. At Level 5, three checks are created.
 
@@ -388,17 +396,17 @@ This status indicates that the profile operation is still running at the moment 
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan)                         |
-| 2.     | Timestamp                        | Timestamp when the operation was started                                                              |
-| 3.     | Progress Bar                     | The progress of the operation                                                                         |
-| 4.     | Triggered By                     | The author who triggered the operation                                                                |
-| 5.     | Schedule                         | Whether the operation was scheduled or not                                                            |
-| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity |
-| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation                                           |
-| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation                             |
-| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering                 |
-| 10.    | Results                          | Provides immediate insights into the profile operation conducted                                      |
-| 11.    | Abort                            | The "Abort" button enables you to stop the ongoing profile operation                                  |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
+| 3.     | Progress Bar                     | The progress of the operation.                                                                         |
+| 4.     | Triggered By                     | The author who triggered the operation.                                                                |
+| 5.     | Schedule                         | Whether the operation was scheduled or not.                                                            |
+| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity. |
+| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation.                                           |
+| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation.                             |
+| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering.                 |
+| 10.    | Results                          | Provides immediate insights into the profile operation conducted.                                      |
+| 11.    | Abort                            | The "Abort" button enables you to stop the ongoing profile operation.                                  |
 | 12.    |Summary                          | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that have been profiled so far. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**:  This represents the total number of records that were included in the profiling process. </li><li> **Field Profiles Updates**:  This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**:  This indicates the number of inferred checks that were synchronized based on the profile operation. </li></li> </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
 ![profile-running](../assets/profile-operations/profile-running-light.png#only-light)
@@ -410,19 +418,19 @@ This status indicates that the profile operation was manually stopped before it 
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan)                         |
-| 2.     | Timestamp                        | Timestamp when the operation was started                                                              |
-| 3.     | Progress Bar                     | The progress of the operation                                                                         |
-| 4.     | Aborted By                     | The author who Aborted the operation                                                                |
-| 5.     | Schedule                         | Whether the operation was scheduled or not                                                            |
-| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity |
-| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation                                           |
-| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation                             |
-| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering                 |
-| 10.    | Results                          | Provides immediate insights into the profile operation conducted                                      |
-| 11.    | Resume                           | Provides an option to continue the profile operation from where it left off                            |
-| 12.    | Rerun                            | Allows you to start a new profile operation using the same settings as the aborted scan               |
-| 13.    | Delete                           | Removes the record of the aborted profile operation from the system, permanently deleting results      |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
+| 3.     | Progress Bar                     | The progress of the operation.                                                                         |
+| 4.     | Aborted By                     | The author who Aborted the operation.                                                                |
+| 5.     | Schedule                         | Whether the operation was scheduled or not.                                                            |
+| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity. |
+| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation.                                           |
+| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation.                             |
+| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering.                 |
+| 10.    | Results                          | Provides immediate insights into the profile operation conducted.                                      |
+| 11.    | Resume                           | Provides an option to continue the profile operation from where it left off.                            |
+| 12.    | Rerun                            | Allows you to start a new profile operation using the same settings as the aborted scan.               |
+| 13.    | Delete                           | Removes the record of the aborted profile operation from the system, permanently deleting results.      |
 | 14.  |   Summary              | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></li> </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
 ![profile-aborted](../assets/profile-operations/profile-aborted-light.png#only-light)
@@ -434,19 +442,19 @@ This status signals that the profile operation encountered some issues and displ
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan)                         |
-| 2.     | Timestamp                        | Timestamp when the operation was started                                                              |
-| 3.     | Progress Bar                     | The progress of the operation                                                                         |
-| 4.     | Triggered By                     | The author who triggered the operation                                                                |
-| 5.     | Schedule                         | Whether the operation was scheduled or not                                                            |
-| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity |
-| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation                                           |
-| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation                             |
-| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering                 |
-| 10.     | Result                | Provides immediate insights into the profile operation conducted                 |
-| 11.    | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan               |
-| 12.    | Delete                           | Removes the record of the profile operation, permanently deleting all results                         |
-| 13.     | Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation.</li><li>  **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></ul> |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
+| 3.     | Progress Bar                     | The progress of the operation.                                                                         |
+| 4.     | Triggered By                     | The author who triggered the operation.                                                               |
+| 5.     | Schedule                         | Whether the operation was scheduled or not.                                                            |
+| 6.     | Inference Threshold              | Indicates how much control you have over automatic data quality checks, adjustable based on complexity. |
+| 7.     | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation.                                           |
+| 8.     | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation.                             |
+| 9.     | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering.                 |
+| 10.     | Results                | Provides immediate insights into the profile operation conducted.                 |
+| 11.    | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan.               |
+| 12.    | Delete                           | Removes the record of the profile operation, permanently deleting all results.                         |
+| 13.     | Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation completed. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was completed. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation.</li><li>  **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></ul> |
 | 14.    |   Logs                    | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Profile Operation. |
 
 ![profile-warning](../assets/profile-operations/profile-warning-light.png#only-light)
@@ -458,18 +466,18 @@ This status confirms that the profile operation was completed successfully witho
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                                    |
 |---------|----------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| 1.      | Operation ID & Operation Type     | Unique identifier and type of operation performed (catalog, profile, or scan)                                         |
-| 2.      | Timestamp                        | Timestamp when the operation was started                                                                               |
-| 3.      | Progress Bar                     | The progress of the operation                                                                                            |
-| 4.      | Triggered By                     | The author who triggered the operation                                                                                 |
-| 5.      | Schedule                         | Whether the operation was scheduled or not                                                                             |
-| 6.      | Inference Threshold              | Indicates how much control you have over automatic data quality checks, allowing adjustments based on data complexity    |
-| 7.      | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation                                                            |
-| 8.      | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation                                              |
-| 9.      | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering                                   |
-| 10.     | Results                          | Provides immediate insights into the profile operation conducted                                                        |
-| 11.     | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan, useful for restarting after errors |
-| 12.     | Delete                           | Removes the record of the profile operation from the system, permanently deleting all results; this action cannot be undone |
+| 1.      | Operation ID & Operation Type     | Unique identifier and type of operation performed (catalog, profile, or scan).                                         |
+| 2.      | Timestamp                        | Timestamp when the operation was started.                                                                               |
+| 3.      | Progress Bar                     | The progress of the operation.                                                                                            |
+| 4.      | Triggered By                     | The author who triggered the operation.                                                                                 |
+| 5.      | Schedule                         | Whether the operation was scheduled or not.                                                                             |
+| 6.      | Inference Threshold              | Indicates how much control you have over automatic data quality checks, allowing adjustments based on data complexity.    |
+| 7.      | Checks Synchronized              | Indicates the count of Checks Synchronized in the operation.                                                            |
+| 8.      | Infer as Draft                   | Indicates whether Infer as Draft was enabled or disabled in the operation.                                              |
+| 9.      | Read Record Limit                | Defines the maximum number of records to be scanned per table after initial filtering.                                   |
+| 10.     | Results                          | Provides immediate insights into the profile operation conducted.                                                        |
+| 11.     | Rerun                            | Allows you to start a new profile operation using the same settings as the warning scan, useful for restarting after errors. |
+| 12.     | Delete                           | Removes the record of the profile operation from the system, permanently deleting all results; this action cannot be undone. |
 | 13. |   Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
 ![profile-success](../assets/profile-operations/profile-success-light.png#only-light)
@@ -532,7 +540,7 @@ Unwrap the container to view the underlying fields. The following details (metri
 
 | **No** | **Profile**                     | **Description**                                                                 |
 |-------|--------------------------------|---------------------------------------------------------------------------------|
-| 1     | Type Inferred                  | Indicates whether the type is declared by the source or inferred.               |
+| 1     | Declared Type                  | Indicates whether the type is declared by the source or inferred.               |
 | 2     | Distinct Values                | Count of distinct values observed in the dataset.                               |
 | 3     | Min Length                     | Shortest length of the observed string values or lowest value for numerics.     |
 | 4     | Max Length                     | Greatest length of the observed string values or highest value for numerics.    |
@@ -548,7 +556,9 @@ Unwrap the container to view the underlying fields. The following details (metri
 ![total-profile](../assets/profile-operations/totals-profile-light.png#only-light)
 ![total-profile](../assets/profile-operations/totals-profile-dark.png#only-dark)
 
-9. Histogram
+### Histogram
+
+Shows how the values in the field are spread out. Each bar represents how many values fall within a certain range, making it easy to spot trends and outliers.
 
 ![histogram](../assets/profile-operations/histogram-light.png#only-light)
 ![histogram](../assets/profile-operations/histogram-dark.png#only-dark)
@@ -557,7 +567,7 @@ Unwrap the container to view the underlying fields. The following details (metri
 
 This section provides payload examples for initiating and checking the running status of a profile operation. Replace the placeholder values with data specific to your setup.
 
-### Running a Profile operation
+### Running a Profile Operation
 
 To run a profile operation, use the API payload example below and replace the placeholder values with your specific values:
 
@@ -602,7 +612,7 @@ To run a profile operation, use the API payload example below and replace the pl
 }
 ```
 
-### Scheduling a Profile operation
+### Scheduling a Profile Operation
 
 Below is a sample payload for scheduling a profile operation. Please substitute the placeholder values with the appropriate data relevant to your setup.
 
