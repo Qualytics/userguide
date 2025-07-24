@@ -32,9 +32,7 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button](../assets/datastores/archive-anomalies/archive-button.png)
 
-**Step 5:** After clicking on the **Archive** button your anomaly is moved to the archive and a flash message will appear saying **“The Anomaly has been successfully archived”**.
-
-![anomaly-light](../assets/datastores/archive-anomalies/anomaly-light.png)
+After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
 
 ### 2. Archive via Action Menu
 
@@ -62,9 +60,7 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button-2](../assets/datastores/archive-anomalies/archive-button-2.png)
 
-**Step 5:** After clicking on the **Archive** button your anomaly is moved to the archive and a flash message will appear saying **“The Anomaly has been successfully archived”**.
-
-![archive-message](../assets/datastores/archive-anomalies/archive-message.png)
+After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
 
 ## Archive Anomalies in Bulk
 
@@ -98,6 +94,4 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button-2](../assets/datastores/archive-anomalies/archive-button-2.png)
 
-**Step 5:** After clicking on the **Archive** button your anomaly is moved to the archive and a flash message will appear saying **“The Anomalies have been successfully archived”**.
-
-![success-action](../assets/datastores/archive-anomalies/success-action.png)
+After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.

@@ -27,9 +27,7 @@ You can acknowledge individual anomalies either directly or through the action m
 
 ![acknowledge-option](../assets/datastores/acknowledge-anomalies/acknowledge-option.png)
 
-**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
-
-![acknowledge-msg](../assets/datastores/acknowledge-anomalies/acknowledge-msg.png)
+After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a confirmation message appears on the screen.
 
 **2. Acknowledge via Action Menu**
 
@@ -41,9 +39,7 @@ You can acknowledge individual anomalies either directly or through the action m
 
 ![vertical-acknowledge](../assets/datastores/acknowledge-anomalies/vertical-acknowledge.png)
 
-**Step 3:** After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a flash message will appear saying **“The Anomaly has been successfully acknowledged”**.
-
-![acknowledge-message](../assets/datastores/acknowledge-anomalies/acknowledge-message.png)
+After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a confirmation message appears on the screen.
 
 ## Acknowledge Anomalies in Bulk
 
@@ -71,6 +67,4 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![acknowledge-button](../assets/datastores/acknowledge-anomalies/acknowledge-button.png)
 
-**Step 4:** After clicking on the **Acknowledge** button your anomalies are successfully moved to the acknowledged state and a flash message will appear saying **“The Anomalies have been successfully acknowledged”.**
-
-![acknowledge-button-1](../assets/datastores/acknowledge-anomalies/acknowledge-button-1.png)
+After clicking on the **Acknowledge** button your anomalies are successfully moved to the acknowledged state and a confirmation message appears on the screen.

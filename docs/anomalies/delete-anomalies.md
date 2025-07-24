@@ -26,9 +26,7 @@ You can delete individual anomalies using one of two methods:
 
 ![delete-button-1](../assets/datastores/delete-anomalies/delete-button-1.png)
 
-**Step 4:** After clicking on the **Delete** button, your anomaly is successfully deleted and a success flash message will appear saying **“The Anomaly has been successfully deleted”**.
-
-![delete-successful-1](../assets/datastores/delete-anomalies/delete-successful-1.png)
+After clicking on the **Delete** button, your anomaly is successfully deleted and a confirmation message appears on the screen.
 
 #### 2. Delete via Action Menu
 
@@ -44,9 +42,7 @@ You can delete individual anomalies using one of two methods:
 
 ![delete-button-2](../assets/datastores/delete-anomalies/delete-button-2.png)
 
-**Step 4:** After clicking on the **Delete** button, your anomaly is successfully deleted and a success flash message will appear saying **“The Anomaly has been successfully deleted”**.
-
-![delete-successful-2](../assets/datastores/delete-anomalies/delete-successful-2.png)
+After clicking on the **Delete** button, your anomaly is successfully deleted and a confirmation message appears on the screen.
 
 ## Delete Anomalies in Bulk
 
@@ -68,6 +64,4 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 
 ![delete-button-3](../assets/datastores/delete-anomalies/delete-button-3.png)
 
-**Step 4:** After clicking on the **Delete** button, your anomalies are successfully deleted and a success flash message will appear saying **“The Anomalies have been successfully deleted”**.
-
-![delete-successful-3](../assets/datastores/delete-anomalies/delete-successful-3.png)
+After clicking on the **Delete** button, your anomalies are successfully deleted and a confirmation message appears on the screen.
