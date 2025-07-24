@@ -76,11 +76,11 @@ After clicking the **Update** button, your selected checks will be moved to draf
 
 ### Activate Draft Check
 
-You can activate the draft checks after you have worked on the check, made adjustments, and refined the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate specific checks or activate multiple checks in bulk.
+You can activate the draft checks after you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data. There are two ways to activate draft checks: you can activate specific checks or activate multiple checks in bulk.
  
 #### Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select Edit from the drop-down menu.
+**Step 1:** Navigate to the **Draft** check section, and click on the vertical ellipsis (⋮) next to the draft check you want to activate, and select **Edit** from the dropdown menu.
 
 For Demonstration purposes, we have selected the **"Metric"** check.
 
@@ -363,7 +363,7 @@ You can edit an existing check to modify its properties, such as the rule type, 
 
 #### Method I. Edit Specific Check
 
-**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop-down menu.
+**Step 1:** Click on the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check and select **Edit** from the drop down menu.
 
 For Demonstration purposes, we have selected the **"Between"** check.
 
@@ -642,7 +642,7 @@ Select the appropriate **Rule type** for the check from the drop-down menu.
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-light-84.png#only-light)
 ![rule-type](../assets/datastore-checks/manage-checks/rule-type-dark-84.png#only-dark)
 
-**Step 4:** Once you have selected the template or rule type, fill up the remaining [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as required. 
+**Step 4:** Once you have selected the template or rule type, fill in the remaining [check details](https://userguide.qualytics.io/checks/checks-template/#:~:text=Enter%20the%20following%20details%20to%20add%20the%20check%20template%3A) as required. 
 
 ![check-detail](../assets/datastore-checks/manage-checks/check-detail-light-85.png#only-light)
 ![check-detail](../assets/datastore-checks/manage-checks/check-detail-dark-85.png#only-dark)
