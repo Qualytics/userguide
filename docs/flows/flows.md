@@ -219,7 +219,7 @@ Users can execute specific operations when the trigger activates. They can choos
 ![catalog](.././assets/flows/catalog-light-25.png#only-light)
 ![catalog](.././assets/flows/catalog-dark-25.png#only-dark)
 
-A panel  **Catalog Settings** will appear on the right-hand side, This window allows you to configure the catalog operation.
+A panel **Catalog Settings** will appear on the right-hand side. This window allows you to configure the catalog operation.
 
 | No. |                 Field |                 Description |
 | :---- | :---- | :---- |
@@ -243,14 +243,14 @@ A panel  **Catalog Settings** will appear on the right-hand side, This window al
 ![profile](.././assets/flows/profile-light-28.png#only-light)
 ![profile](.././assets/flows/profile-dark-28.png#only-dark)
 
-A panel  **Profile Settings** will appear on the right-hand side. This window allows you to configure the Profile operation.
+A panel **Profile Settings** will appear on the right-hand side. This window allows you to configure the Profile operation.
 
 ![profile](.././assets/flows/profile-light-29.png#only-light)
 ![profile](.././assets/flows/profile-dark-29.png#only-dark)
 
 | No. |                    Field |    Description |
 | :---- | :---- | :---- |
-| 1. | Source Datastore | Select the source datastore to catalog. |
+| 1. | Source Datastore | Select the source datastore to profile. |
 | 2. | Select Tables | Allows users to select all tables, specific tables, or tables associated with selected tags to profile. |
 | 3. | Read Settings | Configure the starting point for profiling and set a maximum record limit per table for profiling. |
 | 4. | Inference Settings | Set the level of automated checks and decide whether inferred checks should be saved in draft mode. |
@@ -270,7 +270,7 @@ A panel  **Profile Settings** will appear on the right-hand side. This window al
 ![scan](.././assets/flows/scan-light-32.png#only-light)
 ![scan](.././assets/flows/scan-dark-32.png#only-dark)
 
-A panel  **Scan Settings** will appear on the right-hand side, This window allows you to configure the Scan operation.  
+A panel **Scan Settings** will appear on the right-hand side. This window allows you to configure the Scan operation.  
 
 ![scan](.././assets/flows/scan-light-33.png#only-light)
 ![scan](.././assets/flows/scan-dark-33.png#only-dark)
@@ -332,7 +332,7 @@ A panel  **Scan Settings** will appear on the right-hand side, This window allow
 ![export](.././assets/flows/export-light.png#only-light)
 ![export](.././assets/flows/export-dark.png#only-dark)
 
-A panel **Export Settings** will appear on the right-hand side, This window allows you to configure the Export settings.
+A panel **Export Settings** will appear on the right-hand side. This window allows you to configure the Export settings.
 
 ![panel](.././assets/flows/export-setting-light.png#only-light)
 ![panel](.././assets/flows/export-setting-dark.png#only-dark)
@@ -447,7 +447,7 @@ Adding email notifications allows users to receive timely updates or alerts dire
 ![notification](.././assets/flows/notification-light-49.png#only-light)
 ![notification](.././assets/flows/notification-dark-49.png#only-dark)
 
-A panel **Email Settings** will appear on the right-hand side, allowing you to add an email address and  configure the notification message.
+A panel **Email Settings** will appear on the right-hand side, allowing you to add email addresses, specify an email subject, and configure the notification message.
 
 ![notification](.././assets/flows/notification-light-50.png#only-light)
 ![notification](.././assets/flows/notification-dark-50.png#only-dark)
@@ -455,7 +455,8 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 | No. |                  Field  |                         Description |
 | :---- | :---- | :---- |
 | 1. | Email Address | Enter the email address where the notification should be sent.  |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
+| 2. | Email Subject | Enter the subject line of the notification email to help recipients identify its purpose.  |
+| 3. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
 ![notification](.././assets/flows/notification-light-51.png#only-light)
 ![notification](.././assets/flows/notification-dark-51.png#only-dark)
@@ -768,10 +769,7 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 ![publish](.././assets/flows/publish-light-82.png#only-light)
 ![publish](.././assets/flows/publish-dark-82.png#only-dark)
 
-**Step 4:** Once published, a success message will appear, stating, **"Your flow has been successfully added.**
-
-![success](.././assets/flows/success-light-83.png#only-light)
-![success](.././assets/flows/success-dark-83.png#only-dark)
+After clicking the **Publish** button, a success notification appears confirming that the flow has been successfully added.
 
 ## View Created Flows
 
@@ -789,7 +787,7 @@ Users can duplicate existing flows to simplify the reuse and modification of flo
 ![panel](.././assets/flows/exisiting-doc-light.png#only-light)
 ![panel](.././assets/flows/exisiting-doc-dark.png#only-dark)
 
-**Step 2**:  A new window will open displaying the flow's detailed configuration. Click the settings icon and select **Clone**.
+**Step 2**: A new window will open displaying the flow's detailed configuration. Click the settings icon and select **Clone**.
 
 ![panel](.././assets/flows/clone-light.png#only-light)
 ![panel](.././assets/flows/clone-dark.png#only-dark)
@@ -799,14 +797,11 @@ Users can duplicate existing flows to simplify the reuse and modification of flo
 ![panel](.././assets/flows/publishh-light.png#only-light)
 ![panel](.././assets/flows/publishh-dark.png#only-dark)
 
-Once published, a success message will appear: "**Your flow has been successfully added**".
-
-![panel](.././assets/flows/added-light.png#only-light)
-![panel](.././assets/flows/added-dark.png#only-dark)
+After clicking the **Publish** button, a success notification appears confirming that the flow has been successfully added.
 
 ## Sort Flows
 
-Qualytics allows you to sort your flows by **Created Date** and  **Name** to easily organize and prioritize them according to your needs.  
+Qualytics allows you to sort your flows by **Created Date** and **Name** to easily organize and prioritize them according to your needs.  
 
 ![sort](.././assets/flows/sort-light-85.png#only-light)
 ![sort](.././assets/flows/sort-dark-85.png#only-dark)
@@ -830,14 +825,11 @@ Users can start a manual flow from the vertical ellipsis menu for greater flexib
 ![manual-flow](.././assets/flows/verticall-light.png#only-light)
 ![manual-flow](.././assets/flows/verticall-dark.png#only-dark)
 
-After clicking the **Execute** button, a confirmation message will appear saying **The Flow has been successfully executed**.
-
-![sort](.././assets/flows/flow-msg-light.png#only-light)
-![sort](.././assets/flows/flow-msg-dark.png#only-dark)
+After clicking the **Execute** button, a success notification appears confirming that the flow has been successfully executed.
 
 ## Manage Flows
 
-**Manage Flow**  allows users to edit, delete, or deactivate flows. Users can update configurations, remove outdated flows, or pause triggers to maintain an organized and efficient workflow system.
+**Manage Flow**  allows users to edit, delete, deactivate or activate flows. Users can update configurations, remove outdated flows, or pause triggers to maintain an organized and efficient workflow system.
 
 ### Edit Flow
 
@@ -884,10 +876,7 @@ After clicking the delete button, a confirmation modal window **Delete Flow** wi
 ![delete](.././assets/flows/delete-light-93.png#only-light)
 ![delete](.././assets/flows/delete-dark-93.png#only-dark)
 
-After clicking on the **Delete** button, your flow will be deleted and a confirmation message will display saying **The flow has been successfully deleted**.  
-
-![delete](.././assets/flows/delete-light-94.png#only-light)
-![delete](.././assets/flows/delete-dark-94.png#only-dark)
+After clicking the **Delete** button, a success notification appears confirming the deletion.
 
 ### Deactivate Flow
 
@@ -898,20 +887,18 @@ User can deactivate a flow to pause its triggers by simply disabling it. This pr
 ![deactivate](.././assets/flows/deactivate-light-95.png#only-light)
 ![deactivate](.././assets/flows/deactivate-dark-95.png#only-dark)
 
-After clicking the deactivate button, a confirmation message will appear saying **The Flow has been successfully deactivated**.  
+After clicking the **Deactivate** button, a success notification appears confirming the deactivation.
 
-![deactivate](.././assets/flows/deactivate-light-96.png#only-light)
-![deactivate](.././assets/flows/deactivate-dark-96.png#only-dark)
+### Activate Flow
 
-**Step 2**: Click on the **Delete** button to delete the flow.
+Users can reactivate a flow that was previously deactivated. Once activated, the flow’s triggers become active again, allowing it to run automatically based on its defined conditions.
 
-![delete](.././assets/flows/delete-light-97.png#only-light)
-![delete](.././assets/flows/delete-dark-97.png#only-dark)
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to activate, then click on **Activate** from the dropdown menu.
 
-After clicking on the **Delete** button, your flow will be deleted and a confirmation message will display saying **The flow has been successfully deleted**.  
+![activate](.././assets/flows/activate-flow-light.png#only-light)
+![activate](.././assets/flows/activate-flow-dark.png#only-dark)
 
-![delete](.././assets/flows/delete-light-98.png#only-light)
-![delete](.././assets/flows/delete-dark-98.png#only-dark)
+After clicking the **Activate** button, a success notification appears confirming the activation.
 
 ## Clone an Action
 
@@ -1011,10 +998,7 @@ A confirmation modal window **Delete Flow Execution** will appear.
 ![delete](.././assets/flows/delete-light-107.png#only-light)
 ![delete](.././assets/flows/delete-dark-107.png#only-dark)
 
-After clicking on the **Delete** button, your flow execution will be deleted and a confirmation message will display saying **The flow execution has been successfully deleted**.  
-
-![delete](.././assets/flows/delete-light-108.png#only-light)
-![delete](.././assets/flows/delete-dark-108.png#only-dark)
+After clicking the **Delete** button, a success notification appears confirming the deletion.
 
 ## Filter and Sort
 
