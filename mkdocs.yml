@@ -63,6 +63,7 @@ nav:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Add Enrichment: enrichment/enrichment-datastore-creation.md
+      - Manage Enrichment: enrichment/manage-enrichment-datastore.md
       - enrichment-support/supported-enrichment-datastores.md
 
     - Containers:
