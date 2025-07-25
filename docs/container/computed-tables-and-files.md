@@ -81,10 +81,7 @@ Use Computed Files when you want to perform the following operation on your sele
 ![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-light.png#only-light)
 ![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-dark.png#only-dark)
 
-After clicking on the **Add** button, a flash message for successful operation will display.
-
-![created-file](../assets/datastores/add-computed-tables-files/created-file-light.png#only-light)
-![created-file](../assets/datastores/add-computed-tables-files/created-file-dark.png#only-dark)
+After clicking the **Add** button, a success notification appears on the screen showing the action was completed successfully.
 
 ## Computed Table Vs. Computed File
 
@@ -107,6 +104,3 @@ By hovering over the information icon, users can view the assigned teams for enh
 
 ![team](../assets/datastores/add-computed-tables-files/team-light.png#only-light)
 ![team](../assets/datastores/add-computed-tables-files/team-dark.png#only-dark)
-
-
-
