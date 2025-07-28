@@ -62,10 +62,11 @@ nav:
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
-      - Add Enrichment: enrichment/enrichment-datastore-creation.md
-      - Manage Enrichment: enrichment/manage-enrichment-datastore.md
-      - enrichment-support/supported-enrichment-datastores.md
-
+      - Manage Enrichment: 
+        - Enrichment Actions: enrichment/enrichment-actions.md
+        - Add Enrichment: enrichment/enrichment-datastore-creation.md
+        - Edit Enrichment: enrichment/edit-enrichment.md
+        - Delete Enrichment: enrichment/delete-enrichment.md
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
