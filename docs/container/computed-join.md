@@ -18,13 +18,11 @@ Use Computed Joins when you want to combine data from multiple containers, inclu
 
 **Step 1:** Log in to your Qualytics account and select the source datastore from the side menu that contains the container you want to include in the computed join.
 
-![select-datastore](../assets/container/computed-join/select-datastore-light.png#only-light)
-![select-datastore](../assets/container/computed-join/select-datastore-dark.png#only-dark)
+![select-datastore](../assets/container/computed-join/select-datastore-light.png)
 
 **Step 2:** After selecting your preferred source datastore, you will be taken to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed Joined** option from the drop-down menu.
 
-![select-computed-join](../assets/container/computed-join/select-computed-join-light.png#only-light)
-![select-computed-join](../assets/container/computed-join/select-computed-join-dark.png#only-dark)
+![select-computed-join](../assets/container/computed-join/select-computed-join-light.png)
 
 **Step 3:** A modal window will appear prompting you to enter the name for your computed join, select the join type, configure left and right references (datastore, container, fields), define the SELECT expression, and optionally add a filter clause.
 
@@ -37,12 +35,10 @@ Use Computed Joins when you want to combine data from multiple containers, inclu
 | 5.   | Select Expression (Required)   | Define the output fields using a valid SQL SELECT expression. Use this to control which columns appear in the computed join result. |
 | 6.   | Filter Clause (Optional)   | Add a WHERE clause to filter the joined data based on specific conditions. |
 
-![computed-join](../assets/container/computed-join/computed-join-light.png#only-light)
-![computed-join](../assets/container/computed-join/computed-join-dark.png#only-dark)
+![computed-join](../assets/container/computed-join/computed-join-light.png)
 
 **Step 4:** Click on the **Add** button to create the computed join using the configured join settings and selected source containers.
 
-![add-join](../assets/container/computed-join/add-join-light.png#only-light)
-![add-join](../assets/container/computed-join/add-join-dark.png#only-dark)
+![add-join](../assets/container/computed-join/add-join-light.png)
 
 After clicking the **Add** button, a success notification appears on the screen showing the action was completed successfully.

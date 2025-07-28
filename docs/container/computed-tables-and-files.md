@@ -19,13 +19,11 @@ Use Computed Tables when you want to perform the following operation on your sel
 
 **Step 1:** Log in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add computed table.
 
-![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png#only-light)
-![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-dark.png#only-dark)
+![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png)
 
 **Step 2:** After selecting your preferred source datastore, you will be redirected to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed Table** option from the dropdown menu.
 
-![computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-light.png#only-light)
-![computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-dark.png#only-dark)
+![computed-table](../assets/datastores/add-computed-tables-files/select-computed-table-light.png)
 
 **Step 3:** A modal window will appear prompting you to enter the name for your computed table, a valid SQL query that supports your selected source datastore, and optionally, additional metadata.
 
@@ -35,13 +33,11 @@ Use Computed Tables when you want to perform the following operation on your sel
 | 2.   | Query (Required)  | Write the valid SQL queries that support your selected source datastore. The query helps to perform joins and aggregations on your selected source datastore. |
 | 3.   | Additional Metadata (Optional)  | Add custom metadata to enhance the definition of your computed table. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
-![add-computed-table](../assets/datastores/add-computed-tables-files/add-computed-table-light.png#only-light)
-![add-computed-table](../assets/datastores/add-computed-tables-files/add-computed-table-dark.png#only-dark)
+![add-computed-table](../assets/datastores/add-computed-tables-files/add-computed-table-light.png)
 
 **Step 4:** Click on the **Add** button to add the computed table with your selected source datastore.
 
-![click-add](../assets/datastores/add-computed-tables-files/click-add-light.png#only-light)
-![click-add](../assets/datastores/add-computed-tables-files/click-add-dark.png#only-dark)
+![click-add](../assets/datastores/add-computed-tables-files/click-add-light.png)
 
 ## Computed Files
 
@@ -55,13 +51,11 @@ Use Computed Files when you want to perform the following operation on your sele
 
 **Step 1:** Log in to your Qualytics account and select a DFS-type source datastore from the side menu on which you would like to add computed file.
 
-![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png#only-light)
-![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-dark.png#only-dark)
+![select-datastore](../assets/datastores/add-computed-tables-files/select-datastore-light.png)
 
 **Step 2:** After clicking on your preferred source datastore, it will navigate you to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed File** option from the dropdown menu.
 
-![select-computed-file](../assets/datastores/add-computed-tables-files/select-computed-file-light.png#only-light)
-![select-computed-file](../assets/datastores/add-computed-tables-files/select-computed-file-dark.png#only-dark)
+![select-computed-file](../assets/datastores/add-computed-tables-files/select-computed-file-light.png)
 
 **Step 3:** A modal window will appear prompting you to enter the name for your computed file, select a source file pattern, choose the expression, and optionally define a filter clause and add additional metadata.
 
@@ -73,13 +67,11 @@ Use Computed Files when you want to perform the following operation on your sele
 | 4.   | Filter Clause (Optional)   | Add a WHERE clause to filter the data that meets certain conditions. |
 | 5.   | Additional Metadata (Optional)   | Enhance the computed file definition by setting custom metadata. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
-![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-light.png#only-light)
-![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-dark.png#only-dark)
+![add-compute-file](../assets/datastores/add-computed-tables-files/add-compute-file-light.png)
 
 **Step 4:** Click on the **Add** button to add the computed file with your selected source datastore.
 
-![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-light.png#only-light)
-![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-dark.png#only-dark)
+![click-add-file](../assets/datastores/add-computed-tables-files/click-add-file-light.png)
 
 After clicking the **Add** button, a success notification appears on the screen showing the action was completed successfully.
 
@@ -102,5 +94,4 @@ After clicking the **Add** button, a success notification appears on the screen 
 
 By hovering over the information icon, users can view the assigned teams for enhanced collaboration and data transparency.
 
-![team](../assets/datastores/add-computed-tables-files/team-light.png#only-light)
-![team](../assets/datastores/add-computed-tables-files/team-dark.png#only-dark)
+![team](../assets/datastores/add-computed-tables-files/team-light.png)
