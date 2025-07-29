@@ -13,8 +13,6 @@
 
 - Resolved an issue where scheduled operations were not executing reliably under high load.
 
-- Corrected number precision issues that were causing decimal truncation in Enrichment Preview.
-
 - Fixed last asserted timestamp accuracy for all check types.
 
 - General Fixes and Improvements.
