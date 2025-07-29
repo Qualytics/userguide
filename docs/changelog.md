@@ -6,7 +6,7 @@
 
 #### Feature Enhancements
 
-- Improved SQL autocomplete handling for complex field names
+- Improved Spark SQL autocomplete handling for complex field names
     - SQL autocomplete now automatically adds backticks to field names, preventing errors with special characters.
 
 #### General Fixes and Improvements
