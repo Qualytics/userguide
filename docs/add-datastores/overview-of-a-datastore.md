@@ -1,8 +1,8 @@
-# Data Source
+# Source Datastore
 
-Qualytics connects to data sources using "Datastores," a framework that enables organizations to:
+Qualytics connects to source datastore using "Datastores," a framework that enables organizations to:
 
-* Connect with Apache Spark-compatible data sources.
+* Connect with Apache Spark-compatible source datastores.
 
 * Support both traditional databases and modern object storage.
 
@@ -14,11 +14,11 @@ Qualytics connects to data sources using "Datastores," a framework that enables 
 
 * Manage data quality centrally across all sources.
 
-These data source integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
+These source datastore integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
 
 ## Understanding Datastores
 
-A Datastore in Qualytics represents any structured data source, such as:
+A Datastore in Qualytics represents any structured source datastore, such as:
 
 * Relational databases (RDBMS)
 
@@ -26,14 +26,14 @@ A Datastore in Qualytics represents any structured data source, such as:
 
 * Cloud storage platforms like AWS S3, Azure Blob Storage, or GCP Cloud Storage
 
-Qualytics integrates with these data sources through a layered architecture:
+Qualytics integrates with these source datastores through a layered architecture:
 
 ![datastore](../assets/datastores/what-is/datastore.png#only-light)
 ![datastore](../assets/datastores/what-is/datastore.png#only-dark)
 
-## Configuring Data Source
+## Configuring Source Datastores
 
-Configure your data sources in Qualytics by connecting them through a new datastore.
+Configure your source datastores in Qualytics by connecting them through a new datastore.
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
@@ -47,15 +47,15 @@ Configure your data sources in Qualytics by connecting them through a new datast
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
-| 1. | Name | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards) |
-| 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection |
-| 3. | Connector | Select **Any Data source** from the dropdown list. |
+| 1. | Name | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards). |
+| 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
+| 3. | Connector | Select **Any source datastore** from the dropdown list. |
 
 ## Available Datastores Connector
 
-Qualytics supports a range of datasources, including but not limited to:
+Qualytics supports a range of source datastores, including but not limited to:
 
-|          No. |                       Datasource |
+|          No. |                       Source Datastores |
 | :---- | :---- |
 |         1. |                         [Athena](../add-datastores/athena.md) |
 |         2. |                      [Databricks](../add-datastores/databricks.md) |
@@ -84,16 +84,16 @@ To connect to a datastore, users must provide the required connection details, s
 
 For demonstration purposes, we have selected the **Snowflake** connector.
 
-### Option I: Create a Datastore with a new Connection
+### Option I: Create a Datastore with a New Connection
 
-If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New Connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
 **Step 1**: Select any connector as we are selecting **Snowflake** connector from the dropdown list and add connection properties such as Secrets Management, host, port, username, and password, along with datastore properties like catalog, database, etc.
 
 ![detail](../assets/datastores/what-is/detail-light-3.png#only-light)
 ![detail](../assets/datastores/what-is/detail-dark-3.png#only-dark)
 
-For the next steps, refer to the "[**Add Source** **Datastore**](../add-datastores/snowflake.md#add-a-source-datastore)" section in the **Snowflake** Datastore documentation.
+For the next steps, refer to the "[**Add Source Datastore**](../add-datastores/snowflake.md#add-a-source-datastore)" section in the **Snowflake** Datastore documentation.
 
 Once a datastore is verified and created, it appears in your source datastores.
 
@@ -133,7 +133,7 @@ Once the datastores are connected, you can run operations on the selected datast
 ![home](../assets/datastores/what-is/home-light-5.png#only-light)
 ![home](../assets/datastores/what-is/home-dark-5.png#only-dark)
 
-**Step 2:** After click on datastore, select the "Activity" tab to view the ongoing operation.
+**Step 2:** After clicking on the datastore, select the "Activity" tab to view the ongoing operation.
 
 ![activity](../assets/datastores/what-is/activity-light-6.png#only-light)
 ![activity](../assets/datastores/what-is/activity-dark-6.png#only-dark)
