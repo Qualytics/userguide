@@ -2,6 +2,23 @@
 
 ## Release Notes
 
+### 2025.7.28 { id=2025.7.28 }
+
+#### Feature Enhancements
+
+- Improved SQL autocomplete handling for complex field names
+    - SQL autocomplete now automatically adds backticks to field names, preventing errors with special characters.
+
+#### General Fixes and Improvements
+
+- Resolved an issue where scheduled operations were not executing reliably under high load.
+
+- Corrected number precision issues that were causing decimal truncation in Enrichment Preview.
+
+- Fixed last asserted timestamp accuracy for all check types.
+
+- General Fixes and Improvements.
+
 ### 2025.7.23 { id=2025.7.23 }
 
 #### Feature Enhancements
