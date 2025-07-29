@@ -1,44 +1,112 @@
 # Computed Joined
 
-A Computed Joined is a virtual table in Qualytics that allows you to combine data from two different containers, which can belong to either JDBC or DFS source datastores. It supports multiple join types and enables you to bring together data from different sources, making it easier to analyze related information and generate more unified insights.
+A Computed Joined Container allows you to combine data from two containers, which can be from the same source datastore or different source datastores (e.g., a database table vs. a file system container). You can choose the join type (Inner, Left, Right, or Full Outer) and apply transformations, filters, and custom queries to the joined result.
+This feature is useful when you want to:
+
+* Merge information from multiple source datastores into a single dataset.
+
+* Perform cross-datastore analysis (e.g., JDBC tables with DFS files).
+
+* Apply Spark SQL transformations and filters on top of the joined data.
 
 Let's get started 🚀
 
-Use Computed Joins when you want to combine data from multiple containers, including those across different source datastores:
+## How It Works
 
-* Cross-Datastore Data Analysis: Join data between containers from different datastores to support advanced analytical use cases.
+The Add Computed Joined form consists of:
 
-* Multiple Join Types: Choose from Inner Join, Left Join, Right Join, and Full Outer Join to meet various data combination requirements.
-
-* Field Mapping and Prefixing: Define joins using intuitive left and right container selections, configure field mappings, and optionally apply prefixes to avoid naming conflicts.
-
-* Custom Query Enhancements: Add custom SELECT expressions and WHERE clauses to refine and filter the joined dataset.
-
-## Add Computed Joined
-
-**Step 1:** Log in to your Qualytics account and select the source datastore from the side menu that contains the container you want to include in the computed join.
-
-![select-datastore](../assets/container/computed-join/select-datastore-light.png)
-
-**Step 2:** After selecting your preferred source datastore, you will be taken to the source datastore's store operation page. From this page, click on the **Add** button and select the **Computed Joined** option from the drop-down menu.
-
-![select-computed-join](../assets/container/computed-join/select-computed-join-light.png)
-
-**Step 3:** A modal window will appear prompting you to enter the name for your computed join, select the join type, configure left and right references (datastore, container, fields), define the SELECT expression, and optionally add a filter clause.
-
-| REF. | FIELDS  | ACTION  |
+| REF. | FIELDS  | DESCRIPTION  |
 |------|----------------------------|---------------------------------------|
-| 1.   | Name (Required) | Enter a name for your computed join. The name should be descriptive and meaningful for easier identification (e.g., Customer_Currency_Join). |
-| 2.   | Join Type (Required) | Choose the type of join from the dropdown (e.g., Inner Join). Determines how rows from the two containers are combined. |
-| 3.   | Left Reference (Required)  | Configure the left side of the join: the datastore is pre-selected based on your earlier selection. Choose the container and field to be used as the join key. Optionally, add a prefix.|
-| 4.   | Right Reference (Required)   | Configure the right side of the join: select the datastore, container, and field to be used as a join key. Optionally, add a prefix. |
-| 5.   | Select Expression (Required)   | Define the output fields using a valid SQL SELECT expression. Use this to control which columns appear in the computed join result. |
-| 6.   | Filter Clause (Optional)   | Add a WHERE clause to filter the joined data based on specific conditions. |
+| 1 | **Name**               | The unique name for your computed joined container.                                                                                                          |
+| 2 | **Join Type**          | Choose one of the following:<br>• **Inner Join**: Keeps only rows with matching keys in both containers.<br>• **Left Join**: Keeps all rows from the left container, matching rows from the right.<br>• **Right Join**: Keeps all rows from the right container, matching rows from the left.<br>• **Full Outer Join**: Keeps all rows from both containers. |
+| 3 | **Left Reference**     | • **Datastore**: Source datastore where the computed joined container will be created.<br>• **Container**: The left container to join.<br>• **Field**: The key (column) to join on.<br>• **Prefix**: A label (e.g., `left`) applied to all columns from this container. |
+| 4 | **Right Reference**    | • **Datastore**: Source datastore containing the second container.<br>• **Container**: The right container to join.<br>• **Field**: The key (column) to join on.<br>• **Prefix**: A label (e.g., `right`) applied to all columns from this container. |
+| 5 | **Select Expression**  | A list of columns to include in the result. Columns are automatically prefixed (e.g., `left_name`, `right_name`) to avoid conflicts.                         |
+| 6 | **Filter Clause (WHERE)** | Additional filters applied to the joined result.                                                                                                            |
 
 ![computed-join](../assets/container/computed-join/computed-join-light.png)
 
-**Step 4:** Click on the **Add** button to create the computed join using the configured join settings and selected source containers.
+## Example Use Case
 
-![add-join](../assets/container/computed-join/add-join-light.png)
+**Scenario**
 
-After clicking the **Add** button, a success notification appears on the screen showing the action was completed successfully.
+We want to join:
+
+* **Left Container**: customers
+* **Right Container**: orders
+* **Join Key**: customer_id
+* **Join Type**: Left Join
+* **Prefixes**: cust_ and order_
+
+### Input Tables
+
+#### customers
+
+| customer_id | name   | city   |
+|-------------|--------|--------|
+| 1           | Alice  | Berlin |
+| 2           | Bob    | London |
+| 3           | Charlie| Paris  |
+
+#### orders
+
+| order_id | customer_id | product  |
+|----------|-------------|----------|
+| 101      | 1           | Laptop   |
+| 102      | 1           | Mouse    |
+| 103      | 2           | Keyboard |
+
+---
+
+#### Joined Result (Left Join)
+
+| cust_customer_id | cust_name | cust_city | order_order_id | order_product |
+|------------------|-----------|-----------|----------------|---------------|
+| 1                | Alice     | Berlin    | 101            | Laptop        |
+| 1                | Alice     | Berlin    | 102            | Mouse         |
+| 2                | Bob       | London    | 103            | Keyboard      |
+| 3                | Charlie   | Paris     | NULL           | NULL          |
+
+---
+
+### Visual Diagram
+
+```text
+ +-----------+           +--------+
+ | customers |  LEFT JOIN| orders |
+ +-----------+ <-------->+--------+
+     |                         |
+     +-- customer_id = customer_id --------+
+```
+## API Example
+
+### Endpoint
+
+**Post:** `/api/containers` 
+
+**Expected response:** `200 OK`
+
+---
+
+=== "Request Payload"
+    ```json
+    {
+        "container_type": "computed_joined",
+        "name": "customer_orders_join",
+        "select_clause": "cust_customer_id, cust_name, cust_city, order_order_id, order_product",
+        "where_clause": null,
+        "left_join_field_name": "customer_id",
+        "left_prefix": "cust",
+        "right_join_field_name": "customer_id",
+        "right_prefix": "order",
+        "join_type": "left",
+        "left_container_id": 101,
+        "right_container_id": 202
+    }
+    ```
+## Tips
+
+* Always set prefixes to avoid column name collisions.
+* Use Select Expression to choose only the columns you need.
+* Apply Filter Clause for better performance by reducing unnecessary data.
+* Test the join type with sample data to verify expected behavior.
