@@ -8,9 +8,9 @@ You can archive a specific check using two ways: either by directly clicking the
 
 ### 1. Archive Directly
 
-**Step 1:** Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Archive from the drop-down menu.
+**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it, and select **"Archive"** from the dropdown menu.
 
-For Demonstration purposes, we have selected the **"Metric"** check.
+For demonstration purposes, we have selected the **"Metric"** check.
 
 ![archive-icon](../assets/datastore-checks/archive-check/archive-icon-light-30.png)
 
@@ -26,17 +26,17 @@ For Demonstration purposes, we have selected the **"Metric"** check.
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-32.png)
 
-After clicking on the **Archive** button, your check is moved to the archive and a success message will appear on the screen.
+After clicking the **Archive** button, your check is moved to the archive, and a success message will appear on the screen.
 
 ### 2. Archive from Action Menu
 
-**Step 1:** Locate the check (whether Active or Draft) which you want to archive and click the vertical ellipsis (⋮) next to it, and select Edit from the drop-down menu.
+**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it, and select **"Edit"** from the dropdown menu.
 
-For Demonstration purposes, we have selected the **"Between"** check.
+For demonstration purposes, we have selected the **"Between"** check.
 
 ![checks-list](../assets/datastore-checks/archive-check/checks-list-light-34.png)
 
-**Step 2:** A modal window will appear displaying the check details. Click on the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and click on the **"Archive"** from the drop-down menu. 
+**Step 2:** A modal window will appear displaying the check details. Click the vertical ellipsis **(⋮)** located in the upper-right corner of the modal window, and click **"Archive"** from the dropdown menu.
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-35.png)
 
@@ -52,13 +52,13 @@ For Demonstration purposes, we have selected the **"Between"** check.
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-37.png)
 
-After clicking on the **Archive** button, your check is moved to the archive and a success message will appear on the screen.
+After clicking the **Archive** button, your check is moved to the archive, and a success message will appear on the screen.
 
 ## Method II: Archive Checks in Bulk
 
 You can archive multiple checks in a single step, deactivating and storing them for future reference or restoration while keeping your active checks uncluttered.
 
-**Step 1:** Hover over the checks (whether Active or Draft) and click on the checkbox to select multiple checks.
+**Step 1:** Hover over the checks (whether Active or Draft) and click the checkbox to select multiple checks.
 
 ![check-box](../assets/datastore-checks/archive-check/edit-check-light-59.png)
 
@@ -66,7 +66,7 @@ When multiple checks are selected, an action toolbar appears, displaying the tot
 
 ![action-menu](../assets/datastore-checks/archive-check/action-menu-light-40.png)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Archive"** from the drop-down menu to archive the selected checks.
+**Step 2:** Click the vertical ellipsis **(⋮)** and choose **"Archive"** from the dropdown menu to archive the selected checks.
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-41.png)
 
@@ -86,4 +86,4 @@ A modal window will appear, providing you with the following archive options:
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-43.png)
 
-After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be archived successfully and a success message will appear on the screen.
+After clicking the **"Archive"** button, your selected checks (whether Active or Draft) will be successfully archived, and a success message will appear on the screen.

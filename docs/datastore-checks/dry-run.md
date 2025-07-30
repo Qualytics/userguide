@@ -1,10 +1,10 @@
 # Dry Run
 
-**Step 1:** Click on the specific check you want to test using the Dry Run feature.
+**Step 1:** Click the check you want to test using the Dry Run feature.
 
 ![click-check](../assets/datastore-checks/dry-run/click-check-light.png)
 
-**Step 2:** Click on the **Settings** icon located at the top-right corner of the interface and select **“Dry Run”** from the drop-down menu.
+**Step 2:** Click the **Settings** icon located at the top-right corner of the interface, and select **“Dry Run”** from the dropdown menu.
 
 ![dry-run](../assets/datastore-checks/dry-run/dry-run-light.png)
 
@@ -48,7 +48,7 @@ The **Source Records** section presents a detailed, tabular view of all records 
 
 ### Sort Options
 
-Users can sort the records based on different fields using the **Sort By** drop-down.
+Users can sort the records based on different fields using the **Sort By** dropdown.
 
 ![sort-options](../assets/datastore-checks/dry-run/sort-options-light.png)
 
@@ -60,7 +60,7 @@ Users can sort the records based on different fields using the **Sort By** drop-
 
 ### Download Source Records
 
-The Download Source Records option allows users to export the records evaluated during the Dry Run process for further offline analysis or documentation purposes. A file containing the asserted records and their anomaly status will be downloaded in a CSV format.
+The Download Source Records option allows users to export the records evaluated during the Dry Run process for further offline analysis or documentation purposes. A file containing the asserted records and their anomaly status will be downloaded in CSV format.
 
 ![download-records](../assets/datastore-checks/dry-run/download-records-light.png)
 

@@ -153,7 +153,7 @@ nav:
         - Clone Check : datastore-checks/clone-check.md
         - Quality Check Template : datastore-checks/quality-check-template.md
         - Mark Check Favorite : datastore-checks/check-favorite.md
-        - Filter-and-sort : datastore-checks/filter-and-sort.md
+        - Filter and Sort : datastore-checks/filter-and-sort.md
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:

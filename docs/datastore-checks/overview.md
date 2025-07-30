@@ -10,7 +10,7 @@ Let's get started 🚀
 
 ![datastore](../assets/datastore-checks/overview/datastore-light-1.png)
 
-**Step 2:** Click on the **"Checks"** from the Navigation Tab.
+**Step 2:** Click **"Checks"** from the navigation tab.
 
 ![checks](../assets/datastore-checks/overview/checks-light-2.png)
 
@@ -24,19 +24,19 @@ You will be navigated to the Checks section within the selected datastore. Here,
 
 You can move an active check into a draft state, allowing you to work on the check, make adjustments, and refine the validation rules without affecting live data. This is useful when you need to temporarily deactivate a check for review and updates.
 
-For more information on how to set check as draft, please refer to the [Draft Checks](../datastore-checks/draft-checks.md) documentation.
+For more information on how to set a check as draft, please refer to the [Draft Checks](../datastore-checks/draft-checks.md) documentation.
 
 ### Activate Draft Check
 
-You can activate the draft checks after you have worked on the check, make adjustments, and refine the validation rules. By activating the draft check and making it live, ensures that the defined criteria are enforced on the data.
+You can activate the draft checks after you have worked on the check, made adjustments, and refined the validation rules. Activating the draft check and making it live ensures that the defined criteria are enforced on the data.
 
-For more information on how to activate draft check, please refer to the [Activate Draft Check](../datastore-checks/activate-draft-check.md) documentation.
+For more information on how to activate a draft check, please refer to the [Activate Draft Check](../datastore-checks/activate-draft-check.md) documentation.
 
 ### Set Check as Archived
 
 You can move an active or draft check into the archive when it is no longer relevant but may still be needed for historical purposes or future use. Archiving helps keep your checks organized without permanently deleting them.
 
-For more information on how to set check as archived, please refer to the [Archive Checks](../datastore-checks/archive-check.md) documentation.
+For more information on how to set a check as archived, please refer to the [Archive Checks](../datastore-checks/archive-check.md) documentation.
 
 ### Activate Archived Checks
 
@@ -48,7 +48,7 @@ For more information on how to activate archived checks, please refer to the [Ac
 
 You can move archived checks to the draft state when you want to update or refine them before activation. This is useful if a check is no longer archived but needs adjustments before going live.
 
-For more information on how to draft archived checks, please refer to the [Draft Archived  Checks](../datastore-checks/draft-archived-checks.md) documentation.
+For more information on how to draft archived checks, please refer to the [Draft Archived Checks](../datastore-checks/draft-archived-checks.md) documentation.
 
 ### Restore Archived Checks
 
@@ -80,8 +80,8 @@ You can clone both active and draft checks to create a duplicate copy of an exis
 
 For more information on how to clone a check, please refer to the [Clone Check](../datastore-checks/clone-check.md) documentation.
 
-## Create a Quality Check template
+## Create a Quality Check Template
 
-You can add checks as a Template, which allows you to create a reusable framework for quality checks. By using templates, you standardize the validation process, enabling the creation of multiple checks with similar rules and criteria across different datastores. This ensures consistency and efficiency in managing data quality checks.
+You can add checks as templates, which allows you to create a reusable framework for quality checks. By using templates, you standardize the validation process, enabling the creation of multiple checks with similar rules and criteria across different datastores. This ensures consistency and efficiency in managing data quality checks.
 
 For more information on how to create a quality check template, please refer to the [Quality Check Template](../datastore-checks/quality-check-template.md) documentation.
