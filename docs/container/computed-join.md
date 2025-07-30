@@ -72,11 +72,13 @@ We want to join:
 ### Visual Diagram
 
 ```text
- +-----------+           +--------+
- | customers |  LEFT JOIN| orders |
- +-----------+ <-------->+--------+
-     |                         |
-     +-- customer_id = customer_id --------+
+
++------------+                 +--------+
+| customers  |    LEFT JOIN    | orders |
++------------+ <-------------> +--------+
+    |                               |
+    +-- customer_id = customer_id --+
+
 ```
 ## API Example
 
