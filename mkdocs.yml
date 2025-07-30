@@ -52,13 +52,17 @@ nav:
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
-      - Link Enrichment: source-datastore/associate-enrichment-datastore.md
       - Assign Tags: source-datastore/assign-tags.md
       - Catalog: source-datastore/catalog.md
       - Profile: source-datastore/profile.md
       - Scan: source-datastore/scan.md
       - External Scan: source-datastore/external-scan.md
-      - Datastore Settings: source-datastore/datastore-settings.md
+      - Datastore Settings:
+        - Settings Overview: source-datastore/settings-overview.md
+        - Edit Datastore: source-datastore/edit-datastore.md
+        - Link Enrichment: source-datastore/link-enrichment.md
+        - Quality Score Settings: source-datastore/quality-score-settings.md 
+        - Delete Datastore: source-datastore/delete-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
