@@ -201,9 +201,9 @@ The following table shows the inferred checks that the Analytics Engine can gene
 | After Date Time | [See more.](https://userguide.qualytics.io/checks/after-date-check/) |
 | Before Date Time | [See more.](https://userguide.qualytics.io/checks/before-date-time-check/) |
 | Greater Than | [See more.](https://userguide.qualytics.io/checks/greater-than-check/) |
-| Greater Than a Field | [See more.](https://userguide.qualytics.io/checks/greater-than-field-check/) |
+| Greater Than Field | [See more.](https://userguide.qualytics.io/checks/greater-than-field-check/) |
 | Less Than | [See more.](https://userguide.qualytics.io/checks/less-than-check/) |
-| Less Than a Field | [See more.](https://userguide.qualytics.io/checks/less-than-field-check/) |
+| Less Than Field | [See more.](https://userguide.qualytics.io/checks/less-than-field-check/) |
 | Equal To Field | [See more.](https://userguide.qualytics.io/checks/equal-to-field-check/) |
 
 ![inference-threshold-level3](../assets/profile-operations/inference-threshold-level3-light.png)
@@ -461,7 +461,7 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 
 ![profile-result](../assets/profile-operations/profile-result-light.png)
   
-Step 2: The **Profile Results** modal displays a list of both profiled and non-profiled containers. You can filter the view to show only non-profiled containers by toggling on button, which will display the complete list of unprofiled containers.
+**Step 2:** The **Profile Results** modal displays a list of both profiled and non-profiled containers. You can filter the view to show only non-profiled containers by toggling on button, which will display the complete list of unprofiled containers.
 
 ![profiled](../assets/profile-operations/profiled-light.png)
 
