@@ -85,3 +85,15 @@ For more information on how to clone a check, please refer to the [Clone Check](
 You can add checks as templates, which allows you to create a reusable framework for quality checks. By using templates, you standardize the validation process, enabling the creation of multiple checks with similar rules and criteria across different datastores. This ensures consistency and efficiency in managing data quality checks.
 
 For more information on how to create a quality check template, please refer to the [Quality Check Template](../datastore-checks/quality-check-template.md) documentation.
+
+## Mark Check as Favorite
+
+Marking a check as a favorite helps you quickly access and prioritize important checks during your data validation process. Favorited checks appear in the "Favorite" category, making them easier to manage and monitor.
+
+For more information on how to mark check as favorite, please refer to the [Mark Check as Favorite](../datastore-checks/check-favorite.md) documentation.
+
+## Filter and Sort
+
+Filter and Sort options allow you to organize your checks by various criteria, such as Weight, Active Anomalies, Coverage, Created Date, and Rules. You can also apply filters to refine your list of checks based on Check Type, Asserted State (Passed, Failed, Not Asserted), Tags, Tables, and Fields.
+
+For more information on how to filter and sort, please refer to the [Filter and Sort](../datastore-checks/filter-and-sort.md) documentation.

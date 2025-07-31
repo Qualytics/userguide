@@ -1,6 +1,6 @@
 # Filter and Sort
 
-Filter and Sort options allow you to organize your checks by various criteria, such as Weight, Active Anomalies, Coverage, Created Date, and Rules. You can also apply filters to refine your list of checks based on Check Type, Asserted State (Passed, Failed, Not Asserted), Tags, Tables, and Fields.
+You can easily organize your checks using the available sort and filter options.
 
 ## Sort
 

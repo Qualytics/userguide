@@ -1,8 +1,6 @@
 # Mark Check as Favorite
 
-Marking a check as a favorite helps you quickly access and prioritize important checks during your data validation process. Favorited checks appear in the "Favorite" category, making them easier to manage and monitor.
-
-**Step 1:** Locate the check you want to mark as a favorite, and click the bookmark icon located on the right side of the check.
+Locate the check you want to mark as a favorite, and click the bookmark icon located on the right side of the check.
 
 ![mark-fav](../assets/datastore-checks/check-favorite/mark-fav-light-75.png)
 
