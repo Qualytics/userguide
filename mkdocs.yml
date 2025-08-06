@@ -45,7 +45,6 @@ nav:
       - DFS Datastores:
         - add-datastores/overview-of-a-dfs-datastore.md
         - add-datastores/amazon-s3.md
-        - add-datastores/azure-blob-storage.md
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
       - connections/overview-of-a-connection.md
