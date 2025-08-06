@@ -34,6 +34,5 @@ DFS datastores in Qualytics handle data stored in distributed file systems. Thes
 |            No. |               DFS Connector |   Enrichment Support |
 | :---- | :---- | :---- |
 |           1. |          [Amazon S3](../add-datastores/amazon-s3.md#add-enrichment-datastore) |            Yes |
-|           2. |          [Azure Blob](../add-datastores/azure-blob-storage.md#add-enrichment-datastore) |            Yes |
-|           3. |           [Azure Datalake Storage](../add-datastores/azure-datalake-storage.md#add-enrichment-datastore) |            Yes |
-|           4. |          [Google Cloud Store](../add-datastores/google-cloud-storage.md#add-enrichment-datastore) |            Yes |
+|           2. |           [Azure Datalake Storage](../add-datastores/azure-datalake-storage.md#add-enrichment-datastore) |            Yes |
+|           3. |          [Google Cloud Store](../add-datastores/google-cloud-storage.md#add-enrichment-datastore) |            Yes |
