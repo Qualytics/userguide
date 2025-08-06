@@ -116,7 +116,7 @@ After successfully testing and verifying your source datastore connection, you h
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggle for **Add New connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle for **Add New Connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
 
@@ -202,7 +202,7 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ### Creating a Source Datastore
 
-This section provides a sample payload for creating a Athena datastore. Replace the placeholder values with actual data relevant to your setup.
+This section provides a sample payload for creating an Athena datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint (Post)**: ```/api/datastores (post)```
 
