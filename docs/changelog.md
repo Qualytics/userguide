@@ -24,7 +24,7 @@
 
 - Resolved an issue where anomaly action buttons redirect to the details page instead of performing the intended action.
 
-- Corrected the navigation issue when switching between the Checks and Observability tabs that prevented lists from rendering properly
+- Corrected the navigation issue when switching between the Checks and Observability tabs that prevented lists from rendering properly.
 
 - General Fixes and Improvements.
 
