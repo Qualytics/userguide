@@ -2,6 +2,37 @@
 
 ## Release Notes
 
+### 2025.8.8 { id=2025.8.8 }
+
+#### Feature Enhancements
+
+- Enhanced Source Record visualization
+    - Users can now view more source records with selectable limits (10, 100, 1000, or 10000 records).
+    - Added sticky headers for easier navigation when scrolling through large datasets.
+
+- Introducing Quality Check Migration
+    - Users can now migrate quality checks from one container to another, even across different datastores.
+        - Archived and inferred checks are excluded from migration.
+    - Migrated checks are set to Draft status for users review before activation.
+
+- Enhanced search functionality for datastores and flows
+    - Users can now search by ID or name using a single search field.
+
+#### General Fixes and Improvements
+
+- Fixed Is Replica Of dry run validation to correctly handle filtered datasets.
+
+- Resolved an issue where anomaly action buttons redirect to the details page instead of performing the intended action.
+
+- Corrected the navigation issue when switching between the Checks and Observability tabs that prevented lists from rendering properly
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- The following endpoint `GET /operations` is affected:
+    - Added `start_date` and `end_date` query parameters to filter operations by date range.
+
 ### 2025.7.28 { id=2025.7.28 }
 
 #### Feature Enhancements
