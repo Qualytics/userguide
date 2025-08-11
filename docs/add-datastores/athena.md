@@ -116,7 +116,7 @@ After successfully testing and verifying your source datastore connection, you h
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggle for **Add New Connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle for **Add New Connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
 
@@ -180,9 +180,9 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 - **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users.
 
-- **Host**: This is the server address where the **Athena** instance is hosted. It is the endpoint used to connect to the Athena environment.
+- **Host**: This is the server address where the enrichment datastore instance is hosted. It is the endpoint used to connect to the enrichment datastore environment.
 
-- **Database**: Refers to the specific database within the Athena environment where the data is stored.
+- **Database**:  Refers to the specific database within the enrichment datastore environment where the data is stored.
 
 - **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
