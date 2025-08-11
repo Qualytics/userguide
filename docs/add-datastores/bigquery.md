@@ -105,8 +105,9 @@ A source datastore is a storage location used to connect to and access data from
 | REF. | FIELDS          | ACTIONS                                   |
 |------|-----------------|-------------------------------------------|
 | 1.   | Name (Required)  | Specify the name of the datastore (e.g. The specified name will appear on the datastore cards). |
-  | 2.  | Toggle Button   | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
-| 3.    | Connector (Required) | Select **BigQuery** from the dropdown list. |
+  | 2.  | Toggle Button   | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse
+  credentials from an existing connection. |
+| 3. | Connector (Required) | Select **BigQuery** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
 
@@ -216,7 +217,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
-    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+    Once the **HashiCorp Vault** is set up, use the ${key} format in Connection form to reference a Vault secret.
 
 | REF.| FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
@@ -365,7 +366,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
     }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
+
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
-
