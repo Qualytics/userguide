@@ -70,6 +70,7 @@ nav:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
       - Computed Tables and Files: container/computed-tables-and-files.md
+      - Computed Join: container/computed-join.md
       - Manage Tables and Files: container/manage-tables-and-files.md
       - Computed Fields: container/overview-of-a-computed-field.md
       - Enrichment Operation:
