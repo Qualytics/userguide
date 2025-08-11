@@ -119,7 +119,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
+    After configuring **HashiCorp Vault** integration, you can use `${key}` in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF.| FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
@@ -216,7 +216,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
-    Once the **HashiCorp Vault** is set up, use the ${key} format in Connection form to reference a Vault secret.
+    Once the **HashiCorp Vault** is set up, use the `${key}` format in Connection form to reference a Vault secret.
 
 | REF.| FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
@@ -224,7 +224,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
-| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |#$
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
 ![hash-details](../assets/datastores/bigquery/hash-details-light.png)
