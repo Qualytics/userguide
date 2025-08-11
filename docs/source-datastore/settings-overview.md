@@ -33,6 +33,12 @@ You have the option to link an enrichment datastore to your existing source data
 
 For more information on how to link an enrichment datastore, please refer to the [Link Enrichment](../source-datastore/link-enrichment.md) documentation.
 
+## Unlink Enrichment
+
+You can remove the connection between the source datastore and the enrichment datastore using the Unlink Enrichment Datastore option. This action stops the enrichment process and ensures that no further data is enhanced using the unlinked datastore.
+
+For more information on how to unlink an enrichment datastore, please refer to the [Unlink Enrichment](./unlink-enrichment.md) documentation. 
+
 ## Quality Score Settings
 
 Use the **Quality Score Settings** option to adjust factor weights and decay period, aligning data quality scoring with your organization’s needs.

@@ -84,32 +84,6 @@ If the **Use an existing enrichment datastore** option is selected from the drop
 
 After clicking on the **Save** button, a success notification appears on the screen showing the action was completed successfully.
 
-### Unlink Enrichment Datastore
-
-You can remove the connection between the source datastore and the enrichment datastore using the **Unlink Enrichment Datastore** option. This action stops the enrichment process and ensures that no further data is enhanced using the unlinked datastore.
-
-**Step 1:** Click on the **Enrichment** from the drop-down list.
-
-![enrichment-option](../assets/datastore-settings/link-enrichment/enrichment-light-6.png)
-
-A modal window titled **Enrichment Datastore Settings** will appear, displaying configuration options for the linked enrichment datastore.
-
-![enrichment-settings](../assets/datastore-settings/link-enrichment/enrichment-settings-light.png)
-
-**Step 2:** Click the **Unlink Enrichment Datastore** option (represented by **unlink** icon) located on the right side of the Details section to remove the linked enrichment datastore.
-
-![unlink-option](../assets/datastore-settings/link-enrichment/unlink-option-light.png)
-
-A modal window titled **Unlink Enrichment Datastore** will appear.
-
-![unlink-window](../assets/datastore-settings/link-enrichment/unlink-window-light.png)
-
-**Step 3:** Click the **Unlink** button to remove the enrichment datastore connection.
-
-![unlink](../assets/datastore-settings/link-enrichment/unlink-light.png)
-
-After clicking the **Unlink** button, a success message confirms that the datastore has been updated successfully.
-
 ## Endpoint (Patch)
 
 `/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_

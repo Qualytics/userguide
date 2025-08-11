@@ -61,6 +61,7 @@ nav:
         - Settings Overview: source-datastore/settings-overview.md
         - Edit Datastore: source-datastore/edit-datastore.md
         - Link Enrichment: source-datastore/link-enrichment.md
+        - Unlink Enrichment: source-datastore/unlink-enrichment.md
         - Quality Score Settings: source-datastore/quality-score-settings.md 
         - Delete Datastore: source-datastore/delete-datastore.md
     - Enrichment Datastores:
