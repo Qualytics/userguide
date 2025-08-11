@@ -1,4 +1,4 @@
-### Unlink Enrichment Datastore
+# Unlink Enrichment Datastore
 
 **Step 1:** Click on the **Enrichment** from the drop-down list.
 
