@@ -270,7 +270,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
-    Once the **HashiCorp Vault** is set up, use the $ format in Connection form to reference a Vault secret.
+    Once the **HashiCorp Vault** is set up, use the ${key} format in Connection form to reference a Vault secret.
 
 | REF.| FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
@@ -325,7 +325,7 @@ If the **Use Enrichment Datastore** option is selected from the caret button, yo
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
 | 1.   | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata. |
-| 2.   | Enrichment Datastore  | Select an enrichment datastore from the dropdown list. |
+| 2.   | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
 
