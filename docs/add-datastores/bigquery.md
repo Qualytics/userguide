@@ -224,7 +224,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
 | 3.  | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4.  | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
-| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |#$
+| 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
 ![hash-details](../assets/datastores/bigquery/hash-details-light.png)
