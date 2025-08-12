@@ -100,14 +100,14 @@ The Summary section provides a quick overview of the check template’s key deta
 
 | REF. | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Template  | The name of the check template, indicating its purpose (e.g., “After Date Time”). |
+| 1 | Template | The rule type of the check template, indicating its purpose (e.g., “After Date Time”). |
 | 2 | Type | Indicates whether the template is **Locked** (cannot be edited) or **Unlocked** (editable). |
 | 3 | Weight | A numeric value representing the importance or priority level of the template in scoring or decision-making. |
 | 4 | Coverage | The percentage of relevant dataset elements to which this template is applied. |
-| 5 | Checks | The total number of checks currently using this template. |
-| 6 | Active Anomalies | The count of unresolved anomalies detected by checks associated with this template. |
+| 5 | Checks | The total number of checks currently using this template. You can click on the **(↗)** icon to navigate directly to the Checks tab.|
+| 6 | Active Anomalies | The count of unresolved anomalies detected by checks associated with this template. You can click on the **(↗)** icon to navigate directly to the Anomalies tab.|
 | 7 | Description | A short statement explaining the logic or purpose of the check template. |
-| 8 | Tags | Labels used to categorize and filter templates (e.g., “Sandbox”). |
+| 8 | Tags | Used to categorize and filter templates (e.g., “Sandbox”). Users can change the tags by clicking the tag badge. |
 
 ![summary-fields](../assets/checks/add-check-template/summary-fields.png)
 
@@ -119,8 +119,8 @@ The Definition section displays the configuration details of a check template. I
 
 | REF. | Field | Description |
 | :---- | :---- | :---- |
-| 1 | Target  | Defines the filter condition applied to the dataset. If no filter is specified, the check template applies to all data in the target scope. |
-| 2 | Properties | Indicates the date and time associated with the template’s configuration or operation, shown in UTC. |
+| 1 | Target | Defines the filter condition applied to the dataset. If no filter is specified, the check template applies to all data in the target scope.|
+| 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count checks**: Shows "Number of Field". </li><li> **Metric checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
 | 3 | Metadata | Displays any custom metadata properties linked to the template. If none are defined, this section remains empty. |
 
 ![definition-fields](../assets/checks/add-check-template/definition-fields.png)
@@ -130,6 +130,10 @@ The Definition section displays the configuration details of a check template. I
 The Activity section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
 
 ![activity](../assets/checks/add-check-template/activity.png)
+
+You can hover over a timestamp to view the full date and last modified time.
+
+![modified](../assets/checks/add-check-template/modified.png)
 
 ## Template State
 
