@@ -8,7 +8,7 @@
 
 ![select-check](../assets/datastore-checks/restore-archived-checks/select-check-light.png)
 
-**Step 3:** You will be directed to the check details page. Click the **Settings** icon located at the top-right corner of the interface, and select **“Edit”** from the dropdown menu.
+**Step 3:** You will be directed to the check details page. Click the **Settings** icon located at the top-right corner of the interface and select **“Edit”** from the dropdown menu.
 
 ![restore](../assets/datastore-checks/restore-archived-checks/restore-light.png)
 

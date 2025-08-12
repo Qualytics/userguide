@@ -14,7 +14,7 @@ There are two methods for deleting checks: you can either delete individual chec
 
 ![archived-btn](../assets/datastore-checks/delete-checks/archive-light-45.png)
 
-**Step 2:** Locate the check that you want to delete, and click the **vertical ellipsis (⋮)** and select **Delete** from the dropdown menu.
+**Step 2:** Locate the check that you want to delete and click the **vertical ellipsis (⋮)** and select **Delete** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Not Null"** check.
 

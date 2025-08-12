@@ -4,7 +4,7 @@ You can activate archived checks individually or in bulk.
 
 ## Method I: Activate Specific Check
 
-**Step 1:** Navigate to the **Archived** checks section, and click the vertical ellipsis (⋮) next to the archived check you want to activate, and select **"Activate"** from the dropdown menu.
+**Step 1:** Navigate to the **Archived** checks section and click the vertical ellipsis (⋮) next to the archived check you want to activate, and select **"Activate"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Metric"** check.
 

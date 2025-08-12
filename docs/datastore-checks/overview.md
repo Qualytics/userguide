@@ -90,7 +90,7 @@ For more information on how to create a quality check template, please refer to 
 
 Marking a check as a favorite helps you quickly access and prioritize important checks during your data validation process. Favorited checks appear in the "Favorite" category, making them easier to manage and monitor.
 
-For more information on how to mark check as favorite, please refer to the [Mark Check as Favorite](../datastore-checks/check-favorite.md) documentation.
+For more information on how to mark a check as favorite, please refer to the [Mark Check as Favorite](../datastore-checks/check-favorite.md) documentation.
 
 ## Filter and Sort
 

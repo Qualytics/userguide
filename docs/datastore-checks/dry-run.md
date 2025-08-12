@@ -4,7 +4,7 @@
 
 ![click-check](../assets/datastore-checks/dry-run/click-check-light.png)
 
-**Step 2:** Click the **Settings** icon located at the top-right corner of the interface, and select **“Dry Run”** from the dropdown menu.
+**Step 2:** Click the **Settings** icon located at the top-right corner of the interface and select **“Dry Run”** from the dropdown menu.
 
 ![dry-run](../assets/datastore-checks/dry-run/dry-run-light.png)
 

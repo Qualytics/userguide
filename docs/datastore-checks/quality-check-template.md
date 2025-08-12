@@ -1,12 +1,12 @@
 # Create a Quality Check template
 
-**Step 1:** Locate the check (whether Active or Draft) that you want to convert into a template, and click that check.
+**Step 1:** Locate the check (whether Active or Draft) that you want to convert into a template and click that check.
 
 For demonstration purposes, we have selected the **"Between"** check.
 
 ![select-check](../assets/datastore-checks/quality-check-template/clone-check-light-78.png)
 
-**Step 2:** A modal window will appear displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Template"** from the dropdown menu.
+**Step 2:** A modal window will appear displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window and select **"Template"** from the dropdown menu.
 
 ![template-btn](../assets/datastore-checks/quality-check-template/template-btn-light-92.png)
 

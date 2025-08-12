@@ -1,12 +1,12 @@
 # Clone Check
 
-**Step 1:** Click the vertical ellipsis (⋮) next to the check (whether Active or Draft) that you want to clone, and select **"Edit"** from the dropdown menu.
+**Step 1:** Click the vertical ellipsis (⋮) next to the check (whether Active or Draft) that you want to clone and select **"Edit"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Between"** check.
 
 ![clone-check](../assets/datastore-checks/clone-check/clone-check-light-78.png)
 
-**Step 2:** A modal window will appear, displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Clone"** from the dropdown menu.
+**Step 2:** A modal window will appear, displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window and select **"Clone"** from the dropdown menu.
 
 ![clone-btn](../assets/datastore-checks/clone-check/clone-btn-light-79.png)
 
@@ -50,7 +50,7 @@ If the validation fails, a red message saying **"Failed Validation"** will appea
 
 ![failed-validation](../assets/datastore-checks/clone-check/failed-validation-light-88.png)
 
-**Step 6:** Once you have a successful validation, click the **"Save"** button. The system will save any modifications you've made to the check, and create a clone of that check based on your changes.  
+**Step 6:** Once you have a successful validation, click the **"Save"** button. The system will save any modifications you've made to the check and create a clone of that check based on your changes.  
 
 ![save-btn](../assets/datastore-checks/clone-check/save-btn-light-89.png)
 

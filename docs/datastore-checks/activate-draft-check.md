@@ -4,7 +4,7 @@ There are two ways to activate draft checks: you can activate specific checks or
  
 ## Method I. Activate Specific Check
 
-**Step 1:** Navigate to the **Draft** check section, and click the vertical ellipsis **(⋮)** next to the draft check you want to activate, and select **Edit** from the dropdown menu.
+**Step 1:** Navigate to the **Draft** check section and click the vertical ellipsis **(⋮)** next to the draft check you want to activate, and select **Edit** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Metric"** check.
 
@@ -20,7 +20,7 @@ A modal window will appear with the check details. If you want to make any chang
 
 After clicking the **Activate** button, your check has been successfully moved to active checks, and a success message will appear on the screen.
 
-Alternatively, you can activate a draft check by clicking the vertical ellipsis **(⋮)** next to the draft check, and selecting **"Activate"** from the dropdown menu.
+Alternatively, you can activate a draft check by clicking the vertical ellipsis **(⋮)** next to the draft check and selecting **"Activate"** from the dropdown menu.
 
 ![activate-specific](../assets/datastore-checks/activate-draft-check/activate-specific-light.png)
 

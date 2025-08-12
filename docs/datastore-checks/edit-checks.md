@@ -7,7 +7,7 @@ There are two methods for editing checks: you can either edit specific checks or
 
 ## Method I. Edit Specific Check
 
-**Step 1:** Click the vertical ellipsis (⋮) next to the check you want to edit, whether it is an active or draft check, and select **"Edit"** from the dropdown menu.
+**Step 1:** Click the vertical ellipsis (⋮) next to the check you want to edit whether it is an active or draft check, and select **"Edit"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Between"** check.
 

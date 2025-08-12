@@ -4,13 +4,13 @@ There are two methods to move your active checks to draft: you can either draft 
 
 ## Method I: Draft Specific Check
 
-**Step 1:** Click the vertical ellipsis (⋮) next to the active check you want to move to the draft state, and select **"Edit"** from the dropdown menu.
+**Step 1:** Click the vertical ellipsis (⋮) next to the active check you want to move to the draft state and select **"Edit"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Between"** check.
 
 ![checks-list](../assets/datastore-checks/draft-checks/checks-list-light-18.png)
 
-**Step 2:** A modal window will appear displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window, and select **"Draft"** from the dropdown menu.
+**Step 2:** A modal window will appear displaying the check details. Click the **vertical ellipsis (⋮)** located in the upper-right corner of the modal window and select **"Draft"** from the dropdown menu.
 
 ![draft](../assets/datastore-checks/draft-checks/draft-light-19.png)
 

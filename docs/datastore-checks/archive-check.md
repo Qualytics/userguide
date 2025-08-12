@@ -8,7 +8,7 @@ You can archive a specific check using two ways: either by directly clicking the
 
 ### 1. Archive Directly
 
-**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it, and select **"Archive"** from the dropdown menu.
+**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it and select **"Archive"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Metric"** check.
 
@@ -30,13 +30,13 @@ After clicking the **Archive** button, your check is moved to the archive, and a
 
 ### 2. Archive from Action Menu
 
-**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it, and select **"Edit"** from the dropdown menu.
+**Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it and select **"Edit"** from the dropdown menu.
 
 For demonstration purposes, we have selected the **"Between"** check.
 
 ![checks-list](../assets/datastore-checks/archive-check/checks-list-light-34.png)
 
-**Step 2:** A modal window will appear displaying the check details. Click the vertical ellipsis **(⋮)** located in the upper-right corner of the modal window, and click **"Archive"** from the dropdown menu.
+**Step 2:** A modal window will appear displaying the check details. Click the vertical ellipsis **(⋮)** located in the upper-right corner of the modal window and click **"Archive"** from the dropdown menu.
 
 ![archive](../assets/datastore-checks/archive-check/archive-light-35.png)
 
