@@ -11,7 +11,6 @@ Qualytics supports DFS Datastores, catering to distributed file systems like:
 - [**Amazon S3**](./amazon-s3.md)
 - [**Google Cloud Storage**](./google-cloud-storage.md)
 - [**Windows Azure Storage Blob**](./azure-datalake-storage.md)
-- [**Azure Blob File System**](./azure-blob-storage.md)
 
 ## Connection Details
 

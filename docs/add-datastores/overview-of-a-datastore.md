@@ -75,8 +75,7 @@ Qualytics supports a range of source datastores, including but not limited to:
 |      16.  |             [Dremio](../add-datastores/dremio.md) |
 |      17.  |             [Amazon S3](../add-datastores/amazon-s3.md) |
 |      18. |         [Google Cloud Storage](../add-datastores/google-cloud-storage.md) |
-|     19. |      [Windows Azure Storage Blob](../add-datastores/azure-datalake-storage.md) |
-|     20. |        [Azure Blob File System](../add-datastores/azure-blob-storage.md) |
+|     19. |      [Azure Blob File System](../add-datastores/azure-datalake-storage.md) |
 
 ## Connection Management
 

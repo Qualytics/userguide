@@ -45,30 +45,37 @@ nav:
       - DFS Datastores:
         - add-datastores/overview-of-a-dfs-datastore.md
         - add-datastores/amazon-s3.md
-        - add-datastores/azure-blob-storage.md
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
       - connections/overview-of-a-connection.md
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
-      - Link Enrichment: source-datastore/associate-enrichment-datastore.md
       - Assign Tags: source-datastore/assign-tags.md
       - Catalog: source-datastore/catalog.md
       - Profile: source-datastore/profile.md
       - Scan: source-datastore/scan.md
       - External Scan: source-datastore/external-scan.md
-      - Datastore Settings: source-datastore/datastore-settings.md
+      - Datastore Settings:
+        - Settings Overview: source-datastore/settings-overview.md
+        - Edit Datastore: source-datastore/edit-datastore.md
+        - Link Enrichment: source-datastore/link-enrichment.md
+        - Unlink Enrichment: source-datastore/unlink-enrichment.md
+        - Quality Score Settings: source-datastore/quality-score-settings.md 
+        - Delete Datastore: source-datastore/delete-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
-      - Add Enrichment: enrichment/enrichment-datastore-creation.md
-      - enrichment-support/supported-enrichment-datastores.md
-
+      - Manage Enrichment: 
+        - Enrichment Actions: enrichment/enrichment-actions.md
+        - Add Enrichment: enrichment/enrichment-datastore-creation.md
+        - Edit Enrichment: enrichment/edit-enrichment.md
+        - Delete Enrichment: enrichment/delete-enrichment.md
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
       - Computed Tables and Files: container/computed-tables-and-files.md
+      - Computed Join: container/computed-join.md
       - Manage Tables and Files: container/manage-tables-and-files.md
       - Computed Fields: container/overview-of-a-computed-field.md
       - Enrichment Operation:
@@ -139,7 +146,21 @@ nav:
       - Export Check Templates: checks/export-check-templates.md
     - Datastore Checks:
       - Checks : datastore-checks/checks-datastore.md 
-      - Manage Checks : datastore-checks/manage-checks.md
+      - Manage Checks : 
+        - Overview : datastore-checks/overview.md
+        - Draft Checks : datastore-checks/draft-checks.md
+        - Activate Draft Check : datastore-checks/activate-draft-check.md
+        - Archive Checks : datastore-checks/archive-check.md
+        - Activate Archived Checks :  datastore-checks/activate-archived-checks.md
+        - Draft Archived Checks : datastore-checks/draft-archived-checks.md
+        - Restore Archived Checks : datastore-checks/restore-archived-checks.md
+        - Edit Checks : datastore-checks/edit-checks.md
+        - Delete Checks : datastore-checks/delete-checks.md
+        - Dry Run : datastore-checks/dry-run.md
+        - Clone Check : datastore-checks/clone-check.md
+        - Quality Check Template : datastore-checks/quality-check-template.md
+        - Mark Check Favorite : datastore-checks/check-favorite.md
+        - Filter and Sort : datastore-checks/filter-and-sort.md
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:

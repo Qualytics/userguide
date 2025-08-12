@@ -6,39 +6,33 @@ Flows enable users to create pipelines by chaining actions and configuring how t
 
 **Step 1**: Log in to your Qualytics account and click on the **Flows** on the left side panel of the interface.  
 
-![flows](.././assets/flows/flow-light-1.png#only-light)
-![flows](.././assets/flows/flow-dark-1.png#only-dark)
+![flows](.././assets/flows/flow-light-1.png)
 
 You will navigate to the Flows interface, where you can add and manage flows. At the top, you will see two tabs:
 
 * **Definitions:** Displays a list of all flows along with details like triggers, actions, tags, and the last triggered time.
 
-![definition](.././assets/flows/definitions-light-2.png#only-light)
-![definition](.././assets/flows/definitions-dark-2.png#only-dark)
+![definition](.././assets/flows/definitions-light-2.png)
 
 * **Executions:** Provides the execution history of flows, including their status and timestamps.
 
-![execution](.././assets/flows/execution-light-3.png#only-light)
-![execution](.././assets/flows/execution-dark-3.png#only-dark)
+![execution](.././assets/flows/execution-light-3.png)
 
 ## Add Flow
 
 **Step 1**: Click on the **Add Flow** button from the top right corner.
 
-![addflow](.././assets/flows/addflow-light-4.png#only-light)
-![addflow](.././assets/flows/addflow-dark-4.png#only-dark)
+![addflow](.././assets/flows/addflow-light-4.png)
 
 A modal window, **Add Flow**, will appear, providing options to create a flow. Each flow starts by default with two nodes: **Flow** and **Trigger**.
 
-![flowchart](.././assets/flows/flowchart-light-5.png#only-light)
-![flowchart](.././assets/flows/flowchart-dark-5.png#only-dark)
+![flowchart](.././assets/flows/flowchart-light-5.png)
 
 ### Flow
 
 **Step 1:** Click on the **Flow** node.  
 
-![flow](.././assets/flows/flow-light-6.png#only-light)
-![flow](.././assets/flows/flow-dark-6.png#only-dark)
+![flow](.././assets/flows/flow-light-6.png)
 
 A panel will appear on the right-hand side, allowing you to:
 
@@ -48,20 +42,17 @@ A panel will appear on the right-hand side, allowing you to:
 | 2. |            **Description** | Provide a brief description of the flow (optional) to clarify its purpose or functionality. |
 | 3. |            **Deactivated** | Check the box to deactivate the flow. If selected, the flow won't start even if the trigger conditions are met. |
 
-![flow](.././assets/flows/flowsetting-light-7.png#only-light)
-![flow](.././assets/flows/flowsetting-dark-7.png#only-dark)
+![flow](.././assets/flows/flowsetting-light-7.png)
 
 **Step 2:** Once the details are filled in, click the **Save** button to save the flow settings.  
 
-![save](.././assets/flows/save-light-8.png#only-light)
-![save](.././assets/flows/save-dark-8.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 ### Trigger
 
 **Step 1:** After completing the **"Flow"** node setup, users can click on the **"Trigger"** node.
 
-![trigger](.././assets/flows/trigger-light-9.png#only-light)
-![trigger](.././assets/flows/trigger-dark-9.png#only-dark)
+![trigger](.././assets/flows/trigger-light-9.png)
 
 A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides four options for initiating the flow. Users can choose one of the following options:
 
@@ -73,15 +64,13 @@ A panel will appear on the right-hand side, enabling users to define when the fl
 
 * Manual
 
-![triggersetting](.././assets/flows/triggersetting-light-10.png#only-light)
-![triggersetting](.././assets/flows/triggersetting-dark-10.png#only-dark)
+![triggersetting](.././assets/flows/triggersetting-light-10.png)
 
 #### Operation Completes
 
 This type of flow is triggered whenever an operation, such as a catalog, profile, or scan, is completed on a source datastore. Upon completion, teams are promptly notified through in-app messages and, if configured, via external notification channels such as email, Slack, Microsoft Teams, and others. For example, the team is notified whenever the catalog operation is completed, helping them proceed with the profile operation on the datastore.
 
-![operation](.././assets/flows/operation-light-11.png#only-light)
-![operation](.././assets/flows/operation-dark-11.png#only-dark)
+![operation](.././assets/flows/operation-light-11.png)
 
 **Filter Conditions**
 
@@ -95,20 +84,17 @@ Filters can be set to narrow down which operations should trigger the flow execu
 
 4. **Operation Status**: The flow is triggered for operations with a status of either Success or Failure.
 
-![operation](.././assets/flows/operation-light-12.png#only-light)
-![operation](.././assets/flows/operation-dark-12.png#only-dark)
+![operation](.././assets/flows/operation-light-12.png)
 
 After defining the conditions, users must click the **Save** button to finalize the trigger configuration.
 
-![save](.././assets/flows/save-light-13.png#only-light)
-![save](.././assets/flows/save-dark-13.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 #### Anomalous Table and File Detected
 
 This flow is triggered when anomalies are detected within a specific table, file and check rule types. It includes information about the number of anomalies found and the specific scan target within the datastore. This is useful for assessing the overall health of a particular datastore.  
 
-![table](.././assets/flows/table-light-14.png#only-light)
-![table](.././assets/flows/table-dark-14.png#only-dark)
+![table](.././assets/flows/table-light-14.png)
 
 **Filter Conditions**
 
@@ -120,20 +106,17 @@ Users can optionally set filters to specify which tables or files should trigger
 
 3. **Check Rule Types**: Only anomalies identified by one or more of the selected check rule types will initiate the flow.
 
-![table](.././assets/flows/table-light-15.png#only-light)
-![table](.././assets/flows/table-dark-15.png#only-dark)
+![table](.././assets/flows/table-light-15.png)
 
 After defining the conditions, users must click the **Save** button to finalize the trigger configuration.  
 
-![save](.././assets/flows/save-light-16.png#only-light)
-![save](.././assets/flows/save-dark-16.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 #### Anomaly Detected
 
 This type of flow is triggered when any single anomaly is identified in the data. The flow message typically includes the type of anomaly detected and the datastore where it was found. It provides specific information about the anomaly type, which helps quickly understand the issue's nature.
 
-![anomaly](.././assets/flows/anomaly-light-17.png#only-light)
-![anomaly](.././assets/flows/anomaly-dark-17.png#only-dark)
+![anomaly](.././assets/flows/anomaly-light-17.png)
 
 **Filter Condition**
 
@@ -147,30 +130,25 @@ Users can define specific conditions to determine when the flow should be initia
 
 4. **Anomaly Weight (Min)**: Only anomalies with a weight equal to or greater than the specified value will trigger the flow.
 
-![anomaly](.././assets/flows/anomaly-light-18.png#only-light)
-![anomaly](.././assets/flows/anomaly-dark-18.png#only-dark)
+![anomaly](.././assets/flows/anomaly-light-18.png)
 
 **Step 2:** Once the filter conditions are set, users must click the **Save** button to finalize the configuration.
 
-![save](.././assets/flows/save-light-19.png#only-light)
-![save](.././assets/flows/save-dark-19.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 #### Manual
 
 The flow starts only when the user manually triggers it. It doesn’t depend on any automatic conditions or detections, giving the user full control.  
 
-![manual](.././assets/flows/manual-light-20.png#only-light)
-![manual](.././assets/flows/manual-dark-20.png#only-dark)
+![manual](.././assets/flows/manual-light-20.png)
 
 Once selected, users must click the **Save** button to confirm the manual trigger configuration.
 
-![save](.././assets/flows/save-light-21.png#only-light)
-![save](.././assets/flows/save-dark-21.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 Hover over the **filter tooltip** in trigger nodes to view the applied conditions such as tags, datastores, and operation types. This provides quick visibility into how each trigger is configured.
 
-![filter-tooltip](.././assets/flows/filter-tooltip-light.png#only-light)
-![filter-tooltip](.././assets/flows/filter-tooltip-dark.png#only-dark)
+![filter-tooltip](.././assets/flows/filter-tooltip-light.png)
 
 ### Actions 
 
@@ -178,8 +156,7 @@ Actions define the specific steps the system will execute after a flow is trigge
 
 **Step 1:** After completing the **"Trigger"** node setup, users can click on the **"Actions"** node.  
 
-![action](.././assets/flows/action-light-22.png#only-light)
-![action](.././assets/flows/action-dark-22.png#only-dark)
+![action](.././assets/flows/action-light-22.png)
 
 A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into three groups:
 
@@ -189,8 +166,7 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 * HTTP.
 
-![actionlist](.././assets/flows/actionlist-light-23.png#only-light)
-![actionlist](.././assets/flows/actionlist-dark-23.png#only-dark)
+![actionlist](.././assets/flows/actionlist-light-23.png)
 
 !!! info
     Inline summaries are shown within action nodes, displaying key details based on the action type—for example, datastore names for operations, Slack or Teams channels for notifications, and webhook URLs for HTTP actions. This enhancement provides quick clarity during flow configuration.
@@ -209,17 +185,15 @@ Users can execute specific operations when the trigger activates. They can choos
 
 * Materialize.
 
-![operations](.././assets/flows/operations-light-24.png#only-light)
-![operations](.././assets/flows/operations-dark-24.png#only-dark)
+![operations](.././assets/flows/operations-light-24.png)
 
 **Catalog**
 
 **Step 1:** Click on **Catalog.**  
 
-![catalog](.././assets/flows/catalog-light-25.png#only-light)
-![catalog](.././assets/flows/catalog-dark-25.png#only-dark)
+![catalog](.././assets/flows/catalog-light-25.png)
 
-A panel  **Catalog Settings** will appear on the right-hand side, This window allows you to configure the catalog operation.
+A panel **Catalog Settings** will appear on the right-hand side. This window allows you to configure the catalog operation.
 
 | No. |                 Field |                 Description |
 | :---- | :---- | :---- |
@@ -228,171 +202,140 @@ A panel  **Catalog Settings** will appear on the right-hand side, This window al
 | 3. | Recreate | Checkbox to enable or disable the recreation of previously deleted named collections in Qualytics for the catalog. |
 | 4. | Include | Checkboxes to select Tables, Views, or both, specifying the resources to include in the catalog. |
 
-![catalog](.././assets/flows/catalog-light-26.png#only-light)
-![catalog](.././assets/flows/catalog-dark-26.png#only-dark)
+![catalog](.././assets/flows/catalog-light-26.png)
 
 **Step 2:** After configuring the settings, click Save to apply and proceed with the catalog operation.
 
-![save](.././assets/flows/save-light-27.png#only-light)
-![save](.././assets/flows/save-dark-27.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **Profile**
 
 **Step 1:** Click on **Profile.**  
 
-![profile](.././assets/flows/profile-light-28.png#only-light)
-![profile](.././assets/flows/profile-dark-28.png#only-dark)
+![profile](.././assets/flows/profile-light-28.png)
 
-A panel  **Profile Settings** will appear on the right-hand side. This window allows you to configure the Profile operation.
+A panel **Profile Settings** will appear on the right-hand side. This window allows you to configure the Profile operation.
 
-![profile](.././assets/flows/profile-light-29.png#only-light)
-![profile](.././assets/flows/profile-dark-29.png#only-dark)
+![profile](.././assets/flows/profile-light-29.png)
 
 | No. |                    Field |    Description |
 | :---- | :---- | :---- |
-| 1. | Source Datastore | Select the source datastore to catalog. |
+| 1. | Source Datastore | Select the source datastore to profile. |
 | 2. | Select Tables | Allows users to select all tables, specific tables, or tables associated with selected tags to profile. |
 | 3. | Read Settings | Configure the starting point for profiling and set a maximum record limit per table for profiling. |
 | 4. | Inference Settings | Set the level of automated checks and decide whether inferred checks should be saved in draft mode. |
 
-![profile](.././assets/flows/profile-light-30.png#only-light)
-![profile](.././assets/flows/profile-dark-30.png#only-dark)
+![profile](.././assets/flows/profile-light-30.png)
 
 **Step 2:** Click Save to finalize the profile configuration.
 
-![save](.././assets/flows/save-light-31.png#only-light)
-![save](.././assets/flows/save-dark-31.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **Scan**
 
 **Step 1:** Click on **Scan.**
 
-![scan](.././assets/flows/scan-light-32.png#only-light)
-![scan](.././assets/flows/scan-dark-32.png#only-dark)
+![scan](.././assets/flows/scan-light-32.png)
 
-A panel  **Scan Settings** will appear on the right-hand side, This window allows you to configure the Scan operation.  
+A panel **Scan Settings** will appear on the right-hand side. This window allows you to configure the Scan operation.  
 
-![scan](.././assets/flows/scan-light-33.png#only-light)
-![scan](.././assets/flows/scan-dark-33.png#only-dark)
+![scan](.././assets/flows/scan-light-33.png)
 
 **Source Datastore:** Select the datastore to be scanned.
 
-![scan](.././assets/flows/scan-light-34.png#only-light)
-![scan](.././assets/flows/scan-dark-34.png#only-dark)
+![scan](.././assets/flows/scan-light-34.png)
 
 **Select Tables:** Choose all tables, specific tables, or tables associated with selected tags to include in the scan.
 
-![scan](.././assets/flows/scan-light-35.png#only-light)
-![scan](.././assets/flows/scan-dark-35.png#only-dark)
+![scan](.././assets/flows/scan-light-35.png)
 
 **Select Check Categories:** Select categories of checks to include, such as table properties (Metadata) or value checks (Data Integrity).
 
-![scan](.././assets/flows/scan-light-36.png#only-light)
-![scan](.././assets/flows/scan-dark-36.png#only-dark)
+![scan](.././assets/flows/scan-light-36.png)
 
 **Read Settings:** Define the scan strategy: incremental scans updated records; full scans process all records.
 
-![scan](.././assets/flows/scan-light-39.png#only-light)
-![scan](.././assets/flows/scan-dark-39.png#only-dark)
+![scan](.././assets/flows/scan-light-39.png)
 
 **Starting Threshold:** Set a starting point for scanning based on an incremental identifier.
 
-![scan](.././assets/flows/scan-light-37.png#only-light)
-![scan](.././assets/flows/scan-dark-37.png#only-dark)
+![scan](.././assets/flows/scan-light-37.png)
 
 **Record Limit:** Specify the maximum number of records to scan per table.
 
-![scan](.././assets/flows/scan-light-38.png#only-light)
-![scan](.././assets/flows/scan-dark-38.png#only-dark)
+![scan](.././assets/flows/scan-light-38.png)
 
 **Scan Settings:** Choose how to manage duplicate or recurring anomalies by archiving overlaps or reactivating previously archived anomalies with fingerprint tracking.
 
-![scan](.././assets/flows/scan-settings-light.png#only-light)
-![scan](.././assets/flows/scan-settings-dark.png#only-dark)
+![scan](.././assets/flows/scan-settings-light.png)
 
 **Anomaly Rollup Threshold:** Set the Rollup Threshold to limit how many anomalies are created per check. When the limit is reached, anomalies will be merged into one for easier management.
 
-![rollup](.././assets/flows/rollup-light-39.png#only-light)
-![rollup](.././assets/flows/rollup-dark-39.png#only-dark)
+![rollup](.././assets/flows/rollup-light-39.png)
 
 **Enrichment Source Record Limit:** Define the number of source records to include in the enrichment operation.
 
-![scan](.././assets/flows/scan-light-40.png#only-light)
-![scan](.././assets/flows/scan-dark-40.png#only-dark)
+![scan](.././assets/flows/scan-light-40.png)
 
 **Step 2:** Click Save to finalize the scan configuration.
 
-![save](.././assets/flows/save-light-43.png#only-light)
-![save](.././assets/flows/save-dark-43.png#only-dark)
+![save](.././assets/flows/save-light-43.png)
 
 **Export**
 
 **Step 1:** Click on **Export.**
 
-![export](.././assets/flows/export-light.png#only-light)
-![export](.././assets/flows/export-dark.png#only-dark)
+![export](.././assets/flows/export-light.png)
 
-A panel **Export Settings** will appear on the right-hand side, This window allows you to configure the Export settings.
+A panel **Export Settings** will appear on the right-hand side. This window allows you to configure the Export settings.
 
-![panel](.././assets/flows/export-setting-light.png#only-light)
-![panel](.././assets/flows/export-setting-dark.png#only-dark)
+![panel](.././assets/flows/export-setting-light.png)
 
 **Source Datastore:** Select the datastore to export data from.
 
-![source](.././assets/flows/source-light.png#only-light)
-![source](.././assets/flows/source-dark.png#only-dark)
+![source](.././assets/flows/source-light.png)
 
 **Select file patterns to export:** **All** (all file patterns, including future ones), **Specific** (manually chosen file patterns), or **Tag** (file patterns based on selected tags).
 
-![profile](.././assets/flows/profiles-light.png#only-light)
-![profile](.././assets/flows/profiles-dark.png#only-dark)
+![profile](.././assets/flows/profiles-light.png)
 
 **Select Metadata:** Choose metadata to export **anomalies**, **quality checks**, or **field profiles**. Anomalies detect data issues, quality checks validate data, and field profiles store field metadata.
 
-![exportt](.././assets/flows/exportt-light.png#only-light)
-![exportt](.././assets/flows/exportt-dark.png#only-dark)
+![exportt](.././assets/flows/exportt-light.png)
 
 **Step 2:** Click Save to finalize the export configuration.
 
-![save](.././assets/flows/savee-light.png#only-light)
-![save](.././assets/flows/savee-dark.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 Export nodes display the asset type in their titles (e.g., “Export Anomalies”) to help you identify the exported content easily.
 
-![export-status](.././assets/flows/export-status-light.png#only-light)
-![export-status](.././assets/flows/export-status-dark.png#only-dark)
+![export-status](.././assets/flows/export-status-light.png)
 
 **Materialize**
 
 **Step 1:** Click on **Materialize.**
 
-![materialize](.././assets/flows/materialize-light.png#only-light)
-![materialize](.././assets/flows/materialize-dark.png#only-dark)
+![materialize](.././assets/flows/materialize-light.png)
 
 A panel **Materialize Settings** will appear on the right-hand side. This window allows you to configure the Materialize settings.
 
-![setting](.././assets/flows/setting-light.png#only-light)
-![setting](.././assets/flows/setting-dark.png#only-dark)
+![setting](.././assets/flows/setting-light.png)
 
 **Source Datastore:** Select the datastore to materialize data from.
 
-![source](.././assets/flows/sourcee-light.png#only-light)
-![source](.././assets/flows/sourcee-dark.png#only-dark)
+![source](.././assets/flows/sourcee-light.png)
 
 **Select Tables:** Choose which tables (all, specific, or tagged) to extract from your source datastore and export to the enrichment datastore.
 
-![select](.././assets/flows/select-light.png#only-light)
-![select](.././assets/flows/select-dark.png#only-dark)
+![select](.././assets/flows/select-light.png)
 
 **Read Settings:** Select the record limit to control how much data is materialized per table.
 
-![read](.././assets/flows/read-light.png#only-light)
-![read](.././assets/flows/read-dark.png#only-dark)
+![read](.././assets/flows/read-light.png)
 
 **Step 2:** Click Save to finalize the materialize configuration.
 
-![save](.././assets/flows/saveee-light.png#only-light)
-![save](.././assets/flows/saveee-dark.png#only-dark)
+![save](.././assets/flows/saveee-light.png)
 
 #### Notification
 
@@ -408,8 +351,7 @@ Users can configure the application to send notifications through various channe
 
 * PagerDuty.
 
-![notification](.././assets/flows/notification-light-44.png#only-light)
-![notification](.././assets/flows/notification-dark-44.png#only-dark)
+![notification](.././assets/flows/notification-light-44.png)
 
 **In App**
 
@@ -417,26 +359,22 @@ This will send an app notification to all users that use Qualytics. Users can se
 
 **Step 1:** Click on **In App.**
 
-![notification](.././assets/flows/notification-light-45.png#only-light)
-![notification](.././assets/flows/notification-dark-45.png#only-dark)
+![notification](.././assets/flows/notification-light-45.png)
 
 A panel **In App Settings** will appear on the right-hand side, allowing you to configure the notification message.
 
-![notification](.././assets/flows/notification-light-46.png#only-light)
-![notification](.././assets/flows/notification-dark-46.png#only-dark)
+![notification](.././assets/flows/notification-light-46.png)
 
 **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.
 
-![notification](.././assets/flows/notification-light-47.png#only-light)
-![notification](.././assets/flows/notification-dark-47.png#only-dark)
+![notification](.././assets/flows/notification-light-47.png)
 
 !!! tip
     You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 2:** After configuring the message, click **Save** to finalize the settings.
 
-![save](.././assets/flows/save-light-48.png#only-light)
-![save](.././assets/flows/save-dark-48.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **Email**
 
@@ -444,31 +382,27 @@ Adding email notifications allows users to receive timely updates or alerts dire
 
 **Step 1:** Click on **Email.**
 
-![notification](.././assets/flows/notification-light-49.png#only-light)
-![notification](.././assets/flows/notification-dark-49.png#only-dark)
+![notification](.././assets/flows/notification-light-49.png)
 
-A panel **Email Settings** will appear on the right-hand side, allowing you to add an email address and  configure the notification message.
+A panel **Email Settings** will appear on the right-hand side, allowing you to add email addresses, specify an email subject, and configure the notification message.
 
-![notification](.././assets/flows/notification-light-50.png#only-light)
-![notification](.././assets/flows/notification-dark-50.png#only-dark)
+![notification](.././assets/flows/notification-light-50.png)
 
 | No. |                  Field  |                         Description |
 | :---- | :---- | :---- |
 | 1. | Email Address | Enter the email address where the notification should be sent.  |
-| 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
+| 2. | Email Subject | Enter the subject line of the notification email to help recipients identify its purpose.  |
+| 3. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
-![notification](.././assets/flows/notification-light-51.png#only-light)
-![notification](.././assets/flows/notification-dark-51.png#only-dark)
+![notification](.././assets/flows/notification-light-51.png)
 
 **Step 2:** Click the Test Notification button to send a test email to the provided address. If the email is successfully sent, you will receive a confirmation message indicating **Notification successfully sent.**
 
-![test](.././assets/flows/test-light-52.png#only-light)
-![test](.././assets/flows/test-dark-52.png#only-dark)
+![test](.././assets/flows/test-light-52.png)
 
 **Step 3:** Once all fields are configured, click the **Save** button to finalize the email notification setup.
 
-![save](.././assets/flows/save-light-53.png#only-light)
-![save](.././assets/flows/save-dark-53.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **Slack**
 
@@ -476,31 +410,26 @@ Qualytics integrates with Slack to deliver real-time notifications on scan compl
 
 **Step 1**: Click on **Slack.**
 
-![click-slack](.././assets/flows/click-slack-light.png#only-light)
-![click-slack](.././assets/flows/click-slack-dark.png#only-dark)
+![click-slack](.././assets/flows/click-slack-light.png)
 
 A **Slack Settings** panel appears on the right side of the screen.
 
-![slack-settings](.././assets/flows/slack-settings-light.png#only-light)
-![slack-settings](.././assets/flows/slack-settings-dark.png#only-dark)
+![slack-settings](.././assets/flows/slack-settings-light.png)
 
 | No. |       Field | Description |
 | :---- | :---- | :---- |
 | **1.** |    Channel | Choose the channel where notifications should be sent using the **Channel** dropdown. For demonstration purposes, the channel **#demo** is selected. |
 | **2.** |    Preview | Shows a preview of the Slack notification that will be sent when the flow runs. |
 
-![slack-options](.././assets/flows/slack-options-light.png#only-light)
-![slack-options](.././assets/flows/slack-options-dark.png#only-dark)
+![slack-options](.././assets/flows/slack-options-light.png)
 
 **Step 2:** Click the **Test Notification** button to send a sample notification to the selected Slack channel.
 
-![test-notification](.././assets/flows/test-notification-light.png#only-light)
-![test-notification](.././assets/flows/test-notification-dark.png#only-dark)
+![test-notification](.././assets/flows/test-notification-light.png)
 
 A prompt appears stating **Notification successfully sent** once the notification is successfully delivered.
 
-![successfully-notified](.././assets/flows/successfully-notified-light.png#only-light)
-![successfully-notified](.././assets/flows/successfully-notified-dark.png#only-dark)
+![successfully-notified](.././assets/flows/successfully-notified-light.png)
 
 **Step 3:** Once the notification is successfully sent, check your connected Slack workspace to ensure it is linked to Qualytics. You will see the test notification in the selected Slack channel.
 
@@ -511,8 +440,7 @@ A prompt appears stating **Notification successfully sent** once the notificatio
 
 **Step 4:** After confirming that the notification was received successfully, return and click the Save button.
 
-![save](.././assets/flows/save-light.png#only-light)
-![save](.././assets/flows/save-dark.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 #### Examples of Trigger Messages
 
@@ -593,31 +521,26 @@ If a **shape or record anomaly** is found, you'll receive a Slack notification. 
 
 **Step 1:** Click on **Microsoft Teams.**
 
-![notification](.././assets/flows/notification-light-59.png#only-light)
-![notification](.././assets/flows/notification-dark-59.png#only-dark)
+![notification](.././assets/flows/notification-light-59.png)
 
 A panel **Microsoft Teams Settings** will appear on the right-hand side, allowing you to add a webhook url and configure the notification message.
 
-![notification](.././assets/flows/notification-light-60.png#only-light)
-![notification](.././assets/flows/notification-dark-60.png#only-dark)
+![notification](.././assets/flows/notification-light-60.png)
 
 | No. |                  Field  |                         Description |
 | :---- | :---- | :---- |
 | 1. | Teams Webhook URL | Enter the Teams webhook URL where the notification should be sent.  |
 | 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
-![notification](.././assets/flows/notification-light-61.png#only-light)
-![notification](.././assets/flows/notification-dark-61.png#only-dark)
+![notification](.././assets/flows/notification-light-61.png)
 
 **Step 2:** Click the **"Test Notification"** button to send a test message to the provided **“Webhook URL”.** If the message is successfully sent, you will receive a confirmation notification indicating **"Notification successfully sent".**
 
-![test](.././assets/flows/test-light-62.png#only-light)
-![test](.././assets/flows/test-dark-62.png#only-dark)
+![test](.././assets/flows/test-light-62.png)
 
 **Step 3:** Once all fields are configured, click the **Save** button to finalize the Microsoft Teams notification setup.
 
-![save](.././assets/flows/save-light-63.png#only-light)
-![save](.././assets/flows/save-dark-63.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **PagerDuty**
 
@@ -625,18 +548,15 @@ Integrating PagerDuty with Qualytics ensures that your team gets instant alerts 
 
 **Step 1:** Click on **PagerDuty.**
 
-![notification](.././assets/flows/notification-light-64.png#only-light)
-![notification](.././assets/flows/notification-dark-64.png#only-dark)
+![notification](.././assets/flows/notification-light-64.png)
 
 A **PagerDuty Settings** panel will appear on the right-hand side, enabling users to configure and send PagerDuty notifications.
 
-![notification](.././assets/flows/notification-light-65.png#only-light)
-![notification](.././assets/flows/notification-dark-65.png#only-dark)
+![notification](.././assets/flows/notification-light-65.png)
 
 **Integration Key:** Enter the **Integration Key** where you want the notification to be sent.
 
-![notification](.././assets/flows/notification-light-66.png#only-light)
-![notification](.././assets/flows/notification-dark-66.png#only-dark)
+![notification](.././assets/flows/notification-light-66.png)
 
 **Severity:** Select the appropriate PagerDuty severity level to categorize incidents based on their urgency and impact. The available severity levels are:
 
@@ -648,25 +568,22 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 
 * **Critical:** For urgent issues that demand immediate attention due to their severe impact on system operations.
 
-![notification](.././assets/flows/notification-light-67.png#only-light)
-![notification](.././assets/flows/notification-dark-67.png#only-dark)
+![notification](.././assets/flows/notification-light-67.png)
+
 **Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.
 
-![notification](.././assets/flows/notification-light-68.png#only-light)
-![notification](.././assets/flows/notification-dark-68.png#only-dark)
+![notification](.././assets/flows/notification-light-68.png)
 
 !!! tip 
     You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 2:** Click on the **Test notification** button to check if the integration key is functioning correctly. Once the test notification is sent, you will see a success message, **"Notification successfully sent."**
 
-![test](.././assets/flows/test-light-69.png#only-light)
-![test](.././assets/flows/test-dark-69.png#only-dark)
+![test](.././assets/flows/test-light-69.png)
 
 **Step 3:** Once you have entered all the values, then click on the **Save** button.
 
-![save](.././assets/flows/save-light-70.png#only-light)
-![save](.././assets/flows/save-dark-70.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 #### HTTP
 
@@ -676,8 +593,7 @@ User can connect to external apps for notifications using one of these services:
 
 * HTTP Action.
 
-![notification](.././assets/flows/notification-light-71.png#only-light)
-![notification](.././assets/flows/notification-dark-71.png#only-dark)
+![notification](.././assets/flows/notification-light-71.png)
 
 **Webhook**
 
@@ -685,31 +601,26 @@ Qualytics allows you to connect external apps for notifications using webhooks, 
 
 **Step 1:** Click on **Webhook.**
 
-![notification](.././assets/flows/notification-light-72.png#only-light)
-![notification](.././assets/flows/notification-dark-72.png#only-dark)
+![notification](.././assets/flows/notification-light-72.png)
 
 A **Webhook Settings** panel will appear on the right-hand side, enabling users to configure and send webhook notifications.
 
-![notification](.././assets/flows/notification-light-73.png#only-light)
-![notification](.././assets/flows/notification-dark-73.png#only-dark)
+![notification](.././assets/flows/notification-light-73.png)
 
 | No. |             Field |                            Description |
 | :---- | :---- | :---- |
 | 1. |  Webhook URL | Enter the desired **"Webhook URL"** of the target system where you want to receive notifications. |
 | 2. | Message | Text area to customize the notification message content with dynamic placeholders like **`{{flow_name}}`**, **`{{operation_type}}`**, and **`{{operation_result}}`**. |
 
-![notification](.././assets/flows/notification-light-74.png#only-light)
-![notification](.././assets/flows/notification-dark-74.png#only-dark)
+![notification](.././assets/flows/notification-light-74.png)
 
 **Step 2**: Click on the **"Test HTTP"** button to send a test notification to the webhook URL you provided. If the webhook URL is correct, you will receive a confirmation message saying **"Notification successfully sent."** This indicates that the webhook is functioning correctly.
 
-![test](.././assets/flows/test-light-75.png#only-light)
-![test](.././assets/flows/test-dark-75.png#only-dark)
+![test](.././assets/flows/test-light-75.png)
 
 **Step 3:** Once you have entered all the values, then click on the **Save** button.
 
-![save](.././assets/flows/save-light-76.png#only-light)
-![save](.././assets/flows/save-dark-76.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **HTTP Action**
 
@@ -717,13 +628,11 @@ Integrating HTTP Action notifications allows users to receive timely updates or 
 
 **Step 1:** Click on **HTTP Action.**
 
-![notification](.././assets/flows/notification-light-77.png#only-light)
-![notification](.././assets/flows/notification-dark-77.png#only-dark)
+![notification](.././assets/flows/notification-light-77.png)
 
 A **HTTP Action Settings** panel will appear on the right-hand side, enabling users to configure and send HTTP Action notifications.
 
-![notification](.././assets/flows/notification-light-78.png#only-light)
-![notification](.././assets/flows/notification-dark-78.png#only-dark)
+![notification](.././assets/flows/notification-light-78.png)
 
 **Step 2:** Enter the following detail where you want the notification to be sent.
 
@@ -747,38 +656,30 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 
 **6. Message:** Enter your custom message using variables in the Message field, where you can specify the content of the notification that will be sent out.
 
-![notification](.././assets/flows/notification-light-79.png#only-light)
-![notification](.././assets/flows/notification-dark-79.png#only-dark)
+![notification](.././assets/flows/notification-light-79.png)
 
 !!! tip
     You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
 
 **Step 3:** Click the **"Test HTTP"** button to verify the correctness of the Action URL. If the URL is correct, a confirmation message saying **"Notification successfully sent"** will appear, confirming that the HTTP action is set up and functioning properly.
 
-![test](.././assets/flows/test-light-80.png#only-light)
-![test](.././assets/flows/test-dark-80.png#only-dark)
+![test](.././assets/flows/test-light-80.png)
 
 **Step 4:** Once you have entered all the values, then click on the **Save** button.
 
-![save](.././assets/flows/save-light-81.png#only-light)
-![save](.././assets/flows/save-dark-81.png#only-dark)
+![save](.././assets/flows/save-light-8.png)
 
 **Step 3:** After completing all the required details in the **"Add Flow"** section, click on the **Publish** button to finalize the process. 
 
-![publish](.././assets/flows/publish-light-82.png#only-light)
-![publish](.././assets/flows/publish-dark-82.png#only-dark)
+![publish](.././assets/flows/publish-light-82.png)
 
-**Step 4:** Once published, a success message will appear, stating, **"Your flow has been successfully added.**
-
-![success](.././assets/flows/success-light-83.png#only-light)
-![success](.././assets/flows/success-dark-83.png#only-dark)
+After clicking the **Publish** button, a success notification appears confirming that the flow has been successfully added.
 
 ## View Created Flows
 
 Once a flow is added, it will be visible in the **Definitions** tab, where you can view all the created flows.
 
-![panel](.././assets/flows/panel-light-84.png#only-light)
-![panel](.././assets/flows/panel-dark-84.png#only-dark)
+![panel](.././assets/flows/panel-light-84.png)
 
 ## Clone a Flow
 
@@ -786,35 +687,27 @@ Users can duplicate existing flows to simplify the reuse and modification of flo
 
 **Step 1**: Click on the existing flow you want to clone.
 
-![panel](.././assets/flows/exisiting-doc-light.png#only-light)
-![panel](.././assets/flows/exisiting-doc-dark.png#only-dark)
+![panel](.././assets/flows/exisiting-doc-light.png)
 
-**Step 2**:  A new window will open displaying the flow's detailed configuration. Click the settings icon and select **Clone**.
+**Step 2**: A new window will open displaying the flow's detailed configuration. Click the settings icon and select **Clone**.
 
-![panel](.././assets/flows/clone-light.png#only-light)
-![panel](.././assets/flows/clone-dark.png#only-dark)
+![panel](.././assets/flows/clone-light.png)
 
 **Step 3:** After selecting the clone button, click the **Publish** button to publish it.
 
-![panel](.././assets/flows/publishh-light.png#only-light)
-![panel](.././assets/flows/publishh-dark.png#only-dark)
+![panel](.././assets/flows/publish-light-82.png)
 
-Once published, a success message will appear: "**Your flow has been successfully added**".
-
-![panel](.././assets/flows/added-light.png#only-light)
-![panel](.././assets/flows/added-dark.png#only-dark)
+After clicking the **Publish** button, a success notification appears confirming that the flow has been successfully added.
 
 ## Sort Flows
 
-Qualytics allows you to sort your flows by **Created Date** and  **Name** to easily organize and prioritize them according to your needs.  
+Qualytics allows you to sort your flows by **Created Date** and **Name** to easily organize and prioritize them according to your needs.  
 
-![sort](.././assets/flows/sort-light-85.png#only-light)
-![sort](.././assets/flows/sort-dark-85.png#only-dark)
+![sort](.././assets/flows/sort-light-85.png)
 
 Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.  
 
-![sort](.././assets/flows/sort-light-86.png#only-light)
-![sort](.././assets/flows/sort-dark-86.png#only-dark)
+![sort](.././assets/flows/sort-light-86.png)
 
 ## Execute Manual Flows
 
@@ -822,22 +715,17 @@ Users can start a manual flow from the vertical ellipsis menu for greater flexib
 
 **Step 1:** Locate the manual flow in your list of flows.
 
-![manual-flow](.././assets/flows/manuall-flow-light.png#only-light)
-![manual-flow](.././assets/flows/manuall-flow-dark.png#only-dark)
+![manual-flow](.././assets/flows/manuall-flow-light.png)
 
 **Step 2:** Click the **vertical ellipsis (⋮)** next to the manual flow you wish to execute, then select **"Execute"** from the dropdown menu to trigger the flow.
 
-![manual-flow](.././assets/flows/verticall-light.png#only-light)
-![manual-flow](.././assets/flows/verticall-dark.png#only-dark)
+![manual-flow](.././assets/flows/verticall-light.png)
 
-After clicking the **Execute** button, a confirmation message will appear saying **The Flow has been successfully executed**.
-
-![sort](.././assets/flows/flow-msg-light.png#only-light)
-![sort](.././assets/flows/flow-msg-dark.png#only-dark)
+After clicking the **Execute** button, a success notification appears confirming that the flow has been successfully executed.
 
 ## Manage Flows
 
-**Manage Flow**  allows users to edit, delete, or deactivate flows. Users can update configurations, remove outdated flows, or pause triggers to maintain an organized and efficient workflow system.
+**Manage Flow**  allows users to edit, delete, deactivate or activate flows. Users can update configurations, remove outdated flows, or pause triggers to maintain an organized and efficient workflow system.
 
 ### Edit Flow
 
@@ -845,25 +733,21 @@ After clicking the **Execute** button, a confirmation message will appear saying
 
 **Step 1:** Click the flow you want to edit.
 
-![panel](.././assets/flows/panel-light-87.png#only-light)
-![panel](.././assets/flows/panel-dark-87.png#only-dark)
+![panel](.././assets/flows/panel-light-87.png)
 
 **Step 2:** After clicking the flow, a new window will open displaying the flow's detailed configuration. Click on the boxes you want to edit.
 
 For demonstration purposes we have selected the Flow node.
 
-![result](.././assets/flows/result-light-88.png#only-light)
-![result](.././assets/flows/result-dark-88.png#only-dark)
+![result](.././assets/flows/result-light-88.png)
 
 **Step 3:** Click the **`Save`** button to apply the updates.
 
-![save](.././assets/flows/save-light-89.png#only-light)
-![save](.././assets/flows/save-dark-89.png#only-dark)
+![save](.././assets/flows/save-light-89.png)
 
 **Step 4:** After clicking the **`Save`** button, click the **`Publish`** button located in the top right corner to finalize and publish the changes.
 
-![publish](.././assets/flows/publish-light-90.png#only-light)
-![publish](.././assets/flows/publish-dark-90.png#only-dark)
+![publish](.././assets/flows/publish-light-82.png)
 
 ### Delete Flow
 
@@ -871,23 +755,17 @@ For demonstration purposes we have selected the Flow node.
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to delete, then click on **Delete** from the dropdown menu.
 
-![delete](.././assets/flows/delete-light-91.png#only-light)
-![delete](.././assets/flows/delete-dark-91.png#only-dark)
+![delete](.././assets/flows/delete-light-91.png)
 
 After clicking the delete button, a confirmation modal window **Delete Flow** will appear.
 
-![delete](.././assets/flows/delete-light-92.png#only-light)
-![delete](.././assets/flows/delete-dark-92.png#only-dark)
+![delete](.././assets/flows/delete-light-92.png)
 
 **Step 2**: Click on the **Delete** button to delete the flow. 
 
-![delete](.././assets/flows/delete-light-93.png#only-light)
-![delete](.././assets/flows/delete-dark-93.png#only-dark)
+![delete](.././assets/flows/delete-light-93.png)
 
-After clicking on the **Delete** button, your flow will be deleted and a confirmation message will display saying **The flow has been successfully deleted**.  
-
-![delete](.././assets/flows/delete-light-94.png#only-light)
-![delete](.././assets/flows/delete-dark-94.png#only-dark)
+After clicking the **Delete** button, a success notification appears confirming the deletion.
 
 ### Deactivate Flow
 
@@ -895,23 +773,19 @@ User can deactivate a flow to pause its triggers by simply disabling it. This pr
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
-![deactivate](.././assets/flows/deactivate-light-95.png#only-light)
-![deactivate](.././assets/flows/deactivate-dark-95.png#only-dark)
+![deactivate](.././assets/flows/deactivate-light-95.png)
 
-After clicking the deactivate button, a confirmation message will appear saying **The Flow has been successfully deactivated**.  
+After clicking the **Deactivate** button, a success notification appears confirming the deactivation.
 
-![deactivate](.././assets/flows/deactivate-light-96.png#only-light)
-![deactivate](.././assets/flows/deactivate-dark-96.png#only-dark)
+### Activate Flow
 
-**Step 2**: Click on the **Delete** button to delete the flow.
+Users can reactivate a flow that was previously deactivated. Once activated, the flow’s triggers become active again, allowing it to run automatically based on its defined conditions.
 
-![delete](.././assets/flows/delete-light-97.png#only-light)
-![delete](.././assets/flows/delete-dark-97.png#only-dark)
+**Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to activate, then click on **Activate** from the dropdown menu.
 
-After clicking on the **Delete** button, your flow will be deleted and a confirmation message will display saying **The flow has been successfully deleted**.  
+![activate](.././assets/flows/activate-flow-light.png)
 
-![delete](.././assets/flows/delete-light-98.png#only-light)
-![delete](.././assets/flows/delete-dark-98.png#only-dark)
+After clicking the **Activate** button, a success notification appears confirming the activation.
 
 ## Clone an Action
 
@@ -919,13 +793,11 @@ User can duplicate an existing action in just a few clicks. Cloning an action al
 
 **Step 1:** Click the vertical ellipsis (**⋮**) on the action you want to clone, then select the **Clone** option from the menu.
 
-![vertical](.././assets/flows/vertical-light.png#only-light)
-![vertical](.././assets/flows/vertical-dark.png#only-dark)
+![vertical](.././assets/flows/vertical-light.png)
 
 **Step 2:** After clicking the Clone option, a cloned action will be created.
 
-![clone](.././assets/flows/clones-light.png#only-light)
-![clone](.././assets/flows/clones-dark.png#only-dark)
+![clone](.././assets/flows/clones-light.png)
 
 ## Flows Execution
 
@@ -933,13 +805,11 @@ Execution tab allows users to view the execution history and current status of a
 
 Click on the **Execution** tab.
 
-![executions](.././assets/flows/executions-light-99.png#only-light)
-![executions](.././assets/flows/executions-dark-99.png#only-dark)
+![executions](.././assets/flows/executions-light-99.png)
 
 You will be navigated to the **Execution** tab, where you can view the complete execution history of all created flows.
 
-![executions](.././assets/flows/executions-light-100.png#only-light)
-![executions](.././assets/flows/executions-dark-100.png#only-dark)
+![executions](.././assets/flows/executions-light-100.png)
 
 ### See a Flow Execution
 
@@ -947,13 +817,11 @@ Users can view flow execution in real-time by clicking on the desired flow opera
 
 **Step 1:** Click on the flow operation you want to view.  
 
-![manual-flow](.././assets/flows/manuall-flow-light.png#only-light)
-![manual-flow](.././assets/flows/manuall-flow-dark.png#only-dark)
+![manual-flow](.././assets/flows/manuall-flow-light.png)
 
  After clicking, the user will navigate to the selected flow operation details. The page displays all operational details in real-time. Note that this page is for viewing only, and no edits can be made here.  
 
-![flow](.././assets/flows/flow-light-1001.png#only-light)
-![flow](.././assets/flows/flow-dark-1001.png#only-dark)
+![flow](.././assets/flows/flow-light-1001.png)
 
 ### Understanding Flow States
 
@@ -971,14 +839,12 @@ On the bottom-right corner, there is a **Legend** indicating the possible states
 
 * **Pending** (Gray)
 
-![chart](.././assets/flows/chart-light-101.png#only-light)
-![chart](.././assets/flows/chart-dark-101.png#only-dark)
+![chart](.././assets/flows/chart-light-101.png)
 
 If a step is running, you will see a **dot-line animation**, signaling that the step is in progress.  
 Once completed, the Action box will change its color to reflect the final state.  
 
-![chart](.././assets/flows/chart-light-102.png#only-light)
-![chart](.././assets/flows/chart-dark-102.png#only-dark)
+![chart](.././assets/flows/chart-light-102.png)
 
 ### Accessing Operation Results 
 
@@ -986,35 +852,27 @@ To view detailed results of specific operations:
 
 **Step 1:** Click the **Top Right Arrow** button within the action operation box.  
 
-![chart](.././assets/flows/chart-light-103.png#only-light)
-![chart](.././assets/flows/chart-dark-103.png#only-dark)
+![chart](.././assets/flows/chart-light-103.png)
 
 **Step 2:** You will navigate to the Activity page, where a Result Modal will open, displaying in-depth details of the operation.
 
-![result](.././assets/flows/result-light-104.png#only-light)
-![result](.././assets/flows/result-dark-104.png#only-dark)
+![result](.././assets/flows/result-light-104.png)
 
 ### Delete Flow Execution
 
-**Step 1:** Click the Delete icon next to the flow execution you want to remove. 
+**Step 1:** Click the Delete icon next to the flow execution you want to remove.
 
-![delete](.././assets/flows/delete-light-105.png#only-light)
-![delete](.././assets/flows/delete-dark-105.png#only-dark)
+![delete](.././assets/flows/delete-light-105.png)
 
 A confirmation modal window **Delete Flow Execution** will appear.
 
-![delete](.././assets/flows/delete-light-106.png#only-light)
-![delete](.././assets/flows/delete-dark-106.png#only-dark)
+![delete](.././assets/flows/delete-light-106.png)
 
 **Step 2:** Click on the **Delete** button to delete the flow execution.
 
-![delete](.././assets/flows/delete-light-107.png#only-light)
-![delete](.././assets/flows/delete-dark-107.png#only-dark)
+![delete](.././assets/flows/delete-light-107.png)
 
-After clicking on the **Delete** button, your flow execution will be deleted and a confirmation message will display saying **The flow execution has been successfully deleted**.  
-
-![delete](.././assets/flows/delete-light-108.png#only-light)
-![delete](.././assets/flows/delete-dark-108.png#only-dark)
+After clicking the **Delete** button, a success notification appears confirming the deletion.
 
 ## Filter and Sort
 
@@ -1024,8 +882,7 @@ After clicking on the **Delete** button, your flow execution will be deleted and
 
 **Sort By** feature allows users to organize executions by **Created Date** or **Duration**, simplifying the process of reviewing flow executions based on their creation or runtime.
 
-![sort](.././assets/flows/sort-light-109.png#only-light)
-![sort](.././assets/flows/sort-dark-109.png#only-dark)
+![sort](.././assets/flows/sort-light-109.png)
 
 ### Filter
 
@@ -1037,12 +894,10 @@ After clicking on the **Delete** button, your flow execution will be deleted and
 | 2. | Status | Filter executions by their completion status (e.g., success, failure and running). |
 | 3. | Trigger When | Filter executions based on their trigger condition. |
 
-![filter](.././assets/flows/filter-light-110.png#only-light)
-![filter](.././assets/flows/filter-dark-110.png#only-dark)
+![filter](.././assets/flows/filter-light-110.png)
 
 ## Operations
 
 In the Activity tab, users can easily identify flow executions. The **`Flow`** column shows the flow name and includes a button to redirect users to the flow's operation. This feature is available in **Explore Activities, Datastore Activity,** and **Container Activity**.
 
-![explore](.././assets/flows/explore-light-111.png#only-light)
-![explore](.././assets/flows/explore-dark-111.png#only-dark)
+![explore](.././assets/flows/explore-light-111.png)

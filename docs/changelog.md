@@ -2,6 +2,72 @@
 
 ## Release Notes
 
+### 2025.8.8 { id=2025.8.8 }
+
+#### Feature Enhancements
+
+- Enhanced Source Record visualization
+    - Users can now view more source records with selectable limits (10, 100, 1000, or 10000 records).
+    - Added sticky headers for easier navigation when scrolling through large datasets.
+
+- Introducing Quality Check Migration
+    - Users can now migrate quality checks from one container to another, even across different datastores.
+        - Archived and inferred checks are excluded from migration.
+    - Migrated checks are set to Draft status for users review before activation.
+
+- Enhanced search functionality for datastores and flows
+    - Users can now search by ID or name using a single search field.
+
+#### General Fixes and Improvements
+
+- Fixed Is Replica Of dry run validation to correctly handle filtered datasets.
+
+- Resolved an issue where anomaly action buttons redirect to the details page instead of performing the intended action.
+
+- Corrected the navigation issue when switching between the Checks and Observability tabs that prevented lists from rendering properly.
+
+- General Fixes and Improvements.
+
+#### API Changes
+
+- The following endpoint `GET /operations` is affected:
+    - Added `start_date` and `end_date` query parameters to filter operations by date range.
+
+### 2025.7.28 { id=2025.7.28 }
+
+#### Feature Enhancements
+
+- Improved Spark SQL autocomplete handling for complex field names
+    - SQL autocomplete now automatically adds backticks to field names, preventing errors with special characters.
+
+#### General Fixes and Improvements
+
+- Resolved an issue where scheduled operations were not executing reliably under high load.
+
+- Fixed last asserted timestamp accuracy for all check types.
+
+- General Fixes and Improvements.
+
+### 2025.7.23 { id=2025.7.23 }
+
+#### Feature Enhancements
+
+- Simplified Computed Join prefix management
+    - Select expressions automatically adjust when prefixes change, eliminating manual field name updates.
+
+- Added User Guide links to Check Creation form
+    - Selecting a Rule Type provides a direct link to that specific rule's documentation in the User Guide.
+
+#### General Fixes and Improvements
+
+- Corrected Quality Check Update errors affecting `Greater Than Field`, `Less Than Field`, and `Equal To Field` rule types.
+
+- Fixed source record display for high-precision decimal values
+    - Source records now display full decimal precision on hover for truncated numeric values.
+
+- General Fixes and Improvements.
+
+
 ### 2025.7.18 { id=2025.7.18 }
 
 #### Feature Enhancements
