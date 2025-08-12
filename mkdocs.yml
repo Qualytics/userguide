@@ -146,7 +146,21 @@ nav:
       - Export Check Templates: checks/export-check-templates.md
     - Datastore Checks:
       - Checks : datastore-checks/checks-datastore.md 
-      - Manage Checks : datastore-checks/manage-checks.md
+      - Manage Checks : 
+        - Overview : datastore-checks/overview.md
+        - Draft Checks : datastore-checks/draft-checks.md
+        - Activate Draft Check : datastore-checks/activate-draft-check.md
+        - Archive Checks : datastore-checks/archive-check.md
+        - Activate Archived Checks :  datastore-checks/activate-archived-checks.md
+        - Draft Archived Checks : datastore-checks/draft-archived-checks.md
+        - Restore Archived Checks : datastore-checks/restore-archived-checks.md
+        - Edit Checks : datastore-checks/edit-checks.md
+        - Delete Checks : datastore-checks/delete-checks.md
+        - Dry Run : datastore-checks/dry-run.md
+        - Clone Check : datastore-checks/clone-check.md
+        - Quality Check Template : datastore-checks/quality-check-template.md
+        - Mark Check Favorite : datastore-checks/check-favorite.md
+        - Filter and Sort : datastore-checks/filter-and-sort.md
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:
