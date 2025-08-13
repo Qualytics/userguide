@@ -88,7 +88,11 @@ After clicking the **Save** button, a success notification appears on the screen
 
 After saving the check template, you can now **Apply a Check Template to create Quality Checks**, which will enforce the validation rules defined in the template across your datastores. This ensures consistent data quality and compliance with the criteria you’ve established.
 
-Once a check template is created, you can view its details by clicking on it. The details view displays key information such as its purpose, configuration, associated checks, dataset usage, performance metrics, activities, and metadata.
+Once a check template is created, you can view its details by clicking on it, where three tabs are displayed at the top: **Overview**, **Checks**, and **Anomalies**.
+
+## Overview
+
+The **Overview** tab gives a complete view of a check template, showing its key details, configuration, and recent activities. In the **Summary** section, users can also use redirect buttons to quickly navigate to related tabs like **Checks** and **Active Anomalies**. Information is divided into three sections: **Summary**, **Activity**, and **Definition**.
 
 ![details-view](../assets/checks/add-check-template/details-view.png)
 
@@ -104,8 +108,8 @@ The Summary section provides a quick overview of the check template’s key deta
 | 2 | Type | Indicates whether the template is **Locked** (cannot be edited) or **Unlocked** (editable). |
 | 3 | Weight | A numeric value representing the importance or priority level of the template in scoring or decision-making. |
 | 4 | Coverage | The percentage of relevant dataset elements to which this template is applied. |
-| 5 | Checks | The total number of checks currently using this template. You can click on the **(↗)** icon to navigate directly to the Checks tab.|
-| 6 | Active Anomalies | The count of unresolved anomalies detected by checks associated with this template. You can click on the **(↗)** icon to navigate directly to the Anomalies tab.|
+| 5 | Checks | The total number of checks currently using this template. You can click on the **(↗)** button to navigate directly to the Checks tab.|
+| 6 | Active Anomalies | The count of unresolved anomalies detected by checks associated with this template. You can click on the **(↗)** button to navigate directly to the Anomalies tab.|
 | 7 | Description | A short statement explaining the logic or purpose of the check template. |
 | 8 | Tags | Used to categorize and filter templates (e.g., “Sandbox”). Users can change the tags by clicking the tag badge. |
 
@@ -134,6 +138,26 @@ The Activity section provides a chronological log of all actions and updates rel
 You can hover over a timestamp to view the full date and last modified time.
 
 ![modified](../assets/checks/add-check-template/modified.png)
+
+## Checks
+
+The **Checks** tab provides a comprehensive view of all checks linked to the chosen datastore, container, or field, along with their source details such as computed table and field information. By clicking options such as **Active, Important,Favorite, Draft, Archived** (Invalid and Discarded), or **All,** users can instantly view checks based on their status. This categorization helps in organizing, reviewing, and managing checks more effectively for consistent data quality oversight.
+
+![checks](../assets/checks/add-check-template/checks-tab.png)
+
+Alternatively, users can navigate to the **Checks** tab directly from the **Overview** tab by clicking the redirect button in the **Checks** section of the Summary panel.
+
+![checks-button](../assets/checks/add-check-template/redirect-checks.png)
+
+## Anomalies
+
+The **Anomalies** tab displays all anomalies detected for the selected check template, along with details such as source datastore, computed table, field, rule, and the number of anomalous records. Users can view anomalies based on their status: **Open, Active, Acknowledged, Archived,** or **All** and sort them based on specific parameters.
+
+![anomalies](../assets/checks/add-check-template/anomalies-tab.png)
+
+Alternatively, users can navigate to the **Anomalies** tab directly from the **Overview** tab by clicking the redirect button in the **Active Anomalies** section of the Summary panel.
+
+![anomalies-button](../assets/checks/add-check-template/redirect-anomalies.png)
 
 ## Template State
 
