@@ -54,12 +54,11 @@ A shape anomaly identifies an anomalous structure within the analyzed data. The 
 We have a **Sales Orders dataset**.
 
 **Rules:**
+
 - Required columns: `order_id`, `customer_id`, `order_date`, `total_amount`.  
 - `order_date` must be in **YYYY-MM-DD** format.
 
-## Shape Anomaly Example (Strong)
-
-## Input Table (Faulty)
+## Input Table
 
 | order_id | customer_id | order_date  |
 |----------|-------------|------------|
