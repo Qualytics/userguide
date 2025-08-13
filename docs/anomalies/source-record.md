@@ -6,7 +6,7 @@ If the Anomaly Type is **Shape**, you will find the highlighted column(s) having
 
 ![source-record](../assets/datastores/source-records/source-record.png)
 
-If the Anomaly Type is Record, you will find the highlighted row(s) in the source record indicating failed checks. 
+If the Anomaly Type is **Record**, you will find the highlighted row(s) in the source record indicating failed checks. 
 
 ![record](../assets/datastores/source-records/record.png)
 

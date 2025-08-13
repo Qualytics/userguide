@@ -10,4 +10,4 @@ By restoring archived anomalies, you can bring them back into the **acknowledged
 
 ![restore-option](../assets/datastores/restore-anomalies/restore-option.png)
 
-After clicking on the **Restore** button, the selected anomaly is now restored as in acknowledged state and a confirmation message appears on the screen.
+After clicking on the **Restore** button, the selected anomaly is now restored in an acknowledged state and a confirmation message appears on the screen.

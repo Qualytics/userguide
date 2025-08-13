@@ -17,13 +17,13 @@ You can acknowledge individual anomalies either directly or through the action m
 
 ![anomalies](../assets/datastores/acknowledge-anomalies/anomalies.png)
 
-**1.Acknowledge Directly**
+**1. Acknowledge Directly**
 
 **Step 1:** Locate the active anomaly you want to acknowledge.
 
 ![acknowledge-directly](../assets/datastores/acknowledge-anomalies/acknowledge-directly.png)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Acknowledge”** from the drop down menu.
+**Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Acknowledge”** from the dropdown menu.
 
 ![acknowledge-option](../assets/datastores/acknowledge-anomalies/acknowledge-option.png)
 

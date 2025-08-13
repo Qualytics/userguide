@@ -10,11 +10,11 @@ Open anomalies are data quality issues that have been detected but not yet resol
 
 ![open-anomalies](../assets/datastores/anomaly-status/open-anomalies.png)
 
-**1. Active**: By clicking on the active button the user can see anomalies that are currently unresolved and have not been acknowledged, archived, or resolved. It may require immediate attention.
+**1. Active**: By clicking on the Active button, the user can see anomalies that are currently unresolved and have not been acknowledged, archived, or resolved. It may require immediate attention.
 
-**2. Acknowledged**:  By clicking on the active button the user can see an anomaly that has been reviewed and marked as acknowledged, though it may still need further action.
+**2. Acknowledged**:  By clicking on the Acknowledged button, the user can see an anomalies that has been reviewed and marked as acknowledged, though it may still need further action.
 
-**3. All**:  By clicking on the active button the user can view all open anomalies, including those marked as Active and Acknowledged, providing a complete view of ongoing issues.
+**3. All**:  By clicking on the All button, the user can view all open anomalies, including those marked as Active and Acknowledged, providing a complete view of ongoing issues.
 
 ## Archived Anomalies
 

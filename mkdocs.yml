@@ -165,14 +165,14 @@ nav:
       - Overview: observability/observability.md
     - Anomalies:
       - Overview: anomalies/anomalies.md
-      - Anomaly Types: anomalies/anomaly-types.md
-      - Anomaly Detection: anomalies/anomaly-detection.md
-      - Anomaly Details:
-        - Anomaly Insights: anomalies/anomaly-insights.md
+      - Types: anomalies/anomaly-types.md
+      - Detection: anomalies/anomaly-detection.md
+      - Details:
+        - Insights: anomalies/anomaly-insights.md
         - Source Record: anomalies/source-record.md
-      - Anomaly Status: anomalies/anomaly-status.md
-      - Anomaly Fingerprints: anomalies/anomaly-fingerprints.md
-      - Anomaly Navigation:
+      - Status: anomalies/anomaly-status.md
+      - Fingerprints: anomalies/anomaly-fingerprints.md
+      - Manage Anomalies:
         - Acknowledge Anomalies: anomalies/acknowledge-anomalies.md
         - Archive Anomalies: anomalies/archive-anomalies.md
         - Restore Anomalies: anomalies/restore-anomalies.md

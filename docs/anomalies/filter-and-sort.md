@@ -1,10 +1,10 @@
 # Filter and Sort
 
-Filter and Sort options allow you to organize your anomalies by various criteria, such as Weight, Anomalous Record, Created Date. You can also apply filters to refine your list of anomaly based on Timeframe, Type and Rule etc.
+Filter and Sort options allow you to organize your anomalies by various criteria, such as Weight, Anomalous Records, and Created Date. You can also apply filters to refine your list of anomalies based on Timeframe, Type, and Rule etc.
 
 ## Sort
 
-You can sort your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
+You can sorts your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
 
 ![sort-options](../assets/datastores/filter-sort-anomalies/sort-options.png)
 
@@ -12,7 +12,7 @@ You can sort your anomalies by **Anomalous Records**, **Created Date**, and **We
 | :---- | :---- | :---- |
 | 1 | Anomalous Records | Sorts anomalies based on the number of anomalous records identified. |
 | 2 | Created Date | Sorts anomalies according to the date they were detected. |
-| 3 | Weight | Sort anomalies by their assigned weight or importance level. |
+| 3 | Weight | Sorts anomalies by their assigned weight or importance level. |
 
 Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.
 
@@ -20,7 +20,7 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 ## Filter
 
-You can filter your anomalies based on values like **Timeframe**, **Type**, **Rule**, and **Tags** etc.
+You can filter your anomalies based on values like **Timeframe**, **Type**, **Rule**, and **Tags**, etc.
 
 ![filter](../assets/datastores/filter-sort-anomalies/filter-1.png)
 

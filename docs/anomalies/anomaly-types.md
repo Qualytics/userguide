@@ -8,15 +8,37 @@ Let’s get started 🚀
 
 A record anomaly identifies a single record (row) as anomalous and provides specific details regarding why it is considered anomalous. The simplest form of a record anomaly is a row that lacks an expected value for a field.
 
-![record-anomaly](../assets/datastores/anomaly-types/record-anomaly.png)
+## Example Use Case
 
-**Example**: Consider a data quality check that requires the salary field to be greater than 40,000. Based on this rule, any record that does not meet this condition will be identified and labeled as a record anomaly by Qualytics. In the sample table illustrated below, the row with id 3 will be flagged as a record anomaly because the salary of 30,000 is less than the required 40,000. This precise identification allows for targeted investigation and correction of specific data issues.
+**Scenario**
 
-| ID | Name | Age | Salary |
-| :---- | :---- | :---- | :---- |
-| 1. | John Doe | 28 | 50000 |
-| 2. | Jane Smith | 35 | 75000 |
-| 3. | Bob Johnson | 22 | 30000 |
+We have an **Employee dataset** used for payroll.
+
+**Rules:**
+
+- Every employee must have a **Salary greater than 40,000**.  
+- The dataset must contain these **four columns**: `id`, `name`, `age`, `salary`.  
+- The `name` must follow the `"First Last"` format.
+
+**Rule Checked:** Salary > 40,000
+
+### Input Table
+
+| id | name        | age | salary  |
+|----|------------|-----|---------|
+| 1  | John Doe    | 28  | 50,000 |
+| 2  | Jane Smith  | 35  | 75,000 |
+| 3  | Bob Johnson | 22  | 30,000 |
+
+## Detection Result (Record Anomaly)
+
+| id | name        | age | salary  | anomaly_reason                              |
+|----|------------|-----|---------|--------------------------------------------|
+| 3  | Bob Johnson | 22  | 30,000 | Salary is less than the required 40,000    |
+
+#### Why this is a Record Anomaly:
+
+The table structure is correct. **Only one row’s value violates the rule**.
 
 ## Shape Anomaly
 
@@ -25,14 +47,39 @@ A shape anomaly identifies an anomalous structure within the analyzed data. The 
 !!! note
     Sometimes, shape anomalies only affect a subset of the dataset. This means that only certain rows exhibit the structural issue, rather than the entire dataset.
 
-![shape-anomaly](../assets/datastores/anomaly-types/shape-anomaly.png)
+## Example Use Case
 
-**Example**: Consider a dataset where the s_comment field is expected to contain standard supplier comments. In the example below, two records have the text "instructions. furiously bold", which does not match the expected format. Because this text breaks the structural pattern defined for the field, these records are flagged as a shape anomaly.
+**Scenario**
 
-| s_suppkey | s_name | s_comment |
-| :---- | :---- | :---- |
-| 30683 | Supplier#000030683 | instructions. furiously bold |
-| 8591 | Supplier#000008591 | instructions. furiously bold |
+We have a **Sales Orders dataset**.
+
+**Rules:**
+- Required columns: `order_id`, `customer_id`, `order_date`, `total_amount`.  
+- `order_date` must be in **YYYY-MM-DD** format.
+
+## Shape Anomaly Example (Strong)
+
+## Input Table (Faulty)
+
+| order_id | customer_id | order_date  |
+|----------|-------------|------------|
+| 101      | C001        | 2025-08-10 |
+| 102      | C002        | 08/11/2025 |
+| 103      | C003        | 2025-08-12 |
+
+## Detection Result (Shape Anomalies)
+
+| order_id | customer_id | order_date  | total_amount | anomaly_reason                                    |
+|----------|-------------|------------|-------------|--------------------------------------------------|
+| 101      | C001        | 2025-08-10 | –           | Missing total_amount column                       |
+| 102      | C002        | 08/11/2025 | –           | Missing total_amount column; Date format incorrect |
+| 103      | C003        | 2025-08-12 | –           | Missing total_amount column                       |
+
+### Why this is a Shape Anomaly:
+
+- A **required column** (`total_amount`) is completely missing from the structure.  
+- A **field format** (`order_date` in row 102) does not match the required **YYYY-MM-DD** pattern.  
+- The problem is with the **shape/structure** of the dataset, not just a wrong value.
 
 !!! note
     When a shape anomaly affects only a portion of the dataset, Qualytics can count the number of rows that have the structural problem. This count is stored in the anomalous_record_count field, providing a clear measure of how widespread the issue is within the dataset. Example: Imagine a dataset that is supposed to have columns for id, name, age, and salary. If some rows are missing the salary column, this would be flagged as a shape anomaly. If this issue only affects 50 out of 1,000 rows, the anomalous_record_count would be 50, indicating that 50 rows have a structural issue. 

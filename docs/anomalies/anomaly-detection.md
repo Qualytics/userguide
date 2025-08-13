@@ -27,7 +27,7 @@ The Profile operation enables training of the collected data structures and thei
 
 **4. Create Authored Checks**
 
-Authored Checks are manually created data quality checks in Qualytics, defined by users either through the user interface (UI) or via API. These checks encapsulate specific data quality check, along with additional context such as associated notifications, tags, filters, and tolerances.  
+Authored Checks are manually created data quality checks in Qualytics, defined by users either through the user interface (UI) or via API. These checks encapsulate a specific data quality check, along with additional context such as associated notifications, tags, filters, and tolerances.  
 Authored checks can range from simple, template-based checks to more complex rules implemented through SQL or user-defined functions (UDFs) in Scala. By allowing users to define precise criteria for data quality, authored checks enable detailed monitoring and validation of data within the datastore, ensuring that it meets the specified standards and requirements.
 
 !!! note

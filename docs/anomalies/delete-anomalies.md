@@ -18,7 +18,7 @@ You can delete individual anomalies using one of two methods:
 
 ![archive-anomaly](../assets/datastores/delete-anomalies/archive-anomaly.png)
 
-**Step 2:** Locate the anomaly, that you want to delete and click on the **Delete** icon located on the right side of the anomaly.
+**Step 2:** Locate the anomaly that you want to delete and click on the **Delete** icon located on the right side of the anomaly.
 
 ![delete-anomaly](../assets/datastores/delete-anomalies/delete-anomaly.png)
 
@@ -34,7 +34,7 @@ After clicking on the **Delete** button, your anomaly is successfully deleted an
 
 ![delete-anomaly-1](../assets/datastores/delete-anomalies/delete-anomaly-1.png)
 
-**Step 2:** You will be directed to the anomaly details page. Click on the **Settings** icon located at the top right corner of the page and select **“Delete”** from the drop down menu.
+**Step 2:** You will be directed to the anomaly details page. Click on the **Settings** icon located at the top right corner of the page and select **“Delete”** from the dropdown menu.
 
 ![vertical-delete](../assets/datastores/delete-anomalies/vertical-delete.png)
 

@@ -12,7 +12,7 @@ You can archive individual anomalies either directly or through the action menu.
 
 ![archive-directly](../assets/datastores/archive-anomalies/archive-directly.png)
 
-**Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Archive”** from the drop down menu.
+**Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Archive”** from the dropdown menu.
 
 ![archive-option](../assets/datastores/archive-anomalies/archive-option.png)
 
@@ -40,7 +40,7 @@ After clicking on the **Archive** button your anomaly is moved to the archive an
 
 ![archive-action](../assets/datastores/archive-anomalies/archive-action.png)
 
-**Step 2:** You will be directed to the anomaly details page. Click on the **Settings** icon located at the top right corner of the interface and select **“Archive”** from the drop down menu.
+**Step 2:** You will be directed to the anomaly details page. Click on the **Settings** icon located at the top right corner of the interface and select **“Archive”** from the dropdown menu.
 
 ![vertical-archive](../assets/datastores/archive-anomalies/vertical-archive.png)
 
