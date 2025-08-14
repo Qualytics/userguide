@@ -161,6 +161,7 @@ nav:
         - Quality Check Template : datastore-checks/quality-check-template.md
         - Mark Check Favorite : datastore-checks/check-favorite.md
         - Filter and Sort : datastore-checks/filter-and-sort.md
+        - Quality Check Migration : datastore-checks/quality-check-migration.md
     - Observability:
       - Overview: observability/observability.md
     - Anomalies:
