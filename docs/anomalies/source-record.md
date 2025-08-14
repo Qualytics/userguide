@@ -13,6 +13,12 @@ If the Anomaly Type is **Record**, you will find the highlighted row(s) in the s
 !!! note 
     In anomaly detection, source records are displayed as part of the Anomaly Details. For a Record anomaly, the specific record is highlighted. For a Shape anomaly, 10 samples from the underlying anomalous records are highlighted.
 
+## Source Record Visualization
+
+Users can view source records with selectable display limits of 10, 100, 1,000, or 10,000 records for comprehensive dataset analysis. The interface includes sticky headers that remain visible when scrolling through large datasets, making navigation easier during data review.
+
+![record](../assets/datastores/source-records/visualization.png)
+
 ## Comparison Source Records
 
 Anomalies identified by the Is Replica Of data quality rule type, configured with Row Identifiers, are displayed with a detailed source record comparison. This visualization highlights differences between rows, making it easier to identify specific discrepancies.
