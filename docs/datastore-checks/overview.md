@@ -97,3 +97,9 @@ For more information on how to mark a check as favorite, please refer to the [Ma
 Filter and Sort options allow you to organize your checks by various criteria, such as Weight, Active Anomalies, Coverage, Created Date, and Rules. You can also apply filters to refine your list of checks based on Check Type, Asserted State (Passed, Failed, Not Asserted), Tags, Tables, and Fields.
 
 For more information on how to filter and sort, please refer to the [Filter and Sort](../datastore-checks/filter-and-sort.md) documentation.
+
+## Quality Check Migration
+
+Quality Check Migration allows you to transfer authored quality checks from one container to another, even across different datastores. This feature helps you reuse existing quality rules without manually recreating them in the target container. 
+
+For more information about **Quality Check Migration**, please refer to the [Quality Check Migration](../datastore-checks/quality-check-migration.md) documentation.
