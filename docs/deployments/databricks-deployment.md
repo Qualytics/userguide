@@ -4,7 +4,7 @@ This guide will walk you through deploying the Qualytics dataplane in your Datab
 
 
 <figure markdown>
-  [![Databricks Deployment Architecture](../assets/deployments/paas_architectura_diagram.jpg)](../assets/deployments/qualytics-with-databricks-architectural-diagram.jpg)
+  [![Databricks Deployment Architecture](../assets/deployments/qualytics-with-databricks-architectural-diagram.jpg)](../assets/deployments/qualytics-with-databricks-architectural-diagram.jpg)
   <figcaption>Deployment Architecture with Databricks</figcaption>
 </figure>
 
