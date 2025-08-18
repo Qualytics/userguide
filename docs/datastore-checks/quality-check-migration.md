@@ -35,7 +35,7 @@ Define where the selected checks will be migrated:
 | :---- | :---- | :---- |
 | 1. | Source Datastore | The datastore where the selected quality checks will be migrated. |
 | 2. | Table | The specific target container (e.g., table) within the datastore where the checks will be added. |
-| 3. | Assign Additional Tags | Let's you add tags to migrated checks to help with categorization and filtering in the target datastore. |
+| 3. | Assign Additional Tags | Lets you add tags to migrated checks to help with categorization and filtering in the target datastore. |
 
 ![migration-2](../assets/datastore-checks/checks-migration/migration-2.png)
 
@@ -72,21 +72,13 @@ This way, both tables follow the same validation rules, saving time and keeping 
 
 ## Visual Diagram
 
-```text
-
-+------------------------------+  
-|    CDC_INPATIENT_BEDS_ALL    |  
-| (Source: 12 Authored Checks) |  
-+------------------------------+  
-             |  
-             | Migrate  
-             v  
-+-------------------------------+  
-|   CDC_INPATIENT_BEDS_COVID    |  
-|  (Destination: Draft Checks)  |  
-+-------------------------------+
-
-```
+=== "Flowchart"
+    ``` mermaid
+    graph TD
+    A[Start] --> B[CDC_INPATIENT_BEDS_ALL Source: 12 Authored Checks]
+    B -->|Migrate| C[CDC_INPATIENT_BEDS_COVID Destination: Draft Checks]
+    C --> D[End]
+    ```
 ## Tips
 
 * **Review before activation:** Migrated checks are saved as Draft, so you can make adjustments before using them.
