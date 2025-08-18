@@ -224,6 +224,7 @@ nav:
       - printing.md
     - Misc:
       - deployments/overview.md
+      - deployments/databricks-deployment.md
       - upgrades/qualytics-single-tenant-instance.md
       - operation-automation/automated-tasks-with-cron.md
       - dfs-globbing/how-dfs-filename-globbing-works.md

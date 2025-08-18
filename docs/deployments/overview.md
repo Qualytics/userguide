@@ -14,6 +14,12 @@ The following two deployment models are supported for the Qualytics platform:
 - READ access is required to connect a datastore to the Qualytics Platform
 - WRITE access to Customer chosen datastore is required for enrichment data
 
+### Databricks Deployment
+
+For organizations using Databricks as their data processing platform, Qualytics provides a specialized dataplane deployment option. This allows the Qualytics dataplane to run directly within your Databricks environment as a continuous job.
+
+For detailed instructions on setting up the Qualytics dataplane in Databricks, see our [Databricks Deployment Guide](databricks-deployment.md).
+
 ### <a name="paas"></a>__Model 1: Platform as a Service (PaaS) Deployment__
 
 #### Overview
