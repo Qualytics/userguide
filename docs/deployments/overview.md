@@ -41,7 +41,6 @@ Depending on Customer's cloud infrastructure, this option uses one of the follow
 #### Network Requirements
 This model requires that the provisioned VPC have the ability to access Customer's datastore(s). In the case of publicly routable datastores such as Snowflake or S3, no extra configuration is required. In the case of private datastore(s) with no public IP address or route, the hosted VPC will require private routing using: PrivateLink, Transit Gateway peering, point to point VPN, or similar support to enable network access to that private datastore.
 
-
 #### Considerations
 This is Qualytics' preferred model of deployment. In this model, Qualytics is fully responsible for the provisioning and operation of the Qualytics platform. Customer is only responsible for granting the Qualytics platform necessary access.
 
@@ -195,6 +194,7 @@ kubectl get ingress -n qualytics
 You have two options for DNS configuration:
 
 ###### Option A: Qualytics-managed DNS (Recommended)
+
 Send your [account manager](mailto://hello@qualytics.co) the IP address from step 3. Qualytics will assign a DNS record under `*.qualytics.io` (e.g., `https://acme.qualytics.io`) and handle SSL certificate management.
 
 ###### Option B: Custom Domain
@@ -208,15 +208,11 @@ If using your own domain:
 
 Contact your [account manager](mailto://hello@qualytics.co) for assistance with either option.
 
-#### Can I run a fully "air-gapped" Deployment
+#### Can I run a fully "air-gapped" deployment?
 
-Yes. The only egress requirement for a standard self-hosted Qualytics deployment is to <https://auth.qualytics.io> which provides Auth0-powered federated authentication. 
+Yes. The only egress requirement for a standard self-hosted Qualytics deployment is to <https://auth.qualytics.io> which provides Auth0-powered federated authentication. This is recommended for ease of installation and support, but not a strict requirement. 
 
-This is recommended for ease of installation and support, but not a strict requirement. 
-
-If you require a fully private deployment with no access to the public internet, you can instead configure an OpenID Connect (OIDC) integration with your enterprise identity provider (IdP). 
-
-Simply contact your Qualytics account manager for more details.
+If you require a fully private deployment with no access to the public internet, you can instead configure an OpenID Connect (OIDC) integration with your enterprise identity provider (IdP). Simply contact your Qualytics account manager for more details.
 
 #### Troubleshooting
 
@@ -254,4 +250,3 @@ kubectl describe pod <pod-name> -n qualytics
 # Get spark application logs
 kubectl logs -f pod qualytics-spark-driver -n qualytics
 ```
-
