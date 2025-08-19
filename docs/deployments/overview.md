@@ -69,7 +69,3 @@ This model requires that the Kubernetes nodes supporting Qualytics' analytics en
 This model supports organizations that due to regulatory or other restrictions cannot permit READ access to their datastore(s) from a third-party hosted product. This model requires Customer to manage and operate the appropriate infrastructure and ensure it is granted all necessary access to the targeted datastore(s).
 
 For deployments to supported commercial Kubernetes control planes (EKS, AKS, GKE, OKE) and at the Customer's discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer. Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](../upgrades/qualytics-single-tenant-instance.md).
-
-#### Air-gapped Deployment
-
-Yes. The only egress requirement for a standard self-hosted Qualytics deployment is to <https://auth.qualytics.io> which provides Auth0-powered federated authentication. This is recommended for ease of installation and support, but not a strict requirement. If you require a fully private deployment with no access to the public internet, you can instead configure an OpenID Connect (OIDC) integration with your enterprise identity provider (IdP). Simply contact your Qualytics account manager for more details.
