@@ -25,6 +25,11 @@ For detailed instructions on setting up the Qualytics dataplane in Databricks, s
 #### Overview
 In this model, the Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer's choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.
 
+<figure markdown>
+  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.jpg)](../assets/deployments/paas_architectural_diagram.jpg)
+  <figcaption>PaaS Deployment Architecture</figcaption>
+</figure>
+
 #### Supported Cloud Providers
 Depending on Customer's cloud infrastructure, this option uses one of the following:
 
@@ -36,18 +41,18 @@ Depending on Customer's cloud infrastructure, this option uses one of the follow
 #### Network Requirements
 This model requires that the provisioned VPC have the ability to access Customer's datastore(s). In the case of publicly routable datastores such as Snowflake or S3, no extra configuration is required. In the case of private datastore(s) with no public IP address or route, the hosted VPC will require private routing using: PrivateLink, Transit Gateway peering, point to point VPN, or similar support to enable network access to that private datastore.
 
-<figure markdown>
-  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.jpg)](../assets/deployments/paas_architectural_diagram.jpg)
-  <figcaption>Deployment Architecture</figcaption>
-</figure>
-
 #### Considerations
 This is Qualytics' preferred model of deployment. In this model, Qualytics is fully responsible for the provisioning and operation of the Qualytics platform. Customer is only responsible for granting the Qualytics platform necessary access.
 
 ### <a name="customer-managed"></a>__Model 2: Customer-Managed Deployment__
 
 #### Overview
-In this model, the Qualytics platform is deployed to a CNCF compliant Kubernetes control plane on Customer managed infrastructure, which can include on-premises deployments.
+In this model, the Qualytics platform is deployed to a CNCF compliant Kubernetes control plane on Customer managed infrastructure, which can include on-premises deployments. This chart will deploy a single-tenant instance of the qualytics platform to a [CNCF compliant](https://www.cncf.io/certification/software-conformance/) kubernetes control plane.
+
+<figure markdown>
+  [![Customer-Managed Deployment Architecture](../assets/deployments/deployment_arch_diagram.jpg)](../assets/deployments/deployment_arch_diagram.jpg)
+  <figcaption>Customer-Managed Deployment Architecture</figcaption>
+</figure>
 
 #### System Requirements
 This option supports deployments to any Kubernetes control plane that meets the following system requirements:
