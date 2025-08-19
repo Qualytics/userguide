@@ -150,7 +150,8 @@ __Optional configurations:__
 
 For advanced configuration, refer to the full `charts/qualytics/values.yaml` file which contains all available options.
 
-Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assistance.
+!!! info 
+    Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assistance.
 
 ##### Step 3: Deploy Qualytics to your cluster
 
@@ -206,7 +207,9 @@ If using your own domain:
 3. Configure SSL certificates (enable `certmanager` or provide your own)
 4. Update any firewall rules to allow traffic to your domain
 
-Contact your [account manager](mailto://hello@qualytics.co) for assistance with either option.
+
+!!! info
+    Contact your [account manager](mailto://hello@qualytics.co) for assistance with either option.
 
 #### Can I run a fully "air-gapped" deployment?
 
