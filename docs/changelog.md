@@ -2,6 +2,27 @@
 
 ## Release Notes
 
+### 2025.8.20 { id=2025.8.20 }
+
+#### Feature Enhancements
+
+- Announcing Pause Schedule operation
+    - Users can now deactivate and reactivate schedules without losing configuration.
+    - Added a new filter option to show only deactivated schedules.
+
+- Introducing Test Connection capability for existing connections
+    - Users can now verify connection changes before saving when editing a connection configurations.
+
+#### General Fixes and Improvements
+
+- Fixed Data Preview filtering to properly indicate that computed fields are not supported in WHERE clauses and not exposing as auto complete options.
+
+- Corrected inconsistent formatting in operation details where containers read appeared larger than total containers.
+
+- Resolved filter UI issues where selected items caused layout misalignment.
+
+- General Fixes and Improvements.
+
 ### 2025.8.8 { id=2025.8.8 }
 
 #### Feature Enhancements
@@ -19,6 +40,8 @@
     - Users can now search by ID or name using a single search field.
 
 #### General Fixes and Improvements
+
+- Updated Dataplane to Spark 4
 
 - Fixed Is Replica Of dry run validation to correctly handle filtered datasets.
 
