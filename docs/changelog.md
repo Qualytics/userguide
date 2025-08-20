@@ -6,6 +6,10 @@
 
 #### Feature Enhancements
 
+- Introducing Bulk Quality Check Creation through Templates
+    - Users can now create multiple quality checks from a single template.
+    - Select multiple target containers across different datastores and apply the same template configuration.
+
 - Announcing Pause Schedule operation
     - Users can now deactivate and reactivate schedules without losing configuration.
     - Added a new filter option to show only deactivated schedules.
@@ -13,9 +17,17 @@
 - Introducing Test Connection capability for existing connections
     - Users can now verify connection changes before saving when editing a connection configurations.
 
+- Improved isReplicaOf check to better handle incremental data comparisons.
+
+- Added support for connecting to Kerberos-secured Hive datastores.
+
 #### General Fixes and Improvements
 
 - Fixed Data Preview filtering to properly indicate that computed fields are not supported in WHERE clauses and not exposing as auto complete options.
+
+- Fixed issues related to ANSI SQL compliance in Spark 4.
+
+- Fixed issues with nested data types in the Databricks connector.
 
 - Corrected inconsistent formatting in operation details where containers read appeared larger than total containers.
 
