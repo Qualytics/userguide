@@ -16,11 +16,11 @@ This guide is designed to help you optimize your Snowflake environment for perfo
 
 ### Warehouse & Role Configuration
 
-This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimum requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
+This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimal requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
 
 #### Create a Warehouse
 
-Use the following command to create a warehouse with minimum requirements:
+Use the following command to create a warehouse with minimal requirements:
 
 ```sql
 CREATE WAREHOUSE qualytics_wh
