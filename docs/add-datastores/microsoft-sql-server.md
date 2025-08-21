@@ -256,7 +256,7 @@ This section provides sample payloads for creating a Microsoft SQL Server datast
         "schema": "sqlserver_schema",
         "enrich_only": false,
         "trigger_catalog": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ```
 ### Creating an Enrichment Datastore
@@ -279,7 +279,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
             "host": "sqlserver_host",
             "port": "sqlserver_port",
             "username": "sqlserver_username",
-            "password": "sqlserver_password",
+            "password": "sqlserver_password"
         }
     }
     ```
@@ -291,7 +291,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "database": "sqlserver_database",
         "schema": "sqlserver_enrichment_schema",
         "enrich_only": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
