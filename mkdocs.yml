@@ -1,5 +1,8 @@
 site_name: User Guide
-site_url: http://localhost:8001/userguide/
+## DEPLOYMENT URL
+site_url: https://userguide.qualytics.io/
+## LOCAL URL
+#site_url: http://localhost:8001/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
