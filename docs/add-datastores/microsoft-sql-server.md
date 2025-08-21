@@ -1,6 +1,6 @@
 # Microsoft SQL Server
 
-Adding and configuring Microsoft SQL Server connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring Microsoft SQL Server connection within Qualytics empowers the platform to build a symbolic link with your database to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Microsoft SQL Server as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -112,9 +112,9 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1**: Click on the caret button and select Add Enrichment Datastore.
+**Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
 
 ![caret-button](../assets/datastores/microsoft-sql-server/add-enrichment-light.png)
 
@@ -149,7 +149,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 ![secret-management](../assets/datastores/microsoft-sql-server/secret-management-light.png)
 
-**Step 3:** The configuration form, requesting credential details after selected **enrichment datastore** connector.
+**Step 3:** The configuration form, requesting credential details after selecting the **enrichment datastore** connector.
 
 ![enrichment-datastore-explain](../assets/datastores/microsoft-sql-server/enrichment-datastore-explains-light.png)
 
@@ -181,11 +181,11 @@ Close the Success dialog and the page will automatically redirect you to the **S
 
 If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
-**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+**Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
 ![use-enrichment-datastore](../assets/datastores/microsoft-sql-server/use-enrichment-light.png)
 
-**Step 2:**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 ![select-existing-enrichment-datastore](../assets/datastores/microsoft-sql-server/select-existing-enrichment-datastore-light.png)
 
