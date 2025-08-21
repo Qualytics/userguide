@@ -80,17 +80,17 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 ![use-existing-datastore](../assets/datastores/db2/use-existing-datastore-light.png)
 
-!!!note
+!!! note
      If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
 ![test-connection-for-existing-datastore](../assets/datastores/db2/test-connection-for-existing-datastore-light.png)
 
-!!!note
+!!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!tip
+!!! tip
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
@@ -113,7 +113,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select **Add Enrichment Datastore**.
 
@@ -150,7 +150,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 ![secret-management](../assets/datastores/db2/secret-management-light.png)
 
-**Step 3:** The configuration form, requesting credential details after selected **enrichment datastore** connector.
+**Step 3:** The configuration form, requesting credential details after selecting the **enrichment datastore** connector.
 
 ![enrichment-datastore-explain](../assets/datastores/db2/enrichment-datastore-explain-light.png)
 
@@ -260,7 +260,7 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
         "schema": "db2_schema",
         "enrich_only": false,
         "trigger_catalog": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ```
 
@@ -299,7 +299,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "database": "db2_database",
         "schema": "db2_enrichment_schema",
         "enrich_only": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ``` 
 
