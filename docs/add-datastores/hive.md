@@ -58,7 +58,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 2. | Port(Required) | Specify the **Port** number. |
 | 3. | User(Required) | Enter the **User ID** to connect. |
 | 4. | Password(Required) | Enter the **password** to connect to the database. |
-| 5. | Scheme(Required) | Define the schema within the database that should be used. |
+| 5. | Schema(Required) | Define the schema within the database that should be used. |
 | 6. | Teams(Required) | Select one or more teams from the dropdown to associate with this source datastore. |
 | 7. | Initial Cataloging(Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
@@ -114,9 +114,9 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1**: Click on the caret button and select Add Enrichment Datastore.
+**Step 1:** Click on the caret button and select Add Enrichment Datastore.
 
 ![caret](../assets/datastores/hive/caret-datastore-light.png)
 
@@ -156,11 +156,11 @@ Close the Success dialog and the page will automatically redirect you to the **S
 
 If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
-**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+**Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
 ![caret](../assets/datastores/hive/carett-datastore-light.png)
 
-**Step 2:**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 ![link](../assets/datastores/hive/linkk-datastore-light.png)
 
