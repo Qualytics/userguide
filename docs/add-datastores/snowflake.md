@@ -70,6 +70,46 @@ GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE q
 GRANT ROLE qualytics_readwrite_role TO USER <user_name>;
 ```
 
+## Authentication Changes in Snowflake
+
+Snowflake has announced a migration plan to phase out **Basic authentication** (username and password) for service accounts in favor of **Key-Pair authentication**. While Basic authentication is still supported, organizations should begin planning their migration to ensure uninterrupted service.
+
+### User Type Classification
+
+Snowflake differentiates between user types based on their intended purpose:
+
+| User Type | Purpose | Current Authentication Support |
+|-----------|---------|-------------------------------|
+| **Human users** (`TYPE=PERSON`) | Interactive users accessing Snowflake | Basic authentication supported |
+| **Service users** (`TYPE=SERVICE`) | Applications and services (like Qualytics) | Key-Pair authentication recommended |
+| **Legacy service** (`TYPE=LEGACY_SERVICE`) | Temporary transition type | Basic authentication (being phased out) |
+
+### Migration Timeline
+
+Snowflake's migration plan includes:
+
+1. **Current Phase**: Basic authentication still supported for service accounts
+2. **Transition Phase**: `LEGACY_SERVICE` user type available for organizations needing additional migration time
+3. **Future Phase**: Basic authentication will be fully deprecated for service users
+
+### Recommended Actions
+
+To prepare for this transition:
+
+- **New connections**: Use Key-Pair authentication when creating new Snowflake datastores
+- **Existing connections**: Plan migration from Basic to Key-Pair authentication
+- **Service accounts**: Ensure proper user type classification (`TYPE=SERVICE`)
+
+### Additional Resources
+
+For detailed information on the migration plan and implementation:
+
+- [Snowflake Security MFA Rollout (User Types & Deprecation)](https://docs.snowflake.com/en/user-guide/security-mfa-rollout){:target="_blank"}
+- [Snowflake Key-Pair Authentication Guide](https://docs.snowflake.com/en/user-guide/key-pair-auth){:target="_blank"}
+
+!!! info "Migration Recommendation"
+    While Basic authentication is currently supported, migrating to Key-Pair authentication ensures your Snowflake connections remain secure and future-proof as Snowflake implements their deprecation timeline.
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Snowflake is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
