@@ -16,11 +16,11 @@ This guide is designed to help you optimize your Snowflake environment for perfo
 
 ### Warehouse & Role Configuration
 
-This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimum requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
+This section provides instructions for configuring Snowflake warehouses and roles. It includes creating a warehouse with minimal requirements, assigning a default warehouse for a user, creating custom read-only and read-write roles, and granting privileges to these roles for data access and modification.
 
 #### Create a Warehouse
 
-Use the following command to create a warehouse with minimum requirements:
+Use the following command to create a warehouse with minimal requirements:
 
 ```sql
 CREATE WAREHOUSE qualytics_wh
@@ -69,6 +69,46 @@ GRANT SELECT ON ALL TABLES IN SCHEMA <database_name>.<qualytics_schema> TO ROLE 
 GRANT SELECT ON ALL VIEWS IN SCHEMA <database_name>.<qualytics_schema> TO ROLE qualytics_readwrite_role;
 GRANT ROLE qualytics_readwrite_role TO USER <user_name>;
 ```
+
+## Authentication Changes in Snowflake
+
+Snowflake has announced a migration plan to phase out **Basic authentication** (username and password) for service accounts in favor of **Key-Pair authentication**. While Basic authentication is still supported, organizations should begin planning their migration to ensure uninterrupted service.
+
+### User Type Classification
+
+Snowflake differentiates between user types based on their intended purpose:
+
+| User Type | Purpose | Current Authentication Support |
+|-----------|---------|-------------------------------|
+| **Human users** (`TYPE=PERSON`) | Interactive users accessing Snowflake | Basic authentication supported |
+| **Service users** (`TYPE=SERVICE`) | Applications and services (like Qualytics) | Key-Pair authentication recommended |
+| **Legacy service** (`TYPE=LEGACY_SERVICE`) | Temporary transition type | Basic authentication (being phased out) |
+
+### Migration Timeline
+
+Snowflake's migration plan includes:
+
+1. **Current Phase**: Basic authentication still supported for service accounts
+2. **Transition Phase**: `LEGACY_SERVICE` user type available for organizations needing additional migration time
+3. **Future Phase**: Basic authentication will be fully deprecated for service users
+
+### Recommended Actions
+
+To prepare for this transition:
+
+- **New connections**: Use Key-Pair authentication when creating new Snowflake datastores
+- **Existing connections**: Plan migration from Basic to Key-Pair authentication
+- **Service accounts**: Ensure proper user type classification (`TYPE=SERVICE`)
+
+### Additional Resources
+
+For detailed information on the migration plan and implementation:
+
+- [Snowflake Security MFA Rollout (User Types & Deprecation)](https://docs.snowflake.com/en/user-guide/security-mfa-rollout){:target="_blank"}
+- [Snowflake Key-Pair Authentication Guide](https://docs.snowflake.com/en/user-guide/key-pair-auth){:target="_blank"}
+
+!!! info "Migration Recommendation"
+    While Basic authentication is currently supported, migrating to Key-Pair authentication ensures your Snowflake connections remain secure and future-proof as Snowflake implements their deprecation timeline.
 
 ## Add a Source Datastore
 
