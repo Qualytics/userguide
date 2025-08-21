@@ -260,7 +260,7 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
         "schema": "db2_schema",
         "enrich_only": false,
         "trigger_catalog": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ```
 
@@ -299,7 +299,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "database": "db2_database",
         "schema": "db2_enrichment_schema",
         "enrich_only": true,
-        "connection_id": connection-id
+        "connection_id": connection_id
     }
     ``` 
 
