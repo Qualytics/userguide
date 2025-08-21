@@ -233,7 +233,7 @@ This section provides a sample payload for creating a datastore. Replace the pla
             "schema": "hive_schema",
             "enrich_only": false,
             "trigger_catalog": true,
-            "connection_id": connection-id
+            "connection_id": connection_id
         }
     ```
 
