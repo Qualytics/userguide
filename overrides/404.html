@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="md-content" data-md-component="content">
+  <article class="md-content__inner md-typeset">
+
+    <h1>404 - Page Not Found</h1>
+
+    <p>Oops! The page you're looking for doesn't exist.</p>
+
+    <h2>What happened?</h2>
+
+    <p>The page you requested could not be found. This might happen because:</p>
+
+    <ul>
+      <li>The URL was typed incorrectly</li>
+      <li>The page has been moved or deleted</li>
+      <li>The link you followed is broken</li>
+    </ul>
+
+    <h2>What can you do?</h2>
+
+    <ul>
+      <li><a href="{{ config.site_url | default('/', true) }}">Go back to the homepage</a></li>
+      <li>Use the search function to find what you're looking for</li>
+      <li>Check the navigation menu for available sections</li>
+      <li>Contact support if you think this is an error</li>
+    </ul>
+
+    <hr>
+
+    <p><em>Need help? <a href="mailto:support@qualytics.co">Contact our support team</a></em></p>
+
+  </article>
+</div>
+{% endblock %}
