@@ -1,6 +1,6 @@
 # MySQL
 
-Adding and configuring MySQL connection within Qualytics empowers the platform to build a symbolic link with your database to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a MySQL connection within Qualytics empowers the platform to build a symbolic link with your database to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add MySQL as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -28,9 +28,9 @@ A source datastore is a storage location used to connect to and access data from
 
 ### Option I: Create a Source Datastore with a new Connection
 
-If the toggle for **Add New existing connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1:** Select the **MySQL** connector from the dropdown list and add connection details such as Secret Management, host, port, username, password, and database.
+**Step 1:** Select the **MySQL** connector from the dropdown list and add connection details such as Secrets Management, host, port, username, password, and database.
 
 ![add-datastore-credentials](../assets/datastores/mysql/add-datastore-credentials-light.png)
 
@@ -74,7 +74,7 @@ If the credentials and provided details are verified, a success message will be 
 
 If the toggle for **Add new connection** is turned off, then this will prompt you to configure the source datastore using the existing connection details.
 
-**Step 1:** Select a "**connection**" to reuse existing credentials.
+**Step 1:** Select a **connection** to reuse existing credentials.
 
 ![use-existing-datastore](../assets/datastores/mysql/use-existing-datastore-light.png)
 
