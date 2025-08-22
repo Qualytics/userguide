@@ -272,7 +272,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
             "host": "mysql_host",
             "port": "mysql_port",
             "username": "mysql_username",
-            "password": "mysql_password",
+            "password": "mysql_password"
         }
     }
     ```
