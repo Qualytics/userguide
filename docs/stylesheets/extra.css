@@ -94,3 +94,46 @@
   display: table;
   max-width: 100%;
 }
+
+.md-tabs {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.md-tabs__item {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 36px;
+
+  .md-tabs__link {
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 4px;
+    align-items: center;
+  }
+
+  :hover {
+    background-color: #33333320;
+  }
+}
+
+.md-tabs__item--active {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 36px;
+
+  .md-tabs__link {
+    cursor: default;
+    color: #ffffff;
+    background-color: #007CF2;
+  }
+}
