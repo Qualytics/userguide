@@ -30,7 +30,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add new connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1:** Select the **Oracle** connector from the dropdown list and add connection details such as such as Secret Management, host, port, username, sid, and schema.
+**Step 1:** Select the **Oracle** connector from the dropdown list and add connection details such as Secret Management, host, port, username, sid, and schema.
 
 ![add-source-datastore-details](../assets/datastores/oracle/add-source-datastore-details-light.png)
 
@@ -83,7 +83,7 @@ If the toggle for **add new connection** is turned off, then this will prompt yo
 !!! note
     If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
 
-**Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
+**Step 2:** Click on the **Test Connection** button to verify the existing connection details. If the connection details are verified, a success message will be displayed.
 
 ![test-existing-connection](../assets/datastores/oracle/test-existing-connection-light.png)
 
@@ -140,7 +140,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 !!! note
     Qualytics does not support Oracle as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
-**Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore* has been successfully verified.
+**Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
 ![test-datastore](../assets/datastores/oracle/test-datastore-light.png)
 
@@ -150,7 +150,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 When the configuration process is finished, a modal will display a success  message indicating that your datastore has been successfully added.
 
-Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
+Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
 ![new-datastore](../assets/datastores/oracle/new-datastore-light.png)
 
@@ -187,7 +187,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 ![click-finish-datastore](../assets/datastores/oracle/click-finish-datastore-light.png)
 
-When the configuration process is finished, a modal will display a success message** indicating that your data has been successfully added**.
+When the configuration process is finished, a modal will display a success message indicating that your data has been successfully added**.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -195,9 +195,9 @@ Close the success message and you will be automatically redirected to the **Sour
 
 ## API Payload Examples
 
-### Creating  Source a Datastore
+### Creating a Source Datastore
 
-This section provides a sample payload for creating a Oracle datastore. Replace the placeholder values with actual data relevant to your setup.
+This section provides a sample payload for creating an Oracle datastore. Replace the placeholder values with actual data relevant to your setup.
 
 **Endpoint (Post)**: ```/api/datastores (post)```
 
