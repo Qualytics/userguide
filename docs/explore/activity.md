@@ -43,7 +43,7 @@ Runs provide a complete record of all executed operations across various source 
 
 ### Activity Heatmap
 
-The Activity heatmap represents activity levels over a period, with each square indicating a day and the color intensity representing the number of operations or activities on that day. It is useful for tracking the number of operations performed on each day within a specific timeframe.
+The Activity Heatmap represents activity levels over a period, with each square indicating a day and the color intensity representing the number of operations or activities on that day. It is useful for tracking the number of operations performed on each day within a specific timeframe.
 
 !!! note 
     You can click on any of the squares from the Activity Heatmap to filter operations.  
@@ -62,7 +62,7 @@ For demonstration purposes, we have selected the profile operation.
 
 ![profile](../assets/explore/activity/profile-light.png)
 
-**Step 2:** After clicking, a dropdown will appear, displaying the details of the selected operation.
+**Step 2:** After clicking, a drop-down will appear, displaying the details of the selected operation.
 
 ![drop-down](../assets/explore/activity/drop-light.png)
 
