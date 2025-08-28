@@ -6,7 +6,7 @@ Let's get started 🚀
 
 ## Navigation to Connection
 
-**Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
+**Step 1**: Log in to your Qualytics account and click the **Settings** button on the left sidebar of the interface. 
 
 ![global-setting](../../assets/connections/global-setting-light-1.png)
 
@@ -58,7 +58,7 @@ This allows you to remove outdated or unnecessary connections to maintain a clea
 **Step 2**: A modal window **Delete Connection** will appear.
 
 !!! warning 
-    Source Datastores and Enrichment Datastores associated must be removed before deleting the connection.
+    Source Datastores and Enrichment Datastores that are associated must be removed before deleting the connection.
 
 ![delete-window](../../assets/connections/delete-window-light-8.png)
 
