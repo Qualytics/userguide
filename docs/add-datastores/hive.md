@@ -54,7 +54,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 | REF. |             FIELDS |                 ACTIONS |
 | :---- | :---- | :---- |
-| 1. | Host(Required) | Get **Hostname** from your account and Hive add it to this field. |
+| 1. | Host(Required) | Get **Hostname** from your Hive account and add it to this field. |
 | 2. | Port(Required) | Specify the **Port** number. |
 | 3. | Authentication | You can choose between Basic Authentication and Kerberos Authentication for validating and securing the connection to your Hive instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Hive. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Hive.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Kerberos Authentication:** This method uses Kerberos tickets for authentication. It relies on a secure, ticket-based mechanism managed by your environment’s Kerberos configuration. <ul> <li>**Type:** Select Kerberos from the authentication type dropdown.</li><li>**Principal:** Enter the Kerberos principal (for example: `hive/_HOST@DOMAIN.COM`) that Qualytics will use to connect to Hive. </li> </ul>|
 | 4. | Schema(Required) | Define the schema within the database that should be used. |
@@ -101,7 +101,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ![next](../assets/datastores/hive/next-datastore-light.png)
 
-**Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+**Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![link](../assets/datastores/hive/link-datastore-light.png)
 
