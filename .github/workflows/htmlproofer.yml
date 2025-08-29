@@ -1,0 +1,49 @@
+# .github/workflows/check-links.yml
+
+name: Check Documentation Links
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install mkdocs-htmlproofer-plugin
+      
+      - name: Check links
+        run: |
+          # Run build and check for broken links
+          mkdocs build 2>&1 | tee build.log
+          
+          # Fail if any broken links found
+          if grep -q "invalid url" build.log; then
+            echo "❌ Broken links found!"
+            grep "invalid url" build.log
+            exit 1
+          fi
+          
+          echo "✅ All links are valid!"
