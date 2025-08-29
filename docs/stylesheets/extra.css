@@ -29,20 +29,26 @@
   --md-footer-bg-color--dark: #FFFFFF;
 
   --md-footer-fg-color: #007CF2;
+  /* Copyrights text */
   --md-footer-fg-color--light: #000000;
   --md-footer-fg-color--lighter: #000000;
 
   --md-primary-bg-color: #000000;
   --md-default-bg-color: #F1F6FB;
 
-  --md-accent-fg-color: #001A49;
+  /* Links in Search item */
+  --md-accent-fg-color: #007CF2;
 
   /* Tip box */
   --md-admonition-bg-color: #FFFFFF;
   /* Code block */
   --md-code-bg-color: #FFFFFF;
   /* Link Color */
-  --md-typeset-a-color: #007CF2;
+  --md-typeset-a-color: #007cf2;
+
+  --md-navigation-link: #000000;
+  /* Next and Previous text */
+  --md-footer-title-color: #000000;
 }
 
 /* ===== DARK MODE ===== */
@@ -76,20 +82,26 @@
   --md-footer-bg-color--dark: #222c46;
 
   --md-footer-fg-color: #007CF2;
+  /* Copyrights text */
   --md-footer-fg-color--light: #FFFFFF;
   --md-footer-fg-color--lighter: #FFFFFF;
 
   --md-primary-bg-color: #FFFFFF;
   --md-default-bg-color: #161F39;
 
-  --md-accent-fg-color: #FFFFFF;
+  /* Links in Search item */
+  --md-accent-fg-color: #007CF2;
 
   /* Tip box */
   --md-admonition-bg-color: #222c46;
   /* Code block */
   --md-code-bg-color: #222c46;
   /* General Link Color */
-  --md-typeset-a-color: #007CF2;
+  --md-typeset-a-color: #007CF2 !important;
+
+  --md-navigation-link: #FFFFFF;
+  /* Next and Previous text */
+  --md-footer-title-color: #FFFFFF;
 }
 
 .md-typeset spam#required>code {
@@ -132,7 +144,6 @@
 .md-typeset h3 {
   font-weight: 600;
 }
-
 
 .grayscale {
   filter: grayscale(100%);
@@ -235,11 +246,8 @@
 }
 
 /* Innter button (view or edit page button) */
-.md-content__button {
-
-  :hover {
-    opacity: 0.7;
-  }
+.md-content__button:hover {
+  opacity: 0.7;
 }
 
 /* Back to top button */
@@ -262,7 +270,6 @@
 .md-nav__link[href]:hover {
   color: var(--q-primary);
 }
-
 
 /* Removing the logo (by default MKDocs generate a default icon when the `logo` property is not set) */
 .md-logo img,
@@ -288,4 +295,32 @@
 /* Change to dark mode logo */
 [data-md-color-scheme="slate"] .md-logo {
   background-image: url("../assets/Logo-dark.svg");
+}
+
+/* Left and Right navigation text links */
+.md-footer__title {
+  color: var(--md-footer-title-color);
+}
+
+/* Text Links */
+.md-typeset a,
+.md-typeset a:before,
+.md-typeset a:after,
+.md-typeset a::after {
+  color: var(--q-primary);
+  text-decoration: none;
+
+  u {
+    text-decoration: none;
+  }
+
+  u:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+}
+
+/* Feedback button hover */
+.md-feedback__icon:not(:disabled).md-icon:hover {
+  opacity: 0.7;
 }
