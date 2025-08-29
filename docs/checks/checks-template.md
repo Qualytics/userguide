@@ -27,7 +27,7 @@ A modal window titled **“Check Template Details”** will appear, providing yo
 - **Tags**  
 - **Additional Metadata**  
 
-**1. Rule Type (Required):** Select a Rule Type from the dropdown menu for data validation, such as checking for non-null values, matching patterns, comparing numerical values, or verifying date-time constraints. Each rule type defines the specific validation logic to be applied.
+**1. Rule Type (Required):** Select a Rule Type from the dropdown menu for data validation, such as checking for non-null values, matching patterns, comparing numerical values, or verifying datetime constraints. Each rule type defines the specific validation logic to be applied.
 
 For more details about the available rule types, refer to the "[Check Rule Types](./overview-of-a-check.md#check-rule-types)" section.
 
@@ -124,7 +124,7 @@ The Definition section displays the configuration details of a check template. I
 | REF. | Field | Description |
 | :---- | :---- | :---- |
 | 1 | Target | Defines the filter condition applied to the dataset. If no filter is specified, the check template applies to all data in the target scope.|
-| 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count checks**: Shows "Number of Field". </li><li> **Metric checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
+| 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count checks**: Shows "Number of Fields". </li><li> **Metric checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
 | 3 | Metadata | Displays any custom metadata properties linked to the template. If none are defined, this section remains empty. |
 
 ![definition-fields](../assets/checks/add-check-template/definition-fields.png)
@@ -141,7 +141,7 @@ You can hover over a timestamp to view the full date and last modified time.
 
 ## Checks
 
-The **Checks** tab provides a comprehensive view of all checks linked to the chosen datastore, container, or field, along with their source details such as computed table and field information. By clicking options such as **Active, Important,Favorite, Draft, Archived** (Invalid and Discarded), or **All,** users can instantly view checks based on their status. This categorization helps in organizing, reviewing, and managing checks more effectively for consistent data quality oversight.
+The **Checks** tab provides a comprehensive view of all checks linked to the chosen datastore, container, or field, along with their source details such as computed table and field information. By clicking options such as **Active, Important, Favorite, Draft, Archived** (Invalid and Discarded), or **All,** users can instantly view checks based on their status. This categorization helps in organizing, reviewing, and managing checks more effectively for consistent data quality oversight.
 
 ![checks](../assets/checks/add-check-template/checks-tab.png)
 
@@ -158,6 +158,29 @@ The **Anomalies** tab displays all anomalies detected for the selected check tem
 Alternatively, users can navigate to the **Anomalies** tab directly from the **Overview** tab by clicking the redirect button in the **Active Anomalies** section of the Summary panel.
 
 ![anomalies-button](../assets/checks/add-check-template/redirect-anomalies.png)
+
+## Multiple Checks Creation
+
+Users can create multiple checks at once by selecting a template and adding multiple targets. Each target will generate its own check.
+
+**Step 1:** Click on the **Add** button located in the top right corner and select **Multiple Checks** from the dropdown.
+
+![add-button](../assets/checks/add-check-template/add.png)
+
+A **Bulk Add Quality Checks** modal window will appear. Fill in the details:
+
+| No. | Field | Description |
+| :---- | :---- | :---- |
+| 1.| Datastore | Select the datastore where the check should be applied. |
+| 2.| File/Table | Choose the file/table within the selected datastore. |
+| 3.| Field | Select the field to apply the check on. |
+| 4.| Filter Clause | Specify a valid [Spark SQL](https://spark.apache.org/docs/latest/sql-ref.html) `WHERE` expression to filter the data on which the check will be applied. |
+
+![modal-window](../assets/checks/add-check-template/window.png)
+  
+**Step 2:** Click on the **Add Target** button to create another check. You can keep adding targets to create as many checks as you need within the same template.
+
+![add-target](../assets/checks/add-check-template/target.png)
 
 ## Template State
 
