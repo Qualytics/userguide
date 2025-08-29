@@ -266,6 +266,8 @@ theme:
   favicon: assets/Q_sm_logo.png
   name: material
   custom_dir: overrides
+  font:
+    text: Manrope
 
   features:
     - navigation.footer
