@@ -1,77 +1,148 @@
-:root > * {
-    --md-primary-fg-color:        #FFFFFF;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark:  #002175;
+/* ===== LIGHT MODE ===== */
+[data-md-color-scheme="default"] {
+  --q-primary: #007CF2;
+  --q-secondary: #26A69A;
+  --q-accent: #FFFFFF;
+
+  --q-dark: #222c46;
+
+  --q-disabled: #DDDDDD;
+  --q-normal: #333333;
+  --q-lighter: #666666;
+  --q-inverted: #FFFFFF;
+  --q-mild: #F1F6FB;
+  --q-shadow: #33333320;
+  --q-invalid: #5A678F;
+  --q-salmon: #FF9780;
+  --q-orange: #FF4714;
+  --q-info: #45B4FF;
+  --q-navy: #001A49;
+  --q-anomalous: #fce8ef;
+  --q-card-shadow: #CCC8;
+
+  /* FOOTER */
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #007CF2;
+
+  --md-footer-bg-color: #FFFFFF;
+  --md-footer-bg-color--dark: #FFFFFF;
+
+  --md-footer-fg-color: #007CF2;
+  /* Copyrights text */
+  --md-footer-fg-color--light: #000000;
+  --md-footer-fg-color--lighter: #000000;
+
+  --md-primary-bg-color: #000000;
+  --md-default-bg-color: #F1F6FB;
+
+  /* Links in Search item */
+  --md-accent-fg-color: #007CF2;
+
+  /* Tip box */
+  --md-admonition-bg-color: #FFFFFF;
+  /* Code block */
+  --md-code-bg-color: #FFFFFF;
+  /* Link Color */
+  --md-typeset-a-color: #007cf2;
+
+  --md-navigation-link: #000000;
+  /* Next and Previous text */
+  --md-footer-title-color: #000000;
 }
 
-.md-typeset spam#required > code{
-    color: lightcoral;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 15px;
-  }
+/* ===== DARK MODE ===== */
+[data-md-color-scheme="slate"] {
+  --q-primary: #007CF2;
+  --q-secondary: #26A69A;
+  --q-accent: #222c46;
 
-.md-typeset spam#not-required > code{
+  --q-dark: #222c46;
+
+  --q-disabled: #555555;
+  --q-normal: #FFFFFF;
+  --q-lighter: #A0A0A0;
+  --q-inverted: #333333;
+  --q-mild: #161F39;
+  --q-shadow: #FFFFFF20;
+  --q-invalid: #5A678F;
+  --q-salmon: #FF9780;
+  --q-orange: #FF4714;
+  --q-info: #45B4FF;
+  --q-navy: #001A49;
+  --q-anomalous: #362b49;
+  --q-card-shadow: #48E2;
+
+  --md-default-fg-color: #FFFFFF;
+  --md-default-fg-color--light: #FFFFFF;
+  --md-default-fg-color--lighter: #007CF2;
+
+  /* FOOTER */
+  --md-footer-bg-color: #222c46;
+  --md-footer-bg-color--dark: #222c46;
+
+  --md-footer-fg-color: #007CF2;
+  /* Copyrights text */
+  --md-footer-fg-color--light: #FFFFFF;
+  --md-footer-fg-color--lighter: #FFFFFF;
+
+  --md-primary-bg-color: #FFFFFF;
+  --md-default-bg-color: #161F39;
+
+  /* Links in Search item */
+  --md-accent-fg-color: #007CF2;
+
+  /* Tip box */
+  --md-admonition-bg-color: #222c46;
+  /* Code block */
+  --md-code-bg-color: #222c46;
+  /* General Link Color */
+  --md-typeset-a-color: #007CF2 !important;
+
+  --md-navigation-link: #FFFFFF;
+  /* Next and Previous text */
+  --md-footer-title-color: #FFFFFF;
+}
+
+.md-typeset spam#required>code {
+  color: lightcoral;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.md-typeset spam#not-required>code {
   color: lightgreen;
   font-style: italic;
   font-weight: bold;
   font-size: 15px;
 }
 
-.md-typeset spam#single-field > code{
+.md-typeset spam#single-field>code {
   color: orange;
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
 }
 
-.md-typeset spam#multiple-fields > code{
+.md-typeset spam#multiple-fields>code {
   color: orangered;
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
 }
 
-.md-typeset spam#none-field > code{
-  color: gray;
+.md-typeset spam#none-field>code {
+  color: hsl(0, 0%, 50%);
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
 }
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
   font-weight: 600;
-}
-
-.md-typeset h1, .md-nav__title {
-  color: var(--md-default-fg-color);
-}
-
-.md-nav--lifted>.md-nav__list>.md-nav__item>[for], .md-nav__item--section>.md-nav__link[for] {
-  color: var(--md-default-fg-color);
-}
-
-.md-tabs__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-  height: 100%;
-}
-
-.md-tabs__link--active {
-  position: relative;
-}
-
-.md-tabs__link--active::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--md-accent-fg-color);
 }
 
 .grayscale {
@@ -93,4 +164,163 @@
 .md-typeset table:not([class]) {
   display: table;
   max-width: 100%;
+}
+
+.md-header {
+  background-color: var(--q-accent);
+}
+
+/* Navigation tab */
+.md-tabs {
+  background-color: var(--q-accent);
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+}
+
+/* Navigation item */
+.md-tabs__item {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 36px;
+
+  .md-tabs__link {
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 4px;
+    align-items: center;
+  }
+
+  :hover {
+    background-color: var(--q-shadow);
+  }
+}
+
+/* Navigation item active */
+.md-tabs__item--active {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 36px;
+
+  .md-tabs__link {
+    cursor: default;
+    color: #ffffff;
+    background-color: var(--q-primary);
+  }
+}
+
+/* Search bar */
+.md-search__inner {
+  .md-search__form {
+    background-color: var(--q-mild);
+    border: 1px solid var(--q-disabled);
+    border-radius: 6px;
+
+    .md-search__input::placeholder {
+      color: var(--q-normal);
+    }
+
+    .md-icon {
+      color: var(--q-primary);
+    }
+  }
+}
+
+/* Forcing search icon change color */
+@media screen and (min-width: 60em) {
+  [data-md-toggle=search]:checked~.md-header .md-search__input+.md-search__icon {
+    color: var(--q-primary);
+  }
+}
+
+/* All button */
+.md-icon {
+  color: var(--q-primary);
+}
+
+/* Innter button (view or edit page button) */
+.md-content__button:hover {
+  opacity: 0.7;
+}
+
+/* Back to top button */
+.md-top {
+  color: #FFFFFF;
+  background-color: var(--q-dark);
+}
+
+/* Back to top button */
+.md-top:focus,
+.md-top:hover {
+  color: #FFFFFF;
+  background-color: var(--q-primary);
+}
+
+/* Left and Right menu navigation links */
+.md-nav__link[for]:focus,
+.md-nav__link[for]:hover,
+.md-nav__link[href]:focus,
+.md-nav__link[href]:hover {
+  color: var(--q-primary);
+}
+
+/* Removing the logo (by default MKDocs generate a default icon when the `logo` property is not set) */
+.md-logo img,
+.md-logo svg {
+  display: none !important;
+}
+
+/* Logo CSS */
+.md-logo {
+  display: flex !important;
+  width: 112px;
+  height: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Change to light mode logo */
+[data-md-color-scheme="default"] .md-logo {
+  background-image: url("../assets/Logo.png");
+}
+
+/* Change to dark mode logo */
+[data-md-color-scheme="slate"] .md-logo {
+  background-image: url("../assets/Logo-dark.svg");
+}
+
+/* Left and Right navigation text links */
+.md-footer__title {
+  color: var(--md-footer-title-color);
+}
+
+/* Text Links */
+.md-typeset a,
+.md-typeset a:before,
+.md-typeset a:after,
+.md-typeset a::after {
+  color: var(--q-primary);
+  text-decoration: none;
+
+  u {
+    text-decoration: none;
+  }
+
+  u:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+}
+
+/* Feedback button hover */
+.md-feedback__icon:not(:disabled).md-icon:hover {
+  opacity: 0.7;
 }
