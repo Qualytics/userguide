@@ -224,7 +224,7 @@ This section provides a sample payload for creating a datastore. Replace the pla
                 "password": "presto_password",
                 "parameters":{
                     "ssl_truststore":"truststore.jks"
-                },
+                }
             }
         }
     ```
