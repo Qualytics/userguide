@@ -30,7 +30,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add New existing connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **Presto** connector from the dropdown list and add connection details such as Secret Management, host, port, username, database, and schema.
+**Step 1**: Select the **Presto** connector from the dropdown list and add connection details such as **Secrets Management**, host, port, username, database, and schema.
 
 ![connector](../assets/datastores/presto/connector-light-3.png)
 
@@ -60,7 +60,7 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 | 2. | Port (Required) | Specify the **Port** number. |
 | 3. | User (Required) | Enter the **User** to connect. |
 | 4. | Password (Required) | Enter the **Password** to connect to the database. |
-| 5. | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Databricks. |
+| 5. | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Presto. |
 | 6. | Schema (Required) | Define the schema within the database that should be used. |
 | 7. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
 | 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
