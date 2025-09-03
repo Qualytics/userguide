@@ -30,7 +30,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add new existing connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **PostgreSQL** connector from the dropdown list and add connection details such as Secret Management, host, port, username, database, and schema.
+**Step 1**: Select the **PostgreSQL** connector from the dropdown list and add connection details such as **Secrets Management**, host, port, username, database, and schema.
 
 ![add-datastore-credentials](../assets/datastores/postgresql/add-datastore-credentials-light.png)
 
@@ -100,7 +100,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ![next-button-for-enrichment](../assets/datastores/postgresql/next-button-for-enrichment-light.png)
 
-**Step 2**: A modal window— **Link Enrichment Datastore** —will appear, providing you with the options to configure an **enrichment datastore**.
+**Step 2**: A modal window **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/postgresql/select-enrichment-connector-light.png)
 
@@ -118,7 +118,7 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 ![caret-button](../assets/datastores/postgresql/add-enrichment-light.png)
 
-A modal window— **Link Enrichment Datastore** —will appear. Enter the following details to create an enrichment datastore with a new connection.
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
 ![modal-window](../assets/datastores/postgresql/add-enrichment-details-light.png)
 
@@ -185,7 +185,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 ![use-enrichment-datastore](../assets/datastores/postgresql/use-enrichment-light.png)
 
-**Step 2**: A modal window— **Link Enrichment Datastore—** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 ![select-existing-enrichment-datastore](../assets/datastores/postgresql/select-existing-enrichment-datastore-light.png)
 
