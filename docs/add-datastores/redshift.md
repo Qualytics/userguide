@@ -1,10 +1,10 @@
 # Redshift
 
-Adding and configuring Redshift connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Redshift connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Redshift as both a source and an enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
-By following these instructions, enterprises can ensure their Redshift environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle
+By following these instructions, enterprises can ensure their Redshift environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle.
 
 Let’s get started 🚀
 
@@ -18,7 +18,7 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/redshift/select-a-connector-light.png#)
+![select-a-connector](../assets/datastores/redshift/select-a-connector-light.png)
 
 | REF. | FIELDS             | ACTIONS            |
 |------|--------------------|--------------------|
@@ -30,13 +30,13 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select the **Redshift** connector from the dropdown list and add connection details such as Secret Management, port, host, password, database, and schema.
+**Step 1**: Select the **Redshift** connector from the dropdown list and add connection details such as **Secrets Management**, port, host, password, database, and schema.
 
 ![add-datastore-credentials](../assets/datastores/redshift/add-datastore-credentials-light.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
-!!! note 
+!!! note
     After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF | FIELDS               | ACTIONS                                                                 |
@@ -86,10 +86,10 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 
 ![test-connection-for-existing-datastore](../assets/datastores/redshift/test-connection-for-existing-datastore-light.png)
 
-!!!note
+!!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!info
+!!! info
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
@@ -112,7 +112,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle **Add new connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
@@ -184,7 +184,6 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
 ![use-enrichment-datastore](../assets/datastores/redshift/use-enrichment-light.png)
-
 
 **Step 2**:  A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
