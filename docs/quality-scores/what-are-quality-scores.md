@@ -55,7 +55,7 @@ Specific check rule types are considered for factor score calculations at the fi
 RuleType.matchesPattern
 RuleType.minLength
 RuleType.maxLength
-RuleType.isReplicaOf
+RuleType.dataDiff
 RuleType.isType
 RuleType.entityResolution
 RuleType.expectedSchema
