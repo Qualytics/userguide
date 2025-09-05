@@ -120,6 +120,7 @@ nav:
         - Is Address: checks/is-address.md
         - Is Credit Card: checks/is-credit-card-check.md
         - Is Replica Of: checks/is-replica-of-check.md
+        - Data Diff: checks/data-diff-check.md
         - Is Type: checks/is-type-check.md
         - Less Than: checks/less-than-check.md
         - Less Than Field: checks/less-than-field-check.md

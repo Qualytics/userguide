@@ -6,21 +6,21 @@ This use case focuses on ensuring data consistency across various datastores, wh
 
 ## Goal
 
-The primary objective is to maintain data integrity and consistency across different datastores using Qualytics' `ExistsIn` and `IsReplicaOf` checks.
+The primary objective is to maintain data integrity and consistency across different datastores using Qualytics' `ExistsIn` and `dataDiff` checks.
 
 ## Prerequisites
 
 - Access to multiple datastores
-- Familiarity with the `ExistsIn` and `IsReplicaOf` features in Qualytics
+- Familiarity with the `ExistsIn` and `dataDiff` features in Qualytics
 - Identified source and destination datastores for comparison
 
 ## Steps
 
 1. Set up connections to the Source and Destination Datastores in Qualytucs by selecting "Add a Datastore" from Datastore Operations
 2. Run a Profile Operation on the Source and Destination Datastores
-3. Click Add a Check to add an authored check for `ExistsIn` or `IsReplicaOf`
+3. Click Add a Check to add an authored check for `ExistsIn` or `dataDiff`
     - For verifying against a reference table of Account IDs or Zip Codes, we recommend using `ExistsIn`.
-    - For validating full tables against each other, use `isReplicaOf`
+    - For validating full tables against each other, use `dataDiff`
 4. Select your Source Tables/Files and fields, if applicable
 5. The select your Target Tables/Files and fields, if applicable
 6. Enter your description and add any Tags for downstream workflows

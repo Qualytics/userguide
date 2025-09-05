@@ -1,4 +1,33 @@
-# Is Replica Of
+# Is Replica Of (_Is sunsetting_)
+
+!!! warning "Deprecation Warning"
+    This check is being deprecated and will be replaced by the [Data Diff](data-diff-check.md) check, which provides the same functionality with improved performance and features. 
+    
+    This change is a rename from `isReplicaOf` to `dataDiff`. The `isReplicaOf` checks that exist in your system will continue to exist but as a `dataDiff`.
+    Some things to keep in mind:
+    
+    1. Qualytics endpoint will no longer return the keyword `isReplicaOf`. You need to check if you have any pipeline or script that references that keyword specifically.
+    For example:
+    ```
+    data = response.json()
+    rule_type = data["rule_type"]
+    print(rule_type)  # prints dataDiff instead of isReplicaOf
+    ```
+    
+    2. The endpoint `GET /quality-checks/specifications/rules` will no longer return isReplicaOf, but dataDiff.
+    3. The violation message for anomalies was tweaked slightly.
+    Here's some example of violation message:
+
+        3.1 Shape Anomaly
+        ```
+        For `PART` and `PART_REPLICA`, differences were found between the targeted fields and the referred fields
+        ```
+        3.2 Record Anomaly
+        ```
+        There are 7 records that differ between `PART` (15 records) and `PART_REPLICA` (15 records) in `TPCH-1`
+        ```
+
+    If you still need help [Contact our support team](mailto:support@qualytics.co)
 
 ### Definition
 
@@ -60,8 +89,7 @@ Specify the datastore and table/file where the replica of the targeted fields is
 
     !!! info
         Anomalies produced by a `IsReplicaOf` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
-        See more at: *[Comparison Source Records](../anomalies/anomalies.md/#comparison-source-records)*
-
+        See more at: *[Comparison Source Records](../anomalies/source-record.md/#comparison-source-records)*
     {%
         include-markdown "components/comparators/index.md"
     %}
