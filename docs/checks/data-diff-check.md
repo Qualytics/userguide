@@ -60,7 +60,7 @@ Specify the datastore and table/file where the reference data for the targeted f
 
     !!! info
         Anomalies produced by a `DataDiff` quality check making use of `Row Identifiers` have their source records presented in a different visualization. <br><br>
-        See more at: *[Comparison Source Records](../anomalies/anomalies.md/#comparison-source-records)*
+        See more at: *[Comparison Source Records](../anomalies/source-record.md/#comparison-source-records)*
 
     {%
         include-markdown "components/comparators/index.md"
