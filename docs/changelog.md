@@ -2,6 +2,34 @@
 
 ## Release Notes
 
+### 2025.9.4 { id=2025.9.4 }
+
+#### Feature Enhancements
+
+- Introducing Product Updates
+    - Users can now view feature announcements directly within the application.
+    - Read full posts by clicking the external link for each update.
+
+- Enhanced filter clause display in readonly checks with copy functionality and improved text formatting.
+
+#### General Fixes and Improvements
+
+- Resolved an issue where the API allowed creation of quality checks with string fields for rules that don't support them.
+
+- Corrected cache logic to avoid unnecessary data refresh in insights.
+
+- Fixed input field overflow when entering long filter values that caused UI layout issues.
+
+- Fixed Data Preview errors when filters return no records, now properly displays empty results instead of failing with a server error.
+
+- Fixed activation failures for Exists In checks that reference computed fields.
+
+- Fixed issue where rule type filter options did not appear on the check list page for Member users.
+
+- Updated enrichment processing for more frequent and reliable data writes.
+
+- General Fixes and Improvements.
+
 ### 2025.8.20 { id=2025.8.20 }
 
 #### Feature Enhancements
