@@ -190,7 +190,3 @@ The datasets representing the fields `N_NATIONKEY` and `N_NATIONNAME` in the ori
 
 !!! example "Shape Anomaly"
     There is 1 record that differs between `NATION_BACKUP` (3 records) and `NATION` (3 records) in `<datastore_name>`
-
-        data = response.json()
-    rule_type = data["rule_type"]
-    print(rule_type)  # prints dataDiff instead of isReplicaOf
