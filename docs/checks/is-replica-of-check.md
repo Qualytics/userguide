@@ -1,4 +1,9 @@
-# Is Replica Of
+# Is Replica Of (_deprecated_)
+
+!!! warning "Deprecated Check"
+    This check is being deprecated and will be replaced by the [Data Diff](data-diff-check.md) check, which provides the same functionality with improved performance and features. 
+    
+    **Backwards Compatibility**: Existing implementations will continue to work, but if your use case expects "`isReplicaOf`" rule responses, please note that the system will return "`dataDiff`" instead. Please use the Data Diff check for new implementations.
 
 ### Definition
 
