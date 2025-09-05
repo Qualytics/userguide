@@ -179,17 +179,17 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 ![use-existing-datastore](../assets/datastores/snowflake/use-existing-datastore-new-light.png)
 
-!!!note
+!!! note
     If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection**  button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
 ![test-connection-for-existing-datastore](../assets/datastores/snowflake/test-connection-for-existing-datastore-light.png)
 
-!!!note
+!!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!info
+!!! info
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore Connection
