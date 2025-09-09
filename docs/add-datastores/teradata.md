@@ -93,7 +93,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 ## Add Enrichment Datastore
 
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including any anomalies and additional metadata in tables. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
 !!! warning
     Qualytics does not support the Teradata connector as an enrichment datastore, but you can point to a different enrichment datastore.
@@ -128,7 +128,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 |-------------------|--------------|--------------------------------------------|
 | 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.                | Name   | Give a name for the enrichment datastore.|
-| 3.                |Toggle Button for Add New Connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
 | 4.                |Connector | Select a datastore connector from the dropdown list.|
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
