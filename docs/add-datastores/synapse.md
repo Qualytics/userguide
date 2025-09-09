@@ -94,7 +94,7 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 ## Add Enrichment Datastore
 
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including any anomalies and additional metadata in tables. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
 !!! warning
     Qualytics does not support the Synapse connector as an enrichment datastore, but you can point to a different enrichment datastore.
