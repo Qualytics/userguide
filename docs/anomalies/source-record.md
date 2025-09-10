@@ -21,6 +21,6 @@ Users can view source records with selectable display limits of 10, 100, 1,000, 
 
 ## Comparison Source Records
 
-Anomalies identified by the Is Replica Of data quality rule type, configured with Row Identifiers, are displayed with a detailed source record comparison. This visualization highlights differences between rows, making it easier to identify specific discrepancies.
+Anomalies identified by the Data Diff Of data quality rule type, configured with Row Identifiers, are displayed with a detailed source record comparison. This visualization highlights differences between rows, making it easier to identify specific discrepancies.
 
 ![is-replica](../assets/datastores/source-records/is-replica.png)

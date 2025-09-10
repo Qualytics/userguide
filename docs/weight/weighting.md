@@ -22,7 +22,7 @@ These rules are assigned the highest weight of 3 to reflect their crucial role i
 | 6       | Contains Social Security Number | 3          |
 | 7       | Time Distribution Size          | 3          |
 | 8       | User Defined Function           | 3          |
-| 9       | Is Replica Of                   | 3          |
+| 9       | Data Diff                       | 3          |
 | 10      | Metric                          | 3          |
 | 11      | Aggregation Comparison          | 3          |
 | 12      | Is Address                      | 3          |
