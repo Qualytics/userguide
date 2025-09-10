@@ -1,33 +1,16 @@
 # Is Replica Of (_Is sunsetting_)
 
-!!! warning "Deprecation Warning"
-    This check is being deprecated and will be replaced by the [Data Diff](data-diff-check.md) check, which provides the same functionality with improved performance and features. 
+!!! warning "Deprecation Notice"
+    The `isReplicaOf` check is being deprecated and will no longer be maintained.
+    We strongly recommend using the [Data Diff](data-diff-check.md) check, which offers the same functionality with improved performance and additional features.
     
-    This change is a rename from `isReplicaOf` to `dataDiff`. The `isReplicaOf` checks that exist in your system will continue to exist but as a `dataDiff`.
-    Some things to keep in mind:
-    
-    1. Qualytics endpoint will no longer return the keyword `isReplicaOf`. You need to check if you have any pipeline or script that references that keyword specifically.
-    For example:
-    ```
-    data = response.json()
-    rule_type = data["rule_type"]
-    print(rule_type)  # prints dataDiff instead of isReplicaOf
-    ```
-    
-    2. The endpoint `GET /quality-checks/specifications/rules` will no longer return isReplicaOf, but dataDiff.
-    3. The violation message for anomalies was tweaked slightly.
-    Here's some example of violation message:
+    **Our recommendation:**
 
-        3.1 Shape Anomaly
-        ```
-        For `PART` and `PART_REPLICA`, differences were found between the targeted fields and the referred fields
-        ```
-        3.2 Record Anomaly
-        ```
-        There are 7 records that differ between `PART` (15 records) and `PART_REPLICA` (15 records) in `TPCH-1`
-        ```
+    - Consider using [`Data Diff`](data-diff-check.md) for new implementations
+    - `dataDiff` provides enhanced performance and additional capabilities
+    - Both checks will continue to coexist in the system
 
-    If you still need help [Contact our support team](mailto:support@qualytics.co)
+    If you have questions about this change, please [contact our support team](mailto:support@qualytics.co)
 
 ### Definition
 
