@@ -30,7 +30,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add New Connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1 :** Select the **TimescaleDB** connector from the dropdown list and add connection details such as **Secrets Management**, host, port, username, database, and schema.
+**Step 1:** Select the **TimescaleDB** connector from the dropdown list and add connection details such as **Secrets Management**, host, port, username, database, and schema.
 
 ![add-datastore-credentials](../assets/datastores/timescale-db/add-datastore-credentials-light.png)
 
@@ -63,9 +63,9 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5. |  Database | Specify the database name. |
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams  | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initial cataloging | Tick the checkbox to automatically perform catalog operation on the configured source to gather data structures and corresponding metadata. |
+| 8. | Initial cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
-**Step 3 :** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
+**Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
 ![test-datastore-connection-light](../assets/datastores/timescale-db/test-datastore-connection-light.png)
 
@@ -114,7 +114,7 @@ After successfully testing and verifying your source datastore connection, you h
 
 If the toggle **Add New Connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
-**Step 1**: Click on the caret button and select Add Enrichment Datastore.
+**Step 1:** Click on the caret button and select Add Enrichment Datastore.
 
 ![caret-button](../assets/datastores/timescale-db/add-enrichments-light.png)
 
@@ -152,7 +152,7 @@ When the configuration process is finished, a modal will display a success messa
 
 If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
-**Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
+**Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
 ![use-enrichment-datastore](../assets/datastores/timescale-db/use-enrichment-light.png)
 
@@ -165,7 +165,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 | REF. | FIELDS | ACTIONS |
 | ------ | -------- | --------- |
-| 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment. |
+| 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
  | 2. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
 
 **Step 3:** After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
