@@ -223,7 +223,7 @@ This section provides a sample payload for creating a TimescaleDB datastore. Rep
         "schema": "timescale_schema",
         "enrich_only": false,
         "trigger_catalog": true,
-        "connection_id": connection-id,
+        "connection_id": connection-id
     }
     ```
 ### Link an Enrichment Datastore to a Source Datastore
