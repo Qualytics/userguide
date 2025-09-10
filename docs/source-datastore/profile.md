@@ -222,10 +222,11 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 | Inferred Checks | Reference |
 |-------|-------|
-| Predicted By | [See more.](https://userguide.qualytics.io/checks/predicted-by-check/) |
+| Data Diff | [See more.](../checks/data-diff-check.md) |
 | Exists In | [See more.](https://userguide.qualytics.io/checks/exists-in-check/) |
 | Not Exists In | [See more.](https://userguide.qualytics.io/checks/not-exists-in-check/) |
-| Is Replica Of | [See more.](https://userguide.qualytics.io/checks/is-replica-of-check/) |
+| Predicted By | [See more.](https://userguide.qualytics.io/checks/predicted-by-check/) |
+| Is Replica Of (_is sunsetting_) | [See more.](https://userguide.qualytics.io/checks/is-replica-of-check/) |
 
 ![inference-threshold-level4](../assets/profile-operations/inference-threshold-level4-light.png)
 

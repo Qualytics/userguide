@@ -22,10 +22,11 @@ These rules are assigned the highest weight of 3 to reflect their crucial role i
 | 6       | Contains Social Security Number | 3          |
 | 7       | Time Distribution Size          | 3          |
 | 8       | User Defined Function           | 3          |
-| 9       | Is Replica Of                   | 3          |
+| 9       | Is Replica Of (_is sunsetting_) | 3          |
 | 10      | Metric                          | 3          |
 | 11      | Aggregation Comparison          | 3          |
 | 12      | Is Address                      | 3          |
+| 14      | Data Diff                       | 3          |
 
 #### Medium Importance (Weight: 2)
 
