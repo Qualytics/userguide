@@ -106,6 +106,7 @@ nav:
         - Contains Email: checks/contains-email-check.md
         - Contains Social Security Number: checks/contains-social-security-number-check.md
         - Contains Url: checks/contains-url.md
+        - Data Diff: checks/data-diff-check.md
         - Distinct Count: checks/distinct-count-check.md
         - Entity Resolution: checks/entity-resolution.md
         - Equal to: checks/equal-to-check.md
@@ -120,7 +121,6 @@ nav:
         - Is Address: checks/is-address.md
         - Is Credit Card: checks/is-credit-card-check.md
         - Is Replica Of: checks/is-replica-of-check.md
-        - Data Diff: checks/data-diff-check.md
         - Is Type: checks/is-type-check.md
         - Less Than: checks/less-than-check.md
         - Less Than Field: checks/less-than-field-check.md

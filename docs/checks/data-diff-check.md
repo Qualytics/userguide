@@ -1,5 +1,10 @@
 # Data Diff
 
+!!! info "Recommended Check"
+    Qualytics recommends using the `dataDiff` rule type instead of the `isReplicaOf`.
+    
+    The `isReplicaOf` check is sunsetting and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
+
 ### Definition
 
 *Asserts that the dataset created by the targeted field(s) matches the referred field(s) for data comparison.*

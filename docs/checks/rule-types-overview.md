@@ -17,6 +17,7 @@ Here’s an overview of the rule types and their purposes:
 | [Contains Email](../checks/contains-email-check.md)                                   | Asserts that the values contain email addresses.                                                   |
 | [Contains Social Security Number](../checks/contains-social-security-number-check.md) | Asserts that the values contain social security numbers.                                 |
 | [Contains Url](../checks/contains-url.md)                                             | Asserts that the values contain valid URLs.                                                        |
+| [Data Diff](../checks/data-diff-check.md)                                             | Asserts that the dataset created by the targeted field(s) has differences compared to the referred field(s). |
 | [Distinct Count](../checks/distinct-count-check.md)                                   | Asserts on the approximate count distinct of the given column.                                      |
 | [Entity Resolution](../checks/entity-resolution.md)                                   | Asserts that every distinct entity is appropriately represented once and only once                                                 |
 | [Equal To Field](../checks/equal-to-field-check.md)                                   | Asserts that this field is equal to another field.                                                 |
@@ -28,7 +29,7 @@ Here’s an overview of the rule types and their purposes:
 | [Greater Than Field](../checks/greater-than-field-check.md)                           | Asserts that this field is greater than another field.                                              |
 | [Is Address](../checks/is-address.md)                                                 | Asserts that the values contain the specified required elements of an address.|
 | [Is Credit Card](../checks/is-credit-card-check.md)                                   | Asserts that the values are credit card numbers.                                                    |
-| [Is Replica Of](../checks/is-replica-of-check.md)                                     | Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).     |
+| [Is Replica Of](../checks/is-replica-of-check.md) (_is sunsetting_)                   | Asserts that the dataset created by the targeted field(s) is replicated by the referred field(s).     |
 | [Is Type](../checks/is-type-check.md)                                                 | Asserts that the data is of a specific type.                                                       |
 | [Less Than](../checks/less-than-check.md)                                             | Asserts that the field is a number less than (or equal to) a value.                                 |
 | [Less Than Field](../checks/less-than-field-check.md)                                 | Asserts that this field is less than another field.                                                 |
@@ -50,5 +51,4 @@ Here’s an overview of the rule types and their purposes:
 | [Sum](../checks/sum-check.md)                                                         | Asserts that the sum of a field is a specific amount.                                               |
 | [Time Distribution Size](../checks/time-distribution-size-check.md)                   | Asserts that the count of records for each interval of a timestamp is between two numbers.          |
 | [Unique](../checks/unique-check.md)                                                   | Asserts that the field's value is unique.                                                           |
-| [User Defined Function](../checks/user-defined-function-check.md)                     | Asserts that the given user-defined function (as `Scala` script) evaluates to true over the field's value.|
 | [Volumetric Check](../checks/volumetric-check.md)                                     | Asserts that the volume of the data asset has not changed by more than an inclusive percentage amount for the prescribed moving daily average.|
