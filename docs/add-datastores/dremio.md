@@ -221,9 +221,10 @@ This section provides sample payloads for creating a Dremio datastore. Replace t
             "port": 443,
             "project_id": "dremio_id",
             "ssl": true,
-        "authentication": {
-            "type": "access_token",
-            "personal_access_token": "your_personal_access_token"},
+            "authentication": {
+                "type": "access_token",
+                "personal_access_token": "your_personal_access_token"
+            }
         }
     }
     ```
