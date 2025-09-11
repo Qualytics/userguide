@@ -39,7 +39,7 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 !!! note
     After configuring HashiCorp Vault integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
-| REF | FIELDS | ACTIONS |
+| REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
 | 1. | Login URL | Enter the URL used to authenticate with HashiCorp Vault. |
 | 2. | Credentials Payload | Input a valid JSON containing credentials for Vault authentication. |
@@ -54,7 +54,7 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 
 ![form](../assets/datastores/trino/form-light.png)
 
-| REF. | FIELDS. | ACTIONS. |
+| REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
 | 1. | Host | Get **Hostname** from your Trino account and add it to this field. |
 | 2. | Port | Specify the **Port** number. |
@@ -104,7 +104,7 @@ After successfully testing and verifying your source datastore connection, you h
 
 ![window](../assets/datastores/trino/window-light.png)
 
-| REF. | FIELDS. | ACTIONS. |
+| REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
 | 1. | Prefix (Required) | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2. | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**. |
@@ -122,7 +122,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 ![windoww](../assets/datastores/trino/windoww-light.png)
 
-| REF | FIELDS | ACTIONS |
+| REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2. | Name | Give a name for the enrichment datastore. |
