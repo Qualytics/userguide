@@ -13,7 +13,7 @@
     - Easily identify data drift and type changes at the field level.
     - Special badges indicate when field types have changed between profiles.
 
-- Introducing the Data Diff rule type as an enhancement of the Is Replica Of functionality.
+- Introducing the `Data Diff` check as an enhancement of the Is Replica Of functionality.
 
 - Enhanced File Profile visibility with file format display and improved handling of long names with tooltips.
 
@@ -31,9 +31,9 @@
 
 - Fixed grouped inference checks to properly validate against filtered test data for each group combination.
 
-- Resolved Is Address check failing to assert during scan.
+- Resolved `Is Address` check failing to assert during scan.
 
-- Removed userDefinedFunction rule type support.
+- Removed `User Defined Function` check support.
 
 - General Fixes and Improvements.
 
