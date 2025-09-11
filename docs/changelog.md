@@ -27,7 +27,7 @@
 
 - Fixed broken enrichment datastore redirect link in the datastore tree footer.
 
-- Corrected filter application in Exists In checks that was causing inaccurate anomaly detection.
+- Corrected filter application in `Exists In` checks that was causing inaccurate anomaly detection.
 
 - Fixed grouped inference checks to properly validate against filtered test data for each group combination.
 
