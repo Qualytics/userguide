@@ -211,7 +211,7 @@ This section provides a sample payload for creating a datastore. Replace the pla
                 "password": "trino_password",
                 "parameters":{
                     "ssl_truststore":"truststore.jks"
-                },
+                }
             }
         }
     ```
@@ -252,7 +252,7 @@ This section provides a sample payload for creating an enrichment datastore. Rep
                 "password": "trino_password",
                 "parameters":{
                     "ssl_truststore":"truststore.jks"
-                },
+                }
             }
         }
     ```
