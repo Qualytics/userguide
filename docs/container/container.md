@@ -29,7 +29,7 @@ DFS containers are used to represent files stored in distributed file systems, s
 
 3. **Completeness**: Indicates the percentage of records that are fully populated without missing or incomplete data. Lower percentages may suggest that some fields have missing values.
 
-4. **Records Profiled**: Indicates the percentage of records that are fully populated without missing or incomplete data. Lower percentages may suggest that some fields have missing values.
+4. **Records Profiled**: Shows the number or percentage of records that have been analyzed during the profiling process.
 
 5. **Fields Profiled**: This shows the number of fields or attributes within the dataset that have undergone data profiling, which helps identify potential data issues in specific columns.
 
@@ -37,71 +37,65 @@ DFS containers are used to represent files stored in distributed file systems, s
 
 7. **Active Anomalies**: Displays the total number of anomalies found during the data profiling process. Anomalies can indicate inconsistencies, outliers, or potential data quality issues that need resolution.  
 
-![totals](../assets/container/containers/totals-light.png#only-light)
-![totals](../assets/container/containers/totals-dark.png#only-dark)
+![totals](../assets/container/containers/totals-light.png)
 
 ### Observability
 
-**1.Volumetric Measurement**  
+**1. Volumetric Measurement**  
 
 Volumetric measurement allows users to track the size of data stored within the table over time. This helps in monitoring how the data grows or changes, making it easier to detect sudden spikes that may impact system performance. Users can visualize data volume trends and manage the table's efficiency. This helps in optimizing storage, adjusting resource allocation, and improving query performance based on the size and growth of the computed table.
 
-![volumetric](../assets/container/containers/select-datastore-light.png#only-light)
-![volumetric](../assets/container/containers/select-datastore-dark.png#only-dark)
+![volumetric](../assets/container/containers/select-datastore-light.png)
 
-**2.Anomalies Measurement**
+**2. Anomalies Measurement**
 
 The **Anomalies** section helps users track any unusual data patterns or issues within the computed tables. It shows a visual representation of when anomalies occurred over a specific time period, making it easy to spot unusual activity. This allows users to quickly identify when something might have gone wrong and take action to fix it, ensuring the data stays accurate and reliable.
 
-![anomalies](../assets/container/containers/anomalies-light.png#only-light)
-![anomalies](../assets/container/containers/anomalies-dark.png#only-dark)
+![anomalies](../assets/container/containers/anomalies-light.png)
 
 ## Actions on Container
 
 Users can perform various operations on containers to manage datasets effectively. The actions are divided into three main sections: **Settings**, **Add**, and **Run**. Each section contains specific options to perform different tasks.
 
-![action](../assets/container/containers/actions-light.png#only-light)
-![action](../assets/container/containers/actions-dark.png#only-dark)
+![action](../assets/container/containers/actions-light.png)
 
 ### Settings
 
-**Settings** button allows users to configure the container. By clicking on the **Settings** button, users can access the following options:
+The **Settings** button allows users to configure the container. By clicking on the **Settings** button, users can access the following options:
 
-![settings](../assets/container/containers/settings-light.png#only-light)
-![settings](../assets/container/containers/settings-dark.png#only-dark)
+![settings](../assets/container/containers/settings-light.png)
 
 | No. |           Options |                                Description |
 | :---- | :---- | :---- |
 | **1.** |        Settings | Configure incremental strategy, partitioning fields, and exclude specific fields from analysis. |
 | **2.** |         Score | Score allowing you to adjust the decay period and factor weights for metrics like completeness, accuracy, and consistency. |
-| **3.** |     Observability | Enables or disables tracking for data volume and freshness.<br> **Volume Tracking:** Monitors daily volume metrics to identify trends and detect anomalies over time.<br>**Freshness Tracking:** Records the last update timestamp to ensure data timeliness and detect pipeline delays. |
-| **4.** |         Export | Export quality checks, field profiles and Anomalies to an enrichment datastore for further action or analysis. |
-| **5.** |         Materialize | Captures snapshots of data from a source datastore and exports it to an enrichment datastore for faster access and analysis. |
-| **6.** |         Delete | Delete the selected container from the system. |
+| **3.** |     Observability | Enables or disables tracking for data volume and freshness.<br>**Volume Tracking:** Monitors daily volume metrics to identify trends and detect anomalies over time.<br>**Freshness Tracking:** Records the last update timestamp to ensure data timeliness and detect pipeline delays. |
+| **4.** | Migrate | Migrate authored quality checks from one container to another (even across datastores) to quickly reuse, standardize, and avoid recreating rules. |
+| **5.** |         Export | Export quality checks, field profiles, and anomalies to an enrichment datastore for further action or analysis. |
+| **6.** |         Materialize | Captures snapshots of data from a source datastore and exports it to an enrichment datastore for faster access and analysis. |
+| **7.** |         Delete | Delete the selected container from the system. |
 
 ### Add
 
-**Add** button allows users to add checks or computed fields. By clicking on the **Add** button, users can access following options:
+The **Add** button allows users to add checks or computed fields. By clicking on the **Add** button, users can access the following options:
 
-![add](../assets/container/containers/add-light.png#only-light)
-![add](../assets/container/containers/add-dark.png#only-dark)
+![add](../assets/container/containers/add-light.png)
 
 | No. | Options | Description |
 | :---- | :---- | :---- |
 | **1.** | Checks | Checks allow you to add new checks or validation rules for the container. |
-| **2.** | Computed Field | Allows you to add computed field. |
+| **2.** | Computed Field | Allows you to add a computed field. |
 
 ### Run
 
-**Run** button provides options to execute operations on datasets, such as profiling, scanning, and external scans. By clicking on the **Run** button, users can access following options:
+The **Run** button provides options to execute operations on datasets, such as profiling, scanning, and external scans. By clicking on the **Run** button, users can access the following options:
 
-![run](../assets/container/containers/run-light.png#only-light)
-![run](../assets/container/containers/run-dark.png#only-dark)
+![run](../assets/container/containers/run-light.png)
 
 | No. |          Options | Descriptions |
 | :---- | :---- | :---- |
-| **1.** | Profile | **Profile** allows you to run a profile operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling. |
-| **2.** | Scan  | **Scans** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset. |
+| **1.** | Profile | **Profile** allows you to run a profiling operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling. |
+| **2.** | Scan  | **Scan** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset. |
 | **3.** | External Scan | **External Scan** allows you to upload a file and validate its data against predefined checks in the selected table. |
 
 ## Field Profiles
@@ -120,8 +114,7 @@ After profiling a container, individual field profiles offer granular insights:
 
 **5. Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
-![totals](../assets/container/containers/totalss-light.png#only-light)
-![totals](../assets/container/containers/totalss-dark.png#only-dark)
+![totals](../assets/container/containers/totalss-light.png)
 
 ### Profile
 
@@ -142,14 +135,30 @@ This provides detailed insights into the characteristics of the field, including
 | 11 | Q3 | The third quartile; the central point between the median and the maximum. |
 | 12 | Sum | Total sum of all observed numeric values. |
 
-![profile](../assets/container/containers/profile-light.png#only-light)
-![profile](../assets/container/containers/profile-dark.png#only-dark)
+![profile](../assets/container/containers/profile-light.png)
 
 #### Last Profile
 
 The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
-![last-profiled](../assets/container/containers/last-profiled-light.png#only-light)
-![last-profiled](../assets/container/containers/last-profiled-dark.png#only-dark)
+![last-profiled](../assets/container/containers/last-profiled-light.png)
 
 This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
+
+#### Compare Profile
+
+You can compare the current field profile with earlier versions to spot changes over time. Visual indicators highlight modified metrics, interactive charts show numeric trends across profile history, and special badges identify data drift or field type changes.
+
+By clicking on the dropdown under **Compare With**, you can select an earlier profile run (for example, 1 day ago or 5 days ago).
+
+![compare-light](../assets/container/containers/compare-light.png)
+
+Once selected, the system highlights the differences between the two profiles, marking metrics as **Changed** or **Unchanged**. This makes it easy to track shifts in key values such as mean, median, standard deviation, or completeness.
+
+![change-light](../assets/container/containers/change-light.png)
+
+#### View Metric Chart
+
+You can access detailed metric charts by clicking the **View Metric Chart** button. This will display variations across the last 10 profiles. By hovering over points on the chart, you can see additional details such as profile dates, measured values, and sampling percentages for deeper analysis.
+
+![metric-chart-light](../assets/container/containers/metric-chart-light.png)
