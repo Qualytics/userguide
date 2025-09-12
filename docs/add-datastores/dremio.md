@@ -52,7 +52,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-configutre-details](../assets/datastores/dremio/add-configutre-details-light-4.png)
+![add-configure-details](../assets/datastores/dremio/add-configure-details-light-4.png)
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
@@ -155,7 +155,7 @@ When the configuration process is finished, a modal will display a success messa
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
