@@ -2,6 +2,41 @@
 
 ## Release Notes
 
+### 2025.9.12 { id=2025.9.12 }
+
+#### Feature Enhancements
+
+- We are thrilled to introduce the Profiles Over Time for tracking field-level data changes
+    - Users can now compare the current field profile with previous profiles to track changes.
+    - Visual indicators highlight metrics that changed between selected profiles.
+    - Interactive charts display numeric metric trends across profile history.
+    - Easily identify data drift and type changes at the field level.
+    - Special badges indicate when field types have changed between profiles.
+
+- Introducing the `Data Diff` check as an enhancement of the Is Replica Of functionality.
+
+- Enhanced File Profile visibility with file format display and improved handling of long names with tooltips.
+
+- Improved hover contrast for list items in light mode for better visibility.
+
+- Optimized slim profile logic to protect existing field typing from being overwritten by limited data samples.
+
+- Added OAuth support to the Databricks connector.
+
+#### General Fixes and Improvements
+
+- Fixed broken enrichment datastore redirect link in the datastore tree footer.
+
+- Corrected filter application in `Exists In` checks that was causing inaccurate anomaly detection.
+
+- Fixed grouped inference checks to properly validate against filtered test data for each group combination.
+
+- Resolved `Is Address` check failing to assert during scan.
+
+- Removed `User Defined Function` check support.
+
+- General Fixes and Improvements.
+
 ### 2025.9.4 { id=2025.9.4 }
 
 #### Feature Enhancements
