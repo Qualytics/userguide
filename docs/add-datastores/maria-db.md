@@ -243,7 +243,7 @@ This section provides a sample payload for creating an enrichment datastore. Rep
                 "host": "mariadb_host",
                 "port": "mariadb_port",
                 "username": "mariadb_username",
-                "password": "mariadb_password",
+                "password": "mariadb_password"
             }
         }
     ```
