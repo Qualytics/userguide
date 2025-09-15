@@ -153,7 +153,7 @@ By clicking on the dropdown under **Compare With**, you can select an earlier pr
 
 ![compare-light](../assets/container/containers/compare-light.png)
 
-Once selected, the system highlights the differences between the two profiles, marking metrics as **Changed** or **Unchanged**. This makes it easy to track shifts in key values such as mean, median, standard deviation, or completeness.
+Once selected, the system highlights differences between profiles, marking metrics as **Changed** or **Unchanged**. It compares data quality **(Sampling, Completeness)** and statistical measures **(mean, median, standard deviation, skewness, kurtosis, min, max, distinct values, etc.)**, making it easy to track shifts in data quality and distribution.
 
 ![change-light](../assets/container/containers/change-light.png)
 
