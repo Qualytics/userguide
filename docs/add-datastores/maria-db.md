@@ -44,7 +44,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | REF | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
 | 1. | Login URL | Enter the URL used to authenticate with HashiCorp Vault. |
-| 2. | Credentials Payload | Input valid JSON containing credentials for Vault authentication. |
+| 2. | Credentials Payload | Input a valid JSON containing credentials for Vault authentication. |
 | 3. | Token JSONPath | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
 | 4. | Secret URL | Enter the URL where the secret is stored in Vault. |
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
@@ -170,7 +170,7 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 * **Database:** Refers to the specific database within the MariaDB environment where the data is stored.  
 * **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![enrichment](../assets/datastores/maria-db/enrichmnet-light.png)
+![enrichment](../assets/datastores/maria-db/enrichment-light.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
