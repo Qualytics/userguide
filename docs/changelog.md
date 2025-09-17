@@ -29,7 +29,7 @@
 
 - Optimized observability operations to prevent duplicate processing and reduce system load.
 
-- Fixed dataDiff validation errors when using computed fields as row identifiers.
+- Fixed Data Diff validation errors when using computed fields as row identifiers.
 
 - General Fixes and Improvements.
 
