@@ -2,6 +2,33 @@
 
 ## Release Notes
 
+### 2025.9.17 { id=2025.9.17 }
+
+#### Feature Enhancements
+
+- We are happy to announce the new Keyboard Commands feature
+    - Execute common actions using context-sensitive shortcuts that adapt based on your current location and selection within the application.
+    - Quickly navigate between main pages using intuitive multi-key sequences with the new "Go to" shortcuts.  
+        - Press `G` followed by a specific key to quickly jump to pages like: `G` + `E` for Explore, `G` + `L` for Library, `G` + `T` for Tags, and etc.
+    - Enhance Tab navigation allows smooth movement through interface elements using `⌥` / `Alt` + `←` and `⌥` / `Alt` + `→` with clear visual focus indicators.
+    - Update the global search shortcut to be accessible via `⌘`/`Ctrl` + `Shift` + `F`.
+    - Access the Command Palette by pressing `⌘`/`Ctrl` + `K` to search, navigate, and execute actions without leaving your current context.
+    - View a complete list of all available keyboard shortcuts by pressing `⌘`/`Ctrl` + `/` for easy reference and learning.
+
+- Improved hover highlighting to Data Preview, Source Records, and Enrichment tables for consistent user experience across all data views.
+
+- Enhanced queries with metadata comments for better cost tracking and operation identification in query logs.
+
+#### General Fixes and Improvements
+
+- Fixed profile operations failing on BigQuery tables with nested record types.
+
+- Limited anomaly rollup threshold to 1,000 with visual markers to prevent system overload from excessive anomaly generation.
+
+- Fixed dataDiff validation errors when using computed fields as row identifiers.
+
+- General Fixes and Improvements.
+
 ### 2025.9.12 { id=2025.9.12 }
 
 #### Feature Enhancements
