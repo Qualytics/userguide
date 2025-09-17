@@ -10,7 +10,7 @@ Let’s get started 🚀
 
 ## Amazon S3 Setup Guide
 
-This section provides a simple walkthrough for setting up Amazon S3, including retrieving URIs. It also explains how to retrieve the Access Key and Secret Key to configure datastore permissions. 
+This section provides a simple walkthrough for setting up Amazon S3, including retrieving URIs. It also explains how to retrieve the Access Key and Secret Key to configure datastore permissions.
 
 By following the Amazon S3 setup process, you will ensure secure and efficient access to your stored data, allowing seamless datastore integration and proper access management in Qualytics.
 
@@ -42,7 +42,7 @@ To retrieve the Access Key and Secret Access Key, follow these steps:
     8. Secret access key example: `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`.
 9. Click on the **Download Credentials**, and store the keys in a secure location.
 
-!!! warning 
+!!! warning
     Your Secret Access Key will be visible only once at the time of creation. Please ensure you copy and securely store it for future use.
 
 ### Datastore Privileges
@@ -79,7 +79,7 @@ To create a policy, follow these steps:
     ]
 }
 ```
-!!! warning 
+!!! warning
     Currently, object-level permissions alone are insufficient to authenticate the connection. Please ensure you also include bucket-level permissions as demonstrated in the example above.
 
 #### Enrichment Datastore Permissions (Read-Write)
@@ -116,7 +116,7 @@ To create a policy, follow these steps:
     ]
 }
 ```
-!!! warning 
+!!! warning
     Currently, object-level permissions alone are insufficient to authenticate the connection. Please ensure you also include bucket-level permissions as demonstrated in the example above.
 
 ## Add a Source Datastore
@@ -125,18 +125,16 @@ A source datastore is a storage location used to connect and access data from ex
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/amazon-s3/add-datastore-light.png#only-light)
-![add-datastore](../assets/datastores/amazon-s3/add-datastore-dark.png#only-dark)
+![add-datastore](../assets/datastores/amazon-s3/add-datastore-light.png)
 
-**Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
+**Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/amazon-s3/select-a-connector-light.png#only-light)
-![select-a-connector](../assets/datastores/amazon-s3/select-a-connector-dark.png#only-dark)
+![select-a-connector](../assets/datastores/amazon-s3/select-a-connector-light.png)
 
 | REF. | FIELDS       | ACTIONS                                                                                           |
 |------|--------------|---------------------------------------------------------------------------------------------------|
 | 1.  | Name (Required)         | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards.). |
-| 2.  | Toggle Button| Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
+| 2.  | Toggle Button| Toggle **ON** to create a new source datastore from scratch or toggle **OFF** to reuse credentials from an existing connection. |
 | 3.  | Connector (Required)    | Select **Amazon S3** from the dropdown list. |
 
 ### Option I: Create a Source Datastore with a new Connection
@@ -145,15 +143,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Amazon S3** connector from the dropdown list and add connection details such as Secrets Management, URI, access key, secret key, root path, and teams.
 
-![add-datastore-credentials](../assets/datastores/amazon-s3/add-datastore-credentials-light.png#only-light)
-![add-datastore-credentials](../assets/datastores/amazon-s3/add-datastore-credentials-dark.png#only-dark)
+![add-datastore-credentials](../assets/datastores/amazon-s3/add-datastore-credentials-light.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
-!!! note 
+!!! note
     After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
-| REF | FIELDS               | ACTIONS                                                                 |
+| REF. | FIELDS               | ACTIONS                                                                 |
 |-----|----------------------|-------------------------------------------------------------------------|
 | 1.  | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
 | 2.  | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
@@ -162,27 +159,24 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![secret-management](../assets/datastores/amazon-s3/secret-management-light-04.png#only-light)
-![secret-management](../assets/datastores/amazon-s3/secret-management-dark-04.png#only-dark)
+![secret-management](../assets/datastores/amazon-s3/secret-management-light-04.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/amazon-s3/add-datastore-credentials-explain-light.png#only-light)
-![add-datastore-credentials-explain](../assets/datastores/amazon-s3/add-datastore-credentials-explain-dark.png#only-dark)
+![add-datastore-credentials-explain](../assets/datastores/amazon-s3/add-datastore-credentials-explain-light.png)
 
 | REF. | FIELDS           | ACTIONS                                                                                       |
 |------|------------------|-----------------------------------------------------------------------------------------------|
-| 1.  | URI (Required)             | Enter the Uniform Resource Identifier (URI) of the Amazon S3.                                  |
+| 1.  | URI (Required)             | Enter the Uniform Resource Identifier (URI) of Amazon S3.                                  |
 | 2.  | Access Key (Required)      | Input the access key provided for secure access.                                               |
 | 3.  | Secret Key (Required)      | Input the secret key associated with the access key for secure authentication.                 |
 | 4.  | Root Path (Required)       | Specify the root path where the data is stored.                                                |
 | 5.  | Teams (Required)          | Select one or more teams from the dropdown to associate with this source datastore.            |
-| 6.  | Initiate Cataloging (Optional)| Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6.  | Initiate Cataloging (Optional)| Check the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/amazon-s3/test-datastore-connection-light.png#only-light)
-![test-datastore-connection](../assets/datastores/amazon-s3/test-datastore-connection-dark.png#only-dark)
+![test-datastore-connection](../assets/datastores/amazon-s3/test-datastore-connection-light.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -192,16 +186,14 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/amazon-s3/use-existing-datastore-light.png#only-light)
-![use-existing-datastore](../assets/datastores/amazon-s3/use-existing-datastore-dark.png#only-dark)
+![use-existing-datastore](../assets/datastores/amazon-s3/use-existing-datastore-light.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Root Path, Teams and initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Root Path, Teams, and initiate Cataloging.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/amazon-s3/test-datastore-connection-light.png#only-light)
-![test-connection-for-existing-datastore](../assets/datastores/amazon-s3/test-datastore-connection-light.png#only-dark)
+![test-connection-for-existing-datastore](../assets/datastores/amazon-s3/test-datastore-connection-light.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -215,13 +207,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/amazon-s3/next-button-for-enrichment-light.png#only-light)
-![next-button-for-enrichment](../assets/datastores/amazon-s3/next-button-for-enrichment-dark.png#only-dark)
+![next-button-for-enrichment](../assets/datastores/amazon-s3/next-button-for-enrichment-light.png)
 
-**Step 2**: A modal window- Link Enrichment Datastore will appear, providing you with the options to configure an enrichment datastore.
+**Step 2**: A modal window - Link Enrichment Datastore will appear, providing you with the options to configure an enrichment datastore.
 
-![select-enrichment-connector](../assets/datastores/amazon-s3/select-enrichment-connector-light.png#only-light)
-![select-enrichment-connector](../assets/datastores/amazon-s3/select-enrichment-connector-dark.png#only-dark)
+![select-enrichment-connector](../assets/datastores/amazon-s3/select-enrichment-connector-light.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -231,17 +221,15 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggles for **Add New connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle for **Add New connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![select-enrichment](../assets/datastores/amazon-s3/select-enrichment-light-10.png#only-light)
-![select-enrichment](../assets/datastores/amazon-s3/select-enrichment-dark-10.png#only-dark)
+![select-enrichment](../assets/datastores/amazon-s3/select-enrichment-light-10.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection
 
-![enrichment-detail](../assets/datastores/amazon-s3/enrichment-details-light-11.png#only-light)
-![enrichment-detail](../assets/datastores/amazon-s3/enrichment-details-dark-11.png#only-dark)
+![enrichment-detail](../assets/datastores/amazon-s3/enrichment-details-light-11.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -252,8 +240,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/amazon-s3/enrichment-datastore-explain-light.png#only-light)
-![enrichment-datastore-explain](../assets/datastores/amazon-s3/enrichment-datastore-explain-dark.png#only-dark)
+![enrichment-datastore-explain](../assets/datastores/amazon-s3/enrichment-datastore-explain-light.png)
 
 | REF. | FIELDS         | ACTIONS                                                                 |
 |------|----------------|-------------------------------------------------------------------------|
@@ -265,23 +252,17 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/amazon-s3/test-connection-for-enrichment-datastore-light.png#only-light)
-![test-connection-for-enrichment-datastore](../assets/datastores/amazon-s3/test-connection-for-enrichment-datastore-dark.png#only-dark)
+![test-connection-for-enrichment-datastore](../assets/datastores/amazon-s3/test-connection-for-enrichment-datastore-light.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/amazon-s3/finish-configuration-light.png#only-light)
-![finish-configuration](../assets/datastores/amazon-s3/finish-configuration-dark.png#only-dark)
+![finish-configuration](../assets/datastores/amazon-s3/finish-configuration-light.png)
 
-When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
-
-![success-message](../assets/datastores/amazon-s3/success-message-light.png#only-light)
-![success-message](../assets/datastores/amazon-s3/success-message-dark.png#only-dark)
+When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-light.png)
 
 ### Option II: Use an Existing Connection
 
@@ -289,13 +270,11 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![select-enrichment-details](../assets/datastores/amazon-s3/select-enrichment-light-17.png#only-light)
-![select-enrichment-details](../assets/datastores/amazon-s3/select-enrichment-dark-17.png#only-dark)
+![select-enrichment-details](../assets/datastores/amazon-s3/select-enrichment-light-17.png)
 
 **Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![add-enrichment-details](../assets/datastores/amazon-s3/add-enrichment-details-light-18.png#only-light)
-![add-enrichment-details](../assets/datastores/amazon-s3/add-enrichment-details-dark-18.png#only-dark)
+![add-enrichment-details](../assets/datastores/amazon-s3/add-enrichment-details-light-18.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -304,29 +283,23 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 3**: After selecting an existing **enrichment datastore** connection, you will view the following details related to the selected enrichment:
 
--   **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example- Marked as **Public** means that this datastore is accessible to all the users.
+-   **Teams**: The team associated with managing the enrichment datastore is based on the role of public or private. Example - Marked as **Public** means that this datastore is accessible to all the users.
 
--   **URI**: Uniform Resource Identifier (URI) points to the specific location of the source data and should be formatted accordingly (e.g., ```s3://bucket-name``` for Amazon S3).
+-   **URI**: The Uniform Resource Identifier (URI) points to the specific location of the source data and should be formatted accordingly (e.g., ```s3://bucket-name``` for Amazon S3).
 
 -   **Root Path**: Specify the root path where the data is stored. This path defines the base directory or folder from which all data operations will be performed.
 
-![use-existing-enrichment-datastore](../assets/datastores/amazon-s3/use-existing-enrichment-datastore-light.png#only-light)
-![use-existing-enrichment-datastore](../assets/datastores/amazon-s3/use-existing-enrichment-datastore-dark.png#only-dark)
+![use-existing-enrichment-datastore](../assets/datastores/amazon-s3/use-existing-enrichment-datastore-light.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/amazon-s3/finish-configuration-for-existing-enrichment-datastore-light.png#only-light)
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/amazon-s3/finish-configuration-for-existing-enrichment-datastore-dark.png#only-dark)
+![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/amazon-s3/finish-configuration-for-existing-enrichment-datastore-light.png)
 
-When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
-
-![success-message](../assets/datastores/amazon-s3/success-message-light.png#only-light)
-![success-message](../assets/datastores/amazon-s3/success-message-dark.png#only-dark)
+When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-light.png#only-light)
-![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-dark.png#only-dark)
+![data-operation-page](../assets/datastores/amazon-s3/data-operation-page-light.png)
 
 ## API Payload Examples
 
@@ -400,7 +373,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": connection-id
     }
-    ``` 
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore:
