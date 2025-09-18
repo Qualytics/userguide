@@ -266,7 +266,7 @@ When the configuration process is finished, a modal will display a success messa
 
 ### Option II: Use an Existing Connection
 
-If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
+If the **Use Enrichment Datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
