@@ -221,13 +221,13 @@ Once you have successfully tested and verified your source datastore connection,
 
 ### Option I: Create an Enrichment Datastore with a new Connection
 
-If the toggle for **Add New connection is turned on**, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
+If the toggle for **Add New connection** is turned on, then this will prompt you to add and configure the enrichment datastore from scratch without using an existing enrichment datastore and its connection details.
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
 ![select-enrichment](../assets/datastores/amazon-s3/select-enrichment-light-10.png)
 
-A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection
+A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
 ![enrichment-detail](../assets/datastores/amazon-s3/enrichment-details-light-11.png)
 
@@ -266,7 +266,7 @@ When the configuration process is finished, a modal will display a success messa
 
 ### Option II: Use an Existing Connection
 
-If the toggle for **Use an existing enrichment datastore** is turned on, you will be prompted to configure the enrichment datastore using existing connection details.
+If the **Use enrichment datastore** option is selected from the caret button, you will be prompted to configure the datastore using existing connection details.
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
