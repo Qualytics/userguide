@@ -13,8 +13,8 @@ A modal window **Link Enrichment Datastore** will appear, providing you with two
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2. | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**. |
 | 3. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
-| 4. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one. Value must be between 1 and 1,000,000. |
-| 5. | Source Record Limit | Sets the maximum number of records written to the enrichment for each detected anomaly. The value must be between 1 and 1,000,000,000. |
+| 4. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
+| 5. | Source Record Limit | Sets the maximum number of records written to the enrichment datastore for each detected anomaly. The value must be between 1 and 1,000,000,000. |
 | 6. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
 
 ### Option I: Link New Enrichment
@@ -35,8 +35,8 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 2. | Name | Give a name for the enrichment datastore. |
 | 3. | Toggle Button for adding new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
 | 4. | Connector | Select a datastore connector from the dropdown list. |
-| 5. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one. Value must be between 1 and 1,000,000. |
-| 6. | Source Record Limit | Sets the maximum number of records written to the enrichment for each detected anomaly. The value must be between 1 and 1,000,000,000. |
+| 5. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
+| 6. | Source Record Limit | Sets the maximum number of records written to the enrichment datastore for each detected anomaly. The value must be between 1 and 1,000,000,000. |
 | 7. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
@@ -74,11 +74,11 @@ If the **Use an existing enrichment datastore** option is selected from the drop
 | :---- | :---- | :---- |
 | 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
-| 3. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one. Value must be between 1 and 1,000,000. |
-| 4. | Source Record Limit | Sets the maximum number of records written to the enrichment for each detected anomaly. The value must be between 1 and 1,000,000,000. |
+| 3. | Anomaly Rollup Threshold | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
+| 4. | Source Record Limit | Sets the maximum number of records written to the enrichment datastore for each detected anomaly. The value must be between 1 and 1,000,000,000. |
 | 5. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
 
-**Step 3:** View and check the connection details of the enrichment and click on the **Save** button.
+**Step 3:** View and check the connection details of the enrichment datastore and click on the **Save** button.
 
 ![save](../assets/datastore-settings/link-enrichment/save-light-15.png)
 
