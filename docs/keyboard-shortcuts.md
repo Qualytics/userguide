@@ -6,7 +6,7 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click on the **Search** bar at the top of the dashboard.
 
-Alternatively, you can press **Ctrl + K** on Windows/Linux or **Cmd + K** on macOS to open the Search bar directly.
+Alternatively, you can press **Ctrl + K** on Windows/Linux or **⌘ + K** on macOS to open the Search bar directly.
 
 ![search](assets/keyboard-shortcuts/search.png)
 
@@ -14,7 +14,7 @@ A popup window will appear, presenting various search options.
 
 ![search-options](assets/keyboard-shortcuts/search-options.png)
 
-**Step 3:** Click on **Search Keyboard Shortcuts** to see all the shortcuts in one place.
+**Step 2:** Click on **Search Keyboard Shortcuts** to see all the shortcuts in one place.
 
 ![click-search-key-shortcuts](assets/keyboard-shortcuts/click-search-key-shortcuts.png)
 
@@ -22,7 +22,7 @@ A window will appear, displaying a comprehensive list of all shortcuts organized
 
 ![keyboard-shortcuts](assets/keyboard-shortcuts/keyboard-shortcuts.png)
 
-**Step 4:** You can now either search for a specific shortcut or scroll through the list to see all available options.
+**Step 3:** You can now either search for a specific shortcut or scroll through the list to see all available options.
 
 ![search-key-shortcuts](assets/keyboard-shortcuts/search-key-shortcuts.png)
 
@@ -54,8 +54,8 @@ The Search Shortcuts allow you to quickly find datastores, containers, fields, a
 
 | Action                          | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Search datastores, containers, and fields   | Ctrl + ↑ + F  | Cmd + ↑ + F  |
-| Search keyboard shortcuts                   | Ctrl + /      | Cmd + /      |
+| Search datastores, containers, and fields   | Ctrl + ↑ + F  | ⌘ + ↑ + F  |
+| Search keyboard shortcuts                   | Ctrl + /      | ⌘ + /      |
 
 ### Navigation
 
@@ -70,8 +70,8 @@ The Navigation Shortcuts make it easy to move between pages, switch tabs, and ac
 | Go to library                               | G then L      | G then L     |
 | Go to settings                              | G then S      | G then S     |
 | Go to tags                                  | G then T      | G then T     |
-| Select next tab                             | Alt + →       | Option + →   |
-| Select previous tab                         | Alt + ←       | Option + ←   |
+| Select next tab                             | Alt + →       | ⌥ + →   |
+| Select previous tab                         | Alt + ←       | ⌥ + ←   |
 
 ### Anomaly
 
@@ -79,9 +79,9 @@ The Anomaly Shortcuts provide quick actions for archiving, deleting, or tagging 
 
 | Action                           | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Archive anomaly                             | Ctrl + E      | Cmd + E      |
+| Archive anomaly                             | Ctrl + E      | ⌘ + E      |
 | Assign tags                                 | A then T      | A then T     |
-| Delete anomaly                              | Ctrl + Del    | Cmd + Del    |
+| Delete anomaly                              | Ctrl + Del    | ⌘ + Del    |
 
 ### Check
 
@@ -89,11 +89,11 @@ The Check Shortcuts give you instant access to actions like editing, archiving, 
 
 | Action                            | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Archive check                               | Ctrl + E      | Cmd + E      |
+| Archive check                               | Ctrl + E      | ⌘ + E      |
 | Assign tags                                 | A then T      | A then T     |
-| Delete check                                | Ctrl + Del    | Cmd + Del    |
+| Delete check                                | Ctrl + Del    | ⌘ + Del    |
 | Edit check                                  | E             | E            |
-| Mark as favorite                            | Alt + F       | Option + F   |
+| Mark as favorite                            | Alt + F       | ⌥ + F   |
 
 ### Checks
 
@@ -101,7 +101,7 @@ The Checks Shortcuts are focused on creating new checks, whether from scratch or
 
 | Action                          | Windows/Linux   | macOS          |
 |---------------------------------------------|-----------------|----------------|
-| Add multiple checks from template           | Ctrl + Shift + C| Cmd + Shift + C|
+| Add multiple checks from template           | Ctrl + Shift + C| ⌘ + Shift + C|
 | Add new check from template                 | Shift + C       | Shift + C      |
 | Add new check                               | C               | C              |
 
@@ -112,8 +112,8 @@ The Container Shortcuts let you manage containers efficiently by assigning tags,
 | Action                        | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
 | Assign tags                                 | A then T      | A then T     |
-| Delete container                            | Ctrl + Del    | Cmd + Del    |
-| Mark as favorite                            | Alt + F       | Option + F   |
+| Delete container                            | Ctrl + Del    | ⌘ + Del    |
+| Mark as favorite                            | Alt + F       | ⌥ + F   |
 | Open container settings                     | E             | E            |
 
 ### Datastore
@@ -123,9 +123,9 @@ The Datastore Shortcuts simplify datastore management, allowing you to quickly a
 | Action                          | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
 | Assign tags                                 | A then T      | A then T     |
-| Delete datastore                            | Ctrl + Del    | Cmd + Del    |
+| Delete datastore                            | Ctrl + Del    | ⌘ + Del    |
 | Edit datastore                              | E             | E            |
-| Mark as favorite                            | Alt + F       | Option + F   |
+| Mark as favorite                            | Alt + F       | ⌥ + F   |
 
 ### Enrichment
 
@@ -133,7 +133,7 @@ The Enrichment Shortcuts provide fast access to edit or delete enrichment config
 
 | Action                          | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Delete enrichment                           | Ctrl + Del    | Cmd + Del    |
+| Delete enrichment                           | Ctrl + Del    | ⌘ + Del    |
 | Edit enrichment                             | E             | E            |
 
 ### Field
@@ -143,7 +143,7 @@ The Field Shortcuts help you manage fields by assigning tags, editing details, o
 | Action                          | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
 | Assign tags                                 | A then T      | A then T     |
-| Delete computed field                       | Ctrl + Del    | Cmd + Del    |
+| Delete computed field                       | Ctrl + Del    | ⌘ + Del    |
 | Edit field                                  | E             | E            |
 
 ### Flow
@@ -152,9 +152,9 @@ The Flow Shortcuts allow you to clone, delete, execute, or publish flows efficie
 
 | Action                        | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Clone flow                                  | Ctrl + D      | Cmd + D      |
-| Delete flow                                 | Ctrl + Del    | Cmd + Del    |
-| Execute flow                                | Ctrl + Enter  | Cmd + Enter  |
+| Clone flow                                  | Ctrl + D      | ⌘ + D      |
+| Delete flow                                 | Ctrl + Del    | ⌘ + Del    |
+| Execute flow                                | Ctrl + Enter  | ⌘ + Enter  |
 | Publish flow                                | P             | P            |
 
 ### Flow Execution
@@ -163,7 +163,7 @@ The Flow Execution Shortcuts are designed for quick deletion of flow execution r
 
 | Action                          | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Delete flow execution                       | Ctrl + Del    | Cmd + Del    |
+| Delete flow execution                       | Ctrl + Del    | ⌘ + Del    |
 
 ### Interface
 
@@ -171,8 +171,8 @@ The Interface Shortcuts let you control the look and feel of the platform, such 
 
 | Action                           | Windows/Linux   | macOS          |
 |---------------------------------------------|-----------------|----------------|
-| Collapse navigation sidebar                 | Ctrl + B        | Cmd + B        |
-| Switch theme                                | Ctrl + Shift + L| Cmd + Shift + L|
+| Collapse navigation sidebar                 | Ctrl + B        | ⌘ + B        |
+| Switch theme                                | Ctrl + Shift + L| ⌘ + Shift + L|
 
 ### Operations
 
@@ -200,5 +200,5 @@ The Template Shortcuts cover editing and archiving templates, helping you mainta
 
 | Action                           | Windows/Linux | macOS        |
 |---------------------------------------------|---------------|--------------|
-| Archive template                            | Ctrl + E      | Cmd + E      |
+| Archive template                            | Ctrl + E      | ⌘ + E      |
 | Edit template                               | E             | E            |
