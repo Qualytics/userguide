@@ -53,7 +53,7 @@ This option allows you to manually select the individual table(s) or file patter
 
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purposes.
 
-![specific](../assets/datastores/scan/specfic-light.png)
+![specific](../assets/datastores/scan/specific-light.png)
 
 **3. Tag**
 
@@ -133,7 +133,7 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
-- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [FingerPrint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
+- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [Fingerprint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png)
 
@@ -449,7 +449,7 @@ To run a scan operation, use the API payload example below and replace the place
 
     ```json
     {
-        "type":"profile",
+        "type":"scan",
         "name":null,
         "datastore_id":datastore-id,
         "container_names":[
