@@ -8,20 +8,20 @@ JDBC datastores in Qualytics make it easy to connect and manage data from relati
 
 | No. | JDBC Connector | Enrichment Support |
 | :---- | :---- | :---- |
-| 01. | [Athena](../add-datastores/athena.md#add-enrichment-datastore) | No |
-| 02. | [Big Query](../add-datastores/bigquery.md#add-enrichment-datastore) | Yes |
-| 03. | [Databricks](../add-datastores/databricks.md#add-enrichment-datastore) | Yes |
-| 04. | [DB2](../add-datastores/db2.md#add-enrichment-datastore) | No |
-| 05. | [Dremio](../add-datastores/dremio.md#add-enrichment-datastore) | No |
-| 06. | [Hive](../add-datastores/hive.md#add-enrichment-datastore) | No |
-| 07. | [MariaDB](../add-datastores/maria-db.md#add-enrichment-datastore) | Yes |
-| 08. | [Microsoft SQL](../add-datastores/microsoft-sql-server.md#add-enrichment-datastore) | Yes |
-| 09. | [MySQL](../add-datastores/mysql.md#add-enrichment-datastore) | Yes |
-| 10. | [Oracle](../add-datastores/oracle.md#add-enrichment-datastore) | No |
-| 11. | [PostgreSQL](../add-datastores/postgresql.md#add-enrichment-datastore) | Yes |
-| 12. | [Presto](../add-datastores/presto.md#add-enrichment-datastore) | No |
-| 13. | [Redshift](../add-datastores/redshift.md#add-enrichment-datastore) | Yes |
-| 14. | [Snowflake](../add-datastores/snowflake.md#add-enrichment-datastore-connection) | No |
+| 01. | [Amazon Redshift](../add-datastores/redshift.md#add-enrichment-datastore) | Yes |
+| 02. | [Athena](../add-datastores/athena.md#add-enrichment-datastore) | No |
+| 03. | [Big Query](../add-datastores/bigquery.md#add-enrichment-datastore) | Yes |
+| 04. | [Databricks](../add-datastores/databricks.md#add-enrichment-datastore) | Yes |
+| 05. | [DB2](../add-datastores/db2.md#add-enrichment-datastore) | Yes |
+| 06. | [Dremio](../add-datastores/dremio.md#add-enrichment-datastore) | No |
+| 07. | [Hive](../add-datastores/hive.md#add-enrichment-datastore) | No |
+| 08. | [MariaDB](../add-datastores/maria-db.md#add-enrichment-datastore) | Yes |
+| 09. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md#add-enrichment-datastore) | Yes |
+| 10. | [MySQL](../add-datastores/mysql.md#add-enrichment-datastore) | Yes |
+| 11. | [Oracle](../add-datastores/oracle.md#add-enrichment-datastore) | No |
+| 12. | [PostgreSQL](../add-datastores/postgresql.md#add-enrichment-datastore) | Yes |
+| 13. | [Presto](../add-datastores/presto.md#add-enrichment-datastore) | No |
+| 14. | [Snowflake](../add-datastores/snowflake.md#add-enrichment-datastore-connection) | Yes |
 | 15. | [Synapse](../add-datastores/synapse.md#add-enrichment-datastore) | Yes |
 | 16. | [Teradata](../add-datastores/teradata.md#add-enrichment-datastore) | No |
 | 17. | [TimescaleDB](../add-datastores/timescale-db.md#add-enrichment-datastore) | No |
