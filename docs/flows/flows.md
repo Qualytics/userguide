@@ -4,7 +4,7 @@ Flows enable users to create pipelines by chaining actions and configuring how t
 
 ## Navigation to Flows
 
-**Step 1**: Log in to your Qualytics account and click on the **Flows** on the left side panel of the interface.  
+**Step 1**: Log in to your Qualytics account and click on **Flows** on the left side panel of the interface.  
 
 ![flows](.././assets/flows/flow-light-1.png)
 
@@ -649,7 +649,7 @@ An **HTTP Action Settings** panel will appear on the right-hand side, enabling u
 **4. Auth Type:** This field specifies how to authenticate requests. Choose the method that fits your needs:
 
 * **Basic:** Uses a username and password sent with each request. Example: **“Authorization: Basic ”.**  
-* **Bearer:** Uses a token included in the request header to access resources. Example: **“Authorization: Bearer ”.**  
+* **Bearer:** Uses a token included in the request header to access resources. Example: **“Authorization: Bearer < token >”.**  
 * **Digest:** Provides a more secure authentication method by using a hashed combination of the username, password, and request details. Example: **Authorization: Digest username=" ", realm=" ", nonce=" ", uri=" ", response=" ".**
 
 **5. Secret:** Enter the password or token used for authentication. This is paired with the **Username** and **Auth Type** to securely access the server. Keep the secret confidential to ensure security.
