@@ -1,12 +1,12 @@
 # Scan Operation
 
-The Scan Operation in Qualytics is performed on a datastore to enforce data quality checks for various data collections such as tables, views, and files.It supports centralized configuration through the Datastore Enrichment Settings, where options like the Remediation Strategy, Source Record Limit, and Anomaly Rollup Threshold are defined. While these defaults are applied automatically during a scan, users retain the flexibility to adjust the Source Record Limit and Anomaly Rollup Threshold directly within the scan form. This operation has several key functions:
+The Scan Operation in Qualytics is performed on a datastore to enforce data quality checks for various data collections, such as tables, views, and files. It supports centralized configuration through the Datastore Enrichment Settings, where options like the Remediation Strategy, Source Record Limit, and Anomaly Rollup Threshold are defined. While these defaults are applied automatically during a scan, users retain the flexibility to adjust the Source Record Limit and Anomaly Rollup Threshold directly within the scan form. This operation has several key functions:
 
 -   **Record Anomalies:** Identifies a single record (row) as anomalous and provides specific details regarding why it is considered anomalous. The simplest form of a record anomaly is a row that lacks an expected value for a field.  
 
 -   **Shape Anomalies:** Identifies structural issues within a dataset at the column or schema level. It highlights broader patterns or distributions that deviate from expected norms. If a dataset is expected to have certain fields and one or more fields are missing or contain inconsistent patterns, this would be flagged as a shape anomaly.  
 
--   **Anomaly Data Recording:** All identified anomalies, along with related analytical data, are recorded in the associated Enrichment Datastore for further examination. 
+-   **Anomaly Data Recording:** All identified anomalies, along with related analytical data, are recorded in the associated Enrichment Datastore for further examination.
 
 Additionally, the Scan Operation offers flexible options, including the ability to:
 
@@ -21,23 +21,20 @@ Let's get started! 🚀
 
 **Step 1:** Select a source datastore from the side menu on which you would like to perform the scan operation.
 
-![side-menu](../assets/datastores/scan/side-menu-light.png#only-light)
-![side-menu](../assets/datastores/scan/side-menu-dark.png#only-dark)
+![side-menu](../assets/datastores/scan/side-menu-light.png)
 
-**Step 2:** Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Scan** to initiate the catalog operation.
+**Step 2:** Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Scan** to initiate the scan operation.
 
-![details-page](../assets/datastores/scan/details-page-light.png#only-light)
-![details-page](../assets/datastores/scan/details-page-dark.png#only-dark)
+![details-page](../assets/datastores/scan/details-page-light.png)
 
 !!! note
-    Scanning operation can be commenced once the catalog operation and profile operation is completed.
+    Scanning operation can be commenced once the catalog operation and profile operation are completed.
 
 ## Configuration
 
 **Step 1:** Click on the **Run** button to initiate the scan operation.
 
-![run](../assets/datastores/scan/run-light.png#only-light)
-![run](../assets/datastores/scan/run-dark.png#only-dark)
+![run](../assets/datastores/scan/run-light.png)
 
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
 
@@ -48,29 +45,25 @@ Let's get started! 🚀
 
 This option includes all tables or file patterns currently available for scanning in the datastore. It means that every table or file pattern recognized in your datastore will be subjected to the defined data quality checks. Use this when you want to perform a comprehensive scan covering all the available data without any exclusions.
 
-![all-operation](../assets/datastores/scan/all-operation-light.png#only-light)
-![all-operation](../assets/datastores/scan/all-operation-dark.png#only-dark)
+![all-operation](../assets/datastores/scan/all-operation-light.png)
 
 **2. Specific Tables/File Patterns**
 
-This option allows you to manually select the individual table(s) or file pattern(s) in your datastore to scan. Upon selecting this option, all the tables or file patterns associated with your datastore will be automatically populated allowing you to select the datasets you want to scan.
+This option allows you to manually select the individual table(s) or file pattern(s) in your datastore to scan. Upon selecting this option, all the tables or file patterns associated with your datastore will be automatically populated, allowing you to select the datasets you want to scan.
 
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purposes.
 
-![specific](../assets/datastores/scan/specfic-light.png#only-light)
-![specific](../assets/datastores/scan/specfic-dark.png#only-dark)
+![specific](../assets/datastores/scan/specific-light.png)
 
 **3. Tag**
 
 This option enables you to automatically scan file patterns associated with the selected tags. Tags can be predefined or created to categorize and manage file patterns effectively.
 
-![tag](../assets/datastores/scan/tag-light.png#only-light)
-![tag](../assets/datastores/scan/tag-dark.png#only-dark)
+![tag](../assets/datastores/scan/tag-light.png)
 
 **Step 3:** Click on the **Next** button to Configure **Select Check Categories**.
 
-![next](../assets/datastores/scan/next-light.png#only-light)
-![next](../assets/datastores/scan/next-dark.png#only-dark)
+![next](../assets/datastores/scan/next-light.png)
 
 **Step 4:** Configure **Select Check Categories** Setting
 
@@ -78,31 +71,28 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 -  **Metadata**: Include checks that define the expected properties of the table, such as volume. It belongs to the Volumetric rule type.
 
-- **Data Integrity:** Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
+- **Data Integrity**: Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
 
-![next](../assets/datastores/scan/select-check-light.png#only-light)
-![next](../assets/datastores/scan/select-check-dark.png#only-dark)
+![select-check](../assets/datastores/scan/select-check-light.png)
 
 **Step 5:** Click on the **Next** button to Configure the **Read Settings**.
 
-![next](../assets/datastores/scan/nextt-light.png#only-light)
-![next](../assets/datastores/scan/nextt-dark.png#only-dark)
+![next](../assets/datastores/scan/nextt-light.png)
 
 **Step 6:** Configure Read Settings, Starting Threshold (Optional), and the Record Limit.
 
- 1.Select the **Read Strategy** for your scan operation.
+ 1. Select the **Read Strategy** for your scan operation.
 
-- **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation.  On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources. 
+- **Incremental:** This strategy is used to scan only the new or updated records since the last scan operation.  On the initial run, a full scan is conducted unless a specific starting threshold is set. For subsequent scans, only the records that have changed since the last scan are processed. If tables or views do not have a defined incremental key, a full scan will be performed. Ideal for regular scans where only changes need to be tracked, saving time and computational resources.
 
 !!! note
     Incremental scans fully support Apache Iceberg table, significantly expanding the range of asset types eligible for incremental scanning operations.
 
-- **Full**: This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data. 
+- **Full**: This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data.
 
-![incremental](../assets/datastores/scan/incremental-light.png#only-light)
-![incremental](../assets/datastores/scan/incremental-dark.png#only-dark)
+![incremental](../assets/datastores/scan/incremental-light.png)
 
-!!! warning 
+!!! warning
     If any selected tables do not have an incremental identifier, a full scan will be performed for those tables.
 
 !!! info
@@ -114,126 +104,117 @@ Users can choose one or more check categories when initiating a scan. This allow
 
     - This approach optimizes the scanning process while maintaining data quality and consistency.
 
-
- 2.Define the Starting Threshold **(Optional)** i.e. - specify a minimum incremental identifier value to set a starting point for the scan.
+ 2. Define the Starting Threshold **(Optional)** i.e., specify a minimum incremental identifier value to set a starting point for the scan.
 
 * **Greater Than Time:** This option applies only to tables with an incremental timestamp strategy. Users can specify a timestamp to scan records that were modified after this time.
 
 * **Greater Than Batch:** This option applies to tables with an incremental batch strategy. Users can set a batch value, ensuring that only records with a batch identifier greater than the specified value are scanned.
 
-![starting-threshold](../assets/datastores/scan/starting-threshold-light.png#only-light)
-![starting-threshold](../assets/datastores/scan/starting-threshold-dark.png#only-dark)
+![starting-threshold](../assets/datastores/scan/starting-threshold-light.png)
 
- 3.Define the **record limit**- the maximum number of records to be scanned per table after any initial filtering.
+ 3. Define the **Record Limit** - the maximum number of records to be scanned per table after any initial filtering. This is a crucial feature for managing large datasets.
 
-![record-limit-line](../assets/datastores/scan/record-limit-line-light.png#only-light)
-![record-limit-line](../assets/datastores/scan/record-limit-line-dark.png#only-dark)
+![record-limit-line](../assets/datastores/scan/record-limit-line-light.png)
+
+ You can manually enter a custom value in the text field or quickly select from a dropdown menu with commonly used limits such as 1M, 10M, 100M, and All.
+
+ ![record-limit-options](../assets/datastores/scan/record-limit-options.png)
+
+!!! note
+    The number of records must be between 1 and 1,000,000,000.
 
 **Step 7:** Click on the **Next** button to Configure the **Scan Settings**.
 
-![next-button](../assets/datastores/scan/next-button-light.png#only-light)
-![next-button](../assets/datastores/scan/next-button-dark.png#only-dark)
+![next-button](../assets/datastores/scan/next-button-light.png)
 
-**Step 6:** Configure the **Scan Settings**.
+**Step 8:** Configure the **Scan Settings**.
 
 **1. Anomaly Options:** Manage duplicate anomalies efficiently by archiving duplicates or reactivating recurring ones. These settings help streamline anomaly tracking and maintain data accuracy.
- 
+
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
-- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [FingerPrint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
+- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [Fingerprint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
 
-![anomaly-option](../assets/datastores/scan/anomaly-option-light.png#only-light)
-![anomaly-option](../assets/datastores/scan/anomaly-option-dark.png#only-dark)
+![anomaly-option](../assets/datastores/scan/anomaly-option-light.png)
 
 **2. Anomaly Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
 
-![anomaly-option](../assets/datastores/scan/anomalyy-light.png#only-light)
-![anomaly-option](../assets/datastores/scan/anomalyy-dark.png#only-dark)
+![anomaly-option](../assets/datastores/scan/anomalyy-light.png)
 
 **3. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
 
-![source-record-limit](../assets/datastores/scan/source-record-limit-light.png#only-light)
-![source-record-limit](../assets/datastores/scan/source-record-limit-dark.png#only-dark)
+![source-record-limit](../assets/datastores/scan/source-record-limit-light.png)
 
 ## Run Instantly
 
 Click on the **Run Now** button to perform the scan operation immediately.
 
-![run-now](../assets/datastores/scan/run-now-light.png#only-light)
-![run-now](../assets/datastores/scan/run-now-dark.png#only-dark)
+![run-now](../assets/datastores/scan/run-now-light.png)
 
 ## Schedule
 
 **Step 1:** Click on the **Schedule** button to configure the available schedule options for your scan operation.
 
-![click-schedule](../assets/datastores/scan/click-schedule-light.png#only-light)
-![click-schedule](../assets/datastores/scan/click-schedule-dark.png#only-dark)
+![click-schedule](../assets/datastores/scan/click-schedule-light.png)
 
-**Step 2:** Set the scheduling preferences for the profile operation.
+**Step 2:** Set the scheduling preferences for the scan operation.
 
 **1. Hourly:** This option allows you to schedule the scan to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the scan should start. Example: If set to **Every 1 hour(s) on minute 0,** the scan will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00).
 
-![hourly](../assets/datastores/scan/hourly-light.png#only-light)
-![hourly](../assets/datastores/scan/hourly-dark.png#only-dark)
+![hourly](../assets/datastores/scan/hourly-light.png)
 
 **2. Daily:** This option schedules the scan to run once every day at a specific time. You specify the number of days between scans and the exact time of day in UTC. Example: If set to **Every 1 day(s) at 00:00 UTC,** the scan will run every day at midnight UTC.
 
-![daily](../assets/datastores/scan/daily-light.png#only-light)
-![daily](../assets/datastores/scan/daily-dark.png#only-dark)
+![daily](../assets/datastores/scan/daily-light.png)
 
 **3. Weekly:** This option schedules the scan to run on specific days of the week at a set time. You select the days of the week and the exact time of day in UTC for the scan to run. Example: If configured to run on "Sunday" and "Friday" at 00:00 UTC, the scan will execute at midnight UTC on these days.
 
-![weekly](../assets/datastores/scan/weekly-light.png#only-light)
-![weekly](../assets/datastores/scan/weekly-dark.png#only-dark)
+![weekly](../assets/datastores/scan/weekly-light.png)
 
 **4. Monthly:** This option schedules the scan to run once a month on a specific day at a set time. You specify the day of the month and the time of day in UTC. If set to "On the 1st day of every 1 month(s), at 00:00 UTC," the scan will run on the first day of each month at midnight UTC.
 
-![monthly](../assets/datastores/scan/monthly-light.png#only-light)
-![monthly](../assets/datastores/scan/monthly-dark.png#only-dark)
+![monthly](../assets/datastores/scan/monthly-light.png)
 
-**5. Advanced:** The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for profile operations with precision.
+**5. Advanced:** The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for scan operations with precision.
 
 Cron expressions are a powerful and flexible way to schedule tasks. They use a syntax that specifies the exact timing of the task based on five fields:
 
--   Minute (0 - 59)   
--   Hour (0 - 23)   
--   Day of the month (1 - 31)   
+-   Minute (0 - 59)
+-   Hour (0 - 23)
+-   Day of the month (1 - 31)
 -   Month (1 - 12)  
 -   Day of the week (0 - 6) (Sunday to Saturday)
 
 Each field can be defined using specific values, ranges, or special characters to create the desired schedule.
 
-**Example:** For instance, the Cron expression `0 0 * * *` schedules the profile operation to run at midnight (00:00) every day. Here’s a breakdown of this expression:
+**Example:** The Cron expression `0 0 * * *` schedules the scan operation to run at midnight (00:00) every day. Here’s a breakdown of this expression:
 
--   0 (Minute) - The task will run at the 0th minute.    
--   0 (Hour) - The task will run at the 0th hour (midnight).    
--   *(Day of the month) - The task will run every day of the month.   
--   *(Month) - The task will run every month.   
+-   0 (Minute) - The task will run at the 0th minute.
+-   0 (Hour) - The task will run at the 0th hour (midnight).
+-   *(Day of the month) - The task will run every day of the month.
+-   *(Month) - The task will run every month.
 -   *(Day of the week) - The task will run every day of the week.
 
 Users can define other specific schedules by adjusting the Cron expression. For example:
 
--   0 12 * * 1-5 - Runs at 12:00 PM from Monday to Friday.   
--   30 14 1 * * - Runs at 2:30 PM on the first day of every month.   
+-   0 12 * * 1-5 - Runs at 12:00 PM from Monday to Friday.
+-   30 14 1 * * - Runs at 2:30 PM on the first day of every month.
 -   0 22 * * 6 - Runs at 10:00 PM every Saturday.
 
-To define a custom schedule, enter the appropriate Cron expression in the "Custom Cron Schedule (UTC)" field before specifying the schedule name. This will allow for precise control over the timing of the profile operation, ensuring it runs exactly when needed according to your specific requirements.
+To define a custom schedule, enter the appropriate Cron expression in the "Custom Cron Schedule (UTC)" field before specifying the schedule name. This will allow for precise control over the timing of the scan operation, ensuring it runs exactly when needed according to your specific requirements.
 
-![advanced](../assets/datastores/scan/advanced-light.png#only-light)
-![advanced](../assets/datastores/scan/advanced-dark.png#only-dark)
+![advanced](../assets/datastores/scan/advanced-light.png)
 
 **Step 3:** Define the **Schedule Name** to identify the scheduled operation at the running time.
 
-![schedule-name](../assets/datastores/scan/schedule-name-light.png#only-light)
-![schedule-name](../assets/datastores/scan/schedule-name-dark.png#only-dark)
+![schedule-name](../assets/datastores/scan/schedule-name-light.png)
 
 **Step 4:** Click on the **Schedule** button to schedule your scan operation.
 
-![schedule](../assets/datastores/scan/schedule-light.png#only-light)
-![schedule](../assets/datastores/scan/schedule-dark.png#only-dark)
+![schedule](../assets/datastores/scan/schedule-light.png)
 
 !!! note
-    You will receive a notification when the profile operation is completed. 
+    You will receive a notification when the scan operation is completed.
 
 ## Advanced Options
 
@@ -271,18 +252,17 @@ When the scan operation is completed, you will receive the notification and can 
 
 **2. Schedule:** Provides insights into the [scheduled operations](../operation-automation/automated-tasks-with-cron.md).
 
-**3. Search:** Search any operation (including scan) by entering the operation ID
+**3. Search:** Search for any operation (including scan) by entering the operation ID
 
 **4. Sort by:** Organize the list of operations based on the **Created Date** or the **Duration**.
 
 **5. Filter:** Narrow down the list of operations based on:
 
 -   Operation Type
--   Operation Status   
+-   Operation Status
 -   Table
 
-![activity-operation](../assets/datastores/scan/activity-operation-light.png#only-light)
-![activity-operation](../assets/datastores/scan/activity-operation-dark.png#only-dark)
+![activity-operation](../assets/datastores/scan/activity-operation-light.png)
 
 ### Activity Heatmap
 
@@ -291,9 +271,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 !!! tip 
     You can click on any of the squares from the Activity Heatmap to filter operations.
 
-![activity](../assets/datastores/scan/activity-light.png#only-light)
-![activity](../assets/datastores/scan/activity-dark.png#only-dark)
-
+![activity](../assets/datastores/scan/activity-light.png)
 
 ### Operation Detail
 
@@ -301,8 +279,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a **running** status reflects the following details and actions:
 
-![running](../assets/datastores/scan/running-light.png#only-light)
-![running](../assets/datastores/scan/running-dark.png#only-dark)
+![running](../assets/datastores/scan/running-light.png)
 
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -328,8 +305,7 @@ This status indicates that the scan operation is still running at the moment and
 
 This status indicates that the scan operation was manually stopped before it could be completed. A scan operation having an **aborted** status reflects the following details and actions:
 
-![aborted-operation](../assets/datastores/scan/aborted-operation-light.png#only-light)
-![aborted-operation](../assets/datastores/scan/aborted-operation-dark.png#only-dark)
+![aborted-operation](../assets/datastores/scan/aborted-operation-light.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -357,8 +333,7 @@ This status indicates that the scan operation was manually stopped before it cou
 
 This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a **completed with warning** status reflects the following details and actions:
 
-![warning](../assets/datastores/scan/warning-light.png#only-light)
-![warning](../assets/datastores/scan/warning-dark.png#only-dark)
+![warning](../assets/datastores/scan/warning-light.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -385,8 +360,7 @@ This status signals that the scan operation encountered some issues and displays
 
 The summary section provides an overview of the **scan** operation upon successful completion. It includes:
 
-![success](../assets/datastores/scan/success-2-light.png#only-light)
-![success](../assets/datastores/scan/success-2-dark.png#only-dark)
+![success](../assets/datastores/scan/success-2-light.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -406,42 +380,38 @@ The summary section provides an overview of the **scan** operation upon successf
 | 14      | Results                   | View the details of the completed scan operation. This includes information on which tables were scanned, the anomalies identified (if any), and other relevant data collected throughout the successful completion of the scan.|
 | 15      | Rerun                     | The "Rerun" button allows you to start a new scan operation using the same settings as the success scan|
 | 16      | Delete                    | Removes the record of the aborted scan operation from the system, permanently deleting scan results and anomalies|
-| 17     | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul>|
+| 17     | Summary | The summary section provides an overview of the scan operation upon successful completion. It includes: <br><ul><li> **Tables Requested**: The total number of tables that were scheduled for scanning. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Scanned**: The number of tables that have been scanned successfully. Click on the adjacent magnifying glass icon to view the tables scanned. </li><li> **Partitions Scanned**: The number of partitions scanned. </li><li> **Records Scanned**: The total number of records processed.</li><li> **Anomalies Identified**: The total number of detected anomalies, with a breakdown of open and archived ones. </li></ul>|
 
 #### Full View of Metrics in Operation Summary
 
 Users can now hover over abbreviated metrics to see the full value for better clarity. For demonstration purposes, we are hovering over the **Records Scanned** field to display the full value.
 
-![records-scan-operation](../assets/datastores/scan/records-scan-operation-light.png#only-light)
-![records-scan-operation](../assets/datastores/scan/records-scan-operation-dark.png#only-dark)
+![records-scan-operation](../assets/datastores/scan/records-scan-operation-light.png)
 
 #### Post Operation Details
 
 **Step 1:** Click on any of the successful **Scan Operations** from the list and hit the **Results** button.
 
-![result-scan-operation](../assets/datastores/scan/result-scan-operation-light.png#only-light)
-![result-scan-operation](../assets/datastores/scan/result-scan-operation-dark.png#only-dark)
+![result-scan-operation](../assets/datastores/scan/result-scan-operation-light.png)
 
 **Step 2:** The **Scan Results** modal demonstrates the highlighted anomalies (if any) identified in your datastore with the following properties:
 
-![result](../assets/datastores/scan/result-light.png#only-light)
-![result](../assets/datastores/scan/result-dark.png#only-dark)
+![result](../assets/datastores/scan/result-light.png)
 
 | Ref. | Scan Properties | Description |
 |------|-----------------|------------------------|
 | 1.   | Table/File | The table or file where the anomaly is found.|
-| 2.   | Field | The field(s) where the anomaly is present. Field(s) of the anomaly. |
+| 2.   | Field | The field(s) where the anomaly is present. |
 | 3.   | Location | Fully qualified location of the anomaly.|
 | 4.   | Rule | Inferred and authored checks that failed assertions. |
 | 5.   | Description | Human-readable, auto-generated description of the anomaly.|
-| 6.   | Status | The status of the anomaly. Active, Acknowledged, Resolved, or Invalid |
+| 6.   | Status | The status of the anomaly: Active, Acknowledged, Resolved, or Invalid. |
 | 7.   | Type | The type of anomaly (e.g., Record or Shape) |
 | 8.   | Date time | The date and time when the anomaly was found. |
 
 **Step 3:** By clicking the **dropdown** button next to the **All** button, you can filter anomalies based on their status.
 
-![drop-down](../assets/datastores/scan/drop-down-light.png#only-light)
-![drop-down](../assets/datastores/scan/drop-down-dark.png#only-dark)
+![drop-down](../assets/datastores/scan/drop-down-light.png)
 
 ## API Payload Examples
 
@@ -457,7 +427,7 @@ To run a scan operation, use the API payload example below and replace the place
 
 === "Option I: Running a scan operation of all containers"
     *   **container_names:** `[]` means that it will scan all containers.
-    *   **max_records_analyzed_per_partition:** `null` means that it will scan all records of all containers.   
+    *   **max_records_analyzed_per_partition:** `null` means that it will scan all records of all containers.
     *   **Remediation:** `append` replicates source containers using an append-first strategy.
 
     ```json
@@ -479,7 +449,7 @@ To run a scan operation, use the API payload example below and replace the place
 
     ```json
     {
-        "type":"profile",
+        "type":"scan",
         "name":null,
         "datastore_id":datastore-id,
         "container_names":[
