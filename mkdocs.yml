@@ -52,6 +52,7 @@ nav:
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
       - connections/overview-of-a-connection.md
+      - enrichment-support/supported-enrichment-datastores.md
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
