@@ -15,7 +15,7 @@ Qualytics is a closed source container-native platform for assessing, monitoring
 
     - If you are a Qualytics Software as a Service (SaaS) customer, you do not need to perform this installation. The Helm setup is managed by Qualytics for SaaS deployments.
 
-    > If you are unsure about your deployment type or have any questions, please reach out to your Qualytics account manager for clarification.
+    > If you are unsure about your deployment type or have any questions, please reach out to your [Qualytics account manager](mailto://hello@qualytics.co) for clarification.
 
 ## What is in this chart?
 
