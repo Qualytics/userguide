@@ -15,7 +15,7 @@ Qualytics is a closed source container-native platform for assessing, monitoring
 
     - If you are a Qualytics Software as a Service (SaaS) customer, you do not need to perform this installation. The Helm setup is managed by Qualytics for SaaS deployments.
 
-    > If you are unsure about your deployment type or have any questions, please reach out to your Qualytics account manager for clarification.
+    > If you are unsure about your deployment type or have any questions, please reach out to your [Qualytics account manager](mailto:hello@qualytics.co) for clarification.
 
 ## What is in this chart?
 
@@ -38,7 +38,7 @@ Before deploying Qualytics, ensure you have:
 
 ## How should I use this chart?
 
-Please work with your account manager at Qualytics to secure the right values for your licensed deployment. If you don't yet have an account manager, [please write us here](mailto://hello@qualytics.co) to say hello!
+Please work with your account manager at Qualytics to secure the right values for your licensed deployment. If you don't yet have an account manager, [please write us here](mailto:hello@qualytics.co) to say hello!
 
 ### 1. Create a CNCF compliant cluster
 
@@ -131,7 +131,7 @@ __Optional configurations:__
 For advanced configuration, refer to the full `charts/qualytics/values.yaml` file which contains all available options.
 
 !!! info 
-    Contact your [Qualytics account manager](mailto://hello@qualytics.co) for assistance.
+    Contact your [Qualytics account manager](mailto:hello@qualytics.co) for assistance.
 
 ### 3. Deploy Qualytics to your cluster
 
@@ -176,7 +176,7 @@ You have two options for DNS configuration:
 
 #### Option A: Qualytics-managed DNS (Recommended)
 
-Send your [account manager](mailto://hello@qualytics.co) the IP address from step 3. Qualytics will assign a DNS record under `*.qualytics.io` (e.g., `https://acme.qualytics.io`) and handle SSL certificate management.
+Send your [account manager](mailto:hello@qualytics.co) the IP address from step 3. Qualytics will assign a DNS record under `*.qualytics.io` (e.g., `https://acme.qualytics.io`) and handle SSL certificate management.
 
 #### Option B: Custom Domain
 
@@ -188,7 +188,7 @@ If using your own domain:
 4. Update any firewall rules to allow traffic to your domain
 
 !!! info
-    Contact your [account manager](mailto://hello@qualytics.co) for assistance with either option.
+    Contact your [account manager](mailto:hello@qualytics.co) for assistance with either option.
 
 ## Can I run a fully "air-gapped" deployment?
 
