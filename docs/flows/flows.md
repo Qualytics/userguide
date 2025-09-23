@@ -1,10 +1,10 @@
 # Flows
 
-Flows enable users to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, offering a flexible and efficient way to automate processes. These actions can be notifications or operations, allowing users to inform various notification channels or execute tasks based on specific operations. 
+Flows enable users to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, offering a flexible and efficient way to automate processes. These actions can be notifications or operations, allowing users to inform various notification channels or execute tasks based on specific operations.
 
 ## Navigation to Flows
 
-**Step 1**: Log in to your Qualytics account and click on the **Flows** on the left side panel of the interface.  
+**Step 1**: Log in to your Qualytics account and click on **Flows** on the left side panel of the interface.  
 
 ![flows](.././assets/flows/flow-light-1.png)
 
@@ -150,9 +150,9 @@ Hover over the **filter tooltip** in trigger nodes to view the applied condition
 
 ![filter-tooltip](.././assets/flows/filter-tooltip-light.png)
 
-### Actions 
+### Actions
 
-Actions define the specific steps the system will execute after a flow is triggered. They allow users to automate tasks, send notifications, or interact with external systems. 
+Actions define the specific steps the system will execute after a flow is triggered. They allow users to automate tasks, send notifications, or interact with external systems.
 
 **Step 1:** After completing the **"Trigger"** node setup, users can click on the **"Actions"** node.  
 
@@ -406,7 +406,7 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 
 **Slack**
 
-Qualytics integrates with Slack to deliver real-time notifications on scan completions, anomalies, and operational statuses, ensuring teams stay informed and can act quickly. With this integration, users receive instant alerts for system events, monitor scan results, and manage data anomalies directly within Slack. They can view notifications, acknowledge issues, and take necessary actions without switching platforms. 
+Qualytics integrates with Slack to deliver real-time notifications on scan completions, anomalies, and operational statuses, ensuring teams stay informed and can act quickly. With this integration, users receive instant alerts for system events, monitor scan results, and manage data anomalies directly within Slack. They can view notifications, acknowledge issues, and take necessary actions without switching platforms.
 
 **Step 1**: Click on **Slack.**
 
@@ -433,8 +433,8 @@ A prompt appears stating **Notification successfully sent** once the notificatio
 
 **Step 3:** Once the notification is successfully sent, check your connected Slack workspace to ensure it is linked to Qualytics. You will see the test notification in the selected Slack channel.
 
-!!! note 
-    Each trigger generates a different type of Slack notification message. The content and format of the message vary based on the specific trigger event. 
+!!! note
+    Each trigger generates a different type of Slack notification message. The content and format of the message vary based on the specific trigger event.
 
 ![anomaly-detected](.././assets/flows/anomaly-detected.png)
 
@@ -490,26 +490,26 @@ For demonstration purposes we are using Success operation.
 
 ![view-results](.././assets/flows/view-results.png)
 
-**When a Record Anomaly is Detected** 
+**When a Record Anomaly is Detected**
 
 If a **shape or record anomaly** is found, you'll receive a Slack notification. You can take the following actions:
 
 ![anomaly-detected](.././assets/flows/anomaly-detected.png)
 
 * **View Anomaly** –  Click on view anomaly to open the details in Qualytics to investigate further.  
-    
+
 ![view-anomaly](.././assets/flows/view-anomaly.png)
 
 * **Acknowledge** – Click on Acknowledge to mark it as reviewed to avoid duplicate alerts.  
-    
+
 ![acknowledge-anomaly](.././assets/flows/acknowledge-anomaly.png)  
-    
+
 * **Horizontal ellipsis(⋯)**  – Click on horizontal ellipsis.
 
 ![horizontal-ellipsis](.././assets/flows/horizontal-ellipsis.png)
 
   A dropdown will open with option **comment** and **archive** :  
-    
+
 ![comment-archive](.././assets/flows/comment-archive.png)
 
 | No. |                Action |              Description |
@@ -587,7 +587,7 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 
 #### HTTP
 
-User can connect to external apps for notifications using one of these services: 
+Users can connect to external apps for notifications using one of these services:
 
 * Webhook.
 
@@ -597,7 +597,7 @@ User can connect to external apps for notifications using one of these services:
 
 **Webhook**
 
-Qualytics allows you to connect external apps for notifications using webhooks, making it easy to stay updated in real time. When you set up a webhook, it sends an instant alert to the connected app whenever a specific event or condition occurs. This means you can quickly notify about important events as they happen and respond right away. By using webhook notifications, you can keep your system running smoothly, keep everyone informed, and manage your operations more efficiently.
+Qualytics allows you to connect external apps for notifications using webhooks, making it easy to stay updated in real time. When you set up a webhook, it sends an instant alert to the connected app whenever a specific event or condition occurs. This means you can quickly receive notifications about important events as they happen and respond right away. By using webhook notifications, you can keep your system running smoothly, keep everyone informed, and manage your operations more efficiently.
 
 **Step 1:** Click on **Webhook.**
 
@@ -630,13 +630,13 @@ Integrating HTTP Action notifications allows users to receive timely updates or 
 
 ![notification](.././assets/flows/notification-light-77.png)
 
-A **HTTP Action Settings** panel will appear on the right-hand side, enabling users to configure and send HTTP Action notifications.
+An **HTTP Action Settings** panel will appear on the right-hand side, enabling users to configure and send HTTP Action notifications.
 
 ![notification](.././assets/flows/notification-light-78.png)
 
 **Step 2:** Enter the following detail where you want the notification to be sent.
 
-**1. Action URL:** Enter the **“Action URL”** in this field, which specifies the server endpoint for the HTTP request, defining where data will be sent or retrieved. It must be correctly formatted and accessible, including the protocol (http or https), domain, and path.
+**1. Action URL:** Enter the **“Action URL”** in this field. It specifies the server endpoint for the HTTP request and defines where data will be sent or retrieved. It must be correctly formatted and accessible, including the protocol (http or https), domain, and path.
 
 **2. HTTP Verbs:** HTTP verbs specify the actions performed on server resources. Common verbs include:
 
@@ -649,7 +649,7 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 **4. Auth Type:** This field specifies how to authenticate requests. Choose the method that fits your needs:
 
 * **Basic:** Uses a username and password sent with each request. Example: **“Authorization: Basic ”.**  
-* **Bearer:** Uses a token included in the request header to access resources. Example: **“Authorization: Bearer ”.**  
+* **Bearer:** Uses a token included in the request header to access resources. Example: **“Authorization: Bearer < token >”.**  
 * **Digest:** Provides a more secure authentication method by using a hashed combination of the username, password, and request details. Example: **Authorization: Digest username=" ", realm=" ", nonce=" ", uri=" ", response=" ".**
 
 **5. Secret:** Enter the password or token used for authentication. This is paired with the **Username** and **Auth Type** to securely access the server. Keep the secret confidential to ensure security.
@@ -669,7 +669,7 @@ A **HTTP Action Settings** panel will appear on the right-hand side, enabling us
 
 ![save](.././assets/flows/save-light-8.png)
 
-**Step 3:** After completing all the required details in the **"Add Flow"** section, click on the **Publish** button to finalize the process. 
+**Step 3:** After completing all the required details in the **"Add Flow"** section, click on the **Publish** button to finalize the process.
 
 ![publish](.././assets/flows/publish-light-82.png)
 
@@ -751,7 +751,7 @@ For demonstration purposes we have selected the Flow node.
 
 ### Delete Flow
 
-**Delete Flow** feature allows you to permanently remove unwanted or outdated flows from the system. This helps in maintaining a clean and organized list of active flows. 
+**Delete Flow** feature allows you to permanently remove unwanted or outdated flows from the system. This helps in maintaining a clean and organized list of active flows.
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to delete, then click on **Delete** from the dropdown menu.
 
@@ -761,7 +761,7 @@ After clicking the delete button, a confirmation modal window **Delete Flow** wi
 
 ![delete](.././assets/flows/delete-light-92.png)
 
-**Step 2**: Click on the **Delete** button to delete the flow. 
+**Step 2**: Click on the **Delete** button to delete the flow.
 
 ![delete](.././assets/flows/delete-light-93.png)
 
@@ -769,7 +769,7 @@ After clicking the **Delete** button, a success notification appears confirming 
 
 ### Deactivate Flow
 
-User can deactivate a flow to pause its triggers by simply disabling it. This prevents the flow from being executed until it is reactivated.
+Users can deactivate a flow to pause its triggers by disabling it. This prevents the flow from being executed until it is reactivated.
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
@@ -779,7 +779,7 @@ After clicking the **Deactivate** button, a success notification appears confirm
 
 ### Activate Flow
 
-Users can reactivate a flow that was previously deactivated. Once activated, the flow’s triggers become active again, allowing it to run automatically based on its defined conditions.
+Users can reactivate a flow that was previously deactivated. Once reactivated, the flow’s triggers become active again, allowing it to run automatically based on the defined conditions.
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to activate, then click on **Activate** from the dropdown menu.
 
@@ -789,7 +789,7 @@ After clicking the **Activate** button, a success notification appears confirmin
 
 ## Clone an Action
 
-User can duplicate an existing action in just a few clicks. Cloning an action allows you to quickly replicate its configuration without manually setting it up again.
+Users can duplicate an existing action in just a few clicks. Cloning an action allows you to quickly replicate its configuration without manually setting it up again.
 
 **Step 1:** Click the vertical ellipsis (**⋮**) on the action you want to clone, then select the **Clone** option from the menu.
 
@@ -846,7 +846,7 @@ Once completed, the Action box will change its color to reflect the final state.
 
 ![chart](.././assets/flows/chart-light-102.png)
 
-### Accessing Operation Results 
+### Accessing Operation Results
 
 To view detailed results of specific operations:
 
