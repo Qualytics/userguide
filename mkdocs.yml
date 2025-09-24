@@ -210,7 +210,6 @@ nav:
         - Overview: cli/overview-of-qualytics-cli.md
     - Integrations:
         - Overview: integrations/overview.md
-        - Source Datastore: add-datastores/source-datastore.md
         - Data Catalogs:
           - Overview: settings/catalog-integrations/overview.md
           - Atlan: settings/catalog-integrations/atlan.md
