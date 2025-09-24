@@ -1,38 +1,37 @@
 # Supported Enrichment Datastores
 
-Qualytics offers a variety of connectors, some of which support enrichment capabilities while others do not. These connectors are grouped into two main categories: JDBC (Java Database Connectivity) and DFS (Distributed File System) datastores.
+Qualytics supports enrichment datastore connectors that help enhance data discovery, profiling, and quality checks. Some connectors include enrichment capabilities, while others provide only standard connectivity.
 
-## JDBC Connectors in Qualytics
+# Connectors with Enrichment Support
 
-JDBC datastores in Qualytics make it easy to connect and manage data from relational databases. Using the JDBC API, you can establish secure connections, analyze data, and perform data profiling. This flexible feature supports a wide range of relational databases, making data discovery and quality checks seamless.
+The table below shows the connectors that currently support enrichment in Qualytics.
 
-| No. | JDBC Connector | Enrichment Support |
-| :---- | :---- | :---- |
-| 01. | [Amazon Redshift](../add-datastores/redshift.md#add-enrichment-datastore) | Yes |
-| 02. | [Athena](../add-datastores/athena.md#add-enrichment-datastore) | No |
-| 03. | [Big Query](../add-datastores/bigquery.md#add-enrichment-datastore) | Yes |
-| 04. | [Databricks](../add-datastores/databricks.md#add-enrichment-datastore) | Yes |
-| 05. | [DB2](../add-datastores/db2.md#add-enrichment-datastore) | Yes |
-| 06. | [Dremio](../add-datastores/dremio.md#add-enrichment-datastore) | No |
-| 07. | [Hive](../add-datastores/hive.md#add-enrichment-datastore) | No |
-| 08. | [MariaDB](../add-datastores/maria-db.md#add-enrichment-datastore) | Yes |
-| 09. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md#add-enrichment-datastore) | Yes |
-| 10. | [MySQL](../add-datastores/mysql.md#add-enrichment-datastore) | Yes |
-| 11. | [Oracle](../add-datastores/oracle.md#add-enrichment-datastore) | No |
-| 12. | [PostgreSQL](../add-datastores/postgresql.md#add-enrichment-datastore) | Yes |
-| 13. | [Presto](../add-datastores/presto.md#add-enrichment-datastore) | No |
-| 14. | [Snowflake](../add-datastores/snowflake.md#add-enrichment-datastore-connection) | Yes |
-| 15. | [Synapse](../add-datastores/synapse.md#add-enrichment-datastore) | Yes |
-| 16. | [Teradata](../add-datastores/teradata.md#add-enrichment-datastore) | No |
-| 17. | [TimescaleDB](../add-datastores/timescale-db.md#add-enrichment-datastore) | No |
-| 18. | [Trino](../add-datastores/trino.md#add-enrichment-datastore) | Yes |
+| No. | Enrichment Support |
+| :---- | :---- |
+| 01. | [Amazon S3](../add-datastores/amazon-s3.md#add-enrichment-datastore) |
+| 02. | [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md#add-enrichment-datastore) |
+| 03. | [Big Query](../add-datastores/bigquery.md#add-enrichment-datastore) | 
+| 04. | [Databricks](../add-datastores/databricks.md#add-enrichment-datastore) |
+| 05. | [DB2](../add-datastores/db2.md#add-enrichment-datastore) | 
+| 06. | [MariaDB](../add-datastores/maria-db.md#add-enrichment-datastore) | 
+| 07. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md#add-enrichment-datastore) | 
+| 08. | [MySQL](../add-datastores/mysql.md#add-enrichment-datastore) | 
+| 09. | [PostgreSQL](../add-datastores/postgresql.md#add-enrichment-datastore)| 
+| 10. | [Redshift](../add-datastores/redshift.md#add-enrichment-datastore)|
+| 11. | [Snowflake](../add-datastores/snowflake.md#add-enrichment-datastore-connection) | 
+| 12. | [Synapse](../add-datastores/synapse.md#add-enrichment-datastore) | 
+| 13. | [Trino](../add-datastores/trino.md#add-enrichment-datastore) | 
 
-## DFS Connectors in Qualytics
+## Connectors without Enrichment Support
 
-DFS datastores in Qualytics handle data stored in distributed file systems. These systems include Hadoop Distributed File System (HDFS) and similar large-scale storage solutions. With DFS connectors, you can easily access and enrich data from distributed environments.
+The table below shows the connectors that do not support enrichment in Qualytics.
 
-| No. |  DFS Connector | Enrichment Support |
-| :---- | :---- | :---- |
-| 1. | [Amazon S3](../add-datastores/amazon-s3.md#add-enrichment-datastore) | Yes |
-| 2. |  [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md#add-enrichment-datastore) | Yes |
-| 3. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md#add-enrichment-datastore) | Yes |
+| No. |  Enrichment Not Supported |
+| :---- | :---- | 
+| 1. | [Athena](../add-datastores/athena.md) |
+| 2. | [Dremio](../add-datastores/dremio.md) |
+| 3. | [Hive](../add-datastores/hive.md) | 
+| 4. | [Oracle](../add-datastores/oracle.md) | 
+| 5. | [Presto](../add-datastores/presto.md) | 
+| 6. | [Teradata](../add-datastores/teradata.md) |
+| 7. | [TimescaleDB](../add-datastores/timescale-db.md) | 
