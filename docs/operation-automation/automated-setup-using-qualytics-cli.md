@@ -1,4 +1,4 @@
-# Automated Setup Using Qualytics CLI:
+# External Automation
 
 Easily automate scheduled exports with the Qualytics CLI on both Linux and Windows. This setup generates the required scripts and cron/task entries for you, with simple placeholders to customize.
 
@@ -39,9 +39,9 @@ The script files will be located in `home/user/.qualytics` with a pattern `task_
 
 * `<container-id-one>` and `<container-id-two>`: Replace with the IDs of the containers. You can add more containers as needed.
 
-* `<container-ids>`: Comma-separated list of containers IDs or array-like format. Example: "1, 2, 3" or "[1,2,3]".
+* `<container-ids>`: Comma-separated list of container IDs or array-like format. Example: "1, 2, 3" or "[1,2,3]".
 
-* `<options>`: Comma-separated list of op to export or all for everything. Example: anomalies, checks, field-profiles or all.
+* `<options>`: Comma-separated list of operation to export or all for everything. Example: anomalies, checks, field-profiles or all.
 
 * `<your-token>`: Replace with the access token obtained from Qualytics (`Settings` -> `Security` -> `API Keys`).
 

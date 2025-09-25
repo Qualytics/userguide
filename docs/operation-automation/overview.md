@@ -12,14 +12,14 @@ For more steps, refer to the [linux machine documentation](linux-machine.md).
 ## Windows Machine
 
 This guide explains how to configure scheduled tasks on Windows using PowerShell scripts and the Windows Task Scheduler.
-For more steps, refer to the [windows machine documentation](windows-machine.md)
+For more steps, refer to the [windows machine documentation](windows-machine.md).
 
 ## Installation – Qualytics CLI
 
 This page points you to the **Qualytics CLI Overview**, where you can find installation and initialization instructions.
-For more steps, refer to the [qualytics CLI documentation](../cli/overview-of-qualytics-cli.md)
+For more steps, refer to the [qualytics CLI documentation](../cli/overview-of-qualytics-cli.md).
 
-## Automated Setup Using Qualytics CLI
+## External Automation
 
 This guide explains how to use the Qualytics CLI’s scheduling commands to automate operations, including Linux and Windows behavior.
-For more steps, refer to the [automated setup using qualytics CLI documentation](automated-setup-using-qualytics-cli.md)
+For more steps, refer to the [external automation documentation](automated-setup-using-qualytics-cli.md).

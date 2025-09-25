@@ -235,7 +235,7 @@ nav:
         - Overview: operation-automation/overview.md
         - Linux Machine: operation-automation/linux-machine.md
         - Windows Machine: operation-automation/windows-machine.md
-        - Automated Setup Using Qualytics CLI: operation-automation/automated-setup-using-qualytics-cli.md
+        - External Automation: operation-automation/automated-setup-using-qualytics-cli.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
       - glossary.md
 

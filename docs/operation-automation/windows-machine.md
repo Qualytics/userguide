@@ -5,8 +5,8 @@ Automate Qualytics operations on Windows using PowerShell and Task Scheduler. Th
 ## Prerequisites
 Before proceeding, ensure that you have the following:
 
-1. Access to the PowerShell on your machine.
-3. The desired Qualytics instance details, including the instance URL and authentication token.
+1. Access to PowerShell on your machine.
+2. The desired Qualytics instance details, including the instance URL and authentication token.
 
 
 ## Steps to Create a Scheduled Operation
