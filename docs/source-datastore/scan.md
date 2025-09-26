@@ -1,5 +1,7 @@
 # Scan Operation
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.986111111111114% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/XTfQ8959mUrsoCdSI6cu?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Scan Tables by Tag in a Data Quality Platform" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 The Scan Operation in Qualytics is performed on a datastore to enforce data quality checks for various data collections, such as tables, views, and files. It supports centralized configuration through the Datastore Enrichment Settings, where options like the Remediation Strategy, Source Record Limit, and Anomaly Rollup Threshold are defined. While these defaults are applied automatically during a scan, users retain the flexibility to adjust the Source Record Limit and Anomaly Rollup Threshold directly within the scan form. This operation has several key functions:
 
 -   **Record Anomalies:** Identifies a single record (row) as anomalous and provides specific details regarding why it is considered anomalous. The simplest form of a record anomaly is a row that lacks an expected value for a field.  
