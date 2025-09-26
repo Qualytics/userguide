@@ -4,7 +4,8 @@ The Qualytics platform seamlessly connects with your enterprise technology ecosy
 
 ## Available Integrations
 
-### [Source Datastores](../add-datastores/source-datastore.md)
+### [Source Datastores](../add-datastores/overview-of-a-datastore.md)
+
 Connect directly to your data wherever it lives - from traditional databases to modern cloud storage platforms. Qualytics provides unified quality management across your entire data landscape through our Datastore framework.
 
 ### [Data Catalogs](../settings/catalog-integrations/overview.md)
