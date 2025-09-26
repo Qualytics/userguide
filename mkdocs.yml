@@ -231,11 +231,11 @@ nav:
       - deployments/overview.md
       - upgrades/qualytics-single-tenant-instance.md
       - deployments/databricks-deployment.md
-      - Schedule Operations: 
+      - External Automation: 
         - Overview: operation-automation/overview.md
         - Linux Machine: operation-automation/linux-machine.md
         - Windows Machine: operation-automation/windows-machine.md
-        - External Automation: operation-automation/automated-setup-using-qualytics-cli.md
+        - Automated Setup Using Qualytics CLI: operation-automation/automated-setup-using-qualytics-cli.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
       - glossary.md
 

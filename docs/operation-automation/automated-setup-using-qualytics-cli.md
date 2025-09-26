@@ -1,4 +1,4 @@
-# External Automation
+# Automated Setup Using Qualytics CLI
 
 Easily automate scheduled exports with the Qualytics CLI on both Linux and Windows. This setup generates the required scripts and cron/task entries for you, with simple placeholders to customize.
 
@@ -17,6 +17,7 @@ _Replace placeholders as needed._
 It will create the files inside your `home/user/.qualytics` folder.
 
 The schedule operations commands are going to be located in `home/user/.qualytics/schedule-operation.txt`.
+
 You can see some files with the `option` you selected with the logs of the cronjob run.
 
 It will already create for you a cronjob expression, you can run `crontab -l` to list all cronjobs.

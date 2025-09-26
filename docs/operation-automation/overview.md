@@ -19,7 +19,7 @@ For more steps, refer to the [windows machine documentation](windows-machine.md)
 This page points you to the **Qualytics CLI Overview**, where you can find installation and initialization instructions.
 For more steps, refer to the [qualytics CLI documentation](../cli/overview-of-qualytics-cli.md).
 
-## External Automation
+## Automation Setup Using Qualytics CLI
 
 This guide explains how to use the Qualytics CLI’s scheduling commands to automate operations, including Linux and Windows behavior.
-For more steps, refer to the [external automation documentation](automated-setup-using-qualytics-cli.md).
+For more steps, refer to the [automation setup using qualytics CLI documentation](automated-setup-using-qualytics-cli.md).
