@@ -65,7 +65,6 @@ start='<!-- filter-only--start -->'
 end='<!-- filter-only--end -->'
 %}
 
-
 ### Specific Properties
 
 Specify the datastore and table/file where the reference data for the targeted fields is located for comparison.
@@ -103,9 +102,6 @@ Specify the datastore and table/file where the reference data for the targeted f
     {%
         include-markdown "components/comparators/string.md"
     %}
-
-
-
 
 ### Anomaly Types
 
