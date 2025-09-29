@@ -23,7 +23,7 @@ is a composite reflecting the relative importance and [configured weights](#most
 | **Accuracy**     | Are values correct compared to real-world truth or integrity checks? | Is the relationship between `square_footage` and `price` maintained?            |
 
 !!! Important
-A data asset's quality score is **a measure of its fitness for the intended use case**. It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental dimensions of data quality as described below.  Quality scores are dynamic and will evolve as your data and business needs change over time.
+    A data asset's quality score is **a measure of its fitness for the intended use case**. It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental dimensions of data quality as described below.  Quality scores are dynamic and will evolve as your data and business needs change over time.
 
 ## Field-Level Quality Scoring
 
@@ -61,8 +61,8 @@ where n is the number of checks and k is tuned so that 1 check = 60.
 - **Fair balance**: More checks always improve the score, but the improvement diminishes as coverage becomes robust, preventing runaway inflation
 
 !!! note "Field vs. Container Coverage"
-At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.  
-At the **container level**, Coverage is an **aggregate of field-level coverage scores**, further adjusted by **scan frequency** (more frequent scans → greater confidence).
+    At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.  
+    At the **container level**, Coverage is an **aggregate of field-level coverage scores**, further adjusted by **scan frequency** (more frequent scans → greater confidence).
 
 ### Conformity Dimension
 
@@ -109,15 +109,18 @@ The **Consistency** score measures how stable a field's values remain over time 
     - **0**: Type change detected
 
 !!! important "Consistency vs. Accuracy"
-- **Consistency** checks whether a field’s **statistical shape and distribution remain stable over time** (e.g., numeric medians, string entropy).
-- **Accuracy**, by contrast, evaluates whether values are **correct and aligned to real-world truths or integrity rules**.  
-  Together, they capture different aspects of trustworthiness.
-- 
-**Examples**
-- Numeric "Price" field with stable median and IQR → **Score ~100**
-- String "Country" field where distinct values double unexpectedly → **Score ~75**
-- Datetime field with sudden two-year backfill → **Score ~60**
-- ID field alternating between numeric and string types → **Score = 0**
+    **Consistency** checks whether a field’s **statistical shape and distribution remain stable over time** (e.g., numeric medians, string entropy).
+    
+    **Accuracy**, by contrast, evaluates whether values are **correct and aligned to real-world truths or integrity rules**.
+
+    Together, they capture different aspects of trustworthiness.
+
+    **Examples**
+
+    - Numeric "Price" field with stable median and IQR → **Score ~100**
+    - String "Country" field where distinct values double unexpectedly → **Score ~75**
+    - Datetime field with sudden two-year backfill → **Score ~60**
+    - ID field alternating between numeric and string types → **Score = 0**
 
 ### Precision Dimension
 
@@ -181,9 +184,10 @@ Your container's total Quality Score starts at a **baseline of 70**. Each of the
 - **Final clipping**: Result is always constrained between 0 and 100
 
 !!! note "Why a 70-Point Baseline?"
-The **70-point baseline** represents a **neutral confidence starting point**.
-- Dimensions then adjust the baseline **downward** when issues are found or **upward** when strong quality signals exist.
-- This calibration ensures that new containers without extensive checks or history begin from a reasonable midpoint rather than 0.
+    The **70-point baseline** represents a **neutral confidence starting point**.
+
+    - Dimensions then adjust the baseline **downward** when issues are found or **upward** when strong quality signals exist.
+    - This calibration ensures that new containers without extensive checks or history begin from a reasonable midpoint rather than 0.
 
 ### Timeliness Dimension
 
@@ -212,8 +216,8 @@ The **Timeliness** score gauges whether data is available according to its expec
 The **Volumetrics** score analyzes consistency in data size and shape over time.
 
 !!! note "Shared Scoring Formula"
-Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.  
-This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
+    Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.  
+    This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
 
 **How Volumetrics is Calculated**
 - **Scale**: 0 to 100 based on volumetric stability
@@ -272,12 +276,12 @@ To further explore how to respond to Quality Scores, let's consider the business
 - On the other hand, if the primary use case for this address is to reliably ship a physical product to an intended recipient, ensuring a higher level of quality for the "Street 2" field becomes necessary. In this scenario, you may take actions such as defining additional data quality checks for the field, increasing the frequency of profiling and scanning, establishing a completeness goal, and working with upstream systems to enforce it over time.
 
 !!! Important
-The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
+    The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
 
 !!! note "Fitness for Purpose in Practice"
-Remember: Quality Scores are not absolute “grades.”  
-They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.  
-Two datasets may have different scores but still both be "fit for purpose" depending on use case.
+    Remember: Quality Scores are not absolute “grades.”  
+    They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.  
+    Two datasets may have different scores but still both be "fit for purpose" depending on use case.
 
 ## Customizing Quality Score Weights and Decay Time
 
@@ -289,10 +293,12 @@ This alters the scoring algorithm to align with customized governance priorities
 data events defaults to 180 days but can be customized to fit your operational needs, ensuring the scores reflect the most relevant data quality insights for your organization.
 
 !!! warning "Use Caution When Customizing Weights"
-We strongly recommend retaining default weights unless governance priorities **clearly justify changes**.
-- Adjusting weights can significantly alter how anomalies impact overall scores.
-- Misaligned weights may cause misleading signals about data quality.  
-  Proceed carefully, and document any custom weighting rationale.
+    We strongly recommend retaining default weights unless governance priorities **clearly justify changes**.
+
+    - Adjusting weights can significantly alter how anomalies impact overall scores.
+    - Misaligned weights may cause misleading signals about data quality.  
+    
+    Proceed carefully, and document any custom weighting rationale.
 
 
 ## Appendix: Dimension Rule Types
