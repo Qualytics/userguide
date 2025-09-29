@@ -10,8 +10,8 @@ is a composite reflecting the relative importance and [configured weights](#most
 - **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 - **Consistency**: Measures uniformity in type and scale across all data representations. Verifies that data maintains the same type and representation over time. For example, ensuring that a typed numeric column does not change over time to a string.
 - **Precision**: Evaluates the resolution of field values against defined quality checks.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
-- **Timeliness**: Gauges data availability according to schedule.<br><span class="text-sm">_See [Appendix: Dimension Rule Types](#timeliness-rule-types) for the full Timeliness rule type list._</span>
-- **Volumetrics**: Analyzes consistency in data size and shape over time.<br><span class="text-sm">_See [Appendix: Dimension Rule Types](#volumetric-rule-types) for the full Volumetrics rule type list._</span>
+- **Timeliness**: Gauges data availability according to schedule.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
+- **Volumetrics**: Analyzes consistency in data size and shape over time.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#volumetric-rule-types) for the full Volumetrics rule type list.</span>_
 - **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values. 
 
 ### How Completeness, Precision, and Accuracy Differ
@@ -76,7 +76,7 @@ The **Conformity** score measures how well the data adheres to specified formats
 - **Scale**: 0 to 100 based on the ratio of conforming values
 - **Formula**: `(1 - (rows with anomalous values as specified by conformity checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
-- **Applicable rule types**: Pattern matching, length constraints, type validation, schema expectations, and format-specific validations (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Pattern matching, length constraints, type validation, schema expectations, and format-specific validations<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 
 **Examples**
 
@@ -136,7 +136,7 @@ The **Precision** score evaluates the resolution and granularity of field values
 - **Scale**: 0 to 100 based on the ratio of values meeting precision requirements
 - **Formula**: `(1 - (rows with anomalous values as specified by precision checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
-- **Applicable rule types**: Range validations, comparisons, mathematical constraints, and temporal boundaries (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Range validations, comparisons, mathematical constraints, and temporal boundaries<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
 
 **Examples**
 
@@ -212,7 +212,7 @@ The **Timeliness** score gauges whether data is available according to its expec
     - Each additional anomaly has diminishing impact
     - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
     - Where k is calibrated so one anomaly = 40% score reduction
-- **Applicable rule types**: Time distribution size, freshness constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Time distribution size, freshness constraints<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
 
 **Score Interpretation**
 
@@ -240,7 +240,7 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
     - Each additional anomaly has diminishing impact
     - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
     - Where k is calibrated so one anomaly = 40% score reduction
-- **Applicable rule types**: Row count size, partition size constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Row count size, partition size constraints<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#volumetric-rule-types) for the full Volumetric rule type list.</span>_
 
 **Examples**
 
