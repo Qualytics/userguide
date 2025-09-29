@@ -194,7 +194,26 @@ nav:
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
     - Flows:
-      - Overview: flows/flows.md
+      - Overview: flows/overview.md
+      - Add Flow: flows/add-flow.md
+      - Flow Node: flows/flow-node.md
+      - Trigger Node: flows/trigger-node.md
+      - Actions Node: flows/action-node.md
+      - View Created Flows: flows/view-created-flows.md
+      - Execution Tab:
+        - Execution Tab: flows/execution-tab.md
+        - Understanding Flow States: flows/understanding-flow-states.md
+        - Accessing Operation Results: flows/accessing-operation-results.md
+        - Flow Execution: flows/flow-execution.md
+      - Manage Flow:
+        - Clone a Flows: flows/clone-a-flow.md
+        - Execute Manual Flow: flows/execute-manual-flows.md
+        - Sort Flow: flows/sort-flow.md
+        - Edit Flow: flows/edit-flow.md
+        - Delete Flow: flows/delete-flow.md
+        - Deactivate Flow: flows/deactivate-flow.md
+        - Activate Flows: flows/activate-flow.md
+        - Clone An Action: flows/clone-an-action.md 
     - Tags:
       - Overview: tags/overview-of-tag.md
     - Settings:
