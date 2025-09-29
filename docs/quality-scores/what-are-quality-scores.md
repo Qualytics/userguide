@@ -303,56 +303,56 @@ The following lists summarize which rule types contribute to each dimension’s 
 
 ### Conformity Rule Types
 
-```
-RuleType.matchesPattern
-RuleType.minLength
-RuleType.maxLength
-RuleType.dataDiff
-RuleType.isType
-RuleType.entityResolution
-RuleType.expectedSchema
-RuleType.fieldCount
-RuleType.isCreditCard
-RuleType.isAddress
-RuleType.containsCreditCard
-RuleType.containsUrl
-RuleType.containsEmail
-RuleType.containsSocialSecurityNumber
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Matches Pattern |
+| 2. | Min Length |
+| 3. | Max Length |
+| 4. | Data Diff |
+| 5. | Is Type |
+| 6. | Entity Resolution |
+| 7. | Expected Schema |
+| 8. | Field Count |
+| 9. | Is Credit Card |
+| 10. | Is Address |
+| 11. | Contains Credit Card |
+| 12. | Contains URL |
+| 13. | Contains Email |
+| 14. | Contains Social Security Number |
 
 ### Precision Rule Types
 
-```
-RuleType.afterDateTime
-RuleType.beforeDateTime
-RuleType.between
-RuleType.betweenTimes
-RuleType.equalTo
-RuleType.equalToField
-RuleType.greaterThan
-RuleType.greaterThanField
-RuleType.lessThan
-RuleType.lessThanField
-RuleType.maxValue
-RuleType.minValue
-RuleType.notFuture
-RuleType.notNegative
-RuleType.positive
-RuleType.predictedBy
-RuleType.sum
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | After Date Time |
+| 2. | Before Date Time |
+| 3. | Between |
+| 4. | Between Times |
+| 5. | Equal To |
+| 6. | Equal To Field |
+| 7. | Greater Than |
+| 8. | Greater Than Field |
+| 9. | Less Than |
+| 10. | Less Than Field |
+| 11. | Max Value |
+| 12. | Min Value |
+| 13. | Not Future |
+| 14. | Not Negative |
+| 15. | Positive |
+| 16. | Predicted By |
+| 17. | Sum |
 
 ### Volumetric Rule Types
 
-```
-RuleType.volumetric 
-RuleType.minPartitionSize 
-RuleType.maxPartitionSize
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Volumetric |
+| 2. | Min Partition Size |
+| 3. | Max Partition Size |
 
 ### Timeliness Rule Types
 
-```
-RuleType.freshness
-RuleType.timeDistributionSize
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Freshness |
+| 2. | Time Distribution Size |
