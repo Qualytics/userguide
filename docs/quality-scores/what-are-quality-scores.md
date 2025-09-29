@@ -7,11 +7,11 @@ is a composite reflecting the relative importance and [configured weights](#most
 
 - **Completeness**: Measures the average percentage of non-null values in a field throughout the measurement period. For example, if a "phone_number" field has values present in 90 out of 100 records, its completeness score for the measurement would be 90%.
 - **Coverage**: Measures the number of quality checks defined for monitoring the field's quality. 
-- **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern. See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._
+- **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 - **Consistency**: Measures uniformity in type and scale across all data representations. Verifies that data maintains the same type and representation over time. For example, ensuring that a typed numeric column does not change over time to a string.
-- **Precision**: Evaluates the resolution of field values against defined quality checks. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Precision rule type list._
-- **Timeliness**: Gauges data availability according to schedule. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Timeliness rule type list._
-- **Volumetrics**: Analyzes consistency in data size and shape over time. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Volumetrics rule type list._
+- **Precision**: Evaluates the resolution of field values against defined quality checks.<br>_<span class="text-sm">See [Appendix: Dimension Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
+- **Timeliness**: Gauges data availability according to schedule.<br><span class="text-sm">_See [Appendix: Dimension Rule Types](#timeliness-rule-types) for the full Timeliness rule type list._</span>
+- **Volumetrics**: Analyzes consistency in data size and shape over time.<br><span class="text-sm">_See [Appendix: Dimension Rule Types](#volumetric-rule-types) for the full Volumetrics rule type list._</span>
 - **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values. 
 
 ### How Completeness, Precision, and Accuracy Differ
@@ -295,7 +295,7 @@ We strongly recommend retaining default weights unless governance priorities **c
   Proceed carefully, and document any custom weighting rationale.
 
 
-# Appendix: Dimension Rule Types
+## Appendix: Dimension Rule Types
 
 The following lists summarize which rule types contribute to each dimension’s quality score.  
 
