@@ -34,6 +34,7 @@ Each field receives individual scores for eight quality dimensions, each evaluat
 The **Completeness** score measures the average percentage of non-null values in a field over the measurement period.
 
 **How Completeness is Calculated**
+
 - **Scale**: 0 to 100, representing the average completeness percentage
 - **Measurement period**: Defined by the configured decay time (default 180 days)
 - **Formula**: Average of `(non-null values / total records) × 100` across all measurements in the period
@@ -44,6 +45,7 @@ The **Completeness** score measures the average percentage of non-null values in
 The **Coverage** score measures how many distinct quality checks have been applied to a field. It is designed to reward the first few checks heavily, then taper off as more checks are added, following a curve of diminishing returns.
 
 **How Coverage is Calculated**
+
 - **Scale**: The score ranges continuously from 0 to 100
 - **Anchor points**:
     - **0 checks** → score of **0**
@@ -57,6 +59,7 @@ score(n) = 100 × (1 - e^(-k × n))
 where n is the number of checks and k is tuned so that 1 check = 60.
 
 **Why This Model?**
+
 - **Strong early reward**: The first check dramatically increases confidence in field coverage
 - **Fair balance**: More checks always improve the score, but the improvement diminishes as coverage becomes robust, preventing runaway inflation
 
@@ -69,12 +72,14 @@ where n is the number of checks and k is tuned so that 1 check = 60.
 The **Conformity** score measures how well the data adheres to specified formats, patterns, and business rules.
 
 **How Conformity is Calculated**
+
 - **Scale**: 0 to 100 based on the ratio of conforming values
 - **Formula**: `(1 - (rows with anomalous values as specified by conformity checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
 - **Applicable rule types**: Pattern matching, length constraints, type validation, schema expectations, and format-specific validations (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
 
 **Examples**
+
 - Email field where 95% of scanned/total rows match valid email pattern → **Score ~95**
 - Date field with consistent YYYY-MM-DD format → **Score ~100**
 - Phone field with mixed formats and invalid entries → **Score ~60**
@@ -127,12 +132,14 @@ The **Consistency** score measures how stable a field's values remain over time 
 The **Precision** score evaluates the resolution and granularity of field values against defined quality checks.
 
 **How Precision is Calculated**
+
 - **Scale**: 0 to 100 based on the ratio of values meeting precision requirements
 - **Formula**: `(1 - (rows with anomalous values as specified by precision checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
 - **Applicable rule types**: Range validations, comparisons, mathematical constraints, and temporal boundaries (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
 
 **Examples**
+
 - Decimal field maintaining required 2-digit precision → **Score ~100**
 - Timestamp field with appropriate granularity (no future dates) → **Score ~95**
 - Age field with values outside valid range (0-120) → **Score ~85**
@@ -142,6 +149,7 @@ The **Precision** score evaluates the resolution and granularity of field values
 The **Accuracy** score determines the fidelity of field values to their real-world counterparts or expected values.
 
 **How Accuracy is Calculated**
+
 - **Scale**: 0 to 100 based on the overall anomaly rate across all data integrity (excludes metadata checks like schema, volume, freshness, etc..) check types
 - **Formula**: `(1 - (rows with anomalous values as specified by accuracy checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
@@ -149,6 +157,7 @@ The **Accuracy** score determines the fidelity of field values to their real-wor
 - **Represents**: Overall correctness and trustworthiness of the field data
 
 **Interpretation**
+
 - **95-100**: Highly accurate data suitable for critical decisions
 - **80-94**: Generally reliable with some known issues
 - **60-79**: Moderate accuracy requiring validation for important uses
@@ -194,6 +203,7 @@ Your container's total Quality Score starts at a **baseline of 70**. Each of the
 The **Timeliness** score gauges whether data is available according to its expected schedule.
 
 **How Timeliness is Calculated**
+
 - **Scale**: 0 to 100 based on adherence to freshness requirements
 - **Field level**: Directly inherited from the container's timeliness score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
@@ -203,8 +213,9 @@ The **Timeliness** score gauges whether data is available according to its expec
     - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
     - Where k is calibrated so one anomaly = 40% score reduction
 - **Applicable rule types**: Time distribution size, freshness constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
--
+
 **Score Interpretation**
+
 - **100**: No timeliness anomalies detected
 - **60**: One anomaly detected (40-point penalty)
 - **40-60**: Multiple anomalies with diminishing penalties
@@ -220,6 +231,7 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
     This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
 
 **How Volumetrics is Calculated**
+
 - **Scale**: 0 to 100 based on volumetric stability
 - **Field level**: Directly inherited from the container's volumetrics score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
@@ -231,6 +243,7 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
 - **Applicable rule types**: Row count size, partition size constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
 
 **Examples**
+
 - Container with consistent record counts per partition → **Score ~100**
 - Container showing unexpected spikes or drops in volume → **Score ~75**
 - Container with erratic or missing time distributions → **Score ~50**
