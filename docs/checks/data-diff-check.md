@@ -5,9 +5,33 @@
     
     The `isReplicaOf` check is sunsetting and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
 
-### Definition
+## What Is DataDiff
 
-*Asserts that the dataset created by the targeted field(s) matches the referred field(s) for data comparison.*
+DataDiff is a rule in Qualytics used to **compare one dataset against another** (usually a primary/source dataset and a reference dataset) to confirm they are aligned. It checks that both the **structure** (schema and relationships) and the **values** of the selected fields match between the two sources. This helps you immediately identify missing, extra, or altered records.
+
+## How DataDiff Works
+
+1. **Select Fields and Identifiers** – Choose the fields you want compared, and optionally define row identifiers that uniquely identify each record.
+
+2. **Retrieve Both Datasets** – Qualytics pulls the target data and the reference data from their configured datastores.
+
+3. **Match and Compare** – Each row is matched on the identifiers, then each field’s values are compared.
+
+4. **Flag Differences** – Any discrepancies in structure or values are surfaced as anomalies for review.
+
+This automated process replaces manual SQL joins or spreadsheets with a repeatable, auditable quality check.
+
+## Why Use DataDiff
+
+- **Validate Replication and ETL** – Ensure backups, downstream tables, or warehouses are exact copies of their source.
+
+- **Detect Silent Errors Early** – Catch discrepancies caused by network issues, transformation bugs, or manual mistakes before they propagate.
+
+- **Maintain Data Integrity** – Confirm schema, keys, and relationships remain intact across systems.
+
+- **Automate Data Reconciliation** – Build a repeatable safeguard into your data pipelines without custom code.
+
+**Example:** Compare a production `Orders` table with its nightly `Orders_Replica` in your reporting warehouse to verify every order matches before dashboards refresh.
 
 #### In-Depth Overview
 
