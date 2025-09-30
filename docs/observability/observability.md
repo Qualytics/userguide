@@ -1,6 +1,6 @@
 # Observability
 
-Observability helps users track changes in data volume and quality over time, ensuring data accuracy and integrity. Within the Source Datastore section, the Observability tab provides visibility into observability metrics across tables or files within a specific datastore. It introduces two main categories: **Measures** and **Metric** Checks. Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. **Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
+Observability helps users track changes in data volume and quality over time, ensuring data accuracy and integrity. Within the Source Datastore section, the Observability tab provides visibility into observability metrics across tables or files within a specific datastore. It introduces two main categories: **Measures** and **Metric Checks**. Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. **Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
 
 Users can access the Observability tab in the Source Datastore section to analyze particular datastore in detail. However, to get an overview of observability metrics across multiple source datastores and tables, navigate to the [**Observability**](../explore/observability.md) documentation for centralized overview of data behavior across your entire environment.
 
@@ -26,6 +26,6 @@ Observability in data checks is divided into two key categories: **Measures** an
 
 ![category](../assets/observability/category-light-3.png)
 
-For more information regarding measures please, refer to the [measure documentation](../observability/measures.md).
+For more information regarding measures please refer to the [measure documentation](../observability/measures.md).
 
-For more information regarding metric please, refer to the [metric documentation](../observability/metric-check.md).
+For more information regarding metric please refer to the [metric documentation](../observability/metric-check.md).

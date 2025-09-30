@@ -6,7 +6,7 @@
 
 ![age](../assets/observability/age-light-674.png)
 
-**Step 2:** After clicking  **Edit Maximum Age**, the field becomes editable, allowing you to modify the maximum age value.
+**Step 2:** After clicking **Edit Maximum Age**, the field becomes editable, allowing you to modify the maximum age value.
 
 ![age](../assets/observability/age-light-675.png)
 

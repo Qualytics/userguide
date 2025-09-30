@@ -1,6 +1,6 @@
 # Measures
 
-Measures focus on monitoring overall data trends to ensure consistency and reliability. This includes Volumetric Checks, which track data volume to identify trends and detect anomalies, and Freshness Tracking, which measures the last update or addition of data to ensure timeliness. These checks help maintain data integrity by highlighting unexpected changes in volume or delays in data updates.This category includes two key checks:
+Measures focus on monitoring overall data trends to ensure consistency and reliability. This includes Volumetric Checks, which track data volume to identify trends and detect anomalies, and Freshness Tracking, which measures the last update or addition of data to ensure timeliness. These checks help maintain data integrity by highlighting unexpected changes in volume or delays in data updates. This category includes two key checks:
 
 ## Volumetric
 

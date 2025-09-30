@@ -1,6 +1,6 @@
 # Volumetric
 
-Volumetric help monitor data volumes over time to keep data accurate and reliable. They automatically count rows in a table and spot any unusual changes, like problems with data loading. This makes it easier to catch issues early and keep everything running smoothly. Volumetric checks also let you track data over different time periods, like daily or weekly. The system sets limits based on past data, and if the row count goes above or below those limits, an anomaly alert is triggered.
+Volumetric checks help monitor data volumes over time to keep data accurate and reliable. They automatically count rows in a table and spot any unusual changes, like problems with data loading. This makes it easier to catch issues early and keep everything running smoothly. Volumetric checks also let you track data over different time periods, like daily or weekly. The system sets limits based on past data, and if the row count goes above or below those limits, an anomaly alert is triggered.
 
 ![details](../assets/observability/volumetric-detail-light-6.png)
 
@@ -24,7 +24,7 @@ Volumetric help monitor data volumes over time to keep data accurate and reliabl
 | 16 |  Max Values | These indicate the maximum thresholds for the row count of the table being checked. |
 | 17 |  Last Asserted | This shows the date the last check was asserted, which is the last time the system evaluated the Volumetric Check (e.g., Oct 02, 2024). |
 | 18 | Edit Threshold | Edit Threshold lets users set custom limits for alerts, helping them control when they’re notified about changes in data. |
-| 19. | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
+| 19 | Graph Visualization | The graph provides a visual representation of the row count trends. It shows fluctuations in data volume over the selected period. This visual allows users to quickly identify any irregularities or anomalies. |
 
 ## Observability Heatmap
 
@@ -32,10 +32,10 @@ The heatmap provides a visual overview of data anomalies by day, using color cod
 
 ![heatmap-square](../assets/observability/heatmap-light.png)
 
-- **Blue square**: Blue square represent days with no anomalies, meaning data stayed within the expected range.
-- **Orange square**: Orange square indicate days where data exceeded the minimum or maximum threshold range but didn’t qualify as a critical anomaly.
-- **Red square**: Red square highlight days with anomalies, signaling significant deviations from expected values that need further investigation.
+- **Blue square**: Blue squares represent days with no anomalies, meaning data stayed within the expected range.
+- **Orange square**: Orange squares indicate days where data exceeded the minimum or maximum threshold range but didn’t qualify as a critical anomaly.
+- **Red square**: Red squares highlight days with anomalies, signaling significant deviations from expected values that need further investigation.
 
 ![heatmap-square](../assets/observability/hover-light.png)
 
-By hovering over each square, you can view additional details for that specific day, including the **date**, **anomaly count**, **last row count**,and **last modification time** allowing you to easily pinpoint and analyze data issues over time.
+By hovering over each square, you can view additional details for that specific day, including the **date**, **anomaly count**, **last row count**, and **last modification time** allowing you to easily pinpoint and analyze data issues over time.
