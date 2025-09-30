@@ -18,7 +18,7 @@ When anomalies are detected, the platform writes metadata into four primary enri
 When anomalies are detected in a container, the platform has the capability to create remediation tables in the Enrichment Datastore.
 
 !!! note 
-    For more information,  please refer to the [remediation tables documentation](../enrichment/remediation-tables.md)
+    For more information, please refer to the [remediation tables documentation](../enrichment/remediation-tables.md)
 
 ## Metadata Tables
 
