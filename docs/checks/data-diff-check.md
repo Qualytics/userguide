@@ -7,7 +7,16 @@
 
 ## What Is DataDiff
 
-DataDiff is a rule in Qualytics used to **compare one dataset against another** (usually a primary/source dataset and a reference dataset) to confirm they are aligned. It checks that both the **structure** (schema and relationships) and the **values** of the selected fields match between the two sources. This helps you immediately identify missing, extra, or altered records.
+The **DataDiff** check compares one dataset against another usually a source and its replica or backup to confirm they are aligned. It validates both the structure (schema, keys, and relationships) and the values of selected fields, helping you quickly spot missing, extra, or altered records.
+
+## What It Does  
+
+- Confirms that a target dataset is identical to a reference dataset.  
+- Flags differences in schema or data values.  
+- Helps prevent silent mismatches from propagating into pipelines, dashboards, or downstream systems.  
+
+**Example:** Compare a production `Orders` table with its nightly `Orders_Replica`.  
+If any orders are missing, duplicated, or altered (e.g., “USA” vs “United States”), the check raises an anomaly.  
 
 ## How DataDiff Works
 
