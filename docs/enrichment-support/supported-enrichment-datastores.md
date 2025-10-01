@@ -4,55 +4,142 @@ Qualytics supports enrichment datastore connectors that help enhance data discov
 
 In this guide, we will cover:
 
-- **[JDBC Connectors with Enrichment Support](#jdbc-connectors-with-enrichment-support)**
-- **[JDBC Connectors without Enrichment Support](#jdbc-connector-without-enrichment-support)**
-- **[DFS Connectors with Enrichment Support](#dfs-connector-with-enrichment-support)**
-- **[DFS Connectors without Enrichment Support](#dfs-connector-without-enrichment-support)**
+- **[JDBC Connectors](#jdbc-connectors)**  
+- **[DFS Connectors](#dfs-connectors)**  
 
-Let’s get started 🚀.
+## JDBC Connectors  
 
-## JDBC Connectors with Enrichment Support
+The table below shows the list of JDBC connectors and whether they support enrichment or not.
 
-The table below lists JDBC connectors with enrichment support for enhanced data profiling and quality checks:
+<table>
+  <thead style="background-color:#f2f6fc;">
+    <tr>
+      <th>No.</th>
+      <th>Connector</th>
+      <th>Enrichment Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#fff9db;">
+      <td>01.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/athena/">Athena</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>02.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/bigquery/#add-enrichment-datastore">Big Query</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>03.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/databricks/#add-enrichment-datastore">Databricks</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>04.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/db2/#add-enrichment-datastore">DB2</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>05.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/dremio/">Dremio</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>06.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/hive/">Hive</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>07.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/maria-db/#add-enrichment-datastore">MariaDB</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>08.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/microsoft-sql-server/#add-enrichment-datastore">Microsoft SQL Server</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>09.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/mysql/#add-enrichment-datastore">MySQL</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>10.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/oracle/">Oracle</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>11.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/postgresql/#add-enrichment-datastore">PostgreSQL</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>12.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/presto/">Presto</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>13.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/redshift/#add-enrichment-datastore">Redshift</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>14.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/snowflake/#add-enrichment-datastore-connection">Snowflake</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>15.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/synapse/#add-enrichment-datastore">Synapse</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>16.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/teradata/">Teradata</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#fff9db;">
+      <td>17.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/timescale-db/">TimescaleDB</a></td>
+      <td>❌</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>18.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/trino/">Trino</a></td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
 
-| No. | Enrichment Support |
-| :---- | :---- |
-| 01. | [Big Query](../add-datastores/bigquery.md#add-enrichment-datastore) | 
-| 02. | [Databricks](../add-datastores/databricks.md#add-enrichment-datastore) |
-| 03. | [DB2](../add-datastores/db2.md#add-enrichment-datastore) | 
-| 04. | [MariaDB](../add-datastores/maria-db.md#add-enrichment-datastore) | 
-| 05. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md#add-enrichment-datastore) | 
-| 06. | [MySQL](../add-datastores/mysql.md#add-enrichment-datastore) | 
-| 07. | [PostgreSQL](../add-datastores/postgresql.md#add-enrichment-datastore)| 
-| 08. | [Redshift](../add-datastores/redshift.md#add-enrichment-datastore)|
-| 09. | [Snowflake](../add-datastores/snowflake.md#add-enrichment-datastore-connection) | 
-| 10. | [Synapse](../add-datastores/synapse.md#add-enrichment-datastore) | 
-| 11. | [Trino](../add-datastores/trino.md#add-enrichment-datastore) | 
+## DFS Connectors  
 
-## JDBC Connectors without Enrichment Support
+The table below shows the list of DFS connectors and whether they support enrichment or not:
 
-The table below shows the JDBC connectors that do not support enrichment capabilities but still provide basic connectivity for data integration:
-
-| No. | Enrichment Not Support |
-| :---- | :---- |
-| 1. | [Athena](../add-datastores/athena.md) |
-| 2. | [Dremio](../add-datastores/dremio.md) |
-| 3. | [Hive](../add-datastores/hive.md) | 
-| 4. | [Oracle](../add-datastores/oracle.md) | 
-| 5. | [Presto](../add-datastores/presto.md) | 
-| 6. | [Teradata](../add-datastores/teradata.md) |
-| 7. | [TimescaleDB](../add-datastores/timescale-db.md) | 
-
-## DFS Connectors with Enrichment Support
-
-The table below lists DFS connectors with enrichment support for enhanced data profiling and discovery:
-
-| No. | Enrichment Support |
-| :---- | :---- |
-| 01. | [Amazon S3](../add-datastores/amazon-s3.md#add-enrichment-datastore) |
-| 02. | [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md#add-enrichment-datastore) |
-| 03. | [Google Cloud Storage (GCS)](../add-datastores/google-cloud-storage.md#add-enrichment-datastore) |
-
-## DFS Connectors without Enrichment Support
-
-Currently in Qualytics, all available DFS datastores support enrichment. There are no DFS datastores without enrichment support.
+<table>
+  <thead style="background-color:#f2f6fc;">
+    <tr>
+      <th>No.</th>
+      <th>Connector</th>
+      <th>Enrichment Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#dff0d8;">
+      <td>01.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/amazon-s3/#add-enrichment-datastore">Amazon S3</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>02.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/azure-datalake-storage/#add-enrichment-datastore">Azure Datalake Storage (ABFS)</a></td>
+      <td>✅</td>
+    </tr>
+    <tr style="background-color:#dff0d8;">
+      <td>03.</td>
+      <td><a href="https://userguide.qualytics.io/add-datastores/google-cloud-storage/#add-enrichment-datastore">Google Cloud Storage (GCS)</a></td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
