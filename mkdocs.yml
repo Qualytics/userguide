@@ -175,6 +175,7 @@ nav:
         - Freshness: observability/freshness.md
         - Metric: observability/metric-check.md  
       - Manage Observability:
+        - Overview: observability/manage-observability.md
         - Edit Check: observability/edit-check.md
         - Edit Threshold: observability/edit-threshold.md 
         - Edit Maximum Age: observability/edit-maximum-age.md
