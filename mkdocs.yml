@@ -75,13 +75,13 @@ nav:
         - Enrichment Tables: enrichment/enrichment-tables.md
         - Remediation Tables: enrichment/remediation-tables.md
         - Metadata Tables: enrichment/metadata-tables.md
+        - API Payload Examples: enrichment/api-payload-examples.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Manage Enrichment: 
         - Enrichment Actions: enrichment/enrichment-actions.md
         - Add Enrichment: enrichment/enrichment-datastore-creation.md
         - Edit Enrichment: enrichment/edit-enrichment.md
-        - Delete Enrichment: enrichment/delete-enrichment.md
-      - API Payload Examples: enrichment/api-payload-examples.md  
+        - Delete Enrichment: enrichment/delete-enrichment.md  
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
