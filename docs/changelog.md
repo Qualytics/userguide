@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### 2025.10.02 { id=2025.10.2 }
+### 2025.10.3 { id=2025.10.3 }
 
 #### Feature Enhancements
 
@@ -12,7 +12,6 @@
 
 - Enhanced Quality Score calculation with improved clarity and transparency.
     - Renamed "Quality Score Factors" to "Quality Score Dimensions" throughout the application for better conceptual understanding.
-    - Improved score display consistency, showing "--" only for undefined values rather than zeros.
     - Quality scores now better reflect data fitness for intended use cases rather than simple error counts.
 
 - Introducing "Has Logs" filter to display operations that completed with logs.
@@ -35,23 +34,15 @@
 
 - Resolved bulk selection checkboxes disappearing after multiple select/deselect cycles.
 
-- Fixed system deadlock when processing large volumes of queued operations on startup.
+- Fixed error when updating computed tables with excluded fields.
 
-- Corrected error when updating computed tables with excluded fields.
+- Corrected icon alignment in collapsed datastore tree view sidebar.
 
-- Resolved check count displaying double the actual number of checks in pagination.
-
-- Fixed icon alignment in collapsed datastore tree view sidebar.
-
-- Corrected missing background color for "Not Asserted" status in Insights checks section.
-
-- Resolved occasional schema selection failures in Databricks connections.
+- Resolved missing background color for "Not Asserted" status in Insights checks section.
 
 - Fixed misleading error messages when attempting to edit comments on archived anomalies.
 
-- Corrected security vulnerability allowing managers to gain unauthorized access to datastores by modifying team assignments.
-
-- Resolved a regression in computed joins that prevented using columns with non-normalized names in join conditions.
+- Corrected a regression in computed joins that prevented using columns with non-normalized names in join conditions.
 
 - General Fixes and Improvements.
 
