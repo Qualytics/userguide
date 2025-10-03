@@ -2,6 +2,50 @@
 
 ## Release Notes
 
+### 2025.10.3 { id=2025.10.3 }
+
+#### Feature Enhancements
+
+- Optimized computed tables, files, and joins creation process.
+    - Now the creation is much faster with optimized validation and asynchronous profiling.
+    - Added "Validate" button to check only syntax and semantics, eliminating wait times for full data profiling.
+
+- Enhanced Quality Score calculation with improved clarity and transparency.
+    - Renamed "Quality Score Factors" to "Quality Score Dimensions" throughout the application for better conceptual understanding.
+    - Quality scores now better reflect data fitness for intended use cases rather than simple error counts.
+
+- Introducing "Has Logs" filter to display operations that completed with logs.
+
+- Adding sort by "Last Triggered" option to the Flows list page for better workflow management.
+
+- Improving page metadata for better link sharing across Flow, Check, Anomaly, Library, and Enrichment pages.
+
+#### General Fixes and Improvements
+
+- Fixed validation error when clearing filter clause fields in computed table and join forms.
+
+- Corrected Ctrl+C copy functionality that was blocked by command palette shortcuts.
+
+- Resolved delete button visibility for archived anomalies in both light and dark themes.
+
+- Fixed inconsistent text styling for "No inference" label.
+
+- Corrected catalog operation incorrectly identifying Iceberg metadata files as data files.
+
+- Resolved bulk selection checkboxes disappearing after multiple select/deselect cycles.
+
+- Fixed error when updating computed tables with excluded fields.
+
+- Corrected icon alignment in collapsed datastore tree view sidebar.
+
+- Resolved missing background color for "Not Asserted" status in Insights checks section.
+
+- Fixed misleading error messages when attempting to edit comments on archived anomalies.
+
+- Corrected a regression in computed joins that prevented using columns with non-normalized names in join conditions.
+
+- General Fixes and Improvements.
+
 ### 2025.9.17 { id=2025.9.17 }
 
 #### Feature Enhancements
