@@ -175,6 +175,17 @@ nav:
         - Quality Check Migration : datastore-checks/quality-check-migration.md
     - Observability:
       - Overview: observability/observability.md
+      - Observability Categories:
+        - Measures: observability/measures.md
+        - Volumetric: observability/volumetric.md
+        - Freshness: observability/freshness.md
+        - Metric: observability/metric-check.md  
+      - Manage Observability:
+        - Overview: observability/manage-observability.md
+        - Edit Check: observability/edit-check.md
+        - Edit Threshold: observability/edit-threshold.md 
+        - Edit Maximum Age: observability/edit-maximum-age.md
+        - Mark Check as Favorite: observability/mark-check.md
     - Anomalies:
       - Overview: anomalies/anomalies.md
       - Types: anomalies/anomaly-types.md
