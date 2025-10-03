@@ -27,7 +27,7 @@ Let's break it down into simple steps:
 
 ### Step 1: Choose What to Compare
 
-You pick two sets of data - usually:
+You pick two sets of data:
 
 - **The Original** (your main source of truth)
 - **The Copy** (backup, report, or transferred data)
@@ -42,7 +42,7 @@ You decide which information is important to check. For example:
 
 ### Step 3: The Comparison Happens
 
-Data Diff automatically looks at both sets and checks:
+Data Diff automatically looks at both sets:
 
 - Is everything from the original in the copy?
 - Is there anything extra in the copy that shouldn't be there?
@@ -87,9 +87,10 @@ Let me walk you through a complete, real-world scenario:
 ### The Situation
 
 **Sunshine Electronics** is an online store that sells gadgets. Every night at midnight, their system creates a backup copy of all the day's orders. This backup is used for:
-- Creating daily sales reports
-- Feeding data to their accounting system
-- Analyzing customer trends
+
+  - Creating daily sales reports
+  - Feeding data to their accounting system
+  - Analyzing customer trends
 
 ### The Problem They Had
 
@@ -97,10 +98,10 @@ One morning, the Sales Manager noticed the daily report showed 1,247 orders, but
 
 After investigating, they discovered:
 
-- The backup system had a glitch
-- Some orders placed between 11:58 PM and midnight weren't copying over
-- This had been happening for weeks
-- They had been under-reporting revenue and had incorrect inventory counts
+  - The backup system had a glitch
+  - Some orders placed between 11:58 PM and midnight weren't copied over
+  - This had been happening for weeks
+  - They had been under-reporting revenue and had incorrect inventory counts
 
 ### The Solution: Data Diff
 
@@ -128,27 +129,28 @@ They set up Data Diff to automatically compare their main orders database with t
 | 10002 | Mike Chen | Headphones | $149 | Jan 15, 2025 |
 | 10003 | Emily Davis | Tablet | $399 | Jan 15, 2025 |
 | ...   | ...     | ...     | ... | ...     |
-| 10248 | Missing | Missing | Missing | Missing | 
-| 10249 | Missing | Missing | Missing | Missing | 
-| 10250 | Missing | Missing | Missing | Missing |
+| <span class="text-negative">10248</span>  | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | 
+| <span class="text-negative">10249</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | 
+| <span class="text-negative">10250</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> |
 
 ### What Data Diff Discovered
 
 **ALERT GENERATED:**
-```
-DIFFERENCE DETECTED!
-- Original Database: 1,250 orders
-- Backup Database: 1,247 orders
-- Missing Records: 3 orders (IDs: 10248, 10249, 10250)
-- Issue: Orders placed after 11:58 PM not copied
-```
+
+!!! warning "DIFFERENCE DETECTED!"
+    - Original Database: 1,250 orders
+    - Backup Database: 1,247 orders
+    - Missing Records: 3 orders (IDs: 10248, 10249, 10250)
+    - Issue: Orders placed after 11:58 PM not copied
+
 **Technical Anomaly Output:**
-```
-Anomaly Type: Shape
-Source Records: 1,250
-Target Records: 1,247
-Missing Records: 3 (order_ids: 10248, 10249, 10250)
-```
+
+!!! info
+    - Anomaly Type: Shape
+    - Source Records: 1,250
+    - Target Records: 1,247
+    - Missing Records: 3 (order_ids: 10248, 10249, 10250)
+
 
 ### The Outcome
 
