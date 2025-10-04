@@ -157,6 +157,10 @@
   color: #FF4714;
 }
 
+.text-sm {
+  font-size: 0.7rem;
+}
+
 .md-typeset__table {
   min-width: 100%;
 }
