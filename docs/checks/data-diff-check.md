@@ -3,7 +3,7 @@
 !!! info "Recommended Check"
     Qualytics recommends using the `dataDiff` rule type instead of the `isReplicaOf`.
     
-    The `isReplicaOf` check is sunsetting and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
+    The `isReplicaOf` check is being deprecated and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
 
 ## What is Data Diff?
 
@@ -50,7 +50,7 @@ Data Diff automatically looks at both sets:
 
 ### Step 4: Get Your Results
 
-The DataDiff report shows:
+The Data Diff report shows:
 
 - **Pass** – Target and reference datasets match; no action needed.
 - **Anomalies Found** – Differences detected; view the report to see which rows or fields differ.
@@ -179,38 +179,36 @@ They set up Data Diff to automatically compare their main orders database with t
 - Service Type
 - Insurance Information
 
-**One day, Data Diff caught this:**
+### 📋 Before Correction (Data Diff Caught This)
 
-**Scheduling System:**
+| **Field**      | **Scheduling System** | **Billing System** |
+|----------------|----------------------|--------------------|
+| Patient        | Robert Martinez       | Robert Martinez    |
+| Doctor         | Dr. Smith             | Dr. Smith          |
+| Insurance Plan | BlueCross Plan **A**  | <span style="color:red">BlueCross Plan **B** </span> |
 
-- Patient: **Robert Martinez**
-- Doctor: **Dr. Smith**
-- Insurance: **BlueCross Plan A**
+The **Insurance Plan** code changed during transfer. Without Data Diff, the clinic would have billed the wrong insurer.
 
-**Billing System:**
+### ✅ After Correction (Fixed Data)
 
-- Patient: **Robert Martinez**  
-- Doctor: **Dr. Smith**
-- Insurance: **BlueCross Plan B (WRONG!)**
+| **Field**      | **Scheduling System** | **Billing System** |
+|----------------|----------------------|--------------------|
+| Patient        | Robert Martinez       | Robert Martinez    |
+| Doctor         | Dr. Smith             | Dr. Smith          |
+| Insurance Plan | BlueCross Plan **A**  | BlueCross Plan **A** |
 
-The insurance plan code had changed during transfer. Without Data Diff, they would have billed the wrong insurance company, leading to:
-
-- Claim rejection
-- Payment delays
-- Frustrated patient
-- Extra work for staff
-
-Data Diff caught it immediately, and they fixed it before any claim was submitted.
+!!! info
+    Data Diff caught the mismatch and the billing team corrected it before submitting the claim — avoiding claim rejection, payment delays, and extra work.
 
 ## Key Takeaways
 
 **Data Diff is like having a careful proofreader** who checks that when you copy important information, nothing goes wrong.
 
-**It works automatically** you set it up once, and it keeps watching your data 24/7.
+**It works automatically**- you set it up once, and it keeps watching your data 24/7.
 
-**It catches problems early** before they affect your reports, decisions, or customers.
+**It catches problems early**- before they affect your reports, decisions, or customers.
 
-**It gives you peace of mind** you can trust that your backup, reports, and transferred data are accurate.
+**It gives you peace of mind**- you can trust that your backup, reports, and transferred data are accurate.
 
 ## When Should You Use Data Diff?
 
