@@ -1,6 +1,6 @@
 # Sort Flows
 
-Qualytics allows you to sort your flows by **Created Date** and **Name** to easily organize and prioritize them according to your needs.  
+Qualytics allows you to sort your flows by **Created Date**, **Name**, and **Last Triggered** to easily organize and prioritize them according to your needs.  
 
 ![sort](.././assets/flows/sort-light-85.png)
 
