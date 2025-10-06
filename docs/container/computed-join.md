@@ -84,7 +84,7 @@ We want to join:
 
 ### Endpoint
 
-**Post:** `/api/containers` 
+**POST:** `/api/containers` 
 
 **Expected response:** `200 OK`
 
@@ -110,5 +110,5 @@ We want to join:
 
 * Always set prefixes to avoid column name collisions.
 * Use Select Expression to choose only the columns you need.
-* Apply Filter Clause for better performance by reducing unnecessary data.
+* Apply a Filter Clause for better performance by reducing unnecessary data.
 * Test the join type with sample data to verify expected behavior.
