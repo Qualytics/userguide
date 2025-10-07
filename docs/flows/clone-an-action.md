@@ -4,6 +4,9 @@ Users can duplicate an existing action in just a few clicks. Cloning an action a
 
 **Step 1:** Click the vertical ellipsis (**⋮**) on the action you want to clone, then select the **Clone** option from the menu.
 
+!!! info
+    You can add a maximum of **10 Operation** Actions (such as Catalog, Profile, or Scan) in a single flow.
+
 ![vertical](.././assets/flows/vertical-light.png)
 
 **Step 2:** After clicking the Clone option, a cloned action will be created.
