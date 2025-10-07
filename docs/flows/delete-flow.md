@@ -15,3 +15,6 @@ After clicking the delete button, a confirmation modal window **Delete Flow** wi
 ![delete](.././assets/flows/delete-light-93.png)
 
 After clicking the **Delete** button, a success notification appears confirming the deletion.
+
+!!! warning
+    This action cannot be undone. If you only want to pause the flow instead of deleting it, see the [Deactivate Flow guide](../flows/deactivate-flow.md).

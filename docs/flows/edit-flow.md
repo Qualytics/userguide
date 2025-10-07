@@ -12,10 +12,16 @@ For demonstration purposes we have selected the Flow node.
 
 ![result](.././assets/flows/result-light-88.png)
 
+!!! tip
+    If you make changes that you don’t want to keep, you can undo them by discarding the unsaved configuration or refreshing the page before publishing.
+
 **Step 3:** Click the **`Save`** button to apply the updates.
 
 ![save](.././assets/flows/save-light-89.png)
 
 **Step 4:** After clicking the **`Save`** button, click the **`Publish`** button located in the top right corner to finalize and publish the changes.
+
+!!! warning
+    If the flow is not published, the setup will not be saved. Always publish the flow after editing to ensure your changes are retained.
 
 ![publish](.././assets/flows/publish-light-82.png)

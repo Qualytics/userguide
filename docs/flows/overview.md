@@ -40,7 +40,7 @@ For more information, please refer to the [trigger node](../flows/trigger-node.m
 
 Actions define the specific steps the system will execute after a flow is triggered. They allow users to automate tasks, send notifications, or interact with external systems.
 
-For more information, please refer to the [action node](../flows/action-node.md) documentation.
+For more information, please refer to the [action node overview](../flows/overview-action.md) documentation.
 
 ## View Created Flow
 
@@ -53,6 +53,11 @@ For more information, please refer to the [view created flow](../flows/view-crea
 Execution tab allows users to view the execution history and current status of a flow. It provides detailed timestamps, status updates, and a comprehensive record of flow executions for efficient tracking and analysis.
 
 For more information, please refer to the [execution tab](../flows/execution-tab.md) documentation.
+
+## FAQ
+
+!!! note
+    For FAQ please refer to the [FAQ documentation](../flows/faq.md)
 
 
 

@@ -198,7 +198,11 @@ nav:
       - Add Flow: flows/add-flow.md
       - Flow Node: flows/flow-node.md
       - Trigger Node: flows/trigger-node.md
-      - Actions Node: flows/action-node.md
+      - Actions Node: 
+        - Overview: flows/overview-action.md
+        - Operations: flows/operations.md
+        - Notifications: flows/notification.md
+        - HTTP: flows/http.md 
       - View Created Flows: flows/view-created-flows.md
       - Execution Tab:
         - Execution Tab: flows/execution-tab.md
@@ -214,6 +218,7 @@ nav:
         - Deactivate Flow: flows/deactivate-flow.md
         - Activate Flows: flows/activate-flow.md
         - Clone An Action: flows/clone-an-action.md 
+      - FAQ: flows/faq.md
     - Tags:
       - Overview: tags/overview-of-tag.md
     - Settings:
