@@ -41,3 +41,46 @@ For **shape anomalies**—which refer to patterns or distributions of data rathe
     Shape anomalies can only be fingerprinted if the data asset includes an incremental identifier. This field anchors the fingerprint to a specific range of data, ensuring accurate comparisons across different scans.
 
 This fingerprinting mechanism ensures consistent anomaly tracking by minimizing false duplicates and keeping historical issues relevant when they reoccur.
+
+## Use Case: Handling Daily Truncate-and-Reload Tables
+
+### Scenario
+
+Many data pipelines use staging tables that follow a **truncate-and-reload** pattern daily. These tables present a unique challenge:
+
+- No last update timestamp for incremental strategy  
+- Table is completely truncated and reloaded each day  
+- Same data anomalies appear repeatedly across scans  
+- Standard incremental detection cannot identify "already seen" records  
+
+### Problem
+Without fingerprinting, each daily scan treats truncated-and-reloaded data as entirely new:
+
+- **Day 1:** Scan identifies 127 anomalies → Team acknowledges all 127  
+- **Day 2:** Table truncated, data reloaded → Same 127 anomalies flagged as "new"  
+- **Day 3:** Process repeats → Team faces anomaly fatigue from duplicate alerts  
+
+The lack of a persistent identifier means **Qualytics** cannot distinguish between truly new anomalies and recurring issues from reloaded data.
+
+### Solution
+
+Enable both duplicate handling options in your [**Scan Operation configuration**](../source-datastore/scan.md#configuration):
+
+- **Archive Duplicate Anomalies:** When the same 127 anomalies appear again after the table reload, Qualytics recognizes their fingerprints and automatically marks them as duplicates rather than new anomalies.  
+- **Reactivate Recurring Anomalies:** If an anomaly was previously archived or resolved but reappears in subsequent scans, Qualytics reactivates the original anomaly record, maintaining full historical context.  
+
+### Benefits
+
+- Eliminates daily re-acknowledgment of the same known issues  
+- Maintains clean anomaly counts reflecting only truly new problems  
+- Preserves audit trail through anomaly reactivation  
+- Reduces alert fatigue while ensuring genuine recurrences are tracked  
+
+### Configuration
+
+Enable these settings in Scan Settings of your Scan Operation:  
+
+✅ **Archive Duplicate Anomalies**  
+✅ **Reactivate Recurring Anomalies**  
+
+Set an appropriate **Anomaly Rollup Threshold** based on your data volume and tolerance for grouped anomalies.
