@@ -63,4 +63,7 @@ The **Activity** section provides a complete timeline of actions and events rela
 
 Users can leave comments to discuss the issue, add context, or communicate decisions. All comments are timestamped and attributed to the respective user.
 
+!!! note
+    Users can’t add, edit, or delete comments in the **Activity** section when an anomaly is archived **(Duplicated, Invalid, or Resolved)**. Restore the anomaly to make updates, then revert its status if needed.
+
 ![comment](../assets/datastores/anomaly-insights/comment.png)
