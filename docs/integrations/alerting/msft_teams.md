@@ -39,7 +39,7 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 #### Adding API Permissions
 
-The Microsoft Entra App needs the "Application.ReadWrite.All" permission to create and manage bot resources.
+The Microsoft Entra App needs the "Application.ReadWrite.OwnedBy" permission to create and manage bot resources.
 
 **Step 1:** In your app registration, go to the side panel and click **Manage**, then select **API permissions** from the dropdown.
 
@@ -57,7 +57,7 @@ The Microsoft Entra App needs the "Application.ReadWrite.All" permission to crea
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/application-permission-msft-graph.png)
 
-A dropdown appears search for **Application.ReadWrite.All**, check the box under **Application permissions**, and click **Add permissions**.
+A dropdown appears search for **Application.ReadWrite.OwnedBy**, check the box under **Application permissions**, and click **Add permissions**.
 
 ![msft-graph-application-permission](../../assets/integrations/msft_teams/add-permissions.png)
 
