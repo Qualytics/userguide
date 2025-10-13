@@ -57,7 +57,7 @@ The observability system currently operates on UTC time for daily volume calcula
 
 !!! note 
     "Local Time Display"  
-    The UI currently displays observability data in UTC. If you notice date discrepancies (for example, a scan performed on September 17 showing observability data starting September 18), this is due to UTC time zone differences. An enhancement to support local time display in the UI is planned. The API already supports timezone offset parameters for custom time zone handling.
+    The UI currently displays observability data in UTC. If you notice date discrepancies (for example, a scan performed on September 17 showing observability data starting September 18), this is due to UTC time zone differences.
 
 ### Benefits
 
