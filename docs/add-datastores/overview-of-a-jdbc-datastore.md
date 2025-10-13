@@ -6,8 +6,7 @@ JDBC Datastore in Qualytics allows you to easily integrate and manage data from 
 
 Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/jdbc-datastores/add-datastore-light.png#only-light)
-![add-datastore](../assets/datastores/jdbc-datastores/add-datastore-dark.png#only-dark)
+![add-datastore](../assets/datastores/jdbc-datastores/add-datastore-light.png)
 
 For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Datastore**](../add-datastores/athena.md#add-the-source-datastore) section of the documentation.
 
@@ -45,8 +44,7 @@ After adding a JDBC Datastore, you can initiate a **Catalog operation** to extra
 * Field names within each container.  
 * Record counts for data analysis and profiling.
 
-![catalog](../assets/datastores/jdbc-datastores/catalog-light.png#only-light)
-![catalog](../assets/datastores/jdbc-datastores/catalog-dark.png#only-dark)
+![catalog](../assets/datastores/jdbc-datastores/catalog-light.png)
 
 For more information about how to run catalog operation, refer to the [**Catalog Operation**](../source-datastore/catalog.md) documentation.
 
@@ -56,4 +54,4 @@ Qualytics employs weighted histogram analysis during the Catalog operation to in
 
 ## Containers Overview  
 
-Containers are fundamental entities representing structured data sets. These containers could manifest as tables in JDBC datastores or as files within DFS datastores. They play a pivotal role in data organization, profiling, and quality checks within the Qualytics application.  For a more detailed understanding of how Qualytics manages and interacts with containers in JDBC Datastores, please refer to the [**Containers overview**](../container/container.md) documentation.
+Containers are fundamental entities representing structured data sets. These containers could manifest as tables in JDBC datastores or as files within DFS datastores. They play a pivotal role in data organization, profiling, and quality checks within the Qualytics application. For a more detailed understanding of how Qualytics manages and interacts with containers in JDBC Datastores, please refer to the [**Containers overview**](../container/container.md) documentation.
