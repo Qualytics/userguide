@@ -22,11 +22,11 @@ The **Summary** section provides a quick overview of the anomaly's key attribute
 | :---- | :---- | :---- |
 | 1 | Status and Type | Shows the current state and category of the anomaly. In this case, the anomaly is **Active** and of type **Shape**, indicating it relates to the structure or distribution of the data. |
 | 2 | Anomalous Records | Indicates the total number of records affected by the anomaly. Here, **102** records were identified as anomalous. |
-| 3 | Failed Check | Displays the number of data quality checks that were violated and triggered this anomaly. In this instance, **1** check was failed. |
+| 3 | Failed Check | Displays the number of data quality checks that were violated and triggered this anomaly. In this instance, **1** check failed. |
 | 4 | Weight | Represents the significance or impact of the anomaly. A higher weight value implies a more critical issue. This anomaly has a weight of **8**. |
 | 5 | Detected | Shows how long ago the anomaly was first detected. When you hover over the time the anomaly was detected, a pop-up appears displaying the complete date and time. |
 | 6 | Scan | Indicates the scan operation that detected the anomaly. Scan ID **#21379** is shown here, and it was an incremental scan. When you click on the expand icon, you will be directed to the Scan Results page where you can view the specific scan that detected the anomaly. |
-| 7 | Source Datastore | Identifies the dataset where the anomaly was found. This anomaly was found in the "Qualytics Databricks POC" datastore. Clicking on the expand icon opens a detailed view and navigates to the dataset’s page, providing more information about the source datastore where the anomaly was found. |
+| 7 | Source Datastore | Identifies the dataset that contains the anomaly. This anomaly occurred in the "Qualytics Databricks POC" datastore. Clicking the expand icon opens a detailed view and navigates to the dataset’s page for more information about the source datastore. |
 | 8 | Table | Points to the specific table involved in the anomaly. The affected table is raw_order. Clicking on the expand icon navigates to the table’s page, providing more in-depth information about the table structure and contents. |
 | 9 | Location | Displays the full path of the table in the datastore. This helps users trace the exact location of the anomaly within the data pipeline. You can click on the copy icon to copy the full location path of the table where the anomaly was detected. |
 | 10 | Tags | Highlights the severity or categorization of the anomaly. The tag High indicates a high-priority issue. You can add or remove tags from the anomaly by clicking on the tag badge. |
@@ -49,7 +49,7 @@ A right-side panel will open, allowing you to view the details without navigatin
 
 ### Source Records
 
-The Source Records section displays all the data and fields related to the detected anomaly from the dataset. It is an Enrichment Datastore that is used to store the analyzed results, including any anomalies and additional metadata in files, hence it is recommended to add/link an enrichment datastore with your connected source datastore.
+The Source Records section displays all the data and fields related to the detected anomaly from the dataset. It is an Enrichment Datastore that is used to store the analyzed results, including any anomalies and additional metadata in files; therefore, it is recommended to add/link an enrichment datastore with your connected source datastore.
 
 ![source-records](../assets/datastores/anomaly-insights/source-records.png)
 
@@ -62,5 +62,8 @@ The **Activity** section provides a complete timeline of actions and events rela
 ![activity-section](../assets/datastores/anomaly-insights/activity-section.png)
 
 Users can leave comments to discuss the issue, add context, or communicate decisions. All comments are timestamped and attributed to the respective user.
+
+!!! note
+    Users can’t add, edit, or delete comments in the **Activity** section when an anomaly is archived **(Duplicated, Invalid, or Resolved)**. Restore the anomaly to make updates, then revert its status if needed.
 
 ![comment](../assets/datastores/anomaly-insights/comment.png)
