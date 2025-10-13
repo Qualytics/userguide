@@ -52,7 +52,6 @@ nav:
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
       - connections/overview-of-a-connection.md
-      - enrichment-support/supported-enrichment-datastores.md
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
@@ -77,6 +76,7 @@ nav:
         - Metadata Tables: enrichment/metadata-tables.md
         - API Payload Examples: enrichment/api-payload-examples.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
+      - Supported Enrichment Datastores: enrichment-support/supported-enrichment-datastores.md
       - Manage Enrichment: 
         - Enrichment Actions: enrichment/enrichment-actions.md
         - Add Enrichment: enrichment/enrichment-datastore-creation.md
