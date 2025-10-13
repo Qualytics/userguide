@@ -42,6 +42,10 @@ Legend:
 | Delete Enrichment Datastore  | ❌          | ❌        | ❌         | ❌        | ❌             |
 | View Enrichment Datastore    | ❌          | ✅        | ✅         | ✅        | ✅             |
 | Preview Enrichment Datastore | ❌          | ✅        | ✅         | ✅        | ✅             |
+| View Tags                    | ✅          | ✅        | ✅         | ✅        | ✅             |
+| Manage Tags (create / update / delete) | ❌ | ❌       | ✅         | ✅        | ✅             |
+| Assign Tags to Assets (Datastore, Container, Field, Check, Anomaly) |❌| ✅ | ✅ | ✅ |✅        |
+| Assign Tags in Flows         | ❌         | ❌       | ✅          | ✅        | ✅            |
 
 ## Add Team
 
@@ -171,6 +175,4 @@ Reporter role provides access to all report-related information, including dashb
 
 ![save-new-team](../../assets/security/save-new-team-light-5.png)
 
-After clicking on the **Save** button, your team is created, and a success message will appear saying, **The Team has been successfully created**.
-
-![team-created](../../assets/security/team-created-light-6.png)
+After clicking on the **Save** button, your team is created, and a success message will appear saying.

@@ -11,13 +11,11 @@ Let’s get started 🚀
 
 **Step 1**: Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
 
-![global-setting](../../assets/security/global-setting-light-1.png#only-light)
-![global-setting](../../assets/security/global-setting-dark-1.png#only-dark)
+![global-setting](../../assets/security/global-setting-light-1.png)
 
 **Step 2**: By default, you will be navigated to the **Tags** section. Click on the **Security** tab.
 
-![security](../../assets/security/security-light-2.png#only-light)
-![security](../../assets/security/security-dark-2.png#only-dark)
+![security](../../assets/security/security-light-2.png)
 
 ## User Roles
 
@@ -25,65 +23,64 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 
 - **Admin**: Admin users have full access to the system and can manage datastores, teams, and users. This means they can access everything in the application, as well as manage user accounts and team permissions.
 
-| Category              | Functionality             | Description                                                                 |
-|-----------------------|---------------------------|-----------------------------------------------------------------------------|
-| Source Datastore      | Delete                   | Permanently remove a source datastore from the system.                      |
-| Enrichment Datastore  | Delete                   | Permanently remove an enrichment datastore from the system.                 |
-| Global Settings       | Settings                 | Manage global system configurations and preferences.                        |
-|                       | Security                 | Manage user access and team permissions within the system.                  |
-|                       | User(Manage)           | Add, modify, or delete user accounts, assign roles, and control access levels. |
-|                       | Team(Manage)           | Manage teams by adding or removing members, and setting team-specific permissions. |
-|                       | Health                   | Monitor the system’s health status and performance metrics.                 |
-|                       | Restart Analytical Engine | Restart the analytics engine to refresh data processing or resolve issues.  |
+| Category              | Functionality   | Description |
+|-----------------------|-----------------|-------------|
+| Source Datastore      | Delete          | Permanently remove a source datastore from the system. |
+| Enrichment Datastore  | Delete          | Permanently remove an enrichment datastore from the system. |
+| Global Settings       | Settings        | Manage global system configurations and preferences. |
+|                       | Security        | Manage user access and team permissions within the system. |
+|                       | User (Manage)   | Add, modify, or delete user accounts, assign roles, and control access levels. |
+|                       | Team (Manage) | Manage teams by adding or removing members, and setting team-specific permissions. |
+|                       | Health          | Monitor the system’s health status and performance metrics.                 |
+|                  | Restart Analytical Engine | Restart the analytics engine to refresh data processing or resolve issues.  |
 
 - **Manager**: Manager role has limited administrative access over global assets but remains subject to team permissions when interacting with datastores. Managers cannot manage user roles or teams. They can list all datastores (but cannot view their content without explicit team permission) and create datastores for teams where they have Editor permission. Additionally, Managers on a team with Editor permission can manage datastore teams. They can manage global assets such as Tags, Templates, and Notifications but do not have the ability to manage user accounts or team permissions like Admins.
 
-| Category              | Functionality             | Description                                                                 |
-|-----------------------|---------------------------|-----------------------------------------------------------------------------|
-| Source Datastore      | Create                   | Managers can create new source datastores for data integration.             |
-|                       | List                     | Managers can view all source datastores that are listed in the system.      |
-|                       | Add Enrichment           | Add enrichment processes to source datastores to enhance data quality.      |
-| Teams                 | Manage                    | Managers on a team with Editor permission can manage datastore teams.   |
-| Enrichment Datastore  | Create                   | Managers can create enrichment datastores and assign them to teams with an "Editor" role. |
-|                       | List                     | Managers can view all enrichment datastores available in the system.        |
-| Global Settings       | DataStore (Source & Enrichment) |                                                                         |
-|                       | Create                   | Managers can create new source and enrichment datastores and assign them to teams with an "Editor" role. |
-|                       | List                     | Managers can view all datastores (source and enrichment) listed in the system. |
-| Library               | View                     | View the checks, or assets available in the library.                        |
-|                       | Manage                   | Manage library content, such as adding, modifying, or removing checks.      |
-| Tags                  | View                     | View tags assigned to datastores, records, or other elements in the system. |
-|                       | Manage                   | Manage the tags, including adding, removing, or modifying tags for elements        |
-| Notifications Rules   | View                     | View existing notification rules and actions configured for alerts.         |
-|                       | Manage                   | Configure and manage notification rules for different actions or triggers.  |
-| Settings              | Connections              |                                                                             |
-|                       | Create                   | Create new connections for integrating external systems or databases.       |
-|                       | Update                   | Update existing connections to modify their settings or credentials.        |
-|                       | Delete                   | Remove existing connections that are no longer needed.                      |
-|                       | Security                 |                                                                             |
-|                       | View Users               | View the list of users in the system and their access details.              |
-|                       | View Teams               | View the teams and their roles/permissions within the system.               |
-|                       | Integration              |                                                                             |
-|                       | Add                      | Add new integrations to the system for external systems or data sources.    |
-|                       | Sync                     | Sync external data with the system to ensure the most up-to-date information.|
-| Health                | View                     | View the health status of the system to monitor performance and stability.   |
-| API only (ATM)        | Transaction History      | View the history of transactions made via the API for auditing and tracking.|
+| Category              | Functionality   | Description |
+|-----------------------|-----------------|-------------|
+| Source Datastore      | Create          | Managers can create new source datastores for data integration. |
+|                       | List            | Managers can view all source datastores that are listed in the system. |
+|                       | Add Enrichment  | Add enrichment processes to source datastores to enhance data quality. |
+| Teams                 | Manage          | Managers on a team with Editor permission can manage datastore teams.  |
+| Enrichment Datastore  | Create | Managers can create enrichment datastores and assign them to teams with an "Editor" role. |
+|                       | List            | Managers can view all enrichment datastores available in the system. |
+| Global Settings       | DataStore (Source &Enrichment) |                                                       
+|                       | Create | Managers can create new source and enrichment datastores and assign them to teams with an "Editor" role.          |
+|                       | List           | Managers can view all datastores (source and enrichment) listed in the system. |
+| Library               | View           | View the checks, or assets available in the library.                        |
+|                       | Manage         | Manage library content, such as adding, modifying, or removing checks.      |
+| Tags                  | View           | View tags assigned to datastores, records, or other elements in the system. |
+|                       | Manage | Manage the tags themselves — create, update (name, color, description), or delete tags. Assigning tags to assets such as datastores, fields, checks, and anomalies depends on the user’s role and team permissions.<br><br>**Note:** For Flows, only Admin and Manager roles can assign tags. |
+| Notifications Rules   | View          | View existing notification rules and actions configured for alerts.          |
+|                       | Manage         | Configure and manage notification rules for different actions or triggers.  |
+| Settings              | Connections             |                                                                             |
+|                       | Create         | Create new connections for integrating external systems or databases.       |
+|                       | Update         | Update existing connections to modify their settings or credentials.        |
+|                       | Delete         | Remove existing connections that are no longer needed.                      |
+|                       | Security                |                                                                             |
+|                       | View Users     | View the list of users in the system and their access details.              |
+|                       | View Teams     | View the teams and their roles/permissions within the system.               |
+|                       | Integration             |                                                                             |
+|                       | Add            | Add new integrations to the system for external systems or data sources.    |
+|                       | Sync           | Sync external data with the system to ensure the most up-to-date information.|
+| Health                | View           | View the health status of the system to monitor performance and stability.   |
+| API only (ATM)        | Transaction History | View the history of transactions made via the API for auditing and tracking.|
 
 - **Member**: Members are normal users with access explicitly granted to them, usually inherited from the teams they are assigned to.
 
-| Category              | Functionality             | Description                                                                 |
-|-----------------------|---------------------------|-----------------------------------------------------------------------------|
-| Library               | View                     | Access and browse available checks.                                         |
-| Tags                  | View                     | View tags associated with datastores, records, or other system elements.    |
-| Actions               | View                     | View existing notification rules and action configurations.                 |
-| Settings              | Connection               |                                                                             |
-|                       | Read                     | Access connection details without modification permissions.                 |
-|                       | Tokens                   |                                                                             |
-|                       | Generate Token           | Create new tokens for secure access or integrations.                        |
-|                       | Revoke                   | Disable existing tokens to restrict access.                                 |
-|                       | Restore                  | Reactivate previously revoked tokens.                                       |
-|                       | Delete                   | Permanently remove tokens.                                                  |
-|                       | View                     | Access and review all token details.                                        |
-
+| Category              | Functionality   | Description |
+|-----------------------|-----------------|------- -----|
+| Library               | View            | Access and browse available checks.|
+| Tags                  | View            | View tags associated with datastores, records, or other system elements. |
+| Actions               | View            | View existing notification rules and action configurations.                 |
+| Settings              | Connection              |                                                                             |
+|                       | Read            | Access connection details without modification permissions.                 |
+|                       | Tokens                  |                                                                             |
+|                       | Generate Token  | Create new tokens for secure access or integrations.      |
+|                       | Revoke          | Disable existing tokens to restrict access.               |
+|                       | Restore         | Reactivate previously revoked tokens.                     |
+|                       | Delete          | Permanently remove tokens.                                |
+|                       | View            | Access and review all token details.                      |
 
 ## Manage Users
 
@@ -112,8 +109,7 @@ All users are part of the default Public team, which provides access to all Publ
 
 Whenever new users are added to the system, they will appear in the Users list. Click the **Users** tab to view the list of users.
 
-![User](../../assets/security/user-light-7.png#only-light)
-![User](../../assets/security/user-dark-7.png#only-dark)
+![User](../../assets/security/user-light-7.png)
 
 ### Edit Users
 
@@ -121,8 +117,7 @@ You can edit user details to update their role, and team assignments, ensuring t
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the user name that you want to edit, then click on **Edit** from the dropdown menu.
 
-![edit-user](../../assets/security/edit-user-light-8.png#only-light)
-![edit-user](../../assets/security/edit-user-dark-8.png#only-dark)
+![edit-user](../../assets/security/edit-user-light-8.png)
 
 **Step 2**: Edit the user details as needed, including:
 
@@ -132,18 +127,13 @@ You can edit user details to update their role, and team assignments, ensuring t
 !!! note
     All users are inside the Public team by default and that can't be changed. If users have no default access to any datastore, then no datastores should be assigned to the Public team.
 
-![edit-user-details](../../assets/security/edit-user-details-light-9.png#only-light)
-![edit-user-details](../../assets/security/edit-user-details-dark-9.png#only-dark)
+![edit-user-details](../../assets/security/edit-user-details-light-9.png)
 
 **Step 3**: Once you have made the necessary changes, then click on the **Save** button.
 
-![save-user](../../assets/security/save-user-light-10.png#only-light)
-![save-user](../../assets/security/save-user-dark-10.png#only-dark)
+![save-user](../../assets/security/save-user-light-10.png)
 
-After clicking the **Save** button, your changes will be updated, and a success message will display saying, **User successfully updated**.
-
-![user-updated](../../assets/security/user-updated-light-11.png#only-light)
-![user-updated](../../assets/security/user-updated-dark-11.png#only-dark)
+After clicking the **Save** button, your changes will be updated, and a success message will appear.
 
 ### Deactivate Users
 
@@ -151,32 +141,27 @@ You can deactivate users to revoke their access to the system while retaining th
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the user name that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
-![deactivate-user](../../assets/security/deactivate-user-light-12.png#only-light)
-![deactivate-user](../../assets/security/deactivate-user-dark-12.png#only-dark)
+![deactivate-user](../../assets/security/deactivate-user-light-12.png)
 
 **Step 2**: A modal window **Deactivate User** will appear.
 
-![deactivate-window](../../assets/security/deactivate-window-light-13.png#only-light)
-![deactivate-window](../../assets/security/deactivate-window-dark-13.png#only-dark)
+![deactivate-window](../../assets/security/deactivate-window-light-13.png)
 
 **Step 3**: Enter **deactivate** in the given field (confirmation check) and then click on the **I’M SURE, DEACTIVATE THIS USER** button to deactivate the user.
 
-![confirm-deactivate](../../assets/security/confirm-deactivate-light-14.png#only-light)
-![confirm-deactivate](../../assets/security/confirm-deactivate-dark-14.png#only-dark)
+![confirm-deactivate](../../assets/security/confirm-deactivate-light-14.png)
 
 ### Sort Users
 
 You can sort users by various criteria, such as **Created date**, **Name**, **Role**, and **Teams**, to easily manage and organize user information.
 
-![sort-user](../../assets/security/sort-user-light-15.png#only-light)
-![sort-user](../../assets/security/sort-user-dark-15.png#only-dark)
+![sort-user](../../assets/security/sort-user-light-15.png)
 
 ### Filter Users
 
 You can filter the users by their roles, deactivated and team, to quickly find and manage particular groups of users.
 
-![filter](../../assets/security/filter-light-16.png#only-light)
-![filter](../../assets/security/filter-dark-16.png#only-dark)
+![filter](../../assets/security/filter-light-16.png)
 
 ## Manage Teams
 
@@ -186,8 +171,7 @@ You can manage teams by editing their permissions, adding or removing users, and
 
 Whenever new teams are added to the system, they will appear in the Teams list. Click the **Teams** tab to view the list of teams.
 
-![teams](../../assets/security/teams-light-17.png#only-light)
-![teams](../../assets/security/teams-dark-17.png#only-dark)
+![teams](../../assets/security/teams-light-17.png)
 
 ### Edit Team
 
@@ -198,23 +182,17 @@ You can edit a team to update its permissions, name, manage users within the tea
 
 **Step 1**:  Click on the **vertical ellipsis (⋮)** next to the team name that you want to edit, then click on **Edit** from the dropdown menu.
 
-![edit-team](../../assets/security/edit-team-light-18.png#only-light)
-![edit-team](../../assets/security/edit-team-dark-18.png#only-dark)
+![edit-team](../../assets/security/edit-team-light-18.png)
 
 **Step 2**:  Edit the [team details](team-permissions.md#add-team) as needed, including updating their permissions, users, source, and enrichment datastores.
 
-![team-details](../../assets/security/team-details-light-19.png#only-light)
-![team-details](../../assets/security/team-details-dark-19.png#only-dark)
+![team-details](../../assets/security/team-details-light-19.png)
 
 **Step 3**: Once you have made the necessary changes, then click on the **Save** button.
 
-![save-team](../../assets/security/save-team-light-20.png#only-light)
-![save-team](../../assets/security/save-team-dark-20.png#only-dark)
+![save-team](../../assets/security/save-team-light-20.png)
 
-After clicking on the **Save** button, your team is successfully updated, and a success message will be displayed saying, **Team successfully updated**
-
-![team-updated](../../assets/security/team-updated-light-21.png#only-light)
-![team-updated](../../assets/security/team-updated-dark-21.png#only-dark)
+After clicking on the **Save** button, your team is successfully updated, and a success message will appear.
 
 ### Delete Team
 
@@ -222,25 +200,21 @@ You can delete a team from the system when it is no longer needed, removing its 
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the team name that you want to delete, then click on **Edit** from the dropdown menu.
 
-![delete-team](../../assets/security/delete-team-light-22.png#only-light)
-![delete-team](../../assets/security/delete-team-dark-22.png#only-dark)
+![delete-team](../../assets/security/delete-team-light-22.png)
 
 A modal window **Delete Team** will appear.
 
-![confirm-delete](../../assets/security/confirm-delete-light-23.png#only-light)
-![confirm-delete](../../assets/security/confirm-delete-dark-23.png#only-dark)
+![confirm-delete](../../assets/security/confirm-delete-light-23.png)
 
 **Step 2**: Click on the **Delete** button to delete the team from the system.
 
-![click-delete](../../assets/security/click-delete-light-24.png#only-light)
-![click-delete](../../assets/security/click-delete-dark-24.png#only-dark)
+![click-delete](../../assets/security/click-delete-light-24.png)
 
 ### Sort Team
 
 You can sort teams by various criteria, such as name or creation date, to easily organize and manage team information.
 
-![sort-team](../../assets/security/sort-team-light-25.png#only-light)
-![sort-team](../../assets/security/sort-team-dark-25.png#only-dark)
+![sort-team](../../assets/security/sort-team-light-25.png)
 
 
 - [Team Permissions](./team-permissions.md)
