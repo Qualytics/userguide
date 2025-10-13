@@ -2,6 +2,9 @@
 
 Anomaly fingerprints are unique identifiers generated for each detected anomaly to help the system recognize and manage duplicates effectively. By comparing these fingerprints, Qualytics can determine whether a newly detected anomaly matches a previously identified one. This mechanism reduces redundancy, ensures consistency in anomaly tracking, and simplifies decision-making during data quality operations.
 
+!!! info
+    Fingerprinting works only when **Incremental Row tracking** is enabled.
+
 ## Duplicate Handling Configuration
 
 Once anomalies are fingerprinted, Qualytics can use these unique identifiers to determine whether a newly detected anomaly matches any existing one. This fingerprint-based recognition powers the **duplicate handling configuration** during scan setup.
@@ -64,7 +67,9 @@ The lack of a persistent identifier means **Qualytics** cannot distinguish betwe
 
 ### Solution
 
-Enable both duplicate handling options in your [**Scan Operation configuration**](../source-datastore/scan.md#configuration):
+To handle recurring anomalies in truncate-and-reload tables, configure your scan to use fingerprint-based duplicate handling.
+
+Follow the steps in the [scan operation configuration](../source-datastore/scan.md#configuration) to reach the correct settings. Then, under **Step 8 → Scan Settings**, open the [anomaly options section](https://userguide.qualytics.io/source-datastore/scan/#configuration:~:text=Step%208%3A%20Configure%20the%20Scan%20Settings) and enable both duplicate-handling options:
 
 - **Archive Duplicate Anomalies:** When the same 127 anomalies appear again after the table reload, Qualytics recognizes their fingerprints and automatically marks them as duplicates rather than new anomalies.  
 - **Reactivate Recurring Anomalies:** If an anomaly was previously archived or resolved but reappears in subsequent scans, Qualytics reactivates the original anomaly record, maintaining full historical context.  
@@ -80,7 +85,7 @@ Enable both duplicate handling options in your [**Scan Operation configuration**
 
 Enable these settings in Scan Settings of your Scan Operation:  
 
-✅ **Archive Duplicate Anomalies**  
-✅ **Reactivate Recurring Anomalies**  
+- **Archive Duplicate Anomalies**  
+- **Reactivate Recurring Anomalies**  
 
 Set an appropriate **Anomaly Rollup Threshold** based on your data volume and tolerance for grouped anomalies.
