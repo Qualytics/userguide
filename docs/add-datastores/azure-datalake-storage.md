@@ -114,10 +114,10 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 ![test-connection-for-existing-datastore](../assets/datastores/azure-datalake-storage/test-datastore-connection-light.png)
 
-!!!note
+!!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
 
-!!!tip
+!!! tip
     It is recommended to click on the **Next** button, which will take you to the **enrichment datastore** configuration page.
 
 ## Add Enrichment Datastore
@@ -154,7 +154,7 @@ A modal window - **Link Enrichment Datastore** will appear. Enter the following 
 |-------------------|--------------|--------------------------------------------|
 | 1.                | Prefix       | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
 | 2.                | Name   | Give a name for the enrichment datastore.|
-| 3.                |Toggle Button for add new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
+| 3.                |Toggle Button for Add New Connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
 | 4.                |Connector | Select a datastore connector from the dropdown list.|
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
