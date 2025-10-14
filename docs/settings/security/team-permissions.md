@@ -44,7 +44,7 @@ Legend:
 | Preview Enrichment Datastore | ❌          | ✅        | ✅         | ✅        | ✅             |
 | View Tags                    | ✅          | ✅        | ✅         | ✅        | ✅             |
 | Manage Tags (create / update / delete) | ❌ | ❌       | ✅         | ✅        | ✅             |
-| Assign Tags to Assets (Datastore, Container, Field, Check, Anomaly) |❌| ✅ | ✅ | ✅ |✅        |
+| Assign Tags to Assets (Datastore, Container, Field, Check, Anomaly) | ❌ | ✅ | ✅ | ✅ |✅        |
 | Assign Tags in Flows         | ❌         | ❌       | ✅          | ✅        | ✅            |
 
 ## Add Team

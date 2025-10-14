@@ -72,10 +72,10 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 |-----------------------|-----------------|------- -----|
 | Library               | View            | Access and browse available checks.|
 | Tags                  | View            | View tags associated with datastores, records, or other system elements. |
-| Actions               | View            | View existing notification rules and action configurations.                 |
+| Actions               | View            | View existing notification rules and action configurations.              |
 | Settings              | Connection              |                                                                             |
-|                       | Read            | Access connection details without modification permissions.                 |
-|                       | Tokens                  |                                                                             |
+|                       | Read            | Access connection details without modification permissions. |
+|                       | Tokens          |                                                           |
 |                       | Generate Token  | Create new tokens for secure access or integrations.      |
 |                       | Revoke          | Disable existing tokens to restrict access.               |
 |                       | Restore         | Reactivate previously revoked tokens.                     |
