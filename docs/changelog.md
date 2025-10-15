@@ -2,6 +2,35 @@
 
 ## Release Notes
 
+### 2025.10.15 { id=2025.10.15 }
+
+#### Feature Enhancements
+
+- Introduced fuzzy search to form and filter inputs.
+    - Search results now tolerate typos and partial matches for more natural filtering.
+
+- Improved Expected Values and Required Values check configuration with visual warnings for spacing issues.
+    - Values with trailing or leading spaces now display in warning-colored chips.
+    - A tooltip will show when a value containing extra spaces.
+
+- Adding informational message to Flow action datastores selection explaining filter criteria.
+
+- Improving DFS datastore overview to display file format type.
+
+#### General Fixes and Improvements
+
+- Fixed data write failures in BigQuery enrichment datastores caused by message size limits exceeding API thresholds.
+
+- Optimize operation triggering endpoint performance, including scheduled runs.
+
+- Improved Quality Score calculation accuracy according to Quality Score Dimensions.
+
+- Fixed breadcrumb navigation not updating correctly when cloning checks and changing field or container context.
+
+- Improved background task processing for enhanced system reliability and performance with optimized task execution.
+
+- General Fixes and Improvements.
+
 ### 2025.10.3 { id=2025.10.3 }
 
 #### Feature Enhancements
