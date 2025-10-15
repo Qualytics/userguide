@@ -1,4 +1,4 @@
-## Add Tag
+# Add Tag
 
 **Step 1**: Click on the **Add Tag** button from the top right corner.
 
@@ -13,7 +13,7 @@
 | 3.   | Color | A color picker feature is provided, allowing you to select a color using its hex code.|  #E74C3C |
 | 4.   | Description | Explain the nature of your tag. | Maintain data that is highly confidential and requires strict access controls.|
 | 5.   | Category | Choose an existing category or create a new one to group related tags for easier organization.|Demo2|
-| 6.   | Weight Modifier | Adjust the tag's weight for prioritization, where a higher value represents greater significance. The range is between -10 and 10.| 10 |
+| 6.   | Weight Modifier | Adjust the tag's weight for prioritization, where a higher value represents greater significance. The range is between -10 and 10. <br><br>💡 **Tip:** Increasing the value boosts the weight of a recipient and its children by the same amount, while negative values decrease it. | 10 |
 
 ![tag-details](../assets/tags/tag-details-light-4.png)
 

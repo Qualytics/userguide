@@ -1,4 +1,5 @@
-## Applying a Tag
+# Applying a Tag
+
 Once a Tag is created, it's ready to be associated with a ```Datastore```, ```Profile```, ```Check```, ```Notification``` and ultimately an ```Anomaly```.
 
 ### Tag Inheritance

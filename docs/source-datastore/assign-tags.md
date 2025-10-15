@@ -29,7 +29,7 @@ In this documentation, we will explore the steps to assign a tag to the datastor
 ![modal-window](../assets/assign-tags/modal-window-light-5.png#only-light)
 ![modal-window](../assets/assign-tags/modal-window-dark-5.png#only-dark)
 
- For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md#add-tag).
+ For more information on creating tags, refer to the [Add Tag section](../tags/add-tag.md).
 
 **Step 4**: Once you have assigned a tag, the tag will be instantly labeled on your source Datastore, and all related records will be updated.
 

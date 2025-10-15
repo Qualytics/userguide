@@ -152,6 +152,11 @@ You will be navigated to the **Tags** section, where you can view all the tags a
 !!! note
     For more steps please refer to the [applying a tag documentation](../tags/applying-a-tag.md).
 
+## External Tag
+
+!!! note
+    For more infomation refer to the [external tag](../tags/external-tag.md)
+
 ## Filter and Sort 
 
 !!! note

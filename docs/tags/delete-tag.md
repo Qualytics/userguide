@@ -1,8 +1,11 @@
-### Delete Tags
+# Delete Tags
 
 This allows you to remove outdated or unnecessary tags to maintain a clean and efficient tag system.
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the tag that you want to delete, then click on **Delete** from the dropdown menu.
+
+!!! warning
+    Deleting a tag is permanent and cannot be undone.
 
 ![delete](../assets/tags/delete-light-12.png)
 

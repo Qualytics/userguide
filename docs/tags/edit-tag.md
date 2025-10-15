@@ -1,4 +1,4 @@
-### Edit Tags
+# Edit Tags
 
 This allows you to keep your tags updated with current information and relevance.
 

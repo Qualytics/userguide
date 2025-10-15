@@ -214,9 +214,10 @@ nav:
       - Overview: flows/flows.md
     - Tags:
       - Overview: tags/overview.md
-      - Add Tag: tags/add-tag.md
-      - Applying Tag: tags/applying-a-tag.md
+      - External Tags: tags/external-tag.md
       - Manage Tags:
+        - Add Tag: tags/add-tag.md
+        - Applying Tag: tags/applying-a-tag.md
         - Edit Tag: tags/edit-tag.md
         - Filter and Sort: tags/filter-and-sort.md 
         - Delete Tag: tags/delete-tag.md
