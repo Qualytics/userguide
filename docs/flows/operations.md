@@ -17,6 +17,11 @@ Users can execute specific operations when the trigger activates. They can choos
 !!! note
     To configure other Action Node types, see [Notification documentation](../flows/notification.md) or [HTTP documentation](../flows/http.md).
 
+!!! note
+    Only initialized datastores appear in the **Source Datastore** dropdown across all operation types. A datastore becomes initialized after it has successfully completed **Catalog**, **Profile**, and **Scan** runs at least once within the **Action Node Operation** section while setting up your flow.
+
+    ![note](.././assets/flows/note-flow.png)
+
 ## Catalog
 
 **Step 1:** Click on **Catalog.**  
