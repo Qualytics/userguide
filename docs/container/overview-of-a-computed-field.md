@@ -153,7 +153,7 @@ A modal window will appear, providing the options to create the tag. Enter the r
 ![modal-window](../assets/container/computed-field/modal-light.png#only-light)
 ![modal-window](../assets/container/computed-field/modal-dark.png#only-dark)
 
-For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md#add-tag).
+For more information on creating tags, refer to the [Add Tag section](../tags/add-tag.md).
 
 ## View Team
 
