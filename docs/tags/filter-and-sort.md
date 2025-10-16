@@ -24,6 +24,11 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 You can filter your tags by type and category, which allows you to categorize and manage them more effectively. 
 
+!!! info
+    **Users can search with typos or partial matches in filter inputs for easier, more flexible results**.
+
+    ![typos-tag](../assets/tags/typos-tag.png)
+
 ![filter-tag](../assets/tags/filter-tag-light-8.png)
  
 | **No.** | **Filter Option** | **Description** |
