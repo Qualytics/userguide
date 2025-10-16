@@ -13,9 +13,9 @@
     - Values with trailing or leading spaces now display in warning-colored chips.
     - A tooltip will show when a value containing extra spaces.
 
-- Adding informational message to Flow action datastores selection explaining filter criteria.
+- Added informational message to Flow action datastores selection explaining filter criteria.
 
-- Improving DFS datastore overview to display file format type.
+- Improved DFS datastore overview to display file format type.
 
 #### General Fixes and Improvements
 
@@ -43,11 +43,11 @@
     - Renamed "Quality Score Factors" to "Quality Score Dimensions" throughout the application for better conceptual understanding.
     - Quality scores now better reflect data fitness for intended use cases rather than simple error counts.
 
-- Introducing "Has Logs" filter to display operations that completed with logs.
+- Introduced "Has Logs" filter to display operations that completed with logs.
 
-- Adding sort by "Last Triggered" option to the Flows list page for better workflow management.
+- Added sort by "Last Triggered" option to the Flows list page for better workflow management.
 
-- Improving page metadata for better link sharing across Flow, Check, Anomaly, Library, and Enrichment pages.
+- Improved page metadata for better link sharing across Flow, Check, Anomaly, Library, and Enrichment pages.
 
 #### General Fixes and Improvements
 
