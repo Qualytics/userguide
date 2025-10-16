@@ -133,7 +133,7 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Archive Duplicate Anomalies:** Automatically archive duplicate anomalies from previous scans that overlap with the current scan to enhance data management efficiency.
 
-- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [Fingerprint](../enrichment/overview-of-an-enrichment-datastore.md#_failed_checks-table) column in the Enrichment Datastore.
+- **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [Fingerprint](../enrichment/enrichment-tables.md#_failed_checks-table) column in the Enrichment Datastore.
 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png)
 
@@ -248,11 +248,11 @@ When the scan operation is completed, you will receive the notification and can 
 
 ### Top Panel
 
-**1. Runs (Default View):** Provides insights into the operations that have been performed
+**1. Runs (Default View):** Provides insights into the operations that have been performed.
 
-**2. Schedule:** Provides insights into the [scheduled operations](../operation-automation/automated-tasks-with-cron.md).
+**2. Schedule:** Provides insights into the scheduled operations.
 
-**3. Search:** Search for any operation (including scan) by entering the operation ID
+**3. Search:** Search for any operation (including scan) by entering the operation ID.
 
 **4. Sort by:** Organize the list of operations based on the **Created Date** or the **Duration**.
 
