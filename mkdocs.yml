@@ -24,6 +24,7 @@ nav:
     - quick-start-guide.md
     - web-app.md
     - keyboard-shortcuts.md
+    - fuzzy-search.md
     - Add Datastores:
       - add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
