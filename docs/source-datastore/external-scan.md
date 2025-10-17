@@ -8,42 +8,35 @@ Let’s get started 🚀
 
 **Step 1:** Select a source datastore from the side menu to perform the external scan operation.
 
-![datastore](../assets//external-scan/datastore-light-1.png#only-light)
-![datastore](../assets//external-scan/datastore-dark-1.png#only-dark)
-
+![datastore](../assets//external-scan/datastore-light-1.png)
 
 **Step 2:** After selecting your preferred source datastore, you will be taken to the details page. From there, click on **"Tables"** and select the table you want to perform the external scan operation on.
 
-!!! note 
-	This example is based on a JDBC table, but the same steps apply to DFS as well. For DFS source datastores, you will need to click on **"File Patterns"** and select a File Pattern to run the external scan.
+!!! note
+	This example is based on a JDBC table, but the same steps apply to a DFS as well. For DFS source datastores, you will need to click on **"File Patterns"** and select a File Pattern to run the external scan.
 
-![tables](../assets//external-scan/tables-light-2.png#only-light)
-![tables](../assets//external-scan/tables-dark-2.png#only-dark)
+![tables](../assets//external-scan/tables-light-2.png)
 
 For demonstration purposes, we have selected the **“CUSTOMER”** table.
 
-![container](../assets//external-scan/container-light-3.png#only-light)
-![container](../assets//external-scan/container-dark-3.png#only-dark)
+![container](../assets//external-scan/container-light-3.png)
 
 ## External Scan Configuration
 
 **Step 1:** Click on the **“Run”** button and select the **“External Scan”** option. 
 
-![external-scan](../assets//external-scan/external-scan-light-4.png#only-light)
-![external-scan](../assets//external-scan/external-scan-dark-4.png#only-dark)
+![external-scan](../assets//external-scan/external-scan-light-4.png)
 
 **Step 2:** After selecting the **"External Scan"** option, a modal window will appear with an input for uploading your external file. After uploading the file, click the **“Run”** button to start the operation.
 
-![external-file](../assets//external-scan/external-file-light-5.png#only-light)
-![external-file](../assets//external-scan/external-file-dark-5.png#only-dark)
+![external-file](../assets//external-scan/external-file-light-5.png)
 
-!!! note 
+!!! note
 	An External Scan operation supports the following file formats: CSV, XLSX, and XLS.
 
 **Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message if the operation is successfully triggered.
 
-![success](../assets//external-scan/success-light-6.png#only-light)
-![success](../assets//external-scan/success-dark-6.png#only-dark)
+![success](../assets//external-scan/success-light-6.png)
 
 ## Supported File Formats
 
@@ -73,7 +66,7 @@ An External Scan is initiated to perform checks on the incoming file, validating
 | `Expected Schema`       | Verify that all columns have the same data type as the selected profile structure. |
 | `Exists in`       | Verify that all transactions have valid customer and product references. |
 | `Between Times`    | Ensure that transaction dates fall within an expected range. |
-| `Satisfies Expression`      | Validate that the calculated revenue aligns with the unit price and quantity sold. The formula is: `R=Quantity×Unit Price` |
+| `Satisfies Expression`      | Validate that the calculated revenue aligns with the unit price and quantity sold. The formula is: `R = Quantity × Unit Price` |
 
 
 ### Potential Anomalies:
