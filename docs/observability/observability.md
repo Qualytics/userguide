@@ -1,6 +1,13 @@
 # Observability
 
-Observability helps users track changes in data volume and quality over time, ensuring data accuracy and integrity. Within the Source Datastore section, the Observability tab provides visibility into observability metrics across tables or files within a specific datastore. It introduces two main categories: **Measures** and **Metric Checks**. Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. **Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
+Observability helps users track changes in data volume and quality over time, ensuring data accuracy and integrity. Within the Source Datastore section, the Observability tab provides visibility into observability metrics across tables or files within a specific datastore. It introduces two main categories: 
+
+- **Measures** 
+- **Metric Checks**
+
+Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. 
+
+**Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
 
 Let’s get started 🚀
 
@@ -10,9 +17,9 @@ Observability is critical in tracking and understanding data behavior, providing
 
 ## How It Works
 
-Observability in Qualytics is designed to give you a continuous, automated view of your data health. Here’s how it functions:
+Observability in Qualytics is designed to give you a continuous, automated view of your data health. Here’s how it works:
 
-- **Automated Checks**: The system automatically runs every 30 minutes to check the volume of the containers in your data stores.
+- **Automated Checks**: The system automatically runs once every hour at the 30-minute mark to check the container volumes in your data stores.
   
 - **Volume Tracking**: Once volume tracking is enabled, no manual intervention is required. The system calculates data volume automatically.
   
@@ -33,7 +40,7 @@ A data operations team needs to monitor table volumes daily to detect unexpected
 
 ### How It Works:
 
-- The observability job runs 48 times per day (every 30 minutes)
+- The observability job runs 24 times per day (every 30 minutes)
 - On each run, it checks whether a container has already been measured for "today" (UTC time)
 - If not measured yet, it records the container's volume
 - If already measured for that day, it skips the measurement
@@ -73,7 +80,7 @@ To enable automatic volume tracking:
 1. Navigate to your datastore settings
 2. Select the container you want to monitor
 3. Enable Volume Tracking
-4. The observability job will begin automatic measurements every 30 minutes
+4. The Observability job runs automatically every hour at minute 30.
 
 ## Navigation
 
