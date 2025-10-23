@@ -26,10 +26,9 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 You can filter your checks based on values like **Check Type**, **Asserted State**, **Rule**, **Tags**, **Table**, **Field**, and **Template**.
 
 !!! info
-    **Users can search with typos or partial matches in filter inputs for easier, more flexible results**.
-
+    Users can search across all filter inputs using **typos, partial terms, or abbreviations**. The system intelligently matches relevant results, making it easier to find what they need without exact inputs.
+    
     ![typos-check](../assets/datastore-checks/filter-and-sort/typos-check.png)
-
 
 ![filter](../assets/datastore-checks/filter-and-sort/filter-light.png)
 
