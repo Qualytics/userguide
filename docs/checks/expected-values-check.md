@@ -4,6 +4,12 @@
 
 *Asserts that values are contained within a list of expected values.*
 
+!!! info
+    Visual warnings for spacing issues are available across all forms where values are entered. When a value includes leading or trailing spaces, the system automatically highlights it in a warning-colored chip and shows a tooltip message indicating the issue — for example:
+    “The following value has leading or trailing spaces: ‘ship’”
+
+    ![warning](../assets/checks/expected-values/warnings.png)
+
 ### Field Scope
 
 **Single:** The rule evaluates a single specified field.
