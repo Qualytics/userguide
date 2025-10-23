@@ -21,7 +21,7 @@
 
 - Fixed data write failures in BigQuery enrichment datastores caused by message size limits exceeding API thresholds.
 
-- Optimize operation triggering endpoint performance, including scheduled runs.
+- Optimized operation triggering endpoint performance, including scheduled runs.
 
 - Improved Quality Score calculation accuracy according to Quality Score Dimensions.
 
