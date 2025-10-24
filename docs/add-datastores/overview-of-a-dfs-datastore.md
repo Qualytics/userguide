@@ -26,7 +26,7 @@ DFS Datastores support the initiation of Profile Operations, allowing users to u
 
 ## Containers Overview
 
-For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../container/container.md) section in our comprehensive user guide. 
+For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../container/overview.md) section in our comprehensive user guide. 
 
 This section covers topics such as container deletion, field deletion, and the initial profile of a Datastore's containers.
 

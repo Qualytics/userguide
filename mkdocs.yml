@@ -83,12 +83,23 @@ nav:
         - Edit Enrichment: enrichment/edit-enrichment.md
         - Delete Enrichment: enrichment/delete-enrichment.md  
     - Containers:
-      - Overview: container/container.md
-      - Data Preview: container/data-preview.md
-      - Computed Tables and Files: container/computed-tables-and-files.md
+      - Overview: container/overview.md
+      - Container Types: container/container-types.md
+      - Container Attributes: container/container-attributes.md
+      - Actions on Container: container/action-on-container.md
+      - Field Profiles: container/field-profiles.md
+      - Computed Tables and Files:
+        - Overview: container/computed-tables-and-files.md
+        - Computed Tables: container/computed-tables.md
+        - Computed Files: container/computed-files.md
+        - Computed Table VS File: container/computed-tables-vs-computed-files.md
       - Computed Join: container/computed-join.md
-      - Manage Tables and Files: container/manage-tables-and-files.md
-      - Computed Fields: container/overview-of-a-computed-field.md
+      - Computed Fields: 
+        - Overview: container/overview-of-a-computed-field.md
+        - Add Computed Fields: container/add-computed-field.md
+        - Computed Fields Details: container/computed-fields-details.md
+        - Transformation Types: container/transformation-types.md
+      - Data Preview: container/data-preview.md
       - Enrichment Operation:
         - Export Operation: container/export-operation.md
         - Materialize Operation: container/materialize-operation.md
@@ -96,6 +107,16 @@ nav:
         - Identifiers: container/overview-of-identifiers.md
         - Grouping: container/overview-of-grouping.md
         - General: container/overview-of-infer-data-type.md
+      - Manage Tables and Files:
+        - Settings For JDBC Table: container/setting-for-jdbc-table.md
+        - Settings For DFS Files Pattern: container/setting-for-dfs-table.md
+        - Add Checks: container/add-checks.md
+        - Run: container/run.md
+        - Observability Settings: container/observability-settings.md
+        - Export: container/export.md
+        - Materialize: container/materialize.md
+        - Delete: container/delete.md
+        - Mark Tables & Files as Favorite: container/mark-tables-&-files-as-favorite.md
     - Weight:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:

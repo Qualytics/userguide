@@ -8,33 +8,27 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and select the source datastore (JDBC or DFS) from the left menu that contains the data you want to preview.
 
-![select](../assets/container/data-preview/select-light.png#only-light)
-![select](../assets/container/data-preview/select-dark.png#only-dark)
+![select](../assets/container/data-preview/select-light.png)
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-![table](../assets/container/data-preview/table-light.png#only-light)
-![table](../assets/container/data-preview/table-dark.png#only-dark)
+![table](../assets/container/data-preview/table-light.png)
 
 **Step 3:** You will view the full list of tables or files belonging to the selected source datastore. Select the specific table or file whose data you want to preview.
 
-![list](../assets/container/data-preview/list-light.png#only-light)
-![list](../assets/container/data-preview/list-dark.png#only-dark)
+![list](../assets/container/data-preview/list-light.png)
 
 Alternatively, you can access the tables or files by clicking the drop-down arrow on the selected datastore. This will display the full list of tables or files associated with the selected source datastore. From there, select the specific table or file whose data you want to preview.
 
-![alter](../assets/container/data-preview/alter-light.png#only-light)
-![alter](../assets/container/data-preview/alter-dark.png#only-dark)
+![alter](../assets/container/data-preview/alter-light.png)
 
 **Step 4:** After selecting the specific table or file, click on the **Data Preview** tab.
 
-![preview](../assets/container/data-preview/preview-light.png#only-light)
-![preview](../assets/container/data-preview/preview-dark.png#only-dark)
+![preview](../assets/container/data-preview/preview-light.png)
 
 You will see a tabular view of the data, displaying the field names (columns) and their corresponding data values, allowing you to review the data's structure, types, and sample records.
 
-![tabular](../assets/container/data-preview/tabular-light.png#only-light)
-![tabular](../assets/container/data-preview/tabular-dark.png#only-dark)
+![tabular](../assets/container/data-preview/tabular-light.png)
 
 ## UI Caching
 
@@ -48,29 +42,25 @@ Upon initial access to the Data Preview section, the data may not be stored (cac
 
 Use the Filter Clause to narrow down the displayed rows by applying specific filter clauses, allowing for focused and precise data analysis.
 
-![filter](../assets/container/data-preview/filter-light.png#only-light)
-![filter](../assets/container/data-preview/filter-dark.png#only-dark)
+![filter](../assets/container/data-preview/filter-light.png)
 
 ### Refresh
 
 Click **Refresh** button to update the data view with the latest information, ensuring accuracy and relevance.
 
-![refresh](../assets/container/data-preview/refresh-light.png#only-light)
-![refresh](../assets/container/data-preview/refresh-dark.png#only-dark)
+![refresh](../assets/container/data-preview/refresh-light.png)
 
 ## Select Specific Fields
 
 Select specific fields to display, allowing you to focus on the most relevant data for analysis. To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
 
-![field](../assets/container/data-preview/field-light.png#only-light)
-![field](../assets/container/data-preview/field-dark.png#only-dark)
+![field](../assets/container/data-preview/field-light.png)
 
 ## Download Records
 
 **Download Records** feature in Qualytics allows users to easily export all source records from the selected enrichment dataset. This functionality is essential for performing deeper analysis outside the platform or for sharing data with external tools and teams.
 
-![download](../assets/container/data-preview/download-light.png#only-light)
-![download](../assets/container/data-preview/download-dark.png#only-dark)
+![download](../assets/container/data-preview/download-light.png)
 
 ## Use Cases
 
