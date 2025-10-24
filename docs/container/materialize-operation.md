@@ -37,9 +37,9 @@ This fallback is used when:
 
 **Example:**
 
-If the enrichment prefix is `sales` and the container ID is `12ab34cd`:
+If the enrichment prefix is `sales` and the container ID is `1023456`:
 
-`sales_materialize_12ab34cd`.
+`sales_materialize_1023456`.
 
 !!! note
     The fallback naming ensures successful loading into the enrichment datastore by preventing invalid or non-compliant table names.
