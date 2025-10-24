@@ -2,6 +2,41 @@
 
 ## Release Notes
 
+### 2025.10.23 { id=2025.10.23 }
+
+#### Feature Enhancements
+
+- Expanded Command Palette with quick access to creation actions across datastores, flows, templates, and settings.
+
+- Enhanced operation tracking by adding end time display in datastore activity and navigation links for container profiles and scans.
+    - Operation duration tooltips now show completion time for finished operations.
+    - Profile and scan tooltips now include clickable links in tooltips that navigate to the corresponding operation in the activity view.
+
+- Added abort option for flow executions.
+    - New abort action available in flow execution list and details pages.
+
+#### General Fixes and Improvements
+
+- Fixed volumetric chart threshold bar calculations to correctly use the configured window size in Absolute and Percentage Change comparisons.
+
+- Corrected missing runtime display for fast export operations.
+
+- Improved Quality Score calculation reliability and error handling.
+
+- Fixed table count display showing double the actual number of tables in Snowflake and Oracle datastores when members belong to multiple teams.
+
+- Added validation to prevent computed fields from being used as partition or incremental fields in container configurations.
+
+- Corrected user list filtering and sorting errors when combining team filters with team-based sorting.
+
+- Resolved container profile creation errors caused by concurrent operations processing inferred quality checks.
+
+- Corrected materialize operation failures for glob-pattern containers by sanitizing invalid characters in output table names.
+
+- Resolved Quality Score calculation failures when container rowcount
+
+- General Fixes and Improvements.
+
 ### 2025.10.15 { id=2025.10.15 }
 
 #### Feature Enhancements
@@ -21,7 +56,7 @@
 
 - Fixed data write failures in BigQuery enrichment datastores caused by message size limits exceeding API thresholds.
 
-- Optimize operation triggering endpoint performance, including scheduled runs.
+- Optimized operation triggering endpoint performance, including scheduled runs.
 
 - Improved Quality Score calculation accuracy according to Quality Score Dimensions.
 
