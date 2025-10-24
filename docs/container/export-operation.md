@@ -15,45 +15,37 @@ Let’s get started 🚀
 
 **Step 1:** Select a source datastore from the side menu from which you would like to export the metadata.
 
-![select](../assets/container/export-operation/select-light.png#only-light)
-![select](../assets/container/export-operation/select-dark.png#only-dark)
+![select](../assets/container/export-operation/select-light.png)
 
 For demonstration purposes, we have selected the **“COVID-19 Data”** Snowflake source datastores.
 
-![snow](../assets/container/export-operation/snow-light.png#only-light)
-![snow](../assets/container/export-operation/snow-dark.png#only-dark)
+![snow](../assets/container/export-operation/snow-light.png)
 
 **Step 2:** After selecting a datastore, a bottom-up menu appears on the right side of the interface. Click **Enrichment Operations** next to the Enrichment Datastore and select **Export**.
 
-![export](../assets/container/export-operation/export-light.png#only-light)
-![export](../assets/container/export-operation/export-dark.png#only-dark)
+![export](../assets/container/export-operation/export-light.png)
 
 **Step 3:** After clicking **Export**, the **Export Operation** modal window appears, allowing metadata extraction from the selected source datastore to the enrichment datastore. 
 
-![operation](../assets/container/export-operation/operation-light.png#only-light)
-![operation](../assets/container/export-operation/operation-dark.png#only-dark)
+![operation](../assets/container/export-operation/operation-light.png)
 
 **Step 4:** Select the tables you wish to export. **All**, **Specific**, or **Tag** and click **Next** to proceed.
 
-![profile](../assets/container/export-operation/profile2-light.png#only-light)
-![profile](../assets/container/export-operation/profile2-dark.png#only-dark)
+![profile](../assets/container/export-operation/profile2-light.png)
 
 **Step 5:** After clicking **Next**, select the assets you want to export to your Enrichment Datastore: Anomalies, Quality Checks, or Field Profiles, and click **Export** to proceed with the export process.
 
-![asset](../assets/container/export-operation/assest-light.png#only-light)
-![asset](../assets/container/export-operation/assest-dark.png#only-dark)
+![asset](../assets/container/export-operation/assest-light.png)
 
 After clicking **Export**, a confirmation message appears stating **"Export in motion."** In a couple of minutes, the metadata will be available in your Enrichment Datastore.
 
-![msg](../assets/container/export-operation/msg-light.png#only-light)
-![msg](../assets/container/export-operation/msg-dark.png#only-dark)
+![msg](../assets/container/export-operation/msg-light.png)
 
 ## Schedule Operation
 
 **Step 1:** Click **Schedule** to configure scheduling options for the Export Operation.
 
-![schedule](../assets/container/export-operation/schedule-light-1.png#only-light)
-![schedule](../assets/container/export-operation/schedule-dark-1.png#only-dark)
+![schedule](../assets/container/export-operation/schedule-light-1.png)
 
 **Step 2:** Configure the scheduling preferences for the Export Operation.
 
@@ -67,40 +59,33 @@ After clicking **Export**, a confirmation message appears stating **"Export in m
 
 * **Advanced:** Use Cron expressions for custom scheduling. (e.g., `0 12 * * 1-5` runs at 12 PM, Monday to Friday).
 
-![time](../assets/container/export-operation/time-light-1.png#only-light)
-![time](../assets/container/export-operation/time-dark-1.png#only-dark)
+![time](../assets/container/export-operation/time-light-1.png)
 
 **Step 3:** Define the Schedule Name to identify the scheduled Export Operation when it runs.
 
-![name](../assets/container/export-operation/name-light-1.png#only-light)
-![name](../assets/container/export-operation/name-dark-1.png#only-dark)
+![name](../assets/container/export-operation/name-light-1.png)
 
 **Step 4:** Click **Schedule** to finalize and schedule the Export Operation.
 
-![schedule2](../assets/container/export-operation/schedule-light.png#only-light)
-![schedule2](../assets/container/export-operation/schedule-dark.png#only-dark)
+![schedule2](../assets/container/export-operation/schedule-light.png)
 
 After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**. Go to the Activity tab to see the progress of export operation.
 
-![schedule2](../assets/container/export-operation/operation-scheduled-light.png#only-light)
-![schedule2](../assets/container/export-operation/operation-scheduled-dark.png#only-dark)
+![schedule2](../assets/container/export-operation/operation-scheduled-light.png)
 
 ## Review Exported Data
 
 **Step 1:** Once the metadata has been exported, navigate to the **“Enrichment Datastores”** located on the left menu.
 
-![review](../assets/container/export-operation/review-light.png#only-light)
-![review](../assets/container/export-operation/review-dark.png#only-dark)
+![review](../assets/container/export-operation/review-light.png)
 
 **Step 2:** In the **“Enrichment Datastores”** section, select the datastore where you exported the metadata. The exported metadata will now be visible in the selected datastore.
 
-![visible](../assets/container/export-operation/visible-light.png#only-light)
-![visible](../assets/container/export-operation/visible-dark.png#only-dark)
+![visible](../assets/container/export-operation/visible-light.png)
 
 **Step 3:** Click on the exported files to view the metadata. For demonstration purposes, we have selected the **“export_field_profiles”** file to review the metadata.
 
 The exported metadata is displayed in a table format, showing key details about the field profiles from the datastore. It typically includes columns that indicate the uniqueness of data, the completeness of the fields, and the data structure. You can use this metadata to check data quality, prepare for analysis, ensure compliance, and manage your data.
 
-![profile](../assets/container/export-operation/profile-light.png#only-light)
-![profile](../assets/container/export-operation/profile-dark.png#only-dark)
+![profile](../assets/container/export-operation/profile-light.png)
                                                          
