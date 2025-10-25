@@ -74,23 +74,19 @@ Integrating Atlan with Qualytics enhances your data management capabilities, all
 
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.  
 
-![global-settings](../../assets/integrations/atlan/qualytics-global-settings-light.png#only-light)
-![global-settings](../../assets/integrations/atlan/qualytics-global-settings-dark.png#only-dark)
+![global-settings](../../assets/integrations/atlan/qualytics-global-settings-light.png)
 
 **Step 2:** You will be directed to the **Settings** page, then click on the **"Integration"** tab.
 
-![settings-section](../../assets/integrations/atlan/qualytics-settings-section-light.png#only-light)
-![settings-section](../../assets/integrations/atlan/qualytics-settings-section-dark.png#only-dark)
+![settings-section](../../assets/integrations/atlan/qualytics-settings-section-light.png)
 
 **Step 3:** Click on the **Connect** button next to Atlan to connect to the Atlan Integration.
 
-![click-add-integration](../../assets/integrations/atlan/qualytics-click-add-integration-light.png#only-light)
-![click-add-integration](../../assets/integrations/atlan/qualytics-click-add-integration-dark.png#only-dark)
+![click-add-integration](../../assets/integrations/atlan/qualytics-click-add-integration-light.png)
 
 A modal window titled **Add Atlan Integration** appears.
 
-![click-add-integration](../../assets/integrations/atlan/modal-light.png#only-light)
-![click-add-integration](../../assets/integrations/atlan/modal-dark.png#only-dark)
+![click-add-integration](../../assets/integrations/atlan/modal-light.png)
 
  Fill in the connection properties to connect to Atlan.
 
@@ -103,19 +99,15 @@ A modal window titled **Add Atlan Integration** appears.
 | 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. |
 | 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
 
-![add-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integrations-light.png#only-light)
-![Sadd-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integrations-dark.png#only-dark)
+![add-atlan-integration](../../assets/integrations/atlan/qualytics-add-atlan-integrations-light.png)
 
 **Step 4:**  Click on the **Create** button to set up the Atlan integration. 
 
-![atlan-integration-click-save](../../assets/integrations/atlan/atlan-integration-click-create-light.png#only-light)
-![atlan-integration-click-save](../../assets/integrations/atlan/atlan-integration-click-create-dark.png#only-dark)
+![atlan-integration-click-save](../../assets/integrations/atlan/atlan-integration-click-create-light.png)
 
 **Step 5:** Once the Atlan integration is set up with Qualytics, it will appear in Qualytics as a new integration. 
 
-![atlan-integration-created](../../assets/integrations/atlan/qualytics-atlan-integration-created-light.png#only-light)
-![atlan-integration-created](../../assets/integrations/atlan/qualytics-atlan-integration-created-dark.png#only-dark)
-
+![atlan-integration-created](../../assets/integrations/atlan/qualytics-atlan-integration-created-light.png)
 
 ## Synchronization
 
@@ -126,8 +118,7 @@ The Atlan synchronization supports both push and pull operations. This includes 
 
 **Step 1:** To sync tags, click the vertical ellipsis next to Atlan and select **Sync** from the dropdown.
 
-![atlan-click-sync](../../assets/integrations/atlan/qualytics-atlan-click-sync-light.png#only-light)
-![atlan-click-sync](../../assets/integrations/atlan/qualytics-atlan-click-sync-dark.png#only-dark)
+![atlan-click-sync](../../assets/integrations/atlan/qualytics-atlan-click-sync-light.png)
 
 **Step 2:** After clicking the **"Sync"** button, you will have the following options:
 
@@ -136,28 +127,23 @@ The Atlan synchronization supports both push and pull operations. This includes 
 
 Specify whether the synchronization will pull metadata, push metadata, or do both.
 
-![atlan-sync-modal](../../assets/integrations/atlan/atlan-sync-modal-light.png#only-light)
-![atlan-sync-modal](../../assets/integrations/atlan/atlan-sync-modal-dark.png#only-dark)
+![atlan-sync-modal](../../assets/integrations/atlan/atlan-sync-modal-light.png)
 
 **Step 3:** After selecting the desired options, click on the **"Start"** button.
 
-![atlan-sync-modal-start](../../assets/integrations/atlan/atlan-sync-modal-start-light-16.png#only-light)
-![atlan-sync-modal-start](../../assets/integrations/atlan/atlan-sync-modal-start-dark-16.png#only-dark)
+![atlan-sync-modal-start](../../assets/integrations/atlan/atlan-sync-modal-start-light-16.png)
 
 **Step 4:** After clicking the **Start** button, the synchronization process between Qualytics and Atlan begins. This process pulls metadata from Atlan and pushes Qualytics metadata, including tags, quality scores, anomaly counts, asset links, and many more.
 
-![atlan-syncing](../../assets/integrations/atlan/qualytics-atlan-syncing-light.png#only-light)
-![atlan-syncing](../../assets/integrations/atlan/qualytics-atlan-syncing-dark.png#only-dark)
+![atlan-syncing](../../assets/integrations/atlan/qualytics-atlan-syncing-light.png)
 
 **Step 5:** Review the logs to verify which assets were successfully mapped from Atlan to Qualytics.
 
-![atlan-logs](../../assets/integrations/atlan/qualytics-atlan-logs-light.png#only-light)
-![atlan-logs](../../assets/integrations/atlan/qualytics-atlan-logs-dark.png#only-dark)
+![atlan-logs](../../assets/integrations/atlan/qualytics-atlan-logs-light.png)
 
 **Step 6:** Once synchronization is complete, the mapped assets from **"Atlan"** will display an external tag.   
 
-![table-external-tag](../../assets/integrations/atlan/qualytics-table-external-tag-light.png#only-light)
-![table-external-tag](../../assets/integrations/atlan/qualytics-table-external-tag-dark.png#only-dark)
+![table-external-tag](../../assets/integrations/atlan/qualytics-table-external-tag-light.png)
 
 **Step 7:** When Qualytics detects anomalies, alerts are sent to the assets in Atlan, displaying the number of active anomalies and including a link to view the corresponding details
 

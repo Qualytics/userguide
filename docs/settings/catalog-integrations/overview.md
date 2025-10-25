@@ -14,14 +14,11 @@ These catalog integrations ensure that data quality insights are readily availab
 
 Navigate to Settings > Integration to configure your data catalog connection:
 
-![setting](../../assets/integrations/overview/setting-button-light.png#only-light)
-![setting](../../assets/integrations/overview/setting-button-dark.png#only-dark)
+![setting](../../assets/integrations/overview/setting-button-light.png)
 
-![tab](../../assets/integrations/overview/tab-button-light.png#only-light)
-![tab](../../assets/integrations/overview/tab-button-dark.png#only-dark)
+![tab](../../assets/integrations/overview/tab-button-light.png)
 
-![integration](../../assets/integrations/overview/add-integration-button-light.png#only-light)
-![integration](../../assets/integrations/overview/add-integration-button-dark.png#only-dark)
+![integration](../../assets/integrations/overview/add-integration-button-light.png)
 
 ## Supported Data Catalogs
 
@@ -56,16 +53,14 @@ Qualytics provides flexible synchronization methods to match your workflow:
 ### Manual Sync
 
 Trigger complete metadata synchronization on-demand:
-![manual](../../assets/integrations/overview/mannual-light.png#only-light)
-![manual](../../assets/integrations/overview/mannual-dark.png#only-dark)
+![manual](../../assets/integrations/overview/mannual-light.png)
 
 For detailed steps, see the [**Synchronization**](atlan.md/#synchronization) section.
 
 ### Event Driven
 
 Enable automatic synchronization based on platform events:
-![event](../../assets/integrations/overview/event-light.png#only-light)
-![event](../../assets/integrations/overview/event-dark.png#only-dark)
+![event](../../assets/integrations/overview/event-light.png)
 
 | Event  | Description |
 | :---- | :---- |
