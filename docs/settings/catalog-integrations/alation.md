@@ -42,23 +42,19 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 
 **Step 1:**  Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.
 
-![global-setting](../../assets/integrations/alation/global-setting-light-8.png#only-light)
-![global-setting](../../assets/integrations/alation/global-setting-dark-8.png#only-dark)
+![global-setting](../../assets/integrations/alation/global-setting-light-8.png)
 
 **Step 2:** You will be directed to the **Settings** page, then click on the **"Integration"** tab.
 
-![integration](../../assets/integrations/alation/qualytics-alation-integration-light-9.png#only-light)
-![integration](../../assets/integrations/alation/qualytics-alation-integration-dark-9.png#only-dark)
+![integration](../../assets/integrations/alation/qualytics-alation-integration-light-9.png)
 
 **Step 3:** Click on the **"Add Integration"** button.
 
-![add integration](../../assets/integrations/alation/add-integration-light-10.png#only-light)
-![add integration](../../assets/integrations/alation/add-integration-dark-10.png#only-dark)
+![add integration](../../assets/integrations/alation/add-integration-light-10.png)
 
 **Step 4:** Complete the configuration form by choosing the **Alation** integration type.
 
-![add integration](../../assets/integrations/alation/qualytics-add-integration-light-11.png#only-light)
-![add integration](../../assets/integrations/alation/qualytics-add-integration-dark-11.png#only-dark)
+![add integration](../../assets/integrations/alation/qualytics-add-integration-light-11.png)
 
 |REF.|FIELDS |ACTIONS|
 | ---| ----- | ----- |
@@ -73,13 +69,11 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 
 **Step 5:** Click on the **Save** button to integrate Alation with Qualytics. 
 
-![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-light-12.png#only-light)
-![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-dark-12.png#only-dark)
+![save-integration](../../assets/integrations/alation/qualytics-add-integration-save-light-12.png)
 
 **Step 6:** Here you can view the **new integration** appearing in Qualytics.
 
-![data-mesh](../../assets/integrations/alation/alation-data-mesh-light-13.png#only-light)
-![data-mesh](../../assets/integrations/alation/alation-data-mesh-dark-13.png#only-dark)
+![data-mesh](../../assets/integrations/alation/alation-data-mesh-light-13.png)
                  
 ## Synchronization
 
@@ -91,8 +85,7 @@ The Alation synchronization supports both push and pull operations. This include
 
 **Step 1:** To sync tags, simply click the **"Sync"** button next to the relevant integration card.
 
-![synchronization](../../assets/integrations/alation/alation-syncronization-light-14.png#only-light)
-![synchronization](../../assets/integrations/alation/alation-syncronization-dark-14.png#only-dark)
+![synchronization](../../assets/integrations/alation/alation-syncronization-light-14.png)
 
 **Step 2:** After clicking the **Sync** button, you will have the following options:
 
@@ -101,29 +94,25 @@ The Alation synchronization supports both push and pull operations. This include
 
 Specify whether the synchronization will pull metadata, push metadata, or do both.
 
-![sync-modal](../../assets/integrations/alation/alation-sync-modal-light-15.png#only-light)
-![sync-modal](../../assets/integrations/alation/alation-sync-modal-dark-15.png#only-dark)
+![sync-modal](../../assets/integrations/alation/alation-sync-modal-light-15.png)
 
 **Step 3:** After selecting the desired options, click on the **"Start"** button.
 
-![sync-modal-start](../../assets/integrations/alation/alation-sync-modal-start-light.png#only-light)
-![sync-modal-start](../../assets/integrations/alation/alation-sync-modal-start-dark.png#only-dark)
+![sync-modal-start](../../assets/integrations/alation/alation-sync-modal-start-light.png)
 
 **Step 4:** After clicking the **Start** button, the synchronization process between Qualytics and Alation begins. This process pulls metadata from Alation and pushes Qualytics metadata, including tags, quality scores, anomaly counts, asset links, and many more.
 
-![integration-created](../../assets/integrations/alation/qualytics-alation-integration-created-light-17.png#only-light)
-![integration-created](../../assets/integrations/alation/qualytics-alation-integration-created-dark-17.png#only-dark)
+![integration-created](../../assets/integrations/alation/qualytics-alation-integration-created-light-17.png)
 
 **Step 5:** Once synchronization is complete, the mapped assets from **Alation** will display an external tag.
 
-![external-tags](../../assets/integrations/alation/qualytics-external-tags-light-18.png#only-light)
-![external-tags](../../assets/integrations/alation/qualytics-external-tags-dark-18.png#only-dark)
+![external-tags](../../assets/integrations/alation/qualytics-external-tags-light-18.png)
 
 ## Alerts
 
 When Qualytics detects anomalies, alerts are sent to the assets in Alation, showing the number of active anomalies and providing a link to view them.
 
-![trust-flag](../../assets/integrations/alation/alation-trust-flag-20.png#only-light)
+![trust-flag](../../assets/integrations/alation/alation-trust-flag-20.png)
 
 ## Metadata
 
