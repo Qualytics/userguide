@@ -5,7 +5,7 @@ Observability helps users track changes in data volume and quality over time, en
 - **Measures** 
 - **Metric Checks**
 
-Measures include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. 
+**Measures** include **Volumetric Checks**, which monitor fluctuations in row counts, and **Freshness Tracking**, which ensures data is updated on time. 
 
 **Metric Checks** focus on specific fields and offer deeper insights derived from scan operations. These tools work together to help detect anomalies early and maintain the reliability of your data assets.
 
