@@ -8,18 +8,15 @@ Let's get started 🚀
 
 **Step 1:** Login into your Qualytics account and select the **datastore** from the left menu on which you want to add a volumetric check.
 
-![volumetric-check](../assets/checks/volumetric-check/datastore-light-1.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/datastore-dark-1.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/datastore-light-1.png)
 
 **Step 2:** Click the **Add** button and select **Checks**.
 
-![volumetric-check](../assets/checks/volumetric-check/check-light-2.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/check-dark-2.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/check-light-2.png)
 
 **Step 3:** A modal window appears. Enter the required details to configure the **Volumetric Check.**
 
-![volumetric-check](../assets/checks/volumetric-check/modal-light-3.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/modal-dark-3.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/modal-light-3.png)
 
 **Step 4:** Enter the details to configure the volumetric check**:**
 
@@ -28,13 +25,11 @@ Let's get started 🚀
 |      **1.** |           Rule Type | Select the Volumetric Rule type from the dropdown. |
 |      **2.** |          Table | Select the table for the rule to apply. |
 
-![volumetric-check](../assets/checks/volumetric-check/name-light-4.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/name-dark-4.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/name-light-4.png)
 
 **3. Comparison:**  Specifies the type of comparison: Absolute Change, Absolute Value, or Percentage Change:
 
-![volumetric-check](../assets/checks/volumetric-check/comparision-light-5.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/comparision-dark-5.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/comparision-light-5.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -55,8 +50,7 @@ Let's get started 🚀
         | #3    | 250           | No               |
         | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
     
-![volumetric-check](../assets/checks/volumetric-check/absolute-light-6.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/absolute-dark-6.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/absolute-light-6.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -77,8 +71,7 @@ Let's get started 🚀
         | #3    | 150            | 220           | 70              | No               |
         | #4    | 220            | <div class="text-negative">300</div> | <div class="text-negative">80</div>  | <div class="text-negative">Yes</div> |
 
-![volumetric-check](../assets/checks/volumetric-check/change-light-7.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/change-dark-7.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/change-light-7.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -102,18 +95,15 @@ Let's get started 🚀
         | 4    | 120            | 65            | <div class="text-negative">-45.83%</div> | <div class="text-negative">Yes</div> |
         | 5    | 65             | 110           | <div class="text-negative">69.23%</div>  | <div class="text-negative">Yes</div>  |
 
-![volumetric-check](../assets/checks/volumetric-check/percentage-light-8.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/percentage-dark-8.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/percentage-light-8.png)
 
 **4. Measurement Period Days:** Enter the number of days for measurement.
 
-![volumetric-check](../assets/checks/volumetric-check/measurement-light-9.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/measurement-dark-9.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/measurement-light-9.png)
 
 **5. Threshold:** At least the Min or Max value must be specified, and including both is optional. These values determine the acceptable range or limit of change in the field's value.
 
-![volumetric-check](../assets/checks/volumetric-check/threshold-light-10.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/threshold-dark-10.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/threshold-light-10.png)
 
 **Min Value**
 
@@ -121,15 +111,13 @@ Let's get started 🚀
 
 * A negative Min Value signifies an allowable decrease, determining the minimum value the field can drop to be considered valid.
 
-![volumetric-check](../assets/checks/volumetric-check/min-light-11.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/min-dark-11.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/min-light-11.png)
 
 **Max Value**
 
 * Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
 
-![volumetric-check](../assets/checks/volumetric-check/max-light-12.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/max-dark-12.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/max-light-12.png)
 
 | No. |                           Field |                                       Description |
 | :---- | :---- | :---- |
@@ -137,28 +125,23 @@ Let's get started 🚀
 | **7.** |                       **Tag** | Add tags for categorizing the check. |
 | **8.** |           **Additional Metadata** | Add custom metadata for additional details. |
 
-![volumetric-check](../assets/checks/volumetric-check/last-light-13.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/last-dark-13.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/last-light-13.png)
 
 **Step 4:** After completing all the check details, click on the "Validate" button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
 
-![volumetric-check](../assets/checks/volumetric-check/validate-light-14.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/validate-dark-14.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/validate-light-14.png)
 
 If the validation is successful, a green message will appear saying "Validation Successful".
 
-![volumetric-check](../assets/checks/volumetric-check/msg-light-15.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/msg-dark-15.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/msg-light-15.png)
 
 **Step 5:** Once you have a successful validation, click the **"Save"** button.
 
-![volumetric-check](../assets/checks/volumetric-check/save-light-16.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/save-dark-16.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/save-light-16.png)
 
 After clicking on the **“Save”** button your check is successfully created and a success flash message will appear saying **“Check successfully created”.**
 
-![volumetric-check](../assets/checks/volumetric-check/success-light-17.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/success-dark-17.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/success-light-17.png)
 
 ### How It Works
 
@@ -198,5 +181,4 @@ Each time data volume is measured for an asset, the system automatically updates
 
 * Ensures quick detection and response to potential data issues.
 
-![volumetric-check](../assets/checks/volumetric-check/volumetric-check-light.png#only-light)
-![volumetric-check](../assets/checks/volumetric-check/volumetric-check-dark.png#only-dark)
+![volumetric-check](../assets/checks/volumetric-check/volumetric-check-light.png)
