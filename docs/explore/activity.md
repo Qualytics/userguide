@@ -70,9 +70,13 @@ For demonstration purposes, we have selected the profile operation.
 
 ![record](../assets/explore/activity/record-light.png)
 
+**Step 4:** Users can view the exact completion timestamp of any operation by hovering over the duration label (e.g., Took less than a minute). The tooltip displays the date and time when the operation was completed.
+
+![completed](../assets/explore/activity/completed.png)
+
 Users can also view both profiled and non-profiled File Patterns:
 
-**Step 4:** Click on the Result Button.
+**Step 5:** Click on the Result Button.
 
 ![profiled](../assets/explore/activity/result-light.png)
 
