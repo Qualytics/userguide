@@ -212,6 +212,7 @@ nav:
       - Manage Flow:
         - Clone a Flows: flows/clone-a-flow.md
         - Execute Manual Flow: flows/execute-manual-flows.md
+        - Abort Flow: flows/abort.md
         - Sort Flow: flows/sort-flow.md
         - Edit Flow: flows/edit-flow.md
         - Delete Flow: flows/delete-flow.md
