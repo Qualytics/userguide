@@ -6,13 +6,11 @@ System status provides a real-time overview of your system's resources, essentia
 
 **Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface. 
 
-![global-settings](../../assets/health/global-settings-light-1.png#only-light)
-![global-settings](../../assets/health/global-settings-dark-1.png#only-dark)
+![global-settings](../../assets/health/global-settings-light-1.png)
 
 **Step 2:** You will be directed to the Settings page; then click on the **Status** section.
 
-![health](../../assets/health/health-light-2.png#only-light)
-![health](../../assets/health/health-dark-2.png#only-dark)
+![health](../../assets/health/health-light-2.png)
 
 ## Summary Section
 
@@ -26,8 +24,7 @@ The **Summary** section displays the current platform version, along with the da
 | 4 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
 | 5 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
 
-![summary](../../assets/health/summary-light-3.png#only-light)
-![summary](../../assets/health/summary-dark-3.png#only-dark)
+![summary](../../assets/health/summary-light-3.png)
 
 ## Status Indicator
 
@@ -36,8 +33,7 @@ The status indicator reflects the overall system resources health.For example, i
 !!! note
     Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical."
 
-![health-indicator](../../assets/health/health-indicator-light-4.png#only-light)
-![health-indicator](../../assets/health/health-indicator-dark-4.png#only-dark)
+![health-indicator](../../assets/health/health-indicator-light-4.png)
 
 ## Analytics Engine
 
@@ -54,15 +50,13 @@ The **Analytics Engine** section provides advanced information about the analyti
 | 7 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
 | 8 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
 
-![analytics-engine](../../assets/health/analytics-engine-light-5.png#only-light)
-![analytics-engine](../../assets/health/analytics-engine-dark-5.png#only-dark)
+![analytics-engine](../../assets/health/analytics-engine-light-5.png)
 
 ## Private Routes
 
 Users can now utilize private routes to view their IP addresses along with relevant system messages in the Analytics Engine, ensuring greater transparency and visibility into network activity.
 
-![private-routes](../../assets/health/private-light.png#only-light)
-![private-routes](../../assets/health/private-dark.png#only-dark)
+![private-routes](../../assets/health/private-light.png)
 
 ## Manage Status Summary
 
@@ -74,13 +68,11 @@ The **Copy Status Summary** feature lets you duplicate all data from the Health 
 
 **Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Copy Status Summary** from the drop-down menu.
 
-![copy-health](../../assets/health/copy-health-light-6.png#only-light)
-![copy-health](../../assets/health/copy-health-dark-6.png#only-dark)
+![copy-health](../../assets/health/copy-health-light-6.png)
 
 **Step 2:** After clicking on **Copy Status Summary**,  a success message saying **Copied.**
 
-![copied](../../assets/health/copied-light-7.png#only-light)
-![copied](../../assets/health/copied-dark-7.png#only-dark)
+![copied](../../assets/health/copied-light-7.png)
 
 ### Refresh Status Summary
 
@@ -88,8 +80,7 @@ The **Refresh Status Summary** option updates the Health Section with the latest
 
 **Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Refresh Status Summary** to update the latest data.  
 
-![refresh-health](../../assets/health/refresh-health-light-8.png#only-light)
-![refresh-health](../../assets/health/refresh-health-dark-8.png#only-dark)
+![refresh-health](../../assets/health/refresh-health-light-8.png)
 
 ## Restart Analytics Engine
 
@@ -97,16 +88,13 @@ The **Restart Analytics Engine** option restarts the analytics processing system
 
 **Step 1:** Click the **vertical ellipsis** from the right side of the summary section and choose **Restart Analytics Engine** from the drop-down menu. 
 
-![restart-analytics](../../assets/health/restart-analytics-light-9.png#only-light)
-![restart-analytics](../../assets/health/restart-analytics-dark-9.png#only-dark)
+![restart-analytics](../../assets/health/restart-analytics-light-9.png)
 
 **Step 2:** A modal window will pop up. Click the **Restart** button in this window to restart the analytics engine. Restarting the engine helps resolve any issues and ensures that your analytics data is up-to-date and accurately processed.
 
-![restart](../../assets/health/restart-light-10.png#only-light)
-![restart](../../assets/health/restart-dark-10.png#only-dark)
+![restart](../../assets/health/restart-light-10.png)
 
 **Step 3:** After clicking on **Restart** button a success message saying **Successfully triggered Analytics Engine restart.**
 
-![successfully-triggered](../../assets/health/successfully-triggered-light-11.png#only-light)
-![successfully-triggered](../../assets/health/successfully-triggered-dark-11.png#only-dark)
+![successfully-triggered](../../assets/health/successfully-triggered-light-11.png)
 
