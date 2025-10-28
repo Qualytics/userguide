@@ -110,6 +110,10 @@ Users can deactivate a scheduled operation from the Activity tab. This stops the
 
 ![scheduled](../assets/explore/activity/scheduled-light.png)
 
+User can hover over any operation timestamp (e.g., "1 week ago") to view the exact Completed at time. Clicking the Redirect link opens the operation details.
+
+![time](../assets/explore/activity/time.png)
+
 **Step 3:** Click on the vertical ellipsis **(⋮)** and select **Deactivate** to stop the scheduled operation.
 
 ![deactivate](../assets/explore/activity/deactivate-light.png)
