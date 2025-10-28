@@ -11,6 +11,12 @@ Think of Data Diff as a **"spot the difference" game for your business data**.
 
 Just like when you compare two pictures side-by-side to find what's changed, Data Diff compares two sets of information to make sure they match perfectly. It's like having a super-careful assistant who checks that when you copy something important, nothing gets lost, changed, or added by mistake.
 
+## Add Data Diff Check and Detect Anomalies
+
+Use the Data Diff Check to compare two tables, detect anomalies, and run a scan to identify mismatched or missing records for accurate data validation.
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/LhdAk8rN6egUFK8dmjfV?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Configure and Run a Data Quality Check with Data Diff" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 ## What Does Data Diff Do?
 
 Data Diff helps you answer questions like:
@@ -138,10 +144,9 @@ They set up Data Diff to automatically compare their main orders database with t
 **ALERT GENERATED:**
 
 !!! warning "DIFFERENCE DETECTED!"
-    - Original Database: 1,250 orders
-    - Backup Database: 1,247 orders
-    - Missing Records: 3 orders (IDs: 10248, 10249, 10250)
-    - Issue: Orders placed after 11:58 PM not copied
+    - Fields Affected: amount, order_id, product, order_date, customer_name
+    - Rule Applied: Data Diff
+    - Anomalous Records: 3
 
 **Technical Anomaly Output:**
 
@@ -150,7 +155,6 @@ They set up Data Diff to automatically compare their main orders database with t
     - Source Records: 1,250
     - Target Records: 1,247
     - Missing Records: 3 (order_ids: 10248, 10249, 10250)
-
 
 ### The Outcome
 
