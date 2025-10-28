@@ -1,6 +1,6 @@
 # External Tag Propagation
 
-External tags propagation  in Qualytics serve as metadata labels that are automatically synchronized from an integrated data catalog, such as Atlan or Alation. This process helps maintain consistent data tagging across various platforms by using pre-existing tags from the data catalog.
+External tags propagation in Qualytics serve as metadata labels that are automatically synchronized from an integrated data catalog, such as Atlan or Alation. This process helps maintain consistent data tagging across various platforms by using pre-existing tags from the data catalog.
 
 Let’s get started 🚀
 
