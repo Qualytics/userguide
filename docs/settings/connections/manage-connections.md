@@ -95,3 +95,9 @@ You can sort your connections by **Name** and **Created Date** to easily find an
 You can filter connections by selecting specific data source types from the dropdown menu, making it easier to locate and manage the desired connections.
 
 ![filter](../../assets/connections/filter-light-14.png)
+
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter](../../assets/connections/fuzzy-connection.png)

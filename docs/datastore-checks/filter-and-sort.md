@@ -29,6 +29,7 @@ You can filter your checks based on values like **Check Type**, **Asserted State
     start='<!-- TYPOS-CHECK --start -->' 
     end='<!-- TYPOS-CHECK --end -->' 
 %}
+![filter](../assets/datastore-checks/filter-and-sort/fuzzy-checks.png)
 
 ![filter](../assets/datastore-checks/filter-and-sort/filter-light.png)
 

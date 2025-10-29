@@ -266,6 +266,12 @@ You can filter your anomalies based on values like **Source Datastores, Timefram
 ![filter](../assets/explore/anomalies/filter-1-light.png#only-light)
 ![filter](../assets/explore/anomalies/filter-1-dark.png#only-dark)
 
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter](../assets/explore/anomalies/fuzzy-anomalies2.png)
+
 ![filter](../assets/explore/anomalies/filter-2-light.png#only-light)
 ![filter](../assets/explore/anomalies/filter-2-dark.png#only-dark)
 

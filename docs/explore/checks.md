@@ -451,6 +451,12 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 You can filter your checks based on values like **Source Datastores Check Type**, **Asserted State**, **Rule**, **Tags**, **File**, **Field**, and **Template**.
 
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter](../assets/explore/checks/fuzzy-checks2.png)
+
 ![filter](../assets/explore/checks/filter-light.png#only-light)
 ![filter](../assets/explore/checks/filter-dark.png#only-dark)
 

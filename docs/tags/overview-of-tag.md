@@ -70,7 +70,13 @@ You can sort your tags by **Color**, **Created Date**, **Name**, and **Weight** 
 ### Filter 
 
 You can filter your tags by type and category, which allows you to categorize and manage them more effectively. 
- 
+
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter-tag](../assets/tags/fuzzy-tag.png)
+
 #### Filter by Type
 
  Filter by Type allows you to view and manage tags based on their origin. You can filter between **Global tags** created within the platform and **External tags** imported from integrated systems like Atlan or Alation.
