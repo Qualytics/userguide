@@ -213,7 +213,14 @@ nav:
     - Flows:
       - Overview: flows/flows.md
     - Tags:
-      - Overview: tags/overview-of-tag.md
+      - Overview: tags/overview.md
+      - External Tags: tags/external-tag.md
+      - Manage Tags:
+        - Add Tag: tags/add-tag.md
+        - Applying Tag: tags/applying-a-tag.md
+        - Edit Tag: tags/edit-tag.md
+        - Filter and Sort: tags/filter-and-sort.md 
+        - Delete Tag: tags/delete-tag.md
     - Settings:
       - Connections: settings/connections/manage-connections.md
       - Security:
