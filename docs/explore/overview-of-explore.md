@@ -8,13 +8,11 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the Explore button on the left side panel of the interface.
 
-![explore](../assets/explore/overview-of-explore/explore-light.png#only-light)
-![explore](../assets/explore/overview-of-explore/explore-dark.png#only-dark)
+![explore](../assets/explore/overview-of-explore/explore-light.png)
 
 **Step 2:** After click on the Explore button, you will see the following tabs: [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), [**Observability**](../explore/observability.md), [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md).
 
-![explore-tab](../assets/explore/overview-of-explore/explore-tab-light.png#only-light)
-![explore-tab](../assets/explore/overview-of-explore/explore-tab-dark.png#only-dark)
+![explore-tab](../assets/explore/overview-of-explore/explore-tab-light.png)
 
 # Insights
 
