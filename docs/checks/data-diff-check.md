@@ -11,12 +11,11 @@ Think of Data Diff as a **"spot the difference" game for your business data**.
 
 Just like when you compare two pictures side-by-side to find what's changed, Data Diff compares two sets of information to make sure they match perfectly. It's like having a super-careful assistant who checks that when you copy something important, nothing gets lost, changed, or added by mistake.
 
-## Add Data Diff Check and Detect Anomalies
+## Add Data Diff Check
 
 Use the Data Diff Check to compare two tables, detect anomalies, and run a scan to identify mismatched or missing records for accurate data validation.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/LhdAk8rN6egUFK8dmjfV?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Configure and Run a Data Quality Check with Data Diff" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
-
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/BsQEUTRrjpb7CUKFQUn5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Configure a Data Diff Quality Check for a Data Table" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 ## What Does Data Diff Do?
 
 Data Diff helps you answer questions like:
@@ -113,6 +112,8 @@ After investigating, they discovered:
 
 They set up Data Diff to automatically compare their main orders database with the backup every morning.
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/geAoTYIt72B1msoV5AD0?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Thu Oct 30 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 **Here's what they compared:**
 
 **Original Orders Database:**
@@ -148,13 +149,22 @@ They set up Data Diff to automatically compare their main orders database with t
     - Rule Applied: Data Diff
     - Anomalous Records: 3
 
-**Technical Anomaly Output:**
+**Technical Output (from Qualytics):**
 
-!!! info
-    - Anomaly Type: Shape
-    - Source Records: 1,250
-    - Target Records: 1,247
-    - Missing Records: 3 (order_ids: 10248, 10249, 10250)
+After running the Data Diff check, the system identified mismatched records between the **Original Orders Database (Left)** and the **Backup Orders Database (Right)**.
+
+| Row Status | order_id | amount (Left → Right) | order_date (Left → Right) | customer_name (Left → Right) | product (Left → Right) |
+| ----------- | -------- | -------------------- | -------------------------- | ---------------------------- | ---------------------- |
+| removed     | 10248    | 19.00 → missing      | 2025-01-15 → missing       | David Lee → missing          | Phone Case → missing   |
+| removed     | 10249    | 12.00 → missing      | 2025-01-15 → missing       | Anna Brown → missing         | USB Cable → missing    |
+| removed     | 10250    | 29.00 → missing      | 2025-01-15 → missing       | Tom Wilson → missing         | Mouse → missing        |
+
+![deactivate-user](../assets/checks/data-diff/anomaly-result.png)
+
+### 🔍 Summary
+- These three records exist in the **Original Orders Database** but are **missing from the Backup Orders Database**.  
+- The “removed” status means Data Diff detected entries that weren’t found in the reference (right) table.  
+- This confirms that some orders failed to copy during the backup process.
 
 ### The Outcome
 
