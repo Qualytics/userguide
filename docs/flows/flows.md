@@ -888,6 +888,12 @@ After clicking the **Delete** button, a success notification appears confirming 
 
 **Filter** feature allows users to refine flow execution results based on specific criteria. By clicking the filter icon, users can choose from the following options:
 
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter](.././assets/flows/flows-filter.png)
+
 | No. |                   Filter |                                  Description |
 | :---- | :---- | :---- |
 | 1. | Flows | Select a specific flow to view its executions. |

@@ -4,6 +4,12 @@
 
 *Asserts that all of the defined values must be present at least once within a field.*
 
+{% 
+    include-markdown "components/general-props/warning.md" 
+    start='<!-- SPACING-WARNING --start -->'
+    end='<!-- SPACING-WARNING --end -->'
+%}
+
 ### Field Scope
 
 **Single:** The rule evaluates a single specified field.

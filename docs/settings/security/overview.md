@@ -163,6 +163,12 @@ You can filter the users by their roles, deactivated and team, to quickly find a
 
 ![filter](../../assets/security/filter-light-16.png)
 
+% include-markdown "components/general-props/typos.md" 
+    start='<!-- TYPOS-CHECK --start -->' 
+    end='<!-- TYPOS-CHECK --end -->' 
+%
+![filter](../../assets/security/fuzzy-security.png)
+
 ## Manage Teams
 
 You can manage teams by editing their permissions, adding or removing users, and adjusting access to source and enrichment datastores. If a team is no longer needed, you can delete it from the system. This ensures that team configurations are always up-to-date and relevant, enhancing overall data management and security.

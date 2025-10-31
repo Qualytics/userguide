@@ -4,6 +4,12 @@
 
 *Asserts that values are contained within a list of expected values.*
 
+{% 
+    include-markdown "components/general-props/warning.md" 
+    start='<!-- SPACING-WARNING --start -->'
+    end='<!-- SPACING-WARNING --end -->'
+%}
+
 ### Field Scope
 
 **Single:** The rule evaluates a single specified field.
