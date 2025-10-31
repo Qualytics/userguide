@@ -8,28 +8,23 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and select the source datastore (**JDBC** or **DFS**) from the left menu that you want to manage.
 
-![datastore](../assets/identifiers/general-overview/datastore-light.png#only-light)
-![datastore](../assets/identifiers/general-overview/datastore-dark.png#only-dark)
+![datastore](../assets/identifiers/general-overview/datastore-light.png)
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-![tab](../assets/identifiers/general-overview/navigation-light.png#only-light)
-![tab](../assets/identifiers/general-overview/navigation-dark.png#only-dark)
+![tab](../assets/identifiers/general-overview/navigation-light.png)
 
 **Step 3:** You will view the full list of tables or files belonging to the selected source datastore.
 
-![list](../assets/identifiers/general-overview/list-light.png#only-light)
-![list](../assets/identifiers/general-overview/list-dark.png#only-dark)
+![list](../assets/identifiers/general-overview/list-light.png)
 
 **Step 4:** Click on the vertical ellipse next to the table of your choice and select **Settings** from the dropdown list.
 
-![settings](../assets/identifiers/general-overview/settings-light.png#only-light)
-![settings](../assets/identifiers/general-overview/settings-dark.png#only-dark)
+![settings](../assets/identifiers/general-overview/settings-light.png)
 
 A modal window will appear for **“Table Settings”**, where you can manage general and excluding for the selected table.
 
-![window](../assets/identifiers/general-overview/window-light.png#only-light)
-![window](../assets/identifiers/general-overview/window-dark.png#only-dark)
+![window](../assets/identifiers/general-overview/window-light.png)
 
 ## Excluding Fields
 
@@ -37,8 +32,7 @@ This configuration allows you to selectively exclude specific fields from contai
 
 This can be helpful when dealing with sensitive data, irrelevant information, or large datasets where you want to focus on specific fields.
 
-![excluding](../assets/identifiers/general-overview/excluding-light.png#only-light)
-![excluding](../assets/identifiers/general-overview/excluding-dark.png#only-dark)
+![excluding](../assets/identifiers/general-overview/excluding-light.png)
 
 ### Benefits of Excluding Fields
 
@@ -58,8 +52,7 @@ Excluding fields will permanently remove them from profile creation and data pre
 
 The "infer data type" option in containers allows the system to automatically determine the appropriate data types (e.g., fractional, integer, date) for columns within your data containers. This setting is configurable for both JDBC and DFS containers.
 
-![grouping](../assets/identifiers/general-overview/grouping-light.png#only-light)
-![grouping](../assets/identifiers/general-overview/grouping-dark.png#only-dark)
+![grouping](../assets/identifiers/general-overview/grouping-light.png)
 
 ### Behavior in JDBC Datastores
 

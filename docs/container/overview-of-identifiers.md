@@ -1,6 +1,6 @@
 # Identifiers
 
-An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers can be declared for a table:
+An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers that can be declared for a table:
 
 * **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
@@ -10,28 +10,23 @@ An **Identifier** is a field that can be used to help load the desired data from
 
 **Step 1:** Log in to your Qualytics account and select the source datastore (**JDBC** or **DFS**) from the left menu that you want to manage.
  
-![datastore](../assets/identifiers/identifiers-overview/datastore-light.png#only-light)
-![datastore](../assets/identifiers/identifiers-overview/datastore-dark.png#only-dark)
+![datastore](../assets/identifiers/identifiers-overview/datastore-light.png)
 
 **Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
 
-![table](../assets/identifiers/identifiers-overview/table-menu-light.png#only-light)
-![table](../assets/identifiers/identifiers-overview/table-menu-dark.png#only-dark)
+![table](../assets/identifiers/identifiers-overview/table-menu-light.png)
 
 **Step 3:** You will view the full list of tables or files belonging to the selected source datastore.
   
-![list](../assets/identifiers/identifiers-overview/list-light.png#only-light)
-![list](../assets/identifiers/identifiers-overview/list-dark.png#only-dark)
+![list](../assets/identifiers/identifiers-overview/list-light.png)
 
 **Step 4:** Click on the vertical ellipse next to the table of your choice and select **Settings** from the dropdown list.
 
-![settings](../assets/identifiers/identifiers-overview/setting-light.png#only-light)
-![settings](../assets/identifiers/identifiers-overview/setting-dark.png#only-dark)
+![settings](../assets/identifiers/identifiers-overview/setting-light.png)
 
 A modal window will appear for **“Table Settings”**, where you can manage identifiers for the selected table.
 
-![window](../assets/identifiers/identifiers-overview/window-light.png#only-light)
-![window](../assets/identifiers/identifiers-overview/window-dark.png#only-dark)
+![window](../assets/identifiers/identifiers-overview/window-light.png)
 
 ## Incremental Strategy
 
@@ -41,8 +36,7 @@ This approach is essential for efficient data processing, as it is specifically 
 
 This allows for scan operations to focus exclusively on new records that have not been previously scanned, thereby optimizing the scanning process and ensuring that only the most recent and relevant data is analyzed.
 
-![incremental](../assets/identifiers/identifiers-overview/incremental-light.png#only-light)
-![incremental](../assets/identifiers/identifiers-overview/incremental-dark.png#only-dark)
+![incremental](../assets/identifiers/identifiers-overview/incremental-light.png)
 
 | No |                    Strategy Option |                 Description |
 | :---- | :---- | :---- |
@@ -121,8 +115,7 @@ This not only increases the efficiency of data processing but also ensures a mor
 
 The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however, alternatives are automatically identified and set during a Catalog operation.
 
-![partition](../assets/identifiers/identifiers-overview/partition-light.png#only-light)
-![partition](../assets/identifiers/identifiers-overview/partition-dark.png#only-dark)
+![partition](../assets/identifiers/identifiers-overview/partition-light.png)
 
 !!! info
     * **Partition Field Selection**: When selecting a partition field for a table during catalog operation, we will attempt to select a field with no nulls where possible. 
