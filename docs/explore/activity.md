@@ -70,9 +70,13 @@ For demonstration purposes, we have selected the profile operation.
 
 ![record](../assets/explore/activity/record-light.png)
 
+**Step 4:** Users can view the exact completion timestamp of any operation by hovering over the duration label (e.g., Took less than a minute). The tooltip displays the date and time when the operation was completed.
+
+![completed](../assets/explore/activity/completed.png)
+
 Users can also view both profiled and non-profiled File Patterns:
 
-**Step 4:** Click on the Result Button.
+**Step 5:** Click on the Result Button.
 
 ![profiled](../assets/explore/activity/result-light.png)
 
@@ -105,6 +109,10 @@ Users can deactivate a scheduled operation from the Activity tab. This stops the
 **Step 2:** Click on the **Activity** tab and select **Schedule** to view the scheduled operations.
 
 ![scheduled](../assets/explore/activity/scheduled-light.png)
+
+User can hover over any operation timestamp (e.g., "1 week ago") to view the exact Completed at time. Clicking the Redirect link opens the operation details.
+
+![time](../assets/explore/activity/time.png)
 
 **Step 3:** Click on the vertical ellipsis **(⋮)** and select **Deactivate** to stop the scheduled operation.
 
