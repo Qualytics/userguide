@@ -28,7 +28,7 @@ For more details on Activity, please refer to the [**Activity**](../explore/acti
 
 # Profiles
 
-Profiles tab helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quickly, informed decisions.
+Profiles tab helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quick, informed decisions.
 
 For more details on Profiles, please refer to the [**Profiles**](../explore/profiles.md) documentation.
 
