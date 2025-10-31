@@ -31,7 +31,56 @@ A **Freshness Check** monitors when a dataset (table, file, or view) was last up
    * **Pass** → Data is updated within the allowed time.
 
    * **Fail** → Data is older than the limit, triggering an **alert**.  
-     
+
+## How Freshness is Measured Across Platforms
+
+Qualytics performs volumetric and freshness measurements differently depending on the data platform and container type (table, view, or computed).
+
+### Snowflake
+
+#### Tables
+
+Freshness and volumetrics are retrieved directly from the `INFORMATION_SCHEMA`. (System-level metadata is used — not the Incremental Field.)
+
+#### Views and Computed Objects
+
+- **Volumetrics:** `SELECT COUNT(*) FROM <object>`
+
+- **Freshness:** `SELECT MAX(<incremental_identifier>) FROM <object>` (Here, the Incremental Field defined in Table Settings determines freshness.)
+
+### Oracle
+
+#### Tables
+
+- **Volumetrics:** Retrieved from the `information_schema`
+
+- **Freshness:** Determined using `SELECT MAX(<incremental_identifier>)`
+
+#### Views and Computed Objects
+
+- **Volumetrics:** `SELECT COUNT(*) FROM <object>`
+
+- **Freshness:** `SELECT MAX(<incremental_identifier>) FROM <object>`
+
+### S3
+
+- **Freshness:** Based on the file modification time.
+
+- **Volumetrics:** Depends on file format.
+  - CSV, Excel → file load + row count.
+  - Delta or structured formats → row counts extracted from metadata.
+
+### BigQuery
+
+Same behavior as Snowflake:
+
+- **Tables:** Retrieved from `INFORMATION_SCHEMA`.
+- **Views/Computed:** `SELECT COUNT(*)` and `SELECT MAX(<incremental_identifier>)`.
+
+!!! note
+    - For regular tables, freshness is evaluated from `INFORMATION_SCHEMA` — the configured Incremental Field is not used.
+    - For views or computed tables, freshness is derived from the Incremental Field defined in Table Settings.
+         
 ## Configuring Freshness Check
 
 **Step 1:** Log in into your Qualytics account and select the **datastore** from the left menu on which you want to add a volumetric check.
