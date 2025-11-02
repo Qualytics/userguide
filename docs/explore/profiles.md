@@ -102,10 +102,10 @@ You can filter your containers based on values like Type (Table, View, File, Com
 
 ![filter](../assets/explore/profiles/filter-light.png)
 
-% include-markdown "components/general-props/typos.md" 
-    start='<!-- TYPOS-CHECK --start -->' 
-    end='<!-- TYPOS-CHECK --end -->' 
-%
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
 ![filter](../assets/explore/profiles/fuzzy-profile.png)
 
 ### Mark as Favorite

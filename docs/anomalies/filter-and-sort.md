@@ -20,10 +20,10 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 ## Filter
 
-% include-markdown "components/general-props/typos.md" 
-    start='<!-- TYPOS-CHECK --start -->' 
-    end='<!-- TYPOS-CHECK --end -->' 
-%
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
 ![filter](../assets/datastores/filter-sort-anomalies/fuzzy-anomalies.png)
 
 You can filter your anomalies based on values like **Timeframe**, **Type**, **Rule**, and **Tags**, etc.

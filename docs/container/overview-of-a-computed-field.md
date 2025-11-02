@@ -195,10 +195,10 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 You can filter your fields based on values like Type and Tag to easily organize and prioritize them according to your needs.
 
-% include-markdown "components/general-props/typos.md" 
-    start='<!-- TYPOS-CHECK --start -->' 
-    end='<!-- TYPOS-CHECK --end -->' 
-%
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
 ![caret](../assets/container/computed-field/fuzzy-field.png)
 
 ![caret](../assets/container/computed-field/filter-light-15.png#only-light)

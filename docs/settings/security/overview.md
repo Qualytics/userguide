@@ -163,10 +163,10 @@ You can filter the users by their roles, deactivated and team, to quickly find a
 
 ![filter](../../assets/security/filter-light-16.png)
 
-% include-markdown "components/general-props/typos.md" 
-    start='<!-- TYPOS-CHECK --start -->' 
-    end='<!-- TYPOS-CHECK --end -->' 
-%
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
 ![filter](../../assets/security/fuzzy-security.png)
 
 ## Manage Teams

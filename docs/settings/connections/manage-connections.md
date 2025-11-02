@@ -96,8 +96,8 @@ You can filter connections by selecting specific data source types from the drop
 
 ![filter](../../assets/connections/filter-light-14.png)
 
-% include-markdown "components/general-props/typos.md" 
-    start='<!-- TYPOS-CHECK --start -->' 
-    end='<!-- TYPOS-CHECK --end -->' 
-%
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
 ![filter](../../assets/connections/fuzzy-connection.png)
