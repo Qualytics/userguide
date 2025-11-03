@@ -155,9 +155,9 @@ After running the Data Diff check, the system identified mismatched records betw
 
 | Row Status | order_id | amount (Left → Right) | order_date (Left → Right) | customer_name (Left → Right) | product (Left → Right) |
 | ----------- | -------- | -------------------- | -------------------------- | ---------------------------- | ---------------------- |
-| removed     | 10248    | 19.00 → missing      | 2025-01-15 → missing       | David Lee → missing          | Phone Case → missing   |
-| removed     | 10249    | 12.00 → missing      | 2025-01-15 → missing       | Anna Brown → missing         | USB Cable → missing    |
-| removed     | 10250    | 29.00 → missing      | 2025-01-15 → missing       | Tom Wilson → missing         | Mouse → missing        |
+| removed     | 10248    | 19.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | David Lee → <span style="color:red">missing</span>         | Phone Case → <span style="color:red">missing</span>   |
+| removed     | 10249    | 12.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Anna Brown → <span style="color:red">missing</span>         | USB Cable → <span style="color:red">missing</span>    |
+| removed     | 10250    | 29.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Tom Wilson → <span style="color:red">missing</span>         | Mouse → <span style="color:red">missing</span>        |
 
 ![deactivate-user](../assets/checks/data-diff/anomaly-result.png)
 
@@ -187,6 +187,8 @@ After running the Data Diff check, the system identified mismatched records betw
 
 **They use Data Diff to check:**
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(50.5889% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/StVoSWYUzYLtzk1FZRuH?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Mon Nov 03 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 - Patient Name
 - Appointment Date
 - Doctor Assigned
@@ -213,6 +215,17 @@ The **Insurance Plan** code changed during transfer. Without Data Diff, the clin
 
 !!! info
     Data Diff caught the mismatch and the billing team corrected it before submitting the claim — avoiding claim rejection, payment delays, and extra work.
+
+### 🧩 Anomalies Detected – Output Table
+
+The Data Diff check found a mismatch between the **scheduling_system** and **billing_system** datasets for one record.  
+The issue was detected in the **insurance_plan** field for the patient **Robert Martinez**.
+
+| **Row Status** | **Patient**        | **Field**         | **Left (Scheduling System)** | **Right (Billing System)** |
+|----------------|-------------------|-------------------|------------------------------|-----------------------------|
+| Changed        | Robert Martinez   | insurance_plan    | BlueCross Plan A             | <span style="color:red">BlueCross Plan B</span>            |
+
+![deactivate-user](../assets/checks/data-diff/anomaly-detail.png)
 
 ## Key Takeaways
 
