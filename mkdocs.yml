@@ -177,9 +177,9 @@ nav:
       - Overview: observability/observability.md
       - Observability Categories:
         - Measures: observability/measures.md
+        - Metric: observability/metric-check.md
         - Volumetric: observability/volumetric.md
-        - Freshness: observability/freshness.md
-        - Metric: observability/metric-check.md  
+        - Freshness: observability/freshness.md  
       - Manage Observability:
         - Overview: observability/manage-observability.md
         - Edit Check: observability/edit-check.md

@@ -23,3 +23,6 @@ This measures the timeliness of data by monitoring when new data was last added 
 |    15. |     **Last Asserted** | Shows the latest date when the data was validated or checked. |
 |     16. |     **Edit Maximum Age** | Edit **Maximum Age** lets users set custom limits for data freshness, allowing control over when alerts are triggered based on the age of the data. |
 |     17. |   **Graph Visualization** |  Graph illustrates consistent data patterns over time, with sudden anomalies marked by spikes in red. It reflects changes in data freshness and highlights when the data was last updated. |
+
+!!! note
+    For more information please refer to the [**Freshness Check**](../checks/freshness-check.md) documentation..
