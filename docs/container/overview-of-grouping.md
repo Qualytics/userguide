@@ -1,6 +1,6 @@
 # Grouping Overview
 
-The grouping is a fundamental aspect of data analysis, allowing users to organize data into meaningful categories for in-depth examination. With the ability to set grouping on Containers, users can define how data within a container should be grouped, facilitating more focused and efficient analysis.
+Grouping is a fundamental aspect of data analysis, allowing users to organize data into meaningful categories for in-depth examination. With the ability to set grouping on Containers, users can define how data within a container should be grouped, facilitating more focused and efficient analysis.
 
 Let’s get started 🚀
 

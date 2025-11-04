@@ -1,6 +1,6 @@
 # Identifiers
 
-An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers can be declared for a table:
+An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers that can be declared for a table:
 
 * **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 

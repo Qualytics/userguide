@@ -8,13 +8,11 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the Explore button on the left side panel of the interface.
 
-![explore](../assets/explore/overview-of-explore/explore-light.png#only-light)
-![explore](../assets/explore/overview-of-explore/explore-dark.png#only-dark)
+![explore](../assets/explore/overview-of-explore/explore-light.png)
 
 **Step 2:** After click on the Explore button, you will see the following tabs: [**Insights**](../explore/insights.md), [**Activity**](../explore/activity.md), [**Profiles**](../explore/profiles.md), [**Observability**](../explore/observability.md), [**Checks**](../explore/checks.md), and [**Anomalies**](../explore/anomalies.md).
 
-![explore-tab](../assets/explore/overview-of-explore/explore-tab-light.png#only-light)
-![explore-tab](../assets/explore/overview-of-explore/explore-tab-dark.png#only-dark)
+![explore-tab](../assets/explore/overview-of-explore/explore-tab-light.png)
 
 # Insights
 
@@ -30,7 +28,7 @@ For more details on Activity, please refer to the [**Activity**](../explore/acti
 
 # Profiles
 
-Profiles tab helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quickly, informed decisions.
+Profiles tab helps you explore and manage your containers and fields. With features like filtering, sorting, tagging, and detailed profiling, it provides a clear understanding of data quality and structure. This simplifies navigation and enhances data management for quick, informed decisions.
 
 For more details on Profiles, please refer to the [**Profiles**](../explore/profiles.md) documentation.
 

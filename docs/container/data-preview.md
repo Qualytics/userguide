@@ -10,7 +10,7 @@ Let’s get started 🚀
 
 ![select](../assets/container/data-preview/select-light.png)
 
-**Step 2:** Select Tables (if JDBC datastore is connected) or File Patterns (if DFS datastore is connected) from the Navigation tab on the top.
+**Step 2:** Select Tables (if a JDBC datastore is connected) or File Patterns (if a DFS datastore is connected) from the Navigation tab at the top.
 
 ![table](../assets/container/data-preview/table-light.png)
 
@@ -32,33 +32,33 @@ You will see a tabular view of the data, displaying the field names (columns) an
 
 ## UI Caching
 
-Upon initial access to the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of data store being used (like DFS or JDBC) and if the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
+Upon initial access to the Data Preview section, the data may not be stored (cached) yet, which can cause longer loading times. How long it takes to load depends on the type of datastore being used (like DFS or JDBC) and whether the data warehouse is serverless. However, the next time you access the same data, it will load faster because it will be cached, meaning the data is stored temporarily for quicker access.
 
 ## Filter Clause and Refresh
 
-**Data Preview** tab includes a filter functionality that enables users to focus on a specific field by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and a **Refresh** button to update the data view with the latest data.
+The **Data Preview** tab includes filter functionality that enables users to focus on specific fields by applying filter clauses. This refines the displayed rows based on specific criteria, enhancing data analysis and providing more targeted insights and includes a **Refresh** button to update the data view with the latest data.
 
 ### Filter Clause
 
-Use the Filter Clause to narrow down the displayed rows by applying specific filter clauses, allowing for focused and precise data analysis.
+Use the Filter Clause to narrow down the displayed rows by applying specific criteria, allowing for focused and precise data analysis.
 
 ![filter](../assets/container/data-preview/filter-light.png)
 
 ### Refresh
 
-Click **Refresh** button to update the data view with the latest information, ensuring accuracy and relevance.
+Click the **Refresh** button to update the data view with the latest information, ensuring accuracy and relevance.
 
 ![refresh](../assets/container/data-preview/refresh-light.png)
 
 ## Select Specific Fields
 
-Select specific fields to display, allowing you to focus on the most relevant data for analysis. To focus on relevant data for analysis, click on the **Select Fields to Show** dropdown. Choose specific fields you want to review by checking or unchecking options.
+Select specific fields to display, allowing you to focus on the most relevant data for analysis. Click on the **Select Fields to Show** dropdown and choose specific fields you want to review by checking or unchecking options.
 
 ![field](../assets/container/data-preview/field-light.png)
 
 ## Download Records
 
-**Download Records** feature in Qualytics allows users to easily export all source records from the selected enrichment dataset. This functionality is essential for performing deeper analysis outside the platform or for sharing data with external tools and teams.
+The **Download Records** feature in Qualytics allows users to easily export all source records from the selected enrichment dataset. This functionality is essential for performing deeper analysis outside the platform or for sharing data with external tools and teams.
 
 ![download](../assets/container/data-preview/download-light.png)
 

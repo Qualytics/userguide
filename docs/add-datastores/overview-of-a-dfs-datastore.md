@@ -20,6 +20,27 @@ Users provide connection details for DFS Datastores, allowing Qualytics to estab
 
 The Catalog operation involves walking the directory tree, reading files with supported filename extensions, and creating containers based on file metadata.
 
+## Supported File Formats
+
+Qualytics supports the following file formats in the DFS Datastore.
+
+| No. | File Format | Extension Example |
+|------|--------------|-------------------|
+| 1 | Avro | `.avro` |
+| 2 | CSV | `.csv`, `.csv.gz` |
+| 3 | TSV | `.tsv`, `.tsv.gz` |
+| 4 | TXT | `.txt`, `.txt.gz` |
+| 5 | PSV | `.psv`, `.psv.gz` |
+| 6 | SKV | `.skv`, `.skv.gz` |
+| 7 | JSON | `.json`, `.json.gz` |
+| 8 | ORC | `.orc` |
+| 9 | Delta | `.delta` |
+| 10 | Iceberg | `.iceberg` |
+| 11 | Parquet | `.parquet` |
+| 12 | XLS | `.xls` |
+| 13 | XLSX | `.xlsx` |
+| 14 | XLSM | `.xlsm` |
+
 ## Data Quality and Profiling
 
 DFS Datastores support the initiation of Profile Operations, allowing users to understand the structure and characteristics of the data stored in the distributed file system.
