@@ -25,6 +25,12 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
 
 You can filter your checks based on values like **Check Type**, **Asserted State**, **Rule**, **Tags**, **Table**, **Field**, and **Template**.
 
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
+![filter](../assets/datastore-checks/filter-and-sort/fuzzy-checks.png)
+
 ![filter](../assets/datastore-checks/filter-and-sort/filter-light.png)
 
 |No     |     Filter  |   Filter Value  |  Description|

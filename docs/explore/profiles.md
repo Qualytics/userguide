@@ -102,6 +102,12 @@ You can filter your containers based on values like Type (Table, View, File, Com
 
 ![filter](../assets/explore/profiles/filter-light.png)
 
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
+![filter](../assets/explore/profiles/fuzzy-profile.png)
+
 ### Mark as Favorite
 
 Marking a container as a favorite allows you to quickly access and prioritize the containers that are most important to your work, ensuring faster navigation and improved efficiency.

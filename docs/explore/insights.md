@@ -27,6 +27,12 @@ Filtering Controls allow you to refine the data displayed on the **Insights** pa
 | 3. | Report Date  | Set the report date to view data from a particular day. |
 | 4. | Timeframe | Choose a timeframe to view data for a specific  (week, month, quarter, and year) |
 
+{% include-markdown "components/general-props/typos.md" 
+    start='<!-- FUZZY-SEARCH --start -->' 
+    end='<!-- FUZZY-SEARCH --end -->' 
+%}
+![filters](../assets/explore/insights/fuzzy-insights.png)
+
 ## **Understanding Timeframes and Timeslices**
 
 When analyzing data on the Insights, two key concepts help you uncover trends: **timeframes** and **timeslices**. These work together to give you both a broad view and a detailed breakdown of your data.
