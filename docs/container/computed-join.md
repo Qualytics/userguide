@@ -1,6 +1,7 @@
 # Computed Join
 
 A Computed Join Container allows you to combine data from two containers, which can be from the same source datastore or different source datastores (e.g., a database table vs. a file system container). You can choose the join type (Inner, Left, Right, or Full Outer) and apply transformations, filters, and custom queries to the joined result.
+
 This feature is useful when you want to:
 
 * Merge information from multiple source datastores into a single dataset.
@@ -84,7 +85,7 @@ We want to join:
 
 ### Endpoint
 
-**Post:** `/api/containers` 
+**POST:**`/api/containers` 
 
 **Expected response:** `200 OK`
 
@@ -110,5 +111,5 @@ We want to join:
 
 * Always set prefixes to avoid column name collisions.
 * Use Select Expression to choose only the columns you need.
-* Apply Filter Clause for better performance by reducing unnecessary data.
+* Apply a Filter Clause for better performance by reducing unnecessary data.
 * Test the join type with sample data to verify expected behavior.

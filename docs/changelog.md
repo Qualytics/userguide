@@ -2,6 +2,114 @@
 
 ## Release Notes
 
+### 2025.10.23 { id=2025.10.23 }
+
+#### Feature Enhancements
+
+- Expanded Command Palette with quick access to creation actions across datastores, flows, templates, and settings.
+
+- Enhanced operation tracking by adding end time display in datastore activity and navigation links for container profiles and scans.
+    - Operation duration tooltips now show completion time for finished operations.
+    - Profile and scan tooltips now include clickable links in tooltips that navigate to the corresponding operation in the activity view.
+
+- Added abort option for flow executions.
+    - New abort action available in flow execution list and details pages.
+
+#### General Fixes and Improvements
+
+- Fixed volumetric chart threshold bar calculations to correctly use the configured window size in Absolute and Percentage Change comparisons.
+
+- Corrected missing runtime display for fast export operations.
+
+- Improved Quality Score calculation reliability and error handling.
+
+- Fixed table count display showing double the actual number of tables in Snowflake and Oracle datastores when members belong to multiple teams.
+
+- Added validation to prevent computed fields from being used as partition or incremental fields in container configurations.
+
+- Corrected user list filtering and sorting errors when combining team filters with team-based sorting.
+
+- Resolved container profile creation errors caused by concurrent operations processing inferred quality checks.
+
+- Corrected materialize operation failures for glob-pattern containers by sanitizing invalid characters in output table names.
+
+- Resolved Quality Score calculation failures when container rowcount
+
+- General Fixes and Improvements.
+
+### 2025.10.15 { id=2025.10.15 }
+
+#### Feature Enhancements
+
+- Introduced fuzzy search to form and filter inputs.
+    - Search results now tolerate typos and partial matches for more natural filtering.
+
+- Improved Expected Values and Required Values check configuration with visual warnings for spacing issues.
+    - Values with trailing or leading spaces now display in warning-colored chips.
+    - A tooltip will show when a value containing extra spaces.
+
+- Added informational message to Flow action datastores selection explaining filter criteria.
+
+- Improved DFS datastore overview to display file format type.
+
+#### General Fixes and Improvements
+
+- Fixed data write failures in BigQuery enrichment datastores caused by message size limits exceeding API thresholds.
+
+- Optimized operation triggering endpoint performance, including scheduled runs.
+
+- Improved Quality Score calculation accuracy according to Quality Score Dimensions.
+
+- Fixed breadcrumb navigation not updating correctly when cloning checks and changing field or container context.
+
+- Improved background task processing for enhanced system reliability and performance with optimized task execution.
+
+- General Fixes and Improvements.
+
+### 2025.10.3 { id=2025.10.3 }
+
+#### Feature Enhancements
+
+- Optimized computed tables, files, and joins creation process.
+    - Now the creation is much faster with optimized validation and asynchronous profiling.
+    - Added "Validate" button to check only syntax and semantics, eliminating wait times for full data profiling.
+
+- Enhanced Quality Score calculation with improved clarity and transparency.
+    - Renamed "Quality Score Factors" to "Quality Score Dimensions" throughout the application for better conceptual understanding.
+    - Quality scores now better reflect data fitness for intended use cases rather than simple error counts.
+
+- Introduced "Has Logs" filter to display operations that completed with logs.
+
+- Added sort by "Last Triggered" option to the Flows list page for better workflow management.
+
+- Improved page metadata for better link sharing across Flow, Check, Anomaly, Library, and Enrichment pages.
+
+#### General Fixes and Improvements
+
+- Fixed validation error when clearing filter clause fields in computed table and join forms.
+
+- Corrected Ctrl+C copy functionality that was blocked by command palette shortcuts.
+
+- Resolved delete button visibility for archived anomalies in both light and dark themes.
+
+- Fixed inconsistent text styling for "No inference" label.
+
+- Corrected catalog operation incorrectly identifying Iceberg metadata files as data files.
+
+- Resolved bulk selection checkboxes disappearing after multiple select/deselect cycles.
+
+- Fixed error when updating computed tables with excluded fields.
+
+- Corrected icon alignment in collapsed datastore tree view sidebar.
+
+- Resolved missing background color for "Not Asserted" status in Insights checks section.
+
+- Fixed misleading error messages when attempting to edit comments on archived anomalies.
+
+- Corrected a regression in computed joins that prevented using columns with non-normalized names in join conditions.
+
+- General Fixes and Improvements.
+
 ### 2025.9.17 { id=2025.9.17 }
 
 #### Feature Enhancements
