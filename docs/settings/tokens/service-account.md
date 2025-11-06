@@ -289,11 +289,9 @@ Deleting a token permanently removes it from the system. This action cannot be u
 
 **Step 2**: Click the **vertical ellipsis (⋮)** next to the revoked token, then select **Delete** from the dropdown menu.
 
-![delete-token](../../assets/security/service-accounts/delete-token-light.png)
-
 A confirmation modal window will appear.
 
-![delete-confirmation](../../assets/security/service-accounts/delete-confirmation-light.png)
+![delete-token](../../assets/security/service-accounts/delete-token-light.png)
 
 **Step 3**: Click on the **Delete** button to permanently delete the token.
 
