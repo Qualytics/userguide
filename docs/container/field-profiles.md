@@ -14,7 +14,7 @@ After profiling a container, individual field profiles offer granular insights:
 
 **5. Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
-![totals](../assets/container/containers/totalss-light.png)
+![totals](../assets/container/container-attributes/totals-light.png)
 
 ## Profile
 
@@ -35,13 +35,13 @@ This provides detailed insights into the characteristics of the field, including
 | 11 | Q3 | The third quartile; the central point between the median and the maximum. |
 | 12 | Sum | Total sum of all observed numeric values. |
 
-![profile](../assets/container/containers/profile-light.png)
+![profile](../assets/container/field-profile/profile-light.png)
 
 ### Last Profile
 
 The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
-![last-profiled](../assets/container/containers/last-profiled-light.png)
+![last-profiled](../assets/container/field-profile/last-profiled-light.png)
 
 This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
 
@@ -51,14 +51,14 @@ You can compare the current field profile with earlier versions to spot changes 
 
 By clicking on the dropdown under **Compare With**, you can select an earlier profile run (for example, 1 day ago or 5 days ago).
 
-![compare-light](../assets/container/containers/compare-light.png)
+![compare-light](../assets/container/field-profile/compare-light.png)
 
 Once selected, the system highlights differences between profiles, marking metrics as **Changed** or **Unchanged**. It compares data quality **(Sampling, Completeness)** and statistical measures **(mean, median, standard deviation, skewness, kurtosis, min, max, distinct values, etc.)**, making it easy to track shifts in data quality and distribution.
 
-![change-light](../assets/container/containers/change-light.png)
+![change-light](../assets/container/field-profile/change-light.png)
 
 ### View Metric Chart
 
 You can access detailed metric charts by clicking the **View Metric Chart** button. This will display variations across the last 10 profiles. By hovering over points on the chart, you can see additional details such as profile dates, measured values, and sampling percentages for deeper analysis.
 
-![metric-chart-light](../assets/container/containers/metric-chart-light.png)
+![metric-chart-light](../assets/container/field-profile/metric-chart-light.png)

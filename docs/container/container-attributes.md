@@ -19,7 +19,7 @@
 
 7. **Active Anomalies**: Displays the total number of anomalies found during the data profiling process. Anomalies can indicate inconsistencies, outliers, or potential data quality issues that need resolution.  
 
-![totals](../assets/container/containers/totals-light.png)
+![totals](../assets/container/container-attributes/totals-light.png)
 
 ### Observability
 
@@ -27,10 +27,10 @@
 
 Volumetric measurement allows users to track the size of data stored within the table over time. This helps in monitoring how the data grows or changes, making it easier to detect sudden spikes that may impact system performance. Users can visualize data volume trends and manage the table's efficiency. This helps in optimizing storage, adjusting resource allocation, and improving query performance based on the size and growth of the computed table.
 
-![volumetric](../assets/container/containers/select-datastore-light.png)
+![volumetric](../assets/container/container-attributes/select-datastore-light.png)
 
 **2. Anomalies Measurement**
 
 The **Anomalies** section helps users track any unusual data patterns or issues within the computed tables. It shows a visual representation of when anomalies occurred over a specific time period, making it easy to spot unusual activity. This allows users to quickly identify when something might have gone wrong and take action to fix it, ensuring the data stays accurate and reliable.
 
-![anomalies](../assets/container/containers/anomalies-light.png)
+![anomalies](../assets/container/container-attributes/anomalies-light.png)

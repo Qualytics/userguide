@@ -31,11 +31,11 @@ There are two main types of containers in Qualytics:
 Users can perform various operations on containers to manage datasets effectively. The actions are divided into three main sections: **Settings**, **Add**, and **Run**. Each section contains specific options to perform different tasks.
 
 !!! note
-    For more information please refer to the [actions on container documentation](../container/action-on-container.md)
+    For more information please refer to the [actions on container documentation](../container/actions-on-container.md).
 
 ## Field Profiles
 
 After profiling a container, individual field profiles offer granular insights:
 
 !!! note
-    For more information please refer to the [field profiles documentation](../container/field-profiles.md)
+    For more information please refer to the [field profiles documentation](../container/field-profiles.md).
