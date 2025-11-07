@@ -1,8 +1,34 @@
 # Tokens
 
-A token is a secure way to access the Qualytics API instead of using a password. Each user gets a unique Personal API Token (PAT) for authentication. These tokens are created only once, so you need to copy and store them safely because you'll use them to log in and interact with the platform in the future.
+A token is a secure way to access the Qualytics API instead of using a password. Qualytics provides two types of tokens to meet different authentication needs:
 
-Let’s get Started 🚀
+## Token Types
+
+### Personal Access Tokens (PATs)
+
+Personal Access Tokens are designed for individual users to authenticate and interact with the Qualytics API. These tokens are:
+
+- **User-specific**: Each user creates and manages their own tokens
+- **Self-service**: Can be generated through the Qualytics UI
+- **Ideal for**: Personal development, testing, and ad-hoc API exploration
+
+!!! note
+    Tokens are created only once, so you need to copy and store them safely because they cannot be retrieved again.
+
+### Service Tokens
+
+Service Tokens are designed for automated systems and integrations. These tokens are:
+
+- **Administrator-managed**: Only administrators can create and manage service tokens
+- **Organization-level**: Created for service accounts rather than individual users
+- **Ideal for**: Data pipeline automation, Qualytics API/CLI access, data catalog integrations, and shared automation
+
+!!! tip
+    For detailed information about creating and managing Service Accounts and Service Tokens, see the [**Service Accounts**](service-account.md) documentation.
+
+---
+
+Let's get Started 🚀
 
 ## Navigation to Tokens
 
