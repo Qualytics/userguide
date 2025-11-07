@@ -2,6 +2,36 @@
 
 ## Release Notes
 
+### 2025.11.6 { id=2025.11.6 }
+
+#### Feature Enhancements
+
+- Introduced Service Users and Enhanced Token Management
+    - Added dedicated accounts for API integrations, separating service credentials from personal user accounts.  
+    - Service Users include automatic token generation, making it easier to set up integrations and manage automated workflows.  
+    - The Tokens page has been redesigned with a new tabbed layout that separates `Personal Tokens` from `Service Tokens`, with quick navigation to user details and improved search capabilities.  
+    - Token generation has been improved with download-as-file support, clearer copy feedback, and the ability to generate tokens directly from the user settings dropdown.
+
+- Added historical settings view for flow executions.
+    - Flow execution actions now display the configuration used during their execution.
+    - Each action's settings are preserved, enabling accurate historical review and troubleshooting of past executions.
+    - Actions in the flow execution view are now clickable, allowing users to inspect their historical configuration details.
+
+- Introduced `Discarded` status for anomalies  
+    - New archive option allows marking anomalies as no longer relevant without implying resolution or error.  
+    - Added ability to reactivate acknowledged anomalies, allowing them to be moved back to the active state.
+
+- Improved computed table creation for SQL Server, Oracle, and Redshift.
+    - Autocomplete suggestions now display table names with schema prefixes for these JDBC datastores.
+
+#### General Fixes and Improvements
+
+- Corrected issue where operation status remained unchanged after completion in container activity displays.
+
+- Resolved webhook integration issues for Microsoft Teams and Slack that prevented interactive features from working properly.
+
+- General Fixes and Improvements.
+
 ### 2025.10.23 { id=2025.10.23 }
 
 #### Feature Enhancements
