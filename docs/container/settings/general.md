@@ -22,13 +22,13 @@ Let’s get started 🚀
 
 ![settings](../../assets/container/identifiers/general/settings-light.png)
 
-A modal window will appear for **“Table Settings”**, where you can manage general and excluding for the selected table.
+A modal window will appear for **Table Settings**, where you can manage general and excluding for the selected table.
 
 ![window](../../assets/container/identifiers/general/window-light.png)
 
 ## Excluding Fields
 
-This configuration allows you to selectively exclude specific fields from containers. These excluded fields will be omitted from check creation during profiling operations while also being hidden in data previews, without requiring a profile run.
+This configuration allows you to selectively exclude specific fields from containers. These excluded fields will be omitted from check creation during profiling operations and will also be hidden in data previews immediately, without requiring a profile run.
 
 This can be helpful when dealing with sensitive data, irrelevant information, or large datasets where you want to focus on specific fields.
 
@@ -90,7 +90,7 @@ In some cases, you may have multiple files that share the same schema but don't 
 
 ### Explore Deeper Knowledge
 
-If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](https://userguide.qualytics.io/dfs-globbing/how-dfs-filename-globbing-works/).
+If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](../../dfs-globbing/how-dfs-filename-globbing-works.md).
 
 ### Important Considerations
 

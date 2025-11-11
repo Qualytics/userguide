@@ -10,7 +10,7 @@ To keep materialized data organized and compatible across different enrichment d
 
 Used when the container name is safe to use as-is.
 
-`<enrichment_prefix>_mat_<container_name>`.
+`<enrichment_prefix>_mat_<container_name>`
 
 This naming format is applied when:
 
@@ -21,13 +21,13 @@ This naming format is applied when:
 
 If the enrichment prefix is `sales` and the container name is `orders_2024`:
 
-`sales_mat_orders_2024`.
+`sales_mat_orders_2024`
 
 ### Fallback Naming Convention
 
 If the container name contains characters that may cause issues in downstream systems, the system switches to a safer naming structure by using the **container ID** instead.
 
-`<enrichment_prefix>_materialize_<container_id>`.
+`<enrichment_prefix>_materialize_<container_id>`
 
 This fallback is used when:
 
@@ -39,7 +39,7 @@ This fallback is used when:
 
 If the enrichment prefix is `sales` and the container ID is `1023456`:
 
-`sales_materialize_1023456`.
+`sales_materialize_1023456`
 
 !!! note
     The fallback naming ensures successful loading into the enrichment datastore by preventing invalid or non-compliant table names.
@@ -58,15 +58,15 @@ For demonstration purposes, we have selected the **“COVID-19 Data”** Snowfla
 
 ![material](../../assets/container/materialize-operation/material-light.png)
 
-**Step 3:**  After clicking **Materialize** a modal window appears, allowing you to configure the data export settings for the Materialize Operation.
+**Step 3:** After clicking **Materialize**, a modal window appears, allowing you to configure the data export settings for the Materialize Operation.
 
 ![window](../../assets/container/materialize-operation/window-light.png)
 
-**Step 4:**  Select tables to materialize all tables, specific tables, or tables by tag, then click **Next**.
+**Step 4:** Select tables to materialize all tables, specific tables, or tables by tag, then click **Next**.
 
 ![next](../../assets/container/materialize-operation/next-light.png)
 
-**Step 5:** Configure Record Limit: set the maximum number of records to be materialized per table.
+**Step 5:** Configure Record Limit: Set the maximum number of records to be materialized per table.
 
 ![record](../../assets/container/materialize-operation/record-light.png)
 

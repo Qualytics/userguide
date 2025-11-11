@@ -4,7 +4,7 @@ Grouping is a fundamental aspect of data analysis, allowing users to organize da
 
 Let’s get started 🚀
 
-## Managing an Grouping
+## Managing a Grouping
 
 **Step 1:** Log in to your Qualytics account and select the source datastore (**JDBC** or **DFS**) from the left menu that you want to manage.
 
@@ -22,7 +22,7 @@ Let’s get started 🚀
 
 ![settings](../../assets/container/identifiers/grouping/settings-light.png)
 
-A modal window will appear for **“Table Settings”**, where you can manage grouping for the selected table.Use the **Grouping** section to organize fields, with a warning to avoid large row groupings to maintain performance. Add grouping logic via **Group Criteria**.
+A modal window will appear for **Table Settings**, where you can manage grouping for the selected table. Use the **Grouping** section to organize fields, with a warning to avoid large row groupings to maintain performance. Add grouping logic via **Group Criteria**.
 
 ![window](../../assets/container/identifiers/grouping/window-light.png)
 
@@ -34,15 +34,15 @@ The `grouping` parameter accepts a list of lists of field names. Each inner list
 
 Consider the following examples of `grouping` configurations:
 
-1. `["store_id"]`: Groups data within the container by the `store_id` field.
-2. `["store_id", "month"]`: Groups data first by `store_id`, then by `month`.
-3. `["store_id", "state"]`: Groups data first by `store_id`, then by `state`.
+**1** `["store_id"]`: Groups data within the container by the `store_id` field.
+**2** `["store_id", "month"]`: Groups data first by `store_id`, then by `month`.
+**3** `["store_id", "state"]`: Groups data first by `store_id`, then by `state`.
 
 By specifying different combinations of fields in the `grouping` parameter, users can tailor the grouping behavior to suit their analytical needs.
 
 ## Impact on Data Profiles
 
-The grouping has implications for various aspects of data profiling and analysis within Qualytics.
+The grouping configuration has implications for various aspects or Grouping has implications for various aspects.
 
 ### Field Profiles
 

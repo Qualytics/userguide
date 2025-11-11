@@ -16,4 +16,4 @@ Under **Run**, choose the type of operation you want to perform:
 
 To understand how a profile operation is performed, you can follow the remaining steps from the documentation [Profile Operation.](../../source-datastore/profile.md#configuration).
 
-To understand how a scan operation is performed, you can follow the remaining steps from the documentation [Scan Operation.](../../source-datastore/scan.md#configuration)
+To understand how a scan operation is performed, you can follow the remaining steps from the documentation [Scan Operation.](../../source-datastore/scan.md#configuration).

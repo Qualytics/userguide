@@ -1,12 +1,12 @@
 # Settings For DFS Files Pattern
 
-Settings allow you to edit how data is processed and analyzed for a specific file patterns in your connected source datastore. This includes selecting fields for incremental and partitioning strategies, grouping data, excluding certain fields from scans, and adjusting general behaviors.
+Settings allow you to edit how data is processed and analyzed for a specific file pattern in your connected source datastore. This includes selecting fields for incremental and partitioning strategies, grouping data, excluding certain fields from scans, and adjusting general behaviors.
 
 **Step 1:** Click on the vertical ellipse next to the file pattern of your choice and select **Settings** from the dropdown list.
 
 ![vertical-setting](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/setting-light-44.png)
 
-A modal window will appear for **“File Pattern Settings”**.
+A modal window will appear for **File Pattern Settings**.
 
 ![table-setting](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/table-settings-light-55.png)
 
@@ -40,7 +40,7 @@ You can control how file patterns behave by checking or unchecking options to ma
 
 ![general-field](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/general-light-111.png)
 
-* **Inferring Data Types:** When enabled, the system figures out the correct data type for each field and applies it automatically. This keeps data consistent and reduces errors, saving you time on manual fixes.
+* **Inferring Data Types:** When enabled, the system automatically determines the correct data type for each field and applies it. This keeps data consistent and reduces errors, saving you time on manual fixes.
 
 ![general-field](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/general-light-112.png)
 
@@ -48,7 +48,7 @@ You can control how file patterns behave by checking or unchecking options to ma
 
 ![general-field](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/general-light-113.png)
 
-* **Treating Empty Values as Nulls:** The Treat empty values as null setting controls how empty fields in files like Excel and CSV are handled. If enabled (true), empty fields are treated as NULL (missing data). If disabled (false), they are stored as empty strings (""), meaning the field exists but is blank. This affects reporting, calculations, and data processing, as NULL values are ignored while empty strings may still be counted.
+* **Treating Empty Values as Nulls:**  The "Treat empty values as nulls" setting controls how empty fields in files like Excel and CSV are handled. If enabled (true), empty fields are treated as NULL (missing data). If disabled (false), they are stored as empty strings (""), meaning the field exists but is blank. This affects reporting, calculations, and data processing, as NULL values are ignored while empty strings may still be counted.
 
 ![general-field](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/general-light-114.png)
 

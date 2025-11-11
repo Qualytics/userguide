@@ -22,9 +22,9 @@ A modal window will appear, allowing you to enter the details for your computed 
 
 | REF. | FIELDS | ACTION |
 |------|--------|--------|
-| 1. | Field Name (Required) | Add a unique name for your computed field. |
-| 2. | Transformation Type (Required) | The type of transformation you want to apply from the available options. |
-| 3. | Additional Metadata (Optional) | Enhance the computed field definition by setting custom metadata. Click the plus icon **(+)** to open the metadata input form and add key-value pairs. |
+| 1 | Field Name (Required) | Add a unique name for your computed field. |
+| 2 | Transformation Type (Required) | The type of transformation you want to apply from the available options. |
+| 3 | Additional Metadata (Optional) | Enhance the computed field definition by setting custom metadata. Click the plus icon **(+)** to open the metadata input form and add key-value pairs. |
 
 ![fields](../../assets/container/computed-fields/add-computed-fields/fields-light-1.png)
 
@@ -33,9 +33,9 @@ A modal window will appear, allowing you to enter the details for your computed 
 
 | Transformation Types | Purpose | Reference |
 |------|--------|---------|
-| Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | [See here](../computed-fields/transformation-types.md#cleaned-entity-name) |
-| Convert Formatted Numeric | Removes formatting (such as parentheses for denoting negatives or commas as delimiters) from values that represent numeric data, converting them into a numerically typed field. | [See here](../computed-fields/transformation-types.md#convert-formatted-numeric) |
-| Custom Expression | Allows you to create a new field by applying any valid Spark SQL expression to one or more existing fields. | [See here](../computed-fields/transformation-types.md#custom-expression) |
+| Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | For more information, please refer to the guide [cleaned entity name section.](../computed-fields/transformation-types.md#cleaned-entity-name) |
+| Convert Formatted Numeric | Removes formatting (such as parentheses for denoting negatives or commas as delimiters) from values that represent numeric data, converting them into a numerically typed field. | For more information, please refer to the guide [convert formatted numeric section.](../computed-fields/transformation-types.md#convert-formatted-numeric) |
+| Custom Expression | Allows you to create a new field by applying any valid Spark SQL expression to one or more existing fields. | For more information, please refer to the guide [custom expression section.](../computed-fields/transformation-types.md#custom-expression) |
 
 ![transformation-type](../../assets/container/computed-fields/add-computed-fields/transformation-type-light-5.png)
 

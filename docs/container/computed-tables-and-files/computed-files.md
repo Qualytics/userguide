@@ -20,11 +20,11 @@ Use Computed Files when you want to perform the following operations on your sel
 
 | REF. | FIELDS  | ACTION  |
 |------|----------------------------|---------------------------------------|
-| 1.   | Name (Required) | Enter a name for your computed file. The name should be descriptive and meaningful to help you easily identify the file later (e.g., add a meaningful name like Customer_Order_Statistics). |
-| 2.   | Source File Pattern (Required) | Select a source file pattern from the dropdown menu to match files that have a similar naming convention. |
-| 3.   | Select Expression (Required)  | Select the expression to define the data you want to include in the computed file. |
-| 4.   | Filter Clause (Optional)   | Add a WHERE clause to filter the data that meets certain conditions. |
-| 5.   | Additional Metadata (Optional)   | Enhance the computed file definition by setting custom metadata. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
+| 1   | Name (Required) | Enter a name for your computed file. The name should be descriptive and meaningful to help you easily identify the file later (e.g., add a meaningful name like Customer_Order_Statistics). |
+| 2   | Source File Pattern (Required) | Select a source file pattern from the dropdown menu to match files that have a similar naming convention. |
+| 3   | Select Expression (Required)  | Select the expression to define the data you want to include in the computed file. |
+| 4   | Filter Clause (Optional)   | Add a WHERE clause to filter the data that meets certain conditions. |
+| 5   | Additional Metadata (Optional)   | Enhance the computed file definition by setting custom metadata. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
 ![add-compute-file](../../assets/container/computed-tables-and-files/computed-files/add-compute-file-light.png)
 

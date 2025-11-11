@@ -9,7 +9,7 @@
 
 ![delete-button](../../assets/container/manage-tables-and-files/delete/delete-light-25.png)
 
-**Step 2:** A confirmation modal window will appear, click on the Delete button to remove the table from the system.
+**Step 2:** A confirmation modal window will appear; click on the Delete button to remove the table from the system.
 
 ![delete-window](../../assets/container/manage-tables-and-files/delete/delete-btn-light-26.png)
 

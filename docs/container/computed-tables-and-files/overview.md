@@ -11,36 +11,36 @@ Let's get started 🚀
 Use Computed Tables when you want to perform the following operations on your selected source datastores:
 
 !!! note
-    For more information please refer to the [computed tables documentation](../computed-tables-and-files/computed-tables.md).
+    For more information, please refer to the [computed tables documentation](../computed-tables-and-files/computed-tables.md).
 
 ## Add Computed Tables
 
 **Step 1:** Log in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add a computed table.
 
 !!! note
-    For more information please refer to the [add computed tables section](../computed-tables-and-files/computed-tables.md#add-computed-tables).
+    For more information, please refer to the [add computed tables section](../computed-tables-and-files/computed-tables.md#add-computed-tables).
 
 ## Computed Files
 
 Use Computed Files when you want to perform the following operations on your selected source datastore:
 
 !!! note
-    For more information please refer to the [computed files documentation](../computed-tables-and-files/computed-files.md).
+    For more information, please refer to the [computed files documentation](../computed-tables-and-files/computed-files.md).
 
 ## Add Computed Files
 
 **Step 1:** Log in to your Qualytics account and select a DFS-type source datastore from the side menu on which you would like to add a computed file.
 
 !!! note
-    For more information please refer to the [add computed files section](../computed-tables-and-files/computed-files.md#add-computed-files).
+    For more information, please refer to the [add computed files section](../computed-tables-and-files/computed-files.md#add-computed-files).
 
 ## Computed Table Vs. Computed File
 
 !!! note
-    For more information please refer to the [computed tables vs file documentation](../computed-tables-and-files/computed-table-vs-file.md).
+    For more information, please refer to the [computed tables vs file documentation](../computed-tables-and-files/computed-table-vs-file.md).
     
 ## View Assigned Teams
 
-By hovering over the information icon, users can view the assigned teams for enhanced collaboration and data transparency.
+By hovering over the information, icon, users can view the assigned teams for enhanced collaboration and data transparency.
 
-![team](../../assets/container/computed-tables-and-files/computed-tables/team-light.png)
+![team](../../assets/container/computed-tables-and-files/overview/team-light.png)

@@ -4,9 +4,9 @@ Qualytics metadata export feature lets you capture the changing states of your d
 
 To keep things organized, the exported files use specific naming patterns:
 
-* **Anomalies:** Saved as `_<enrichment_prefix>_anomalies_export`.  
-* **Quality Checks:** Saved as `_<enrichment_prefix>_checks_export`.  
-* **Field Profiles:** Saved as `_<enrichment_prefix>_field_profiles_export`.
+* **Anomalies:** Saved as `_<enrichment_prefix>_anomalies_export` 
+* **Quality Checks:** Saved as `_<enrichment_prefix>_checks_export`  
+* **Field Profiles:** Saved as `_<enrichment_prefix>_field_profiles_export`
 
 !!! note 
     Ensure that an enrichment datastore is already set up and properly configured to accommodate the exported data. This setup is essential for exporting anomalies, quality checks, and field profiles successfully. 
@@ -25,11 +25,11 @@ For demonstration purposes, we have selected the **“COVID-19 Data”** Snowfla
 
 ![export](../../assets/container/export-operation/export-light.png)
 
-**Step 3:** After clicking **Export**, the **Export Operation** modal window appears, allowing metadata extraction from the selected source datastore to the enrichment datastore. 
+**Step 3:** After clicking **Export**, the **Export Operation** modal window appears, allowing you to extract metadata from the selected source datastore to the enrichment datastore.
 
 ![operation](../../assets/container/export-operation/operation-light.png)
 
-**Step 4:** Select the tables you wish to export. **All**, **Specific**, or **Tag** and click **Next** to proceed.
+**Step 4:** Select the tables you wish to export: **All**, **Specific**, or **Tag** and click **Next** to proceed.
 
 ![profile](../../assets/container/export-operation/profile2-light.png)
 
@@ -69,7 +69,7 @@ After clicking **Export**, a confirmation message appears stating **"Export in m
 
 ![schedule2](../../assets/container/export-operation/schedule-light.png)
 
-After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**. Go to the Activity tab to see the progress of export operation.
+After clicking **Schedule**, a confirmation message appears stating **"Operation Scheduled"**. Go to the Activity tab to see the progress of the export operation.
 
 ![schedule2](../../assets/container/export-operation/operation-scheduled-light.png)
 

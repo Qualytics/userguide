@@ -6,11 +6,11 @@ Settings allow you to edit how data is processed and analyzed for a specific tab
 
 ![vertical-setting](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/setting-light-4.png)
 
-A modal window will appear for **“Table Settings”**.
+A modal window will appear for **Table Settings**.
 
 ![table-setting](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/table-settings-light-5.png)
 
-**Step 2:** Modify the table setting based on:
+**Step 2:** Modify the table settings based on the following options:
 
 - Identifiers
 

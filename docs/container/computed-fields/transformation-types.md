@@ -8,11 +8,11 @@ This transformation removes common business signifiers from entity names, making
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
-| 1.   | **Drop from Suffix** | Add a unique name for your computed field. |
-| 2.   | **Drop from Prefix** | Removes specified terms from the beginning of the entity name. |
-| 3.   | **Drop from Interior** | Removes specified terms from the beginning of the entity name. |
-| 4.   | **Additional Terms to Drop** (Custom) | Allows you to specify additional terms that should be dropped from the entity name. |
-| 5.   | **Terms to Ignore** (Custom) | Designate terms that should be ignored during the cleaning process. |
+| 1   | **Drop from Suffix** | Add a unique name for your computed field. |
+| 2   | **Drop from Prefix** | Removes specified terms from the beginning of the entity name. |
+| 3   | **Drop from Interior** | Removes specified terms from the beginning of the entity name. |
+| 4   | **Additional Terms to Drop** (Custom) | Allows you to specify additional terms that should be dropped from the entity name. |
+| 5   | **Terms to Ignore** (Custom) | Designate terms that should be ignored during the cleaning process. |
 
 ### Example for Cleaned Entity Name
 
@@ -45,7 +45,7 @@ Enables the creation of a field based on a custom computation using Spark SQL. T
    
    **Example**: To create a field that sums two existing fields, you could use the expression `SUM(field1, field2)`.
 
-   **Advanced Example**: You need to ensure that a log of leases has no overlapping dates for an asset but your data only captures a single lease's details like 
+   **Advanced Example**: You need to ensure that a log of leases has no overlapping dates for an asset, but your data only captures a single lease's details like: 
    
 | **LeaseID** |  **AssetID** | **Lease_Start** | **Lease_End** |
 |-------------|-------------|--------------------|------------|
@@ -54,8 +54,8 @@ Enables the creation of a field based on a custom computation using Spark SQL. T
 | 3           | 42          | 1/1/2026         |   2/1/2026    |
 | 4           | 43          | 2/2/2026         |   2/1/2027    |
 
-You can see in this example that Lease 1 has overlapping dates with Lease 3 for the same Asset. This can be difficult to detect without a full transformation of the data. However, we can accomplish our goal easily with a Computed Field.
-We'll simply add a Computed Field to our table named "Next_Lease_Start" and define it with the following custom expression so that our table will now hold the new field and render it as shown below.
+You can see in this example that **Lease 1** has overlapping dates with **Lease 3** for the same Asset. This can be difficult to detect without a full transformation of the data. However, we can accomplish our goal easily with a Computed Field.
+We'll simply add a Computed Field to our table named **"Next_Lease_Start"** and define it with the following custom expression so that our table will now hold the new field and render it as shown below.
 
 `LEAD(Lease_Start, 1) OVER (PARTITION BY AssetID ORDER BY Lease_Start)` 
 
@@ -66,7 +66,7 @@ We'll simply add a Computed Field to our table named "Next_Lease_Start" and defi
 | 3           | 42          | 1/1/2026         |   2/1/2026    |             |
 | 4           | 43          | 2/2/2026         |   2/1/2027    |             |
 
-Now you can author a Quality Check stating that Lease_End should always be less than "Next_Lease_Start" to catch any errors of this type. In fact, Qualytics will automatically infer that check for you at [Level 3 Inference](../../source-datastore/profile.md#levels-of-check-inference)!
+Now you can author a Quality Check stating that **Lease_End** should always be less than **"Next_Lease_Start"** to catch any errors of this type. In fact, Qualytics will automatically infer that check for you at [Level 3 Inference](../../source-datastore/profile.md#levels-of-check-inference)!
 
 ### More Examples for Custom Expression
 

@@ -87,6 +87,19 @@ nav:
       - Container Types: container/container-types.md
       - Container Attributes: container/container-attributes.md
       - Actions on Container: container/actions-on-container.md
+      - Manage Tables and Files:
+        - Settings For JDBC Table: container/manage-tables-and-files/setting-for-jdbc-table.md
+        - Settings For DFS Files Pattern: container/manage-tables-and-files/setting-for-dfs-files-pattern.md
+        - Identifiers: container/settings/identifiers.md
+        - Grouping: container/settings/grouping.md
+        - General: container/settings/general.md
+        - Add Checks: container/manage-tables-and-files/add-checks.md
+        - Run: container/manage-tables-and-files/run.md
+        - Observability Settings: container/manage-tables-and-files/observability-settings.md
+        - Export: container/manage-tables-and-files/export.md
+        - Materialize: container/manage-tables-and-files/materialize.md
+        - Delete: container/manage-tables-and-files/delete.md
+        - Mark Tables & Files as Favorite: container/manage-tables-and-files/mark-tables-&-files-as-favorite.md
       - Field Profiles: container/field-profiles.md
       - Computed Tables and Files:
         - Overview: container/computed-tables-and-files/overview.md
@@ -96,27 +109,13 @@ nav:
       - Computed Join: container/computed-join.md
       - Computed Fields: 
         - Overview: container/computed-fields/overview.md
-        - Add Computed Fields: container/computed-fields/add-computed-fields.md
-        - Computed Fields Details: container/computed-fields/computed-fields-details.md
         - Transformation Types: container/computed-fields/transformation-types.md
+        - Computed Fields Details: container/computed-fields/computed-fields-details.md
+        - Add Computed Fields: container/computed-fields/add-computed-fields.md
       - Data Preview: container/data-preview.md
       - Enrichment Operation:
         - Export Operation: container/enrichment-operation/export-operation.md
         - Materialize Operation: container/enrichment-operation/materialize-operation.md
-      - Settings:
-        - Identifiers: container/settings/identifiers.md
-        - Grouping: container/settings/grouping.md
-        - General: container/settings/general.md
-      - Manage Tables and Files:
-        - Settings For JDBC Table: container/manage-tables-and-files/setting-for-jdbc-table.md
-        - Settings For DFS Files Pattern: container/manage-tables-and-files/setting-for-dfs-files-pattern.md
-        - Add Checks: container/manage-tables-and-files/add-checks.md
-        - Run: container/manage-tables-and-files/run.md
-        - Observability Settings: container/manage-tables-and-files/observability-settings.md
-        - Export: container/manage-tables-and-files/export.md
-        - Materialize: container/manage-tables-and-files/materialize.md
-        - Delete: container/manage-tables-and-files/delete.md
-        - Mark Tables & Files as Favorite: container/manage-tables-and-files/mark-tables-&-files-as-favorite.md
     - Weight:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:

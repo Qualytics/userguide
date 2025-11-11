@@ -1,6 +1,6 @@
 # Identifiers
 
-An **Identifier** is a field that can be used to help load the desired data from a table in support of analysis. There are two types of identifiers that can be declared for a table:
+An **Identifier** is a field that can be used to help load the desired data from a table in support of the analysis. There are two types of identifiers that can be declared for a table:
 
 * **Incremental Field:** Track records in the table that have already been scanned in order to support Scan operations that only analyze new (not previously scanned) data.
 
@@ -24,7 +24,7 @@ An **Identifier** is a field that can be used to help load the desired data from
 
 ![settings](../../assets/container/identifiers/identifiers/setting-light.png)
 
-A modal window will appear for **“Table Settings”**, where you can manage identifiers for the selected table.
+A modal window will appear for **Table Settings**, where you can manage identifiers for the selected table.
 
 ![window](../../assets/container/identifiers/identifiers/window-light.png)
 
@@ -38,24 +38,24 @@ This allows for scan operations to focus exclusively on new records that have no
 
 ![incremental](../../assets/container/identifiers/identifiers/incremental-light.png)
 
-| No |                    Strategy Option |                 Description |
+| No. |                    Strategy Option |                 Description |
 | :---- | :---- | :---- |
-| 1 | **None** | No incremental strategy, it will run full. |
+| 1 | **None** | No incremental strategy, runs full table scans. |
 | 2 | **Last Modified** | - Available types are **Date** or **Timestamp** was last modified.<br>- Uses a "last modified column" to track changes in the data set.<br>- This column typically contains a timestamp or date value indicating when a record was last modified.<br>- The system compares the "last modified column" to a previous timestamp or date, updating only the records modified since that time. |
 | 3 | **Batch Value** | - Available types are **Integral** or **Fractional**.<br>- Uses a "batch value column" to track changes in the data set.<br>- This column typically contains an incremental value that increases as new data is added.<br>- The system compares the current "batch value" with the previous one, updating only records with a higher "batch value".<br>- Useful when data comes from a system without a modification timestamp. |
 | 4 | **Postgres Commit Timestamp Tracking** | - Utilizes commit timestamps for change tracking. |
 
 Availability based on technologies: 
 
-| Option                                  |  Availability |                                     
+| Option                                  | Availability |                                     
 |-----------------------------------------|---------------|
 | **Last Modified**                         | All           |
 | **Batch Value**                           | All           |
 | **Postgres Commit Timestamp Tracking**    | PostgreSQL    |
 
 !!! info
-    - All options are useful for incremental strategy, it depends on the availability of the data and how it is modeled. 
-    - The 3 options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
+    - All options are useful for incremental strategy; it depends on the availability of the data and how it is modeled. 
+    - The three options will allow you to track and process only the data that has changed since the last time the system was run, reducing the amount of data that needs to be read and processed, and increasing the efficiency of your system.
 
 ### Incremental Strategy with DFS (Distributed File System)
 
@@ -69,7 +69,7 @@ This automated process means that DFS users do not need to manually configure th
 
 **Sample Data**
 
-| O_ORDERKEY | O_PAYMENT_DETAILS                                                                |LAST_MODIFIED          |
+| O_ORDERKEY | O_PAYMENT_DETAILS                                                                |LAST_MODIFIED |
 |------------|----------------------------------------------------------------------------------|-------------------------
 | 1          | {"date": "2023-09-25", "amount": 250.50, "credit_card": "5105105105105100"}      | 2023-09-25 10:00:00
 | 2          | {"date": "2023-09-25", "amount": 150.75, "credit_card": "4111-1111-1111-1111"}   | 2023-09-25 10:30:00
