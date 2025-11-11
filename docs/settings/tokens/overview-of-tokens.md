@@ -52,8 +52,8 @@ A modal window will appear providing the options for generating the token.
 
 **Step 2**: Enter the following values:
 
-1. **Name**: Enter the name for the Token ( e.g., DataAccessToken). 
-2. **Type**: Select Personal from the dropdown.
+1. **Name**: Enter the name for the Token (e.g., DataAccessToken). 
+2. **Type**: Select "Personal" from the dropdown.
 3. **Expiration**: Set the expiration period for the token (e.g., 30 days).
 4. **SCIM Administration Token**: Enable this option if the token should only be used for SCIM-related operations, such as provisioning or managing user identities.
 
@@ -70,11 +70,30 @@ A modal window will appear providing the options for generating the token.
 
 ![token-generated](../../assets/tokens/token-generated-light-7.png)
 
+## Token Expiration
+
+Tokens include an expiration period that defines how long they remain valid. When a token reaches its expiration date, it automatically stops working and must be regenerated.
+
+**Available expiration options:**
+
+- 30 Days
+- 60 Days
+- 90 Days
+- 1 Year
+- Never
+
+![token-expiration](../../assets/tokens/expiration.png)
+
+Choosing a time-bound expiration helps maintain security and ensures unused tokens do not stay active indefinitely.
+
+!!! warning
+    Avoid using the **Never** expiration option, as tokens that never expire can create security risks.
+
 ## Token Usage Status
 
 Each personal API token displays a usage status to indicate whether it has been used for interaction with the Qualytics API:
 
-**Last Used**: Its show the token has been successfully used recently and is actively in use.
+**Last Used**: This shows the token has been successfully used recently and is actively in use.
 
 ![Last-Used](../../assets/tokens/last-used-light-7.png)
 
@@ -102,7 +121,7 @@ You can restore a token to reactivate its access, allowing authorized use again.
 
 ![restore](../../assets/tokens/restore-light-10.png)
 
-**Step 2**: After clicking on the “Restore” button, your secret token will be restored and a confirmation message will display saying **The token has been successfully restored**
+**Step 2**: After clicking on the **Restore** button, your secret token will be restored and a confirmation message will display saying **"The token has been successfully restored"**.
 
 ![token-restored](../../assets/tokens/token-restored-light-11.png)
 
