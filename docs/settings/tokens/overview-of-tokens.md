@@ -26,9 +26,7 @@ Service Tokens are designed for automated systems and integrations. These tokens
 !!! tip
     For detailed information about creating and managing Service Accounts and Service Tokens, see the [**Service Accounts**](service-account.md) documentation.
 
----
-
-Let's get Started 🚀
+Let's get started 🚀
 
 ## Navigation to Tokens
 
@@ -40,7 +38,7 @@ Let's get Started 🚀
 
 ![tokens](../../assets/tokens/tokens-light-2.png)
 
-## Generate Token 
+## Generate Personal Access Tokens (PATs)  
 
 Generating a token provides a secure method for authenticating and interacting with your platform, ensuring that only authorized users and applications can access your resources. Personal Access Tokens (PATs) are particularly useful for automated tools and scripts, allowing them to perform tasks without needing manual intervention. By using PATs, you can leverage our Qualytics CLI to streamline data management and operations, making your workflows more efficient and secure.
 
@@ -54,8 +52,10 @@ A modal window will appear providing the options for generating the token.
 
 **Step 2**: Enter the following values:
 
-1. **Name**: Enter the name for the Token ( e.g., DataAccessToken) 
-2. **Expiration**: Set the expiration period for the token (e.g., 30 days)
+1. **Name**: Enter the name for the Token (e.g., DataAccessToken). 
+2. **Type**: Select "Personal" from the dropdown.
+3. **Expiration**: Set the expiration period for the token (e.g., 30 days).
+4. **SCIM Administration Token**: Enable this option if the token should only be used for SCIM-related operations, such as provisioning or managing user identities.
 
 ![enter-values](../../assets/tokens/enter-values-light-5.png)
 
@@ -66,15 +66,34 @@ A modal window will appear providing the options for generating the token.
 **Step 4**: After clicking on the **Generate** button, your token is successfully generated.
 
 !!! warning 
-    Make sure to copy your secret key as you won't be able to see it again. Keep your secret keys confidential and avoid sharing them with anyone. Use a password manager or an encrypted vault to store your secret keys.
+    Make sure to download or copy this token. You won't be able to see it again. Keep your token confidential and avoid sharing them with anyone. Use a password manager or an encrypted vault to store your tokens.
 
 ![token-generated](../../assets/tokens/token-generated-light-7.png)
+
+## Token Expiration
+
+Tokens include an expiration period that defines how long they remain valid. When a token reaches its expiration date, it automatically stops working and must be regenerated.
+
+**Available expiration options:**
+
+- 30 Days
+- 60 Days
+- 90 Days
+- 1 Year
+- Never
+
+![token-expiration](../../assets/tokens/expiration.png)
+
+Choosing a time-bound expiration helps maintain security and ensures unused tokens do not stay active indefinitely.
+
+!!! warning
+    Avoid using the **Never** expiration option, as tokens that never expire can create security risks.
 
 ## Token Usage Status
 
 Each personal API token displays a usage status to indicate whether it has been used for interaction with the Qualytics API:
 
-**Last Used**: Its show the token has been successfully used recently and is actively in use.
+**Last Used**: This shows the token has been successfully used recently and is actively in use.
 
 ![Last-Used](../../assets/tokens/last-used-light-7.png)
 
@@ -90,7 +109,7 @@ You can revoke your token to prevent unauthorized access or actions, especially 
 
 ![revoke](../../assets/tokens/revoke-light-8.png)
 
-**Step 2**: After clicking the **Revoke** button, your user token will be successfully revoked. A success message will display saying **User token successfully revoked**. Following revocation, the token's status color will change from green to orange.
+**Step 2**: After clicking the **Revoke** button, your user token will be successfully revoked. A success message will display saying **The token has been successfully revoked**. Following revocation, the token's status color will change from green to orange.
 
 ![revoked-successfully](../../assets/tokens/revoked-sucessfully-light-9.png)
 
@@ -102,7 +121,7 @@ You can restore a token to reactivate its access, allowing authorized use again.
 
 ![restore](../../assets/tokens/restore-light-10.png)
 
-**Step 2**: After clicking on the “Restore” button, your secret token will be restored and a confirmation message will display saying **User token successfully restored**
+**Step 2**: After clicking on the **Restore** button, your secret token will be restored and a confirmation message will display saying **"The token has been successfully restored"**.
 
 ![token-restored](../../assets/tokens/token-restored-light-11.png)
 
