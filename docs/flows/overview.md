@@ -75,42 +75,37 @@ You will navigate to the Flows interface, where you can add and manage flows. At
 
 **Step 1**: Click on the **Add Flow** button from the top right corner.
 
-For more information, please refer to the [add flow](../flows/add-flow.md) documentation.
+For more information, please refer to the [add flow](../flows/add-flow.md){target="_blank"} documentation.
 
 ## Flow Node
 
 **Step 1:** Click on the **Flow** node.  
 
-For more information, please refer to the [flow node](../flows/flow-node.md) documentation.
+For more information, please refer to the [flow entry](../flows/flow-entry.md){target="_blank"} documentation.
 
 ## Trigger Node
 
 **Step 1:** After completing the **"Flow"** node setup, users can click on the **"Trigger"** node.
 
-For more information, please refer to the [trigger node](../flows/trigger-node.md) documentation.
+For more information, please refer to the [trigger node](../flows/trigger-node.md){target="_blank"} documentation.
 
 ## Actions Node
 
 Actions define the specific steps the system will execute after a flow is triggered. They allow users to automate tasks, send notifications, or interact with external systems.
 
-For more information, please refer to the [action node overview](../flows/overview-action.md) documentation.
+For more information, please refer to the [action node overview](../flows/overview-action.md){target="_blank"} documentation.
 
-## View Created Flow
+## View and Track Flow Execution
 
 Once a flow is added, it will be visible in the **Definitions** tab, where you can view all the created flows.
 
-For more information, please refer to the [view created flow](../flows/view-created-flows.md) documentation.
+For more information, please refer to the [view and track flow execution](../flows/view-created-flows.md){target="_blank"} documentation.
 
 ## Execution Tab 
 
 Execution tab allows users to view the execution history and current status of a flow. It provides detailed timestamps, status updates, and a comprehensive record of flow executions for efficient tracking and analysis.
 
-For more information, please refer to the [execution tab](../flows/execution-tab.md) documentation.
-
-## FAQ
-
-!!! note
-    For FAQ please refer to the [FAQ documentation](../flows/faq.md)
+For more information, please refer to the [execution tab](../flows/view-created-flows.md#accessing-the-execution-tab){target="_blank"} documentation.
 
 
 

@@ -14,9 +14,6 @@ Users can configure the application to send notifications through various channe
 
 ![notification](.././assets/flows/notification-light-44.png)
 
-!!! note
-    To configure other Action Node types, see [Operations documentation](../flows/operations.md) or [HTTP documentation](../flows/http.md).
-
 ## In App
 
 This will send an app notification to all users that use Qualytics. Users can set a custom message using variables and modify the standard text.
@@ -248,3 +245,9 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 **Step 3:** Once you have entered all the values, then click on the **Save** button.
 
 ![save](.././assets/flows/save-light-8.png)
+
+## FAQ
+
+**1>.** Can I test notifications before publishing?
+
+Yes. Each notification channel—Email, Slack, Teams, PagerDuty, and HTTP—includes a Test Notification button that allows you to send a sample message before publishing the flow.

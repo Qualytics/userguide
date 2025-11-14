@@ -1,5 +1,7 @@
 # Trigger
 
+This is where you can configure how the Flow will be activated. It can be activated automatically by configuring the settings, or you can choose to activate it manually.
+
 **Step 1:** After completing the **"Flow"** node setup, users can click on the **"Trigger"** node.
 
 ![trigger](.././assets/flows/trigger-light-9.png)
@@ -15,6 +17,13 @@ A panel will appear on the right-hand side, enabling users to define when the fl
 * Manual
 
 ![triggersetting](.././assets/flows/triggersetting-light-10.png)
+
+## Important Information About Triggers
+
+!!! note
+    Each Flow can have only **one trigger**. If you want to execute a different action or change the trigger, you’ll need to **clone** the Flow and configure the new trigger.
+
+    [Click here to learn how to clone a Flow](../flows/clone-a-flow.md){target="_blank"}.
 
 ## Operation Completes
 
@@ -36,7 +45,7 @@ Filters can be set to narrow down which operations should trigger the flow execu
 
 ![operation](.././assets/flows/operation-light-12.png)
 
-After defining the conditions, users must click the **Save** button to finalize the trigger configuration.
+Once the conditions are set, click the **Save** button to finalize the trigger configuration.
 
 ![save](.././assets/flows/save-light-8.png)
 
@@ -88,7 +97,11 @@ Users can define specific conditions to determine when the flow should be initia
 
 ## Manual
 
-The flow starts only when the user manually triggers it. It doesn’t depend on any automatic conditions or detections, giving the user full control.  
+The flow starts only when the user manually triggers it. It doesn’t depend on any automatic conditions or detections, giving the user full control. 
+
+!!! note
+    Here you can manually activate a Flow. For a full walkthrough of manual execution, refer to
+    [Execute Manual Flows](../flows/execute-manual-flows.md){target="_blank"} documentation.
 
 ![manual](.././assets/flows/manual-light-20.png)
 
@@ -99,3 +112,9 @@ Once selected, users must click the **Save** button to confirm the manual trigge
 Hover over the **filter tooltip** in trigger nodes to view the applied conditions such as tags, datastores, and operation types. This provides quick visibility into how each trigger is configured.
 
 ![filter-tooltip](.././assets/flows/filter-tooltip-light.png)
+
+## FAQ
+
+**1>.** What’s the difference between a Flow and a Trigger?
+
+A Flow is the overall automation pipeline, while a Trigger determines when the flow starts — such as after operation completion, anomaly detection, or manually.

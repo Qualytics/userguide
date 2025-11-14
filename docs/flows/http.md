@@ -8,9 +8,6 @@ Users can connect to external apps for notifications using one of these services
 
 ![notification](.././assets/flows/notification-light-71.png)
 
-!!! note
-    To configure other Action Node types, see [Operations documentation](../flows/operations.md) or [Notifications documentation](../flows/notification.md).
-
 ## Webhook
 
 Qualytics allows you to connect external apps for notifications using webhooks, making it easy to stay updated in real time. When you set up a webhook, it sends an instant alert to the connected app whenever a specific event or condition occurs. This means you can quickly receive notifications about important events as they happen and respond right away. By using webhook notifications, you can keep your system running smoothly, keep everyone informed, and manage your operations more efficiently.

@@ -2,6 +2,10 @@
 
 **Edit Flow** feature lets users update existing flows by modifying configurations or adding actions.
 
+!!! info
+    To edit a Flow, you must have **Manager** role. Only users with this role can perform the edit action.  
+    For more details about permissions, refer to the [permissions documentation](../settings/security/team-permissions.md){target="_blank"}.
+
 **Step 1:** Click the flow you want to edit.
 
 ![panel](.././assets/flows/panel-light-87.png)

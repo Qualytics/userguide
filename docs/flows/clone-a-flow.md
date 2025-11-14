@@ -12,9 +12,9 @@ Users can duplicate existing flows to simplify the reuse and modification of flo
 
 **Step 3:** After selecting the clone button, click the **Publish** button to publish it.
 
-!!! important
-    Only users with the **PERMISSION** can create, edit, clone, or publish Flows. For details, see the [Team Permission ](../settings/security/team-permissions.md).
-
 ![panel](.././assets/flows/publish-light-82.png)
+
+!!! important
+    Users with the **Manager Role** can create, edit, clone, or publish Flows. For details, see the [Team Permission ](../settings/security/team-permissions.md){target="_blank"}.
 
 After clicking the **Publish** button, a success notification appears confirming that the flow has been successfully added.
