@@ -11,21 +11,21 @@ Let's get started 🚀
 Use Computed Tables when you want to perform the following operations on your selected source datastores:
 
 !!! note
-    For more information, please refer to the [computed tables documentation](../computed-tables-and-files/computed-tables.md).
+    For more information, please refer to the [computed tables documentation](../computed-tables-and-files/computed-tables.md){target="_blank"}.
 
 ## Add Computed Tables
 
 **Step 1:** Log in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add a computed table.
 
 !!! note
-    For more information, please refer to the [add computed tables section](../computed-tables-and-files/computed-tables.md#add-computed-tables).
+    For more information, please refer to the [add computed tables section](../computed-tables-and-files/computed-tables.md#add-computed-tables){target="_blank"}.
 
 ## Computed Files
 
 Use Computed Files when you want to perform the following operations on your selected source datastore:
 
 !!! note
-    For more information, please refer to the [computed files documentation](../computed-tables-and-files/computed-files.md).
+    For more information, please refer to the [computed files documentation](../computed-tables-and-files/computed-files.md){target="_blank"}.
 
 ## Add Computed Files
 
@@ -37,7 +37,7 @@ Use Computed Files when you want to perform the following operations on your sel
 ## Computed Table Vs. Computed File
 
 !!! note
-    For more information, please refer to the [computed tables vs file documentation](../computed-tables-and-files/computed-table-vs-file.md).
+    For more information, please refer to the [computed tables vs file documentation](../computed-tables-and-files/computed-table-vs-file.md){target="_blank"}.
     
 ## View Assigned Teams
 

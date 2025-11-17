@@ -9,17 +9,17 @@ Let's get started 🚀
 **Step 1:** Log in to Your Qualytics Account, navigate to the side menu, and select the **source datastore** where you want to add a computed field.
 
 !!! note
-    For next steps please refer to the [add computed field documentation](../computed-fields/add-computed-fields.md).
+    For next steps please refer to the [add computed field documentation](../computed-fields/add-computed-fields.md){target="_blank"}.
 
 ## Computed Fields Details
 
 ### Totals
 
 !!! note
-    For more information, please refer to the [computed fields details documentation](../computed-fields/computed-fields-details.md).
+    For more information, please refer to the [computed fields details documentation](../computed-fields/computed-fields-details.md){target="_blank"}.
 
 ## Types of Transformations
 
 !!! note
-    For more information, please refer to the [types of transformations](../computed-fields/transformation-types.md).
+    For more information, please refer to the [types of transformations](../computed-fields/transformation-types.md){target="_blank"}.
     

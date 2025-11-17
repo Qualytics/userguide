@@ -3,7 +3,7 @@
 **Add Check** allows you to create rules to validate the data within a particular table. You can choose the type of rule, link it directly to the selected table, and add descriptions or tags. This ensures that the table's data remains accurate and compliant with the required standards.
 
 !!! info
-    For more information about checks, please refer to the [checks documentation](../../datastore-checks/checks-datastore.md).
+    For more information about checks, please refer to the [checks documentation](../../datastore-checks/checks-datastore.md){target="_blank"}.
 
 **Step 1:** Click on the vertical ellipse next to the table name and select **Add Checks**.
 
@@ -14,4 +14,4 @@ A modal window will appear to add checks against the selected table.
 ![check-window](../../assets/container/manage-tables-and-files/add-checks/check-light-15.png)
 
 !!! note
-    To understand how to add checks, you can follow the remaining steps from the documentation [Checks Template](../../checks/checks-template.md).
+    To understand how to add checks, you can follow the remaining steps from the documentation [Checks Template](../../checks/checks-template.md){target="_blank"}.

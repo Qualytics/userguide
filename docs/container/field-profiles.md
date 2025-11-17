@@ -15,7 +15,7 @@ These insights make it easier to detect data issues early and understand how a f
 
 ## How Field Profiles Are Generated
 
-Field Profiles are automatically created when you run a [**Profile**](../source-datastore/profile.md) operation on a container:
+Field Profiles are automatically created when you run a [**Profile**](../source-datastore/profile.md){target="_blank"} operation on a container:
 
 1. Qualytics scans the dataset and evaluates each field.
 2. It computes metrics such as declared type, distinct counts, distribution statistics, sampling, and completeness.

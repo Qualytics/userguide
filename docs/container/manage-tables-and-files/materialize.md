@@ -10,4 +10,4 @@ A modal window will appear with the **Materialize Operation** setting.
 
 ![observability-materialize](../../assets/container/manage-tables-and-files/materialize/materialize-light-30.png)
 
-For the next steps, detailed information on the Materialize Operation is available in the [Materialize Operation](../enrichment-operation/materialize-operation.md) section of the documentation.
+For the next steps, detailed information on the Materialize Operation is available in the [Materialize Operation](../enrichment-operation/materialize-operation.md){target="_blank"} section of the documentation.

@@ -24,7 +24,7 @@ A modal window will appear for **File Pattern Settings**.
 
 ![group-criteria](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/group-light-99.png)
 
-For information about **Group Criteria**, you can refer to the documentation on [Grouping.](../settings/grouping.md)
+For information about **Group Criteria**, you can refer to the documentation on [Grouping.](../settings/grouping.md){target="_blank"}.
 
 ## Excluding
 
@@ -32,7 +32,7 @@ For information about **Group Criteria**, you can refer to the documentation on 
 
 ![excluding-field](../../assets/container/manage-tables-and-files/settings-for-dfs-files-pattern/excluding-light-100.png)
 
-For information about **Excluding**, you can refer to the documentation on [Excluding Settings.](../settings/general.md#excluding-fields)
+For information about **Excluding**, you can refer to the documentation on [Excluding Settings.](../settings/general.md#excluding-fields){target="_blank"}.
 
 ## General
 

@@ -33,9 +33,9 @@ A modal window will appear, allowing you to enter the details for your computed 
 
 | Transformation Types | Purpose | Reference |
 |------|--------|---------|
-| Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | For more information, please refer to the guide [cleaned entity name section.](../computed-fields/transformation-types.md#cleaned-entity-name) |
-| Convert Formatted Numeric | Removes formatting (such as parentheses for denoting negatives or commas as delimiters) from values that represent numeric data, converting them into a numerically typed field. | For more information, please refer to the guide [convert formatted numeric section.](../computed-fields/transformation-types.md#convert-formatted-numeric) |
-| Custom Expression | Allows you to create a new field by applying any valid Spark SQL expression to one or more existing fields. | For more information, please refer to the guide [custom expression section.](../computed-fields/transformation-types.md#custom-expression) |
+| Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | For more information, please refer to the guide [cleaned entity name section.](../computed-fields/transformation-types.md#cleaned-entity-name){target="_blank"} |
+| Convert Formatted Numeric | Removes formatting (such as parentheses for denoting negatives or commas as delimiters) from values that represent numeric data, converting them into a numerically typed field. | For more information, please refer to the guide [convert formatted numeric section.](../computed-fields/transformation-types.md#convert-formatted-numeric){target="_blank"} |
+| Custom Expression | Allows you to create a new field by applying any valid Spark SQL expression to one or more existing fields. | For more information, please refer to the guide [custom expression section.](../computed-fields/transformation-types.md#custom-expression){target="_blank"} |
 
 ![transformation-type](../../assets/container/computed-fields/add-computed-fields/transformation-type-light-5.png)
 

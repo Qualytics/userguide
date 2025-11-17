@@ -10,4 +10,4 @@ A modal window will appear with the **Export Operation** setting.
 
 ![observability-window](../../assets/container/manage-tables-and-files/export/export-light-24.png)
 
-For the next steps, detailed information on the Export Operation is available in the [Export Operation](../enrichment-operation/export-operation.md) section of the documentation.
+For the next steps, detailed information on the Export Operation is available in the [Export Operation](../enrichment-operation/export-operation.md){target="_blank"} section of the documentation.

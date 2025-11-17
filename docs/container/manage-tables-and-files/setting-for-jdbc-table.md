@@ -22,7 +22,7 @@ A modal window will appear for **Table Settings**.
 
 ## Identifiers
 
-An **Identifier** is a field that can be used to help load the desired data from a Table in support of analysis. For more details about identifiers, you can refer to the documentation on [Identifiers.](../settings/identifiers.md)
+An **Identifier** is a field that can be used to help load the desired data from a Table in support of analysis. For more details about identifiers, you can refer to the documentation on [Identifiers.](../settings/identifiers.md){target="_blank"}.
 
 ### Incremental Strategy
 
@@ -33,7 +33,7 @@ This is crucial for tracking changes at the row level within tables. This approa
 
 ![incremental-strategy](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/incremental-light-6.png)
 
-For information about incremental strategy, you can refer to the [Incremental Strategy](../settings/identifiers.md#partition-field) section in the Identifiers documentation.   
+For information about incremental strategy, you can refer to the [Incremental Strategy](../settings/identifiers.md#partition-field){target="_blank"} section in the Identifiers documentation.   
                                                                                     
 ### Incremental Field
 
@@ -47,7 +47,7 @@ For information about incremental strategy, you can refer to the [Incremental St
 
 ![partition-field](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/partition-light-8.png)
 
-For information about **Partition Field**, you can refer to the [Partition Field](../settings/identifiers.md#partition-field) section in the Identifiers documentation. 
+For information about **Partition Field**, you can refer to the [Partition Field](../settings/identifiers.md#partition-field){target="_blank"} section in the Identifiers documentation. 
 
 ## Group Criteria
 
@@ -55,7 +55,7 @@ For information about **Partition Field**, you can refer to the [Partition Field
 
 ![group-criteria](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/group-light-9.png)
 
-For information about **Group Criteria**, you can refer to the documentation on [Grouping.](../settings/grouping.md)
+For information about **Group Criteria**, you can refer to the documentation on [Grouping.](../settings/grouping.md){target="_blank"}.
 
 ## Excluding
 
@@ -63,7 +63,7 @@ For information about **Group Criteria**, you can refer to the documentation on 
 
 ![excluding-field](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/excluding-light-10.png)
 
-For information about **Excluding**, you can refer to the documentation on [Excluding Settings.](../manage-tables-and-files/setting-for-dfs-files-pattern.md#excluding).
+For information about **Excluding**, you can refer to the documentation on [Excluding Settings.](../manage-tables-and-files/setting-for-dfs-files-pattern.md#excluding){target="_blank"}.
 
 ## General
 
@@ -71,7 +71,7 @@ You can control the default behavior of the specific table by checking or unchec
 
 ![general-field](../../assets/container/manage-tables-and-files/setting-for-jdbc-table/general-light-11.png)
 
-For information about **General**, you can refer to the documentation on [General Settings.](../settings/general.md)
+For information about **General**, you can refer to the documentation on [General Settings.](../settings/general.md){target="_blank"}.
 
 **Step 3:** Once you have configured the table settings, click on the **Save** button.
 
