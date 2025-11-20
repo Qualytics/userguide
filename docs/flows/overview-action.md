@@ -22,17 +22,17 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## Operations
 
 !!! note
-    For more information please refer to the [operations documentation](../flows/operations.md){target="_blank"}.
+    For more detailed information, review the [operations documentation](../flows/operations.md){target="_blank"}.
 
 ## Notifications
 
 !!! note
-    For more information please refer to the [notifications documentation](../flows/notification.md){target="_blank"}.
+    For more detailed information, review the [notifications documentation](../flows/notification.md){target="_blank"}.
 
 ## HTTP
 
 !!! note
-    For more information please refer to the [http documentation](../flows/http.md){target="_blank"}..
+    For more detailed information, review the [http documentation](../flows/http.md){target="_blank"}..
 
 ##FAQ
 

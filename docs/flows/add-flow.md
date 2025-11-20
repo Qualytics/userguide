@@ -26,18 +26,18 @@ A Flow consists of three main node types. After creating a new Flow, you will co
 Defines the Flow’s general information such as its name and description.
 
 !!! info
-    For more information, please refer to the [Flow Entry Documentation](../flows/flow-entry.md){target="_blank"}
+    For more detailed information, review the [Flow Entry Documentation](../flows/flow-entry.md){target="_blank"}
 
 ### **2. Trigger Node**
 
 Controls *when* the Flow starts (operation completes, anomaly detected, manual, etc.).  
 
 !!! info
-    For more information, please refer to the [Trigger Node Documentation](../flows/trigger-node.md){target="_blank"}
+    For more detailed information, review the [Trigger Node Documentation](../flows/trigger-node.md){target="_blank"}
 
 ### **3. Actions Node**
 
 Defines *what happens* after the Flow is triggered (operations, notifications, HTTP calls, etc.).  
 
 !!! info
-    For more information, please refer to the [Actions Node Documentation](../flows/overview-action.md){target="_blank"}
+    For more detailed information, review the [Actions Node Documentation](../flows/overview-action.md){target="_blank"}
