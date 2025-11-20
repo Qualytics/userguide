@@ -218,7 +218,7 @@ To define a custom schedule, enter the appropriate Cron expression in the "Custo
 
 ## Advanced Options
 
-The advanced use cases described below require options that are not yet exposed in our user interface but possible through interaction with Qualytics API.
+The advanced use cases described below require options that are not yet exposed in our user interface but possible through interaction with the Qualytics API.
 
 ### Runtime Variable Assignment
 
@@ -226,7 +226,17 @@ It is possible to reference a variable in a check definition (declared in double
 
 If a Scan is meant to assert a check with a variable, a value for that variable must be supplied as part of the Scan operation's `check_variables` property.
 
-For example, a check might include a filter.- `transaction_date == {{ checked_date }}` which will be asserted against any records where transaction_date is equal to the value supplied when the Scan operation is initiated. In this case that value would be assigned by passing the following payload when calling ```/api/operations/run```
+When using a variable inside a filter, the filter **must be a valid Spark SQL WHERE expression**.  
+
+For example, a check might include a filter:
+
+```sql
+transaction_date = {{ checked_date }}
+```
+
+For the Scan operation payload, users must apply **explicit casting** inside the `check_variables` section. Since variables may represent different data types (integer, string, timestamp, etc.), each variable must be cast to the correct type to avoid parsing or evaluation errors.
+
+In this case, that value would be assigned by passing the following payload when calling `/api/operations/run`:
 
 ```json
 {
@@ -237,7 +247,7 @@ For example, a check might include a filter.- `transaction_date == {{ checked_da
     "remediation": "none",
     "max_records_analyzed_per_partition": 0,
     "check_variables": {
-        "checked_date": "2023-10-15"
+        "checked_date": "TIMESTAMP '2023-10-15'"
     },
     "high_count_rollup_threshold": 10
 }
