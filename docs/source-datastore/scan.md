@@ -226,7 +226,7 @@ It is possible to reference a variable in a check definition (declared in double
 
 If a Scan is meant to assert a check with a variable, a value for that variable must be supplied as part of the Scan operation's `check_variables` property.
 
-When using a variable inside a filter, the filter **must be a valid Spark SQL WHERE expression**.  
+When using a variable inside a filter, the filter **must be a valid [Spark SQL WHERE](https://spark.apache.org/docs/latest/sql-ref.html){target="_blank"} expression**.  
 
 For example, a check might include a filter:
 
@@ -488,7 +488,7 @@ This payload is to run a scheduled scan operation every day at 00:00
         "name":"My scheduled Scan operation",
         "datastore_id":"datastore-id",
         "container_names":[],
-        "remediation": "overwrite"
+        "remediation": "overwrite",
         "incremental": false,
         "max_records_analyzed_per_partition":null,
         "enrichment_source_record_limit":10,
