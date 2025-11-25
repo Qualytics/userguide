@@ -32,9 +32,9 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## HTTP
 
 !!! note
-    For more detailed information, review the [http documentation](../flows/http.md){target="_blank"}..
+    For more detailed information, review the [http documentation](../flows/http.md){target="_blank"}.
 
-##FAQ
+## FAQ
 
 **1>.** Can I have multiple actions under a single flow?
 

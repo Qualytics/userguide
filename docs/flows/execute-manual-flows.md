@@ -6,7 +6,7 @@ Manual execution gives you complete control over when a Flow should run. You can
 
 **Step 1:** Locate the manual flow in your list of flows.
 
-![manual-flow](.././assets/flows/manuall-flow-light.png)
+![manual-flow](.././assets/flows/manual-flow-light.png)
 
 **Step 2:** Click the **vertical ellipsis (⋮)** next to the manual flow you wish to execute, then select **"Execute"** from the dropdown menu to trigger the flow.
 
