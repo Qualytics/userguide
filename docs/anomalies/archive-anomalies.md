@@ -19,8 +19,8 @@ You can archive individual anomalies either directly or through the action menu.
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.  
-* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.  
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
+* **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
 ![archive-anomaly-options](../assets/datastores/archive-anomalies/archive-anomaly-options.png)
 
@@ -47,18 +47,18 @@ After clicking on the **Archive** button your anomaly is moved to the archive an
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.  
-* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.  
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
+* **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
-![archive-options](../assets/datastores/archive-anomalies/archive-options.png)
+![archive-options](../assets/datastores/archive-anomalies/archive-anomaly-options.png)
 
 You also have the option to leave a comment in the provided field to provide additional context or details.
 
-![comment-2](../assets/datastores/archive-anomalies/comment-2.png)
+![comment-2](../assets/datastores/archive-anomalies/comment-1.png)
 
 **Step 4:** Once you've made your selection, click the **Archive** button to proceed.
 
-![archive-button-2](../assets/datastores/archive-anomalies/archive-button-2.png)
+![archive-button-2](../assets/datastores/archive-anomalies/archive-button.png)
 
 After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
 
@@ -81,8 +81,8 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.  
-* **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.  
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
+* **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
 ![archive-bulk-options](../assets/datastores/archive-anomalies/archive-bulk-options.png)
 
@@ -92,6 +92,6 @@ You also have the option to leave a comment in the provided field to provide add
 
 **Step 4:** Once you've made your selection, click on the **Archive** button to proceed.
 
-![archive-button-2](../assets/datastores/archive-anomalies/archive-button-2.png)
+![archive-button-2](../assets/datastores/archive-anomalies/archive-button-3.png)
 
 After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.

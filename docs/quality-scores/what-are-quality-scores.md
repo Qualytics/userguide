@@ -3,16 +3,16 @@
 Quality Scores are quantified measures of data quality calculated at the field and [container](https://userguide.qualytics.io/glossary/#container) levels, recorded as time-series to enable tracking of changes over time.
 Scores range from 0-100 with higher values indicating superior quality for the intended purpose. These scores integrate eight distinct dimensions,
 providing a granular analysis of the attributes that impact the overall data quality. The overall score
-is a composite reflecting the relative importance and [configured weights](#most-impactful-factors) of these factors:
+is a composite reflecting the relative importance and [configured weights](#most-impactful-dimensions) of these factors:
 
 - **Completeness**: Measures the average percentage of non-null values in a field throughout the measurement period. For example, if a "phone_number" field has values present in 90 out of 100 records, its completeness score for the measurement would be 90%.
-- **Coverage**: Measures the number of quality checks defined for monitoring the field's quality. 
-- **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern. See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._
+- **Coverage**: Measures the number of quality checks defined for monitoring the field's quality.
+- **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern.<br>_<span class="text-sm">See [Appendix: Conformity Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 - **Consistency**: Measures uniformity in type and scale across all data representations. Verifies that data maintains the same type and representation over time. For example, ensuring that a typed numeric column does not change over time to a string.
-- **Precision**: Evaluates the resolution of field values against defined quality checks. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Precision rule type list._
-- **Timeliness**: Gauges data availability according to schedule. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Timeliness rule type list._
-- **Volumetrics**: Analyzes consistency in data size and shape over time. _See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Volumetrics rule type list._
-- **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values. 
+- **Precision**: Evaluates the resolution of field values against defined quality checks.<br>_<span class="text-sm">See [Appendix: Precision Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
+- **Timeliness**: Gauges data availability according to schedule.<br>_<span class="text-sm">See [Appendix: Timeliness Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
+- **Volumetrics**: Analyzes consistency in data size and shape over time.<br>_<span class="text-sm">See [Appendix: Volumetric Rule Types](#volumetric-rule-types) for the full Volumetrics rule type list.</span>_
+- **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values.
 
 ### How Completeness, Precision, and Accuracy Differ
 
@@ -23,7 +23,7 @@ is a composite reflecting the relative importance and [configured weights](#most
 | **Accuracy**     | Are values correct compared to real-world truth or integrity checks? | Is the relationship between `square_footage` and `price` maintained?            |
 
 !!! Important
-A data asset's quality score is **a measure of its fitness for the intended use case**. It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental dimensions of data quality as described below.  Quality scores are dynamic and will evolve as your data and business needs change over time.
+    A data asset's quality score is **a measure of its fitness for the intended use case**. It is not a simple measure of error, but instead a holistic confidence measure that considers the eight fundamental dimensions of data quality as described below.  Quality scores are dynamic and will evolve as your data and business needs change over time.
 
 ## Field-Level Quality Scoring
 
@@ -34,6 +34,7 @@ Each field receives individual scores for eight quality dimensions, each evaluat
 The **Completeness** score measures the average percentage of non-null values in a field over the measurement period.
 
 **How Completeness is Calculated**
+
 - **Scale**: 0 to 100, representing the average completeness percentage
 - **Measurement period**: Defined by the configured decay time (default 180 days)
 - **Formula**: Average of `(non-null values / total records) × 100` across all measurements in the period
@@ -44,6 +45,7 @@ The **Completeness** score measures the average percentage of non-null values in
 The **Coverage** score measures how many distinct quality checks have been applied to a field. It is designed to reward the first few checks heavily, then taper off as more checks are added, following a curve of diminishing returns.
 
 **How Coverage is Calculated**
+
 - **Scale**: The score ranges continuously from 0 to 100
 - **Anchor points**:
     - **0 checks** → score of **0**
@@ -57,24 +59,27 @@ score(n) = 100 × (1 - e^(-k × n))
 where n is the number of checks and k is tuned so that 1 check = 60.
 
 **Why This Model?**
+
 - **Strong early reward**: The first check dramatically increases confidence in field coverage
 - **Fair balance**: More checks always improve the score, but the improvement diminishes as coverage becomes robust, preventing runaway inflation
 
 !!! note "Field vs. Container Coverage"
-At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.  
-At the **container level**, Coverage is an **aggregate of field-level coverage scores**, further adjusted by **scan frequency** (more frequent scans → greater confidence).
+    At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.
+    At the **container level**, Coverage is an **aggregate of field-level coverage scores**, further adjusted by **scan frequency** (more frequent scans → greater confidence).
 
 ### Conformity Dimension
 
 The **Conformity** score measures how well the data adheres to specified formats, patterns, and business rules.
 
 **How Conformity is Calculated**
+
 - **Scale**: 0 to 100 based on the ratio of conforming values
 - **Formula**: `(1 - (rows with anomalous values as specified by conformity checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
-- **Applicable rule types**: Pattern matching, length constraints, type validation, schema expectations, and format-specific validations (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Pattern matching, length constraints, type validation, schema expectations, and format-specific validations<br>_<span class="text-sm">See [Appendix: Conformity Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 
 **Examples**
+
 - Email field where 95% of scanned/total rows match valid email pattern → **Score ~95**
 - Date field with consistent YYYY-MM-DD format → **Score ~100**
 - Phone field with mixed formats and invalid entries → **Score ~60**
@@ -109,27 +114,32 @@ The **Consistency** score measures how stable a field's values remain over time 
     - **0**: Type change detected
 
 !!! important "Consistency vs. Accuracy"
-- **Consistency** checks whether a field’s **statistical shape and distribution remain stable over time** (e.g., numeric medians, string entropy).
-- **Accuracy**, by contrast, evaluates whether values are **correct and aligned to real-world truths or integrity rules**.  
-  Together, they capture different aspects of trustworthiness.
-- 
-**Examples**
-- Numeric "Price" field with stable median and IQR → **Score ~100**
-- String "Country" field where distinct values double unexpectedly → **Score ~75**
-- Datetime field with sudden two-year backfill → **Score ~60**
-- ID field alternating between numeric and string types → **Score = 0**
+    **Consistency** checks whether a field’s **statistical shape and distribution remain stable over time** (e.g., numeric medians, string entropy).
+
+    **Accuracy**, by contrast, evaluates whether values are **correct and aligned to real-world truths or integrity rules**.
+
+    Together, they capture different aspects of trustworthiness.
+
+    **Examples**
+
+    - Numeric "Price" field with stable median and IQR → **Score ~100**
+    - String "Country" field where distinct values double unexpectedly → **Score ~75**
+    - Datetime field with sudden two-year backfill → **Score ~60**
+    - ID field alternating between numeric and string types → **Score = 0**
 
 ### Precision Dimension
 
 The **Precision** score evaluates the resolution and granularity of field values against defined quality checks.
 
 **How Precision is Calculated**
+
 - **Scale**: 0 to 100 based on the ratio of values meeting precision requirements
 - **Formula**: `(1 - (rows with anomalous values as specified by precision checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
-- **Applicable rule types**: Range validations, comparisons, mathematical constraints, and temporal boundaries (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Range validations, comparisons, mathematical constraints, and temporal boundaries<br>_<span class="text-sm">See [Appendix: Precision Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
 
 **Examples**
+
 - Decimal field maintaining required 2-digit precision → **Score ~100**
 - Timestamp field with appropriate granularity (no future dates) → **Score ~95**
 - Age field with values outside valid range (0-120) → **Score ~85**
@@ -139,6 +149,7 @@ The **Precision** score evaluates the resolution and granularity of field values
 The **Accuracy** score determines the fidelity of field values to their real-world counterparts or expected values.
 
 **How Accuracy is Calculated**
+
 - **Scale**: 0 to 100 based on the overall anomaly rate across all data integrity (excludes metadata checks like schema, volume, freshness, etc..) check types
 - **Formula**: `(1 - (rows with anomalous values as specified by accuracy checks / min(scanned rows, container rows))) × 100`
 - **Denominator**: Uses the smaller of scanned row count or container row count to prevent score inflation
@@ -146,6 +157,7 @@ The **Accuracy** score determines the fidelity of field values to their real-wor
 - **Represents**: Overall correctness and trustworthiness of the field data
 
 **Interpretation**
+
 - **95-100**: Highly accurate data suitable for critical decisions
 - **80-94**: Generally reliable with some known issues
 - **60-79**: Moderate accuracy requiring validation for important uses
@@ -181,15 +193,17 @@ Your container's total Quality Score starts at a **baseline of 70**. Each of the
 - **Final clipping**: Result is always constrained between 0 and 100
 
 !!! note "Why a 70-Point Baseline?"
-The **70-point baseline** represents a **neutral confidence starting point**.
-- Dimensions then adjust the baseline **downward** when issues are found or **upward** when strong quality signals exist.
-- This calibration ensures that new containers without extensive checks or history begin from a reasonable midpoint rather than 0.
+    The **70-point baseline** represents a **neutral confidence starting point**.
+
+    - Dimensions then adjust the baseline **downward** when issues are found or **upward** when strong quality signals exist.
+    - This calibration ensures that new containers without extensive checks or history begin from a reasonable midpoint rather than 0.
 
 ### Timeliness Dimension
 
 The **Timeliness** score gauges whether data is available according to its expected schedule.
 
 **How Timeliness is Calculated**
+
 - **Scale**: 0 to 100 based on adherence to freshness requirements
 - **Field level**: Directly inherited from the container's timeliness score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
@@ -198,9 +212,10 @@ The **Timeliness** score gauges whether data is available according to its expec
     - Each additional anomaly has diminishing impact
     - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
     - Where k is calibrated so one anomaly = 40% score reduction
-- **Applicable rule types**: Time distribution size, freshness constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
--
+- **Applicable rule types**: Time distribution size, freshness constraints<br>_<span class="text-sm">See [Appendix: Timeliness Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
+
 **Score Interpretation**
+
 - **100**: No timeliness anomalies detected
 - **60**: One anomaly detected (40-point penalty)
 - **40-60**: Multiple anomalies with diminishing penalties
@@ -212,10 +227,11 @@ The **Timeliness** score gauges whether data is available according to its expec
 The **Volumetrics** score analyzes consistency in data size and shape over time.
 
 !!! note "Shared Scoring Formula"
-Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.  
-This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
+    Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.
+    This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
 
 **How Volumetrics is Calculated**
+
 - **Scale**: 0 to 100 based on volumetric stability
 - **Field level**: Directly inherited from the container's volumetrics score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
@@ -224,9 +240,10 @@ This consistency ensures comparable scoring behavior across dimensions, even tho
     - Each additional anomaly has diminishing impact
     - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
     - Where k is calibrated so one anomaly = 40% score reduction
-- **Applicable rule types**: Row count size, partition size constraints (_See [Appendix: Dimension Rule Types](#appendix-dimension-rule-types) for the full Conformity rule type list._)
+- **Applicable rule types**: Row count size, partition size constraints<br>_<span class="text-sm">See [Appendix: Volumetric Rule Types](#volumetric-rule-types) for the full Volumetric rule type list.</span>_
 
 **Examples**
+
 - Container with consistent record counts per partition → **Score ~100**
 - Container showing unexpected spikes or drops in volume → **Score ~75**
 - Container with erratic or missing time distributions → **Score ~50**
@@ -272,12 +289,12 @@ To further explore how to respond to Quality Scores, let's consider the business
 - On the other hand, if the primary use case for this address is to reliably ship a physical product to an intended recipient, ensuring a higher level of quality for the "Street 2" field becomes necessary. In this scenario, you may take actions such as defining additional data quality checks for the field, increasing the frequency of profiling and scanning, establishing a completeness goal, and working with upstream systems to enforce it over time.
 
 !!! Important
-The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
+    The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
 
 !!! note "Fitness for Purpose in Practice"
-Remember: Quality Scores are not absolute “grades.”  
-They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.  
-Two datasets may have different scores but still both be "fit for purpose" depending on use case.
+    Remember: Quality Scores are not absolute “grades.”
+    They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.
+    Two datasets may have different scores but still both be "fit for purpose" depending on use case.
 
 ## Customizing Quality Score Weights and Decay Time
 
@@ -289,70 +306,72 @@ This alters the scoring algorithm to align with customized governance priorities
 data events defaults to 180 days but can be customized to fit your operational needs, ensuring the scores reflect the most relevant data quality insights for your organization.
 
 !!! warning "Use Caution When Customizing Weights"
-We strongly recommend retaining default weights unless governance priorities **clearly justify changes**.
-- Adjusting weights can significantly alter how anomalies impact overall scores.
-- Misaligned weights may cause misleading signals about data quality.  
-  Proceed carefully, and document any custom weighting rationale.
+    We strongly recommend retaining default weights unless governance priorities **clearly justify changes**.
+
+    - Adjusting weights can significantly alter how anomalies impact overall scores.
+    - Misaligned weights may cause misleading signals about data quality.
+
+    Proceed carefully, and document any custom weighting rationale.
 
 
-# Appendix: Dimension Rule Types
+## Appendix: Rule Types
 
-The following lists summarize which rule types contribute to each dimension’s quality score.  
+The following lists summarize which rule types contribute to each dimension’s quality score.
 
 ---
 
 ### Conformity Rule Types
 
-```
-RuleType.matchesPattern
-RuleType.minLength
-RuleType.maxLength
-RuleType.dataDiff
-RuleType.isType
-RuleType.entityResolution
-RuleType.expectedSchema
-RuleType.fieldCount
-RuleType.isCreditCard
-RuleType.isAddress
-RuleType.containsCreditCard
-RuleType.containsUrl
-RuleType.containsEmail
-RuleType.containsSocialSecurityNumber
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Matches Pattern |
+| 2. | Min Length |
+| 3. | Max Length |
+| 4. | Data Diff |
+| 5. | Is Type |
+| 6. | Entity Resolution |
+| 7. | Expected Schema |
+| 8. | Field Count |
+| 9. | Is Credit Card |
+| 10. | Is Address |
+| 11. | Contains Credit Card |
+| 12. | Contains URL |
+| 13. | Contains Email |
+| 14. | Contains Social Security Number |
 
 ### Precision Rule Types
 
-```
-RuleType.afterDateTime
-RuleType.beforeDateTime
-RuleType.between
-RuleType.betweenTimes
-RuleType.equalTo
-RuleType.equalToField
-RuleType.greaterThan
-RuleType.greaterThanField
-RuleType.lessThan
-RuleType.lessThanField
-RuleType.maxValue
-RuleType.minValue
-RuleType.notFuture
-RuleType.notNegative
-RuleType.positive
-RuleType.predictedBy
-RuleType.sum
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | After Date Time |
+| 2. | Before Date Time |
+| 3. | Between |
+| 4. | Between Times |
+| 5. | Equal To |
+| 6. | Equal To Field |
+| 7. | Greater Than |
+| 8. | Greater Than Field |
+| 9. | Less Than |
+| 10. | Less Than Field |
+| 11. | Max Value |
+| 12. | Min Value |
+| 13. | Not Future |
+| 14. | Not Negative |
+| 15. | Positive |
+| 16. | Predicted By |
+| 17. | Sum |
 
 ### Volumetric Rule Types
 
-```
-RuleType.volumetric 
-RuleType.minPartitionSize 
-RuleType.maxPartitionSize
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Volumetric |
+| 2. | Min Partition Size |
+| 3. | Max Partition Size |
 
 ### Timeliness Rule Types
 
-```
-RuleType.freshness
-RuleType.timeDistributionSize
-```
+| No. | Rule Type |
+| :---- | :---- |
+| 1. | Freshness |
+| 2. | Time Distribution Size |

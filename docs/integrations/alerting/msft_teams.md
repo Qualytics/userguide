@@ -39,7 +39,7 @@ The Microsoft Entra App Registration is used by Qualytics to provision Teams bot
 
 #### Adding API Permissions
 
-The Microsoft Entra App needs the "Application.ReadWrite.All" permission to create and manage bot resources.
+The Microsoft Entra App needs the "Application.ReadWrite.OwnedBy" permission to create and manage bot resources.
 
 **Step 1:** In your app registration, go to the side panel and click **Manage**, then select **API permissions** from the dropdown.
 
@@ -57,7 +57,7 @@ The Microsoft Entra App needs the "Application.ReadWrite.All" permission to crea
 
 ![add-permission-msft-graph](../../assets/integrations/msft_teams/application-permission-msft-graph.png)
 
-A dropdown appears search for **Application.ReadWrite.All**, check the box under **Application permissions**, and click **Add permissions**.
+A dropdown appears search for **Application.ReadWrite.OwnedBy**, check the box under **Application permissions**, and click **Add permissions**.
 
 ![msft-graph-application-permission](../../assets/integrations/msft_teams/add-permissions.png)
 
@@ -185,13 +185,11 @@ In the next section, we'll walk through the steps to access the Qualytics integr
 
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.
 
-![settings](../../assets/integrations/slack/settings-light.png#only-light)
-![settings](../../assets/integrations/slack/settings-dark.png#only-dark)
+![settings](../../assets/integrations/slack/settings-light.png)
 
 **Step 2:** By default, Connections tab will open. Click on the **Integrations** tab.
 
-![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-light.png#only-light)
-![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-dark.png#only-dark)
+![integrations-tab](../../assets/integrations/msft_teams/integrations-tab-light.png)
 
 ## Connect Microsoft Teams Integration
 
@@ -199,13 +197,11 @@ Connect Microsoft Teams by providing necessary Azure credentials, configuring bo
 
 **Step 1:** Click on the **Connect** button next to Microsoft Teams to connect to the Teams Integration.
 
-![connect](../../assets/integrations/msft_teams/connect-light.png#only-light)
-![connect](../../assets/integrations/msft_teams/connect-dark.png#only-dark)
+![connect](../../assets/integrations/msft_teams/connect-light.png)
 
 A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the connection properties to connect to Microsoft Teams.
 
-![settings](../../assets/integrations/msft_teams/windowsss-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/windowsss-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/windowsss-light.png)
 
 **Step 2:** Fill out the required provisioning properties for the Microsoft Teams integration:
 
@@ -217,26 +213,22 @@ A modal window titled **"Add Microsoft Teams Integration"** appears. Fill in the
 | 4. | Azure Resource Group Name | The name of the Resource Group you created or selected for bot resources. |
 | 5. | Microsoft Teams Link | The team link you copied from Microsoft Teams using the "Get link to team" option. |
 
-![settings](../../assets/integrations/msft_teams/table-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/table-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/table-light.png)
 
 **Step 3:** Click the **Provision and Next** button to provision the app resources and proceed with publishing the Qualytics app to the Microsoft Teams App Catalog.
 
 !!! note
     Provisioning the app resources may take around 15 seconds to complete.
 
-![settings](../../assets/integrations/msft_teams/provision-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/provision-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/provision-light.png)
 
 Once the app resources have been successfully provisioned, a confirmation message will appear stating, **"The Teams app resources have been successfully provisioned."**
 
-![settings](../../assets/integrations/msft_teams/msgs-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/msgs-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/msgs-light.png)
 
 **Step 4:** Click the **Publish** button to publish the Qualytics app to your organization's Microsoft Teams App Catalog.
 
-![settings](../../assets/integrations/msft_teams/published-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/published-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/published-light.png)
 
 _A microsoft dialog will appear asking you to accept the requested permissions. Click Accept to proceed with the publication._
 
@@ -249,8 +241,7 @@ Once the app has been successfully published, a confirmation message will appear
 
 After publishing the app to your organization's Teams App Catalog, the integration will show a **"Pending"** status in Qualytics until the app is installed in a Teams channel.
 
-![settings](../../assets/integrations/msft_teams/pending-light.png#only-light)
-![settings](../../assets/integrations/msft_teams/pending-dark.png#only-dark)
+![settings](../../assets/integrations/msft_teams/pending-light.png)
 
 ### Installing the App in Microsoft Teams
 
@@ -277,8 +268,7 @@ To complete the integration, you need to install the Qualytics app in Microsoft 
 
 When you add the app to a team and channel, Qualytics will automatically detect the installation. You may need to refresh your browser to see the status update from **"Pending"** to **"Connected"** in the Qualytics Integrations page.
 
-![connect](../../assets/integrations/msft_teams/connected-light.png#only-light)
-![connect](../../assets/integrations/msft_teams/connected-dark.png#only-dark)
+![connect](../../assets/integrations/msft_teams/connected-light.png)
 
 ### Manual Verification (optional)
 
@@ -289,13 +279,11 @@ To manually verify the integration:
 
 **Step 1:** Return to the Qualytics Integrations page and click on the **Verify app installation** button next to the Microsoft Teams integration.
 
-![verify-installation](../../assets/integrations/msft_teams/verify-installation-light.png#only-light)
-![verify-installation](../../assets/integrations/msft_teams/verify-installation-dark.png#only-dark)
+![verify-installation](../../assets/integrations/msft_teams/verify-installation-light.png)
 
 When the verification is successful, the integration status will change to **"Connected"**, indicating that Qualytics can now send notifications to your Microsoft Teams workspace.
 
-![connect](../../assets/integrations/msft_teams/connected-light.png#only-light)
-![connect](../../assets/integrations/msft_teams/connected-dark.png#only-dark)
+![connect](../../assets/integrations/msft_teams/connected-light.png)
 
 ## Manage Microsoft Teams Integration
 
@@ -307,23 +295,19 @@ Edit Integration feature allows users to modify Microsoft Teams connection setti
 
 **Step 1:** Click on the vertical ellipses(⋮) next to the Connected button and select the Edit option .
 
-![vertical-ellipse](../../assets/integrations/msft_teams/vertical-light.png#only-light)
-![vertical-ellipse](../../assets/integrations/msft_teams/vertical-dark.png#only-dark)
+![vertical-ellipse](../../assets/integrations/msft_teams/vertical-light.png)
 
 **Step 2:** A modal window Edit Microsoft Teams Integration will appear providing you with options to edit the connection properties.
 
-![window](../../assets/integrations/msft_teams/window-light.png#only-light)
-![window](../../assets/integrations/msft_teams/window-dark.png#only-dark)
+![window](../../assets/integrations/msft_teams/window-light.png)
 
 **Step 3:** After editing the connection properties, click on the Update button to apply the changes.
 
-![update](../../assets/integrations/msft_teams/update-light.png#only-light)
-![update](../../assets/integrations/msft_teams/update-dark.png#only-dark)
+![update](../../assets/integrations/msft_teams/update-light.png)
 
 A confirmation message will appear on the screen displaying **“The Integration has been successfully updated”**.
 
-![message](../../assets/integrations/msft_teams/message-light.png#only-light)
-![message](../../assets/integrations/msft_teams/message-dark.png#only-dark)
+![message](../../assets/integrations/msft_teams/message-light.png)
 
 ### Disconnect Integration
 
@@ -331,20 +315,16 @@ Disconnecting the Microsoft Teams integration will remove its connection from yo
 
 **Step 1:** Click on the **vertical ellipses(⋮)** next to the connected button and select the **Disconnect** option to disconnect the integration.
 
-![disconnect](../../assets/integrations/msft_teams/disconnect-light.png#only-light)
-![disconnect](../../assets/integrations/msft_teams/disconnect-dark.png#only-dark)
+![disconnect](../../assets/integrations/msft_teams/disconnect-light.png)
 
 **Step 2:** A modal window **Disconnect Integration** will appear allowing you to disconnect the microsoft teams integration.
 
-![windows](../../assets/integrations/msft_teams/windows-light.png#only-light)
-![windows](../../assets/integrations/msft_teams/windows-dark.png#only-dark)
+![windows](../../assets/integrations/msft_teams/windows-light.png)
 
 **Step 3:** Click on the **Disconnect** button to proceed.
 
-![disconnects](../../assets/integrations/msft_teams/disconnects-light.png#only-light)
-![disconnects](../../assets/integrations/msft_teams/disconnects-dark.png#only-dark)
+![disconnects](../../assets/integrations/msft_teams/disconnects-light.png)
 
 A confirmation message will appear on the screen displaying **“The Integration has been successfully disconnected”**.
 
-![msgs](../../assets/integrations/msft_teams/messgs-light.png#only-light)
-![msgs](../../assets/integrations/msft_teams/messgs-dark.png#only-dark)
+![msgs](../../assets/integrations/msft_teams/messgs-light.png)

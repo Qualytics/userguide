@@ -1,6 +1,6 @@
 # Source Datastore
 
-Qualytics connects to source datastore using "Datastores," a framework that enables organizations to:
+Qualytics connects to source datastores using "Datastores," a framework that enables organizations to:
 
 * Connect with Apache Spark-compatible source datastores.
 
@@ -22,14 +22,13 @@ A Datastore in Qualytics represents any structured source datastore, such as:
 
 * Relational databases (RDBMS)
 
-* Raw files like CSV, XLSX, JSON, Avro, or Parquet
+* Raw file formats like CSV, XLSX, JSON, Avro, or Parquet
 
 * Cloud storage platforms like AWS S3, Azure Blob Storage, or GCP Cloud Storage
 
 Qualytics integrates with these source datastores through a layered architecture:
 
-![datastore](../assets/datastores/what-is/datastore.png#only-light)
-![datastore](../assets/datastores/what-is/datastore.png#only-dark)
+![datastore](../assets/datastores/what-is/datastore.png)
 
 ## Configuring Source Datastores
 
@@ -37,47 +36,49 @@ Configure your source datastores in Qualytics by connecting them through a new d
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add](../assets/datastores/what-is/add-light-1.png#only-light)
-![add](../assets/datastores/what-is/add-dark-1.png#only-dark)
+![add](../assets/datastores/what-is/add-light-1.png)
 
-**Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
+**Step 2**: A modal window, **Add Datastore**, will appear, providing you with the options to connect a datastore.
 
-![connector](../assets/datastores/what-is/connector-light-2.png#only-light)
-![connector](../assets/datastores/what-is/connector-dark-2.png#only-dark)
+![connector](../assets/datastores/what-is/connector-light-2.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
-| 1. | Name | Specify the name of the datastore (e.g., The specified name will appear on the datastore cards). |
-| 2. | Toggle Button | Toggle **ON** to create a new source datastore from scratch, or toggle **OFF** to reuse credentials from an existing connection. |
+| 1. | Name | Specify the name of the datastore (e.g., the specified name will appear on the datastore cards). |
+| 2. | Toggle Button | Toggle **on** to create a new source datastore from scratch, or toggle **off** to reuse credentials from an existing connection. |
 | 3. | Connector | Select **Any source datastore** from the dropdown list. |
 
-## Available Datastores Connector
+## Available Datastore Connectors
 
 Qualytics supports a range of source datastores, including but not limited to:
 
-| No. | Source Datastores | Enrichment Support |
-| :---- | :---- | :---- |
-| 1. | [Amazon Redshift](../add-datastores/redshift.md) | Yes |
-| 2.  | [Amazon S3](../add-datastores/amazon-s3.md) | Yes |
-| 3. | [Athena](../add-datastores/athena.md) | No |
-| 4. | [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md) | Yes |
-| 5. | [Big Query](../add-datastores/bigquery.md) | Yes |
-| 6. | [Databricks](../add-datastores/databricks.md) | Yes |
-| 7. | [DB2](../add-datastores/db2.md) | Yes |
-| 8. | [Dremio](../add-datastores/dremio.md) | No |
-| 9. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md) | Yes |
-| 10. | [Hive](../add-datastores/hive.md) | No |
-| 11. | [MariaDB](../add-datastores/maria-db.md) | Yes |
-| 12. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md) | Yes |
-| 13. | [MySQL](../add-datastores/mysql.md) | Yes |
-| 14. | [Oracle](../add-datastores/oracle.md) | No |
-| 15. | [PostgreSQL](../add-datastores/postgresql.md) | Yes |
-| 16. | [Presto](../add-datastores/presto.md) | No |
-| 17. | [Snowflake](../add-datastores/snowflake.md) | Yes |
-| 18. | [Synapse](../add-datastores/synapse.md) | Yes |
-| 19. | [Teradata](../add-datastores/teradata.md) | No |
-| 20. | [Timescale DB](../add-datastores/timescale-db.md) | No |
-| 21. | [Trino](../add-datastores/trino.md) | Yes |
+!!! tip
+    Want to check which datastores have Enrichment support? 
+    See the [Supported Enrichment Datastores](../enrichment-support/supported-enrichment-datastores.md) 
+
+| No. | Source Datastores|
+| :---- | :----|
+| 1. | [Amazon Redshift](../add-datastores/redshift.md)|
+| 2. | [Amazon S3](../add-datastores/amazon-s3.md)|
+| 3. | [Athena](../add-datastores/athena.md)|
+| 4. | [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md)|
+| 5. | [Big Query](../add-datastores/bigquery.md)|
+| 6. | [Databricks](../add-datastores/databricks.md)|
+| 7. | [DB2](../add-datastores/db2.md)|
+| 8. | [Dremio](../add-datastores/dremio.md)|
+| 9. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md)|
+| 10. | [Hive](../add-datastores/hive.md)|
+| 11. | [MariaDB](../add-datastores/maria-db.md)|
+| 12. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)|
+| 13. | [MySQL](../add-datastores/mysql.md)|
+| 14. | [Oracle](../add-datastores/oracle.md)|
+| 15. | [PostgreSQL](../add-datastores/postgresql.md)|
+| 16. | [Presto](../add-datastores/presto.md)|
+| 17. | [Snowflake](../add-datastores/snowflake.md)|
+| 18. | [Synapse](../add-datastores/synapse.md)|
+| 19. | [Teradata](../add-datastores/teradata.md)|
+| 20. | [Timescale DB](../add-datastores/timescale-db.md)|
+| 21. | [Trino](../add-datastores/trino.md)|
 
 ## Connection Management
 
@@ -87,19 +88,17 @@ For demonstration purposes, we have selected the **Snowflake** connector.
 
 ### Option I: Create a Datastore with a New Connection
 
-If the toggle for **Add New Connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
+If the toggle for **Add New Connection** is turned on, this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1**: Select any connector as we are selecting **Snowflake** connector from the dropdown list and add connection properties such as Secrets Management, host, port, username, and password, along with datastore properties like catalog, database, etc.
+**Step 1**: Select any connector (as we are selecting the **Snowflake** connector) from the dropdown list and add connection properties such as Secrets Management, host, port, username, and password, along with datastore properties like catalog, database, etc.
 
-![detail](../assets/datastores/what-is/detail-light-3.png#only-light)
-![detail](../assets/datastores/what-is/detail-dark-3.png#only-dark)
+![detail](../assets/datastores/what-is/detail-light-3.png)
 
 For the next steps, refer to the "[**Add Source Datastore**](../add-datastores/snowflake.md#add-a-source-datastore)" section in the **Snowflake** Datastore documentation.
 
 Once a datastore is verified and created, it appears in your source datastores.
 
-![home](../assets/datastores/what-is/home-light-4.png#only-light)
-![home](../assets/datastores/what-is/home-dark-4.png#only-dark)
+![home](../assets/datastores/what-is/home-light-4.png)
 
 ## Datastore Operations
 
@@ -131,10 +130,8 @@ Once the datastores are connected, you can run operations on the selected datast
 
 **Step 1:** Simply click to open the datastore on which you ran the operation.
 
-![home](../assets/datastores/what-is/home-light-5.png#only-light)
-![home](../assets/datastores/what-is/home-dark-5.png#only-dark)
+![home](../assets/datastores/what-is/home-light-5.png)
 
 **Step 2:** After clicking on the datastore, select the "Activity" tab to view the ongoing operation.
 
-![activity](../assets/datastores/what-is/activity-light-6.png#only-light)
-![activity](../assets/datastores/what-is/activity-dark-6.png#only-dark)
+![activity](../assets/datastores/what-is/activity-light-6.png)

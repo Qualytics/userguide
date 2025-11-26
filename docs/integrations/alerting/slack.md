@@ -8,13 +8,11 @@ Let's get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.
 
-![settings](../../assets/integrations/slack/settings-light.png#only-light)
-![settings](../../assets/integrations/slack/settings-dark.png#only-dark)
+![settings](../../assets/integrations/slack/settings-light.png)
 
 **Step 2:** By default, Connections tab will open. Click on the **Integrations** tab .
 
-![integrations-tab](../../assets/integrations/slack/integrations-tab-light.png#only-light)
-![integrations-tab](../../assets/integrations/slack/integrations-tab-dark.png#only-dark)
+![integrations-tab](../../assets/integrations/slack/integrations-tab-light.png)
 
 ## Connect Slack Integration
 
@@ -22,13 +20,11 @@ Connect Slack by generating tokens, configuring connection properties, and autho
 
 **Step 1 :**Click on the **Connect** button next to Slack to connect to the Slack Integration.
 
-![connect](../../assets/integrations/slack/connect-light.png#only-light)
-![connect](../../assets/integrations/slack/connect-dark.png#only-dark)
+![connect](../../assets/integrations/slack/connect-light.png)
 
 A modal window titled **"Add Slack Integration"** appears. Fill in the connection properties to connect to Slack.
 
-![add-slack-integration](../../assets/integrations/slack/add-slack-integration-light.png#only-light)
-![add-slack-integration](../../assets/integrations/slack/add-slack-integration-dark.png#only-dark)
+![add-slack-integration](../../assets/integrations/slack/add-slack-integration-light.png)
 
 **Step 2:**First, generate the access and refresh tokens through the Slack API by signing in.
 
@@ -36,8 +32,7 @@ A modal window titled **"Add Slack Integration"** appears. Fill in the connectio
 
 Alternatively, hover over the **?** icon and click on the **Go to Slack Tokens.**
 
-![slack-hover](../../assets/integrations/slack/slack-hover-light.png#only-light)
-![slack-hover](../../assets/integrations/slack/slack-hover-dark.png#only-dark)
+![slack-hover](../../assets/integrations/slack/slack-hover-light.png)
 
 You will be automatically redirected to the Slack token page, where you can copy the **access token** for creating and configuring apps and the **refresh token** for rotating the access token.
 
@@ -45,8 +40,7 @@ You will be automatically redirected to the Slack token page, where you can copy
 
 **Step 3:**Fill out the copied connection properties of slack integration :
 
-![add-tokens](../../assets/integrations/slack/add-tokens-light.png#only-light)
-![add-tokens](../../assets/integrations/slack/add-tokens-dark.png#only-dark)
+![add-tokens](../../assets/integrations/slack/add-tokens-light.png)
 
 | No. | Field Name | Description |
 | :---- | :---- | :---- |
@@ -55,18 +49,15 @@ You will be automatically redirected to the Slack token page, where you can copy
 
 **Step 4:** Click the **Create** button to apply the access and refresh tokens and proceed with authorizing the Slack integration.
 
-![create-integration](../../assets/integrations/slack/create-integration-light.png#only-light)
-![create-integration](../../assets/integrations/slack/create-integration-dark.png#only-dark)
+![create-integration](../../assets/integrations/slack/create-integration-light.png)
 
 Once the integration is successfully created, a confirmation message will appear on the screen stating, **"The Integration has been successfully created."**
 
-![created-successfully](../../assets/integrations/slack/created-successfully-light.png#only-light)
-![created-successfully](../../assets/integrations/slack/created-successfully-dark.png#only-dark)
+![created-successfully](../../assets/integrations/slack/created-successfully-light.png)
 
 **Step 5:**Click the **Authorize** button to complete the Slack integration using OAuth authentication.
 
-![authorize](../../assets/integrations/slack/authorize-light.png#only-light)
-![authorize](../../assets/integrations/slack/authorize-dark.png#only-dark)
+![authorize](../../assets/integrations/slack/authorize-light.png)
 
 **Step 6:**After clicking the Authorize button, a window appears requesting permission to access the Slack workspace. Click the **Allow** button to grant the required permissions.
 
@@ -74,8 +65,7 @@ Once the integration is successfully created, a confirmation message will appear
 
 A message appears confirming that the integration has been successfully authorized.
 
-![authorized-successfully](../../assets/integrations/slack/authorized-successfully-light.png#only-light)
-![authorized-successfully](../../assets/integrations/slack/authorized-successfully-dark.png#only-dark)
+![authorized-successfully](../../assets/integrations/slack/authorized-successfully-light.png)
 
 ## Manage Slack Integration
 
@@ -87,33 +77,27 @@ Editing Slack integration allows modifications to the existing configuration to 
 
 **Step 1:**Click on the **vertical ellipses(⋮)** next to the Connected button and select the **Edit** option.
 
-![edit-slack](../../assets/integrations/slack/edit-slack-light.png#only-light)
-![edit-slack](../../assets/integrations/slack/edit-slack-dark.png#only-dark)
+![edit-slack](../../assets/integrations/slack/edit-slack-light.png)
 
 **Step 2:**A modal window **Edit Slack Integration** will appear providing you with options to edit the connection properties.
 
-![edit-slack-integration](../../assets/integrations/slack/edit-slack-integration-light.png#only-light)
-![edit-slack-integration](../../assets/integrations/slack/edit-slack-integration-dark.png#only-dark)
+![edit-slack-integration](../../assets/integrations/slack/edit-slack-integration-light.png)
 
 **Step 3 :**After editing the connection properties of the slack integration, click on the **Update** button to apply the changes.
 
-![update](../../assets/integrations/slack/update-light.png#only-light)
-![update](../../assets/integrations/slack/update-dark.png#only-dark)
+![update](../../assets/integrations/slack/update-light.png)
 
 A confirmation message will appear on the screen displaying “**The Integration has been successfully updated**”.
 
-![updated-successfully](../../assets/integrations/slack/updated-successfully-light.png#only-light)
-![updated-successfully](../../assets/integrations/slack/updated-successfully-dark.png#only-dark)
+![updated-successfully](../../assets/integrations/slack/updated-successfully-light.png)
 
 **Step 4:**Click on the **Authorize** button to update the authorization details.
 
-![update-authorize](../../assets/integrations/slack/update-authorize-light.png#only-light)
-![update-authorize](../../assets/integrations/slack/update-authorize-dark.png#only-dark)
+![update-authorize](../../assets/integrations/slack/update-authorize-light.png)
 
 A confirmation message will appear on the screen displaying “**The Integration has been successfully authorized**”.
 
-![authorized-successfully](../../assets/integrations/slack/authorized-successfully-light.png#only-light)
-![authorized-successfully](../../assets/integrations/slack/authorized-successfully-dark.png#only-dark)
+![authorized-successfully](../../assets/integrations/slack/authorized-successfully-light.png)
 
 ### Disconnect Integration
 
@@ -121,23 +105,19 @@ Disconnecting the Slack integration removes all associated synced assets and dis
 
 **Step 1 :** Click on the **vertical ellipses(⋮)** next to the connected button and select the **Disconnect** option to disconnect the integration.
 
-![disconnect](../../assets/integrations/slack/disconnect-light.png#only-light)
-![disconnect](../../assets/integrations/slack/disconnect-dark.png#only-dark)
+![disconnect](../../assets/integrations/slack/disconnect-light.png)
 
 **Step 2:**A modal window **Disconnect Integration** will appear allowing you to disconnect the slack integration.
 
-![disconnect-integration](../../assets/integrations/slack/disconnect-integration-light.png#only-light)
-![disconnect-integration](../../assets/integrations/slack/disconnect-integration-dark.png#only-dark)
+![disconnect-integration](../../assets/integrations/slack/disconnect-integration-light.png)
 
 **Step 3:**Click on the **Disconnect** button to proceed.
 
-![disconnect-button](../../assets/integrations/slack/disconnect-button-light.png#only-light)
-![disconnect-button](../../assets/integrations/slack/disconnect-button-dark.png#only-dark)
+![disconnect-button](../../assets/integrations/slack/disconnect-button-light.png)
 
 !!! note    
     This action will delete all synced assets by this integration. 
 
 A confirmation message will appear on the screen displaying **“The Integration has been successfully disconnected”.**
 
-![disconnected-successfully](../../assets/integrations/slack/disconnected-successfully-light.png#only-light)
-![disconnected-successfully](../../assets/integrations/slack/disconnected-successfully-dark.png#only-dark)
+![disconnected-successfully](../../assets/integrations/slack/disconnected-successfully-light.png)

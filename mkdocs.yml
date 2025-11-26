@@ -52,7 +52,6 @@ nav:
         - add-datastores/azure-datalake-storage.md
         - add-datastores/google-cloud-storage.md
       - connections/overview-of-a-connection.md
-      - enrichment-support/supported-enrichment-datastores.md
     # new page tree structure end
     - Source Datastores:
       - Right Click Options: source-datastore/right-click-options.md
@@ -70,12 +69,19 @@ nav:
         - Delete Datastore: source-datastore/delete-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
+      - Table Types:
+        - Overview: enrichment/table-types.md
+        - Enrichment Tables: enrichment/enrichment-tables.md
+        - Remediation Tables: enrichment/remediation-tables.md
+        - Metadata Tables: enrichment/metadata-tables.md
+        - API Payload Examples: enrichment/api-payload-examples.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
+      - Supported Enrichment Datastores: enrichment-support/supported-enrichment-datastores.md
       - Manage Enrichment: 
         - Enrichment Actions: enrichment/enrichment-actions.md
         - Add Enrichment: enrichment/enrichment-datastore-creation.md
         - Edit Enrichment: enrichment/edit-enrichment.md
-        - Delete Enrichment: enrichment/delete-enrichment.md
+        - Delete Enrichment: enrichment/delete-enrichment.md  
     - Containers:
       - Overview: container/container.md
       - Data Preview: container/data-preview.md
@@ -169,6 +175,17 @@ nav:
         - Quality Check Migration : datastore-checks/quality-check-migration.md
     - Observability:
       - Overview: observability/observability.md
+      - Observability Categories:
+        - Measures: observability/measures.md
+        - Metric: observability/metric-check.md
+        - Volumetric: observability/volumetric.md
+        - Freshness: observability/freshness.md  
+      - Manage Observability:
+        - Overview: observability/manage-observability.md
+        - Edit Check: observability/edit-check.md
+        - Edit Threshold: observability/edit-threshold.md 
+        - Edit Maximum Age: observability/edit-maximum-age.md
+        - Mark Check as Favorite: observability/mark-check.md
     - Anomalies:
       - Overview: anomalies/anomalies.md
       - Types: anomalies/anomaly-types.md
@@ -196,7 +213,14 @@ nav:
     - Flows:
       - Overview: flows/flows.md
     - Tags:
-      - Overview: tags/overview-of-tag.md
+      - Overview: tags/overview.md
+      - External Tags: tags/external-tag.md
+      - Manage Tags:
+        - Add Tag: tags/add-tag.md
+        - Applying Tag: tags/applying-a-tag.md
+        - Edit Tag: tags/edit-tag.md
+        - Filter and Sort: tags/filter-and-sort.md 
+        - Delete Tag: tags/delete-tag.md
     - Settings:
       - Connections: settings/connections/manage-connections.md
       - Security:
@@ -204,6 +228,7 @@ nav:
         - Team Permissions: settings/security/team-permissions.md
         - Directory Sync: settings/security/directory-sync.md
       - Tokens: settings/tokens/overview-of-tokens.md
+      - Service Account: settings/tokens/service-account.md
       - Status: settings/status/overview-of-status.md
     - Qualytics CLI:
         - Installing Python: cli/python-installation.md
@@ -234,7 +259,11 @@ nav:
       - deployments/overview.md
       - upgrades/qualytics-single-tenant-instance.md
       - deployments/databricks-deployment.md
-      - operation-automation/automated-tasks-with-cron.md
+      - External Automation: 
+        - Overview: operation-automation/overview.md
+        - Linux Machine: operation-automation/linux-machine.md
+        - Windows Machine: operation-automation/windows-machine.md
+        - Automated Setup Using Qualytics CLI: operation-automation/automated-setup-using-qualytics-cli.md
       - dfs-globbing/how-dfs-filename-globbing-works.md
       - glossary.md
 
