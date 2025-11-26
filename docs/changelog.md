@@ -2,6 +2,64 @@
 
 ## Release Notes
 
+### 2025.11.26 { id=2025.11.26 }
+
+#### Feature Enhancements
+
+- Introduced Quality Score Over Time and enhanced Insights dashboard.
+    - Quality Scores are now tracked historically, allowing users to monitor data quality trends over time at the datastore, container, and field levels.
+    - Added interactive Quality Score charts displaying score progression with dimension-level breakdown.
+    - Introduced a new Containers Scanned metric with trend indicators in Insights
+    - Added the Anomaly Rule Type Distribution histogram in Insights to identify which rule types generate the most anomalies.
+    - Quality Score Dimensions now include detailed explanations and recommendations for scores below 30.
+    - Added preview charts for field metrics, providing at-a-glance trend visualization alongside each metric.
+    - Reorganized Insights page layout with improved section grouping for better visual hierarchy.
+    - Quality Score history is available at both the total score and individual dimension levels for detailed trend analysis.
+
+- Introduced automated anomaly lifecycle management with new Archive and Delete flow actions.
+    - Both actions target anomalies with no recent activity, including status updates, assignments, or comments within the specified inactivity timeframe.
+    - Archive action supports status selection, optional tag assignment, and comments to provide context during archiving.
+    - Anomalies can be filtered by source datastores and tags for both actions, with additional status filters available for Delete operations.
+    - Notification messages now support dynamic tokens such as {{anomaly_count}} and {{inactivity_timeframe}} for context-aware alerts.
+    - Archive and Delete operations can be aborted mid-execution, but any anomalies already processed will not be rolled back.
+
+- Improved Check Templates with automated check permutation generation from filter arrays.
+    - Introduced `each()` keyword that automatically expands a single filter into multiple checks, one for each specified value in the array.
+    - Supports multiple `each()` clauses in a single filter to generate all possible value combinations across different dimensions.
+    - Template locking behavior determines check lifecycle—locked templates delete checks when values are removed, while unlocked templates preserve existing checks.
+
+- Added an “Activate” option for draft checks on the check page.
+    - Draft checks can now be activated directly from the gear menu on the check overview page, eliminating the need to navigate back to the field checks list.
+    - Includes persistent error notifications that remain visible until manually dismissed, ensuring users don't miss critical errors during activation.
+
+- Improved Dry Run validation for Is Replica Of checks with filters.
+    - Dry Run now queries the number of records matching the filter to compare left and right side row counts, mirroring the behavior of checks without filters.
+
+- Added ability to modify relative path on file patterns.
+    - Users can now edit the relative path field, enabling advanced globbing patterns for file selection.
+
+- Added View Results button for Materialize and Export operations.
+    - Users can now navigate directly to the Enrichment Materialize or Export tab with a single click from the operation card.
+    - Enrichment container tabs are now router-based, enabling direct navigation and shareable URLs to specific tabs.
+
+#### General Fixes and Improvements
+
+- Fixed history flow side panel not displaying after specific flow editing operations.
+
+- Corrected Quality Score displaying as 0 when navigating between datastores.
+
+- Resolved Expected Values check displaying a blank list when configured with numeric values.
+
+- Fixed issue where Observability triggers were not being recorded properly.
+
+- Correct operations getting stuck in running status instead of being marked as failed.
+
+- Resolved flow executions getting stuck in running status when multiple actions completed concurrently.
+
+- Flow execution nodes now display historical action configuration in their inline views for accurate review of past executions.
+
+- General Fixes and Improvements.
+
 ### 2025.11.6 { id=2025.11.6 }
 
 #### Feature Enhancements
