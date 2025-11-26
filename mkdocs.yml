@@ -224,6 +224,9 @@ nav:
         - Ticketing: integrations/ticketing.md
         - Workflow: integrations/workflow.md
         - Analytics: integrations/analytics.md
+        - AI & Agents:
+          - MCP: integrations/mcp.md
+          - Agentic API: integrations/agentic.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
