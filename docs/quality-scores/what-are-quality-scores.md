@@ -6,13 +6,13 @@ providing a granular analysis of the attributes that impact the overall data qua
 is a composite reflecting the relative importance and [configured weights](#most-impactful-dimensions) of these factors:
 
 - **Completeness**: Measures the average percentage of non-null values in a field throughout the measurement period. For example, if a "phone_number" field has values present in 90 out of 100 records, its completeness score for the measurement would be 90%.
-- **Coverage**: Measures the number of quality checks defined for monitoring the field's quality. 
+- **Coverage**: Measures the number of quality checks defined for monitoring the field's quality.
 - **Conformity**: Measures how well the data adheres to specified formats, patterns, and business rules. For example, checking if dates follow the required format (YYYY-MM-DD) or if phone numbers match the expected pattern.<br>_<span class="text-sm">See [Appendix: Conformity Rule Types](#conformity-rule-types) for the full Conformity rule type list.</span>_
 - **Consistency**: Measures uniformity in type and scale across all data representations. Verifies that data maintains the same type and representation over time. For example, ensuring that a typed numeric column does not change over time to a string.
 - **Precision**: Evaluates the resolution of field values against defined quality checks.<br>_<span class="text-sm">See [Appendix: Precision Rule Types](#precision-rule-types) for the full Precision rule type list.</span>_
 - **Timeliness**: Gauges data availability according to schedule.<br>_<span class="text-sm">See [Appendix: Timeliness Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
 - **Volumetrics**: Analyzes consistency in data size and shape over time.<br>_<span class="text-sm">See [Appendix: Volumetric Rule Types](#volumetric-rule-types) for the full Volumetrics rule type list.</span>_
-- **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values. 
+- **Accuracy**: Determines the fidelity of field values to their real-world counterparts or expected values.
 
 ### How Completeness, Precision, and Accuracy Differ
 
@@ -64,7 +64,7 @@ where n is the number of checks and k is tuned so that 1 check = 60.
 - **Fair balance**: More checks always improve the score, but the improvement diminishes as coverage becomes robust, preventing runaway inflation
 
 !!! note "Field vs. Container Coverage"
-    At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.  
+    At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.
     At the **container level**, Coverage is an **aggregate of field-level coverage scores**, further adjusted by **scan frequency** (more frequent scans → greater confidence).
 
 ### Conformity Dimension
@@ -115,7 +115,7 @@ The **Consistency** score measures how stable a field's values remain over time 
 
 !!! important "Consistency vs. Accuracy"
     **Consistency** checks whether a field’s **statistical shape and distribution remain stable over time** (e.g., numeric medians, string entropy).
-    
+
     **Accuracy**, by contrast, evaluates whether values are **correct and aligned to real-world truths or integrity rules**.
 
     Together, they capture different aspects of trustworthiness.
@@ -227,7 +227,7 @@ The **Timeliness** score gauges whether data is available according to its expec
 The **Volumetrics** score analyzes consistency in data size and shape over time.
 
 !!! note "Shared Scoring Formula"
-    Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.  
+    Timeliness and Volumetrics both use the **same exponential penalty formula** for anomaly counts.
     This consistency ensures comparable scoring behavior across dimensions, even though the anomalies being measured differ.
 
 **How Volumetrics is Calculated**
@@ -292,8 +292,8 @@ To further explore how to respond to Quality Scores, let's consider the business
     The key to effectively adopting Qualytics's Quality Scores into your data quality management efforts is to understand that it reflects both the intrinsic quality of the data and the steps taken to improve confidence that the data is fit for your specific business needs.
 
 !!! note "Fitness for Purpose in Practice"
-    Remember: Quality Scores are not absolute “grades.”  
-    They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.  
+    Remember: Quality Scores are not absolute “grades.”
+    They reflect **how well your data is suited for its intended business use**, influenced by weighting, tagging, and anomaly detection.
     Two datasets may have different scores but still both be "fit for purpose" depending on use case.
 
 ## Customizing Quality Score Weights and Decay Time
@@ -309,14 +309,14 @@ data events defaults to 180 days but can be customized to fit your operational n
     We strongly recommend retaining default weights unless governance priorities **clearly justify changes**.
 
     - Adjusting weights can significantly alter how anomalies impact overall scores.
-    - Misaligned weights may cause misleading signals about data quality.  
-    
+    - Misaligned weights may cause misleading signals about data quality.
+
     Proceed carefully, and document any custom weighting rationale.
 
 
 ## Appendix: Rule Types
 
-The following lists summarize which rule types contribute to each dimension’s quality score.  
+The following lists summarize which rule types contribute to each dimension’s quality score.
 
 ---
 
