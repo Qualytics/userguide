@@ -32,7 +32,7 @@
     - Draft checks can now be activated directly from the gear menu on the check overview page, eliminating the need to navigate back to the field checks list.
     - Includes persistent error notifications that remain visible until manually dismissed, ensuring users don't miss critical errors during activation.
 
-- Improved Dry Run validation for Is Replica Of checks with filters.
+- Improved Dry Run validation for `Data Diff` checks with filters.
     - Dry Run now queries the number of records matching the filter to compare left and right side row counts, mirroring the behavior of checks without filters.
 
 - Added ability to modify relative path on file patterns.
