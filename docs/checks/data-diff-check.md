@@ -3,20 +3,250 @@
 !!! info "Recommended Check"
     Qualytics recommends using the `dataDiff` rule type instead of the `isReplicaOf`.
     
-    The `isReplicaOf` check is sunsetting and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
+    The `isReplicaOf` check is being deprecated and will no longer be maintained, while `dataDiff` provides the same functionality with enhanced performance and additional capabilities.
 
-### Definition
+## What is Data Diff?
 
-*Asserts that the dataset created by the targeted field(s) matches the referred field(s) for data comparison.*
+Think of Data Diff as a **"spot the difference" game for your business data**. 
 
-#### In-Depth Overview
+Just like when you compare two pictures side-by-side to find what's changed, Data Diff compares two sets of information to make sure they match perfectly. It's like having a super-careful assistant who checks that when you copy something important, nothing gets lost, changed, or added by mistake.
 
-The `DataDiff` rule ensures that data integrity is maintained when comparing data between different sources. This involves checking not only the data values themselves but also ensuring that the structure and relationships are preserved.
+## Add Data Diff Check
 
-In a distributed data ecosystem, data comparison often occurs to validate consistency across systems, verify data transfers, or ensure data quality between sources. However, discrepancies might arise due to various reasons such as network glitches, software bugs, or human errors. The `DataDiff` rule serves as a safeguard against these issues by:
+Use the Data Diff Check to compare two tables, detect anomalies, and run a scan to identify mismatched or missing records for accurate data validation.
 
-1. **Preserving Data Structure**: Ensuring that the structure of the compared data matches between sources.
-2. **Checking Data Values**: Ensuring that every piece of data in the source matches the reference data.
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/BsQEUTRrjpb7CUKFQUn5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Configure a Data Diff Quality Check for a Data Table" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+## What Does Data Diff Do?
+
+Data Diff helps you answer questions like:
+
+- "Did all my customer orders copy correctly to the backup system?"
+- "Is the sales report showing the same numbers as the original database?"
+- "When we moved data from System A to System B, did everything transfer properly?"
+
+**In simple terms:** It makes sure Data Set A is an exact match of Data Set B.
+
+## How Does Data Diff Work?
+
+Let's break it down into simple steps:
+
+### Step 1: Choose What to Compare
+
+You pick two sets of data:
+
+- **The Original** (your main source of truth)
+- **The Copy** (backup, report, or transferred data)
+
+### Step 2: Pick What Matters
+You decide which information is important to check. For example:
+
+- Customer names
+- Order amounts
+- Product IDs
+- Dates
+
+### Step 3: The Comparison Happens
+
+Data Diff automatically looks at both sets:
+
+- Is everything from the original in the copy?
+- Is there anything extra in the copy that shouldn't be there?
+- Do all the values match exactly?
+
+### Step 4: Get Your Results
+
+The Data Diff report shows:
+
+- **Pass** – Target and reference datasets match; no action needed.
+- **Anomalies Found** – Differences detected; view the report to see which rows or fields differ.
+
+## Why Should You Use Data Diff?
+
+### 1. Catch Mistakes Before They Cause Problems
+
+Imagine your finance team creates a quarterly report from last night's data backup. If some transactions didn't copy over, your report would be wrong. Data Diff catches this immediately.
+
+### 2. Save Time and Reduce Stress
+
+Instead of manually checking thousands of rows in spreadsheets, Data Diff does it automatically in seconds.
+
+### 3. Build Trust in Your Data
+
+When you present numbers to leadership or clients, you can confidently say, "This data has been verified."
+
+### 4. Protect Your Business
+
+Wrong data can lead to:
+
+- Incorrect invoices
+- Bad business decisions
+- Compliance issues
+- Customer complaints
+
+Data Diff acts as your safety net.
+
+## Real-Life Example: Online Retail Store
+
+Let me walk you through a complete, real-world scenario:
+
+### The Situation
+
+**Sunshine Electronics** is an online store that sells gadgets. Every night at midnight, their system creates a backup copy of all the day's orders. This backup is used for:
+
+  - Creating daily sales reports
+  - Feeding data to their accounting system
+  - Analyzing customer trends
+
+### The Problem They Had
+
+One morning, the Sales Manager noticed the daily report showed 1,247 orders, but the warehouse had shipped 1,250 packages. **Where did 3 orders go?**
+
+After investigating, they discovered:
+
+  - The backup system had a glitch
+  - Some orders placed between 11:58 PM and midnight weren't copied over
+  - This had been happening for weeks
+  - They had been under-reporting revenue and had incorrect inventory counts
+
+### The Solution: Data Diff
+
+They set up Data Diff to automatically compare their main orders database with the backup every morning.
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(47.9861% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/geAoTYIt72B1msoV5AD0?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Thu Oct 30 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+**Here's what they compared:**
+
+**Original Orders Database:**
+
+| Order ID | Customer Name | Product | Amount | Date |
+| :--------- | :------------- | :-------- | :------- | :----------- |
+| 10001 | Sarah Johnson | Laptop | $899 | Jan 15, 2025 |
+| 10002 | Mike Chen | Headphones | $149 | Jan 15, 2025 |
+| 10003 | Emily Davis | Tablet | $399 | Jan 15, 2025 |
+| ... | ... | ... | ... | ... |
+| 10248 | David Lee | Phone Case | $19 | Jan 15, 2025 |
+| 10249 | Anna Brown | USB Cable | $12 | Jan 15, 2025 |
+| 10250 | Tom Wilson | Mouse | $29 | Jan 15, 2025 |
+
+**Backup Orders Database:**
+
+| Order ID | Customer Name | Product | Amount | Date |
+| :--------| :-------------| :-------| :------| :-----|
+| 10001 | Sarah Johnson | Laptop | $899 | Jan 15, 2025 |
+| 10002 | Mike Chen | Headphones | $149 | Jan 15, 2025 |
+| 10003 | Emily Davis | Tablet | $399 | Jan 15, 2025 |
+| ...   | ...     | ...     | ... | ...     |
+| <span class="text-negative">10248</span>  | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | 
+| <span class="text-negative">10249</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | 
+| <span class="text-negative">10250</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> | <span class="text-negative">Missing</span> |
+
+### What Data Diff Discovered
+
+**ALERT GENERATED:**
+
+!!! warning "DIFFERENCE DETECTED!"
+    - Fields Affected: amount, order_id, product, order_date, customer_name
+    - Rule Applied: Data Diff
+    - Anomalous Records: 3
+
+**Technical Output (from Qualytics):**
+
+After running the Data Diff check, the system identified mismatched records between the **Original Orders Database (Left)** and the **Backup Orders Database (Right)**.
+
+| Row Status | order_id | amount (Left → Right) | order_date (Left → Right) | customer_name (Left → Right) | product (Left → Right) |
+| ----------- | -------- | -------------------- | -------------------------- | ---------------------------- | ---------------------- |
+| removed     | 10248    | 19.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | David Lee → <span style="color:red">missing</span>         | Phone Case → <span style="color:red">missing</span>   |
+| removed     | 10249    | 12.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Anna Brown → <span style="color:red">missing</span>         | USB Cable → <span style="color:red">missing</span>    |
+| removed     | 10250    | 29.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Tom Wilson → <span style="color:red">missing</span>         | Mouse → <span style="color:red">missing</span>        |
+
+![deactivate-user](../assets/checks/data-diff/anomaly-result.png)
+
+### 🔍 Summary
+- These three records exist in the **Original Orders Database** but are **missing from the Backup Orders Database**.  
+- The “removed” status means Data Diff detected entries that weren’t found in the reference (right) table.  
+- This confirms that some orders failed to copy during the backup process.
+
+### The Outcome
+
+**Immediate Benefits:**
+
+- They fixed the backup system timing issue
+- They recovered the missing orders data
+- They corrected their sales reports
+
+**Long-term Benefits:**
+
+- Now they get an automatic email every morning confirming data matches
+- If there's ever a mismatch, they know within hours instead of weeks
+- They prevented thousands of dollars in unreported revenue
+- Their inventory tracking became accurate again
+
+## Another Quick Example: Healthcare Clinic
+
+**City Health Clinic** transfers patient appointment data from their scheduling system to their billing system every hour.
+
+**They use Data Diff to check:**
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(50.5889% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/StVoSWYUzYLtzk1FZRuH?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Mon Nov 03 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+- Patient Name
+- Appointment Date
+- Doctor Assigned
+- Service Type
+- Insurance Information
+
+### 📋 Before Correction (Data Diff Caught This)
+
+| **Field**      | **Scheduling System** | **Billing System** |
+|----------------|----------------------|--------------------|
+| Patient        | Robert Martinez       | Robert Martinez    |
+| Doctor         | Dr. Smith             | Dr. Smith          |
+| Insurance Plan | BlueCross Plan **A**  | <span style="color:red">BlueCross Plan **B** </span> |
+
+The **Insurance Plan** code changed during transfer. Without Data Diff, the clinic would have billed the wrong insurer.
+
+### ✅ After Correction (Fixed Data)
+
+| **Field**      | **Scheduling System** | **Billing System** |
+|----------------|----------------------|--------------------|
+| Patient        | Robert Martinez       | Robert Martinez    |
+| Doctor         | Dr. Smith             | Dr. Smith          |
+| Insurance Plan | BlueCross Plan **A**  | BlueCross Plan **A** |
+
+!!! info
+    Data Diff caught the mismatch and the billing team corrected it before submitting the claim — avoiding claim rejection, payment delays, and extra work.
+
+### 🧩 Anomalies Detected – Output Table
+
+The Data Diff check found a mismatch between the **scheduling_system** and **billing_system** datasets for one record.  
+The issue was detected in the **insurance_plan** field for the patient **Robert Martinez**.
+
+| **Row Status** | **Patient**        | **Field**         | **Left (Scheduling System)** | **Right (Billing System)** |
+|----------------|-------------------|-------------------|------------------------------|-----------------------------|
+| Changed        | Robert Martinez   | insurance_plan    | BlueCross Plan A             | <span style="color:red">BlueCross Plan B</span>            |
+
+![deactivate-user](../assets/checks/data-diff/anomaly-detail.png)
+
+## Key Takeaways
+
+**Data Diff is like having a careful proofreader** who checks that when you copy important information, nothing goes wrong.
+
+**It works automatically**- you set it up once, and it keeps watching your data 24/7.
+
+**It catches problems early**- before they affect your reports, decisions, or customers.
+
+**It gives you peace of mind**- you can trust that your backup, reports, and transferred data are accurate.
+
+## When Should You Use Data Diff?
+
+Use Data Diff whenever you:
+
+- Copy data from one place to another
+- Create backups of important information
+- Generate reports from multiple sources
+- Transfer data between different systems
+- Move data to the cloud
+- Export data to partners or vendors
 
 ### Field Scope
 
@@ -40,7 +270,6 @@ include-markdown "components/general-props/index.md"
 start='<!-- filter-only--start -->'
 end='<!-- filter-only--end -->'
 %}
-
 
 ### Specific Properties
 
@@ -79,9 +308,6 @@ Specify the datastore and table/file where the reference data for the targeted f
     {%
         include-markdown "components/comparators/string.md"
     %}
-
-
-
 
 ### Anomaly Types
 
