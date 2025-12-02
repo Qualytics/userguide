@@ -2,7 +2,7 @@
 
 Service Tokens are generated when you create a **Service Account** or manually through the **Tokens** management page. These tokens are essential for automating API interactions and securely authenticating requests made by your automated systems.
 
-## Let’s get started 🚀
+Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.
 
@@ -47,7 +47,7 @@ A modal window will appear, providing the options for generating the token.
 
 ![list](../../assets/tokens/service-token/list-8.png)
 
-# Example Usage of Service Tokens
+## Usage of Service Tokens
 
 Once generated, include the service token in the Authorization header of all API requests:
 
@@ -73,9 +73,7 @@ response = requests.get(f"{QUALYTICS_API}/datastores", headers=headers)
 print(response.json())
 ```
 
-# Creating a Service Token via API
-
-### Creating a Service Token via API
+## Creating a Service Token via API
 
 **Endpoint:**
 

@@ -7,12 +7,12 @@ Service Tokens authenticate automated systems that use Service Accounts to acces
 Service Tokens are secure credentials used by Service Accounts to authenticate API requests. They support expiration settings and can be revoked or restored as necessary.  
 
 !!! note 
-    For more information, please refer to the [What Are Service Tokens](service-token.md){target="_blank"} documentation.
+    For more details, check out the [Service Tokens](service-token.md){target="_blank"} documentation.
 
 ## Generate Service Tokens
 
 Learn how to generate tokens for Service Accounts. This process enables automated systems to securely authenticate with the Qualytics API.  
 
 !!! note 
-    For more information, please refer to the [Generate Service Token](generate-service-token.md){target="_blank"} documentation.
+    If you want to learn more, check out the [Generate Service Token](generate-service-token.md){target="_blank"} documentation.
 
