@@ -247,7 +247,19 @@ nav:
         - Team Permissions: settings/security/team-permissions.md
         - Directory Sync: settings/security/directory-sync.md
       - Tokens: settings/tokens/overview-of-tokens.md
-      - Service Account: settings/tokens/service-account.md
+      - Service Account: 
+        - Overview: settings/service-account/service-account.md
+        - Create Service Account: settings/service-account/create-service-account.md 
+      - Service Token:
+        - Overview: settings/service-token/overview.md
+        - Service Token: settings/service-token/service-token.md
+        - Generate Service Account: settings/service-token/generate-service-token.md
+        - Token Usage Status: settings/service-token/token-usage-status.md
+        - Revoking Service Token: settings/service-token/revoking-service-token.md
+        - Restore Service Token: settings/service-token/restore-service-token.md
+        - Delete Service Token: settings/service-token/delete-service-token.md
+        - Team Membership Strategy: settings/service-token/team-membership-strategy.md
+        - Best Practices: settings/service-token/best-practices.md
       - Status: settings/status/overview-of-status.md
     - Qualytics CLI:
         - Installing Python: cli/python-installation.md
