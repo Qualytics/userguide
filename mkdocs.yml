@@ -218,6 +218,7 @@ nav:
       - Actions Node: 
         - Overview: flows/overview-action.md
         - Operations: flows/operations.md
+        - Anomaly: flows/anomaly.md
         - Notifications: flows/notification.md
         - HTTP: flows/http.md 
       - View and Track Flow Executions: flows/view-created-flows.md
