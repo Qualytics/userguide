@@ -20,13 +20,21 @@ A modal window will appear with the check details. If you want to make any chang
 
 After clicking the **Activate** button, your check has been successfully moved to active checks, and a success message will appear on the screen.
 
-Alternatively, you can activate a draft check by clicking the vertical ellipsis **(⋮)** next to the draft check and selecting **"Activate"** from the dropdown menu.
+Another option is to activate the check straight from the draft list without opening it. Click the vertical ellipsis **(⋮)** next to the draft check and selecting **"Activate"** from the dropdown menu.
 
 ![activate-specific](../assets/datastore-checks/activate-draft-check/activate-specific-light.png)
 
 A confirmation modal window **“Activate Check”** will appear. Click the **“Activate”** button to activate the draft check.
 
 ![activate-modal](../assets/datastore-checks/activate-draft-check/activate-modal-light.png)
+
+You can also activate a draft check directly from its **Overview page**. Open the check, click the setting button in the top-right corner, and select **Activate** from the dropdown menu.
+
+![activate-modal](../assets/datastore-checks/activate-draft-check/activate-overview-light.png)
+
+A confirmation modal will appear. Once completed, a success message will appear.
+
+![modal](../assets/datastore-checks/activate-draft-check/confirmation-window-light.png)
 
 ## Method II. Activate Draft Checks in Bulk
 
