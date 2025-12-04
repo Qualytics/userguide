@@ -18,7 +18,7 @@ Users can view flow execution in real-time by clicking on the desired flow opera
 
 **Step 1**: Click on the flow operation you want to view.
 
-![manual-flow](.././assets/flows/manuall-flow-light.png)
+![manual-flow](.././assets/flows/manual-flow-light.png)
 
 After clicking, you will navigate to the selected flow operation details page. The page displays all operational details in real-time. Please note, this page is **view-only**, and no edits can be made.
 
@@ -52,3 +52,19 @@ To view detailed results of specific operations:
 **Step 2**: You will navigate to the **Activity page**, where a **Result Modal** will open, displaying in-depth details of the operation.
 
 ![result](.././assets/flows/result-light-104.png)
+
+## View Historical Action Settings
+
+You can also review the **exact configuration** that was used for each action when the flow executed. This helps you understand how the flow behaved during that run, even if the flow has been edited afterward.
+
+### How to View Historical Settings
+
+**Step 1:** Click on any action in the execution graph to view its historical settings.
+
+![historical](.././assets/flows/historical-setting.png)
+
+**Step 2:** A panel appears on the right side showing the **historical configuration** for that action.
+
+This panel displays the action’s settings exactly as they were at the moment the flow ran, including selected inputs, parameters, and options.
+
+![historical-configuration](.././assets/flows/historical-configuration.png)

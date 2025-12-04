@@ -65,15 +65,18 @@ Provide a note that will appear on every archived anomaly, giving future reviewe
 You can narrow down **which anomalies** should be archived:
 
 - **Source Datastores** — Archive anomalies from selected datastores only  
-- **Anomaly Tags** — Archive anomalies labeled with specific tags  
 
 ![conditions](.././assets/flows/anomalies.png)
+
+- **Anomaly Tags** — Archive anomalies labeled with specific tags  
+
+![conditions](.././assets/flows/anomaly-tag.png)
 
 ##  Delete
 
 The **Delete** action permanently removes anomalies after a set inactivity period. Use this when you don't need to retain historical anomaly records—e.g., for ephemeral data or noise cleanup.
 
-![delete](.././assets/flows/deleted.png)
+![delete](.././assets/flows/delete.png)
 
 !!! warning
     Delete permanently removes anomalies from the system. This cannot be undone.
@@ -89,7 +92,14 @@ The Delete action looks for anomalies that have had **no updates or comments** d
 
 Define how long an anomaly must remain inactive before deletion.
 
-![inactivity-period](.././assets/flows/anomaly.png)
+Options include:
+
+- Week
+- Month
+- Quarter
+- Year
+
+![inactivity-period](.././assets/flows/inactivity-delete.png)
 
 !!! note 
     Anomalies are deleted if they have no updates or comments during the selected inactivity period.
@@ -97,6 +107,8 @@ Define how long an anomaly must remain inactive before deletion.
 #### Source Datastores 
 
 Delete anomalies originating from specific datastores.
+
+![delete-specific](.././assets/flows/delete-specific.png)
 
 #### Anomaly Statuses  
 
@@ -109,15 +121,13 @@ Target anomaly states such as:
 - Invalid  
 - Discarded  
 
-![inactivity-period](.././assets/flows/anomaly.png)
+![anomaly-status](.././assets/flows/anomaly-status.png)
 
 #### Anomaly Tags  
 
 Delete anomalies that carry specific tags (e.g., `test-data`, `noise`).
 
-![anomaly-tags](.././assets/flows/anomaly.png)
-
-> 💡 Combine filters to delete only *very specific* anomaly types.
+![anomaly-tags](.././assets/flows/anomalies-tags.png)
 
 ## 📘 When to Use Archive vs Delete
 
