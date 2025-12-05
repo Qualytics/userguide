@@ -84,6 +84,18 @@ The **Profile Results** modal displays a list of both profiled and non-profiled 
 
 ![profiled](../assets/explore/activity/profiled-light.png)
 
+If the operation is a **Materialize** or **Export** run, users can click the **View Results** button to navigate directly to the associated **Enrichment Datastore**.
+
+![view-results](../assets/explore/activity/view-results-light.png)
+
+- When **View Results** is clicked on a **Materialize** run, the system opens the related Materialize entry so users can review the complete results.
+
+![materialize](../assets/explore/activity/materialize-light.png)
+
+- When **View Results** is clicked on an **Export** run, the system opens the corresponding Export entry within the Enrichment Datastore, allowing users to view the export output.
+
+![export](../assets/explore/activity/export-light.png)
+
 ### Schedule
 
 The Schedule section provides a complete record of all scheduled operations across various source datastores. This section enables users to monitor and review scheduled operations such as [catalog](../source-datastore/catalog.md), [profile](../source-datastore/profile.md), and [scan](../source-datastore/scan.md). Each scheduled operation includes key details like operation type, scheduled time, and triggering method, giving users a clear overview of system performance and data workflows.
