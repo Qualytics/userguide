@@ -44,6 +44,79 @@ The filter clause defines the conditions under which the check will be applied. 
 
 ![filter-clause](../assets/checks/add-check-template/filter-clause.png)
 
+**Using each() in Filter Clauses**
+
+The each() keyword allows you to define a single Check Template that automatically expands into multiple checks — one for each value in a provided array.
+
+This makes it easier to apply the same check logic across multiple dimensions (such as regions, countries, or product categories) without manually creating separate checks.
+
+**Syntax:**
+
+```
+<field_name> = each('<VALUE_1>', '<VALUE_2>', '<VALUE_3>', ...)
+```
+**Example:**
+
+```
+country_code = each('BRA', 'USA', 'ESP', 'CHN')
+```
+When this template is applied, Qualytics creates four checks, each using one of the specified
+values for **country_code**
+
+**Behavior:**
+
+- The **each()** keyword can be used only in the filter clause of a Check Template.
+- It is **not supported** on individual checks.
+- If used in a check filter directly, an error appears, **each()** is not supported on a Check’s filter clause.
+- You can include multiple **each()** clauses in the same filter clause.
+- Each clause is expanded independently, generating all possible permutations of values.
+
+!!! note
+    Permutation logic runs only when a check is **created from a template** or when the **template is updated and saved**. Editing an existing check does **not** trigger permutations.
+
+**Checks Created by each()**
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/mCGecmHRiwak8lOLlWOX?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Mon Nov 10 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+**Example:**
+
+```
+region = each('EU', 'US') AND category = each('Retail', 'Wholesale')
+```
+→ Produces **4 checks** (2 × 2 permutations).
+
+- During template execution, the ControlPlane automatically expands **each()** array to create all necessary permutations of checks.
+
+**Locked vs. Unlocked Templates**
+
+The way checks are added or removed depends on whether the template is locked.
+
+| Template State | Behavior |
+|----------------|----------|
+| **Locked**     | Removing a value from an `each()` array deletes the corresponding check. Adding a new value creates a new check. |
+| **Unlocked**   | Adding a new value creates a new check. Removing a value does not delete existing checks. |
+
+**Example**
+
+Filter Clause:
+`country_code = each('ITA', 'MEX', 'ESP')`
+
+**Result**
+
+- The system generates three checks — one each for Italy, Mexico, and Spain.
+
+- Adding **'BRA'** creates a new check for **Brazil**.
+
+- If the template is **locked** and **'ESP'** is removed, the Spain check is deleted.
+
+- If the template is **unlocked**, existing checks remain even after removing values.
+
+!!! notes
+    - each() can be combined with other standard filter operators (=, >, <, IN, etc.).
+    - Multiple each() filters can be used within the same clause to support complex filtering logic.
+    - This feature applies only to checks generated from templates — not to manually created checks.
+    - When templates are applied, each() arrays are expanded automatically to generate the required checks behind the scenes.
+
 Adjust the **Coverage** setting to specify the percentage of records that must comply with the check.
 
 !!! note
