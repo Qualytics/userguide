@@ -6,28 +6,34 @@ Check Templates streamline the validation process by enabling check management i
 
 Let's get started 🚀
 
-**Step 1:** Log in to your Qualytics account and click the **“Library”** button on the left side panel of the interface.
+## Navigation
+
+**Step 1:** Log in to your Qualytics account and click the **"Library"** button on the left-side panel.
 
 ![library](../assets/checks/add-check-template/library-light-1.png)
 
-**Step 2:** Click on the **“Add Check Template”** button located in the top right corner.
+**Step 2:** Click on the **"Add Check Template"** button in the top-right corner.
 
 ![add-check](../assets/checks/add-check-template/add-check-light-2.png)
 
-A modal window titled **“Check Template Details”** will appear, providing you with the options to add the check template details.
+A modal titled **"Check Template Details"** will appear, providing you with the options to add the check template details.
 
 ![template-detail](../assets/checks/add-check-template/template-detail.png)
+
+## Create a Check Template
 
 **Step 3:** Enter the following details to add the check template:
 
 - **Rule Type (Required)**  
 - **Filter Clause**
-- **Template Locked**
+- **Template Options**
 - **Description (Required)**  
 - **Tags**  
 - **Additional Metadata**  
 
-**1. Rule Type (Required):** Select a Rule Type from the dropdown menu for data validation, such as checking for non-null values, matching patterns, comparing numerical values, or verifying datetime constraints. Each rule type defines the specific validation logic to be applied.
+### Rule Type
+
+Select a Rule Type from the dropdown menu for data validation, such as checking for non-null values, matching patterns, comparing numerical values, or verifying datetime constraints. Each rule type defines the specific validation logic to be applied.
 
 For more details about the available rule types, refer to the "[Check Rule Types](./overview-of-a-check.md#check-rule-types)" section.
 
@@ -36,17 +42,19 @@ For more details about the available rule types, refer to the "[Check Rule Types
 
 ![rule-type](../assets/checks/add-check-template/rule-type.png)
 
-**2. Filter Clause:** Specify a valid [Spark SQL](https://spark.apache.org/docs/latest/sql-ref.html) `WHERE` expression to filter the data on which the check will be applied.
+### Filter Clause
+
+Specify a valid [Spark SQL](https://spark.apache.org/docs/latest/sql-ref.html) `WHERE` expression to filter the data on which the check will be applied.
 
 The filter clause defines the conditions under which the check will be applied. It typically includes a `WHERE` statement that specifies which rows or data points should be included in the check.
 
-**Example:** A filter clause might be used to apply the check only to rows where a certain column meets a specific condition, such as `WHERE status \= 'active'`.
+**Example:** A filter clause might be used to apply the check only to rows where a certain column meets a specific condition, such as `WHERE status = 'active'`.
 
 ![filter-clause](../assets/checks/add-check-template/filter-clause.png)
 
-**Using each() in Filter Clauses**
+#### Using each()
 
-The each() keyword allows you to define a single Check Template that automatically expands into multiple checks — one for each value in a provided array.
+The `each()` keyword allows you to create multiple checks from a single Check Template — one for each value in a provided list.
 
 This makes it easier to apply the same check logic across multiple dimensions (such as regions, countries, or product categories) without manually creating separate checks.
 
@@ -55,53 +63,61 @@ This makes it easier to apply the same check logic across multiple dimensions (s
 ```
 <field_name> = each('<VALUE_1>', '<VALUE_2>', '<VALUE_3>', ...)
 ```
+
 **Example:**
 
 ```
 country_code = each('BRA', 'USA', 'ESP', 'CHN')
 ```
-When this template is applied, Qualytics creates four checks, each using one of the specified
-values for **country_code**
+
+When creating a check from a template with this filter, Qualytics expands it into four checks, each using one of the specified values for **country_code**.
 
 **Behavior:**
 
-- The **each()** keyword can be used only in the filter clause of a Check Template.
-- It is **not supported** on individual checks.
-- If used in a check filter directly, an error appears, **each()** is not supported on a Check’s filter clause.
-- You can include multiple **each()** clauses in the same filter clause.
-- Each clause is expanded independently, generating all possible permutations of values.
+- The `each()` keyword can only be used when **creating checks from a template**.
+- It is **not supported** when updating an existing check's filter.
+- If you try to create a check with `each()` **when permutations already exist** for the check, an error will appear. To add or remove permutation values, update the template's filter instead.
+- You can include multiple `each()` clauses in the same filter. Each clause is expanded independently, generating all possible permutations.
 
 !!! note
-    Permutation logic runs only when a check is **created from a template** or when the **template is updated and saved**. Editing an existing check does **not** trigger permutations.
+    Permutation logic runs when checks are **created from a template** or when the **template's filter is updated**. Editing an existing check's filter does **not** trigger permutations.
 
 **Checks Created by each()**
 
 <!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/mCGecmHRiwak8lOLlWOX?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Mon Nov 10 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
-**Example:**
+**Example with Multiple each() Clauses:**
 
 ```
 region = each('EU', 'US') AND category = each('Retail', 'Wholesale')
 ```
-→ Produces **4 checks** (2 × 2 permutations).
 
-- During template execution, the ControlPlane automatically expands **each()** array to create all necessary permutations of checks.
+This produces **4 checks** (2 × 2 permutations):
+
+- `region = 'EU' AND category = 'Retail'`
+- `region = 'EU' AND category = 'Wholesale'`
+- `region = 'US' AND category = 'Retail'`
+- `region = 'US' AND category = 'Wholesale'`
+
+**Managing Permutations**
+
+Once checks with permutations exist, add or remove values by updating the **template's filter**. The system will create or delete checks accordingly based on whether the template is locked.
 
 **Locked vs. Unlocked Templates**
-
-The way checks are added or removed depends on whether the template is locked.
 
 | Template State | Behavior |
 |----------------|----------|
 | **Locked**     | Removing a value from an `each()` array deletes the corresponding check. Adding a new value creates a new check. |
-| **Unlocked**   | Adding a new value creates a new check. Removing a value does not delete existing checks. |
+| **Unlocked**   | Adding a new value creates a new check. Removing a value does **not** delete existing checks. |
 
 **Example**
 
-Filter Clause:
-`country_code = each('ITA', 'MEX', 'ESP')`
+Initial filter when creating checks:
+```
+country_code = each('ITA', 'MEX', 'ESP')
+```
 
-**Result**
+**Result:**
 
 - The system generates three checks — one each for Italy, Mexico, and Spain.
 
@@ -111,11 +127,12 @@ Filter Clause:
 
 - If the template is **unlocked**, existing checks remain even after removing values.
 
-!!! notes
-    - each() can be combined with other standard filter operators (=, >, <, IN, etc.).
-    - Multiple each() filters can be used within the same clause to support complex filtering logic.
-    - This feature applies only to checks generated from templates — not to manually created checks.
-    - When templates are applied, each() arrays are expanded automatically to generate the required checks behind the scenes.
+!!! note
+    - `each()` can be combined with other standard filter operators (`=`, `>`, `<`, `IN`, etc.).
+    - Multiple `each()` clauses can be used within the same filter to support complex filtering logic.
+    - This feature applies only to checks created from templates — not to standalone checks without a template.
+
+### Coverage
 
 Adjust the **Coverage** setting to specify the percentage of records that must comply with the check.
 
@@ -124,13 +141,17 @@ Adjust the **Coverage** setting to specify the percentage of records that must c
 
 ![coverage-setting](../assets/checks/add-check-template/coverage-setting.png)
 
-**3. Template Locked:** Check or uncheck the **"Template Locked"** option to determine whether all checks created from this template will have their properties automatically synced to any changes made to the template.
+### Template Options
+
+Check or uncheck the **"Template Locked"** option to determine whether all checks created from this template will have their properties automatically synced to any changes made to the template.
 
 For more information about the template state, jump to the "[**Template State**](#template-state)" section below.  
 
 ![template](../assets/checks/add-check-template/template.png)
 
-**4. Description (Required):** Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the "💡" **lightbulb** icon to apply a suggested description based on the rule type.
+### Description
+
+Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the "💡" **lightbulb** icon to apply a suggested description based on the rule type.
 
 **Example:** "The < field > must exist in `bank_transactions_*.csv.Total_Transaction_Amount` (Bank Dataset - Staging)".
 
@@ -138,11 +159,15 @@ This description clarifies that the specified field must be present in a particu
 
 ![description](../assets/checks/add-check-template/description.png)
 
-**5. Tags:** Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality,"** **"financial reports,"** or **"critical checks."**
+### Tags
+
+Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality"**, **"financial reports"**, or **"critical checks"**.
 
 ![tag](../assets/checks/add-check-template/tag.png)
 
-**6. Additional Metadata:** Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
+### Additional Metadata
+
+Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
 
 ![metadata](../assets/checks/add-check-template/metadata.png)
 
@@ -163,15 +188,17 @@ After saving the check template, you can now **Apply a Check Template to create 
 
 Once a check template is created, you can view its details by clicking on it, where three tabs are displayed at the top: **Overview**, **Checks**, and **Anomalies**.
 
-## Overview
+## Template Details
+
+### Overview Tab
 
 The **Overview** tab gives a complete view of a check template, showing its key details, configuration, and recent activities. In the **Summary** section, users can also use redirect buttons to quickly navigate to related tabs like **Checks** and **Active Anomalies**. Information is divided into three sections: **Summary**, **Activity**, and **Definition**.
 
 ![details-view](../assets/checks/add-check-template/details-view.png)
 
-### Summary
+#### Summary
 
-The Summary section provides a quick overview of the check template’s key details, including its name, type, priority, coverage, associated checks, active anomalies, description, and tags — helping users quickly understand its purpose and current status.
+The Summary section provides a quick overview of the check template's key details, including its name, type, priority, coverage, associated checks, active anomalies, description, and tags — helping users quickly understand its purpose and current status.
 
 ![summary-section](../assets/checks/add-check-template/summary-section.png)
 
@@ -188,7 +215,7 @@ The Summary section provides a quick overview of the check template’s key deta
 
 ![summary-fields](../assets/checks/add-check-template/summary-fields.png)
 
-### Definition
+#### Definition
 
 The Definition section displays the configuration details of a check template. It outlines the target conditions, specific properties, and any additional metadata associated with the template, providing clarity on how and where it is applied.
 
@@ -202,7 +229,7 @@ The Definition section displays the configuration details of a check template. I
 
 ![definition-fields](../assets/checks/add-check-template/definition-fields.png)
 
-### Activity
+#### Activity
 
 The Activity section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
 
@@ -212,7 +239,7 @@ You can hover over a timestamp to view the full date and last modified time.
 
 ![modified](../assets/checks/add-check-template/modified.png)
 
-## Checks
+### Checks Tab
 
 The **Checks** tab provides a comprehensive view of all checks linked to the chosen datastore, container, or field, along with their source details such as computed table and field information. By clicking options such as **Active, Important, Favorite, Draft, Archived** (Invalid and Discarded), or **All,** users can instantly view checks based on their status. This categorization helps in organizing, reviewing, and managing checks more effectively for consistent data quality oversight.
 
@@ -222,7 +249,7 @@ Alternatively, users can navigate to the **Checks** tab directly from the **Over
 
 ![checks-button](../assets/checks/add-check-template/redirect-checks.png)
 
-## Anomalies
+### Anomalies Tab
 
 The **Anomalies** tab displays all anomalies detected for the selected check template, along with details such as source datastore, computed table, field, rule, and the number of anomalous records. Users can view anomalies based on their status: **Open, Active, Acknowledged, Archived,** or **All** and sort them based on specific parameters.
 
