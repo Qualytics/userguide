@@ -7,7 +7,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
 
     Simply specify the condition you want to be met.
 
-    ???+ success "Correct usage"
+    ???+ success "Correct usage" collapsible="true"
         ```sql
         O_TOTALPRICE > 1000
         ```
@@ -16,7 +16,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
         C_MKTSEGMENT = 'BUILDING'
         ```
 
-    ???+ failure "Incorrect usage"
+    ???+ failure "Incorrect usage" collapsible="true"
         ```sql
         WHERE O_TOTALPRICE > 1000
         ```
@@ -29,7 +29,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
 
     Combine multiple conditions using logical operators like `AND` and `OR`.
 
-    ???+ success "Correct usage"
+    ???+ success "Correct usage" collapsible="true"
         ```sql
         O_ORDERPRIORITY = '1-URGENT' AND O_ORDERSTATUS = 'O'
         ```
@@ -38,7 +38,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
         (L_SHIPDATE = '1998-09-02' OR L_RECEIPTDATE = '1998-09-01') AND L_RETURNFLAG = 'R'
         ```
 
-    ???+ failure "Incorrect usage"
+    ???+ failure "Incorrect usage" collapsible="true"
         ```sql
         WHERE O_ORDERPRIORITY = '1-URGENT' AND O_ORDERSTATUS = 'O'
         ```
@@ -51,7 +51,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
 
     Leverage Spark SQL functions to refine and enhance your conditions.
 
-    ???+ success "Correct usage"
+    ???+ success "Correct usage" collapsible="true"
         ```sql
         RIGHT(
             O_ORDERPRIORITY,
@@ -63,7 +63,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
         LEVENSHTEIN(C_NAME, 'Supplier#000000001') < 7
         ```
 
-    ???+ failure "Incorrect usage"
+    ???+ failure "Incorrect usage" collapsible="true"
         ```sql
         RIGHT(
             O_ORDERPRIORITY,
@@ -79,7 +79,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
 
     To refer to the current dataframe being analyzed, use the reserved dynamic variable `{{_qualytics_self}}`.
 
-    ???+ success "Correct usage"
+    ???+ success "Correct usage" collapsible="true"
         ```sql
         O_ORDERSTATUS IN (
             SELECT DISTINCT O_ORDERSTATUS
@@ -88,7 +88,7 @@ It requires a valid **Spark SQL** expression that determines the criteria rows i
         )
         ```
 
-    ???+ failure "Incorrect usage"
+    ???+ failure "Incorrect usage" collapsible="true"
         ```sql
         O_ORDERSTATUS IN (
             SELECT DISTINCT O_ORDERSTATUS
