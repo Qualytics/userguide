@@ -2,6 +2,85 @@
 
 ## Release Notes
 
+### 2025.12.12 { id=2025.12.12 }
+
+#### Feature Enhancements
+
+- Launched ServiceNow Ticketing System integration.
+    - Connect Qualytics with ServiceNow to streamline anomaly management through automated incident creation and tracking.
+    - Users can create ServiceNow incidents directly from anomalies via API, populating incident details automatically.
+    - Anomaly status changes in Qualytics are pushed to the linked ServiceNow incident as work notes.
+    - Comments added to anomalies are automatically synced to the corresponding ServiceNow incident.
+
+- Introduced Microsoft Purview Data Catalog integration.
+    - Connect Qualytics with Microsoft Purview to enrich catalog assets with actionable data quality context.
+    - Supports importing tags from Purview to replace matching Qualytics tags, ensuring consistent tagging and classification.
+    - Publishes quality scores and their dimensions, along with active check counts and active anomaly counts, to corresponding Purview assets.
+    - Event-driven synchronization keeps Purview up to date based on Qualytics events, including scan completions, anomaly status changes, anomaly archiving, check updates, and other actions that trigger quality score recalculation.
+
+- Added new beta Data Catalog integrations for Collibra and DataHub.
+    - Enables synchronization of Qualytics data quality metadata with external data catalog platforms.
+    - Supports importing tags from the catalog provider to replace matching Qualytics tags, keeping tags consistent across platforms.
+    - Publishes quality scores, active check counts, and anomaly metrics to corresponding catalog assets.
+    - Uses event-driven synchronization to automatically propagate metadata updates triggered by data quality events in Qualytics.
+
+- Enhanced Flows with scheduling support and node management improvements.
+    - Introduced scheduled trigger type, allowing users to configure flows triggered by cron expressions.
+    - Flow list now displays schedule information and next trigger time for scheduled flows.
+    - Included filters by trigger type and deactivation status to the flow definitions page.
+    - Enabled bulk activate and deactivate actions for flows.
+    - Incorporated Activate/Deactivate toggle to the Flow Settings panel for quicker access to flow status controls.
+    - Users can now rearrange action nodes after creation using drag-and-drop to move nodes and their descendants to a new parent.
+    - Swap functionality allows exchanging a node's position with its parent in a single click while maintaining flow hierarchy.
+    - Visual feedback during rearrangement indicates valid and invalid drop targets for intuitive editing.
+
+- Introduced Cast Type computed field.
+    - New computed field type allows casting fields to different data types without writing raw expressions.
+    - Supports standard SQL CAST function with direct JDBC dialect compatibility for improved cross-datastore portability.
+    - Enabled date format specification support for Cast Type computed fields when converting non-standard date and timestamp formats.
+
+#### General Fixes and Improvements
+
+- Corrected sampling metrics in container profiles where records processed could exceed total record count, resulting in inaccurate percentage calculations.
+
+- Adjusted the "Drop Suffix" option to be active by default in the Computed Field dialog.
+
+- Addressed Snowflake permissions error affecting enrichment operations in JDBC datastores.
+
+- Fixed quality score calculation that could produce negative accuracy values in certain conditions.
+
+- Removed auto-activation in check activation dialog to prevent accidental activations.
+
+- Corrected scan operations to properly report enrichment failures in operation results instead of showing success status.
+
+- Resolved row count mismatch between Overview and Observability charts caused by timezone alignment issues.
+
+- Fixed single-value `each()` keyword not generating permutations correctly in check templates.
+
+- Cleared Delta Table metadata cache issue that persisted after container operations completed.
+
+- Resolved connection verification failures not returning operation results to the Controlplane.
+
+- Updated Scan Settings labels and descriptions that caused confusion about threshold behavior and scanning limits.
+
+- Optimized materialize operation performance with enhanced partition calculation.
+
+- Added Engine information on the Settings Status page, displaying the deployment engine (Kubernetes, or Databricks).
+
+- Refined error messages for sync operation timeouts to better distinguish between Dataplane availability and datastore response issues.
+
+- Added visual in-progress indicator to Data Volume Over Time charts when measurements are still being recorded for the current period.
+
+- Included tooltip explanation on Data Volume charts indicating when current period measurements are still in progress.
+
+- Enhanced Data Volume charts to display the previous period's value as a placeholder when current period data is not yet available.
+
+- Optimized scan performance by eliminating unnecessary data shuffling when applying record limits.
+
+- Implemented bulk deactivate and activate actions for schedules within the datastore context.
+
+- General Fixes and Improvements.
+
 ### 2025.11.27 { id=2025.11.27 }
 
 #### Feature Enhancements
