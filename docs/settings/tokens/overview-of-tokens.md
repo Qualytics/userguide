@@ -24,7 +24,7 @@ Service Tokens are designed for automated systems and integrations. These tokens
 - **Ideal for**: Data pipeline automation, Qualytics API/CLI access, data catalog integrations, and shared automation
 
 !!! tip
-    For detailed information about creating and managing Service Accounts and Service Tokens, see the [**Service Accounts**](service-account.md) documentation.
+    For detailed information about creating and managing Service Accounts and Service Tokens, see the [**Service Accounts**](../service-account/service-account.md){target="_blank"} documentation.
 
 Let's get started 🚀
 

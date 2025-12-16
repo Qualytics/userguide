@@ -126,13 +126,13 @@ The Inference Threshold ranges from **0** to **5**, with each level including pr
 !!! note 
     Each level includes all the checks from the previous levels and adds new checks specific to that level. For example, at Level 1, there are five basic checks. At Level 2, you get those five checks plus additional ones for Level 2. By the time you reach Level 5, it covers all the checks from Levels 1 to 4 and adds its own new checks for complete review. 
 
-**Level 0: No Inference**
+##### Level 0: No Inference
 
 At this level, no checks are automatically inferred. This is suitable when users want complete control over which checks are applied, or if no checks are needed. Ideal for scenarios where profiling should not infer any constraints, and all checks will be manually defined.
 
 ![inference-threshold-level0](../assets/profile-operations/inference-threshold-level0-light.png)
 
-**Level 1: Basic Data Integrity and Simple Value Threshold Checks**
+##### Level 1: Basic Data Integrity and Simple Value Threshold Checks
 
 This level includes fundamental rules for basic data integrity and simple validations. It ensures that basic constraints like completeness, non-negative numbers, and valid date ranges are applied. Included Checks:
 
@@ -158,7 +158,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 ![inference-threshold-level1](../assets/profile-operations/inference-threshold-level1-light.png)
 
-**Level 2: Value Range and Pattern Checks**
+##### Level 2: Value Range and Pattern Checks
 
 Builds upon Level 1 by adding more specific checks related to value ranges and patterns. This level is more detailed and begins to enforce rules related to the nature of the data itself. Included Checks:
 
@@ -183,7 +183,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 ![inference-threshold-level2](../assets/profile-operations/inference-threshold-level2-light.png)
 
-**Level 3: Time Series and Comparative Relationship Checks**
+##### Level 3: Time Series and Comparative Relationship Checks
 
 This level includes all checks from Level 2 and adds sophisticated checks for time series and comparative relationships between datasets. Included Checks:
 
@@ -208,7 +208,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 ![inference-threshold-level3](../assets/profile-operations/inference-threshold-level3-light.png)
 
-**Level 4: Linear Regression and Cross-Datastore Relationship Checks**
+##### Level 4: Linear Regression and Cross-Datastore Relationship Checks
 
 This level includes all checks from Level 3 and adds even more advanced checks, including linear regression analysis and validation of relationships across different data stores. Included Checks:
 
@@ -230,7 +230,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 ![inference-threshold-level4](../assets/profile-operations/inference-threshold-level4-light.png)
 
-**Level 5: Shape Checks**
+##### Level 5: Shape Checks
 
 The most comprehensive level includes all previous checks plus checks that validate the shape of certain distribution patterns that can be identified in your data. Included Checks:
 

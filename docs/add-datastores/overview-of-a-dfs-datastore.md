@@ -24,7 +24,7 @@ The Catalog operation involves walking the directory tree, reading files with su
 
 Qualytics supports the following file formats in the DFS Datastore.
 
-| No. | File Format | Extension Example |
+| No | File Format | Extension Example |
 |------|--------------|-------------------|
 | 1 | Avro | `.avro` |
 | 2 | CSV | `.csv`, `.csv.gz` |
@@ -47,7 +47,7 @@ DFS Datastores support the initiation of Profile Operations, allowing users to u
 
 ## Containers Overview
 
-For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../container/container.md) section in our comprehensive user guide. 
+For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../container/overview.md) section in our comprehensive user guide. 
 
 This section covers topics such as container deletion, field deletion, and the initial profile of a Datastore's containers.
 
@@ -67,7 +67,7 @@ This approach ensures precise file grouping without relying on complex glob patt
 
 ##### 1. **Create a Folder:**
 
-!!! example "Begin by creating a new folder in your distributed filesystem."
+!!! example "Begin by creating a new folder in your distributed file system."
 
     - Suppose you have order data files with filenames like `orders_20240229.csv`, `orders-20240228.csv`, `orders-20240227.csv`.
 
@@ -107,7 +107,7 @@ graph TD
 
 ### Use Filename Conventions for Posix Globs:
 
-This option leverages filename conventions that align with POSIX globs, allowing our system to automatically organize files for you. 
+This option leverages filename conventions that align with POSIX globs, allowing the system to automatically organize files for you. 
 
 The system intelligently analyzes filename patterns, making the process seamless and efficient.
 
@@ -122,13 +122,13 @@ The system intelligently analyzes filename patterns, making the process seamless
 
 ##### 2. **Upload or Move Files:**
 
-!!! example "Upload or move files with filenames following the adopted conventions to your distributed filesystem."
+!!! example "Upload or move files with filenames following the adopted conventions to your distributed file system."
 
     - Move log files with the specified naming convention to your DFS.
 
 ##### 3. **System Analysis:**
 
-!!! example " Our system will automatically detect and analyze the filename conventions, creating appropriate glob patterns."
+!!! example "The system will automatically detect and analyze the filename conventions, creating appropriate glob patterns."
 
     - With filenames like `app_log_20240229.txt`, `app_log_20240228.txt`, the system will create the pattern `app_log_*.txt`.
 
@@ -144,11 +144,11 @@ graph TD
 
 ### Why not manually creating your own Globs?
 
-While our system offers powerful features to automate file organization, we strongly discourage manually creating globs. 
+While the system offers powerful features to automate file organization, manually creating globs is strongly discouraged.
 
-This option may lead to errors, inconsistencies, and hinder the efficiency of our system. 
+This option may lead to errors, inconsistencies, and hinder the efficiency of the system.
 
-We recommend leveraging our automated tools for a seamless and error-free experience.
+It is recommended to leverage the automated tools for a seamless and error-free experience.
 
 #### Complexity and Error-Prone:
 

@@ -83,19 +83,39 @@ nav:
         - Edit Enrichment: enrichment/edit-enrichment.md
         - Delete Enrichment: enrichment/delete-enrichment.md
     - Containers:
-      - Overview: container/container.md
-      - Data Preview: container/data-preview.md
-      - Computed Tables and Files: container/computed-tables-and-files.md
+      - Overview: container/overview.md
+      - Container Types: container/container-types.md
+      - Container Attributes: container/container-attributes.md
+      - Actions on Container: container/actions-on-container.md
+      - Manage Tables and Files:
+        - Settings For JDBC Table: container/manage-tables-and-files/setting-for-jdbc-table.md
+        - Settings For DFS Files Pattern: container/manage-tables-and-files/setting-for-dfs-files-pattern.md
+        - Identifiers: container/settings/identifiers.md
+        - Grouping: container/settings/grouping.md
+        - General: container/settings/general.md
+        - Add Checks: container/manage-tables-and-files/add-checks.md
+        - Run: container/manage-tables-and-files/run.md
+        - Observability Settings: container/manage-tables-and-files/observability-settings.md
+        - Export: container/manage-tables-and-files/export.md
+        - Materialize: container/manage-tables-and-files/materialize.md
+        - Delete: container/manage-tables-and-files/delete.md
+        - Mark Tables & Files as Favorite: container/manage-tables-and-files/mark-tables-&-files-as-favorite.md
+      - Field Profiles: container/field-profiles.md
+      - Computed Tables and Files:
+        - Overview: container/computed-tables-and-files/overview.md
+        - Computed Tables: container/computed-tables-and-files/computed-tables.md
+        - Computed Files: container/computed-tables-and-files/computed-files.md
+        - Computed Table VS File: container/computed-tables-and-files/computed-table-vs-file.md
       - Computed Join: container/computed-join.md
-      - Manage Tables and Files: container/manage-tables-and-files.md
-      - Computed Fields: container/overview-of-a-computed-field.md
+      - Computed Fields: 
+        - Overview: container/computed-fields/overview.md
+        - Transformation Types: container/computed-fields/transformation-types.md
+        - Computed Fields Details: container/computed-fields/computed-fields-details.md
+        - Add Computed Fields: container/computed-fields/add-computed-fields.md
+      - Data Preview: container/data-preview.md
       - Enrichment Operation:
-        - Export Operation: container/export-operation.md
-        - Materialize Operation: container/materialize-operation.md
-      - Settings:
-        - Identifiers: container/overview-of-identifiers.md
-        - Grouping: container/overview-of-grouping.md
-        - General: container/overview-of-infer-data-type.md
+        - Export Operation: container/enrichment-operation/export-operation.md
+        - Materialize Operation: container/enrichment-operation/materialize-operation.md
     - Weight:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:
@@ -211,7 +231,27 @@ nav:
       - Checks: explore/checks.md
       - Anomalies: explore/anomalies.md
     - Flows:
-      - Overview: flows/flows.md
+      - Overview: flows/overview.md
+      - Add Flow: flows/add-flow.md
+      - Flow Entry: flows/flow-entry.md
+      - Trigger Node: flows/trigger-node.md
+      - Actions Node: 
+        - Overview: flows/overview-action.md
+        - Operations: flows/operations.md
+        - Anomaly: flows/anomaly.md
+        - Notifications: flows/notification.md
+        - HTTP: flows/http.md 
+      - View and Track Flow Executions: flows/view-created-flows.md
+      - Manage Flow:
+        - Clone a Flows: flows/clone-a-flow.md
+        - Execute Manual Flow: flows/execute-manual-flows.md
+        - Abort Flow: flows/abort.md
+        - Sort Flow: flows/sort-flow.md
+        - Edit Flow: flows/edit-flow.md
+        - Delete Flow: flows/delete-flow.md
+        - Deactivate Flow: flows/deactivate-flow.md
+        - Activate Flows: flows/activate-flow.md
+        - Clone An Action: flows/clone-an-action.md 
     - Tags:
       - Overview: tags/overview.md
       - External Tags: tags/external-tag.md
@@ -228,7 +268,19 @@ nav:
         - Team Permissions: settings/security/team-permissions.md
         - Directory Sync: settings/security/directory-sync.md
       - Tokens: settings/tokens/overview-of-tokens.md
-      - Service Account: settings/tokens/service-account.md
+      - Service Account: 
+        - Overview: settings/service-account/service-account.md
+        - Create Service Account: settings/service-account/create-service-account.md 
+      - Service Token:
+        - Overview: settings/service-token/overview.md
+        - Service Token: settings/service-token/service-token.md
+        - Generate Service Account: settings/service-token/generate-service-token.md
+        - Token Usage Status: settings/service-token/token-usage-status.md
+        - Revoking Service Token: settings/service-token/revoking-service-token.md
+        - Restore Service Token: settings/service-token/restore-service-token.md
+        - Delete Service Token: settings/service-token/delete-service-token.md
+        - Team Membership Strategy: settings/service-token/team-membership-strategy.md
+        - Best Practices: settings/service-token/best-practices.md
       - Status: settings/status/overview-of-status.md
     - Qualytics CLI:
         - Installing Python: cli/python-installation.md
