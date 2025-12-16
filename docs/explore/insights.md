@@ -25,7 +25,7 @@ Filtering Controls allow you to refine the data displayed on the **Insights** pa
 | 1. | Select Source Datastores | Select specific source datastores to focus on their data. |
 | 2. | Tags | Filter data by specific tags to categorize and refine results. |
 | 3. | Report Date  | Set the report date to view data from a particular day. |
-| 4. | Timeframe | Choose a timeframe to view data for a specific  (week, month, quarter, and year) |
+| 4. | Timeframe | Choose a timeframe to view data for a specific period (week, month, quarter, or year) |
 
 {% include-markdown "components/general-props/typos.md" 
     start='<!-- FUZZY-SEARCH --start -->' 
@@ -53,7 +53,7 @@ When analyzing data on the Insights, two key concepts help you uncover trends: *
 
 * **Quality Score** and other similar metrics display an **average** for the selected timeframe.
 
-**Example:**If you select **weekly**, the Quality Score shown will be the **average score for the entire week**.
+**Example:** If you select **weekly**, the Quality Score shown will be the **average score for the entire week**.
 
 ![average](../assets/explore/insights/average-light.png)
 
@@ -130,7 +130,7 @@ The **Data Overview** gives you a high-level snapshot of your data for the selec
 - **Source Datastores** — how many active datastores are connected  
 - **Containers** — the number of containers within those datastores  
 
-![score-progression](../assets/explore/insights/data-overview-light.png)
+![data-overview](../assets/explore/insights/data-overview-light.png)
 
 This helps you quickly understand the scale of your data and how it’s growing over time.
 
