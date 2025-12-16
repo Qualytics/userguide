@@ -65,7 +65,7 @@ nav:
         - Edit Datastore: source-datastore/edit-datastore.md
         - Link Enrichment: source-datastore/link-enrichment.md
         - Unlink Enrichment: source-datastore/unlink-enrichment.md
-        - Quality Score Settings: source-datastore/quality-score-settings.md 
+        - Quality Score Settings: source-datastore/quality-score-settings.md
         - Delete Datastore: source-datastore/delete-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
@@ -77,11 +77,11 @@ nav:
         - API Payload Examples: enrichment/api-payload-examples.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Supported Enrichment Datastores: enrichment-support/supported-enrichment-datastores.md
-      - Manage Enrichment: 
+      - Manage Enrichment:
         - Enrichment Actions: enrichment/enrichment-actions.md
         - Add Enrichment: enrichment/enrichment-datastore-creation.md
         - Edit Enrichment: enrichment/edit-enrichment.md
-        - Delete Enrichment: enrichment/delete-enrichment.md  
+        - Delete Enrichment: enrichment/delete-enrichment.md
     - Containers:
       - Overview: container/overview.md
       - Container Types: container/container-types.md
@@ -176,8 +176,8 @@ nav:
       - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
       - Export Check Templates: checks/export-check-templates.md
     - Datastore Checks:
-      - Checks : datastore-checks/checks-datastore.md 
-      - Manage Checks : 
+      - Checks : datastore-checks/checks-datastore.md
+      - Manage Checks :
         - Overview : datastore-checks/overview.md
         - Draft Checks : datastore-checks/draft-checks.md
         - Activate Draft Check : datastore-checks/activate-draft-check.md
@@ -199,11 +199,11 @@ nav:
         - Measures: observability/measures.md
         - Metric: observability/metric-check.md
         - Volumetric: observability/volumetric.md
-        - Freshness: observability/freshness.md  
+        - Freshness: observability/freshness.md
       - Manage Observability:
         - Overview: observability/manage-observability.md
         - Edit Check: observability/edit-check.md
-        - Edit Threshold: observability/edit-threshold.md 
+        - Edit Threshold: observability/edit-threshold.md
         - Edit Maximum Age: observability/edit-maximum-age.md
         - Mark Check as Favorite: observability/mark-check.md
     - Anomalies:
@@ -259,7 +259,7 @@ nav:
         - Add Tag: tags/add-tag.md
         - Applying Tag: tags/applying-a-tag.md
         - Edit Tag: tags/edit-tag.md
-        - Filter and Sort: tags/filter-and-sort.md 
+        - Filter and Sort: tags/filter-and-sort.md
         - Delete Tag: tags/delete-tag.md
     - Settings:
       - Connections: settings/connections/manage-connections.md
@@ -294,7 +294,7 @@ nav:
           - External Tag Propagation: settings/catalog-integrations/external-tag-propagation.md
         - Single Sign-On: integrations/sso.md
         - Compute: integrations/compute.md
-        - Alerting: 
+        - Alerting:
           - Overview: integrations/alerting.md
           - Slack: integrations/alerting/slack.md
           - Microsoft Teams: integrations/alerting/msft_teams.md
@@ -311,7 +311,7 @@ nav:
       - deployments/overview.md
       - upgrades/qualytics-single-tenant-instance.md
       - deployments/databricks-deployment.md
-      - External Automation: 
+      - External Automation:
         - Overview: operation-automation/overview.md
         - Linux Machine: operation-automation/linux-machine.md
         - Windows Machine: operation-automation/windows-machine.md
@@ -405,11 +405,9 @@ plugins:
         - components/anomaly-support/*
         - components/comparators/*
         - components/general-props/*
-  - exclude:
-      glob:
-      - components/anomaly-support/*
-      - components/comparators/*
-      - components/general-props/*
+        - components/anomaly-support/*
+        - components/comparators/*
+        - components/general-props/*
   - git-revision-date-localized
   - include-markdown
   - macros
