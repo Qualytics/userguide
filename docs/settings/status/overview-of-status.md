@@ -12,13 +12,13 @@ System status provides a real-time overview of your system's resources, essentia
 
 ![health](../../assets/health/health-light-2.png)
 
-## Summary Section
+## Platform Status Section
 
-The **Summary** section displays the current platform version, along with the database status and RabbitMQ state.
+The **Platform Status Section** section displays the current platform version, along with the database status and RabbitMQ state.
 
 | REF. | FIELD | ACTION | EXAMPLE |
 |----- |-------|--------|---------|
-| 1 | Current Platform Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
+| 1 | Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
 | 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services (AWS) |
 | 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Medium |
 | 4 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
@@ -35,20 +35,21 @@ The status indicator reflects the overall system resources health.For example, i
 
 ![health-indicator](../../assets/health/health-indicator-light-4.png)
 
-## Analytics Engine
+## Dataplane
 
-The **Analytics Engine** section provides advanced information about the analytics engine's configuration and current state for technical users and developers.
+The **Dataplane** section provides advanced information about the analytics engine's configuration and current state for technical users and developers.
 
 | REF | FIELD | ACTION | EXAMPLE |
 |-----|-------|--------|---------|
 | 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Aug 8 2024,7:39 AM (GMT+5:30) |
-| 2 | Implementation Version | The version of the analytics engine implementation being used.  | 2.0.0 |
+| 2 | Engine | Shows the platform used to run and manage workloads. | Kubernetes |
 | 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 10 |
 | 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 25000 MB |
-| 5 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 3.5.1 |
-| 6 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 3 |
-| 7 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
-| 8 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
+| 5 | Implementation Version | The version of the analytics engine implementation being used.  | 2.0.0 |
+| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 3.5.1 |
+| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 3 |
+| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
+| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
 
 ![analytics-engine](../../assets/health/analytics-engine-light-5.png)
 
