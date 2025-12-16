@@ -66,11 +66,13 @@ This makes it easier to apply the same check logic across multiple dimensions (s
 
 **Example:**
 
+A data team wants to ensure that **daily order counts are never zero** for each country where the business operates. Instead of creating a separate check for every country, they use ***each()*** in a single template.
+
 ```
 country_code = each('BRA', 'USA', 'ESP', 'CHN')
 ```
 
-When creating a check from a template with this filter, Qualytics expands it into four checks, each using one of the specified values for **country_code**.
+When creating checks from this template, Qualytics automatically generates **four separate checks** one per country—each validating order data independently.
 
 **Behavior:**
 
@@ -88,6 +90,8 @@ When creating a check from a template with this filter, Qualytics expands it int
 
 **Example with Multiple *each()* Clauses:**
 
+A marketplace team wants to verify **transaction volume** across **regions** and **business segments**.
+
 ```
 region = each('EU', 'US') AND category = each('Retail', 'Wholesale')
 ```
@@ -98,6 +102,8 @@ This produces **4 checks** (2 × 2 permutations):
 - `region = 'EU' AND category = 'Wholesale'`
 - `region = 'US' AND category = 'Retail'`
 - `region = 'US' AND category = 'Wholesale'`
+
+Each check runs independently, making it easy to pinpoint which segment or region has an issue.
 
 **Managing Permutations**
 
