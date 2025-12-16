@@ -52,7 +52,7 @@ The filter clause defines the conditions under which the check will be applied. 
 
 ![filter-clause](../assets/checks/add-check-template/filter-clause.png)
 
-#### Using each()
+#### Using *each()*
 
 The `each()` keyword allows you to create multiple checks from a single Check Template — one for each value in a provided list.
 
@@ -82,11 +82,11 @@ When creating a check from a template with this filter, Qualytics expands it int
 !!! note
     Permutation logic runs when checks are **created from a template** or when the **template's filter is updated**. Editing an existing check's filter does **not** trigger permutations.
 
-**Checks Created by each()**
+**Checks Created by *each()***
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/mCGecmHRiwak8lOLlWOX?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Arcade Flow (Mon Nov 10 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/mCGecmHRiwak8lOLlWOX?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="each()filter" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
-**Example with Multiple each() Clauses:**
+**Example with Multiple *each()* Clauses:**
 
 ```
 region = each('EU', 'US') AND category = each('Retail', 'Wholesale')
