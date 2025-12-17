@@ -2,7 +2,7 @@
 
 **Activity** in Qualytics provides a comprehensive view of all operations, helping users monitor and analyze the performance and workflows across various source datastores. Activities are categorized into **Runs** and **Schedule** operations, offering distinct insights into executed and scheduled activities.
 
-The Rerun and Resume options depend on the type of operation. [Profile](../source-datastore/profile.md) and [Scan](../source-datastore/scan.md) support both because the system can remember where it stopped and continue from there. [Catalog](../source-datastore/catalog.md), [Export](../container/export-operation.md), and [Materialize](../container/materialize-operation.md) only support Rerun, since the system can't pick up from where it left off and must start over. External Scan doesn't support either option, as they don't apply to it.
+The Rerun and Resume options depend on the type of operation. [Profile](../source-datastore/profile.md) and [Scan](../source-datastore/scan.md) support both because the system can remember where it stopped and continue from there. [Catalog](../source-datastore/catalog.md), [Export](../container/enrichment-operation/export-operation.md), and [Materialize](../container/enrichment-operation/materialize-operation.md) only support Rerun, since the system can't pick up from where it left off and must start over. External Scan doesn't support either option, as they don't apply to it.
 
 Let’s get started 🚀
 

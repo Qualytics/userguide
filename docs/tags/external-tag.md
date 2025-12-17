@@ -38,7 +38,7 @@ In short, External Tags help Qualytics “speak the same language” as your dat
 
 | Step | What Happens |
 |------|----------------|
-| 1 | You connect [Atlan](../settings/catalog-integrations/atlan.md), [Alation](../settings/catalog-integrations/alation.md), or another supported catalog to Qualytics under **Settings → Integrations**. |
+| 1 | You connect [Atlan](../settings/integrations/catalog/atlan.md), [Alation](../settings/integrations/catalog/alation.md), or another supported catalog to Qualytics under **Settings → Integrations**. |
 | 2 | Qualytics uses a secure API connection to read your catalog’s tags. |
 | 3 | Those tags appear inside Qualytics automatically as **External Tags**. |
 | 4 | Whenever a tag or asset updates in your catalog, Qualytics syncs those changes. |
