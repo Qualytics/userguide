@@ -15,7 +15,7 @@ The Agentic API provides the same capabilities as MCP—datastore exploration, d
 
 ## Authentication
 
-All Agentic API endpoints require authentication using your Qualytics Personal API Token (PAT).
+All Agentic API endpoints require authentication using your Qualytics Personal API Token (PAT) or a designated service account token.
 
 Include the token in the `Authorization` header:
 
