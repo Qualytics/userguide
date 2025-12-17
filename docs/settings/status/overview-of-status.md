@@ -14,7 +14,7 @@ System status provides a real-time overview of your system's resources, essentia
 
 ## Platform Status Section
 
-The **Platform Status Section** section displays the current platform version, along with the database status and RabbitMQ state.
+The **Platform Status Section** displays the current platform version, along with the database status and RabbitMQ state.
 
 | REF. | FIELD | ACTION | EXAMPLE |
 |----- |-------|--------|---------|
@@ -28,7 +28,7 @@ The **Platform Status Section** section displays the current platform version, a
 
 ## Status Indicator
 
-The status indicator reflects the overall system resources health.For example, in the image below, a green checkmark indicates that our system resources are healthy.
+The status indicator reflects the overall system resources health. For example, in the image below, a green checkmark indicates that our system resources are healthy.
 
 !!! note
     Status indicators are simple: a green checkmark indicates "Healthy," and a red exclamation mark means "Critical."
