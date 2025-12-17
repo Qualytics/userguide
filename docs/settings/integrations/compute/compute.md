@@ -25,7 +25,7 @@ coordination between platform components.
 Deploying the Qualytics data plane within your Databricks account will allow our analytics engine to leverage 
 Photon acceleration while ensuring that all data transfer & compute occurs inside your Databricks deployment.
 
-![dataplane in databricks](../assets/integrations/qualytics_split_deployment_databricks.png)
+![dataplane in databricks](../../../assets/integrations/compute/qualytics_split_deployment_databricks.png)
 
 ## Running Qualytics Data Plane on GCP Dataproc
 

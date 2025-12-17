@@ -416,7 +416,7 @@ plugins:
   - macros
   - redirects:
       redirect_maps:
-        'settings/integrations/atlan.md': 'settings/catalog-integrations/atlan.md'
+        'settings/integrations/atlan.md': 'settings/integrations/catalog/atlan.md'
         'deployments/deployments.md': 'deployments/overview.md'
   - print-site:
       add_to_navigation: false
