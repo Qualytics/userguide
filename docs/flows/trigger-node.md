@@ -8,6 +8,8 @@ This is where you can configure how the Flow will be activated. It can be activa
 
 A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides four options for initiating the flow. Users can choose one of the following options:
 
+* Schedule
+
 * Operation Completes.
 
 * Anomalous Table and File Detection.
@@ -24,6 +26,60 @@ A panel will appear on the right-hand side, enabling users to define when the fl
     Each Flow can have only **one trigger**. If you want to execute a different action or change the trigger, you’ll need to **clone** the Flow and configure the new trigger.
 
     [Click here to learn how to clone a Flow](../flows/clone-a-flow.md){target="_blank"}.
+
+## Schedule
+
+The Schedule trigger runs a flow automatically at a defined time interval. Use this trigger when you want the actions in a flow to execute on a recurring schedule—such as hourly, daily, weekly, or monthly—without manual intervention. Scheduled flows are useful for automating routine tasks, periodic scans, exports, or notifications, and they run based on the configured schedule time (UTC).
+
+![schedule](.././assets/flows/schedule-light.png)
+
+**Schedule Configuration**
+
+**1. Hourly:** This option allows you to schedule the flow to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the flow should start. Example: If set to **Every 1 hour(s) on minute 0**, the flow will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00).
+
+![hourly](../assets/flows/hourly-light.png)
+
+**2. Daily:** This option schedules the flow to run once every day at a specific time. You specify the number of days between runs and the exact time of day in UTC. Example: If set to **Every 1 day(s) at 00:00 UTC,** the flow will run every day at midnight UTC.
+
+![daily](../assets/flows/daily-light.png)
+
+**3. Weekly:** This option schedules the flow to run on specific days of the week at a set time. You select the days of the week and the exact time of day in UTC. Example: If configured to run on "Sunday" and "Friday" at 00:00 UTC, the flow will execute at midnight UTC on those days.
+
+![weekly](../assets/flows/weekly-light.png)
+
+**4. Monthly:** This option schedules the flow to run once a month on a specific day at a set time. You specify the day of the month and the time of day in UTC. If set to "On the 1st day of every 1 month(s), at 00:00 UTC," the flow will run on the first day of each month at midnight UTC.
+
+![monthly](../assets/flows/monthly-light.png)
+
+**5. Advanced:** The Advanced option allows you to configure more complex and custom schedules using Cron expressions. This is useful when you need precise control over when a flow runs.
+
+Cron expressions are a powerful and flexible way to schedule tasks. They use a syntax that specifies the exact timing of the task based on five fields:
+
+-   Minute (0 - 59)
+-   Hour (0 - 23)
+-   Day of the month (1 - 31)
+-   Month (1 - 12)  
+-   Day of the week (0 - 6) (Sunday to Saturday)
+
+Each field can be defined using specific values, ranges, or special characters to create the desired schedule.
+
+**Example:** The Cron expression `0 0 * * *` schedules the flow to run at midnight (00:00) every day. Here’s a breakdown of this expression:
+
+-   0 (Minute) - The task will run at the 0th minute.
+-   0 (Hour) - The task will run at the 0th hour (midnight).
+-   *(Day of the month) - The task will run every day of the month.
+-   *(Month) - The task will run every month.
+-   *(Day of the week) - The task will run every day of the week.
+
+Users can define other specific schedules by adjusting the Cron expression. For example:
+
+-   0 12 * * 1-5 - Runs at 12:00 PM from Monday to Friday.
+-   30 14 1 * * - Runs at 2:30 PM on the first day of every month.
+-   0 22 * * 6 - Runs at 10:00 PM every Saturday.
+
+To define a custom schedule, enter the appropriate Cron expression in the "Custom Cron Schedule (UTC)" field before specifying the schedule name. This will allow for precise control over the timing of the operation, ensuring it runs exactly when needed according to your specific requirements.
+
+![advanced](../assets/flows/advanced-light.png)
 
 ## Operation Completes
 

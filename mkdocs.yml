@@ -252,6 +252,7 @@ nav:
         - Deactivate Flow: flows/deactivate-flow.md
         - Activate Flows: flows/activate-flow.md
         - Clone An Action: flows/clone-an-action.md 
+        - Move An Action Node: flows/move-an-action-node.md
     - Tags:
       - Overview: tags/overview.md
       - External Tags: tags/external-tag.md
