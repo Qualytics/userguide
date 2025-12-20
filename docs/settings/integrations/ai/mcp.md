@@ -151,6 +151,29 @@ The AI retrieves comprehensive anomaly details including the failed checks, affe
 
 ## Client Configuration
 
+### ChatGPT
+
+Under Apps, select Create app and complete the form as shown below:
+
+![ChatGPT App](../../../assets/integrations/ai/chatgpt/mcp-app-creation.png){: style="height:600px"}
+
+Configure the fields as follows:
+
+- **MCP Server URL**
+  Enter your Qualytics MCP endpoint:
+  `https://<your-qualytics-instance>.qualytics.io/mcp/`
+
+- **OAuth Secret**
+  Paste your Qualytics API token.
+
+After creating the app, ChatGPT will prompt you to authorize the connection. When prompted, paste the **same Qualytics API token** again.
+
+![ChatGPT Authorization Prompt](../../../assets/integrations/ai/chatgpt/auth-prompt.png){: style="height:400px"}
+
+!!! note
+    The OAuth Secret and the authorization prompt both require the same Qualytics API token.
+
+
 ### Claude Desktop
 
 Add the following to your Claude Desktop configuration file:
@@ -165,11 +188,11 @@ Add the following to your Claude Desktop configuration file:
 		        "args": [
 		          "-y",
 		          "mcp-remote",
-		          "http://localhost:8000/mcp](https://your-qualytics-instance.qualytics.io/mcp",
+		          "https://your-qualytics-instance.qualytics.io/mcp/",
 		          "--header",
 		          "Authorization: Bearer YOUR_API_TOKEN"
 		        ]
-	      }          
+	      }
         }
       }
     }
@@ -185,11 +208,11 @@ Add the following to your Claude Desktop configuration file:
 		        "args": [
 		          "-y",
 		          "mcp-remote",
-		          "http://localhost:8000/mcp](https://your-qualytics-instance.qualytics.io/mcp",
+		          "https://your-qualytics-instance.qualytics.io/mcp/",
 		          "--header",
 		          "Authorization: Bearer YOUR_API_TOKEN"
 		        ]
-	      }          
+	      }
         }
       }
     }
@@ -203,7 +226,7 @@ Add the following to your Cursor MCP configuration:
 {
   "mcpServers": {
     "qualytics": {
-      "url": "https://your-qualytics-instance.qualytics.io/mcp",
+      "url": "https://your-qualytics-instance.qualytics.io/mcp/",
       "headers": {
         "Authorization": "Bearer YOUR_API_TOKEN"
       }
