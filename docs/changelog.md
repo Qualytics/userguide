@@ -2,6 +2,27 @@
 
 ## Release Notes
 
+### 2025.12.23 { id=2025.12.23 }
+
+#### Feature Enhancements
+
+- Added Jira Cloud ticketing integration and enhanced ServiceNow with search and link capabilities.
+    - Connect with Jira Cloud or ServiceNow to streamline anomaly management through centralized ticket tracking.
+    - Introduced ticketing section on the anomaly page with quick actions for creating or linking tickets.
+    - Users can search for existing tickets and link them directly to anomalies.
+    - Supports retrieving ticket details by ID or key for status tracking.
+
+- Introduced Group by clause support for Computed Joins and Computed Files.
+    - Users can now define grouping expressions when creating computed joins and computed files, enabling aggregation functions in select clauses.
+
+#### General Fixes and Improvements
+
+- Improved Insights endpoint performance with optimized quality score queries.
+
+- Enhanced Agent Q with global data asset search, async operation monitoring, and metadata management capabilities.
+
+- General Fixes and Improvements.
+
 ### 2025.12.12 { id=2025.12.12 }
 
 #### Feature Enhancements
