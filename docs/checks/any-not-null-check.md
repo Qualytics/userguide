@@ -18,6 +18,8 @@ This rule is especially useful when multiple optional fields exist, but having n
 
 Use the **Any Not Null** check when you want to ensure that records are not completely blank across a group of related fields.
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(78.2692% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/YRIqJifrb6cYQeXp6mUK?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Wed Dec 24 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 This helps detect:
 
 - Incomplete records  
@@ -32,8 +34,7 @@ It answers questions like:
 - “Are users submitting forms without filling any contact details?”
 - “Is my system creating placeholder rows with no real data?”
 
-**In short:**  
-It prevents empty or useless records from silently entering your system.
+**In short:** It prevents empty or useless records from silently entering your system.
 
 ## How Does Any Not Null Work?
 
@@ -133,6 +134,8 @@ This approach was:
 By the time an issue was found, downstream systems had already consumed the bad data.
 
 ### The Solution: Any Not Null
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(49.1909% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/ikJs6JRwTz8xr8KsDfJ1?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Wed Dec 24 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 To solve this, the data team implemented an **Any Not Null** check on:
 
