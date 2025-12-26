@@ -137,11 +137,11 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 ![anomaly-option](../assets/datastores/scan/anomaly-option-light.png)
 
-**2. Anomaly Rollup Threshold:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
+**2. Maximum Record Anomalies per Check:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
 
 ![anomaly-option](../assets/datastores/scan/anomalyy-light.png)
 
-**3. Source Record Limit:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
+**3. Maximum Source Examples per Anomaly:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
 
 ![source-record-limit](../assets/datastores/scan/source-record-limit-light.png)
 
