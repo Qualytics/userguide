@@ -25,6 +25,10 @@ Use Computed Tables when you want to perform the following operations on your se
 | 2   | Query (Required)  | Write a valid SQL query that supports your selected source datastore. The query helps to perform joins and aggregations on your selected source datastore. |
 | 3   | Additional Metadata (Optional)  | Add custom metadata to enhance the definition of your computed table. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs. |
 
+!!! warning  
+    When creating a Computed Table for **SQL Server, Oracle, or Redshift** datastores, you must specify the table using a **fully qualified name** (`SCHEMA.TABLE`).  
+    The table selection field displays schema-prefixed table names to help you select the correct table.
+
 ![add-computed-table](../../assets/container/computed-tables-and-files/computed-tables/add-computed-table-light.png)
 
 **Step 4:** Click on the **Validate** button to instantly check the syntax and semantics of your SQL query. This ensures your query runs successfully and prevents errors before saving.
