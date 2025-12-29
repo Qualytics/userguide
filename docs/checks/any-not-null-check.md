@@ -18,7 +18,7 @@ This rule is especially useful when multiple optional fields exist, but having n
 
 Use the **Any Not Null** check when you want to ensure that records are not completely blank across a group of related fields.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(78.2692% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/YRIqJifrb6cYQeXp6mUK?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Wed Dec 24 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(78.2692% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/YRIqJifrb6cYQeXp6mUK?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add an Any Not Null Check" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 This helps detect:
 
@@ -135,7 +135,7 @@ By the time an issue was found, downstream systems had already consumed the bad 
 
 ### The Solution: Any Not Null
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(49.1909% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/ikJs6JRwTz8xr8KsDfJ1?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Wed Dec 24 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(49.1909% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/ikJs6JRwTz8xr8KsDfJ1?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Solution" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 To solve this, the data team implemented an **Any Not Null** check on:
 
@@ -163,7 +163,7 @@ These records appeared under **Failed Checks** with a clear violation message:
 
 > There is no value set for any of `O_COMMENT` and `O_ORDERSTATUS`
 
-![deactivate-user](../assets/checks/any-not-null/anomaly-detail.png)
+![anomaly-detail](../assets/checks/any-not-null/anomaly-detail.png)
 
 ### What This Confirmed
 
@@ -190,9 +190,9 @@ The Any Not Null check confirmed that:
 
 ### Key Takeaway
 
-Any Not Null acts as a safety net that prevents context-less records from silently entering the system, replacing slow and unreliable manual validation with automated enforcement.
+Any Not Null acts as a safety net that prevents contextless records from silently entering the system, replacing slow and unreliable manual validation with automated enforcement.
 
-### Field Scope
+## Field Scope
 
 **Multiple:** The rule evaluates multiple specified fields.
 
@@ -207,7 +207,7 @@ Any Not Null acts as a safety net that prevents context-less records from silent
 | `String`      | <div style="text-align:center">:octicons-check-16:</div>  |
 | `Boolean`     | <div style="text-align:center">:octicons-check-16:</div>  |
 
-### General Properties
+## General Properties
 
 {%
     include-markdown "components/general-props/index.md"
@@ -215,7 +215,7 @@ Any Not Null acts as a safety net that prevents context-less records from silent
     end='<!-- all-props--end -->'
 %}
 
-### Anomaly Types
+## Anomaly Types
 
 {%
     include-markdown "components/anomaly-support/index.md"
@@ -223,7 +223,7 @@ Any Not Null acts as a safety net that prevents context-less records from silent
     end='<!-- all-types--end -->'
 %}
 
-### Example
+## Example
 
 **Objective**: *Ensure that for every record in the ORDERS table, at least one of the fields (O_COMMENT, O_ORDERSTATUS) isn't null.*
 
@@ -253,7 +253,7 @@ Any Not Null acts as a safety net that prevents context-less records from silent
 
 **Anomaly Explanation**
 
-In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the rule because both `O_COMMENT` and `O_ORDERSTATUS` does not hold a value.
+In the sample data above, the entry with `O_ORDERKEY` **1** does not satisfy the rule because both `O_COMMENT` and `O_ORDERSTATUS` do not hold a value.
 
 === "Flowchart"
     ``` mermaid
