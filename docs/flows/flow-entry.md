@@ -4,7 +4,7 @@ The **Flow Entry** is the starting point of every Flow in Qualytics. Think of it
 
 ## Trigger Types
 
-A Flow begins when one of its Triggers activates. Here are the four available trigger types:
+A Flow begins when one of its Triggers activates. Here are the five available trigger types:
 
 | Trigger Type | Description |
 |--------------|-------------|
