@@ -16,7 +16,7 @@ If any record shows up **before or exactly at the cutoff**, it gets flagged as a
 
 Use the After Date Time Check to validate timestamp fields against a fixed cutoff and detect records that violate expected time boundaries.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/5xoq4jojtCHHXZ83n6tS?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Fri Dec 19 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/5xoq4jojtCHHXZ83n6tS?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add a After Date Time" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 ## What Does After Date Time Do?
 
@@ -44,7 +44,7 @@ You choose a **single date or timestamp field**, such as:
 
 You specify the **exact date and time** that acts as the lower boundary.
 
-**Example:** 1991-12-31 10:30:00
+**Example:** 2025-12-01 06:15:00 
 
 Only records **after this moment** are valid.
 
@@ -89,8 +89,7 @@ This rule provides a **clear, auditable boundary**.
 
 ### The Situation
 
-**BrightCart**, an e-commerce company, migrated its **user authentication system** to a new identity provider on  
-**December 1, 2025 at 06:15 UTC**.
+**BrightCart**, an e-commerce company, migrated its **user authentication system** to a new identity provider on **December 1, 2025 at 06:15 UTC**.
 
 From this point onward:
 
@@ -125,7 +124,7 @@ Manual checking wasn’t scalable — the table contained **millions of rows**.
 
 The data team configured an **After Date Time** check to enforce a hard time boundary.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/wPHCSd6kjDoxuzBWplsv?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Fri Dec 19 2025)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/wPHCSd6kjDoxuzBWplsv?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Solution" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 #### What they configured:
 
@@ -164,14 +163,20 @@ All failed records shared the same issue:
 
 ### Anomaly Output (Source Records View)
 
-| LAST_LOGIN_TS | CUSTOMER-EMAIL | CUSTOMER_ID | 
-|-----------|-------------|---------------|
-| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer041@example.com | C011 | 
-| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer040@example.com | C010 | 
-| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer028@example.com | C028 | 
-| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer014@example.com | C014 | 
+| LAST_LOGIN_TS                          | CUSTOMER_EMAIL              | CUSTOMER_ID |
+|---------------------------------------|-----------------------------|-------------|
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer043@example.com | C013 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer041@example.com | C011 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer040@example.com | C010 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer031@example.com | C001 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer028@example.com | C028 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer026@example.com | C026 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer021@example.com |      |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer014@example.com | C014 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer012@example.com | C012 |
+| <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer009@example.com | C009 |
 
-![deactivate-user](../assets/checks/after-date-time/anomaly-result.png)
+![anomaly-result](../assets/checks/after-date-time/anomaly-result.png)
 
 **Why they failed:**
 
