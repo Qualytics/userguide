@@ -265,9 +265,9 @@ Specify both minimum and maximum boundaries, and determine if these boundaries s
         "coverage": 1,
         "properties": {
             "min":5,
-            "inclusive_min":true,
+            "inclusive_min":true
             "max":20,
-            "inclusive_max":true,
+            "inclusive_max":true
         },
         "tags": [],
         "fields": ["L_QUANTITY"],
