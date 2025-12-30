@@ -59,17 +59,17 @@ This setup ensures every new data load is automatically checked, issues are flag
 
 **Step 1**: Log in to your Qualytics account and click on **Flows** on the left side panel of the interface.  
 
-![flows](.././assets/flows/flow-light-1.png)
+![flows](../assets/flows/flow-light-1.png)
 
 You will navigate to the Flows interface, where you can add and manage flows. At the top, you will see two tabs:
 
 * **Definitions:** Displays a list of all flows along with details like triggers, actions, tags, and the last triggered time.
 
-![definition](.././assets/flows/definitions-light-2.png)
+![definition](../assets/flows/definitions-light-2.png)
 
 * **Executions:** Provides the execution history of flows, including their status and timestamps.
 
-![execution](.././assets/flows/execution-light-3.png)
+![execution](../assets/flows/execution-light-3.png)
 
 ## Add Flow
 

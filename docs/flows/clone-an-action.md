@@ -7,8 +7,8 @@ Users can duplicate an existing action in just a few clicks. Cloning an action a
 !!! info
     You can add a maximum of **10 Operation** Actions (such as Catalog, Profile, or Scan) in a single flow.
 
-![vertical](.././assets/flows/vertical-light.png)
+![vertical](../assets/flows/vertical-light.png)
 
 **Step 2:** After clicking the Clone option, a cloned action will be created.
 
-![clone](.././assets/flows/clones-light.png)
+![clone](../assets/flows/clones-light.png)

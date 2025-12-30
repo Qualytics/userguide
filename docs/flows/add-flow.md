@@ -7,7 +7,7 @@ Flows allow you to automate actions based on data operations, anomaly detection,
 
 **Step 1**: Click on the **Add Flow** button from the top right corner.
 
-![addflow](.././assets/flows/addflow-light-4.png)
+![addflow](../assets/flows/addflow-light-4.png)
 
 A modal window will appear, allowing you to create a new Flow.  
 Every Flow begins with two default nodes:
@@ -15,7 +15,7 @@ Every Flow begins with two default nodes:
 - **Flow Node** – Defines the Flow’s name, description, and activation state  
 - **Trigger Node** – Defines when the Flow will start
 
-![flowchart](.././assets/flows/flowchart-light-5.png)
+![flowchart](../assets/flows/flowchart-light-5.png)
 
 ## What You Configure Next
 
