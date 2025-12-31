@@ -141,9 +141,15 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 ![anomaly-option](../assets/datastores/scan/anomalyy-light.png)
 
-**3. Maximum Source Examples per Anomaly:** Sets a maximum limit on the number of records written to the enrichment datastore for each detected anomaly. This helps manage storage and processing requirements effectively.
+**3. Maximum Source Examples per Anomaly:** This setting decides **how many source records are kept for each anomaly**. When the scan runs and finds an anomaly, only the specified number of records are kept. These are the **only records you can view or download later**.
 
 ![source-record-limit](../assets/datastores/scan/source-record-limit-light.png)
+
+For example, if this value is set to **10**, only **10 source records per anomaly** will be kept, even if more records caused the anomaly.
+
+If you need to **download more records**, increase this value **before running the scan**. Changes made after the scan finishes will not affect the results.
+
+![record-limit](../assets/datastores/scan/record-limit.png)
 
 ## Run Instantly
 
