@@ -18,6 +18,8 @@ If a record arrives too early, too late, or completely outside the allowed windo
 
 Use the Between Times check to validate timestamps, enforce business hours, and detect out-of-range records before they impact reporting or downstream systems.
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/hSgyntZZ7yLMwpQpvsB1?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add a Between Times Check" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 ## What Does Between Times Do?
 
 Between Times helps you answer questions like:
@@ -105,6 +107,8 @@ They suspected bad timestamps but had no automated way to catch them.
 ### The Solution: Between Times
 
 They configured a **Between Times** check on the `CREATED_DATE` field with the allowed date range.
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/WQfRRRrwVp8Lqt13SzvS?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Solution" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 **Rule Setup:**
 
