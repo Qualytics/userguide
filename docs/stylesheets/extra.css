@@ -1,8 +1,9 @@
 /* ===== LIGHT MODE ===== */
 [data-md-color-scheme="default"] {
-  --q-primary: #007CF2;
+  --q-primary: #FF9933;
   --q-secondary: #26A69A;
-  --q-accent: #FFFFFF;
+  --q-accent: #000000;
+  --q-brick: #B83200;
 
   --q-dark: #222c46;
 
@@ -10,7 +11,7 @@
   --q-normal: #333333;
   --q-lighter: #666666;
   --q-inverted: #FFFFFF;
-  --q-mild: #F1F6FB;
+  --q-mild: #f6f3f0;
   --q-shadow: #33333320;
   --q-invalid: #5A678F;
   --q-salmon: #FF9780;
@@ -53,9 +54,10 @@
 
 /* ===== DARK MODE ===== */
 [data-md-color-scheme="slate"] {
-  --q-primary: #007CF2;
+  --q-primary: #FF9933;
   --q-secondary: #26A69A;
   --q-accent: #222c46;
+  --q-brick: #B83200;
 
   --q-dark: #222c46;
 
@@ -174,6 +176,54 @@
   background-color: var(--q-accent);
 }
 
+/* Dark mode: white header background */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #FFFFFF;
+}
+
+/* Header layout */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 40px;
+  flex-wrap: nowrap;
+}
+
+/* Logo - left side */
+.md-header__button.md-logo {
+  margin-right: 0;
+}
+
+/* Title container */
+.md-header__title {
+  margin-left: 0.4rem;
+  display: block !important;
+}
+
+
+/* Search bar container */
+.md-search {
+  order: 5;
+  flex-shrink: 1;
+}
+
+/* Right side container - theme toggle and GitHub */
+.md-header__option {
+  order: 10;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* GitHub source - far right */
+.md-header__source {
+  order: 11;
+  width: 140px !important;
+  max-width: 140px !important;
+  flex-shrink: 0;
+}
+
 /* Navigation tab */
 .md-tabs {
   background-color: var(--q-accent);
@@ -183,6 +233,12 @@
 
   font-size: 14px;
 }
+
+/* Light mode: white navigation tabs background */
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: #FFFFFF;
+}
+
 
 /* Navigation item */
 .md-tabs__item {
@@ -220,21 +276,90 @@
   }
 }
 
-/* Search bar */
-.md-search__inner {
-  .md-search__form {
-    background-color: var(--q-mild);
-    border: 1px solid var(--q-disabled);
-    border-radius: 6px;
+/* Search bar - Light mode */
+[data-md-color-scheme="default"] .md-search__inner .md-search__form {
+  background-color: #FFFFFF;
+  border: 1px solid var(--q-disabled);
+  border-radius: 6px;
+}
 
-    .md-search__input::placeholder {
-      color: var(--q-normal);
-    }
+[data-md-color-scheme="default"] .md-search__inner .md-search__form:hover {
+  background-color: var(--q-mild);
+}
 
-    .md-icon {
-      color: var(--q-primary);
-    }
-  }
+[data-md-color-scheme="default"] .md-search__inner .md-search__form .md-search__input::placeholder {
+  color: var(--q-normal);
+}
+
+[data-md-color-scheme="default"] .md-search__inner .md-search__form .md-icon {
+  color: var(--q-primary);
+}
+
+/* Search bar - Dark mode */
+[data-md-color-scheme="slate"] .md-search__inner .md-search__form {
+  background-color: #000000;
+  border: 1px solid var(--q-disabled);
+  border-radius: 6px;
+}
+
+[data-md-color-scheme="slate"] .md-search__inner .md-search__form:hover {
+  background-color: var(--q-mild);
+}
+
+[data-md-color-scheme="slate"] .md-search__inner .md-search__form .md-search__input {
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .md-search__inner .md-search__form .md-search__input::placeholder {
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .md-search__inner .md-search__form .md-icon {
+  color: var(--q-primary);
+}
+
+/* Search modal/dropdown - Dark mode */
+/* Search input area - preto total escuro */
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: #000000 !important;
+}
+
+/* Search results area - preto mais claro */
+[data-md-color-scheme="slate"] .md-search__output {
+  background-color: #222222 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result {
+  background-color: #222222 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__meta {
+  background-color: #222222 !important;
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item {
+  background-color: #222222 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__link {
+  background-color: #222222 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__link:hover {
+  background-color: var(--q-mild) !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__article {
+  background-color: #222222 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__title {
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__teaser {
+  color: #CCCCCC;
 }
 
 /* Forcing search icon change color */
@@ -247,6 +372,33 @@
 /* All button */
 .md-icon {
   color: var(--q-primary);
+}
+
+/* Header icons (theme toggle, search, GitHub) */
+.md-header .md-icon {
+  color: var(--q-primary);
+}
+
+/* GitHub source link text and stats (stars, forks) */
+.md-source {
+  min-width: auto;
+  width: auto;
+}
+
+[data-md-color-scheme="default"] .md-source {
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="default"] .md-source__icon svg {
+  fill: var(--q-primary);
+}
+
+[data-md-color-scheme="slate"] .md-source {
+  color: #000000;
+}
+
+[data-md-color-scheme="slate"] .md-source__icon svg {
+  fill: var(--q-primary);
 }
 
 /* Innter button (view or edit page button) */
@@ -284,21 +436,37 @@
 /* Logo CSS */
 .md-logo {
   display: flex !important;
-  width: 112px;
-  height: 26px;
+  width: 145px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Header title (User Guide) font */
+.md-header__topic {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Light mode: white text for User Guide (black header) */
+[data-md-color-scheme="default"] .md-header__topic {
+  color: #FFFFFF;
+}
+
+/* Dark mode: black text for User Guide (white header) */
+[data-md-color-scheme="slate"] .md-header__topic {
+  color: #000000;
+}
+
 /* Change to light mode logo */
 [data-md-color-scheme="default"] .md-logo {
-  background-image: url("../assets/Logo.png");
+  background-image: url("../assets/logo-light.svg");
 }
 
 /* Change to dark mode logo */
 [data-md-color-scheme="slate"] .md-logo {
-  background-image: url("../assets/Logo-dark.svg");
+  background-image: url("../assets/logo-dark.svg");
 }
 
 /* Left and Right navigation text links */
