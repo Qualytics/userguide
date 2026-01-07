@@ -239,6 +239,11 @@
   background-color: #FFFFFF;
 }
 
+/* Dark mode: black navigation tabs background */
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #000000;
+}
+
 
 /* Navigation item */
 .md-tabs__item {
@@ -271,9 +276,20 @@
 
   .md-tabs__link {
     cursor: default;
-    color: #ffffff;
-    background-color: var(--q-primary);
+    background-color: transparent;
+    border-bottom: 3px solid var(--q-primary);
+    border-radius: 0;
   }
+}
+
+/* Light mode: active tab text color */
+[data-md-color-scheme="default"] .md-tabs__item--active .md-tabs__link {
+  color: #000000;
+}
+
+/* Dark mode: active tab text color */
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
+  color: #FFFFFF;
 }
 
 /* Search bar - Light mode */
