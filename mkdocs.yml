@@ -349,7 +349,7 @@ theme:
         icon: material/brightness-7
         name: Switch to light mode
   logo: assets/Logo.png
-  favicon: assets/Q_sm_logo.png
+  favicon: assets/favicon.ico
   name: material
   custom_dir: overrides
   font:
