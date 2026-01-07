@@ -101,11 +101,11 @@ A panel **Scan Settings** will appear on the right-hand side. This window allows
 
 ![scan](../assets/flows/scan-settings-light.png)
 
-**Anomaly Rollup Threshold:** Set the Rollup Threshold to limit how many anomalies are created per check. When the limit is reached, anomalies will be merged into one for easier management.
+**Maximum Record Anomalies per Check:** Set the Rollup Threshold to limit how many anomalies are created per check. When the limit is reached, anomalies will be merged into one for easier management.
 
 ![rollup](../assets/flows/rollup-light-39.png)
 
-**Enrichment Source Record Limit:** Define the number of source records to include in the enrichment operation.
+**Maximum Source Examples per Anomaly:** Sets how many source records are kept per anomaly during a scan. **For example**, if this is set to **10**, only **10 records per anomaly will be saved or downloaded**. Increase this value before running the scan to access more records.
 
 ![scan](../assets/flows/scan-light-40.png)
 
