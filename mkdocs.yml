@@ -292,6 +292,8 @@ nav:
           - Atlan: settings/integrations/catalog/atlan.md
           - Alation: settings/integrations/catalog/alation.md
           - Microsoft Purview: settings/integrations/catalog/purview.md
+          - Collibra: settings/integrations/catalog/collibra.md
+          - DataHub: settings/integrations/catalog/datahub.md
           - External Tag Propagation: settings/integrations/catalog/external-tag-propagation.md
         - Single Sign-On: settings/integrations/sso/sso.md
         - Compute: settings/integrations/compute/compute.md
