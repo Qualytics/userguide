@@ -749,6 +749,17 @@
   color: var(--q-primary) !important;
 }
 
+/* Force primary color on search "more" links */
+.md-search-result__more summary,
+.md-search-result__more summary > span {
+  color: var(--q-primary) !important;
+}
+
+/* Override Material's CSS variable for search result links */
+.md-search-result__more summary {
+  --md-typeset-a-color: var(--q-primary);
+}
+
 .md-search-result mark,
 .md-search-result__teaser mark {
   color: var(--q-brick) !important;
