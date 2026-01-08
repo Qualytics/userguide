@@ -18,16 +18,16 @@
   --q-mild: #f6f3f0;
   --q-shadow: #33333320;
 
-  /* User Guide Specific */
+  /* Light Mode Specific (not used in light mode but defined for consistency) */
   --q-search-bg: #222222;
   --q-search-text-secondary: #CCCCCC;
 
   /* Field Type Colors (User Guide Specific) */
-  --q-required: #F08080;
-  --q-optional: #90EE90;
-  --q-field-single: #FFA500;
-  --q-field-multiple: #FF4500;
-  --q-field-none: #808080;
+  --q-salmon: #FF9780;
+  --q-positive: #21BA45;
+  --q-warning: #ffbb33;
+  --q-orange: #F96719;
+  --q-invalid: #5A678F;
 
   /* MkDocs Variables */
   --md-default-fg-color: var(--q-black);
@@ -47,7 +47,7 @@
   --md-typeset-a-color: var(--q-brick);
 
   --md-code-bg-color: var(--q-white);
-  --md-code-fg-color: var(--q-black);
+  --md-code-fg-color: var(--q-brick);
 
   --md-navigation-link: var(--q-black);
 
@@ -235,6 +235,28 @@
     fill: var(--q-brick) !important;
     opacity: 1 !important;
   }
+
+  /* Tables */
+  .md-typeset table:not([class]) {
+    background-color: var(--q-white);
+  }
+
+  .md-typeset table:not([class]) th {
+    background-color: var(--q-white);
+  }
+
+  .md-typeset table:not([class]) td {
+    background-color: var(--q-white);
+  }
+
+  /* Admonitions (Example boxes) */
+  .md-typeset .admonition {
+    background-color: var(--q-white);
+  }
+
+  .md-typeset details.example {
+    background-color: var(--q-white);
+  }
 }
 
 /* ===== DARK MODE ===== */
@@ -256,16 +278,16 @@
   --q-mild: #232526;
   --q-shadow: #FFFFFF20;
 
-  /* User Guide Specific */
+  /* Dark Mode Specific */
   --q-search-bg: #222222;
   --q-search-text-secondary: #CCCCCC;
 
   /* Field Type Colors (User Guide Specific) */
-  --q-required: #F08080;
-  --q-optional: #90EE90;
-  --q-field-single: #FFA500;
-  --q-field-multiple: #FF4500;
-  --q-field-none: #808080;
+  --q-salmon: #FF9780;
+  --q-positive: #21BA45;
+  --q-warning: #ffbb33;
+  --q-orange: #F96719;
+  --q-invalid: #828db0;
 
   /* MkDocs Variables */
   --md-default-fg-color: var(--q-white);
@@ -285,7 +307,7 @@
   --md-typeset-a-color: var(--q-brick);
 
   --md-code-bg-color: var(--q-black);
-  --md-code-fg-color: var(--q-white);
+  --md-code-fg-color: var(--q-brick);
 
   --md-navigation-link: var(--q-white);
 
@@ -524,41 +546,71 @@
     fill: var(--q-brick) !important;
     opacity: 1 !important;
   }
+
+  /* Tables */
+  .md-typeset table:not([class]) {
+    background-color: var(--q-black);
+  }
+
+  .md-typeset table:not([class]) th {
+    background-color: var(--q-black);
+  }
+
+  .md-typeset table:not([class]) td {
+    background-color: var(--q-black);
+  }
+
+  /* Admonitions (Example boxes) */
+  .md-typeset .admonition {
+    background-color: var(--q-black);
+  }
+
+  .md-typeset details.example {
+    background-color: var(--q-black);
+  }
+
+  /* Inline Code Color Override for Dark Mode (only for inline code in text, not in code blocks) */
+  .md-typeset p code,
+  .md-typeset td code,
+  .md-typeset th code,
+  .md-typeset li code {
+    color: var(--q-primary) !important;
+  }
 }
 
 /* ===== GLOBAL STYLES (Theme-Independent) ===== */
 
 /* Semantic Field Type Colors */
 .md-typeset spam#required>code {
-  color: var(--q-required);
+  color: var(--q-salmon);
   font-style: italic;
   font-weight: bold;
   font-size: 15px;
 }
 
 .md-typeset spam#not-required>code {
-  color: var(--q-optional);
+  color: var(--q-positive);
   font-style: italic;
   font-weight: bold;
   font-size: 15px;
 }
 
 .md-typeset spam#single-field>code {
-  color: var(--q-field-single);
+  color: var(--q-warning);
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
 }
 
 .md-typeset spam#multiple-fields>code {
-  color: var(--q-field-multiple);
+  color: var(--q-orange);
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
 }
 
 .md-typeset spam#none-field>code {
-  color: var(--q-field-none);
+  color: var(--q-invalid);
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
@@ -850,6 +902,7 @@ a.md-content__button {
 /* Sidebar Navigation */
 .md-nav__link--active {
   color: var(--q-primary) !important;
+  font-weight: 600;
 }
 
 .md-nav__link[for]:focus,
@@ -885,6 +938,15 @@ a.md-content__button {
   color: var(--md-footer-title-color);
 }
 
+.md-footer-meta a {
+  color: var(--q-primary) !important;
+  font-weight: 600;
+}
+
+.md-footer-meta a:hover {
+  color: var(--q-brick) !important;
+}
+
 /* Text Links */
 .md-typeset a,
 .md-typeset a:before,
@@ -892,6 +954,7 @@ a.md-content__button {
 .md-typeset a::after {
   color: var(--q-primary);
   text-decoration: none;
+  font-weight: 600;
 }
 
 .md-typeset a u {
