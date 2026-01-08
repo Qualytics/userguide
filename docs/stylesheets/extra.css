@@ -47,7 +47,6 @@
   --md-typeset-a-color: var(--q-brick);
 
   --md-code-bg-color: var(--q-white);
-  --md-code-fg-color: var(--q-brick);
 
   --md-navigation-link: var(--q-black);
 
@@ -307,7 +306,6 @@
   --md-typeset-a-color: var(--q-brick);
 
   --md-code-bg-color: var(--q-black);
-  --md-code-fg-color: var(--q-brick);
 
   --md-navigation-link: var(--q-white);
 
@@ -567,14 +565,6 @@
 
   .md-typeset details.example {
     background-color: var(--q-black);
-  }
-
-  /* Inline Code Color Override for Dark Mode (only for inline code in text, not in code blocks) */
-  .md-typeset p code,
-  .md-typeset td code,
-  .md-typeset th code,
-  .md-typeset li code {
-    color: var(--q-primary) !important;
   }
 }
 
