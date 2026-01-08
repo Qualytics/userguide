@@ -35,17 +35,18 @@
   --md-footer-fg-color--lighter: #FFFFFF;
 
   --md-primary-bg-color: #000000;
-  --md-default-bg-color: #F1F6FB;
+  --md-default-bg-color: #f6f3f0;
 
   /* Links in Search item */
-  --md-accent-fg-color: #007CF2;
+  --md-accent-fg-color: var(--q-brick);
 
   /* Tip box */
   --md-admonition-bg-color: #FFFFFF;
   /* Code block */
   --md-code-bg-color: #FFFFFF;
+  --md-code-fg-color: #000000;
   /* Link Color */
-  --md-typeset-a-color: #007cf2;
+  --md-typeset-a-color: var(--q-brick);
 
   --md-navigation-link: #000000;
   /* Next and Previous text */
@@ -65,7 +66,7 @@
   --q-normal: #FFFFFF;
   --q-lighter: #A0A0A0;
   --q-inverted: #333333;
-  --q-mild: #161F39;
+  --q-mild: #232526;
   --q-shadow: #FFFFFF20;
   --q-invalid: #5A678F;
   --q-salmon: #FF9780;
@@ -89,17 +90,18 @@
   --md-footer-fg-color--lighter: #000000;
 
   --md-primary-bg-color: #FFFFFF;
-  --md-default-bg-color: #161F39;
+  --md-default-bg-color: #232526;
 
   /* Links in Search item */
-  --md-accent-fg-color: #007CF2;
+  --md-accent-fg-color: var(--q-brick);
 
   /* Tip box */
   --md-admonition-bg-color: #222c46;
   /* Code block */
-  --md-code-bg-color: #222c46;
-  /* General Link Color */
-  --md-typeset-a-color: #007CF2 !important;
+  --md-code-bg-color: #000000;
+  --md-code-fg-color: #FFFFFF;
+  /* Link Color */
+  --md-typeset-a-color: var(--q-brick);
 
   --md-navigation-link: #FFFFFF;
   /* Next and Previous text */
@@ -334,6 +336,42 @@
   color: var(--q-primary);
 }
 
+/* Search close/reset button (X) - Light mode */
+/* Only style when visible (MkDocs controls visibility) */
+[data-md-color-scheme="default"] .md-search__options .md-icon {
+  color: var(--q-primary) !important;
+}
+
+[data-md-color-scheme="default"] .md-search__options .md-icon:hover {
+  color: var(--q-brick) !important;
+}
+
+[data-md-color-scheme="default"] .md-search__options .md-icon svg {
+  fill: var(--q-primary) !important;
+}
+
+[data-md-color-scheme="default"] .md-search__options .md-icon:hover svg {
+  fill: var(--q-brick) !important;
+}
+
+/* Search close/reset button (X) - Dark mode */
+/* Only style when visible (MkDocs controls visibility) */
+[data-md-color-scheme="slate"] .md-search__options .md-icon {
+  color: var(--q-primary) !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__options .md-icon:hover {
+  color: var(--q-brick) !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__options .md-icon svg {
+  fill: var(--q-primary) !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__options .md-icon:hover svg {
+  fill: var(--q-brick) !important;
+}
+
 /* Search modal/dropdown - Dark mode */
 /* Search input area - preto total escuro */
 [data-md-color-scheme="slate"] .md-search__form {
@@ -378,6 +416,167 @@
   color: #CCCCCC;
 }
 
+/* Search results - change link colors to primary (for "more on this page" links) */
+.md-search-result__article a,
+.md-search-result a,
+.md-search-result__more,
+.md-search-result__more a,
+.md-search-result__more summary,
+.md-search-result__meta a,
+.md-search-result__list a {
+  color: var(--q-primary) !important;
+  background-color: transparent !important;
+}
+
+/* Override MkDocs accent color specifically for search results */
+.md-search-result [data-md-component="search-result"] a,
+.md-search-result details a,
+.md-search-result details summary {
+  color: var(--q-primary) !important;
+}
+
+/* Search results - highlighted text to brick */
+.md-search-result mark,
+.md-search-result__teaser mark {
+  color: var(--q-brick) !important;
+  background-color: transparent !important;
+}
+
+/* Light mode search results links */
+[data-md-color-scheme="default"] .md-search-result__article a,
+[data-md-color-scheme="default"] .md-search-result a,
+[data-md-color-scheme="default"] .md-search-result__more,
+[data-md-color-scheme="default"] .md-search-result__more a,
+[data-md-color-scheme="default"] .md-search-result__more summary,
+[data-md-color-scheme="default"] .md-search-result__meta a,
+[data-md-color-scheme="default"] .md-search-result__list a,
+[data-md-color-scheme="default"] .md-search-result details a,
+[data-md-color-scheme="default"] .md-search-result details summary {
+  color: var(--q-primary) !important;
+  background-color: transparent !important;
+}
+
+[data-md-color-scheme="default"] .md-search-result mark,
+[data-md-color-scheme="default"] .md-search-result__teaser mark {
+  color: var(--q-brick) !important;
+  background-color: transparent !important;
+}
+
+/* Dark mode search results links */
+[data-md-color-scheme="slate"] .md-search-result__article a,
+[data-md-color-scheme="slate"] .md-search-result a,
+[data-md-color-scheme="slate"] .md-search-result__more,
+[data-md-color-scheme="slate"] .md-search-result__more a,
+[data-md-color-scheme="slate"] .md-search-result__more summary,
+[data-md-color-scheme="slate"] .md-search-result__meta a,
+[data-md-color-scheme="slate"] .md-search-result__list a,
+[data-md-color-scheme="slate"] .md-search-result details a,
+[data-md-color-scheme="slate"] .md-search-result details summary {
+  color: var(--q-primary) !important;
+  background-color: transparent !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result mark,
+[data-md-color-scheme="slate"] .md-search-result__teaser mark {
+  color: var(--q-brick) !important;
+  background-color: transparent !important;
+}
+
+/* Search result item hover - Light mode */
+[data-md-color-scheme="default"] .md-search-result__item:hover,
+[data-md-color-scheme="default"] .md-search-result__link:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Change text colors to brick on hover - Light mode */
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__article a,
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__more,
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__more a,
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__more summary,
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__meta a,
+[data-md-color-scheme="default"] .md-search-result__item:hover .md-search-result__list a,
+[data-md-color-scheme="default"] .md-search-result__item:hover details a,
+[data-md-color-scheme="default"] .md-search-result__item:hover details summary,
+[data-md-color-scheme="default"] .md-search-result__item:hover a,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__article a,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__more,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__more a,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__more summary,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__meta a,
+[data-md-color-scheme="default"] .md-search-result__link:hover .md-search-result__list a,
+[data-md-color-scheme="default"] .md-search-result__link:hover details a,
+[data-md-color-scheme="default"] .md-search-result__link:hover details summary,
+[data-md-color-scheme="default"] .md-search-result__link:hover a {
+  color: var(--q-brick) !important;
+}
+
+/* Search result item hover - Dark mode */
+[data-md-color-scheme="slate"] .md-search-result__item:hover,
+[data-md-color-scheme="slate"] .md-search-result__link:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__article,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__article {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Change text colors to brick on hover - Dark mode */
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__article a,
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__more,
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__more a,
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__more summary,
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__meta a,
+[data-md-color-scheme="slate"] .md-search-result__item:hover .md-search-result__list a,
+[data-md-color-scheme="slate"] .md-search-result__item:hover details a,
+[data-md-color-scheme="slate"] .md-search-result__item:hover details summary,
+[data-md-color-scheme="slate"] .md-search-result__item:hover a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__article a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__more,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__more a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__more summary,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__meta a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover .md-search-result__list a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover details a,
+[data-md-color-scheme="slate"] .md-search-result__link:hover details summary,
+[data-md-color-scheme="slate"] .md-search-result__link:hover a {
+  color: var(--q-brick) !important;
+}
+
+/* Search results scrollbar - Webkit (Chrome, Safari, Edge) */
+.md-search-result::-webkit-scrollbar,
+.md-search__scrollwrap::-webkit-scrollbar,
+.md-search__output::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-search-result::-webkit-scrollbar-track,
+.md-search__scrollwrap::-webkit-scrollbar-track,
+.md-search__output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-search-result::-webkit-scrollbar-thumb,
+.md-search__scrollwrap::-webkit-scrollbar-thumb,
+.md-search__output::-webkit-scrollbar-thumb {
+  background-color: var(--q-primary) !important;
+  border-radius: 3px;
+}
+
+.md-search-result::-webkit-scrollbar-thumb:hover,
+.md-search__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-search__output::-webkit-scrollbar-thumb:hover {
+  background-color: var(--q-primary) !important;
+}
+
+/* Search results scrollbar - Firefox */
+.md-search-result,
+.md-search__scrollwrap,
+.md-search__output {
+  scrollbar-width: thin;
+  scrollbar-color: var(--q-primary) transparent !important;
+}
+
 /* Forcing search icon change color */
 @media screen and (min-width: 60em) {
   [data-md-toggle=search]:checked~.md-header .md-search__input+.md-search__icon {
@@ -393,6 +592,14 @@
 /* Header icons (theme toggle, search, GitHub) */
 .md-header .md-icon {
   color: var(--q-primary);
+}
+
+/* Theme switch button hover */
+.md-header__option:hover .md-icon,
+.md-header__option:hover .md-icon svg {
+  color: var(--q-brick) !important;
+  fill: var(--q-brick) !important;
+  opacity: 1 !important;
 }
 
 /* GitHub source link text and stats (stars, forks) */
@@ -417,30 +624,105 @@
   fill: var(--q-primary);
 }
 
-/* Innter button (view or edit page button) */
+/* GitHub source hover - change to brick */
+.md-source:hover .md-icon,
+.md-source:hover svg,
+.md-source__icon:hover svg {
+  fill: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-source:hover {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-source:hover {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Inner button (view or edit page button) */
+.md-content__button .md-icon {
+  color: var(--q-primary) !important;
+}
+
+.md-content__button .md-icon svg {
+  fill: var(--q-primary) !important;
+}
+
+.md-content__button svg {
+  fill: var(--q-primary) !important;
+}
+
+a.md-content__button {
+  color: var(--q-primary) !important;
+}
+
 .md-content__button:hover {
-  opacity: 0.7;
+  opacity: 1;
+}
+
+.md-content__button:hover .md-icon {
+  color: var(--q-brick) !important;
+}
+
+.md-content__button:hover .md-icon svg {
+  fill: var(--q-brick) !important;
+}
+
+.md-content__button:hover svg {
+  fill: var(--q-brick) !important;
 }
 
 /* Back to top button */
 .md-top {
   color: #FFFFFF;
-  background-color: var(--q-dark);
-}
-
-/* Back to top button */
-.md-top:focus,
-.md-top:hover {
-  color: #FFFFFF;
   background-color: var(--q-primary);
 }
 
-/* Left and Right menu navigation links */
+/* Back to top button hover */
+.md-top:focus,
+.md-top:hover {
+  color: #FFFFFF;
+  background-color: var(--q-brick);
+}
+
+/* Left sidebar scrollbar */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: var(--q-primary) !important;
+  border-radius: 3px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background-color: var(--q-primary) !important;
+}
+
+/* Firefox scrollbar */
+.md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--q-primary) transparent !important;
+}
+
+/* Left sidebar - active/selected item */
+.md-nav__link--active {
+  color: var(--q-primary) !important;
+}
+
+/* Left and Right menu navigation links hover - brick color */
 .md-nav__link[for]:focus,
 .md-nav__link[for]:hover,
 .md-nav__link[href]:focus,
 .md-nav__link[href]:hover {
-  color: var(--q-primary);
+  color: var(--q-brick) !important;
 }
 
 /* Removing the logo (by default MKDocs generate a default icon when the `logo` property is not set) */
@@ -477,12 +759,42 @@
 
 /* Change to light mode logo */
 [data-md-color-scheme="default"] .md-logo {
-  background-image: url("../assets/logo-light.svg");
+  background-color: #FFFFFF;
+  mask-image: url("../assets/logo-light.svg");
+  -webkit-mask-image: url("../assets/logo-light.svg");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  transition: background-color 0.2s ease;
+}
+
+/* Light mode logo hover - change to brick */
+[data-md-color-scheme="default"] .md-logo:hover {
+  background-color: var(--q-brick);
+  opacity: 1 !important;
 }
 
 /* Change to dark mode logo */
 [data-md-color-scheme="slate"] .md-logo {
-  background-image: url("../assets/logo-dark.svg");
+  background-color: #000000;
+  mask-image: url("../assets/logo-dark.svg");
+  -webkit-mask-image: url("../assets/logo-dark.svg");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  transition: background-color 0.2s ease;
+}
+
+/* Dark mode logo hover - change to brick */
+[data-md-color-scheme="slate"] .md-logo:hover {
+  background-color: var(--q-brick);
+  opacity: 1 !important;
 }
 
 /* Left and Right navigation text links */
@@ -540,6 +852,58 @@
   color: var(--q-primary) !important;
 }
 
+/* Footer Previous/Next buttons hover - Light mode */
+[data-md-color-scheme="default"] .md-footer__link:hover {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-footer__link:hover .md-footer__title {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-footer__link:hover .md-footer__direction {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-footer__link:hover .md-icon {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-footer__link:hover .md-icon svg {
+  fill: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+/* Footer Previous/Next buttons hover - Dark mode */
+[data-md-color-scheme="slate"] .md-footer__link:hover {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__link:hover .md-footer__title {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__link:hover .md-footer__direction {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__link:hover .md-icon {
+  color: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__link:hover .md-icon svg {
+  fill: var(--q-brick) !important;
+  opacity: 1 !important;
+}
+
 /* Text Links */
 .md-typeset a,
 .md-typeset a:before,
@@ -558,7 +922,158 @@
   }
 }
 
-/* Feedback button hover */
-.md-feedback__icon:not(:disabled).md-icon:hover {
-  opacity: 0.7;
+/* Text Links hover - change to brick color */
+.md-typeset a:hover {
+  color: var(--q-brick) !important;
+}
+
+/* Content tabs - override MkDocs Material accent color */
+:root {
+  --md-accent-fg-color--transparent: transparent;
+}
+
+/* Content tabs (code blocks, examples) - base styling */
+.md-typeset .tabbed-labels>label {
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.2s;
+}
+
+/* Content tabs - inactive tab hover */
+/* Light mode */
+[data-md-color-scheme="default"] .md-typeset .tabbed-labels>label:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] .md-typeset .tabbed-labels>label:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Prevent brick color on tab labels - keep text black/white */
+.md-typeset .tabbed-labels>label:hover,
+.md-typeset .tabbed-labels>label:focus,
+.md-typeset .tabbed-labels a:hover {
+  color: var(--md-default-fg-color) !important;
+}
+
+/* Content tabs - active/selected tab border color override */
+.md-typeset .tabbed-labels>label {
+  border-color: transparent !important;
+}
+
+.md-typeset .tabbed-set>input:checked+label {
+  border-color: var(--q-primary) !important;
+}
+
+/* Override the indicator/slider color */
+.md-typeset .tabbed-set .tabbed-labels::before {
+  background: var(--q-primary) !important;
+}
+
+/* Tab navigation arrows (left and right buttons) */
+/* Target all possible button variations in tabbed content */
+.tabbed-control,
+.tabbed-alternate button,
+.tabbed-labels button,
+.tabbed-labels~button,
+button[aria-label*="Previous"],
+button[aria-label*="Next"],
+.md-typeset .tabbed-set button,
+.md-typeset .tabbed-alternate button {
+  color: var(--q-primary) !important;
+  background-color: transparent !important;
+}
+
+.tabbed-control svg,
+.tabbed-alternate button svg,
+.tabbed-labels button svg,
+.tabbed-labels~button svg,
+button[aria-label*="Previous"] svg,
+button[aria-label*="Next"] svg,
+.md-typeset .tabbed-set button svg,
+.md-typeset .tabbed-alternate button svg,
+.md-typeset .tabbed-set svg {
+  fill: var(--q-primary) !important;
+  color: var(--q-primary) !important;
+}
+
+/* Tab navigation arrows hover */
+.tabbed-control:hover,
+.tabbed-alternate button:hover,
+.tabbed-labels button:hover,
+.tabbed-labels~button:hover,
+button[aria-label*="Previous"]:hover,
+button[aria-label*="Next"]:hover,
+.md-typeset .tabbed-set button:hover,
+.md-typeset .tabbed-alternate button:hover {
+  color: var(--q-brick) !important;
+  background-color: transparent !important;
+}
+
+.tabbed-control:hover svg,
+.tabbed-alternate button:hover svg,
+.tabbed-labels button:hover svg,
+.tabbed-labels~button:hover svg,
+button[aria-label*="Previous"]:hover svg,
+button[aria-label*="Next"]:hover svg,
+.md-typeset .tabbed-set button:hover svg,
+.md-typeset .tabbed-alternate button:hover svg,
+.md-typeset .tabbed-set:hover svg {
+  fill: var(--q-brick) !important;
+  color: var(--q-brick) !important;
+}
+
+/* Feedback buttons - base styling */
+.md-feedback__icon {
+  color: var(--q-primary) !important;
+}
+
+.md-feedback__icon svg {
+  fill: var(--q-primary) !important;
+}
+
+/* Feedback button hover - only the hovered icon changes */
+.md-feedback__icon:not(:disabled):hover {
+  color: var(--q-brick) !important;
+  opacity: 1;
+}
+
+.md-feedback__icon:not(:disabled):hover svg {
+  fill: var(--q-brick) !important;
+}
+
+/* Copy code button */
+.md-clipboard {
+  color: var(--q-primary) !important;
+}
+
+.md-clipboard svg {
+  fill: var(--q-primary) !important;
+}
+
+/* Copy code button hover */
+.md-clipboard:hover {
+  color: var(--q-brick) !important;
+}
+
+.md-clipboard:hover svg {
+  fill: var(--q-brick) !important;
+}
+
+/* Keep copy button primary color when hovering over code block */
+pre:hover .md-clipboard {
+  color: var(--q-primary) !important;
+}
+
+pre:hover .md-clipboard svg {
+  fill: var(--q-primary) !important;
+}
+
+/* Override hover state on the button itself */
+pre .md-clipboard:hover {
+  color: var(--q-brick) !important;
+}
+
+pre .md-clipboard:hover svg {
+  fill: var(--q-brick) !important;
 }
