@@ -1,5 +1,54 @@
 # Types of Transformations
 
+## Cast
+
+The **Cast** transformation converts field values to a specified target data type using Spark SQL casting rules. This is commonly used when a field is ingested as a string but must behave as a numeric, date, timestamp, or boolean value for profiling, checks, or downstream computations.
+
+### When to Use Cast
+
+Use **Cast** when:
+
+- A numeric field is ingested as a string (for example, `"1000"` instead of `1000`)
+- Dates or timestamps need explicit typing
+- Boolean logic is required on string values
+- Quality checks or aggregations require strict data types
+
+### Options for Cast
+
+| REF. | FIELD | WHAT IT MEANS |
+|-----|------|----------------|
+| 1 | **Name** | A clear, descriptive name for the new computed field you are creating. |
+| 2 | **Transformation Type** | Choose **Cast** to convert the data type of an existing field. |
+| 3 | **Field** | The existing column whose values you want to convert into another data type. |
+| 4 | **Target Type** | The data type you want the field to become (for example: number, date, timestamp, decimal, or boolean). |
+| 5 | **Format** | Optional, Used only when converting text into dates or timestamps, so the system knows how to read the date format correctly. |
+| 6 | **Additional Metadata** | Optional information you can attach to the field to provide extra context or documentation. |
+
+### Target Type Examples
+
+| **Input Value** | **Target Type** | **Result** |
+|----------------|---------------|------------|
+| `"1000"` | `int` | `1000` |
+| `"1234.56"` | `decimal(10,2)` | `1234.56` |
+| `"true"` | `boolean` | `true` |
+| `"2023-12-31"` | `date` | `2023-12-31` |
+
+### Format Examples (Date / Timestamp Casting)
+
+The **Format** field is only required when casting string values into `date` or `timestamp`.
+
+Common examples:
+
+| **Format Pattern** | **Example Input** |
+|-------------------|------------------|
+| `MM/dd/yyyy` | `12/31/2023` |
+| `dd/MM/yyyy` | `31/12/2023` |
+| `yyyy-MM-dd HH:mm:ss` | `2023-12-31 14:30:00` |
+
+### Practical Use Case
+
+A field such as **BUSINESS_ID** or **Transaction_Amount** is ingested as a string due to upstream system constraints. By applying a **Cast** transformation, the field becomes properly typed—enabling accurate aggregations, anomaly detection, and quality checks.
+
 ## Cleaned Entity Name
 
 This transformation removes common business signifiers from entity names, making your data cleaner and more uniform.
