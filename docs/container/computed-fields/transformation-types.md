@@ -45,10 +45,6 @@ Common examples:
 | `dd/MM/yyyy` | `31/12/2023` |
 | `yyyy-MM-dd HH:mm:ss` | `2023-12-31 14:30:00` |
 
-### Practical Use Case
-
-A field such as **BUSINESS_ID** or **Transaction_Amount** is ingested as a string due to upstream system constraints. By applying a **Cast** transformation, the field becomes properly typed—enabling accurate aggregations, anomaly detection, and quality checks.
-
 ## Cleaned Entity Name
 
 This transformation removes common business signifiers from entity names, making your data cleaner and more uniform.

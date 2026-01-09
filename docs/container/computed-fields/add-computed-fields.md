@@ -34,7 +34,6 @@ A modal window will appear, allowing you to enter the details for your computed 
 | Transformation Types | Purpose | Reference |
 |------|--------|---------|
 | Cast | Converts an existing field to a different data type (such as number, date, timestamp, or boolean) so it can be used correctly in checks, aggregations, and calculations. | For more information, please refer to the guide [cast section.](../computed-fields/transformation-types.md#cast){target="_blank"} |
-
 | Cleaned Entity Name | Removes business signifiers (such as 'Inc.' or 'Corp') from an entity name. | For more information, please refer to the guide [cleaned entity name section.](../computed-fields/transformation-types.md#cleaned-entity-name){target="_blank"} |
 | Convert Formatted Numeric | Removes formatting (such as parentheses for denoting negatives or commas as delimiters) from values that represent numeric data, converting them into a numerically typed field. | For more information, please refer to the guide [convert formatted numeric section.](../computed-fields/transformation-types.md#convert-formatted-numeric){target="_blank"} |
 | Custom Expression | Allows you to create a new field by applying any valid Spark SQL expression to one or more existing fields. | For more information, please refer to the guide [custom expression section.](../computed-fields/transformation-types.md#custom-expression){target="_blank"} |
