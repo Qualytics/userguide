@@ -289,7 +289,7 @@ Once started, the job runs continuously and automatically reconnects on restarts
 ## Configuration Notes
 
 - **RabbitMQ Connection**: The dataplane connects to `rabbitmq.us-east-1.elb.amazonaws.com` with user `user`
-- **Cluster Configuration**: Uses `r6id.2xlarge` instances with autoscaling from 1-20 workers
+- **Cluster Configuration**: Uses `r6gd.2xlarge` instances with autoscaling from 1-12 workers
 - **Docker Image**: Uses `qualyticsai/dataplane-databricks:latest` with provided authentication
 
 ## Troubleshooting
