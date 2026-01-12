@@ -301,7 +301,10 @@ nav:
           - Overview: settings/integrations/alerting/overview.md
           - Slack: settings/integrations/alerting/slack.md
           - Microsoft Teams: settings/integrations/alerting/msft_teams.md
-        - Ticketing: settings/integrations/ticketing/ticketing.md
+        - Ticketing: 
+          - Overview: settings/integrations/ticketing/ticketing.md
+          - Jira: settings/integrations/ticketing/jira.md
+          - ServiceNow: settings/integrations/ticketing/servicenow.md
         - Workflow: settings/integrations/workflow/workflow.md
         - Analytics: settings/integrations/analytics/analytics.md
         - AI & Agents:
