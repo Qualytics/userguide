@@ -5,3 +5,5 @@ The **Jira** integration is available in the **Qualytics** platform for tracking
 ![jira](../../../assets/integrations/ticketing/jira/jira.png)
 
 Jira integration is configured from **Settings → Integrations**.
+
+![jira](../../../assets/integrations/ticketing/jira/integration.png)

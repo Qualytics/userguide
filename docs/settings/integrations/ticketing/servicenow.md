@@ -5,3 +5,5 @@ The **ServiceNow** integration is available in the **Qualytics** platform for tr
 ![servicenow](../../../assets/integrations/ticketing/servicenow/servicenow.png)
 
 ServiceNow integration is managed from **Settings → Integrations** within the **Qualytics** platform.
+
+![servicenow](../../../assets/integrations/ticketing/servicenow/integration.png)
