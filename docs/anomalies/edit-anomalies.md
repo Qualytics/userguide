@@ -5,7 +5,7 @@ Anomalies support two editable properties: **description** and **tags**. The des
 !!! note
     - Individual anomalies can have both their description and tags edited
     - When editing multiple anomalies in bulk, only tags can be modified
-    - Only users with **Update** permission on non-archived anomalies can make edits
+    - Only users with the **Editor** role (or higher) on the respective datastore can make edits to non-archived anomalies
 
 ## Edit Description
 

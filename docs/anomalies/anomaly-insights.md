@@ -33,7 +33,7 @@ To edit an anomaly's description:
 **Step 5:** Click **Save** to persist your changes, or click **Cancel** to discard them and revert to the original description.
 
 !!! note
-    - Only users with **Update** permission on the anomaly can edit the description
+    - Only users with the **Editor** role (or higher) on the respective datastore can edit the description
     - Archived anomalies cannot be edited—restore the anomaly first if you need to modify the description
     - All changes to the description are tracked in the **Activity** section, maintaining a complete audit trail of modifications
 
