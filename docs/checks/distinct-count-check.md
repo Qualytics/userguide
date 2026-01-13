@@ -33,7 +33,19 @@ Specify the distinct count expectation for the values in the field.
 
 | Name           | Description                                                   |
 |----------------|---------------------------------------------------------------|
-| <div class="text-primary">Value</div>  | The exact count of distinct values expected in the selected field. |
+| <div class="text-primary">Comparison</div> | Specifies how the distinct count should be compared against the value. |
+| <div class="text-primary">Value</div>  | The value to compare the distinct count against. |
+
+!!! note "Details"
+    **Comparison** is a required property that accepts the following values:
+
+    | Comparison | Description |
+    |------------|-------------|
+    | `eq` | Equal To - Assert distinct count equals the value |
+    | `gt` | Greater Than - Assert distinct count is greater than the value |
+    | `gte` | Greater Than Or Equal To - Assert distinct count is ≥ value |
+    | `lt` | Less Than - Assert distinct count is less than the value |
+    | `lte` | Less Than Or Equal To - Assert distinct count is ≤ value |
 
 ### Anomaly Types
 
@@ -63,7 +75,8 @@ Specify the distinct count expectation for the values in the field.
         "description": "Ensure that there are exactly 3 distinct O_ORDERSTATUS in the ORDERS table: 'O' (Open), 'F' (Finished), and 'P' (In Progress)",
         "coverage": 1,
         "properties": {
-            "value":3
+            "comparison": "eq",
+            "value": 3
         },
         "tags": [],
         "fields": ["O_ORDERSTATUS"],
@@ -77,20 +90,21 @@ Specify the distinct count expectation for the values in the field.
 
 **Anomaly Explanation**
 
-In the sample data above, the rule is violated because the `O_ORDERSTATUS` contains 4 distinct values and not 3: 'O' (Open), 'F' (Finished), and 'P' (In Progress).
+In the sample data above, the rule is violated because the `O_ORDERSTATUS` contains 4 distinct values, which is not equal to 3. The expected values were 'O' (Open), 'F' (Finished), and 'P' (In Progress), but an unexpected value 'X' was found.
 
 === "Flowchart"
     ``` mermaid
     graph TD
     A[Start] --> B[Retrieve all O_ORDERSTATUS entries and count distinct values]
-    B --> C{Is distinct count of O_ORDERSTATUS != 3?}
-    C -->|Yes| D[Mark as Anomalous]
-    C -->|No| E[End]
+    B --> C{Does distinct count satisfy comparison condition?}
+    C -->|No| D[Mark as Anomalous]
+    C -->|Yes| E[End]
     ```
 
 === "SQL"
     ```sql
     -- An illustrative SQL query demonstrating the rule applied to example dataset(s).
+    -- Using comparison = 'eq' (equal to)
     select
         count(distinct o_orderstatus)
     from orders
@@ -99,5 +113,11 @@ In the sample data above, the rule is violated because the `O_ORDERSTATUS` conta
 
 **Potential Violation Messages**
 
-!!! example "Shape Anomaly"
-    In `O_ORDERSTATUS`, the distinct count of the records is not **3**.
+!!! example "Shape Anomaly (eq)"
+    The distinct count of values in `O_ORDERSTATUS` is **4** which is not equal to **3**.
+
+!!! example "Shape Anomaly (gte)"
+    The distinct count of values in `O_ORDERSTATUS` is **2** which is not greater than or equal to **3**.
+
+!!! example "Shape Anomaly (lte)"
+    The distinct count of values in `O_ORDERSTATUS` is **5** which is not less than or equal to **3**.
