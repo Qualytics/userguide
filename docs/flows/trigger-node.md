@@ -133,7 +133,7 @@ This type of flow is triggered when any single anomaly is identified in the data
 
 ![anomaly](../assets/flows/anomaly-light-17.png)
 
-**Filter Condition**
+**Filter Conditions**
 
 Users can define specific conditions to determine when the flow should be initiated.
 
