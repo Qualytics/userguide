@@ -110,7 +110,7 @@ Instead of checking a few records by hand, the rule evaluated **every record con
 
 When reviewing the flagged records, the team noticed values like:
 
-| C_NAME | C_MKTSEGMENT | C_PHONE | C_CUSTKEY |
+| C_NAME | C_MKTSEGMENT | C_PHONE | cp_custkey |
 |------|--------------|---------|-----------|
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
@@ -179,7 +179,7 @@ Manual data review works only at small scale. Automated checks like **Contains E
 
 ### Example
 
-**Objective**: *.*
+**Objective**: *Ensure that the `C_CONTACT_DETAILS` field contains at least one valid email address for every record in the CUSTOMER dataset.*
 
 **Sample Data**
 
@@ -196,7 +196,7 @@ Manual data review works only at small scale. Automated checks like **Contains E
         "coverage": 1,
         "properties": {},
         "tags": [],
-        "fields": ["C_EMAIL_JSON"],
+        "fields": ["C_CONTACT_DETAILS"],
         "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
         "rule": "containsEmail",
         "container_id": {container_id},
@@ -227,7 +227,7 @@ In the sample data above, the entry with `C_CUSTKEY` **2** does not satisfy the 
         c_contact_details
     from customer 
     where
-        not regexp_like(c_contact_details, '^[a-za-z0-9._%-]+@[a-za-z0-9.-]+\.[a-za-z]{2,4}$')
+        not regexp_like(c_contact_details, '^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$')
     ```
 
 **Potential Violation Messages**
