@@ -8,7 +8,7 @@ Users can deactivate a flow to pause its triggers by disabling it. This prevents
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
-![deactivate](.././assets/flows/deactivate-light-95.png)
+![deactivate](../assets/flows/deactivate-light-95.png)
 
 !!! note
     If you accidentally deactivate a flow, you can easily reactivate it by following the steps in the [Activate Flow guide](../flows/activate-flow.md){target="_blank"}.
@@ -20,6 +20,6 @@ After clicking the **Deactivate** button, a success notification appears confirm
     
 ## FAQ
 
-**1>.** What happens if I deactivate a Flow?
+**1.** What happens if I deactivate a Flow?
 
 Once deactivated, the Flow’s triggers stop executing until you reactivate it. Existing executions will not be affected.

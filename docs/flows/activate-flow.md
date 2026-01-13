@@ -4,6 +4,6 @@ Users can reactivate a flow that was previously deactivated. Once reactivated, t
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to activate, then click on **Activate** from the dropdown menu.
 
-![activate](.././assets/flows/activate-flow-light.png)
+![activate](../assets/flows/activate-flow-light.png)
 
 After clicking the **Activate** button, a success notification appears confirming the activation.

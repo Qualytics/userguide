@@ -4,7 +4,7 @@ Actions define the specific steps the system will execute after a flow is trigge
 
 **Step 1:** After completing the **"Trigger"** node setup, users can click on the **"Actions"** node.  
 
-![action](.././assets/flows/action-light-22.png)
+![action](../assets/flows/action-light-22.png)
 
 A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into three groups:
 
@@ -14,7 +14,7 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 * HTTP.
 
-![actionlist](.././assets/flows/actionlist-light-23.png)
+![actionlist](../assets/flows/actionlist-light-23.png)
 
 !!! info
     Inline summaries are shown within action nodes, displaying key details based on the action type—for example, datastore names for operations, Slack or Teams channels for notifications, and webhook URLs for HTTP actions. This enhancement provides quick clarity during flow configuration.
@@ -36,6 +36,6 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 ## FAQ
 
-**1>.** Can I have multiple actions under a single flow?
+**1.** Can I have multiple actions under a single flow?
 
 Yes. You can chain multiple actions—such as **notifications, operations,** or **HTTP steps**—under a single flow to perform sequential or parallel tasks.
