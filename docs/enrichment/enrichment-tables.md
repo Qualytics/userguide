@@ -45,6 +45,7 @@ Acts as an associative entity that consolidates information on failed checks, as
 | QUALITY_CHECK_TAGS              | STRING             | Tags associated with the quality check.          |
 | QUALITY_CHECK_PARAMETERS        | STRING             | Parameters used for the quality check.           |
 | QUALITY_CHECK_DESCRIPTION       | STRING             | Description of the quality check.                |
+| QUALITY_CHECK_METADATA          | STRING             | Optional JSON string containing additional check metadata. |
 | OPERATION_ID                    | NUMBER             | Identifier for the operation detecting anomaly.  |
 | DETECTED_TIME                   | TIMESTAMP          | Timestamp when the anomaly was detected.         |
 | SOURCE_CONTAINER                | STRING             | Name of the source data container.               |
