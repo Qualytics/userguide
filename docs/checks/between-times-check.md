@@ -1,8 +1,6 @@
 # Between Times
 
-Use the `betweenTimes` rule when you need to validate that date or timestamp values fall within an expected time window.
-    
-This check is ideal for catching early, late, or invalid records caused by ingestion delays, timezone issues, or system errors.
+Use the `betweenTimes` rule when you need to validate that date or timestamp values fall within an expected time window. This check is ideal for catching early, late, or invalid records caused by ingestion delays, timezone issues, or system errors.
 
 ## What is Between Times?
 
