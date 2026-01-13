@@ -4,7 +4,7 @@ Use the `containsCreditCard` rule when you need to ensure that sensitive payment
 
 ## What is Contains Credit Card?
 
-Think of **Contains Credit Card** as a sanity check for payment data .
+Think of **Contains Credit Card** as a sanity check for payment data.
 
 Just like a cashier won’t accept a payment without a card number, this rule ensures that a selected field contains a valid credit card number — not empty values, placeholders, or incorrect data.
 
@@ -219,7 +219,7 @@ In the sample data above, the entry with `O_ORDERKEY` **2** violates the rule as
 **Potential Violation Messages**
 
 !!! example "Record Anomaly"
-    The `O_PAYMENT_DETAILS` value of `{"date": "2023-09-25", "amount": 150.75, "credit_card": "ABC12345XYZ"}` does not contains a credit card number.
+    The `O_PAYMENT_DETAILS` value of `{"date": "2023-09-25", "amount": 150.75, "credit_card": "ABC12345XYZ"}` does not contain a credit card number.
 
 !!! example "Shape Anomaly"
     In `O_PAYMENT_DETAILS`, 33.33% of 3 order records (1) do not contain a credit card number.
