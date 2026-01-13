@@ -2,7 +2,7 @@
 
 Users can move an existing action node within a flow to change its position and execution order. The action node moves along with its downstream actions, helping reorganize the flow without recreating actions or breaking the flow logic.
 
-**Step 1:** Click the vertical ellipsis (**⋮**) on the action you want to move, then select the **Move** from the menu.
+**Step 1:** Click the vertical ellipsis (**⋮**) on the action you want to move, then select **Move** from the menu.
 
 ![vertical](../assets/flows/move-light.png)
 
