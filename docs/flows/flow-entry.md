@@ -10,7 +10,7 @@ A Flow begins when one of its Triggers activates. Here are the five available tr
 |--------------|-------------|
 | [**Schedule**](../flows/trigger-node.md#schedule){target="_blank"} | Starts the Flow automatically based on a defined schedule (hourly, daily, weekly, monthly, or custom cron). |
 | [**Operation Completes**](../flows/trigger-node.md#operation-completes){target="_blank"} | Starts the Flow when a catalog, scan, or profile operation finishes. |
-| [**Anomalous Table & File Detected**](../flows/trigger-node.md#anomalous-table-and-file-detected){target="_blank"} | Starts the Flow when anomalies are detected in a table or file. |
+| [**Anomalous Table or File Detected**](../flows/trigger-node.md#anomalous-table-or-file-detected){target="_blank"} | Starts the Flow when anomalies are detected in a table or file. |
 | [**Anomaly Detected**](../flows/trigger-node.md#anomaly-detected){target="_blank"} | Starts the Flow when a single anomaly event occurs. |
 | [**Manual**](../flows/trigger-node.md#manual){target="_blank"} | Starts the Flow only when the user manually executes it. |
 
