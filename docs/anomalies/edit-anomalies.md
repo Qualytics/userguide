@@ -1,9 +1,19 @@
 # Edit Anomalies
 
-By editing anomalies, you can only update their tags, allowing you to categorize and organize anomalies more effectively without altering their core details.
+Anomalies support two editable properties: **description** and **tags**. The description allows you to add business context or investigation findings, while tags help you categorize and organize anomalies for downstream workflows.
 
 !!! note
-    When editing multiple anomalies in bulk, only the tags can be modified.
+    - Individual anomalies can have both their description and tags edited
+    - When editing multiple anomalies in bulk, only tags can be modified
+    - Only users with **Update** permission on non-archived anomalies can make edits
+
+## Edit Description
+
+The anomaly description provides a detailed explanation of the data quality issue. You can edit it to add additional context, clarify the business impact, or document investigation findings.
+
+For detailed instructions on editing the description, see the [**Description**](anomaly-insights.md#description) section in the Anomaly Insights documentation.
+
+## Edit Tags (Bulk Edit)
 
 **Step 1:** Hover over the anomaly (whether Active or Acknowledged) and click on the checkbox.
 

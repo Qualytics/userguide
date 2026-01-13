@@ -12,9 +12,34 @@ You will be navigated to the details section, where you can view the **Summary**
 
 ![anomaly-details-view](../assets/datastores/anomaly-insights/anomaly-details-view.png)
 
+## Description
+
+The **Description** section displays a detailed, business-friendly explanation of the anomaly. When an anomaly is detected during a scan operation, the system automatically generates a description based on the quality check that failed, including relevant context such as filter conditions, thresholds, and the nature of the data quality issue.
+
+Users with **Editor** permission or higher can edit the description to add additional context, clarify the business impact, or document investigation findings. This makes it easier for team members to understand and address data quality issues.
+
+### Editing the Description
+
+To edit an anomaly's description:
+
+**Step 1:** Open the Anomaly Details modal or navigate to the Anomaly Overview page.
+
+**Step 2:** Locate the **Description** section. If the anomaly is in an editable state (not archived), you will see a **pencil icon** (✏️) next to the "Description" label.
+
+**Step 3:** Click the **pencil icon** to enter edit mode. The description text will become editable in a text area.
+
+**Step 4:** Make your changes to the description text.
+
+**Step 5:** Click **Save** to persist your changes, or click **Cancel** to discard them and revert to the original description.
+
+!!! note
+    - Only users with **Update** permission on the anomaly can edit the description
+    - Archived anomalies cannot be edited—restore the anomaly first if you need to modify the description
+    - All changes to the description are tracked in the **Activity** section, maintaining a complete audit trail of modifications
+
 ## Summary Section
 
-The **Summary** section provides a quick overview of the anomaly's key attributes. It includes the anomaly’s status, total anomalous records, failed checks, weight, detection time, scan information, and the corresponding datastore and table. This section helps users quickly understand where the anomaly occurred and its potential impact.
+The **Summary** section provides a quick overview of the anomaly's key attributes. It includes the anomaly's status, total anomalous records, failed checks, weight, detection time, scan information, and the corresponding datastore and table. This section helps users quickly understand where the anomaly occurred and its potential impact.
 
 ![summary](../assets/datastores/anomaly-insights/summary.png)
 
