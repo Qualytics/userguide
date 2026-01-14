@@ -110,7 +110,7 @@ Instead of checking a few records by hand, the rule evaluated **every record con
 
 When reviewing the flagged records, the team noticed values like:
 
-| C_NAME | C_MKTSEGMENT | C_PHONE | cp_custkey |
+| C_NAME | C_MKTSEGMENT | C_PHONE | CP_CUSTKEY |
 |------|--------------|---------|-----------|
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
