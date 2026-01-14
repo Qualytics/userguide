@@ -14,7 +14,7 @@ The public Helm chart for Kubernetes deployments is available at [qualytics-helm
 
 
 <figure markdown>
-  [![Databricks Deployment Architecture](../assets/deployments/qualytics-with-databricks-architectural-diagram.jpg)](../assets/deployments/qualytics-with-databricks-architectural-diagram.jpg)
+  [![Databricks Deployment Architecture](../assets/deployments/qualytics-with-databricks-architectural-diagram.svg)](../assets/deployments/qualytics-with-databricks-architectural-diagram.svg)
   <figcaption>Deployment Architecture with Databricks</figcaption>
 </figure>
 

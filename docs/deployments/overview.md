@@ -26,7 +26,7 @@ For detailed instructions on setting up the Qualytics dataplane in Databricks, s
 In this model, the Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer's choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.
 
 <figure markdown>
-  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.jpg)](../assets/deployments/paas_architectural_diagram.jpg)
+  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.svg)](../assets/deployments/paas_architectural_diagram.jpg)
   <figcaption>PaaS Deployment Architecture</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ This is Qualytics' preferred model of deployment. In this model, Qualytics is fu
 In this model, the Qualytics platform is deployed to a CNCF compliant Kubernetes control plane on Customer managed infrastructure, which can include on-premises deployments. This chart will deploy a single-tenant instance of the qualytics platform to a [CNCF compliant](https://www.cncf.io/certification/software-conformance/) kubernetes control plane.
 
 <figure markdown>
-  [![Customer-Managed Deployment Architecture](../assets/deployments/deployment_arch_diagram.jpg)](../assets/deployments/deployment_arch_diagram.jpg)
+  [![Customer-Managed Deployment Architecture](../assets/deployments/deployment_arch_diagram.svg)](../assets/deployments/deployment_arch_diagram.svg)
   <figcaption>Customer-Managed Deployment Architecture</figcaption>
 </figure>
 
