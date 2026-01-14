@@ -22,7 +22,7 @@ Qualytics is a closed source container-native platform for assessing, monitoring
 This chart will deploy a single-tenant instance of the qualytics platform to a [CNCF compliant](https://www.cncf.io/certification/software-conformance/) kubernetes control plane.
 
 <figure markdown>
-  [![Customer-Managed Deployment Architecture](../assets/deployments/deployment_arch_diagram.jpg)](../assets/deployments/deployment_arch_diagram.jpg)
+  [![Customer-Managed Deployment Architecture](../assets/deployments/deployment_arch_diagram.svg)](../assets/deployments/deployment_arch_diagram.svg)
   <figcaption>Customer-Managed Deployment Architecture</figcaption>
 </figure>
 
