@@ -10,7 +10,7 @@
     - `dataDiff` provides enhanced performance and additional capabilities
     - Both checks will continue to coexist in the system
 
-    If you have questions about this change, please [contact our support team](mailto:support@qualytics.co)
+    If you have questions about this change, please [contact our support team](mailto:support@qualytics.ai)
 
 ### Definition
 

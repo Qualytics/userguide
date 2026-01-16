@@ -4,7 +4,7 @@ Welcome to the Installation Guide for setting up Helm for your Qualytics Single-
 
 Qualytics is a closed source container-native platform for assessing, monitoring, and ameliorating data quality for the Enterprise. 
 
- Learn more [about our product and capabilities here](https://qualytics.co/product/).
+ Learn more [about our product and capabilities here](https://qualytics.ai/product/).
 
 ## What is Qualytics?
 
@@ -15,7 +15,7 @@ Qualytics is a closed source container-native platform for assessing, monitoring
 
     - If you are a Qualytics Software as a Service (SaaS) customer, you do not need to perform this installation. The Helm setup is managed by Qualytics for SaaS deployments.
 
-    > If you are unsure about your deployment type or have any questions, please reach out to your [Qualytics account manager](mailto:hello@qualytics.co) for clarification.
+    > If you are unsure about your deployment type or have any questions, please reach out to your [Qualytics account manager](mailto:hello@qualytics.ai) for clarification.
 
 ## What is in this chart?
 
@@ -38,7 +38,7 @@ Before deploying Qualytics, ensure you have:
 
 ## How should I use this chart?
 
-Please work with your account manager at Qualytics to secure the right values for your licensed deployment. If you don't yet have an account manager, [please write us here](mailto:hello@qualytics.co) to say hello!
+Please work with your account manager at Qualytics to secure the right values for your licensed deployment. If you don't yet have an account manager, [please write us here](mailto:hello@qualytics.ai) to say hello!
 
 ### 1. Create a CNCF compliant cluster
 
@@ -58,13 +58,20 @@ Users have the flexibility to merge the `driverNodes=true` and `executorNodes=tr
 
 Alternatively, users may choose not to use node selectors at all, allowing the entire cluster to be used without targeting specific node groups. However, it is highly recommended to set up autoscaling for Apache Spark operations by providing separate node groups with the `driverNodes=true` and `executorNodes=true` labels to ensure optimal performance and scalability.
 
-|          |          Application Nodes          |               Spark Driver Nodes                |            Spark Executor Nodes            |
-|----------|:-----------------------------------:|:-----------------------------------------------:|:------------------------------------------:|
-| Label    | appNodes=true                       | driverNodes=true                                | executorNodes=true                         |
-| Scaling  | Autoscaling (1 node on-demand)      | Autoscaling (1 node on-demand)                  | Autoscaling (1 - 12 nodes spot)            |
-| EKS      | t3.2xlarge (8 vCPUs, 32 GB)         | r5.2xlarge (8 vCPUs, 64 GB)                     | r5d.2xlarge (8 vCPUs, 64 GB)               |
-| GKE      | n2-standard-8 (8 vCPUs, 32 GB)      | n2-highmem-8 (8 vCPUs, 64 GB)                   | n2-highmem-8 (8 vCPUs, 64 GB)              |
-| AKS      | Standard_D8_v5 (8 vCPUs, 32 GB)     | Standard_E8s_v5 (8 vCPUs, 64 GB)                | Standard_E8s_v5 (8 vCPUs, 64 GB)           |
+|          |          Application Nodes          |               Spark Driver Nodes                |               Spark Executor Nodes               |
+|----------|:-----------------------------------:|:-----------------------------------------------:|:------------------------------------------------:|
+| Label    | appNodes=true                       | driverNodes=true                                | executorNodes=true                               |
+| Scaling  | Autoscaling (1 node on-demand)      | Autoscaling (1 node on-demand)                  | Autoscaling (1 - 12 nodes spot)                  |
+| EKS      | m8g.2xlarge (8 vCPUs, 32 GB)        | r8g.2xlarge (8 vCPUs, 64 GB)                    | r8gd.2xlarge (8 vCPUs, 64 GB, 474 GB SSD)        |
+| GKE      | n4-standard-8 (8 vCPUs, 32 GB)      | n4-highmem-8 (8 vCPUs, 64 GB)                   | n2-highmem-8 + Local SSD (8 vCPUs, 64 GB) ¹      |
+| AKS      | Standard_D8s_v6 (8 vCPUs, 32 GB)    | Standard_E8s_v6 (8 vCPUs, 64 GB)                | Standard_E8ds_v5 (8 vCPUs, 64 GB, 300 GB SSD)    |
+
+¹ GKE executor nodes: Attach local SSDs via node pool config (e.g., `--local-nvme-ssd-block count=2` for 750 GB). The N4 series does not support local SSD attachments, so N2 is recommended for executors.
+
+!!! note "Local SSD Storage"
+    Local SSD storage on executor nodes is recommended for optimal Spark performance but not mandatory. Spark will use remote storage for shuffle and scratch data when local SSD is unavailable.
+
+> **Terraform Templates Available**: We provide ready-to-use Terraform templates for provisioning Kubernetes clusters on [AWS](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/aws), [GCP](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/gcp), and [Azure](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/azure). These templates create the required node pools, storage classes, and networking configuration. See the [Terraform templates](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform) directory for details.
 
 #### Docker Registry Secrets
 
@@ -131,7 +138,7 @@ __Optional configurations:__
 For advanced configuration, refer to the full `charts/qualytics/values.yaml` file which contains all available options.
 
 !!! info 
-    Contact your [Qualytics account manager](mailto:hello@qualytics.co) for assistance.
+    Contact your [Qualytics account manager](mailto:hello@qualytics.ai) for assistance.
 
 ### 3. Deploy Qualytics to your cluster
 
@@ -139,7 +146,7 @@ Add the Qualytics Helm repository and deploy the platform:
 
 ```bash
 # Add the Qualytics Helm repository
-helm repo add qualytics https://qualytics.github.io/qualytics-helm-public
+helm repo add qualytics https://qualytics.github.io/qualytics-self-hosted
 helm repo update
 
 # Deploy Qualytics
@@ -176,7 +183,7 @@ You have two options for DNS configuration:
 
 #### Option A: Qualytics-managed DNS (Recommended)
 
-Send your [account manager](mailto:hello@qualytics.co) the IP address from step 3. Qualytics will assign a DNS record under `*.qualytics.io` (e.g., `https://acme.qualytics.io`) and handle SSL certificate management.
+Send your [account manager](mailto:hello@qualytics.ai) the IP address from step 3. Qualytics will assign a DNS record under `*.qualytics.io` (e.g., `https://acme.qualytics.io`) and handle SSL certificate management.
 
 #### Option B: Custom Domain
 
@@ -188,7 +195,7 @@ If using your own domain:
 4. Update any firewall rules to allow traffic to your domain
 
 !!! info
-    Contact your [account manager](mailto:hello@qualytics.co) for assistance with either option.
+    Contact your [account manager](mailto:hello@qualytics.ai) for assistance with either option.
 
 ## Can I run a fully "air-gapped" deployment?
 
@@ -199,7 +206,7 @@ Yes. The only egress requirement for a standard self-hosted Qualytics deployment
 !!! info "Do you have the Qualytics Helm chart repository locally?"
     Make sure you have the Qualytics Helm chart repository in your local Helm repositories. Run the following command to add them:
     ```bash
-    helm repo add qualytics https://qualytics.github.io/qualytics-helm-public
+    helm repo add qualytics https://qualytics.github.io/qualytics-self-hosted
     ```
 
 ### Update Qualytics Helm Chart:

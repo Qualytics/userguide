@@ -10,7 +10,7 @@ While the dataplane is typically deployed as a Kubernetes service using the Kube
 
 - Higher performance compared to JDBC-based integrations
 
-The public Helm chart for Kubernetes deployments is available at [qualytics-helm-public](https://github.com/Qualytics/qualytics-helm-public){:target="_blank"}.
+The public Helm chart for Kubernetes deployments is available at [qualytics-self-hosted](https://github.com/Qualytics/qualytics-self-hosted){:target="_blank"}.
 
 
 <figure markdown>
