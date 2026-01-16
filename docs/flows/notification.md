@@ -70,7 +70,7 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 Qualytics allows you to customize notification messages using dynamic variables (tokens). These tokens are automatically replaced with real values when a Flow is triggered.
 
 !!! note
-    For more detailed information, review the [notifications tokens documentation](../flows/notifications-tokens.md){target="_blank"}.
+    For more detailed information, review the [notification tokens documentation](../flows/notification-tokens.md){target="_blank"}.
 
 ## Slack
 

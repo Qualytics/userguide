@@ -5,6 +5,9 @@ Qualytics allows you to customize notification messages using dynamic variables 
 !!! important 
     The available notification tokens depend on the **Flow trigger type**. Only the tokens listed for a specific trigger will work in notification messages.
 
+!!! warning
+    **Manual** and **Scheduled** Flow trigger types do **not** support notification tokens. Notification messages for these trigger types must use static text only. Any tokens included in the message will not be populated.
+
 ### 🔔 Anomaly-Triggered Flow Tokens
 
 The following tokens are available when a Flow is triggered by an anomaly.
@@ -52,5 +55,32 @@ The following tokens are available when a Flow is triggered by an operation.
 | `{{operation_message}}` | Message describing the operation execution |
 | `{{target_link}}` | Direct link to view operation details |
 
+### 🗄️ Anomaly Archive Trigger Tokens
+
+The following tokens are available when a Flow is triggered by anomaly archiving due to inactivity.
+
+| Token | Description |
+|------|------------|
+| `{{flow_name}}` | Name of the Flow |
+| `{{datastore_name}}` | Datastore where anomalies were archived |
+| `{{datastore_link}}` | Link to the datastore |
+| `{{anomaly_count}}` | Number of anomalies archived |
+| `{{inactivity_timeframe}}` | Number of days of inactivity before archiving |
+| `{{target_link}}` | Direct link to view archived anomalies |
+
+### 🗑️ Anomaly Delete Trigger Tokens
+
+The following tokens are available when a Flow is triggered by permanent anomaly deletion due to inactivity.
+
+| Token | Description |
+|------|------------|
+| `{{flow_name}}` | Name of the Flow |
+| `{{datastore_name}}` | Datastore where anomalies were deleted |
+| `{{datastore_link}}` | Link to the datastore |
+| `{{anomaly_count}}` | Number of anomalies deleted |
+| `{{inactivity_timeframe}}` | Number of days of inactivity before deletion |
+| `{{target_link}}` | Direct link to view deletion details |
+
 !!! note
     Notification tokens appear in the autocomplete menu only if they are valid for the selected Flow trigger type. If a token does not appear in the list, it is not supported for that trigger.
+

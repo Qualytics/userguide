@@ -240,7 +240,7 @@ nav:
         - Operations: flows/operations.md
         - Anomaly: flows/anomaly.md
         - Notifications: flows/notification.md
-        - Notification Tokens: flows/notifications-tokens.md
+        - Notification Tokens: flows/notification-tokens.md
         - HTTP: flows/http.md 
       - View and Track Flow Executions: flows/view-created-flows.md
       - Manage Flow:

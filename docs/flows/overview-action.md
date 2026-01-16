@@ -32,7 +32,7 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## Notification Message Variables
 
 !!! note
-    For more detailed information, review the [notifications tokens documentation](../flows/notifications-tokens.md){target="_blank"}.
+    For more detailed information, review the [notification tokens documentation](../flows/notification-tokens.md){target="_blank"}.
 
 ## HTTP
 
