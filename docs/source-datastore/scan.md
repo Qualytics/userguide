@@ -602,3 +602,30 @@ This payload is to run a scheduled scan operation every day at 00:00
         "pages": 1
     }
     ```
+
+## Troubleshooting
+
+### Unloadable Container Error
+
+When running a scan operation, you may encounter the following error for specific containers:
+
+```
+Container '<CONTAINER_NAME>' is marked as Unloadable. No attempt was made to load the container due to multiple consecutive failures in prior operations.
+```
+
+**Cause:** This error occurs when a container (table, view, or file pattern) has experienced multiple consecutive failures during prior scan operations. To prevent repeated failed attempts and optimize performance, Qualytics marks the container as "Unloadable" and skips it in subsequent operations.
+
+**Resolution:** To resolve this issue and re-enable the container for scanning:
+
+1. Navigate to your source datastore
+2. Run a [Catalog Operation](./catalog.md) on the datastore
+3. Once the catalog operation completes successfully, the container status will be reset
+4. Run the scan operation again - the previously unloadable container should now be processed normally
+
+!!! tip
+    If the container continues to fail after re-cataloging, investigate the underlying cause of the failures. Common causes include:
+
+    - Permission issues accessing the container
+    - Schema changes that invalidate existing configurations
+    - Network connectivity problems to the data source
+    - Resource constraints or timeouts during data loading
