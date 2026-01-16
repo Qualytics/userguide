@@ -204,7 +204,7 @@ A panel **Microsoft Teams Settings** will appear on the right-hand side, allowin
 
 **Step 2:** Click the **"Test Notification"** button to send a test message to the provided **“Webhook URL”.** If the message is successfully sent, you will receive a confirmation notification indicating **"Notification successfully sent".**
 
-![test](../assets/flows/test-light-62.png)
+![test](../assets/flows/test-light-52.png)
 
 **Step 3:** Once all fields are configured, click the **Save** button to finalize the Microsoft Teams notification setup.
 
@@ -247,7 +247,7 @@ A **PagerDuty Settings** panel will appear on the right-hand side, enabling user
 
 **Step 2:** Click on the **Test notification** button to check if the integration key is functioning correctly. Once the test notification is sent, you will see a success message, **"Notification successfully sent."**
 
-![test](../assets/flows/test-light-69.png)
+![test](../assets/flows/test-light-52.png)
 
 **Step 3:** Once you have entered all the values, then click on the **Save** button.
 
