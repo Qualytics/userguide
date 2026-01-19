@@ -29,6 +29,11 @@ A panel will appear on the right-hand side displaying the list of available acti
 !!! note
     For more detailed information, review the [notifications documentation](../flows/notification.md){target="_blank"}.
 
+## Notification Message Variables
+
+!!! note
+    For more detailed information, review the [notification tokens documentation](../flows/notification-tokens.md){target="_blank"}.
+
 ## HTTP
 
 !!! note
