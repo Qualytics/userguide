@@ -14,6 +14,8 @@ It checks whether a field actually contains a valid SSN, instead of missing, mal
 
 Use this check to validate that a specific field contains a valid SSN and to detect records where the SSN is missing or incorrectly stored.
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/aOvP9sLG8RguqgrOC1fl?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add an Contains Social Security Number" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 ## What Does This Check Do?
 
 The rule scans a **single field** and confirms:
@@ -90,10 +92,11 @@ To eliminate manual checks, the team implemented the **Contains Social Security 
 
 Instead of reviewing records one by one, the rule automatically scanned all customer records and validated whether each one actually contained a valid SSN.
 
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/Qq6fUeiAHYwOYLkqV7s6?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Sun Jan 18 2026)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 ### What the Check Reviewed
 
-After running the check, Qualytics produced the following **Source Records** view.  
-Records that failed SSN validation were automatically highlighted in **red**, making them easy to identify.
+After running the check, Qualytics produced the following **Source Records** view. Records that failed SSN validation were automatically highlighted, making them easy to identify.
 
 | C_SSN_JSON | _CHECKSUM | C_CUSTKEY |
 |-----------|-----------|-----------|
@@ -107,6 +110,8 @@ Records that failed SSN validation were automatically highlighted in **red**, ma
 | <span class="text-negative">{ "ssn": "961-06-0718" }</span> | 004bd16c4a27e11bed1d9e9d13d94c9 | 126126 |
 | <span class="text-negative">{ "ssn": "913-38-6794" }</span> | 004881ebe3826fc16cfd124968f2a5bb | 12223 |
 | <span class="text-negative">{ "ssn": "796-00-1624" }</span> | 001d507e80c4e4d2ce4aba05590f8313 | 80971 |
+
+![anomaly-result](../assets/checks/contains-social-security-number/anomaly-result.png)
 
 ### What Contains Social Security Number Discovered
 
