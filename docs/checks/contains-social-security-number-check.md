@@ -14,7 +14,7 @@ It checks whether a field actually contains a valid SSN, instead of missing, mal
 
 Use this check to validate that a specific field contains a valid SSN and to detect records where the SSN is missing or incorrectly stored.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/aOvP9sLG8RguqgrOC1fl?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add an Contains Social Security Number" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/aOvP9sLG8RguqgrOC1fl?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Add a Contains Social Security Number" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 ## What Does This Check Do?
 
@@ -92,7 +92,7 @@ To eliminate manual checks, the team implemented the **Contains Social Security 
 
 Instead of reviewing records one by one, the rule automatically scanned all customer records and validated whether each one actually contained a valid SSN.
 
-<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/Qq6fUeiAHYwOYLkqV7s6?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Untitled (Sun Jan 18 2026)" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(48.0208% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/Qq6fUeiAHYwOYLkqV7s6?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Solution" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 ### What the Check Reviewed
 
