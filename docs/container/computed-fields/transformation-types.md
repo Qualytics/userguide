@@ -1,18 +1,71 @@
 # Types of Transformations
 
+## Cast
+
+The **Cast** transformation converts field values to a specified target data type using Spark SQL casting rules. This is commonly used when a field is ingested as a string but must behave as a numeric, date, timestamp, or boolean value for profiling, checks, or downstream computations.
+
+### When to Use Cast
+
+Use **Cast** when:
+
+- A numeric field is ingested as a string (for example, `"1000"` instead of `1000`)
+- Dates or timestamps need explicit typing
+- Boolean logic is required on string values
+- Quality checks or aggregations require strict data types
+
+### Options for Cast
+
+| REF. | FIELD | WHAT IT MEANS |
+|-----|------|----------------|
+| 1 | **Name** | A clear, descriptive name for the new computed field you are creating. |
+| 2 | **Transformation Type** | Choose **Cast** to convert the data type of an existing field. |
+| 3 | **Field** | The existing column whose values you want to convert into another data type. |
+| 4 | **Target Type** | The data type you want the field to become (for example: number, date, timestamp, decimal, or boolean). |
+| 5 | **Format** | Optional, Used only when converting text into dates or timestamps, so the system knows how to read the date format correctly. |
+| 6 | **Additional Metadata** | Optional information you can attach to the field to provide extra context or documentation. |
+
+![cast-options](../../assets/container/computed-fields/transformation-types/cast.png)
+
+### Target Type Examples
+
+| **Input Value** | **Target Type** | **Result** |
+|----------------|---------------|------------|
+| `"1000"` | `int` | `1000` |
+| `"1234.56"` | `decimal(10,2)` | `1234.56` |
+| `"true"` | `boolean` | `true` |
+| `"2023-12-31"` | `date` | `2023-12-31` |
+
+### Format Examples (Date / Timestamp Casting)
+
+The **Format** field is only required when casting string values into `date` or `timestamp`.
+
+Common examples:
+
+| **Format Pattern** | **Example Input** |
+|-------------------|------------------|
+| `MM/dd/yyyy` | `12/31/2023` |
+| `dd/MM/yyyy` | `31/12/2023` |
+| `yyyy-MM-dd HH:mm:ss` | `2023-12-31 14:30:00` |
+
 ## Cleaned Entity Name
 
 This transformation removes common business signifiers from entity names, making your data cleaner and more uniform.
 
 ### Options for Cleaned Entity Name
 
-| REF. | FIELDS | ACTIONS |
-|------|--------|---------|
-| 1   | **Drop from Suffix** | Add a unique name for your computed field. |
-| 2   | **Drop from Prefix** | Removes specified terms from the beginning of the entity name. |
-| 3   | **Drop from Interior** | Removes specified terms from the beginning of the entity name. |
-| 4   | **Additional Terms to Drop** (Custom) | Allows you to specify additional terms that should be dropped from the entity name. |
-| 5   | **Terms to Ignore** (Custom) | Designate terms that should be ignored during the cleaning process. |
+### Computed Field Configuration
+
+| No. | Field Name | Description |
+|----|-----------|-------------|
+| 1 | **Name** | Defines a unique name for the computed field. This name is used to identify and reference the computed field. |
+| 2 | **Transformation Type** | Select **Cleaned Entity Name** to create a standardized and cleaned version of the selected source field value. |
+| 3 | **Field** | Specifies the source field whose values will be cleaned and transformed. |
+| 4 | **Term Settings** | Defines how specific terms are removed from the source field value. This includes:<br>• **Drop from Prefix** – Removes specified terms from the beginning of the entity name.<br>• **Drop from Suffix** – Removes specified terms from the end of the entity name.<br>• **Drop from Interior** – Removes specified terms from anywhere within the entity name. |
+| 5 | **Additional Terms to Drop** | Allows you to define custom terms that should be removed from the field value. |
+| 6 | **Terms to Ignore** | Specifies terms that should be excluded from the cleaning process and retained in the final output. |
+| 7 | **Additional Metadata** | Enables you to add custom metadata to enhance the computed field definition, such as descriptions or key-value attributes. |
+
+![cleaned-entity](../../assets/container/computed-fields/transformation-types/cleaned-entity-name.png)
 
 ### Example for Cleaned Entity Name
 
@@ -28,6 +81,17 @@ This transformation removes common business signifiers from entity names, making
 
 This transformation converts formatted numeric values into a plain numeric format, stripping out any characters like commas or parentheses that are not numerically significant.
 
+### Options for Converted Formatted Numeric
+
+| No. | Field Name           | Description |
+|-----|----------------------|-------------|
+| 1   | Name                 | Specifies the name of the computed field. This name is used to identify the computed field. |
+| 2   | Transformation Type  | Select **Convert Formatted Numeric** to convert formatted numeric values into a standard numeric format. |
+| 3   | Field                | Selects the source field on which the transformation is applied. |
+| 4   | Additional Metadata  | Allows adding custom metadata to enhance the computed field definition (for example, descriptions or key-value attributes). |
+
+![converted-formatted-numeric](../../assets/container/computed-fields/transformation-types/converted-formatted-numeric.png)
+
 ### Example for Convert Formatted Numeric
 
 | **Example** | **Input**   | **Transformation** | **Output** |
@@ -39,6 +103,17 @@ This transformation converts formatted numeric values into a plain numeric forma
 ## Custom Expression
 
 Enables the creation of a field based on a custom computation using Spark SQL. This is useful for applying complex logic or transformations that are not covered by other types.
+
+### Options for Using Custom Expression
+
+| No. | Field Name           | Description |
+|-----|----------------------|-------------|
+| 1   | Name                 | Specifies the name of the computed field. This name is used to identify the computed field. |
+| 2   | Transformation Type  | Select **Custom Expression** to define a computed field using a custom SQL expression. |
+| 3   | SQL Expression       | Enter the SQL logic used to compute the field. Use `Ctrl + Space` to view available hints and functions. |
+| 4   | Additional Metadata  | Allows adding custom metadata to enhance the computed field definition (for example, descriptions or key-value attributes). |
+
+![custom-expression](../../assets/container/computed-fields/transformation-types/custom-expression.png)
 
 ### Using Custom Expression:
    You can combine multiple fields, apply conditional logic, or use any valid Spark SQL functions to derive your new computed field.
