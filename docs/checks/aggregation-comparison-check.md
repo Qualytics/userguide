@@ -74,15 +74,19 @@ Facilitates the comparison between a `target` aggregate metric and a `reference`
 === "Payload example"
     ``` json
     {
-        "description": "Assert that O_ORDERDATE is after the defined date time",
+        "description": "The aggregation \"SUM(`TARGET_FIELD`)\" must be less than a reference value",
         "coverage": 1,
-        "properties":  {
-            "datetime": "1991-12-31 10:30:00"
+        "properties": {
+            "ref_datastore_id": ref_datastore_id,
+            "expression": "SUM(`TARGET_FIELD`)",
+            "comparison": "lt",
+            "ref_container_id": ref_container_id,
+            "ref_expression": "MAX(`REFERENCE_FIELD`)"
         },
-        "tags": [],
         "fields": fields,
+        "status": "Active",
+        "rule": "aggregationComparison",
         "additional_metadata": {"key 1": "value 1", "key 2": "value 2"},
-        "rule": "afterDateTime",
         "container_id": {container_id},
         "template_id": {template_id},
     }
