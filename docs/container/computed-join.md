@@ -113,3 +113,69 @@ We want to join:
 * Use Select Expression to choose only the columns you need.
 * Apply a Filter Clause for better performance by reducing unnecessary data.
 * Test the join type with sample data to verify expected behavior.
+
+## Limitations
+
+### Computed Tables and Computed Files Cannot Be Used as Inputs
+
+Computed Join only accepts **base containers** as inputs—these are physical tables, views, or files that exist in your datastore catalog. You cannot select a Computed Table or Computed File as the left or right reference in a Computed Join.
+
+#### Why This Limitation Exists
+
+Computed Join is built to work with containers that have specific characteristics:
+
+| Requirement | Why It Matters |
+|-------------|----------------|
+| **Cataloged in the datastore** | The container must have a stable identifier that Qualytics can discover and reference. |
+| **Predictable load behavior** | Base containers support partitioning, incremental identifiers, and sampling—features that Computed Join relies on for efficient execution. |
+| **Schema metadata available** | Qualytics needs to profile and understand the structure of the containers being joined. |
+| **Deterministic execution** | The join must produce consistent results when re-run, which requires stable source objects. |
+
+Computed Tables and Computed Files are internal Qualytics assets. They are not exposed as queryable objects in your data warehouse or DFS, which means they cannot be discovered, profiled, or loaded in the same way as base containers.
+
+Additionally, allowing computed assets as join inputs would introduce complex dependency management:
+
+* **Dependency ordering**: If Computed Join B depends on Computed Table A, which depends on base table X, Qualytics would need to manage this execution chain.
+* **Incremental processing**: Determining the correct watermark for incremental loads across dependent assets is complex.
+* **Failure handling**: Retries and error recovery become more complicated when multiple dependent assets are involved.
+
+### Workarounds
+
+If you need to join derived datasets, you have two main options:
+
+#### Option 1: Build the Join as a Computed Table
+
+Instead of using Computed Join, define your join logic directly in a Computed Table using SQL:
+
+```sql
+WITH customers_filtered AS (
+    SELECT customer_id, name, city
+    FROM customers
+    WHERE status = 'active'
+),
+orders_recent AS (
+    SELECT order_id, customer_id, product
+    FROM orders
+    WHERE order_date >= '2024-01-01'
+)
+SELECT
+    c.customer_id,
+    c.name,
+    c.city,
+    o.order_id,
+    o.product
+FROM customers_filtered c
+LEFT JOIN orders_recent o ON c.customer_id = o.customer_id
+```
+
+This approach lets you combine filtering, transformations, and joins in a single query.
+
+#### Option 2: Materialize Intermediate Results in Your Data Warehouse
+
+If you need to reuse intermediate datasets across multiple contexts:
+
+1. Create the intermediate result as a view or table in your data warehouse (using your warehouse's SQL interface, dbt, or another ETL tool).
+2. Catalog that view or table in Qualytics as a base container.
+3. Use the cataloged container as an input to your Computed Join.
+
+This works because the materialized result becomes a first-class object in your datastore that Qualytics can discover, profile, and join like any other base container.
