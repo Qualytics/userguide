@@ -38,3 +38,60 @@ Use Computed Tables when you want to perform the following operations on your se
 **Step 5:** Once validation is successful, click on the **Save** button to add the computed table to your selected source datastore.
 
 ![click-add](../../assets/container/computed-tables-and-files/computed-tables/click-add-light.png)
+
+## Limitations
+
+### Referencing Other Computed Tables
+
+A computed table cannot directly reference another computed table in its SQL query. For example, attempting to write a query like this will fail:
+
+```sql
+SELECT * FROM my_computed_table JOIN another_computed_table ON ...
+```
+
+**Why this happens:** Computed tables are defined and stored within Qualytics, but they are not created as actual database objects (like views or tables) in your data warehouse. When your SQL query runs, the database engine cannot find `my_computed_table` because it doesn't exist as a named object in the warehouse catalog.
+
+### Workarounds
+
+If you need to combine logic from multiple computed tables, you have several options:
+
+#### Option 1: Combine Logic Using CTEs
+
+Merge the SQL logic into a single computed table using Common Table Expressions (CTEs):
+
+```sql
+WITH dataset_a AS (
+    SELECT id, name, amount
+    FROM source_table_1
+    WHERE status = 'active'
+),
+dataset_b AS (
+    SELECT id, category, region
+    FROM source_table_2
+    WHERE year = 2024
+)
+SELECT
+    a.id,
+    a.name,
+    a.amount,
+    b.category,
+    b.region
+FROM dataset_a a
+JOIN dataset_b b ON a.id = b.id
+```
+
+This approach works because the entire query is executed as a single unit by the database engine.
+
+#### Option 2: Create a View in Your Data Warehouse
+
+If you need to reuse intermediate results across multiple computed tables:
+
+1. Create a view or table directly in your data warehouse (e.g., using your warehouse's SQL interface or a tool like dbt).
+2. Catalog that view or table in Qualytics.
+3. Reference the cataloged object in your computed table queries.
+
+This works because the intermediate result becomes a real, queryable object in your warehouse.
+
+### Using Computed Tables in Computed Joins
+
+Computed tables cannot be used as inputs in a Computed Join. Computed Joins are designed to work with base containers only—physical tables, views, or files that exist in your datastore catalog. For more details, see the [Computed Join](../computed-join.md#limitations) documentation.

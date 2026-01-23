@@ -37,3 +37,29 @@ Use Computed Files when you want to perform the following operations on your sel
 ![click-add-file](../../assets/container/computed-tables-and-files/computed-files/click-add-file-light.png)
 
 After clicking the **Save** button, a success notification appears on the screen showing the action was completed successfully.
+
+## Limitations
+
+### Referencing Other Computed Files
+
+A computed file cannot directly reference another computed file in its expression. This is similar to how computed tables work—the computed file is defined within Qualytics but is not created as an actual file or dataset in your DFS datastore that can be queried by name.
+
+### Workarounds
+
+If you need to combine data from multiple sources:
+
+#### Option 1: Combine Logic in a Single Computed File
+
+If your transformations can be expressed as a single query, use the Select Expression and Filter Clause to perform all necessary operations on the source file pattern directly.
+
+#### Option 2: Materialize Intermediate Results
+
+If you need to chain transformations:
+
+1. Create the intermediate result as an actual file in your DFS (using your data pipeline tools).
+2. Catalog that file in Qualytics.
+3. Use the cataloged file as the source for your computed file.
+
+### Using Computed Files in Computed Joins
+
+Computed files cannot be used as inputs in a Computed Join. Computed Joins are designed to work with base containers only—physical tables, views, or files that exist in your datastore catalog. For more details, see the [Computed Join](../computed-join.md#limitations) documentation.
