@@ -12,6 +12,9 @@ This feature is useful when you want to:
 
 Let's get started 🚀
 
+!!! note
+    Computed Join only supports base containers (physical tables, views, or files). Computed Tables and Computed Files cannot be used as join inputs.
+
 ## How It Works
 
 The Add Computed Join form consists of:
