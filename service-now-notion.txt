@@ -1,0 +1,535 @@
+> **Quick Navigation:** This page covers the complete ServiceNow integration with Qualytics, including API endpoints, authentication, testing instructions, and data flow diagrams.
+> 
+
+---
+
+## 🎯 Integration Overview
+
+### Base Configuration
+
+**ServiceNow API Base URL**
+
+```
+https://{instance}.[service-now.com/api/now/table/incident](http://service-now.com/api/now/table/incident)
+```
+
+**Authentication**
+
+- **Method:** Basic Auth (username:password stored in `api_access_token` field)
+- **Fallback:** Bearer token if not in username:password format
+
+---
+
+## 📡 ServiceNow API Endpoints
+
+| Operation | Method | Endpoint | Purpose |
+| --- | --- | --- | --- |
+| Validate Connection | GET | /api/now/table/incident?sysparm_limit=1 | Test connectivity |
+| Search Tickets | GET | /api/now/table/incident | Search incidents by text/filters |
+| Get Ticket | GET | /api/now/table/incident/{sys_id} | Get incident details |
+| Create Ticket | POST | /api/now/table/incident | Create new incident from anomaly |
+| Update Ticket | PATCH | /api/now/table/incident/{sys_id} | Update incident fields |
+| Add Comment | PATCH | /api/now/table/incident/{sys_id} | Add work note to incident |
+| Get Status | GET | /api/now/table/incident/{sys_id}?sysparm_fields=state | Get incident state |
+
+---
+
+## 🔄 Key Integration Operations
+
+### 1️⃣ Create Ticket
+
+Creates a ServiceNow incident from a Qualytics anomaly with:
+
+- **Required:** short_description, description, priority, urgency, impact
+- **Optional:** category, subcategory, assigned_to, assignment_group
+- **Includes:** Anomaly details (ID, status, type, failed checks, link to Qualytics)
+
+### 2️⃣ Link Existing Ticket
+
+Links an existing ServiceNow incident to an anomaly:
+
+- Appends anomaly details to the existing description
+- Adds a work note about the linkage
+
+### 3️⃣ Sync Anomaly Status
+
+When anomaly status changes in Qualytics:
+
+- Adds a timestamped work note: `[2024-01-15 10:30:00 UTC] Qualytics Anomaly Status: Acknowledged`
+- **Note:** Does NOT change the ticket's state (one-way sync via notes)
+
+### 4️⃣ Sync Comments
+
+When comments are added to anomalies:
+
+- Syncs comment text to linked tickets as work notes
+
+---
+
+## 🎨 ServiceNow State Mappings
+
+<aside>
+ℹ️
+
+**Read-Only States**
+
+- **1** = New
+- **2** = In Progress
+- **3** = On Hold
+- **6** = Resolved
+- **7** = Closed
+- **8** = Canceled
+
+Qualytics doesn't sync back ticket status changes to anomaly status-it's designed for one-way notification via work notes to avoid complex bidirectional sync.
+
+</aside>
+
+---
+
+## 🚀 Qualytics API Endpoints
+
+### Setup Integration
+
+**Create ServiceNow Integration**
+
+```
+POST https://your-qualytics-instance.com/api/integrations
+```
+
+**Headers**
+
+```
+Authorization: Bearer {your_qualytics_token}
+Content-Type: application/json
+```
+
+**Body**
+
+```jsx
+{
+  "type": "servicenow",
+  "api_url": "https://your-instance.service-now.com",
+  "api_access_token": "username:password"
+}
+```
+
+**Expected Response (201)**
+
+```jsx
+{
+  "id": 34,
+  "type": "servicenow",
+  "category": "ticketing",
+  "api_url": "https://your-instance.service-now.com",
+  "connected": true,
+  "status": "idle",
+  "created": "2024-01-15T10:00:00Z"
+}
+```
+
+<aside>
+✅
+
+**What happens in ServiceNow:** Qualytics validates the connection with `GET /api/now/table/incident?sysparm_limit=1`
+
+</aside>
+
+---
+
+### Search Tickets
+
+**Request**
+
+```
+GET /api/integrations/ticketing/tickets/search?query=data%20quality&size=20&page=1
+```
+
+```
+**Query Parameters**
+```
+
+| Param | Value | Description |
+| --- | --- | --- |
+| query | data quality | Search text |
+| status | 1 | Filter by state (optional) |
+| priority | 2 | Filter by priority (optional) |
+| size | 20 | Page size |
+| page | 1 | Page number |
+
+**Expected Response (200)**
+
+```jsx
+{
+  "items": [
+    {
+      "ticket_id": "abc123sys_id",
+      "ticket_number": "INC0010042",
+      "title": "Data quality issue in production",
+      "description": "Missing values detected...",
+      "status": "New",
+      "priority": "3",
+      "created_at": "2024-01-15T10:30:00",
+      "updated_at": "2024-01-15T14:22:00",
+      "assigned_to": "John Doe",
+      "url": "https://your-instance.service-now.com/incident.do?sys_id=abc123sys_id"
+    }
+  ],
+  "total": 45,
+  "page": 1,
+  "size": 20,
+  "pages": 3
+}
+```
+
+---
+
+### Create Ticket from Anomaly
+
+**Request**
+
+```
+POST /api/integrations/ticketing/anomalies/{anomaly_id}/tickets
+```
+
+**Example**
+
+```
+POST /api/integrations/ticketing/anomalies/12345/tickets
+```
+
+**Body**
+
+```jsx
+{
+  "title": "Data Quality Anomaly - Missing values in customer_email",
+  "description": "150 null values detected in customer_email field",
+  "priority": "2",
+  "urgency": "2",
+  "impact": "2",
+  "category": "Data",
+  "subcategory": "Data Quality",
+  "assigned_to": "john.doe",
+  "assigned_group": "Data Engineering"
+}
+```
+
+**Expected Response (200)**
+
+```jsx
+{
+  "ticket": {
+    "ticket_id": "new123abc",
+    "ticket_number": "INC0010099",
+    "title": "Data Quality Anomaly - Missing values in customer_email",
+    "description": "150 null values detected...\\n\\n---\\n\\n## Qualytics Anomaly Linked...",
+    "status": "New",
+    "priority": "2",
+    "urgency": "2",
+    "impact": "2",
+    "category": "Data",
+    "subcategory": "Data Quality",
+    "created_at": "2024-01-15T15:00:00",
+    "url": "https://your-instance.service-now.com/incident.do?sys_id=new123abc"
+  },
+  "anomaly_id": 12345,
+  "integration_id": 34,
+  "message": "Ticket INC0010099 created and linked to anomaly 12345"
+}
+```
+
+---
+
+### Get Ticket Links for Anomaly
+
+**Request**
+
+```
+GET /api/anomalies/{anomaly_id}/ticket-links
+```
+
+**Example**
+
+```
+GET /api/anomalies/12345/ticket-links
+```
+
+**Expected Response (200)**
+
+```jsx
+[
+  {
+    "id": 1,
+    "anomaly_id": 12345,
+    "integration_id": 34,
+    "ticket_id": "new123abc",
+    "ticket_number": "INC0010099",
+    "ticket_url": "https://your-instance.service-now.com/incident.do?sys_id=new123abc",
+    "status": "New",
+    "last_synced": "2024-01-15T15:00:00",
+    "ticket_metadata": null,
+    "created": "2024-01-15T15:00:00"
+  }
+]
+```
+
+<aside>
+💾
+
+**Note:** No direct ServiceNow call-this reads from the Qualytics database
+
+</aside>
+
+---
+
+### Update Anomaly Status (Triggers ServiceNow Sync)
+
+**Request**
+
+```
+PUT /api/anomalies/{anomaly_id}
+```
+
+**Body**
+
+```jsx
+{
+  "status": "Acknowledged"
+}
+```
+
+<aside>
+⚡
+
+**Background Action:** Automatically triggers a ServiceNow work note update via `PATCH /api/now/table/incident/{sys_id}` with work_notes containing the status change
+
+</aside>
+
+---
+
+### Add Comment to Anomaly (Triggers ServiceNow Sync)
+
+**Request**
+
+```
+POST /api/anomalies/{anomaly_id}/comments
+```
+
+**Body**
+
+```jsx
+{
+  "message": "Investigating with data team. Looks like ETL pipeline issue."
+}
+```
+
+<aside>
+⚡
+
+**Background Action:** Automatically triggers a ServiceNow work note update via `PATCH /api/now/table/incident/{sys_id}` with the comment content
+
+</aside>
+
+---
+
+## 🔀 Integration Flow Diagrams
+
+### Flow 1: Qualytics → ServiceNow (Push)
+
+<aside>
+📤
+
+**One-Way Synchronization**
+
+This integration pushes data from Qualytics to ServiceNow. Changes in Qualytics automatically create work notes in ServiceNow.
+
+</aside>
+
+**1. Create Ticket from Anomaly**
+
+```
+┌──────────────┐        ┌──────────────┐        ┌──────────────┐
+│  Qualytics   │        │  Qualytics   │        │  ServiceNow  │
+│     UI       │───────▶│     API      │───────▶│     API      │
+└──────────────┘        └──────────────┘        └──────────────┘
+User clicks             POST /integrations/      POST /api/now/
+"Create Ticket"         ticketing/anomalies/     table/incident
+on anomaly              {id}/tickets
+                               │
+                               ▼
+                        Creates link in
+                        anomaly_ticket_link
+                        table
+```
+
+**2. Anomaly Status Change → Work Note**
+
+```
+┌──────────────┐        ┌──────────────┐        ┌──────────────┐
+│  Qualytics   │        │   Dramatiq   │        │  ServiceNow  │
+│     UI       │───────▶│    Worker    │───────▶│     API      │
+└──────────────┘        └──────────────┘        └──────────────┘
+User changes            Background event:        PATCH /api/now/
+anomaly status          sync_anomaly_status_     table/incident/
+to "Acknowledged"       to_tickets               {sys_id}
+                                                 {"work_notes":"..."}
+```
+
+Result: Work note added to ticket:
+
+`[2024-01-15 10:30:00 UTC] Qualytics Anomaly Status: Acknowledged`
+
+**3. Comment on Anomaly → Work Note**
+
+```
+┌──────────────┐        ┌──────────────┐        ┌──────────────┐
+│  Qualytics   │        │   Dramatiq   │        │  ServiceNow  │
+│     UI       │───────▶│    Worker    │───────▶│     API      │
+└──────────────┘        └──────────────┘        └──────────────┘
+User adds comment       Background event:        PATCH /api/now/
+on anomaly              sync_anomaly_comment_    table/incident/
+                        to_tickets               {sys_id}
+                                                 {"work_notes":"..."}
+```
+
+Result: Work note added to ticket:
+
+`Comment from Qualytics: <user's comment>`
+
+---
+
+### Flow 2: ServiceNow → Qualytics (Pull)
+
+<aside>
+⚠️
+
+**NOT IMPLEMENTED**
+
+Currently there is NO automatic sync from ServiceNow back to Qualytics. If a ticket status changes in ServiceNow:
+
+- Qualytics does NOT automatically update the anomaly status
+- Qualytics does NOT receive webhook notifications from ServiceNow
+
+The only "pull" that exists is manual status checking via `crud.anomaly_ticket_link.sync_status_from_ticketing()`, which updates the `ticket_link.status` field and adds a comment to the anomaly, but does NOT change the anomaly's status itself.
+
+</aside>
+
+---
+
+## 📋 Complete Action Summary
+
+| Action | Qualytics Endpoint | ServiceNow Endpoint | Sync Type |
+| --- | --- | --- | --- |
+| Create Integration | POST /api/integrations | GET .../incident?limit=1 (validate) | Initial setup |
+| Search Tickets | GET /api/integrations/ticketing/tickets/search | GET .../incident | Read-only |
+| Create Ticket | POST /api/integrations/ticketing/anomalies/{id}/tickets | POST .../incident | Push |
+| Get Ticket Links | GET /api/anomalies/{id}/ticket-links | — (DB only) | Internal |
+| Update Anomaly Status | PUT /api/anomalies/{id} | PATCH .../incident/{sys_id} (work_notes) | Push |
+| Add Comment | POST /api/anomalies/{id}/comments | PATCH .../incident/{sys_id} (work_notes) | Push |
+
+```jsx
+  Visual Summary
+
+                      ┌─────────────────────┐
+                      │     QUALYTICS       │
+                      │                     │
+                      │  ┌───────────────┐  │
+                      │  │   Anomaly     │  │
+                      │  │  - status     │  │
+                      │  │  - comments   │  │
+                      │  └───────┬───────┘  │
+                      │          │          │
+                      │  ┌───────▼───────┐  │
+                      │  │ Ticket Link   │  │
+                      │  │ - ticket_id   │  │
+                      │  │ - status      │  │
+                      │  └───────────────┘  │
+                      └──────────┬──────────┘
+                                 │
+              ┌──────────────────┼──────────────────┐
+              │                  │                  │
+              ▼                  ▼                  ▼
+      ┌───────────────┐  ┌───────────────┐  ┌───────────────┐
+      │ Create Ticket │  │ Status Change │  │ Add Comment   │
+      │     (POST)    │  │   (PATCH)     │  │   (PATCH)     │
+      └───────┬───────┘  └───────┬───────┘  └───────┬───────┘
+              │                  │                  │
+              └──────────────────┼──────────────────┘
+                                 │
+                                 ▼
+                      ┌─────────────────────┐
+                      │     SERVICENOW      │
+                      │                     │
+                      │  ┌───────────────┐  │
+                      │  │   Incident    │  │
+                      │  │  - state      │  │
+                      │  │  - work_notes │  │◀─── Updates here
+                      │  │  - description│  │     (work notes only)
+                      │  └───────────────┘  │
+                      │                     │
+                      │  NO WEBHOOK BACK ✗  │
+                      └─────────────────────┘
+```
+
+---
+
+## 🔐 What Gets Synced
+
+| Direction | What | How | Status |
+| --- | --- | --- | --- |
+| Qualytics → ServiceNow | New ticket | Creates incident with anomaly details | ✅ Active |
+| Qualytics → ServiceNow | Anomaly status change | Adds work note (doesn't change incident state) | ✅ Active |
+| Qualytics → ServiceNow | Anomaly comment | Adds work note | ✅ Active |
+| ServiceNow → Qualytics | Ticket status | Manual sync only (updates link.status) | ⚠️ Limited |
+| ServiceNow → Qualytics | Ticket comments | Not synced | ❌ Not supported |
+| ServiceNow → Qualytics | Ticket closure | Not synced | ❌ Not supported |
+
+---
+
+## 💡 Design Decisions
+
+<aside>
+🎯
+
+**Why One-Way Integration?**
+
+The integration is intentionally one-way push by design:
+
+1. **Avoids Complex Status Mapping:** ServiceNow states ≠ Qualytics statuses
+2. **Prevents Sync Loops:** Avoids A updates B, B updates A, A updates B scenarios
+3. **Clear Ownership:** ServiceNow is the "ticket of record," Qualytics is the "anomaly of record"
+4. **Work Notes Over State Changes:** Preserves audit trail and doesn't interfere with ITSM workflows
+5. **Admin Control:** ServiceNow admins keep full control of incident lifecycle
+
+**If you need ServiceNow → Qualytics sync:**
+
+</aside>
+
+- Would require implementing ServiceNow webhooks/business rules
+- Would need a webhook endpoint in Qualytics to receive updates
+- Currently not in the product roadmap
+
+</callout>
+
+---
+
+## 🛠️ Insomnia Environment Setup
+
+**Recommended Environment Variables**
+
+```jsx
+{
+  "qualytics_base_url": "https://your-qualytics.com/api",
+  "qualytics_token": "your_api_token",
+  "servicenow_base_url": "https://your-instance.service-now.com",
+  "servicenow_username": "your_username",
+  "servicenow_password": "your_password",
+  "anomaly_id": "12345",
+  "ticket_sys_id": "abc123def456"
+}
+```
+
+**Usage in Requests**
+
+```
+base_url /api/now/table/incident
+```
