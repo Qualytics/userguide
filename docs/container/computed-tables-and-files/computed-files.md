@@ -6,6 +6,9 @@ Use Computed Files when you want to perform the following operations on your sel
 -  Column-Level Transformations: Utilize Spark SQL functions to manipulate and clean individual columns.
 -  Filtering Data: Extract specific data subsets within a DFS container using Spark SQL's WHERE clause.
 
+!!! note 
+    Computed Files can only reference base files from the datastore. They cannot reference other Computed Files or be used as inputs to Computed Joins.
+
 ## Add Computed Files
 
 **Step 1:** Log in to your Qualytics account and select a DFS-type source datastore from the side menu on which you would like to add a computed file.
