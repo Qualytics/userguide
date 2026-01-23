@@ -7,6 +7,9 @@ Use Computed Tables when you want to perform the following operations on your se
 -   Data Subsetting: Extract specific data subsets based on filters using SQL's WHERE clause.     
 -   Joining Data Across Source Datastores: Combine data from multiple JDBC source datastores using SQL joins.
 
+!!! note
+    Computed Tables can only reference base containers (physical tables or views) from the datastore. They cannot reference other Computed Tables or Computed Files.
+
 ## Add Computed Tables
 
 **Step 1:** Log in to your Qualytics account and select a JDBC-type source datastore from the side menu on which you would like to add a computed table.
