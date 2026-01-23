@@ -374,7 +374,7 @@ For programmatic integration management, the following Qualytics API endpoints a
 
 If you encounter issues not covered above, contact Qualytics support:
 
-- **Email**: support@qualytics.co
+- **Email**: support@qualytics.ai
 - **Slack**: Your dedicated customer Slack channel
 
 Please include: Host URL (masked if needed), error messages, and steps to reproduce.
