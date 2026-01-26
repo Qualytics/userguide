@@ -6,7 +6,7 @@ This is where you can configure how the Flow will be activated. It can be activa
 
 ![trigger](../assets/flows/trigger-light-9.png)
 
-A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides five options for initiating the flow. Users can choose one of the following options:
+A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides six options for initiating the flow. Users can choose one of the following options:
 
 * Schedule.
 
@@ -159,11 +159,11 @@ This flow is triggered when the status of an anomaly changes to a specified stat
 
 ![anomaly-status-changed](../assets/flows/anomaly-status-changed.png)
 
-### Filter Conditions
+**Filter Conditions**
 
 Users can optionally set filters to specify which anomaly status changes should trigger the flow execution.
 
-1.  **Anomaly’s Tags:** Only anomalies with all the selected tags assigned will trigger the flow.
+1. **Anomaly’s Tags:** Only anomalies with all the selected tags assigned will trigger the flow.
 
 2. **Source Datastores:** The flow is triggered only for anomalies originating from the selected source datastores.
 
