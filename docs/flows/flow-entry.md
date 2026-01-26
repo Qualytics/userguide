@@ -12,6 +12,7 @@ A Flow begins when one of its Triggers activates. Here are the five available tr
 | [**Operation Completes**](../flows/trigger-node.md#operation-completes){target="_blank"} | Starts the Flow when a catalog, scan, or profile operation finishes. |
 | [**Anomalous Table or File Detected**](../flows/trigger-node.md#anomalous-table-or-file-detected){target="_blank"} | Starts the Flow when anomalies are detected in a table or file. |
 | [**Anomaly Detected**](../flows/trigger-node.md#anomaly-detected){target="_blank"} | Starts the Flow when a single anomaly event occurs. |
+| **Anomaly Status Changed** | Starts the Flow when an anomaly’s status changes to a specified state. |
 | [**Manual**](../flows/trigger-node.md#manual){target="_blank"} | Starts the Flow only when the user manually executes it. |
 
 ## Configure the Flow Node
