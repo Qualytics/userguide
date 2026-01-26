@@ -6,7 +6,7 @@ This is where you can configure how the Flow will be activated. It can be activa
 
 ![trigger](../assets/flows/trigger-light-9.png)
 
-A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides five options for initiating the flow. Users can choose one of the following options:
+A panel will appear on the right-hand side, enabling users to define when the flow should start. The panel provides six options for initiating the flow. Users can choose one of the following options:
 
 * Schedule.
 
@@ -15,6 +15,8 @@ A panel will appear on the right-hand side, enabling users to define when the fl
 * Anomalous Table or File Detected.
 
 * Anomaly Detected.
+
+* Anomaly Status Changed.
 
 * Manual.
 
@@ -148,6 +150,28 @@ Users can define specific conditions to determine when the flow should be initia
 ![anomaly](../assets/flows/anomaly-light-18.png)
 
 Once the filter conditions are set, users must click the **Save** button to finalize the configuration.
+
+![save](../assets/flows/save-light-8.png)
+
+## Anomaly Status Changed
+
+This flow is triggered when the status of an anomaly changes to a specified status. It includes information about the anomaly, its previous and new status, and relevant context such as the affected asset and datastore. This is useful for automating actions based on anomaly lifecycle events (e.g., when an anomaly is resolved, acknowledged, or active).
+
+![anomaly-status-changed](../assets/flows/anomaly-status-changed.png)
+
+**Filter Conditions**
+
+Users can optionally set filters to specify which anomaly status changes should trigger the flow execution.
+
+1. **Anomaly’s Tags:** Only anomalies with all the selected tags assigned will trigger the flow.
+
+2. **Source Datastores:** The flow is triggered only for anomalies originating from the selected source datastores.
+
+3. **Anomaly Statuses:** The flow is triggered only when an anomaly changes to one or more of the selected statuses.
+
+![anomaly-status-number](../assets/flows/anomaly-status-number.png)
+
+After defining the conditions, users must click the **Save** button to finalize the trigger configuration.
 
 ![save](../assets/flows/save-light-8.png)
 
