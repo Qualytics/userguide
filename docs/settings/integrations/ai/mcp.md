@@ -185,14 +185,13 @@ Add the following to your Claude Desktop configuration file:
       "mcpServers": {
         "qualytics": {
           "command": "npx",
-		        "args": [
-		          "-y",
-		          "mcp-remote",
-		          "https://your-qualytics-instance.qualytics.io/mcp/",
-		          "--header",
-		          "Authorization: Bearer YOUR_API_TOKEN"
-		        ]
-	      }
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://your-qualytics-instance.qualytics.io/api/mcp/",
+            "--header",
+            "Authorization: Bearer YOUR_API_TOKEN"
+          ]
         }
       }
     }
@@ -204,15 +203,15 @@ Add the following to your Claude Desktop configuration file:
     {
       "mcpServers": {
         "qualytics": {
-          "command": "npx",
-		        "args": [
-		          "-y",
-		          "mcp-remote",
-		          "https://your-qualytics-instance.qualytics.io/mcp/",
-		          "--header",
-		          "Authorization: Bearer YOUR_API_TOKEN"
-		        ]
-	      }
+          "command": "cmd",
+          "args": [
+            "/c",
+            "npx",
+            "mcp-remote",
+            "https://your-qualytics-instance.qualytics.io/api/mcp/",
+            "--header",
+            "Authorization: Bearer YOUR_API_TOKEN"
+          ]
         }
       }
     }
@@ -226,7 +225,7 @@ Add the following to your Cursor MCP configuration:
 {
   "mcpServers": {
     "qualytics": {
-      "url": "https://your-qualytics-instance.qualytics.io/mcp/",
+      "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
       "headers": {
         "Authorization": "Bearer YOUR_API_TOKEN"
       }
