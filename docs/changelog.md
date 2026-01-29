@@ -2,6 +2,55 @@
 
 ## Release Notes
 
+### 2026.1.29 { id=2026.1.29 }
+
+#### Feature Enhancements
+
+- Introduced Anomaly Status Changed flow trigger.
+    - Flows can now be triggered when anomaly statuses change, enabling automated workflows for status transitions.
+    - Trigger settings support filtering by specific status values to target relevant transitions.
+
+- Added notification support for Create Ticket and Update Ticket Status flow actions.
+    - Introduced Create Ticket action to automatically generate tickets in connected ticketing systems when anomalies meet defined conditions.
+    - Introduced Update Ticket Status action to synchronize status changes to linked tickets across integrated platforms.
+    - Notifications can be sent to Slack and Microsoft Teams when ticketing actions execute.
+    - Introduced status selection at ticket creation, allowing tickets to be created with a specific initial state.
+    - Ticketing actions are validated to ensure compatibility with Anomaly or Anomaly Status Change triggers.
+    - Improved handling when required ticketing integrations are unavailable during flow execution.
+
+- Enhanced auto-generated check descriptions with context-aware, business-friendly language.
+    - Descriptions now include field type context such as "numeric field", "timestamp field", or "text field" for clearer rule interpretation.
+    - Expected values are summarized directly in descriptions, displaying the first three values with a total count indicator.
+    - Filter clauses are translated into plain English for improved readability.
+    - Range checks now specify inclusivity labels to clarify boundary behavior.
+    - Common regex patterns are described in human-readable terms instead of raw expressions.
+    - Cross-datastore rules include reference field and container context for better traceability.
+    - Distinct count checks generate comparator-aware descriptions using phrases like "fewer than", "at most", "exactly", "at least", and "more than" based on the configured operator.
+
+- Improved computed asset management with inline editing from check interfaces and field dependency protection.
+    - Users can create, edit, and manage computed tables, files, joins, and fields directly from the check interface without navigating to datastore pages.
+    - Added a warning dialog when computed asset updates would remove fields with active checks or anomalies, with options to cancel or proceed.
+    - Introduced "E" keyboard shortcut to quickly edit computed containers from any context.
+    - Enhanced command palette shortcuts to preselect the current container in profile and scan dialogs.
+
+#### General Fixes and Improvements
+
+- Improved error messages for network connectivity issues to provide clearer guidance when the API server is unreachable.
+
+- Enhanced asserted check editing to support field modifications while preserving accurate quality score calculations.
+
+- Improved anomaly descriptions with editable fields, version tracking, and enriched human-readable messaging.
+
+- Enhanced tenant observability with build version information.
+
+- Fixed tags and rule types not appearing in filter lists by aligning filter option counts with the current view perspective.
+
+- Corrected distinct count anomaly messages that displayed negative values and incorrect expected values.
+
+- Resolved Collibra integration authentication failures caused by OAuth token expiration with automatic token refresh.
+
+- General Fixes and Improvements.
+
 ### 2026.1.14 { id=2026.1.14 }
 
 #### Feature Enhancements
