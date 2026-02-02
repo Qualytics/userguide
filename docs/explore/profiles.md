@@ -46,7 +46,7 @@ To explore the data within a container, you can view all its fields. This allows
 
 **Step 1:** Click on the specific container whose fields you want to preview.
 
-For demonstration purposes, we have selected the Netsuite Financials container.
+For demonstration purposes, we have selected the Replica of Netsuite Financials container.
 
 ![netsuite](../assets/explore/profiles/netsuite-light.png)
 
