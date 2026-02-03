@@ -48,7 +48,7 @@ By selecting **Archived Anomalies**, you can view anomalies that have been resol
 
 ![archived](../assets/explore/anomalies/archived-light.png)
 
-You can also categorize the archived anomalies based on their status as **Resolved**, **Duplicate** and **Invalid**, to review them effectively.
+You can also categorize the archived anomalies based on their status as **Resolved**, **Duplicate**, **Invalid**, **Discarded** and **All** to review them effectively.
 
 **1. Resolved**: This indicates that the anomaly was a legitimate data quality concern and has been addressed.
 
@@ -62,7 +62,11 @@ You can also categorize the archived anomalies based on their status as **Resolv
 
 ![invalid](../assets/explore/anomalies/invalid-light.png)
 
-**4. All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, and Invalid, giving a comprehensive view of all past issues.
+**4. Discarded**: This indicates that the anomaly is no longer relevant or under review and has been intentionally dismissed without further action.
+
+![discarded](../assets/explore/anomalies/discarded-light.png)
+
+**5. All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, and Invalid, giving a comprehensive view of all past issues.
 
 ![all](../assets/explore/anomalies/all-archived-light.png)
 
@@ -115,9 +119,11 @@ By archiving anomalies, you move them to an inactive state, while still keeping 
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.
 
+* **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.  
+
 * **Duplicate**: Choose this option if the anomaly is a duplicate of an existing record and has already been addressed. No further action is required as the issue has been previously resolved.
 
-* **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.  
+* **Discarded**: Select this option if the anomaly is no longer important or needs no further review. Discarded anomalies are simply ignored because they don’t require any action, helping keep the anomaly list clean and easy to manage.
     
 ![option](../assets/explore/anomalies/archive-option-light.png)
 
@@ -164,41 +170,23 @@ Deleting an anomaly allows you to permanently remove a record that is no longer 
 !!! note 
     You can only delete archived anomalies, not active or acknowledged checks. If you want to delete an active or acknowledged anomaly, you must first move it to the archive, and then you can delete it. 
 
-You can delete individual anomalies using one of two methods:
-
-### **1. Delete Directly** 
-
 **Step 1:** Click on **Archived** from the **navigation bar** in the **Anomalies** section to view all archived anomalies.
 
 ![dlt](../assets/explore/anomalies/archived-bar-light.png)
 
-**Step 2:** Locate the anomaly, that you want to delete and click on the **Delete** icon located on the right side of the anomaly.
-
-![button](../assets/explore/anomalies/dlt-light.png)
-
-**Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
-
-![dlt](../assets/explore/anomalies/dlt-btn-light.png)
-
-**Step 4:** After clicking on the delete button, your anomaly is successfully deleted and a success flash message will appear saying **“Anomaly has been successfully deleted”.**
-
-![flash](../assets/explore/anomalies/dlt-msg-light.png)
-
-### **2. Delete via Action Menu**
-
-**Step 1:** Click on the archive anomaly from the list of archived anomalies that you want to delete.
+**Step 2:** Click on the archive anomaly from the list of archived anomalies that you want to delete.
 
 ![action](../assets/explore/anomalies/select-anomalies-light.png)
 
-**Step 2:** A modal window will appear displaying the anomaly details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on **“Delete”** from the drop-down menu.
+**Step 3:** A modal window will appear displaying the anomaly details. Click on the **vertical ellipsis** **(⋮)** located in the upper-right corner of the modal window, and click on **“Delete”** from the drop-down menu.
 
 ![vertical](../assets/explore/anomalies/vertical-light.png)
 
-**Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
+**Step 4:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
 
 ![dlt](../assets/explore/anomalies/dlt-button-light.png)
 
-**Step 4:** After clicking on the delete button, your anomaly is successfully deleted and a success flash message will appear saying **“Anomaly has been successfully deleted”.**
+**Step 5:** After clicking on the delete button, your anomaly is successfully deleted and a success flash message will appear saying **“Anomaly has been successfully deleted”.**
 
 ![msg](../assets/explore/anomalies/flash-1-light.png)
 
@@ -242,4 +230,4 @@ You can filter your anomalies based on values like **Source Datastores, Timefram
 | **2** | **Select Tags** | Filter anomalies by specific tags to categorize and prioritize issues effectively. |
 | **3** | **Timeframe** | Filtering anomalies detected within specific time ranges (e.g., anomalies detected in the last week or year). |
 | **4** | **Type** | Filter anomalies based on anomaly type (Record or Shape). |
-| **5** | **Rule** | Filter anomalies based on specific rules applied to the anomaly. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results. The rules displayed are based on the current dataset and provide more granular control over filtering. <br> <br> Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br> For example, the rule type **After Date Time** is displayed with a total of **14** occurrences. |
+| **5** | **Rule** | Filter anomalies based on specific rules applied to the anomaly. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results. The rules displayed are based on the current dataset and provide more granular control over filtering. <br> <br> Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br> For example, the rule type **After Date Time** is displayed with a total of **514** occurrences. |
