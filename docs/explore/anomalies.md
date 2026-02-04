@@ -48,7 +48,7 @@ By selecting **Archived Anomalies**, you can view anomalies that have been resol
 
 ![archived](../assets/explore/anomalies/archived-light.png)
 
-You can also categorize the archived anomalies based on their status as **Resolved**, **Duplicate**, **Invalid**, **Discarded** and **All** to review them effectively.
+You can also categorize the archived anomalies based on their status as **Resolved**, **Duplicate**, **Invalid**, **Discarded**, and **All** to review them effectively.
 
 **1. Resolved**: This indicates that the anomaly was a legitimate data quality concern and has been addressed.
 
@@ -66,7 +66,7 @@ You can also categorize the archived anomalies based on their status as **Resolv
 
 ![discarded](../assets/explore/anomalies/discarded-light.png)
 
-**5. All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, and Invalid, giving a comprehensive view of all past issues.
+**5. All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, Invalid, and Discarded giving a comprehensive view of all past issues.
 
 ![all](../assets/explore/anomalies/all-archived-light.png)
 
