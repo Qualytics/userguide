@@ -34,7 +34,7 @@ You can filter your anomalies based on values like **Timeframe**, **Type**, **Ru
 | :---- | :---- | :---- |
 | 1 | Timeframe | Filtering anomalies detected within specific time ranges (e.g., anomalies detected in the last week or year). |
 | 2 | Type | Filter anomalies based on anomaly type (Record or Shape). |
-| 3 | Rule | Filter anomalies based on specific rules applied to the anomaly. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results. The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset. For example, the rule type **Between** is displayed with a total of **3** occurrences. |
+| 3 | Rule | Filter anomalies based on specific rules applied to the anomaly. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results. The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset. For example, the rule type **Between** is displayed with a total of **7** occurrences. |
 | 4 | Table | Filters anomalies based on the table where they occurred. |
 | 5 | Field | Filters anomalies based on the column in the table where the issue was found. |
 | 6 | Check | Filters anomalies based on the check that generated them. |
