@@ -14,6 +14,8 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 * HTTP.
 
+* Ticketing.
+
 ![actionlist](../assets/flows/actionlist-light-23.png)
 
 !!! info
@@ -38,6 +40,11 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 !!! note
     For more detailed information, review the [http documentation](../flows/http.md){target="_blank"}.
+
+## Ticketing
+
+!!! note
+    For more detailed information, review the [ticketing documentation](../flows/ticketing.md){target="_blank"}
 
 ## FAQ
 
