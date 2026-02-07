@@ -2,6 +2,48 @@
 
 ## Release Notes
 
+### 2026.2.7 { id=2026.2.7 }
+
+#### Feature Enhancements
+
+- Introduced license management interface under Settings.
+    - Administrators can now view the current license expiration date directly from the Settings Status page, with visual warnings when the license is nearing expiration.
+    - Added the ability to generate a license request payload to send to a Qualytics account representative for license renewal.
+    - Users can apply a new license directly through the interface, streamlining the license assignment process.
+
+- Added bulk actions and validation improvements for flow executions.
+    - Users can now select and abort multiple flow executions at once, eliminating the need to handle stuck executions one by one.
+    - Introduced bulk delete for flow executions to streamline cleanup of completed or failed runs.
+    - Added filter option for aborted status in the flow executions list for easier tracking.
+    - Flows without actions are now validated and blocked from publishing to prevent incomplete workflow configurations.
+
+- Added support for custom anomaly messages from source record fields.
+    - Quality checks can now use a field value from the source record as the anomaly message, replacing the auto-generated violation text with business-specific context.
+    - Custom anomaly message field can be configured in both individual check forms and bulk check creation workflows.
+    - A field selector is available when container fields are loaded, with a manual text input fallback for flexible configuration.
+
+- Added rule type filter to the Observability listing.
+    - Users can now filter containers by observability rule type, choosing between Volumetric and Freshness checks for more focused monitoring.
+    - Filter availability adapts to the current context, displaying relevant filter options across Explore, Datastore, and Container views.
+    - Improved column alignment and heatmap display across different screen sizes for better readability.
+
+#### General Fixes and Improvements
+
+- Corrected auto-generated descriptions for multi-field Unique and Not Null checks to reference all selected fields instead of only the first one.
+
+- Fixed anomalous field filter in the failed checks section where checkbox selections were not filtering results and layout elements were overlapping.
+
+- Corrected tooltip icon contrast in the check assertion timeline that was not visible against the tooltip background in both light and dark modes.
+
+- Fixed incorrect breadcrumb navigation when viewing checks that no longer reference the original field after field association changes.
+
+- Improved platform reliability by automatically recovering flow executions and data catalog syncs that became stuck after environment restarts.
+
+- Centralized internal field association logic to improve consistency and reliability across anomaly counts, filtering, and data catalog synchronization.
+
+- General Fixes and Improvements.
+
+
 ### 2026.1.29 { id=2026.1.29 }
 
 #### Feature Enhancements
