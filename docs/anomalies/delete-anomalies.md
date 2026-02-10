@@ -40,7 +40,7 @@ After clicking on the **Delete** button, your anomaly is successfully deleted an
 
 **Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
 
-![delete-button-2](../assets/datastores/delete-anomalies/delete-button-2.png)
+![delete-button-2](../assets/datastores/delete-anomalies/delete-button-1.png)
 
 After clicking on the **Delete** button, your anomaly is successfully deleted and a confirmation message appears on the screen.
 
