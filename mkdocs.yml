@@ -34,6 +34,7 @@ nav:
         - add-datastores/db2.md
         - add-datastores/hive.md
         - add-datastores/maria-db.md
+        - add-datastores/microsoft-fabric.md
         - add-datastores/microsoft-sql-server.md
         - add-datastores/mysql.md
         - add-datastores/oracle.md
