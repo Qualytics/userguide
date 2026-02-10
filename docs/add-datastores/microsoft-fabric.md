@@ -10,7 +10,7 @@ Let's get started 🚀
 
 ## Microsoft Fabric Setup Guide
 
-Before connecting Microsoft Fabric to Qualytics, you need to set up a Service Principal in Microsoft Entra ID and grant it access to your Fabric workspace.
+Before connecting Microsoft Fabric to Qualytics, you need to gather your Fabric workspace and lakehouse identifiers and set up one of the two supported authentication methods.
 
 ### Prerequisites
 
@@ -19,12 +19,18 @@ To connect Qualytics to Microsoft Fabric, you will need the following:
 | REF. | REQUIREMENT | DESCRIPTION |
 | ---- | ----------- | ----------- |
 | 1.   | Microsoft Fabric Workspace | An active Microsoft Fabric workspace with a Lakehouse created. |
-| 2.   | Service Principal (App Registration) | A Microsoft Entra ID application registration with a client secret for authentication. |
-| 3.   | Workspace Access | The Service Principal must have at least **Contributor** access to the Fabric workspace. |
+| 2.   | Workspace & Lakehouse IDs | The unique identifiers (UUIDs) for your Fabric workspace and Lakehouse. |
+| 3.   | Authentication Credentials | Either a **Service Principal** (Client ID, Client Secret, Tenant ID) or a valid **Access Token**. |
 
-### Register a Service Principal
+### Authentication Methods
 
-To authenticate Qualytics with Microsoft Fabric, you need to create an App Registration in Microsoft Entra ID:
+Qualytics supports two authentication methods for connecting to Microsoft Fabric:
+
+#### Option A: Service Principal (Recommended)
+
+Service Principal authentication is recommended for automated and production environments. It uses a Microsoft Entra ID App Registration to authenticate.
+
+**Register a Service Principal:**
 
 1. Navigate to the [**Azure Portal**](https://portal.azure.com){:target="_blank"} and go to **Microsoft Entra ID** > **App registrations**.
 2. Click **New registration**.
@@ -37,12 +43,31 @@ To authenticate Qualytics with Microsoft Fabric, you need to create an App Regis
 !!! warning
     Store the Client Secret securely. It cannot be retrieved after you navigate away from the page.
 
-### Grant Workspace Access
+**Grant Workspace Access:**
 
 1. In Microsoft Fabric, navigate to your **Workspace**.
 2. Click on **Manage access**.
 3. Add the Service Principal by searching for the App Registration name.
 4. Assign at least **Contributor** role.
+
+**Required credentials for Service Principal:**
+
+| REF. | FIELD | DESCRIPTION |
+| ---- | ----- | ----------- |
+| 1.   | Client ID | The **Application (client) ID** from the Entra ID App Registration. |
+| 2.   | Client Secret | The **Secret Value** generated in the App Registration. |
+| 3.   | Tenant ID | The **Directory (tenant) ID** from the Entra ID App Registration. |
+
+#### Option B: Access Token
+
+Access Token authentication is suitable for scenarios where tokens are managed externally or for short-lived sessions. It requires a valid bearer token with permissions to access the Fabric workspace and lakehouse.
+
+| REF. | FIELD | DESCRIPTION |
+| ---- | ----- | ----------- |
+| 1.   | Access Token | A valid bearer token with appropriate permissions to access your Fabric resources. |
+
+!!! note
+    Access tokens have a limited lifespan. Ensure your token management strategy handles token refresh for long-running connections.
 
 ### Retrieve Connection Details
 
@@ -52,9 +77,10 @@ To configure the Fabric connector in Qualytics, you need the following details:
 | ---- | ----- | ------------- |
 | 1.   | Workspace ID | From the Fabric workspace URL: `https://app.fabric.microsoft.com/groups/{workspace-id}` |
 | 2.   | Lakehouse ID | From the Lakehouse URL: `https://app.fabric.microsoft.com/groups/{workspace-id}/lakehouses/{lakehouse-id}` |
-| 3.   | Client ID | The **Application (client) ID** from the Entra ID App Registration. |
-| 4.   | Client Secret | The **Secret Value** generated in the App Registration. |
-| 5.   | Tenant ID | The **Directory (tenant) ID** from the Entra ID App Registration. |
+| 3.   | Client ID | The **Application (client) ID** from the Entra ID App Registration (Service Principal only). |
+| 4.   | Client Secret | The **Secret Value** generated in the App Registration (Service Principal only). |
+| 5.   | Tenant ID | The **Directory (tenant) ID** from the Entra ID App Registration (Service Principal only). |
+| 6.   | Access Token | A valid bearer token (Access Token auth only). |
 
 ## Add a Source Datastore
 
@@ -78,7 +104,7 @@ A source datastore is a storage location used to connect to and access data from
 
 If the toggle for **Add New Connection** is turned on, then this will prompt you to add and configure the source datastore from scratch without using existing connection details.
 
-**Step 1:** Select the **Microsoft Fabric** connector from the dropdown list and add connection details such as Secrets Management, workspace ID, lakehouse ID, client ID, client secret, and tenant ID.
+**Step 1:** Select the **Microsoft Fabric** connector from the dropdown list and add connection details such as Secrets Management, workspace ID, lakehouse ID, and your authentication credentials (Service Principal or Access Token).
 
 ![add-datastore-credentials](../assets/datastores/fabric/add-datastore-credentials-light.png)
 
@@ -106,13 +132,15 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 |------|-------|---------|
 | 1.   | Workspace ID (Required) | Enter the Microsoft Fabric [**Workspace ID**](https://learn.microsoft.com/en-us/fabric/admin/portal-workspace){:target="_blank"} (a UUID found in the workspace URL). |
 | 2.   | Lakehouse ID (Required) | Enter the Microsoft Fabric **Lakehouse ID** (a UUID found in the Lakehouse URL). |
-| 3.   | Client ID (Required) | Enter the **Application (client) ID** from the [**Microsoft Entra ID App Registration**](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app){:target="_blank"}. |
-| 4.   | Client Secret (Required) | Enter the **Client Secret Value** generated in the App Registration. |
-| 5.   | Tenant ID (Required) | Enter the **Directory (tenant) ID** from the Microsoft Entra ID App Registration. |
-| 6.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Microsoft Fabric. |
-| 7.   | Database (Optional) | Specify the database name to be accessed. |
-| 8.   | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 9.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 3.   | Auth Type (Required) | Select the authentication method: **Service Principal** or **Access Token**. |
+| 4.   | Client ID | Enter the **Application (client) ID** from the [**Microsoft Entra ID App Registration**](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app){:target="_blank"}. Required when using **Service Principal** authentication. |
+| 5.   | Client Secret | Enter the **Client Secret Value** generated in the App Registration. Required when using **Service Principal** authentication. |
+| 6.   | Tenant ID | Enter the **Directory (tenant) ID** from the Microsoft Entra ID App Registration. Required when using **Service Principal** authentication. |
+| 7.   | Access Token | Enter a valid bearer token. Required when using **Access Token** authentication. |
+| 8.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Microsoft Fabric. |
+| 9.   | Database (Optional) | Specify the database name to be accessed. |
+| 10.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
+| 11.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -206,12 +234,14 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 |------|-------|---------|
 | 1.   | Workspace ID (Required) | Enter the Microsoft Fabric [**Workspace ID**](https://learn.microsoft.com/en-us/fabric/admin/portal-workspace){:target="_blank"} (a UUID found in the workspace URL). |
 | 2.   | Lakehouse ID (Required) | Enter the Microsoft Fabric **Lakehouse ID** (a UUID found in the Lakehouse URL). |
-| 3.   | Client ID (Required) | Enter the **Application (client) ID** from the [**Microsoft Entra ID App Registration**](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app){:target="_blank"}. |
-| 4.   | Client Secret (Required) | Enter the **Client Secret Value** generated in the App Registration. |
-| 5.   | Tenant ID (Required) | Enter the **Directory (tenant) ID** from the Microsoft Entra ID App Registration. |
-| 6.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Microsoft Fabric. |
-| 7.   | Database (Optional) | Specify the database name. |
-| 8.   | Teams (Required) | Select one or more teams from the dropdown to associate with this enrichment datastore. |
+| 3.   | Auth Type (Required) | Select the authentication method: **Service Principal** or **Access Token**. |
+| 4.   | Client ID | Required when using **Service Principal** authentication. |
+| 5.   | Client Secret | Required when using **Service Principal** authentication. |
+| 6.   | Tenant ID | Required when using **Service Principal** authentication. |
+| 7.   | Access Token | Required when using **Access Token** authentication. |
+| 8.   | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Microsoft Fabric. |
+| 9.   | Database (Optional) | Specify the database name. |
+| 10.  | Teams (Required) | Select one or more teams from the dropdown to associate with this enrichment datastore. |
 
 **Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified.
 
@@ -276,7 +306,7 @@ This section provides sample payloads for creating a Microsoft Fabric datastore.
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Create a Source Datastore with a new Connection"
+=== "Create with Service Principal"
     ```json
     {
         "name": "your_datastore_name",
@@ -299,7 +329,28 @@ This section provides sample payloads for creating a Microsoft Fabric datastore.
         }
     }
     ```
-=== "Create a Source Datastore with an existing Connection"
+=== "Create with Access Token"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "fabric_database",
+        "schema": "fabric_catalog",
+        "enrich_only": false,
+        "trigger_catalog": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "fabric",
+            "host": "api.fabric.microsoft.com",
+            "parameters": {
+                "workspace_id": "fabric_workspace_id",
+                "lakehouse_id": "fabric_lakehouse_id",
+                "access_token": "fabric_access_token"
+            }
+        }
+    }
+    ```
+=== "Create with an Existing Connection"
     ```json
     {
         "name": "your_datastore_name",
@@ -317,7 +368,7 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:**  ```/api/datastores (post)```
 
-=== "Create an Enrichment Datastore with a new Connection"
+=== "Create Enrichment with Service Principal"
     ```json
     {
         "name": "your_datastore_name",
@@ -339,7 +390,27 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         }
     }
     ```
-=== "Create an Enrichment Datastore with an Existing Connection"
+=== "Create Enrichment with Access Token"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "database": "fabric_database",
+        "schema": "fabric_enrichment_catalog",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "fabric",
+            "host": "api.fabric.microsoft.com",
+            "parameters": {
+                "workspace_id": "fabric_workspace_id",
+                "lakehouse_id": "fabric_lakehouse_id",
+                "access_token": "fabric_access_token"
+            }
+        }
+    }
+    ```
+=== "Create Enrichment with an Existing Connection"
     ```json
     {
         "name": "your_datastore_name",
