@@ -39,12 +39,12 @@ When multiple flows are selected, an action toolbar appears showing the total nu
 
 ![delete](../assets/flows/toolbar.png)
 
-**Step 2**: Click on the vertical ellipsis (⋮) and select Delete from the dropdown menu.
+**Step 2**: Click on the vertical ellipsis (⋮) and select **Delete** from the dropdown menu.
 
 ![delete](../assets/flows/drop-delete.png)
 
-**Step 3**: A confirmation modal window appear, click on the **Delete** button to delete the selected flows.
+**Step 3**: A confirmation modal window appears, click on the **Delete** button to delete the selected flows.
 
 ![delete](../assets/flows/button-delete.png)
 
-After clicking the Delete button, a success notification appears confirming the deletion.
+After clicking the **Delete** button, a success notification appears confirming the deletion.
