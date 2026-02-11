@@ -20,6 +20,72 @@ Authored checks are manually created by users within the Qualytics platform or A
 
 For more details on Authored Checks, please refer to the [**Authored Checks**](../checks/authored-check.md) documentation.
 
+## Editing Computed Assets from Checks
+
+Qualytics allows users to edit **computed tables** and **computed fields** directly from **check interfaces**. This feature helps users quickly update computed logic while working on data quality checks—without leaving the check context.
+
+### What You Can Do
+
+#### Edit Computed Assets from a Check
+
+From a **Check Details** screen, users can:
+
+- Edit the **computed table** used by the check
+- Edit the **computed field** used by the check
+
+The edit action opens the same **Edit Computed** dialog available from the container page, but directly within the check context. This allows users to quickly adjust logic when a check fails or needs refinement.
+
+![datastore](../assets/checks/checks-overview/edit.png)
+
+### Keyboard Shortcut
+
+#### `E` — Edit Computed Asset
+
+When focused on a computed asset within a check:
+
+- Press **`E`** to open **Edit Computed**
+- This opens the **Edit Computed Table** or **Edit Computed Field** dialog
+
+![datastore](../assets/checks/checks-overview/edit.png)
+
+!!! note   
+    On this screen, the “E” keyboard shortcut is used to open Edit Computed.
+    
+### Dependency Protection
+
+Qualytics automatically protects dependencies when computed assets are edited.
+
+#### When a Dependency Is Affected
+
+If an edit to a computed table or field would impact an existing check—for example:
+
+- Renaming or removing a field used by the check
+- Modifying a query that drops a referenced column
+
+Qualytics will display a **warning message** before the change is applied.
+
+The warning clearly lists:
+
+- Fields that will be removed
+- Checks and anomalies that depend on those fields
+
+#### Proceeding with the Change
+
+If you choose **Proceed Anyway**:
+
+- The affected check(s) will be **deleted**
+- Related anomalies will also be removed
+- Qualytics will automatically redirect you to the most appropriate page (for example, the container page)
+
+This behavior ensures system consistency and prevents broken references.
+
+### Important Considerations
+
+- There are no strict limitations on editing computed assets
+- Changes may impact dependent checks
+- Always review dependency warnings before proceeding
+- To preserve an existing check, avoid removing or renaming fields it depends on
+
 ## View & Manage Checks
 
 **Checks** tab in Qualytics provides users with an interface to view and manage various checks associated with their data. These checks are accessible through two different methods, as discussed below.
