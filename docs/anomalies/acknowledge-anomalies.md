@@ -33,7 +33,7 @@ After clicking on the **Acknowledge** button your anomaly is successfully moved 
 
 **Step 1**: Click on the active anomaly from the list of available anomalies that you want to acknowledge.
 
-![active-anomaly](../assets/datastores/acknowledge-anomalies/active-anomaly.png)
+![acknowledge-directly](../assets/datastores/acknowledge-anomalies/acknowledge-directly.png)
 
 **Step 2:** You will be directed to the anomaly details page. Click on the **Acknowledge** button located at the top-right corner of the interface.
 
