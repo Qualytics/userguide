@@ -32,7 +32,7 @@ When multiple executions are selected, an action toolbar appears showing the tot
 
 ![chart](../assets/flows/abort-bulk.png)
 
-**Step 3:** Click **Abort** from the action toolbar.
+**Step 2:** Click on the vertical ellipsis (⋮), and select the **Abort** option from the action toolbar.
 
 ![chart](../assets/flows/abort-action.png)
 
