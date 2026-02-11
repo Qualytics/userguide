@@ -15,8 +15,9 @@ For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Da
 Qualytics supports a range of relational databases, including but not limited to:
 
 * [Athena](../add-datastores/athena.md)  
-* [Databricks](../add-datastores/databricks.md)  
-* [DB2](../add-datastores/db2.md)  
+* [Databricks](../add-datastores/databricks.md)
+* [DB2](../add-datastores/db2.md)
+* [Fabric Analytics](../add-datastores/fabric-analytics.md)
 * [Hive](../add-datastores/hive.md)  
 * [MariaDB](../add-datastores/maria-db.md)  
 * [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)  
