@@ -242,6 +242,7 @@ nav:
         - Notifications: flows/notification.md
         - Notification Tokens: flows/notification-tokens.md
         - HTTP: flows/http.md 
+        - Ticketing: flows/ticketing.md
       - View and Track Flow Executions: flows/view-created-flows.md
       - Manage Flow:
         - Clone a Flows: flows/clone-a-flow.md
