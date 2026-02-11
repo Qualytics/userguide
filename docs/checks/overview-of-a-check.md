@@ -33,7 +33,7 @@ From a **Check Details** screen, users can:
 - Edit the **computed table** used by the check
 - Edit the **computed field** used by the check
 
-The edit action opens the same **Edit Computed** dialog available from the container page, but directly within the check context.This allows users to quickly adjust logic when a check fails or needs refinement.
+The edit action opens the same **Edit Computed** dialog available from the container page, but directly within the check context. This allows users to quickly adjust logic when a check fails or needs refinement.
 
 ![datastore](../assets/checks/checks-overview/edit.png)
 

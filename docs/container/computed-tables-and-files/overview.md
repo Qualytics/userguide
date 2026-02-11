@@ -44,11 +44,10 @@ Use Computed Files when you want to perform the following operations on your sel
 Computed tables and fields can also be edited directly from check interfaces. This allows you to quickly update computed logic when resolving check failures.
 
 !!! note
-    Learn more about [editing computed assets from checks](../../checks/overview-of-a-check.md#editing-computed-assets-from-checks){:target="_blank"}
-
+    Learn more about [editing computed assets from checks](../../checks/overview-of-a-check.md#editing-computed-assets-from-checks){target="_blank"}
     
 ## View Assigned Teams
 
-By hovering over the information, icon, users can view the assigned teams for enhanced collaboration and data transparency.
+By hovering over the information icon, users can view the assigned teams for enhanced collaboration and data transparency.
 
 ![team](../../assets/container/computed-tables-and-files/overview/team-light.png)
