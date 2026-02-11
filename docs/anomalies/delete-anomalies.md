@@ -52,7 +52,7 @@ For more efficient management, you can delete multiple anomalies at once using t
 
 ![bulk-delete](../assets/datastores/delete-anomalies/bulk-delete.png)
 
-When multiple checks are selected, an action toolbar appears, displaying the total number of checks chosen along with a vertical ellipsis for additional bulk action options.
+When multiple anomalies are selected, an action toolbar appears, displaying the total number of anomalies chosen along with a vertical ellipsis for additional bulk action options.
 
 ![bulk-delete-options](../assets/datastores/delete-anomalies/bulk-delete-options.png)
 

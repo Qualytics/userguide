@@ -10,7 +10,7 @@ You can archive individual anomalies either directly or through the action menu.
 
 **Step 1:** Locate the anomaly (whether Active or Acknowledged) you want to archive.
 
-![archive-directly](../assets/datastores/archive-anomalies/archive-directly.png)
+![archive-action](../assets/datastores/archive-anomalies/archive-action.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Archive”** from the dropdown menu.
 
@@ -33,7 +33,7 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button](../assets/datastores/archive-anomalies/archive-button.png)
 
-After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
+After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
 
 ### 2. Archive via Action Menu
 
@@ -62,7 +62,7 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button-2](../assets/datastores/archive-anomalies/archive-button.png)
 
-After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
+After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
 
 ## Archive Anomalies in Bulk
 
@@ -97,4 +97,4 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button-2](../assets/datastores/archive-anomalies/archive-button-3.png)
 
-After clicking on the **Archive** button your anomaly is moved to the archive and a confirmation message appears on the screen.
+After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
