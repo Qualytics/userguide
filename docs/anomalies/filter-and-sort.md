@@ -4,7 +4,7 @@ Filter and Sort options allow you to organize your anomalies by various criteria
 
 ## Sort
 
-You can sorts your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
+You can sort your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
 
 ![sort-options](../assets/datastores/filter-sort-anomalies/sort-options.png)
 

@@ -6,7 +6,7 @@ Actions define the specific steps the system will execute after a flow is trigge
 
 ![action](../assets/flows/action-light-22.png)
 
-A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into three groups:
+A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into four groups:
 
 * Operations.
 
@@ -44,7 +44,7 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## Ticketing
 
 !!! note
-    For more detailed information, review the [ticketing documentation](../flows/ticketing.md){target="_blank"}
+    For more detailed information, review the [ticketing documentation](../flows/ticketing.md){target="_blank"}.
 
 ## FAQ
 
