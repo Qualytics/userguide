@@ -206,6 +206,7 @@ nav:
         - Edit Threshold: observability/edit-threshold.md
         - Edit Maximum Age: observability/edit-maximum-age.md
         - Mark Check as Favorite: observability/mark-check.md
+        - Observability Filter: observability/observability-filter.md
     - Anomalies:
       - Overview: anomalies/anomalies.md
       - Types: anomalies/anomaly-types.md
