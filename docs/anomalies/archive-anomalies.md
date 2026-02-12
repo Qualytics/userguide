@@ -80,7 +80,7 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 
 ![archive-option-bulk](../assets/datastores/archive-anomalies/archive-option-bulk.png)
 
-**Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
+**Step 3:** A modal window titled **“Archive Anomalies”** will appear, providing you with the following archive options:
 
 * **Resolved**: Choose this option if the anomaly was a legitimate data quality concern and has been addressed. This helps maintain a record of resolved issues while ensuring that they are no longer active.  
 * **Invalid**: Select this option if the anomaly is not a legitimate data quality concern and does not require further action. Archiving anomalies as invalid helps differentiate between real issues and those that can be dismissed, improving overall data quality management.
@@ -97,4 +97,4 @@ You also have the option to leave a comment in the provided field to provide add
 
 ![archive-button-2](../assets/datastores/archive-anomalies/archive-button-3.png)
 
-After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
+After clicking on the **Archive** button, your anomalies are moved to the archive and a confirmation message appears on the screen.
