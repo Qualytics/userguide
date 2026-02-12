@@ -80,13 +80,13 @@ The License panel displays:
 
 ![restriction-alert](../../assets/health/restriction-alert.png)
 
-## Generate License Request
+### Generate License Request
 
 If your license is nearing expiration or has already expired, you can request a renewal by clicking the **Generate License Request** button. This will generate a license request code that you can share with your Qualytics account representative to receive a renewed license key.
 
 ![generate-license-request](../../assets/health/generate-license-request.png)
 
-## Apply a New License
+### Apply a New License
 
 Once you receive a valid license key from your Qualytics representative, follow these steps:
 
