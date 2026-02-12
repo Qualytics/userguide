@@ -18,11 +18,12 @@ The **Platform Status Section** displays the current platform version, along wit
 
 | REF. | FIELD | ACTION | EXAMPLE |
 |----- |-------|--------|---------|
-| 1 | Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
-| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services (AWS) |
-| 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Medium |
-| 4 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
-| 5 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
+| 1 | Version | Shows the current version of your platform's core software.  | develop / 20240808-3019c60 |
+| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Local / Amazon Web Services (AWS) |
+| 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Unspecified / Medium |
+| 4 | License Expiration Date | Displays the current license expiration date and status. | May 31 2026, 9:00 PM (BRT) |
+| 5 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
+| 6 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
 
 ![summary](../../assets/health/summary-light-3.png)
 
@@ -58,6 +59,44 @@ The **Dataplane** section provides advanced information about the analytics engi
 Users can now utilize private routes to view their IP addresses along with relevant system messages in the Analytics Engine, ensuring greater transparency and visibility into network activity.
 
 ![private-routes](../../assets/health/private-light.png)
+
+## License Management
+
+The **License section** allows administrators to monitor, renew, and update platform licensing directly from the Status page.
+
+### Viewing License Status
+
+The License panel displays:
+
+- Expiration date  
+
+![expiration-date](../../assets/health/expiration-date.png)
+
+- Remaining days  
+
+![remaining-days](../../assets/health/remaining-days.png)
+
+- Restriction alerts if expired  
+
+![restriction-alert](../../assets/health/restriction-alert.png)
+
+## Generate License Request
+
+If your license is nearing expiration or has already expired, you can request a renewal by clicking the **Generate License Request** button. This will generate a license request code that you can share with your Qualytics account representative to receive a renewed license key.
+
+![generate-license-request](../../assets/health/generate-license-request.png)
+
+## Apply a New License
+
+Once you receive a valid license key from your Qualytics representative, follow these steps:
+
+**Step 1:** Click on the **Update License** button to apply a new or renewed license to your system.
+
+![update-license](../../assets/health/update-license.png)
+
+A modal window will appear. Paste the provided license key into the input field and click **Submit** to apply the new license.
+
+![submit](../../assets/health/submit.png)
 
 ## Manage Status Summary
 
