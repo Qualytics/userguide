@@ -2,6 +2,26 @@
 
 ## Release Notes
 
+### 2026.2.12 { id=2026.2.12 }
+
+#### Feature Enhancements
+
+- Introduced Microsoft Fabric JDBC connector.
+    - Added read-only connectivity to Microsoft Fabric's SQL Analytics Endpoint, enabling users to profile and monitor data quality on Fabric datasets.
+    - Authentication is handled via Azure Active Directory Service Principal, with credentials securely managed through connection properties.
+
+- Added Service Principal authentication support for ABFS datastores, allowing Azure Active Directory OAuth-based connections as an alternative to Shared Key authentication.
+
+#### General Fixes and Improvements
+
+- Fixed missing label text color in the bulk action menu on the Flows page when using dark theme.
+
+- Corrected low-contrast tooltip icon on the check assertion timeline that was difficult to see in both light and dark modes.
+
+- Optimized data catalog integration sync performance by replacing verbose per-asset logging with concise per-datastore summaries, reducing storage overhead in environments with large asset catalogs.
+
+- General Fixes and Improvements.
+
 ### 2026.2.7 { id=2026.2.7 }
 
 #### Feature Enhancements
