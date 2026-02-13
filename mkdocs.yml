@@ -76,7 +76,6 @@ nav:
         - Remediation Tables: enrichment/remediation-tables.md
         - Metadata Tables: enrichment/metadata-tables.md
         - API Payload Examples: enrichment/api-payload-examples.md
-        - Schema Changelog: enrichment/schema-changelog.md
       - Data Preview: enrichment/enrichment-datastore-preview.md
       - Supported Enrichment Datastores: enrichment-support/supported-enrichment-datastores.md
       - Manage Enrichment:

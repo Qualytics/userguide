@@ -130,7 +130,7 @@
 === "Example result response"
     ```json
 		{
-			"source_records": "[{\"operation_id\":22871,\"datastore_id\":850,\"container_id\":7239,\"partition_name\":\"ACTION_TEST_CLIENT_V3\",\"incremental\":true,\"records_processed\":0,\"enrichment_source_record_limit\":10,\"max_records_analyzed\":-1,\"anomaly_count\":0,\"start_time\":\"2023-12-04T20:35:54.194Z\",\"end_time\":\"2023-12-04T20:35:54.692Z\",\"result\":\"success\",\"message\":null}]"
+			"source_records": "[{\"operation_id\":22871,\"datastore_id\":850,\"container_id\":7239,\"container_scan_id\":43837,\"partition_name\":\"ACTION_TEST_CLIENT_V3\",\"incremental\":true,\"records_processed\":0,\"enrichment_source_record_limit\":10,\"max_records_analyzed\":-1,\"anomaly_count\":0,\"start_time\":\"2023-12-04T20:35:54.194Z\",\"end_time\":\"2023-12-04T20:35:54.692Z\",\"result\":\"success\",\"message\":null}]"
 		}
 	```
 	

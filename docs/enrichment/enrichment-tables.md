@@ -45,7 +45,6 @@ Acts as an associative entity that consolidates information on failed checks, as
 | QUALITY_CHECK_TAGS              | STRING             | Tags associated with the quality check.          |
 | QUALITY_CHECK_PARAMETERS        | STRING             | Parameters used for the quality check.           |
 | QUALITY_CHECK_DESCRIPTION       | STRING             | Description of the quality check.                |
-| QUALITY_CHECK_FIELDS            | STRING             | Names of the fields targeted by the quality check. |
 | QUALITY_CHECK_METADATA          | STRING             | Optional JSON string containing additional check metadata. |
 | OPERATION_ID                    | NUMBER             | Identifier for the operation detecting anomaly.  |
 | DETECTED_TIME                   | TIMESTAMP          | Timestamp when the anomaly was detected.         |
@@ -53,7 +52,6 @@ Acts as an associative entity that consolidates information on failed checks, as
 | SOURCE_PARTITION                | STRING             | Partition of the source data.                    |
 | SOURCE_DATASTORE                | STRING             | Datastore where the source data resides.         |
 | FINGERPRINT                     | INTEGER            | Unique identifier created when Reactivate Recurring Anomalies is enabled.         |
-| ANOMALOUS_RECORDS_COUNT         | NUMBER             | The total number of records that triggered this anomaly. For row-level checks, this is 1 per anomaly row. For shape-level checks, this is the total count of anomalous records, independent of any source record sampling limit. |
 
 !!! info
 	This table is not characterized by unique `ANOMALY_UUID` or `QUALITY_CHECK_ID` values alone. Instead, the combination of `ANOMALY_UUID` and `QUALITY_CHECK_ID` serves as a composite key, uniquely identifying each record in the table.
@@ -76,9 +74,6 @@ Stores source records in JSON format, primarily to enable the preview source rec
 
 Captures and stores the results of every scan operation conducted on the Qualytics Platform.
 
-!!! warning "Schema Change (December 2024)"
-    The `CONTAINER_SCAN_ID` column was removed from this table. Enrichment tables created after this change will not contain this column. The container and datastore can be identified using the `CONTAINER_ID` and `DATASTORE_ID` columns respectively.
-
 **Columns**
 
 | Name                              | Data Type          | Description                                                            |
@@ -86,6 +81,7 @@ Captures and stores the results of every scan operation conducted on the Qualyti
 |  OPERATION_ID           			|   NUMBER           | Unique identifier for the scan operation.                              |
 |  DATASTORE_ID      			    |   NUMBER         	 | Identifier for the source datastore associated with the operation.     |
 |  CONTAINER_ID      			    |   NUMBER         	 | Identifier for the container associated with the operation.            |
+|  CONTAINER_SCAN_ID      			|   NUMBER         	 | Identifier for the container scan associated with the operation.       |
 |  PARTITION_NAME         			|   STRING           | Name of the source partition on which the scan operation is performed. |
 |  INCREMENTAL                      |   BOOLEAN          | Boolean flag indicating whether the scan operation is incremental.     |
 |  RECORDS_PROCESSED                |   NUMBER           | Total number of records processed during the scan operation.           |
