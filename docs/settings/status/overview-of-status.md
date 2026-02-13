@@ -52,7 +52,7 @@ The **Dataplane** section provides advanced information about the analytics engi
 | 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 396000 MB |
 | 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | 0 running operations [] with 0 queued requests and 10 provisioned channels |
 
-![analytics-engine](../../assets/health/analytics-engine-light-5.png)
+![analytics-engine](../../assets/health/analytics-engine-light.png)
 
 ## Private Routes
 
