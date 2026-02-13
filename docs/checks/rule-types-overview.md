@@ -9,6 +9,7 @@ Here’s an overview of the rule types and their purposes:
 | Rule Type                                                                             | Description                                                                                        |
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | [After Date Time](../checks/after-date-check.md)                                      | Asserts that the field is a timestamp later than a specific date and time.                         |
+| [Aggregation Comparison](../checks/aggregation-comparison-check.md)                   | Verifies that the specified comparison operator evaluates true when applied to two aggregation expressions. |
 | [Any Not Null](../checks/any-not-null-check.md)                                       | Asserts that one of the fields must not be null.                                                    |
 | [Before DateTime](../checks/before-date-time-check.md)                                | Asserts that the field is a timestamp earlier than a specific date and time.                       |
 | [Between](../checks/between-check.md)                                                 | Asserts that values are equal to or between two numbers.                                           |
