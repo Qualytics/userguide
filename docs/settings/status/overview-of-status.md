@@ -42,15 +42,15 @@ The **Dataplane** section provides advanced information about the analytics engi
 
 | REF | FIELD | ACTION | EXAMPLE |
 |-----|-------|--------|---------|
-| 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Aug 8 2024,7:39 AM (GMT+5:30) |
+| 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Feb 13 2026, 7:20 AM (IST) |
 | 2 | Engine | Shows the platform used to run and manage workloads. | Kubernetes |
-| 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 10 |
-| 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 25000 MB |
-| 5 | Implementation Version | The version of the analytics engine implementation being used.  | 2.0.0 |
-| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 3.5.1 |
-| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 3 |
-| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
-| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
+| 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 12 |
+| 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 55000 MB |
+| 5 | Implementation Version | The version of the analytics engine implementation being used.  | 2.109.3-60de4a5 |
+| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 4.0.2 |
+| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 7 |
+| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 396000 MB |
+| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | 0 running operations [] with 0 queued requests and 10 provisioned channels |
 
 ![analytics-engine](../../assets/health/analytics-engine-light-5.png)
 
@@ -110,7 +110,7 @@ The **Copy Status Summary** feature lets you duplicate all data from the Health 
 
 ![copy-health](../../assets/health/copy-health-light-6.png)
 
-**Step 2:** After clicking on **Copy Status Summary**,  a success message saying **Copied.**
+**Step 2:** After clicking on **Copy Status Summary**, a success message appears saying **Copied.**
 
 ![copied](../../assets/health/copied-light-7.png)
 
@@ -134,7 +134,7 @@ The **Restart Analytics Engine** option restarts the analytics processing system
 
 ![restart](../../assets/health/restart-light-10.png)
 
-**Step 3:** After clicking on **Restart** button a success message saying **Successfully triggered Analytics Engine restart.**
+**Step 3:** After clicking on the **Restart** button, a success message appears saying **Successfully triggered Analytics Engine restart.**
 
 ![successfully-triggered](../../assets/health/successfully-triggered-light-11.png)
 
