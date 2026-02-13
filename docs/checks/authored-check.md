@@ -38,7 +38,7 @@ For demonstration purposes we have selected the **After Date Time** rule type.
 
 ![rule](../assets/checks/authored-checks/rule-type-light.png)
 
-For more details about the available rule types, refer to the "**Rule Types Overview**" documentation.
+For more details about the available rule types, refer to the [**Rule Types Overview**](../checks/rule-types-overview.md){target="blank"} documentation.
 
 !!! note
     Different rule types have different sets of fields and options appearing when selected. 
@@ -57,21 +57,30 @@ The filter clause defines the conditions under which the check will be applied. 
 
 ![filter](../assets/checks/authored-checks/filter-clause-light.png)
 
-**6. Date (Required)**: Enter the reference date for the rule. For the **After Date Time** rule, records in the selected field must have a timestamp later than this specified date.
+**6. Custom Anomaly Messages**: Enable this option to use a source record field as the anomaly message instead of the default system-generated message.
+
+Select a source field from the dropdown. The value in that field will be displayed as the anomaly description for failed records.
+
+!!! note
+    If the selected field is empty for a failed record, the default system-generated message will be used.
+
+![custom](../assets/checks/authored-checks/custom-light.png)
+
+**7. Date (Required)**: Enter the reference date for the rule. For the **After Date Time** rule, records in the selected field must have a timestamp later than this specified date.
 
 ![date](../assets/checks/authored-checks/date-light.png)
 
 !!! note
     Spark SQL expressions used in calculated fields are editable, enabling greater flexibility in configuration.
 
-**7. Coverage**: Adjust the **Coverage setting** to specify the percentage of records that must comply with the check.
+**8. Coverage**: Adjust the **Coverage setting** to specify the percentage of records that must comply with the check.
 
 !!! note
     The Coverage setting applies to most rule types and allows you to specify the percentage of records that must meet the validation criteria.
 
 ![coverage](../assets/checks/authored-checks/coverage-light.png)
 
-**8. Description (Required)**: Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the **"💡" lightbulb** icon to apply a suggested description based on the rule type.
+**9. Description (Required)**: Enter a detailed description of the check template, including its purpose, applicable data, and relevant information to ensure clarity for users. If you're unsure of what to include, click on the **"💡" lightbulb** icon to apply a suggested description based on the rule type.
 
 **Example:** The **Date of Birth** must be a timestamp later than **< date_time >**.
 
@@ -79,11 +88,11 @@ This description specifies that the **Date of Birth** field must have a timestam
 
 ![description](../assets/checks/authored-checks/description-light.png)
 
-**9. Tag**: Assign relevant tags to your check to facilitate easier searching and filtering based on categories like **"data quality," "financial reports,"** or **"critical checks."**
+**10. Tag**: Assign relevant tags to your check to facilitate easier searching and filtering based on categories like **"data quality," "financial reports,"** or **"critical checks."**
 
 ![tag](../assets/checks/authored-checks/tag-light.png)
 
-**10. Additional Metadata**: Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
+**11. Additional Metadata**: Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
 
 ![metadata](../assets/checks/authored-checks/metadata-light.png)
 
