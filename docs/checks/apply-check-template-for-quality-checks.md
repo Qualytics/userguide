@@ -44,7 +44,7 @@ Since we are applying a check template to create quality checks, it's important 
 
 **3. Datastore:** Select the **Datastore, Table** and **Field** where you want to apply the check template. This ensures that the template is linked to the correct data source, allowing the quality checks to be performed on the specified datastore.
 
-For demonstration purposes, we have selected the **“MIMIC II”** datastore, with the **“ADMISSIONS”** table and the **“ADMITTIME”** field.
+For demonstration purposes, we have selected the **“Analytics-DBT POC”** datastore, with the **“LINEITEM”** table and the **“L_COMMITDATE”** field.
 
 ![datastore](../assets/checks/apply-check-template-for-quality-check/datastore-light-7.png)
 
