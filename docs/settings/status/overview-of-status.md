@@ -18,9 +18,9 @@ The **Platform Status Section** displays the current platform version, along wit
 
 | REF. | FIELD | ACTION | EXAMPLE |
 |----- |-------|--------|---------|
-| 1 | Version | Shows the current version of your platform's core software.  | develop / 20240808-3019c60 |
-| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Local / Amazon Web Services (AWS) |
-| 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Unspecified / Medium |
+| 1 | Version | Shows the current version of your platform's core software.  | 20260231-196460 |
+| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services |
+| 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Medium |
 | 4 | License Expiration Date | Displays the current license expiration date and status. | May 31 2026, 9:00 PM (BRT) |
 | 5 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
 | 6 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
@@ -63,6 +63,10 @@ Users can now utilize private routes to view their IP addresses along with relev
 ## License Management
 
 The **License section** allows administrators to monitor, renew, and update platform licensing directly from the Status page.
+
+!!! warning 
+    The License section is available only for non-SaaS (self-hosted) customers. SaaS environments, including Develop, will not display a License.
+
 
 ### Viewing License Status
 
