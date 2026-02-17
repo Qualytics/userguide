@@ -32,6 +32,7 @@ nav:
         - add-datastores/bigquery.md
         - add-datastores/databricks.md
         - add-datastores/db2.md
+        - add-datastores/fabric-analytics.md
         - add-datastores/hive.md
         - add-datastores/maria-db.md
         - add-datastores/microsoft-sql-server.md

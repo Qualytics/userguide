@@ -10,7 +10,10 @@ Let’s get started 🚀
 
 ## Azure Datalake Storage Setup Guide
 
-This setup guide details the process for retrieving the Account Name and Access Key of your Azure Datalake Storage account, essential for seamless configuration in Qualytics.
+This setup guide details the process for retrieving the credentials needed to configure your Azure Datalake Storage account in Qualytics. Azure Datalake Storage supports two authentication methods:
+
+- **Access Key Authentication** — Uses the storage account name and access key.
+- **Service Principal Authentication** — Uses a Microsoft Entra ID (Azure AD) service principal with Client ID, Client Secret, and Tenant ID.
 
 ### Azure Datalake Storage URI
 
@@ -37,6 +40,27 @@ To configure Azure Datalake Storage Datastore in Qualytics, you need the account
 
 !!! tip
     Refer to the [**Azure Datalake Storage documentation**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal){:target="_blank"} for more information on how to retrieve the account name and access key of your storage account.
+
+## Service Principal Authentication (Alternative)
+
+As an alternative to access key authentication, you can use a **Service Principal** to authenticate with Azure Datalake Storage. This method is recommended for organizations that prefer identity-based access control via Microsoft Entra ID.
+
+To set up service principal authentication, you need to:
+
+1. Register an application in Microsoft Entra ID.
+2. Create a Client Secret for the application.
+3. Assign the appropriate RBAC role (e.g., **Storage Blob Data Reader** or **Storage Blob Data Contributor**) to the service principal on your storage account or container.
+
+After completing the setup, you will have the following credentials:
+
+| Credential | Description |
+|------------|-------------|
+| **Client ID** | The Application (Client) ID from the app registration. |
+| **Client Secret** | A secret key generated for the application. |
+| **Tenant ID** | The Directory (Tenant) ID of your Azure AD tenant. |
+
+!!! tip
+    For detailed step-by-step instructions on creating a service principal in the Azure Portal, refer to the [**Microsoft documentation**](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target="_blank"}.
 
 ## Add a Source Datastore
 
@@ -66,7 +90,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
-!!! note 
+!!! note
     After configuring **HashiCorp Vault** integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
 | REF | FIELDS               | ACTIONS                                                                 |
@@ -87,11 +111,29 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | REF | FIELDS | ACTIONS |
 |-----|--------|---------|
 | 1.  | URI (Required) | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
-| 2.  | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
-| 3.  | Access Key (Required) | Input the access key provided for secure access. |
-| 4.  | Root Path (Required) | Specify the root path where the data is stored. |
-| 5.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 2.  | Root Path (Required) | Specify the root path where the data is stored. |
+| 3.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
+| 4.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+
+**Authentication**: Select the authentication method to connect to Azure Datalake Storage. You can choose between **Shared Key** (default) or **Service Principal**.
+
+=== "Shared Key"
+
+    | REF | FIELDS | ACTIONS |
+    |-----|--------|---------|
+    | 1.  | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
+    | 2.  | Access Key (Required) | Input the access key provided for secure access. |
+
+=== "Service Principal"
+
+    | REF | FIELDS | ACTIONS |
+    |-----|--------|---------|
+    | 1.  | Client ID (Required) | Enter the **Application (Client) ID** from your Microsoft Entra ID app registration. |
+    | 2.  | Client Secret (Required) | Enter the **Client Secret** value generated in your app registration. |
+    | 3.  | Tenant ID (Required) | Enter the **Directory (Tenant) ID** from your Microsoft Entra ID app registration. |
+
+    !!! tip
+        For detailed instructions on setting up a service principal and assigning RBAC roles, refer to the [**Microsoft documentation**](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target="_blank"}.
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -164,10 +206,28 @@ A modal window - **Link Enrichment Datastore** will appear. Enter the following 
 | REF | FIELDS | ACTIONS |
 |------|-------|---------|
 | 1.   | URI (Required)        | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
-| 2.   | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
-| 3.   | Access Key (Required)  | Input the access key provided for secure access.         |
-| 4.   | Root Path (Required)   | Specify the root path where the data is stored.          |
-| 5.   | Teams (Required)       | Select one or more teams from the dropdown to associate with this source datastore. |
+| 2.   | Root Path (Required)   | Specify the root path where the data is stored.          |
+| 3.   | Teams (Required)       | Select one or more teams from the dropdown to associate with this source datastore. |
+
+**Authentication**: Select the authentication method. You can choose between **Shared Key** (default) or **Service Principal**.
+
+=== "Shared Key"
+
+    | REF | FIELDS | ACTIONS |
+    |------|-------|---------|
+    | 1.   | Account Name (Required) | Input the account name to access the Azure Datalake Storage. |
+    | 2.   | Access Key (Required)  | Input the access key provided for secure access.         |
+
+=== "Service Principal"
+
+    | REF | FIELDS | ACTIONS |
+    |------|-------|---------|
+    | 1.   | Client ID (Required) | Enter the **Application (Client) ID** from your Microsoft Entra ID app registration. |
+    | 2.   | Client Secret (Required) | Enter the **Client Secret** value generated in your app registration. |
+    | 3.   | Tenant ID (Required) | Enter the **Directory (Tenant) ID** from your Microsoft Entra ID app registration. |
+
+    !!! note
+        When using Service Principal for enrichment, ensure the service principal has the **Storage Blob Data Contributor** role (not just Reader) to allow write operations.
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
@@ -234,32 +294,53 @@ This section provides sample payloads for creating the Azure Datalake Storage da
 
 **Endpoint:** ```/api/datastores (post)```
 
-=== "Create a Source Datastore with a new Connection"
-    ``` json
-    {  
-        "name": "your\_datastore\_name",  
-        "teams": \["Public"\],  
-        "trigger_catalog": true,  
-        "root_path": "/azure\_root\_path",  
-        "enrich_only": false,  
-        "connection": {  
-            "name": "your\_connection\_name",  
-            "type": "abfs",  
-            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
-            "access_key": "azure\_account\_name",  
-            "secret_key": "azure\_access\_key" 
-        }  
+=== "Shared Key - New Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": false,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "abfs",
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",
+            "access_key": "azure_account_name",
+            "secret_key": "azure_access_key"
+        }
     }
     ```
-=== "Create a Source Datastore with an existing Connection"
-    ``` json 
-    {  
-        "name": "your\_datastore\_name",  
-        "teams": \["Public"\],  
-        "trigger_catalog": true,  
-        "root_path": "/azure\_root\_path",  
-        "enrich_only": false,  
-        "connection_id": connection-id  
+=== "Service Principal - New Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": false,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "abfs",
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",
+            "access_key": "your_client_id",
+            "secret_key": "your_client_secret",
+            "parameters": {
+                "authentication_type": "SERVICE_PRINCIPAL",
+                "tenant_id": "your_tenant_id"
+            }
+        }
+    }
+    ```
+=== "Existing Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": false,
+        "connection_id": "connection-id"
     }
     ```
 
@@ -269,32 +350,53 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 
 **Endpoint:**  ```/api/datastores (post)```
 
-=== "Create an Enrichment Datastore with a new Connection"
-    ``` json
-    {
-        "name": "your\_datastore\_name",  
-        "teams": \["Public"\],  
-        "trigger_catalog": true,  
-        "root_path": "/azure\_root\_path",  
-        "enrich_only": true,  
-        "connection": {  
-            "name": "your\_connection\_name",  
-            "type": "abfs",  
-            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",  
-            "access_key": "azure\_account\_name",  
-            "secret_key": "azure\_access\_key"  
-        }  
-    }
-    ```
-=== "Create an Enrichment Datastore with an Existing Connection"
+=== "Shared Key - New Connection"
     ```json
     {
-        "name": "your\_datastore\_name",  
-        "teams": \["Public"\],  
-        "trigger_catalog": true,  
-        "root_path": "/azure\_root\_path",  
-        "enrich_only": true,  
-        "connection_id": connection-id  
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "abfs",
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",
+            "access_key": "azure_account_name",
+            "secret_key": "azure_access_key"
+        }
+    }
+    ```
+=== "Service Principal - New Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": true,
+        "connection": {
+            "name": "your_connection_name",
+            "type": "abfs",
+            "uri": "abfs://<container>@<account_name>.dfs.core.windows.net",
+            "access_key": "your_client_id",
+            "secret_key": "your_client_secret",
+            "parameters": {
+                "authentication_type": "SERVICE_PRINCIPAL",
+                "tenant_id": "your_tenant_id"
+            }
+        }
+    }
+    ```
+=== "Existing Connection"
+    ```json
+    {
+        "name": "your_datastore_name",
+        "teams": ["Public"],
+        "trigger_catalog": true,
+        "root_path": "/azure_root_path",
+        "enrich_only": true,
+        "connection_id": "connection-id"
     }
     ```
 

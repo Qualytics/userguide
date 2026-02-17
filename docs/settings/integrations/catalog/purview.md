@@ -47,7 +47,7 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 
 ![App Registration Created](../../../assets/integrations/catalog/purview/app-registration-created.png)
 
-![App Registration Overview](../../../assets/integrations/catalog/purview/app-registration-overview.png)
+![App Registration Overview](../../../assets/integrations/catalog/purview/app-registration-overview.png){: style="height:300px"}
 
 ### Generate a Client Secret
 
@@ -66,7 +66,7 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 
 **Step 3:** Copy the **Value** immediately and store it securely.
 
-![Portal Azure](../../../assets/integrations/catalog/purview/qualytics-purview-value.png)
+![Portal Azure](../../../assets/integrations/catalog/purview/qualytics-purview-value.png){: style="height:300px"}
 
 !!! warning "Important"
     The client secret value is shown only once. Store it securely. This value is your `client_secret`.
