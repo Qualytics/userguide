@@ -66,19 +66,20 @@ Qualytics supports a range of source datastores, including but not limited to:
 | 6. | [Databricks](../add-datastores/databricks.md)|
 | 7. | [DB2](../add-datastores/db2.md)|
 | 8. | [Dremio](../add-datastores/dremio.md)|
-| 9. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md)|
-| 10. | [Hive](../add-datastores/hive.md)|
-| 11. | [MariaDB](../add-datastores/maria-db.md)|
-| 12. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)|
-| 13. | [MySQL](../add-datastores/mysql.md)|
-| 14. | [Oracle](../add-datastores/oracle.md)|
-| 15. | [PostgreSQL](../add-datastores/postgresql.md)|
-| 16. | [Presto](../add-datastores/presto.md)|
-| 17. | [Snowflake](../add-datastores/snowflake.md)|
-| 18. | [Synapse](../add-datastores/synapse.md)|
-| 19. | [Teradata](../add-datastores/teradata.md)|
-| 20. | [Timescale DB](../add-datastores/timescale-db.md)|
-| 21. | [Trino](../add-datastores/trino.md)|
+| 9. | [Fabric Analytics](../add-datastores/fabric-analytics.md)|
+| 10. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md)|
+| 11. | [Hive](../add-datastores/hive.md)|
+| 12. | [MariaDB](../add-datastores/maria-db.md)|
+| 13. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)|
+| 14. | [MySQL](../add-datastores/mysql.md)|
+| 15. | [Oracle](../add-datastores/oracle.md)|
+| 16. | [PostgreSQL](../add-datastores/postgresql.md)|
+| 17. | [Presto](../add-datastores/presto.md)|
+| 18. | [Snowflake](../add-datastores/snowflake.md)|
+| 19. | [Synapse](../add-datastores/synapse.md)|
+| 20. | [Teradata](../add-datastores/teradata.md)|
+| 21. | [Timescale DB](../add-datastores/timescale-db.md)|
+| 22. | [Trino](../add-datastores/trino.md)|
 
 ## Connection Management
 
