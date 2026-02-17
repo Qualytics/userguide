@@ -97,13 +97,13 @@ Before configuring the Fabric Analytics datastore in Qualytics, ensure the follo
 
 3. Click **+ Add people or groups**.
 
-![azure-workspace-add-people-or-group](../assets/datastores/fabric/azure-workspace-add-people-or-groups.png)
+![azure-workspace-add-people-or-groups](../assets/datastores/fabric/azure-workspace-add-people-or-groups.png)
 
 4. Search for your registered application name (e.g., `qualytics-fabric`).
 
 5. Assign the **Contributor** role (or higher).
 
-![azure-workspace-add-people-or-group](../assets/datastores/fabric/azure-add-service-principal-to-workspace.png)
+![azure-add-service-principal-to-workspace](../assets/datastores/fabric/azure-add-service-principal-to-workspace.png)
 
 6. Click **Add**.
 
@@ -167,7 +167,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/fabric/add-datastore-credentails-explain-light.png){: style="height:600px"}
+![add-datastore-credentials-explain](../assets/datastores/fabric/add-datastore-credentials-explain-light.png){: style="height:600px"}
 
 | REF. | FIELDS  | ACTIONS |
 |------|---------|---------|
