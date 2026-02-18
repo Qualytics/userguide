@@ -16,7 +16,7 @@ There are two methods for deleting checks: you can either delete individual chec
 
 **Step 2:** Locate the check that you want to delete and click the **vertical ellipsis (⋮)** and select **Delete** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Not Null"** check.
+For demonstration purposes, we have selected the **"Contains Email"** check.
 
 ![delete-btn](../assets/datastore-checks/delete-checks/delete-btn-light-67.png)
 
