@@ -6,7 +6,7 @@ You can draft archived checks individually or in bulk.
 
 **Step 1:** Navigate to the **Archived** checks section. Click the vertical ellipsis (⋮) next to the archived check you want to move to the draft state and select **"Draft"** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Not Null"** check.
+For demonstration purposes, we have selected the **"Contains Email"** check.
 
 ![draft-archive](../assets/datastore-checks/draft-archived-checks/draft-archive-light.png)
 
