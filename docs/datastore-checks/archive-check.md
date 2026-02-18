@@ -10,7 +10,7 @@ You can archive a specific check using two ways: either by directly clicking the
 
 **Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it and select **"Archive"** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Metric"** check.
+For demonstration purposes, we have selected the **"Greater Than Field"** check.
 
 ![archive-icon](../assets/datastore-checks/archive-check/archive-icon-light-30.png)
 
@@ -32,7 +32,7 @@ After clicking the **Archive** button, your check is moved to the archive, and a
 
 **Step 1:** Locate the check (whether Active or Draft) that you want to archive and click the vertical ellipsis **(⋮)** next to it and select **"Edit"** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Between"** check.
+For demonstration purposes, we have selected the **"Greater Than Field"** check.
 
 ![checks-list](../assets/datastore-checks/archive-check/checks-list-light-34.png)
 
