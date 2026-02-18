@@ -26,99 +26,92 @@ Before configuring the Fabric Analytics datastore in Qualytics, ensure the follo
 
 ### Step 1: Register an Application in Microsoft Entra ID
 
-1. Navigate to the [**Azure Portal**](https://portal.azure.com){:target="_blank"} and sign in.
+**1.** Log in to the [**Azure Portal**](https://portal.azure.com){:target="_blank"} and click on the **App registrations** (under **Microsoft Entra ID**).
 
-    ![portal-azure](../assets/integrations/catalog/purview/portal-azure.png)
+![portal-azure](../assets/datastores/fabric/portal-azure.png)
 
-2. Go to **Microsoft Entra ID** > **App registrations**.
+**2.** Click on the **+ New registration** to create and register a new application in Microsoft Entra ID.
 
-    ![app-registrations](../assets/integrations/catalog/purview/app-registrations.png)
+![new-registration](../assets/datastores/fabric/new-registration.png)
 
-3. Click **+ New registration**.
+**3.** Enter the required details:
 
-    ![new-registration](../assets/integrations/catalog/purview/new-registration.png)
+| No.| Field                       | Description                                                                |
+|-----|----------------------------|----------------------------------------------------------------------------|
+| 1. |**Name**                    | Enter a name for the application (e.g., `qualytics-fabric`).               |
+| 2. |**Supported account types** | Select **Accounts in this organizational directory only** (Single tenant). |
 
-4. Enter a **Name** for the application (e.g., `qualytics-fabric`).
+![register-app](../assets/datastores/fabric/qualytics-fabric-integration.png)
 
-5. Select the appropriate **Supported account types** (typically "Accounts in this organizational directory only").
-
-6. Click **Register**.
-    ![register-app](../assets/datastores/fabric/qualytics-fabric-integration.png)
+**4.** Click on the **Register** to create the application.
 
 ### Step 2: Retrieve the Client ID and Tenant ID
 
-1. After registration, you will be taken to the app's **Overview** page.
+**1.** After registration, you will be taken to the app's **Overview** page.
 
-    ![certificates-secrets](../assets/datastores/fabric/app-registration-overview.png){: style="height:300px"}
+![certificates-secrets](../assets/datastores/fabric/app-registration-overview.png){: style="height:300px"}
 
-2. Copy the **Application (client) ID** — this is your **Client ID**.
+**2.** Copy the **Application (client) ID** — this is your **Client ID**.
 
-3. Copy the **Directory (tenant) ID** — this is your **Tenant ID**.
+![register-app](../assets/datastores/fabric/copy-client-id.png)
 
+**3.** Copy the **Directory (tenant) ID** — this is your **Tenant ID**.
+
+![register-app](../assets/datastores/fabric/copy-tenant-id.png)
 
 ### Step 3: Create a Client Secret
 
-1. In the app registration, navigate to **Certificates & secrets**.
+**1.** In the app registration, go to **Client secrets** and click **+ New client secret**.
 
+![create-secret](../assets/datastores/fabric/qualytics-fabric-secret.png)
 
-2. Click **+ New client secret**, provide a description, select an expiration period, and click **Add**.
+**2.** After clicking **+ New client secret**, enter a description and choose an expiration period.
 
-    ![create-secret](../assets/datastores/fabric/qualytics-fabric-secret.png)
+![create-secret](../assets/datastores/fabric/description.png)
 
-    ![secret-created](../assets/datastores/fabric/qualytics-fabric-secret-created.png){: style="height:300px"}
+**3.** Copy the **Value** of the newly created secret immediately — this is your **Client Secret** (it will not be shown again).
 
-3. Copy the **Value** of the newly created secret immediately — this is your **Client Secret** (it will not be shown again).
-
+![create-secret](../assets/datastores/fabric/copy-value.png)
 
 !!! warning
     Make sure to copy the Client Secret value immediately after creation. It will not be displayed again once you navigate away from the page.
 
 ### Step 4: Enable Service Principal Access in Fabric
 
-1. Sign in to [**Microsoft Fabric**](https://app.fabric.microsoft.com){:target="_blank"} as a Fabric administrator.
+**1.** Sign in to [**Microsoft Fabric**](https://app.fabric.microsoft.com){:target="_blank"} as a Fabric administrator, go to **Settings**, and click on the **Admin portal**.
 
-2. Navigate to **Settings** (gear icon) > **Admin portal**.
-
-    ![azure-admin-portal](../assets/datastores/fabric/azure-admin-portal.png)
+![azure-admin-portal](../assets/datastores/fabric/azure-admin-portal.png)
     
-3. Under **Tenant settings**, find **"Service principals can call Fabric APIs"**.
+**2.** Under **Tenant settings**, locate **Service principals can call Fabric APIs**, enable the setting, and specify the security group containing your service principal (or allow the entire organization).
 
-    ![azure-enable-api](../assets/datastores/fabric/azure-enable-api.png)
-
-4. Enable the setting and specify the security group containing your service principal (or allow the entire organization).
+![azure-enable-api](../assets/datastores/fabric/azure-enable-api.png)
 
 ### Step 5: Grant Workspace Access to the Service Principal
 
-1. In Microsoft Fabric, navigate to your target **Workspace**.
+**1.** In **Microsoft Fabric**, open your target **Workspace** and click **Manage access**.
 
-2. Click **Manage access** (or the **...** menu > **Manage access**).
+![azure-enable-api](../assets/datastores/fabric/manage-access.png)
 
-![azure-manage-access](../assets/datastores/fabric/azure-workspace-manage-access.png)
-
-3. Click **+ Add people or groups**.
+**2.** Click **+ Add people or groups**, search for your registered application (e.g., `qualytics-fabric`), and select it.  
 
 ![azure-workspace-add-people-or-groups](../assets/datastores/fabric/azure-workspace-add-people-or-groups.png)
 
-4. Search for your registered application name (e.g., `qualytics-fabric`).
-
-5. Assign the **Contributor** role (or higher).
+**3.** Assign the **Contributor** role (or higher) and click **Add**.
 
 ![azure-add-service-principal-to-workspace](../assets/datastores/fabric/azure-add-service-principal-to-workspace.png)
 
-6. Click **Add**.
-
 ### Retrieve the SQL Analytics Endpoint
 
-1. In your Fabric workspace, open the **Lakehouse** or **Warehouse** you want to connect to.
+**1.** Open your **Lakehouse** or **Warehouse** in the Fabric workspace and copy the **SQL analytics endpoint** from the connection string area.
 
-2. Copy the **SQL analytics endpoint** from the connection string area. The format is:
-
+The endpoint format is:
     ```
     <workspace-guid>.datawarehouse.fabric.microsoft.com
     ```
 
-    <!-- Screenshot needed: Lakehouse/Warehouse > SQL analytics endpoint -->
-    ![sql-endpoint](../assets/datastores/fabric/sql-endpoint-light.png){: style="height:300px"}
+<!-- Screenshot needed: Lakehouse/Warehouse > SQL analytics endpoint -->
+
+![sql-endpoint](../assets/datastores/fabric/sql-endpoint-light.png){: style="height:300px"}
 
 !!! tip
     Refer to the [**Microsoft Fabric documentation**](https://learn.microsoft.com/en-us/fabric/data-warehouse/connectivity){:target="_blank"} for more information on connectivity and SQL analytics endpoints.
