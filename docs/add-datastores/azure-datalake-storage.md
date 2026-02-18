@@ -59,6 +59,9 @@ After completing the setup, you will have the following credentials:
 | **Client Secret** | A secret key generated for the application. |
 | **Tenant ID** | The Directory (Tenant) ID of your Azure AD tenant. |
 
+!!! warning
+    If the service principal is assigned the **ViewOnly** role, it must also be granted the **ReadAll** permission at the lakehouse level. Without this additional permission, the service principal will not have sufficient access to read data from the lakehouse.
+
 !!! tip
     For detailed step-by-step instructions on creating a service principal in the Azure Portal, refer to the [**Microsoft documentation**](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target="_blank"}.
 
