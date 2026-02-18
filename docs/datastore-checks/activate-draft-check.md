@@ -6,7 +6,7 @@ There are two ways to activate draft checks: you can activate specific checks or
 
 **Step 1:** Navigate to the **Draft** check section and click the vertical ellipsis **(⋮)** next to the draft check you want to activate, and select **Edit** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Metric"** check.
+For demonstration purposes, we have selected the **"Time Distribution Size"** check.
 
 ![checks-list](../assets/datastore-checks/activate-draft-check/checks-list-light-26.png)
 
