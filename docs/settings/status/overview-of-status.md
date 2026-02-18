@@ -18,11 +18,12 @@ The **Platform Status Section** displays the current platform version, along wit
 
 | REF. | FIELD | ACTION | EXAMPLE |
 |----- |-------|--------|---------|
-| 1 | Version | Shows the current version of your platform's core software.  | 20240808-3019c60 |
-| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services (AWS) |
+| 1 | Version | Shows the current version of your platform's core software.  | 20260231-196460 |
+| 2 | Cloud Platform | Indicates which cloud provider the platform is hosted on. | Amazon Web Services |
 | 3 | Deployment Size | Indicates the size of the deployment that the client has contracted. | Medium |
-| 4 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
-| 5 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
+| 4 | License Expiration Date | Displays the current license expiration date and status. | May 31 2026, 9:00 PM (BRT) |
+| 5 | Database | Verifies your database connection. An "OK" status means it’s connected. | Status:OK |
+| 6 | RabbitMQ | Confirms RabbitMQ (a message broker software) is running correctly with an "OK" state. | State:OK |
 
 ![summary](../../assets/health/summary-light-3.png)
 
@@ -41,23 +42,65 @@ The **Dataplane** section provides advanced information about the analytics engi
 
 | REF | FIELD | ACTION | EXAMPLE |
 |-----|-------|--------|---------|
-| 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Aug 8 2024,7:39 AM (GMT+5:30) |
+| 1 | Build Date | This shows the date and time when the Analytics Engine was built. | Feb 13 2026, 7:20 AM (IST) |
 | 2 | Engine | Shows the platform used to run and manage workloads. | Kubernetes |
-| 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 10 |
-| 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 25000 MB |
-| 5 | Implementation Version | The version of the analytics engine implementation being used.  | 2.0.0 |
-| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 3.5.1 |
-| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 3 |
-| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 50000 MB |
-| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | \[Running, parallelism \= 3, size \= 0, active \= 0, running \= 0, steals \= 0, tasks \= 0, submissions \= 0\] supporting 0 running operation with 0 queued requests |
+| 3 | Max Executors | Maximum number of executors allocated for processing tasks. | 12 |
+| 4 | Max Memory Per Executor | This shows the maximum amount of memory allocated to each executor. | 55000 MB |
+| 5 | Implementation Version | The version of the analytics engine implementation being used.  | 2.109.3-60de4a5 |
+| 6 | Spark Version | The version of Apache Spark that the Analytics Engine uses for processing. | 4.0.2 |
+| 7 | Core Per Executor | This shows the number of CPU cores assigned to each executor. | 7 |
+| 8 | Max Dataframe Size | The maximum size of dataframes that can be processed.  | 396000 MB |
+| 9 | Thread Pool State | Indicates the current state of the thread pool used for executing tasks.  | 0 running operations [] with 0 queued requests and 10 provisioned channels |
 
-![analytics-engine](../../assets/health/analytics-engine-light-5.png)
+![analytics-engine](../../assets/health/analytics-engine-light.png)
 
 ## Private Routes
 
 Users can now utilize private routes to view their IP addresses along with relevant system messages in the Analytics Engine, ensuring greater transparency and visibility into network activity.
 
 ![private-routes](../../assets/health/private-light.png)
+
+## License Management
+
+The **License section** allows administrators to monitor, renew, and update platform licensing directly from the Status page.
+
+!!! warning 
+    The License section is available only for non-SaaS (self-hosted) customers. SaaS environments will not display a License.
+
+
+### Viewing License Status
+
+The License panel displays:
+
+- Expiration date  
+
+![expiration-date](../../assets/health/expiration-date.png)
+
+- Remaining days  
+
+![remaining-days](../../assets/health/remaining-days.png)
+
+- Restriction alerts if expired  
+
+![restriction-alert](../../assets/health/restriction-alert.png)
+
+### Generate License Request
+
+If your license is nearing expiration or has already expired, you can request a renewal by clicking the **Generate License Request** button. This will generate a license request code that you can share with your Qualytics account representative to receive a renewed license key.
+
+![generate-license-request](../../assets/health/generate-license-request.png)
+
+### Apply a New License
+
+Once you receive a valid license key from your Qualytics representative, follow these steps:
+
+**Step 1:** Click on the **Update License** button to apply a new or renewed license to your system.
+
+![update-license](../../assets/health/update-license.png)
+
+A modal window will appear. Paste the provided license key into the input field and click **Submit** to apply the new license.
+
+![submit](../../assets/health/submit.png)
 
 ## Manage Status Summary
 
@@ -71,7 +114,7 @@ The **Copy Status Summary** feature lets you duplicate all data from the Health 
 
 ![copy-health](../../assets/health/copy-health-light-6.png)
 
-**Step 2:** After clicking on **Copy Status Summary**,  a success message saying **Copied.**
+**Step 2:** After clicking on **Copy Status Summary**, a success message appears saying **Copied.**
 
 ![copied](../../assets/health/copied-light-7.png)
 
@@ -95,7 +138,7 @@ The **Restart Analytics Engine** option restarts the analytics processing system
 
 ![restart](../../assets/health/restart-light-10.png)
 
-**Step 3:** After clicking on **Restart** button a success message saying **Successfully triggered Analytics Engine restart.**
+**Step 3:** After clicking on the **Restart** button, a success message appears saying **Successfully triggered Analytics Engine restart.**
 
 ![successfully-triggered](../../assets/health/successfully-triggered-light-11.png)
 
