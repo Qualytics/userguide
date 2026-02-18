@@ -65,7 +65,7 @@ Users can now utilize private routes to view their IP addresses along with relev
 The **License section** allows administrators to monitor, renew, and update platform licensing directly from the Status page.
 
 !!! warning 
-    The License section is available only for non-SaaS (self-hosted) customers. SaaS environments, including Develop, will not display a License.
+    The License section is available only for non-SaaS (self-hosted) customers. SaaS environments will not display a License.
 
 
 ### Viewing License Status
