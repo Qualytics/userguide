@@ -22,7 +22,7 @@ This window enables you to confidently evaluate and refine data quality checks b
 | **2** | **Timing** | Displays the total time taken to execute the dry run. |
 | **3** | **Sampling Limit** | Shows the number of records sampled during the dry run (default is 10K records). |
 | **4** | **Check ID and Name** | The unique identifier and name of the data quality check. This provides both a reference ID and a descriptive label indicating the rule type. |
-| **5** | **Description** | A concise explanation of the check rule being tested. For example, “PS_SUPPLYCOST is greater than PS_AVAILQTY.” |
+| **5** | **Description** | A brief explanation of the validation rule being tested (e.g., value adheres to the regular expression). |
 | **6** | **Table** | The name of the table on which the check is being applied. |
 | **7** | **Field** | The specific column or field within the table that the rule targets. |
 
@@ -34,7 +34,7 @@ Highlights any violations detected during the dry run, such as constraint breach
 
 | No. | Field | Description |
 | :---- | :---- | :---- |
-| **1** | **Violation** | Clearly states the reason for failure. This message helps users quickly understand what went wrong and why the data didn't pass the quality check. |
+| **1** | **Description** | Clearly states the reason for failure. This message helps users quickly understand what went wrong and why the data didn't pass the quality check. |
 | **2** | **Asserted Records** | Displays the total number of records evaluated in the dry run. |
 | **3** | **Anomalous Records** | Shows how many of those records violated the constraint logic. |
 
