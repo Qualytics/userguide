@@ -2,7 +2,7 @@
 
 **Step 1:** Click the vertical ellipsis (⋮) next to the check (whether Active or Draft) that you want to clone and select **"Edit"** from the dropdown menu.
 
-For demonstration purposes, we have selected the **"Between"** check.
+For demonstration purposes, we have selected the **"Matches Pattern"** check.
 
 ![clone-check](../assets/datastore-checks/clone-check/clone-check-light-78.png)
 
