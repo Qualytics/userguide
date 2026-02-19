@@ -140,7 +140,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1:** Select the **Fabric Analytics** connector from the dropdown list and add connection details such as Secrets Management, host, port, client ID, client secret, tenant ID, database, and schema.
 
-![add-datastore-credentials](../assets/datastores/fabric/add-datastore-credentials-light.png){: style="height:600px"}
+![add-datastore-credentials](../assets/datastores/fabric/add-datastore-credentials-light.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -160,7 +160,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/fabric/add-datastore-credentials-explain-light.png){: style="height:600px"}
+![add-datastore-credentials-explain](../assets/datastores/fabric/add-datastore-credentials-explain-light.png)
 
 | REF. | FIELDS  | ACTIONS |
 |------|---------|---------|
@@ -187,7 +187,7 @@ If the toggle for **Add New Connection** is turned off, then this will prompt yo
 **Step 1:** Select a **connection** to reuse existing credentials.
 
 <!-- Screenshot needed: Fabric existing connection selection -->
-![use-existing-datastore](../assets/datastores/fabric/use-existing-connection-light.png){: style="height:500px"}
+![use-existing-datastore](../assets/datastores/fabric/use-existing-connection-light.png)
 
 !!! note
     If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
@@ -248,7 +248,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
 <!-- Screenshot needed: Fabric enrichment connector configuration -->
-![select-enrichment](../assets/datastores/fabric/select-enrichment-light.png){: style="height:500px"}
+![select-enrichment](../assets/datastores/fabric/select-enrichment-light.png)
 
 !!! note
     Qualytics does not support Fabric Analytics as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
