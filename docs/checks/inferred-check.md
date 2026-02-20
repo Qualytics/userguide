@@ -69,8 +69,8 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 
 | **No.** | **Fields**             | **Description**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
-| 1       | Date of Birth          |Stores date and time values, ensuring precise representation of birth dates.     |
-| 2       | Created Date           | Holds the record’s creation date as a text value rather than a structured date format.            |
+| 1       | LAST_MODIFIED_TIMESTAMP | Stores the date and time when the record was last updated, using the **Timestamp** data type.     |
+| 2       | PS_AVAILQTY  | Stores the available quantity value using the **Integral (integer)** data type. |
 
 **4. Allow Other Fields (Checkbox)**:
 
@@ -83,7 +83,7 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 
 ![description](../assets/checks/inferred-checks/description-light.png)
 
-**6. Tags**: Tags help categorize and manage checks efficiently. The tag **"test partition scan"** in this case suggests that this check is related to a specific test or partition scan process.
+**6. Tags**: Tags help categorize and organize checks for easier filtering and management. In this example, the tags **Supply-Info, Procurement, Payments, B2B,** and **Aggregation Comparison** indicate that the check is associated with these business domains or functional categories.
 
 ![tags](../assets/checks/inferred-checks/tags-light.png)
 
