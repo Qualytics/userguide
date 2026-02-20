@@ -100,17 +100,17 @@ A popup will appear with additional details about the check.
 ![popup](../assets/datastore-checks/checks-datastore/popup-light-17.png)
 
 ### Last Asserted
-Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **Oct 17, 2023, at 2:37 AM (GMT+5:30)**.
+Last Asserted At shows the most recent time the check was run, indicating when the last validation occurred. For example, the check was last asserted on **March 28, 2025, at 10:45 PM (IST)**.
 
 ![popup](../assets/datastore-checks/checks-datastore/asserted-light-17.png)
 
 ### Scans
-Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **30 operations**.
+Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in **1,065 operations**.
 
 ![scan](../assets/datastore-checks/checks-datastore/scan-light-17.png)
 
 ### Updated At
-Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Sep 9, 2024, at 3:18 PM (GMT+5:30)**.
+Updated At shows the most recent time the check was modified or updated. It helps you see when any changes were made to the check’s configuration or settings. For example, the check was last updated on **Feb 2, 2026, at 2:19 PM (IST)**.
 
 ![update](../assets/datastore-checks/checks-datastore/update-light-17.png)
 
@@ -120,9 +120,14 @@ Last Editor indicates who most recently made changes to the check. It helps trac
 ![editor](../assets/datastore-checks/checks-datastore/editor-light-17.png)
 
 ### Created At
-Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Oct 17, 2023, at 2:19 PM (GMT+5:30)**.
+Created At shows when the check was first made. It helps you know how long the check has been in use. This is useful for tracking its history. For example, the check was created on **Jul 18, 2024, at 8:24 PM (IST)**.
 
 ![created](../assets/datastore-checks/checks-datastore/created-light-17.png)
+
+### Created By
+Created By shows the name of the user who originally created the check. It helps identify the owner or initial author of the check configuration. This is useful for tracking ownership and reaching out for clarification if needed.
+
+![created-by](../assets/datastore-checks/checks-datastore/created-by-17.png)
 
 ## Check Details
 
@@ -147,7 +152,7 @@ The Summary section shows that a data quality check is applied to a field and is
 
 ![check](../assets/datastore-checks/checks-datastore/check-light.png)
 
-**2. Type** : This check is **Authored**, meaning it was manually created by the users.
+**2. Type** : This check is **Inferred**, meaning it was manually created by the users.
 
 ![type](../assets/datastore-checks/checks-datastore/type-light.png)
 
@@ -169,11 +174,11 @@ Click on the info icon to view the last asserted details.
 
 ![details](../assets/datastore-checks/checks-datastore/details-light.png)
 
-A popup will appear with **Scans** details. Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in 19 operations.
+A popup will appear with **Scans** details. Scans show how many times the check has been used in different operations. It helps you track how often the check has been applied. For example, the check was used in 97 operations.
 
 ![scan-details](../assets/datastore-checks/checks-datastore/scan-details-light.png)
 
-**4. Weight** : Indicates the importance or priority of this check – the weight is **13**.
+**4. Weight** : Indicates the importance or priority of this check – the weight is **12**.
 
 ![weight](../assets/datastore-checks/checks-datastore/weight-light.png)
 
@@ -219,7 +224,7 @@ Users can hover over any date in the timeline. It provides a comprehensive view 
 
 ![hover](../assets/datastore-checks/checks-datastore/hover-light-98.png)
 
-Additionally, clicking the Latest Assertion Scan button (e.g., #48151) will navigate users directly to the **Scan Results** page for that specific assertion.
+Additionally, clicking the Latest Assertion Scan button (e.g., #75) will navigate users directly to the **Scan Results** page for that specific assertion.
 
 ![scan-results](../assets/datastore-checks/checks-datastore/scan-results-light.png)
 
@@ -257,9 +262,9 @@ The Observability section helps you monitor how your check assertion metrics cha
 
 Once a timeframe is selected, the Assertion Over Time chart below will automatically adjust to reflect assertion activity within the chosen window.
 
-### Properties Section
+### Definition Section
 
-The Properties section explains where this check is applied. In this case, the check is applied to a table called **supplier**, specifically to the **s_comment** field of type **String**. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
+The Definition section explains where this check is applied. In this case, the check is applied to a table called **FACT_COMMITMENT**, specifically to the **CUSTOMER_ID** field of type **Fractional**. There is no filter added, so the check is applied to all rows in the table. This helps maintain clean and trustworthy data, especially when phone numbers must be unique per customer.
 
 ![properties](../assets/datastore-checks/checks-datastore/properties-light-98.png)
 
@@ -277,7 +282,7 @@ A right side panel will open with the historical configuration of the check.
 
 ![right-panel](../assets/datastore-checks/checks-datastore/right-panel-light.png)
 
-The **Version At** field displays the exact date and time when that version of the check was created. For example, **July 8, 2025, at 5:42 AM (GMT+5:30)** indicates when the configuration shown was active in the system.
+The **Version At** field displays the exact date and time when that version of the check was created. For example, **Feb 18, 2026, at 4:25 AM (IST)** indicates when the configuration shown was active in the system.
 
 ![version](../assets/datastore-checks/checks-datastore/version-light.png)
 
