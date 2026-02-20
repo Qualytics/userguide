@@ -2,6 +2,62 @@
 
 ## Release Notes
 
+### 2026.2.20 { id=2026.2.20 }
+
+#### Feature Enhancements
+
+- Introduced support for Complex Datatypes for DFS.
+    - Profiling and quality checks now support Array, Struct, and MapType field types, expanding coverage to nested and multi-valued data structures.
+    - Array fields are profiled with element-level context, allowing quality checks to validate each element individually using supported rule types such as Expected Values, Matches Pattern, and Min/Max Length.
+    - Struct fields are automatically flattened into individual scalar columns during profiling, enabling full data quality rule inference and monitoring on nested data.
+    - Flattening supports recursive traversal up to a configurable depth, with path-based naming conventions for generated columns.
+    - Quality check rule selection adapts to complex field types, showing applicable rules based on whether the check targets the array or its individual elements.
+    - Field tree views and profile pages display nested field hierarchies with updated iconography for clear identification of complex field types.
+    - Source record tables and container previews display raw complex values, allowing users to inspect nested and array data directly during anomaly investigation.
+
+- Introduced MCP-powered AI assistant with built-in chat interface and Bring Your Own Key LLM support.
+    - Added an interactive chat interface directly in the platform, enabling users to perform data quality tasks through natural language conversations with AI-powered assistance.
+    - Users can configure their preferred LLM provider and API key under Settings, with support for OpenAI, Anthropic, Google, AWS Bedrock, Cohere, Groq, Mistral, and Hugging Face models.
+    - The assistant leverages MCP tools to explore datastores, validate queries, create computed assets, manage quality checks, investigate anomalies, and analyze quality scores within a guided workflow.
+    - Chat responses include real-time tool step progress indicators, displaying each action the assistant performs with expandable input and output details.
+    - Suggested prompts guide users toward common workflows such as building computed tables, creating quality checks, and analyzing data quality trends.
+
+- Introduced version history for containers.
+    - Users can now view a timeline of changes made to any container directly from the container overview page, displaying the editor and timestamp for each modification.
+    - Computed tables include a side-by-side diff visualization of query changes, making it easy to compare before and after states for troubleshooting.
+
+- Added n8n workflow integration as a flow action.
+    - Users can configure n8n webhook URLs and secrets directly on each flow action, enabling automated workflows triggered by flow executions.
+    - Supports operation-completed, anomaly, and anomaly status change triggers, sending full context payloads to n8n for downstream automation.
+
+- Added Service Principal authentication support for SQL Server datastores.
+    - Enables Azure Active Directory OAuth-based connections using tenant ID, client ID, and client secret or certificate credentials as an alternative to username and password authentication.
+
+- Enabled MCP server integration by default across all managed deployments.
+    - MCP is now active eliminating the need for manual configuration and ensuring a consistent experience across environments.
+
+#### General Fixes and Improvements
+
+- Fixed missing loading indicators on the Explore fields list and Activity page tabs.
+
+- Corrected container creation returning a generic server error instead of a proper conflict response when a container with the same name already existed in the datastore.
+
+- Resolved incremental ID timezone parsing issue that applied local timezone instead of UTC, causing inaccurate freshness metrics when incremental filtering was enabled.
+
+- Corrected data catalog sync summary to only count assets that were successfully synced, preventing misleading totals when individual asset syncs failed.
+
+- Fixed quality check API updates not persisting referenced fields when expressions were modified, ensuring field associations stay consistent with the check expression.
+
+- Resolved deep link URLs being lost during SSO authentication, ensuring users are redirected to the intended resource after login.
+
+- Enhanced ticket creation through flows to use the anomaly description as the ticket description, providing richer context for ServiceNow and Jira incidents.
+
+- Improved Insights data reliability with a force refresh option, allowing users to manually trigger on-demand data updates for the latest quality metrics.
+
+- Enhanced Observability tooltips with a day-over-day change indicator, displaying row count differences from the previous day for faster trend analysis.
+
+- General Fixes and Improvements.
+
 ### 2026.2.13 { id=2026.2.13 }
 
 #### Feature Enhancements
