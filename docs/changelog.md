@@ -33,9 +33,6 @@
 - Added Service Principal authentication support for SQL Server datastores.
     - Enables Azure Active Directory OAuth-based connections using tenant ID, client ID, and client secret or certificate credentials as an alternative to username and password authentication.
 
-- Enabled MCP server integration by default across all managed deployments.
-    - MCP is now active eliminating the need for manual configuration and ensuring a consistent experience across environments.
-
 #### General Fixes and Improvements
 
 - Fixed missing loading indicators on the Explore fields list and Activity page tabs.
