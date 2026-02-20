@@ -7,7 +7,7 @@
 #### Feature Enhancements
 
 - Introduced support for Complex Datatypes for DFS.
-    - Profiling and quality checks now support Array, Struct, and MapType field types, expanding coverage to nested and multi-valued data structures.
+    - Profiling and quality checks now support Array and Struct field types, expanding coverage to nested and multi-valued data structures.
     - Array fields are profiled with element-level context, allowing quality checks to validate each element individually using supported rule types such as Expected Values, Matches Pattern, and Min/Max Length.
     - Struct fields are automatically flattened into individual scalar columns during profiling, enabling full data quality rule inference and monitoring on nested data.
     - Flattening supports recursive traversal up to a configurable depth, with path-based naming conventions for generated columns.
@@ -196,3 +196,4 @@
 - Resolved field exclusion behavior to properly skip problematic columns during initial data loading in SQL Server datastores.
 
 - General Fixes and Improvements.
+
