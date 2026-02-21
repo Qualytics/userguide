@@ -2,7 +2,7 @@
 
 ## Release Notes
 
-### 2026.2.20 { id=2026.2.20 }
+### 2026.2.21 { id=2026.2.21 }
 
 #### Feature Enhancements
 
@@ -196,4 +196,5 @@
 - Resolved field exclusion behavior to properly skip problematic columns during initial data loading in SQL Server datastores.
 
 - General Fixes and Improvements.
+
 
