@@ -34,3 +34,9 @@ Volumetric measurement allows users to track the size of data stored within the 
 The **Anomalies** section helps users track any unusual data patterns or issues within the computed tables. It shows a visual representation of when anomalies occurred over a specific time period, making it easy to spot unusual activity. This allows users to quickly identify when something might have gone wrong and take action to fix it, ensuring the data stays accurate and reliable.
 
 ![anomalies](../assets/container/container-attributes/anomalies-light.png)
+
+### History
+
+The History section displays a detailed, chronological log of all configuration changes. It provides complete visibility into what was modified, who made the update, and when the action occurred.
+
+![history](../assets/container/container-attributes/history.png)
