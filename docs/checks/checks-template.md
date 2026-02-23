@@ -235,9 +235,9 @@ The Definition section displays the configuration details of a check template. I
 
 ![definition-fields](../assets/checks/add-check-template/definition-fields.png)
 
-#### Activity
+#### History
 
-The Activity section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
+The History section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
 
 ![activity](../assets/checks/add-check-template/activity.png)
 
