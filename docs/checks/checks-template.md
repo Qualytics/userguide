@@ -167,7 +167,7 @@ This description clarifies that the specified field must be present in a particu
 
 ### Tags
 
-Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality"**, **"financial reports"**, or **"critical checks"**.
+Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"Analytics"**, **"CDE"**, or **"Demo"**.
 
 ![tag](../assets/checks/add-check-template/tag.png)
 
