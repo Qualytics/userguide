@@ -58,12 +58,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 |------|------------|-----------|
 | 1.  | Host (Required)  | Get **Hostname** from your Microsoft SQL Server account and add it to this field.|
 | 2.  | Port (Optional)   | Specify the **Port** number.                                                                                        |
-| 3.  | User (Required)            | Enter the **User** to connect.                                                                                   |
-| 4.  | Password (Required)        | Enter the **password** to connect to the database.                                                                   |
-| 5. | Database (Required)        | Specify the database name.                                                                                        |
-| 6. | Schema (Required)          | Define the schema within the database that should be used.                                                         |
-| 7. | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
-| 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 3.  | Authentication (Required) | Select the authentication type from the dropdown and provide the required credentials: <br><br> **If Username/Password is selected:** <br> • Enter the **Username** <br> • Enter the **Password** <br><br> **If Service Principal is selected:** <br> • Enter the **Client ID** (Application ID) <br> • Enter the **Client Secret** <br> • Enter the **Tenant ID** |
+| 4. | Database (Required)        | Specify the database name.                                                                                        |
+| 5. | Schema (Required)          | Define the schema within the database that should be used.                                                         |
+| 6. | Teams (Required)           | Select one or more teams from the dropdown to associate with this source datastore.                                |
+| 7. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -133,41 +132,11 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 ![modal-window](../assets/datastores/microsoft-sql-server/add-enrichment-detail-light.png)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
-
-!!! note
-    Once the **HashiCorp Vault** is set up, use the ${key} format in Connection form to reference a Vault secret.
-
-| REF | FIELDS               | ACTIONS                                                                 |
-|-----|----------------------|-------------------------------------------------------------------------|
-| 1. | Login URL            | Enter the URL used to authenticate with HashiCorp Vault.                |
-| 2. | Credentials Payload  | Input a valid JSON containing credentials for Vault authentication.     |
-| 3. | Token JSONPath       | Specify the JSONPath to retrieve the client authentication token from the response (e.g., $.auth.client_token). |
-| 4. | Secret URL           | Enter the URL where the secret is stored in Vault.                      |
-| 5. | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
-| 6. | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
-
-![secret-management](../assets/datastores/microsoft-sql-server/secret-management-light.png)
-
-**Step 3:** The configuration form, requesting credential details after selecting the **enrichment datastore** connector.
-
-![enrichment-datastore-explain](../assets/datastores/microsoft-sql-server/enrichment-datastore-explains-light.png)
-
-| REF. | FIELDS             | ACTIONS                                                                                               |
-|------|--------------------|-------------------------------------------------------------------------------------------------------|
-| 1.  | Host (Required)    | Get Hostname from your Microsoft SQL Server account and add it to this field.                      |
-| 2.  | Port (Optional)    | Specify the Port number.                                                                             |
-| 3.  | User (Required)    | Enter the User to connect.                                                                       |
-| 4.  | Password (Required)| Enter the Password to connect to the database.                                                       |
-| 5.  | Database (Required)| Specify the database name.                                                                             |
-| 6.  | Schema (Required)  | Define the schema within the database that should be used.                                             |
-| 7.  | Teams (Required)   | Select one or more teams from the dropdown to associate with this datastore.                           |
-
-**Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified. 
+**Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified. 
 
 ![test-connection-for-enrichment-datastore](../assets/datastores/microsoft-sql-server/test-connection-for-enrichment-datastore-light.png)
 
-**Step 5:** Click on the **Finish** button to complete the configuration process. 
+**Step 4:** Click on the **Finish** button to complete the configuration process. 
 
 ![finish-configuration](../assets/datastores/microsoft-sql-server/finish-configuration-light.png)
 
