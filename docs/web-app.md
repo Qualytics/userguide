@@ -182,6 +182,12 @@ Qualytics allows users to set up flows, enabling them to create pipelines by cha
 
 ![notification-nav](assets/dashboard/flows-light.png)
 
+### Agent-Q (AI Assistant)
+
+Agent-Q is Qualytics’ built-in AI assistant powered by the Model Context Protocol (MCP). It enables users to manage data quality workflows through natural language conversations directly within the platform. Agent-Q can explore datastores, validate queries, create computed assets, manage quality checks, and investigate anomalies. It provides real-time visibility into each action performed, making complex data quality tasks faster and easier to execute.
+
+![agent-q](assets/dashboard/agent-q.png)
+
 ### Global Settings
 
 Manage global configurations with the following options:
