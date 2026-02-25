@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 ## Global Search
 
-The Global Search feature in Qualytics is designed to streamline the process of finding crucial assets such as Datastores, Containers, and Fields. This enhancement provides quick and precise search results, significantly improving navigation and user interaction. By entering keywords in the search bar located at the top of the dashboard, users can efficiently locate specific data elements, facilitating better data management and access. This functionality is especially useful for large datasets, ensuring users can swiftly find the information they need without navigating through multiple layers of the interface.
+The **Global Search (Command Palette)** in Qualytics is a single, easy-to-use tool that helps you quickly find and manage everything in the platform. You can open it from the top search bar or by pressing **Ctrl + K**. It lets you instantly search for datastores, containers, and fields without clicking through multiple pages. You can also create templates, flows, teams, service users, and tokens directly from the same place. With built-in shortcuts to move between sections like Explore, Library, Tags, Flows, and Settings, it saves time and makes working in large environments much faster and simpler.
 
 !!! tip
     Press the shortcut key: Ctrl+K for quick access to Global Search.
@@ -18,6 +18,7 @@ The Global Search feature in Qualytics is designed to streamline the process of 
 ## In-App Notifications
 
 In Qualytics, notifications keep users updated on flow executions in real time. When a flow is triggered, users receive alerts with details like the flow name, status (success or failure), completion time, and actions performed.
+
 Clicking on a notification provides more details, including any detected anomalies. These notifications help users monitor workflows efficiently and respond quickly to important updates.
 
 ![nav-notification](assets/dashboard/nav-notification-light.png)
@@ -143,7 +144,7 @@ Lists all the enrichment datastores connected to Qualytics in the left sidebar. 
 
 The Explore section in Qualytics enables effective data management and analysis through several key sections:
 
-- **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can also export the insight reports in PDF format.  
+- **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can export the insight reports in PDF format.  
 
 - **Activity**: Provides a detailed view of operations (catalog, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
 
@@ -181,6 +182,12 @@ Tags help users organize and prioritize data assets by categorizing them. They c
 Qualytics allows users to set up flows, enabling them to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, providing a flexible and efficient way to automate processes. These actions can include notifications or operations, allowing users to notify various channels or execute tasks based on specific operations.
 
 ![notification-nav](assets/dashboard/flows-light.png)
+
+### Agent-Q (AI Assistant)
+
+Agent-Q is Qualytics’ built-in AI assistant powered by the Model Context Protocol (MCP). It enables users to manage data quality workflows through natural language conversations directly within the platform. Agent-Q can explore datastores, validate queries, create computed assets, manage quality checks, and investigate anomalies. It provides real-time visibility into each action performed, making complex data quality tasks faster and easier to execute.
+
+![agent-q](assets/dashboard/agent-q.png)
 
 ### Global Settings
 
