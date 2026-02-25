@@ -1,4 +1,4 @@
-# Agent Q Quick Start
+# Agent Q Quickstart
 
 Agent Q is the AI assistant powered by MCP (Model Context Protocol). It allows you to interact with your data using natural language directly inside the platform. Instead of navigating multiple screens, you can simply ask questions or request actions in chat.
 
@@ -91,10 +91,10 @@ You can ask things like:
 
 Agent Q will:
 
-- Understand your request  
-- Execute the required steps using MCP tools  
-- Show real-time progress indicators  
-- Display detailed results  
+- Understand your request
+- Execute the required steps using MCP tools
+- Show real-time progress indicators
+- Display detailed results
 - Allow you to expand inputs and outputs for transparency  
 
 You can continue the conversation to refine results or ask follow-up questions.
@@ -103,11 +103,11 @@ You can continue the conversation to refine results or ask follow-up questions.
 
 Agent Q can assist with:
 
-- Exploring connected datastores  
-- Validating SQL queries  
-- Creating computed tables  
-- Building and managing quality checks  
-- Investigating anomalies  
+- Exploring connected datastores
+- Validating SQL queries
+- Creating computed tables
+- Building and managing quality checks
+- Investigating anomalies
 - Analyzing quality scores and trends  
 
 Each response shows the actions taken, so you can clearly see how the result was generated.

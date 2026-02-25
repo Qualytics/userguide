@@ -316,7 +316,7 @@ nav:
         - AI & Agents:
           - MCP: settings/integrations/ai/mcp.md
           - Agentic API: settings/integrations/ai/agentic.md
-          - MCP Quick Start: settings/integrations/ai/mcp-quickstart.md
+          - MCP Quickstart: settings/integrations/ai/mcp-quickstart.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
