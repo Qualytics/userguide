@@ -10,11 +10,11 @@ Let's get started 🚀
 
 ![datastore](../assets/checks/inferred-checks/datastore-light.png)
 
-**Step 2:** Click on the **"Checks"** from the Navigation Tab.
+**Step 2:** Click on the **"Checks"** tab from the Navigation Tab.
 
 ![checks](../assets/checks/inferred-checks/checks-light.png)
 
-**Step 3:** In the top-right corner, click on the "**Run**" button, then select "**Profile**" from the dropdown menu. This action will initiate the profiling process that generates inferred checks.
+**Step 3:** In the top-right corner, click on the **"Run"** button, then select "**Profile**" from the dropdown menu. This action will initiate the profiling process that generates inferred checks.
 
 ![run](../assets/checks/inferred-checks/run-light.png)
 
@@ -69,8 +69,8 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 
 | **No.** | **Fields**             | **Description**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
-| 1       | Date of Birth          |Stores date and time values, ensuring precise representation of birth dates.     |
-| 2       | Created Date           | Holds the record’s creation date as a text value rather than a structured date format.            |
+| 1       | LAST_MODIFIED_TIMESTAMP | Stores the date and time when the record was last updated, using the **Timestamp** data type.     |
+| 2       | PS_AVAILQTY  | Stores the available quantity value using the **Integral (integer)** data type. |
 
 **4. Allow Other Fields (Checkbox)**:
 
@@ -83,7 +83,7 @@ For demonstration purposes, the applied rule type is **Expected Schema**.
 
 ![description](../assets/checks/inferred-checks/description-light.png)
 
-**6. Tags**: Tags help categorize and manage checks efficiently. The tag **"test partition scan"** in this case suggests that this check is related to a specific test or partition scan process.
+**6. Tags**: Tags help categorize and organize checks for easier filtering and management. In this example, the tags **Supply-Info, Procurement, Payments, B2B,** and **Aggregation Comparison** indicate that the check is associated with these business domains or functional categories.
 
 ![tags](../assets/checks/inferred-checks/tags-light.png)
 
@@ -98,7 +98,7 @@ Enter the desired key-value pairs. After entering the necessary metadata, click 
 !!! note
     The **Target** field is non-editable. It automatically reflects the selected dataset and cannot be modified manually.
 
-**Step 4**: After completing all the check details, click on the **"Validate"** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
+**Step 4**: After completing all the check details, click the **"Validate"** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
 
 ![validate-button](../assets/checks/inferred-checks/validate-button-light.png)
 
