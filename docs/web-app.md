@@ -18,6 +18,7 @@ The Global Search feature in Qualytics is designed to streamline the process of 
 ## In-App Notifications
 
 In Qualytics, notifications keep users updated on flow executions in real time. When a flow is triggered, users receive alerts with details like the flow name, status (success or failure), completion time, and actions performed.
+
 Clicking on a notification provides more details, including any detected anomalies. These notifications help users monitor workflows efficiently and respond quickly to important updates.
 
 ![nav-notification](assets/dashboard/nav-notification-light.png)
@@ -143,7 +144,7 @@ Lists all the enrichment datastores connected to Qualytics in the left sidebar. 
 
 The Explore section in Qualytics enables effective data management and analysis through several key sections:
 
-- **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can also export the insight reports in PDF format.  
+- **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can export the insight reports in PDF format.  
 
 - **Activity**: Provides a detailed view of operations (catalog, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
 
