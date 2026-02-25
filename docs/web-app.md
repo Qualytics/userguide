@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 ## Global Search
 
-The Global Search feature in Qualytics is designed to streamline the process of finding crucial assets such as Datastores, Containers, and Fields. This enhancement provides quick and precise search results, significantly improving navigation and user interaction. By entering keywords in the search bar located at the top of the dashboard, users can efficiently locate specific data elements, facilitating better data management and access. This functionality is especially useful for large datasets, ensuring users can swiftly find the information they need without navigating through multiple layers of the interface.
+The **Global Search (Command Palette)** in Qualytics is a single, easy-to-use tool that helps you quickly find and manage everything in the platform. You can open it from the top search bar or by pressing **Ctrl + K**. It lets you instantly search for datastores, containers, and fields without clicking through multiple pages. You can also create templates, flows, teams, service users, and tokens directly from the same place. With built-in shortcuts to move between sections like Explore, Library, Tags, Flows, and Settings, it saves time and makes working in large environments much faster and simpler.
 
 !!! tip
     Press the shortcut key: Ctrl+K for quick access to Global Search.
