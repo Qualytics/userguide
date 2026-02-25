@@ -72,7 +72,7 @@ A data team wants to ensure that **daily order counts are never zero** for each 
 country_code = each('BRA', 'USA', 'ESP', 'CHN')
 ```
 
-When creating checks from this template, Qualytics automatically generates **four separate checks** one per country—each validating order data independently.
+When creating checks from this template, Qualytics automatically generates **four separate checks**—one per country—each validating order data independently.
 
 **Behavior:**
 
@@ -167,7 +167,7 @@ This description clarifies that the specified field must be present in a particu
 
 ### Tags
 
-Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"data quality"**, **"financial reports"**, or **"critical checks"**.
+Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"Analytics"**, **"CDE"**, or **"Demo"**.
 
 ![tag](../assets/checks/add-check-template/tag.png)
 
@@ -230,14 +230,14 @@ The Definition section displays the configuration details of a check template. I
 | REF. | Field | Description |
 | :---- | :---- | :---- |
 | 1 | Target | Defines the filter condition applied to the dataset. If no filter is specified, the check template applies to all data in the target scope.|
-| 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count checks**: Shows "Number of Fields". </li><li> **Metric checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
+| 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count Checks**: Shows "Number of Fields". </li><li> **Metric Checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
 | 3 | Metadata | Displays any custom metadata properties linked to the template. If none are defined, this section remains empty. |
 
 ![definition-fields](../assets/checks/add-check-template/definition-fields.png)
 
-#### Activity
+#### History
 
-The Activity section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
+The History section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
 
 ![activity](../assets/checks/add-check-template/activity.png)
 
