@@ -10,11 +10,11 @@ Let's get started 🚀
 
 ![datastore](../assets/checks/inferred-checks/datastore-light.png)
 
-**Step 2:** Click on the **"Checks"** from the Navigation Tab.
+**Step 2:** Click on the **"Checks"** tab from the Navigation Tab.
 
 ![checks](../assets/checks/inferred-checks/checks-light.png)
 
-**Step 3:** In the top-right corner, click on the "**Run**" button, then select "**Profile**" from the dropdown menu. This action will initiate the profiling process that generates inferred checks.
+**Step 3:** In the top-right corner, click on the **"Run"** button, then select "**Profile**" from the dropdown menu. This action will initiate the profiling process that generates inferred checks.
 
 ![run](../assets/checks/inferred-checks/run-light.png)
 
@@ -98,7 +98,7 @@ Enter the desired key-value pairs. After entering the necessary metadata, click 
 !!! note
     The **Target** field is non-editable. It automatically reflects the selected dataset and cannot be modified manually.
 
-**Step 4**: After completing all the check details, click on the **"Validate"** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
+**Step 4**: After completing all the check details, click the **"Validate"** button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
 
 ![validate-button](../assets/checks/inferred-checks/validate-button-light.png)
 
