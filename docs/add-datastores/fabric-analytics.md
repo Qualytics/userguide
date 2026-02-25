@@ -43,7 +43,7 @@ Before configuring the Fabric Analytics datastore in Qualytics, ensure the follo
 
 ![register-app](../assets/datastores/fabric/qualytics-fabric-integration.png)
 
-**4.** Click on the **Register** to create the application.
+**4.** Click on the **Register** button to create the application.
 
 ### Step 2: Retrieve the Client ID and Tenant ID
 
@@ -108,9 +108,6 @@ The endpoint format is:
     ```
     <workspace-guid>.datawarehouse.fabric.microsoft.com
     ```
-
-<!-- Screenshot needed: Lakehouse/Warehouse > SQL analytics endpoint -->
-
 ![sql-endpoint](../assets/datastores/fabric/sql-endpoint-light.png){: style="height:300px"}
 
 !!! tip
@@ -156,7 +153,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![hashcorp-explain](../assets/datastores/fabric/hashcorp-explain-light.png)
+![hashicorp-explain](../assets/datastores/fabric/hashicorp-explain-light.png)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -186,15 +183,12 @@ If the toggle for **Add New Connection** is turned off, then this will prompt yo
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-<!-- Screenshot needed: Fabric existing connection selection -->
 ![use-existing-datastore](../assets/datastores/fabric/use-existing-connection-light.png)
 
 !!! note
     If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If the connection details are verified, a success message will be displayed.
-
-<!-- Screenshot needed: Fabric test existing connection -->
 
 ![test-existing-connection](../assets/datastores/fabric/test-source-datastore-light.png)
 !!! note
@@ -230,12 +224,10 @@ If the toggle **Add New Connection** is turned on, then this will prompt you to 
 
 **Step 1:** Click on the caret button and select Add Enrichment Datastore.
 
-<!-- Screenshot needed: Fabric add enrichment caret dropdown -->
 ![add-enrichments](../assets/datastores/fabric/add-enrichments-light.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-<!-- Screenshot needed: Fabric enrichment details modal -->
 ![add-enrichment-details](../assets/datastores/fabric/add-enrichment-details-light.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
@@ -247,7 +239,6 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
-<!-- Screenshot needed: Fabric enrichment connector configuration -->
 ![select-enrichment](../assets/datastores/fabric/select-enrichment-light.png)
 
 !!! note
@@ -255,19 +246,16 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-<!-- Screenshot needed: Fabric enrichment test connection -->
 ![test-datastore-connection](../assets/datastores/fabric/test-connection-for-enrichment-datastore-light.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process.
 
-<!-- Screenshot needed: Fabric enrichment finish button -->
 ![finish-configuration](../assets/datastores/fabric/finish-configuration-light.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-<!-- Screenshot needed: Fabric source datastore details page -->
 ![data-operation-page](../assets/datastores/fabric/data-operation-page-light.png)
 
 ### Option II: Use an Existing Connection
@@ -276,7 +264,6 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
-<!-- Screenshot needed: Fabric use enrichment datastore option -->
 ![use-enrichment](../assets/datastores/fabric/use-enrichment-light.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
@@ -284,7 +271,6 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 !!! note
     Qualytics does not support Fabric Analytics as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
-<!-- Screenshot needed: Fabric use existing enrichment datastore -->
 ![use-enrichment-datastore](../assets/datastores/fabric/use-enrichment-datastore-light.png)
 
 | REF. | FIELDS | ACTIONS  |
@@ -299,19 +285,16 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 -   **Database:** Refers to the specific database within the enrichment datastore environment where the data is stored.
 -   **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-<!-- Screenshot needed: Fabric selected enrichment datastore details -->
 ![select-enrichment-datastore](../assets/datastores/fabric/select-enrichment-datastore-light.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-<!-- Screenshot needed: Fabric click finish for existing enrichment -->
 ![click-finish-datastore](../assets/datastores/fabric/click-finish-datastore-light.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your data has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-<!-- Screenshot needed: Fabric source datastore details page (after enrichment) -->
 ![data-operation-page](../assets/datastores/fabric/data-operation-page-light.png)
 
 ## API Payload Examples
