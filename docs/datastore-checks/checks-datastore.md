@@ -10,7 +10,7 @@ Let's get started 🚀
 
 ![datastore](../assets/datastore-checks/checks-datastore/datastore-light-1.png)
 
-**Step 2:** Click on the **"Checks"** from the Navigation Tab.
+**Step 2:** Click on the **"Checks"** tab from the Navigation Tab.
 
 ![checks](../assets/datastore-checks/checks-datastore/checks-light-2.png)
 
@@ -20,7 +20,7 @@ You can categorize your checks based on their status, such as Active, Draft, Arc
 
 ### All
 
-By selecting **All Checks**, you can view a comprehensive list of all the checks in the datastore, including both **active** and **draft** checks, allowing you to focus on the checks that are currently being managed or are in progress. However, archived checks are not displayed in this.  
+By selecting **All Checks**, you can view a comprehensive list of all the checks in the datastore, including both **active** and **draft** checks, allowing you to focus on the checks that are currently being managed or are in progress. However, archived checks are not displayed in this view.  
 
 ![all](../assets/datastore-checks/checks-datastore/all-light-3.png)
 
@@ -152,7 +152,7 @@ The Summary section shows that a data quality check is applied to a field and is
 
 ![check](../assets/datastore-checks/checks-datastore/check-light.png)
 
-**2. Type** : This check is **Inferred**, meaning it was manually created by the users.
+**2. Type** : This check is **Inferred**, meaning it was automatically created by the system based on data profiling.
 
 ![type](../assets/datastore-checks/checks-datastore/type-light.png)
 
