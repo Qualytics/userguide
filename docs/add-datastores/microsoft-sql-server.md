@@ -16,7 +16,7 @@ A source datastore is a storage location used to connect to and access data from
 
 ![add-datastore](../assets/datastores/microsoft-sql-server/add-datastore-light.png)
 
-**Step 2:** A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
+**Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
 ![select-a-connector](../assets/datastores/microsoft-sql-server/select-a-connector-light.png)
 
@@ -48,7 +48,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![hashcorp-explain](../assets/datastores/microsoft-sql-server/hashcorp-explain-light.png)
+![hashicorp-explain](../assets/datastores/microsoft-sql-server/hashicorp-explain-light.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -99,7 +99,7 @@ Once you have successfully tested and verified your source datastore connection,
 
 ![next-button-for-enrichment](../assets/datastores/microsoft-sql-server/next-button-for-enrichment-light.png)
 
-**Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
+**Step 2:** A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure to add an **enrichment datastore**.
 
 ![select-enrichment-connector](../assets/datastores/microsoft-sql-server/select-enrichment-connector-light.png)
 
@@ -228,6 +228,7 @@ This section provides sample payloads for creating a Microsoft SQL Server datast
         "connection_id": connection_id
     }
     ```
+
 ### Creating an Enrichment Datastore
 
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
@@ -267,7 +268,3 @@ This section provides sample payloads for creating an enrichment datastore. Repl
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```
-
-
-
-
