@@ -27,6 +27,7 @@ The Add Computed Join form consists of:
 | 4 | **Right Reference**    | • **Datastore**: Source datastore containing the second container.<br>• **Container**: The right container to join.<br>• **Field**: The key (column) to join on.<br>• **Prefix**: A label (e.g., `right`) applied to all columns from this container. |
 | 5 | **Select Expression**  | A list of columns to include in the result. Columns are automatically prefixed (e.g., `left_name`, `right_name`) to avoid conflicts.                         |
 | 6 | **Filter Clause (WHERE)** | Additional filters applied to the join result.                                                                                                            |
+| 7 | **Group By Clause (GROUP BY)** | Specifies how the result should be grouped when using aggregate functions (e.g., `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) in the Select Expression. All non-aggregated fields in the SELECT statement must also appear in the GROUP BY clause. Must be valid Spark SQL. |
 
 ![computed-join](../assets/container/computed-join/computed-join-light.png)
 
