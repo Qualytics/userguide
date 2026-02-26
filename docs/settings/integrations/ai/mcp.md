@@ -149,6 +149,52 @@ The AI retrieves comprehensive anomaly details including the failed checks, affe
 - **Stakeholder Communication**: Generate plain-language explanations of technical issues for business audiences
 - **Remediation Planning**: Get AI-assisted suggestions for addressing data quality problems
 
+### Quality Trends & Insights
+
+Analyze data quality trends over time to understand how your quality posture is evolving:
+
+- *"How has the quality score for our orders table changed over the past month?"*
+- *"Show me the trend of anomaly volume across all datastores"*
+- *"What are the top anomaly drivers in our production database?"*
+
+The AI retrieves time-series quality metrics, operation execution insights, and trend analysis to help you identify patterns and measure improvement.
+
+**Business Use Cases:**
+
+- **Quality Reporting**: Generate quality trend reports for management and stakeholders
+- **Improvement Tracking**: Measure the impact of quality initiatives over time
+- **Proactive Monitoring**: Spot declining quality trends before they become critical
+
+### Global Search & Asset Discovery
+
+Search across your entire data landscape to find specific assets, tables, fields, or quality checks:
+
+- *"Find all tables related to customer data across all our datastores"*
+- *"Search for any containers named 'transactions'"*
+- *"What quality checks mention revenue?"*
+
+**Business Use Cases:**
+
+- **Impact Analysis**: Quickly find all assets affected by a schema change or data issue
+- **Audit Support**: Locate specific data assets during compliance reviews
+- **Cross-Team Discovery**: Find data assets managed by other teams across shared infrastructure
+
+### Operational Actions
+
+Trigger and monitor data operations, manage tags, send notifications, and create tickets through conversation:
+
+- *"Run a profile operation on the customers table"*
+- *"Tag the orders and transactions tables as 'finance-critical'"*
+- *"Send a notification to the data-engineering Slack channel about the quality issue"*
+- *"Create a Jira ticket for the null values in the merchant_id field"*
+
+**Business Use Cases:**
+
+- **Workflow Automation**: Trigger profiling and scanning operations conversationally
+- **Asset Organization**: Manage tags and metadata across your data assets
+- **Incident Response**: Create tickets and send notifications directly from quality investigations
+- **Cross-Platform Integration**: Connect quality events to your existing alerting and ticketing systems
+
 ## Client Configuration
 
 ### ChatGPT
@@ -176,7 +222,7 @@ After creating the app, ChatGPT will prompt you to authorize the connection. Whe
 
 ### Claude Desktop
 
-Add the following to your Claude Desktop configuration file:
+Add the following to your Claude Desktop configuration file. Claude Desktop supports native HTTP MCP connections:
 
 === "macOS"
     ```json
@@ -184,14 +230,11 @@ Add the following to your Claude Desktop configuration file:
     {
       "mcpServers": {
         "qualytics": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "mcp-remote",
-            "https://your-qualytics-instance.qualytics.io/api/mcp/",
-            "--header",
-            "Authorization: Bearer YOUR_API_TOKEN"
-          ]
+          "type": "http",
+          "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
+          "headers": {
+            "Authorization": "Bearer YOUR_API_TOKEN"
+          }
         }
       }
     }
@@ -203,19 +246,27 @@ Add the following to your Claude Desktop configuration file:
     {
       "mcpServers": {
         "qualytics": {
-          "command": "cmd",
-          "args": [
-            "/c",
-            "npx",
-            "mcp-remote",
-            "https://your-qualytics-instance.qualytics.io/api/mcp/",
-            "--header",
-            "Authorization: Bearer YOUR_API_TOKEN"
-          ]
+          "type": "http",
+          "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
+          "headers": {
+            "Authorization": "Bearer YOUR_API_TOKEN"
+          }
         }
       }
     }
     ```
+
+### Claude Code
+
+Use the `claude mcp add` command to register the Qualytics MCP server:
+
+```bash
+claude mcp add --transport http qualytics \
+  https://your-qualytics-instance.qualytics.io/api/mcp/ \
+  --header "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+To share the configuration with your team, add the `--scope project` flag, which stores the configuration in a `.mcp.json` file in your project directory.
 
 ### Cursor
 
@@ -233,6 +284,65 @@ Add the following to your Cursor MCP configuration:
   }
 }
 ```
+
+### VS Code (GitHub Copilot)
+
+Add the Qualytics MCP server to your VS Code workspace or user settings. Create or edit the `.vscode/mcp.json` file in your workspace:
+
+```json
+{
+  "servers": {
+    "qualytics": {
+      "type": "http",
+      "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+Once configured, Qualytics tools and resources will be available in GitHub Copilot Chat.
+
+### Windsurf
+
+Edit your Windsurf MCP configuration file at `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "qualytics": {
+      "serverUrl": "https://your-qualytics-instance.qualytics.io/api/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+You can also add MCP servers through the Windsurf Settings > Cascade > MCP Servers panel.
+
+### Amazon Q Developer
+
+Add the Qualytics MCP server to your Amazon Q Developer configuration. Edit `~/.aws/amazonq/mcp.json` for global configuration:
+
+```json
+{
+  "mcpServers": {
+    "qualytics": {
+      "type": "http",
+      "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+For workspace-scoped configuration, place the file at `.amazonq/mcp.json` in your project directory.
 
 ## Example Conversations
 

@@ -67,7 +67,7 @@ Agent Q supports the following LLM providers:
 | 22  | xAI                  |
 
 !!! note
-    You must provide your own API key for the selected provider.
+    You must provide your own API key for the selected provider. Some providers (such as Ollama and LiteLLM) require a custom Base URL to be configured. The platform dynamically retrieves the latest supported providers and models—use the configuration modal to see available options.
 
 ## How to Use Agent Q
 
@@ -95,7 +95,7 @@ Agent Q will:
 - Execute the required steps using MCP tools
 - Show real-time progress indicators
 - Display detailed results
-- Allow you to expand inputs and outputs for transparency  
+- Allow you to expand inputs and outputs for transparency
 
 You can continue the conversation to refine results or ask follow-up questions.
 
@@ -103,15 +103,40 @@ You can continue the conversation to refine results or ask follow-up questions.
 
 Agent Q can assist with:
 
-- Exploring connected datastores
-- Validating SQL queries
-- Creating computed tables
-- Building and managing quality checks
-- Investigating anomalies
-- Analyzing quality scores and trends  
+- **Exploring connected datastores** — Browse tables, schemas, and field definitions across all your data sources
+- **Global search** — Find tables, fields, and quality checks across your entire data landscape
+- **Validating SQL queries** — Check query syntax and permissions before running against production
+- **Creating computed tables, files, and joins** — Build derived datasets through natural language, including cross-datastore joins
+- **Building and managing quality checks** — Create, update, and list quality checks by describing business rules
+- **Investigating anomalies** — Get AI-generated context, impact analysis, and remediation suggestions
+- **Analyzing quality scores and trends** — Review quality metrics over time and identify patterns
+- **Managing tags** — Organize data assets by adding, removing, or replacing tags
+- **Triggering operations** — Run profiling and scanning operations conversationally
+- **Sending notifications and creating tickets** — Connect quality events to your alerting and ticketing integrations
 
 Each response shows the actions taken, so you can clearly see how the result was generated.
 
 ![response](../../../assets/integrations/mcp-quickstart/response.png)
+
+## Managing Chat Sessions
+
+Agent Q automatically saves your conversation history so you can return to previous sessions:
+
+- **Chat History Sidebar**: Access your past conversations from the sidebar. Click any session to resume where you left off.
+- **Search Sessions**: Use the search bar in the sidebar to find specific conversations by keyword.
+- **Rename Sessions**: Click the settings menu on any session to rename it for easier reference.
+- **New Chat**: Click the **New Chat** button to start a fresh conversation at any time.
+
+Long conversations are automatically summarized to maintain context while keeping performance optimal.
+
+## Additional Features
+
+### Web Search
+
+When supported by your configured LLM provider, Agent Q can search the Qualytics documentation to find answers to platform-related questions. This is automatically enabled when your provider supports it—no additional configuration is required.
+
+### Guided Workflows
+
+Agent Q includes built-in workflow guides for common tasks. When you ask for help with complex operations like trend analysis or anomaly investigation, the assistant follows a structured step-by-step approach to ensure thorough results.
 
 Agent Q helps you perform data quality tasks faster by combining natural language interaction with guided workflows.
