@@ -42,6 +42,12 @@ Use Computed Tables when you want to perform the following operations on your se
 
 ![click-add](../../assets/container/computed-tables-and-files/computed-tables/click-add-light.png)
 
+## Query Diff for Computed Tables
+
+Computed Tables now include a side-by-side query diff view in the History panel, allowing you to compare previous and updated SQL versions. This makes it easy to identify changes, troubleshoot issues, and maintain better audit visibility of query modifications.
+
+![query-diff](../../assets/container/computed-tables-and-files/computed-tables/query-diff.png)
+
 ## Limitations
 
 ### Referencing Other Computed Tables
