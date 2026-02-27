@@ -2,6 +2,58 @@
 
 ## Release Notes
 
+### 2026.2.27 { id=2026.2.27 }
+
+#### Feature Enhancements
+
+- Introduced field status management to preserve historical data when source schema changes occur.
+    - Fields removed or renamed at the source are now marked as "missing" instead of being permanently deleted, preserving all associated quality checks, anomalies, and metadata.
+    - Added merge capability for renamed fields, allowing users to transfer all dependencies — including checks and anomalies — from a missing field to its active counterpart in a single action.
+    - Field exclusion now assigns a dedicated "excluded" status to individual fields, while remaining accessible from both the field level and the container settings for pre-profile exclusion workflows.
+    - Excluded fields can be restored to active status without requiring a new profile run.
+    - Added status indicators, filtering tabs, and a dedicated status filter across field listing pages for clear visibility into active, missing, and excluded fields.
+
+- Introduced Datastore Grouping for organized sidebar navigation.
+    - Users can now create custom groups to organize datastores in the sidebar by environment, purpose, or any preferred category.
+    - Groups support custom icons and names, with a dedicated management menu for renaming and deleting groups.
+    - Datastores can be assigned to groups directly from the tree view, with grouped datastores visually organized under collapsible sections.
+    - Added group-based filtering on the datastore listing page for focused browsing across large deployments.
+    - Group icons are displayed alongside datastore identifiers in card and list views for quick visual identification.
+
+- Introduced floating chat interface for Agent Q, accessible from any page in the platform.
+    - A persistent floating action button allows users to open Agent Q without navigating away from their current workflow.
+    - The assistant automatically detects the current page context — including datastore, container, field, check, and anomaly — and injects relevant metadata into conversations for context-aware responses.
+    - Supports paste attachments for large clipboard content, enabling users to share text snippets directly in the chat.
+    - Added `Q` keyboard shortcut for quick access to the floating chat from anywhere in the application.
+    - Chat history sessions are accessible from both the floating panel and the full-page Agent Q experience.
+
+- Enhanced Agent Q with chat history management, expanded tool capabilities, and performance optimizations.
+    - Chat conversations are now persisted and accessible through a searchable sidebar, allowing users to resume previous sessions and review past interactions.
+    - Introduced five new assistant capabilities: tag management, operation execution, notification delivery, ticket creation, and integration listing — enabling broader task automation through natural language.
+    - Added per-user rate limiting and prompt injection defenses for improved security and resource protection.
+    - Added `G + C` keyboard shortcut for quick access to the Agent Q page from anywhere in the application.
+    - Optimized agent performance with singleton caching, deferred tool loading, and conversation summarization to reduce token overhead across sessions.
+
+#### General Fixes and Improvements
+
+- Corrected percentage value conversion in Volumetric check templates where min and max values for Percentage Change comparisons were sent as whole numbers instead of decimal format.
+
+- Resolved misleading warning logs during computed file profiling that incorrectly reported fields as missing from the source container when they were intentionally removed from the computed file's SELECT statement.
+
+- Resolved profile operation failures on Oracle datastores caused by undetected XMLType columns, now properly handling XML data by serializing it as readable text during profiling.
+
+- Optimized anomaly and field-profile query performance for large-scale deployments, significantly reducing load times for anomaly listings and field profile pages in datastores with high anomaly volumes.
+
+- Improved Aggregation Comparison anomaly messages to display evaluated values alongside expression names, making violation details immediately actionable without requiring manual investigation.
+
+- Reduced Agent Q token consumption through conversation compaction and deferred tool loading, lowering per-request overhead and extending effective conversation length within model context limits.
+
+- Improved database connection error messages with clearer root cause identification and actionable remediation guidance when connection pool limits are reached.
+
+- Improved authentication error handling to display clear, user-friendly messages on the login page when access is denied due to group authorization restrictions.
+
+- General Fixes and Improvements.
+
 ### 2026.2.21 { id=2026.2.21 }
 
 #### Feature Enhancements
