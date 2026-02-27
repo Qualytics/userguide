@@ -6,7 +6,7 @@
 
 **Step 2:** Select the **Container** within the chosen datastore where you want to create the computed field. This container holds the data to which the new computed field will be applied, enabling you to enhance your data analysis within that specific datastore.
 
-For demonstration purposes, we have selected the **Bank Dataset-Staging** source datastore and the **bank_transactions_.csv** container within it to create a computed field.
+For demonstration purposes, we have selected the **S3 TPCH** source datastore and the **orders/ORDERS-*.csv** container within it to create a computed field.
 
 ![container](../../assets/container/computed-fields/add-computed-fields/container-light-2.png)
 
