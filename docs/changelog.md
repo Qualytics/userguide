@@ -31,7 +31,7 @@
     - Chat conversations are now persisted and accessible through a searchable sidebar, allowing users to resume previous sessions and review past interactions.
     - Introduced five new assistant capabilities: tag management, operation execution, notification delivery, ticket creation, and integration listing — enabling broader task automation through natural language.
     - Added per-user rate limiting and prompt injection defenses for improved security and resource protection.
-    - Added `G + C` keyboard shortcut for quick access to the Agent Q page from anywhere in the application.
+    - Added `G + Q` keyboard shortcut for quick access to the Agent Q page from anywhere in the application.
     - Optimized agent performance with singleton caching, deferred tool loading, and conversation summarization to reduce token overhead across sessions.
 
 #### General Fixes and Improvements
