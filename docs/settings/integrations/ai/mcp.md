@@ -222,39 +222,18 @@ After creating the app, ChatGPT will prompt you to authorize the connection. Whe
 
 ### Claude Desktop
 
-Add the following to your Claude Desktop configuration file. Claude Desktop supports native HTTP MCP connections:
+Claude Desktop supports MCP servers as Custom Connectors. To add the Qualytics MCP server:
 
-=== "macOS"
-    ```json
-    // ~/Library/Application Support/Claude/claude_desktop_config.json
-    {
-      "mcpServers": {
-        "qualytics": {
-          "type": "http",
-          "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
-          "headers": {
-            "Authorization": "Bearer YOUR_API_TOKEN"
-          }
-        }
-      }
-    }
-    ```
+1. Open **Settings** in Claude Desktop
+2. Navigate to the **Connectors** section
+3. Click **Add Custom Connector**
+4. Configure the connector with the following details:
+      - **Name**: `Qualytics`
+      - **URL**: `https://your-qualytics-instance.qualytics.io/api/mcp/`
+      - **Authentication**: Enter your Qualytics API token
+5. Click **Save** to enable the connector
 
-=== "Windows"
-    ```json
-    // %APPDATA%\Claude\claude_desktop_config.json
-    {
-      "mcpServers": {
-        "qualytics": {
-          "type": "http",
-          "url": "https://your-qualytics-instance.qualytics.io/api/mcp/",
-          "headers": {
-            "Authorization": "Bearer YOUR_API_TOKEN"
-          }
-        }
-      }
-    }
-    ```
+Once configured, Qualytics tools will be available in your Claude Desktop conversations.
 
 ### Claude Code
 

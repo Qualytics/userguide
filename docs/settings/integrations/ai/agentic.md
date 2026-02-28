@@ -50,51 +50,15 @@ Common providers include:
 
 ### Managing LLM Configuration
 
-#### Create Configuration
+LLM configuration is managed through the Qualytics UI, just like any other integration:
 
-Set up your LLM provider credentials:
+1. Navigate to **Settings** > **Integrations** in your Qualytics instance
+2. Click **Connect** next to **LLM Configuration**
+3. Select your **Provider**, **Model**, and enter your **API Key**
+4. Optionally provide a **Base URL** if required by your provider
+5. Click **Save** to complete the configuration
 
-```bash
-curl -X POST "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "provider": "anthropic",
-    "api_key": "YOUR_LLM_API_KEY",
-    "model": "claude-sonnet-4-20250514"
-  }'
-```
-
-#### View Configuration
-
-Check your current LLM configuration:
-
-```bash
-curl -X GET "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
-```
-
-#### Update Configuration
-
-Modify your LLM settings:
-
-```bash
-curl -X PATCH "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "claude-sonnet-4-20250514"
-  }'
-```
-
-#### Delete Configuration
-
-Remove your LLM configuration:
-
-```bash
-curl -X DELETE "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
-```
+For detailed setup instructions with screenshots, see [Agent Q Quickstart — LLM Setup](./mcp-quickstart.md#before-you-start-llm-setup-required).
 
 ## Capabilities
 
