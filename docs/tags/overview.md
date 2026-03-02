@@ -134,12 +134,9 @@ Qualytics supports both **system-wide** and **user-specific** tags.
 
 ### Types of Tags
 
-| Type | Description | Editable? | Special Features |
-|:-----|:------------|:----------|:-----------------|
-| **Global** | Standard user-created tags | Yes | General purpose, affects quality scores |
-| **Entity** | Entity classification tags | Yes | Categorize by entity type |
-| **Lineage** | Hierarchical tags with parent-child relationships | Yes | Supports tree structures for lineage tracking |
-| **External** | Imported from catalog integrations (Alation, Atlan, Purview) | Read-only | Linked to source integration |
+- **Global Tags:** Created manually inside Qualytics. Editable by permitted roles and visible to all teams. They have weight modifiers and affect quality scores.
+- **External Tags:** Imported automatically from integrated catalog systems like **Atlan** or **Alation**.
+  These cannot be edited or deleted in Qualytics and remain read-only.
 
 ## Use Cases
 
