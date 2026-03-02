@@ -199,18 +199,40 @@ Trigger and monitor data operations, manage tags, send notifications, and create
 
 ### ChatGPT
 
-Under Apps, select Create app and complete the form as shown below:
+**Step 1:** Log in to your ChatGPT account and click on your **profile icon** in the bottom-left corner of the screen.
 
-![ChatGPT App](../../../assets/integrations/ai/chatgpt/mcp-app-creation.png){: style="height:600px"}
+![ChatGPT profile](../../../assets/integrations/ai/chatgpt/profile.png)
 
-Configure the fields as follows:
+**Step 2:** After clicking the profile icon, a dropdown menu will appear. Click **Settings**.
 
-- **MCP Server URL**
-  Enter your Qualytics MCP endpoint:
-  `https://<your-qualytics-instance>.qualytics.io/mcp/`
+![ChatGPT settings](../../../assets/integrations/ai/chatgpt/settings.png)
 
-- **OAuth Secret**
-  Paste your Qualytics API token.
+**Step 3:** A modal window will appear. Click **Apps** to manage and create new app connections.
+
+![ChatGPT Apps](../../../assets/integrations/ai/chatgpt/apps.png)
+
+**Step 4:** In the **Apps** section, click **Create app** to start creating a new app connection.
+
+![ChatGPT create](../../../assets/integrations/ai/chatgpt/create.png)
+
+A **New App** modal window will appear. Enter the required details:
+
+| No. | Field | Description | Example |
+|-----|-------|------------|----------|
+| 1 | **Icon** | (Optional) Upload an icon for the app (128 × 128 px, max 10 KB). | Qualytics logo (128 × 128 px) |
+| 2 | **Name** | Enter a unique name to identify this app connection. | Qualytics MCP |
+| 3 | **Description** | Provide a short summary explaining what this integration does. | Connects ChatGPT to Qualytics MCP for data quality operations. |
+| 4 | **MCP Server URL** | Enter your Qualytics MCP endpoint URL. | https://your-qualytics-instance.qualytics.io/api/mcp/ |
+| 5 | **Authentication** | Select the authentication method. | OAuth |
+| 6 | **OAuth Client ID** | Enter the OAuth client ID provided for your instance. | qualytics-client |
+| 7 | **OAuth Client Secret** | Paste your Qualytics API token. | `<Your Qualytics API Token>` |
+| 8 | **Confirmation Checkbox** | Select “I understand and want to continue” to proceed with the connection. | Checked |
+
+![ChatGPT details](../../../assets/integrations/ai/chatgpt/details.png)
+
+**Step 5:** Once all the details are filled in, click **Create** to complete the app setup.
+
+![ChatGPT create](../../../assets/integrations/ai/chatgpt/create.png)
 
 After creating the app, ChatGPT will prompt you to authorize the connection. When prompted, paste the **same Qualytics API token** again.
 
@@ -218,7 +240,6 @@ After creating the app, ChatGPT will prompt you to authorize the connection. Whe
 
 !!! note
     The OAuth Secret and the authorization prompt both require the same Qualytics API token.
-
 
 ### Claude Desktop
 
