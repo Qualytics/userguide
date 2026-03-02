@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 ## What Are Tags and Why They Matter
 
-A **Tag** is a reusable label that you can assign to Datastores, Profiles, Fields, Checks, and Anomalies.  
+A **Tag** is a reusable label that you can assign to Datastores, Profiles, Fields, Checks, and Anomalies.
 Tags bring **consistency, context, and automation** to your data workflows.
 
 ### Why We Use Tags
@@ -39,12 +39,16 @@ Inheritance ensures consistency:
 
 - If a tag named **Critical** is applied to a Datastore, it automatically applies to all its Containers, Fields, and Checks.  
 - When a Check fails, the resulting Anomaly inherits the same **Critical** tag.  
-- If you remove the **Critical** tag from the parent datastore, all child assets lose that tag.  
+- If you remove the **Critical** tag from the parent datastore, all child assets lose that tag. Removal also triggers background propagation (same delay as adding).
 - However, existing Anomalies keep the tag they inherited when they were created (no retroactive removal).
+- When tags are added or removed, container and field weights are recalculated. Quality scores are updated the next time a scan runs — tag changes do not trigger an immediate score recalculation.
 
 !!! note
-    Tag inheritance occurs only downward (from parent to child).  
+    Tag inheritance occurs only downward (from parent to child).
     Anomalies inherit tags at creation time only — subsequent tag updates do not propagate automatically.
+
+!!! info "Propagation Timing"
+    When you apply or remove a tag from a datastore or container, the change propagates to child entities in the background. This usually happens within seconds, but may take a moment under heavy load. If you don't see the tag on child assets immediately, wait a few seconds and refresh.
 
 ## Real-Life Example
 
@@ -62,6 +66,11 @@ Now your team can:
 - Trigger Flows for specific tags (e.g., auto-alert the Finance team).  
 - Generate reports grouped by classification (e.g., all PII fields).  
 
+Additionally:
+
+- You notice your datastore score is low because many tables you don't monitor are dragging it down. You apply a **Monitored (Weight: +10)** tag to the 5 tables you care about. Now those 5 tables dominate the datastore quality score, giving you an accurate picture of the data quality you're responsible for.
+- When presenting to stakeholders, you open **Explore**, filter by the **Monitored** tag, and show an aggregate quality score that reflects only your managed tables.
+
 Tags turn scattered data into a structured, actionable map of your ecosystem.
 
 ## Understanding Weight Modifier
@@ -70,28 +79,63 @@ Each tag includes a **Weight Modifier** — a numeric value between **–10** an
 
 | Range | Purpose | Example |
 |:------|:---------|:----------|
-| –10 to –1 | Low priority | Deprecated or test data |
-| 0 | Neutral | Informational or general tags |
-| +1 to +10 | High priority | Critical, PII, or Production data |
+| –10 to –1 | Lower priority, reduces influence on scores | Deprecated or test data |
+| **1 (default)** | **Neutral — default for new tags** | Informational or general tags |
+| +2 to +10 | Higher priority, increases influence on scores | Critical, PII, or Production data |
 
 ### How Weight Affects the System
 
-- **In Dashboards:** Higher-weight tags appear first in sorted lists and visualizations.  
-- **In Checks:** High-weight tags help prioritize anomaly reviews and notifications.  
-- **In Flows:** Tags can be used to trigger automated actions for higher-priority data.
+- **In Quality Scores:** Containers and fields with higher-weight tags have more influence on aggregate scores. A container with weight 11 (from a +10 tag) has 11x the impact of an untagged container on the datastore score.
+- **In Anomaly Triage:** Anomaly severity incorporates tag weights. Higher-weight anomalies appear first in sorted views, helping your team focus on what matters most.
+- **In Explore:** Filter by tag to see aggregate quality scores for just the tagged assets — useful for reporting on specific subsets of your data.
+- **In Flows:** Tags act as filters in flow trigger conditions. You can configure flows to trigger only for entities matching specific tags (e.g., alert only on "Critical" anomalies).
 
-!!! note 
-    Weight values affect prioritization and filtering, not computation or scoring.
+!!! note
+    Tag weight modifiers directly influence quality scores. Containers with higher-weight tags have more influence on the datastore's aggregate score. Fields with higher-weight tags have more influence on their container's dimension scores. Anomaly severity also incorporates tag weights, surfacing higher-weight issues first in triage views.
+
+### How Tag Weights Affect Quality Scores
+
+Tag weight modifiers determine how much each container and field contributes to aggregate quality scores.
+
+**At the datastore level:**
+
+Each container's weight in the datastore quality score formula is calculated from its tags:
+
+```
+Container weight = sum of all tag weight modifiers on that container (normalized so minimum is 1)
+```
+
+The datastore quality score is a weighted average:
+
+```
+Datastore Score = SUM(container score × container weight) / SUM(container weights)
+```
+
+**Example:** Your datastore has 50 tables. You tag 3 important tables with "Critical" (weight +10). Each gets weight ~11, while the other 47 remain at weight 1. Your 3 tagged tables now represent about 41% of the aggregate score instead of 6%.
+
+**At the container level:**
+
+Field weights work the same way — fields with higher-weight tags have more influence on the container's dimension scores (completeness, coverage, conformity, etc.).
+
+**For anomaly severity:**
+
+Anomaly weight = sum of rule type weights from failed checks + sum of tag weight modifiers. Higher-weight anomalies surface first in sorted views and triage workflows.
+
+!!! tip "Practical Tip"
+    If you're only monitoring a few tables in a large datastore and want the datastore score to reflect those tables, apply a high-weight tag to them. You can also filter by that tag in **Explore** to see an aggregate score for just those tables.
 
 ## Scope: User-Level or System-Level?
 
-Tags in Qualytics are **system-wide**, not user-specific.  
-Once created, a tag becomes available for all users who have permission to view or apply it.
+Qualytics supports both **system-wide** and **user-specific** tags.
+
+**Global Tags** are system-wide — once created, they're visible to all users with permission. They have weight modifiers and affect quality scores.
+
+**Personal Tags** are user-specific — only you can see your own personal tags. They don't affect scoring or automation, and are useful for organizing your personal workflow. Think of them as personal bookmarks.
 
 ### Types of Tags
 
-- **Global Tags:** Created manually inside Qualytics. Editable by permitted roles and visible to all teams.  
-- **External Tags:** Imported automatically from integrated catalog systems like **Atlan** or **Alation**.  
+- **Global Tags:** Created manually inside Qualytics. Editable by permitted roles and visible to all teams. They have weight modifiers and affect quality scores.
+- **External Tags:** Imported automatically from integrated catalog systems like **Atlan** or **Alation**.
   These cannot be edited or deleted in Qualytics and remain read-only.
 
 ## Use Cases
@@ -113,12 +157,12 @@ Legend:
 * **✅** → The role *can perform* the action  
 * **❌** → The role *cannot perform* the action  
 
-| **Action** | **Reporter** | **Viewer** | **Drafter** | **Author** | **Editor** |
-|:------------|:-------------|:------------|:-------------|:-------------|:-------------|
-| **Create Tag** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Edit / Delete Tag** | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Apply Existing Tag** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **View Tag** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Action** | **Reporter** | **Viewer** | **Drafter** | **Author** | **Editor** | **Manager** |
+|:------------|:-------------|:------------|:-------------|:-------------|:-------------|:-------------|
+| **View Tag** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Apply Existing Tag** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| **Create Tag** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Edit / Delete Tag** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 
 ## Tags in Flows
 
