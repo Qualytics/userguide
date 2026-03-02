@@ -1,5 +1,8 @@
 # Collibra
 
+!!! info "Beta Integration"
+    The Collibra integration is currently in **Beta**. Functionality may evolve based on feedback. If you encounter any issues, please reach out to the Qualytics support team.
+
 ## Overview
 
 The **Collibra** integration allows **Qualytics** to sync data quality metadata with Collibra, making quality context available directly within governance workflows. Data quality checks, anomalies, and related metadata are aligned with governed assets to support informed decision-making.
@@ -51,7 +54,7 @@ A modal window titled **"Add Collibra Integration"** appears. Fill in the connec
 
 ## Manual Sync
 
-After the integration is configured, you can synchronize metadata between Qualytics and Collibra.
+After the integration is configured, you can manually trigger a synchronization between Qualytics and Collibra.
 
 **Step 1:** Click the vertical ellipsis next to the Collibra integration and select **Sync** from the dropdown.
 
@@ -68,6 +71,7 @@ After the integration is configured, you can synchronize metadata between Qualyt
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | **Authentication Failed** | Invalid or expired credentials | Verify the Client ID and Client Secret are correct and the OAuth application is active in Collibra |
-| **Domain Not Found** | Insufficient permissions | Verify service account has Domain Read permission |
+| **Sync Completes but No Metadata in Collibra** | Domain filter points to domains without matching assets | Verify the selected domains contain assets that correspond to your Qualytics resources. Try selecting different domains that contain your tables and columns |
 | **Sync Failed** | Network connectivity | Verify Collibra API URL is accessible from Qualytics |
 | **Assets Not Updated** | Domain mismatch | Confirm selected domains contain the target assets |
+| **Some Datastores Not Synced** | No matching Collibra assets found for those datastores | Verify that the Collibra asset names align with the datastore's database and schema names |
