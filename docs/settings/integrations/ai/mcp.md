@@ -232,7 +232,7 @@ A **New App** modal window will appear. Enter the required details:
 
 **Step 5:** Once all the details are filled in, click **Create** to complete the app setup.
 
-![ChatGPT create](../../../assets/integrations/ai/chatgpt/create.png)
+![ChatGPT create](../../../assets/integrations/ai/chatgpt/create-btn.png)
 
 After creating the app, ChatGPT will prompt you to authorize the connection. When prompted, paste the **same Qualytics API token** again.
 
