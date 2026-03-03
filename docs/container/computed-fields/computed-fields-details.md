@@ -43,7 +43,7 @@ You can hover over the **(i)** button to view the native field properties, which
 
 #### Last Profile
 
-The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "8 months ago"), a tooltip displays the complete date and time the field was last profiled.
+The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
 ![last-profile](../../assets/container/computed-fields/computed-fields-details/last-profile-light.png)
 
