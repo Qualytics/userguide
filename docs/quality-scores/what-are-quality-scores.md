@@ -309,15 +309,9 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
 
 Beyond the eight dimensions, containers incorporate:
 
-<<<<<<< HEAD
-- **Scanning frequency**: More frequent scanning improves confidence and boosts coverage scores
-- **Profiling frequency**: Regular profiling ensures statistics remain current and boosts consistency scores
-- **Field tag weights**: Field weights are used when calculating weighted averages for container-level dimensions
-=======
 - **Scanning frequency**: More frequent scanning improves confidence and boosts coverage scores. Infrequent scanning reduces the coverage modifier; daily or more frequent scanning maximizes it. This applies when both metadata and integrity scans exist.
 - **Profiling frequency**: Regular profiling ensures statistics remain current and boosts consistency scores. Weekly or more frequent profiling gives the maximum boost. The consistency score is capped at 100 after the modifier is applied.
 - **Field tag weights**: Field weights (derived from tags) are used when calculating weighted averages for container-level dimensions. Fields with higher-weight tags have more influence on their container's dimension scores.
->>>>>>> e6f4a638 (Enhance quality scores and tag pages (#1055))
 
 ### Most Impactful Dimensions
 
