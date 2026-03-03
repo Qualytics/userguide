@@ -61,7 +61,7 @@ This provides detailed insights into the characteristics of the field, including
 
 ### Last Profile
 
-The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
+The **Last Profile** timestamp helps users understand how up-to-date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "5 hours ago"), a tooltip displays the complete date and time the field was last profiled.
 
 ![last-profiled](../assets/container/field-profile/last-profiled-light.png)
 
