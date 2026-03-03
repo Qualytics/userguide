@@ -100,12 +100,36 @@ For detailed steps, see the [**Synchronization**](atlan.md/#synchronization){tar
 
 ### Event Driven
 
-Enable automatic synchronization based on platform events:
+When **Event Driven** is enabled on a data catalog integration, Qualytics automatically pushes metadata updates to the connected catalog whenever certain events occur. This is enabled by default for all catalog integrations.
 
 ![event](../../../assets/integrations/overview/event-light.png)
 
-| Event  | Description |
+The following events trigger an automatic push:
+
+| Event | What Gets Synced |
 | :---- | :---- |
-| Run an Operation (Profile Or Scan) | Sync all target containers for the operation. |
-| Archive an Anomaly (including bulk) | Sync the container in which the anomaly was identified. |
-| Archive a Check ( including bulk) | Sync the container to which the check belongs. |
+| Quality scores are recorded (after a profile or scan completes) | The affected table is updated in the catalog with the latest scores, anomaly counts, and check counts |
+| An anomaly is deleted (including bulk deletes) | The table where the anomaly was found is updated in the catalog |
+| A quality check is deleted (including bulk deletes) | The table the check belongs to is updated in the catalog |
+| A container scan is deleted | The table associated with the scan is updated in the catalog |
+
+For each event, Qualytics pushes quality scores, active anomaly counts, active check counts, and a link back to the asset in Qualytics. The sync is scoped to the **specific table** affected by the event, not the entire datastore.
+
+!!! note
+    Event-driven sync is **push-only** (Qualytics → catalog). It does not pull tags or metadata from the catalog. To pull catalog metadata into Qualytics, use a [manual sync](#manual-sync). Only **table** containers are supported — file-based and computed containers are excluded.
+
+If multiple catalog integrations are connected, each one with Event Driven enabled receives its own independent push. When multiple events occur on the same table within a short window, they are automatically debounced to avoid redundant pushes.
+
+### Overwrite Tags
+
+The **Overwrite Tags** setting controls what happens during a **pull sync** when a tag from the data catalog has the same name as an existing Qualytics tag (global, entity, or lineage).
+
+| Setting | Behavior |
+| :---- | :---- |
+| **On** | The existing Qualytics tag is converted into an external tag managed by the data catalog integration. The tag keeps all its current asset associations (datastores, tables, columns) but its description and color are updated from the catalog. |
+| **Off** (default) | The existing Qualytics tag is left unchanged and the catalog tag is skipped. No duplicate is created. |
+
+!!! note
+    This setting only applies to **pull** operations (syncing from the data catalog into Qualytics). It does not affect push operations.
+
+After a pull sync completes, any external tags that are no longer associated with any asset are automatically cleaned up.
