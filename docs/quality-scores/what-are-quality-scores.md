@@ -255,7 +255,7 @@ Beyond the eight dimensions, containers incorporate:
 
 - **Scanning frequency**: More frequent scanning improves confidence and boosts coverage scores
 - **Profiling frequency**: Regular profiling ensures statistics remain current and boosts consistency scores
-- **Field tag weights**: Field weights are used when calculated weighted averages for container-level dimensions
+- **Field tag weights**: Field weights are used when calculating weighted averages for container-level dimensions
 
 ### Most Impactful Dimensions
 
