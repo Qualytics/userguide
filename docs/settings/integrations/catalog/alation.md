@@ -64,8 +64,8 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 | 4. | Refresh Token (Required) | Enter the refresh token required to access the Alation API. |
 | 5. | User ID (Required) | Provide the user ID associated with the generated token. |
 | 6. | Domains | Select specific domains to filter assets for synchronization. <br>- Acts as a filtering mechanism to sync specific assets <br>- Uses domain information from the data catalog (e.g. Sales ). Only assets under the selected domains will synchronize.|
-| 7. | Event Driven | If enabled, operations, archiving anomalies, and checks will activate the integration sync. |
-| 8. | Overwrite Tags | If enabled, Alation tags will override Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
+| 7. | Event Driven | If enabled, operations, archiving anomalies, and checks will activate the integration sync. For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
+| 8. | Overwrite Tags | If enabled, Alation tags will override Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
 **Step 5:** Click on the **Save** button to integrate Alation with Qualytics. 
 
