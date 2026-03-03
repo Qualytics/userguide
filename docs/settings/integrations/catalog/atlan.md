@@ -96,8 +96,8 @@ A modal window titled **Add Atlan Integration** appears.
 | 2. | Token (Required) | Provide the authentication token needed to connect to Atlan.|
 | 3. | Enable Announcements | If enabled, announcements will be automatically posted to Atlan assets whenever anomalies are detected.|
 | 4. | Domains | Select specific domains to filter assets for synchronization. <br>- Acts as a filtering mechanism to sync specific assets <br>- Uses domain information from the data catalog (e.g. Sales ). Only assets under the selected domains will synchronize.|
-| 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. |
-| 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
+| 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
+| 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
 ![add-atlan-integration](../../../assets/integrations/catalog/atlan/qualytics-add-atlan-integrations-light.png)
 
@@ -149,7 +149,7 @@ Specify whether the synchronization will pull metadata, push metadata, or do bot
 
 ![table-notification](../../../assets/integrations/catalog/atlan/atlan-qualytics-table-notification.png)
 
-## Metadata  
+## Metadata
 
 The Quality Score Total, along with the Qualytics 8 metrics (completeness, coverage, conformity, consistency, precision, timeliness, volume, and accuracy), and the count of checks and anomalies per asset identified by Qualytics, are pushed.
 
