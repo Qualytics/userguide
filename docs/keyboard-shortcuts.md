@@ -16,7 +16,7 @@ The Command Bar is designed to:
 
 Pressing **Enter** in this bar executes the currently highlighted command.
 
-!!! important 
+!!! important
     The top search bar does not always return datastore, container, or field results directly. To search for data assets (such as fields like `DOB`, `DOD`, containers, or datastores), use **Asset Search** (`Ctrl/⌘ + Shift + F`).
 
 Let’s get started 🚀
