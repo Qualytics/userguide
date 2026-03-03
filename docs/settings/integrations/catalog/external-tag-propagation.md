@@ -28,8 +28,8 @@ A modal window Add Integration will appear, providing you with the options to ad
 | 2. | Type | Choose the type of integration from the dropdown menu. Currently, 'Atlan' is selected |
 | 3. | URL | The complete address for the Atlan instance, for example: [https://your-company.atlan.com](https://your-company.atlan.com/). |
 | 4. | Token | Provide the authentication token needed to connect to Atlan. |
-| 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. |
-| 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). |
+| 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
+| 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
 ![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/detail-light-5.png)
 
