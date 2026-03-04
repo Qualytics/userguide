@@ -24,15 +24,15 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 
 **Step 1:** Sign in to the [Azure portal](https://portal.azure.com){target="_blank"}.
 
-![Portal Azure](../../../assets/integrations/data-catalogs/purview/portal-azure.png)
+![Portal Azure](../../../assets/integrations/data-catalogs/microsoft-purview/portal-azure.png)
 
 **Step 2:** Navigate to **Microsoft Entra ID** and select **App registrations** from the left sidebar.
 
-![App Registrations](../../../assets/integrations/data-catalogs/purview/app-registrations.png)
+![App Registrations](../../../assets/integrations/data-catalogs/microsoft-purview/app-registrations.png)
 
 **Step 3:** Click **New registration**.
 
-![New Registration](../../../assets/integrations/data-catalogs/purview/new-registration.png)
+![New Registration](../../../assets/integrations/data-catalogs/microsoft-purview/new-registration.png)
 
 **Step 4:** Fill in the registration form with the following details:
 
@@ -41,32 +41,32 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 | Name | `Qualytics-Purview-Integration` (or any descriptive name) |
 | Supported account types | Accounts in this organizational directory only (Single tenant) |
 
-![Purview Integration](../../../assets/integrations/data-catalogs/purview/qualytics-purview-integration.png)
+![Purview Integration](../../../assets/integrations/data-catalogs/microsoft-purview/qualytics-purview-integration.png)
 
 **Step 5:** Click **Register**. After registration, save the **Application (client) ID** — you will need this later.
 
-![App Registration Created](../../../assets/integrations/data-catalogs/purview/app-registration-created.png)
+![App Registration Created](../../../assets/integrations/data-catalogs/microsoft-purview/app-registration-created.png)
 
-![App Registration Overview](../../../assets/integrations/data-catalogs/purview/app-registration-overview.png){: style="height:300px"}
+![App Registration Overview](../../../assets/integrations/data-catalogs/microsoft-purview/app-registration-overview.png){: style="height:300px"}
 
 ### Generate a Client Secret
 
 **Step 1:** In the app registration, go to **Certificates & secrets** in the left sidebar.
 
-![New Client Secret](../../../assets/integrations/data-catalogs/purview/new-client-secret.png)
+![New Client Secret](../../../assets/integrations/data-catalogs/microsoft-purview/new-client-secret.png)
 
 
 **Step 2:** Click **New client secret**, provide a description, select an expiration period, and click **Add**.
 
-![Purview Secret](../../../assets/integrations/data-catalogs/purview/qualytics-purview-secret.png)
+![Purview Secret](../../../assets/integrations/data-catalogs/microsoft-purview/qualytics-purview-secret.png)
 
-![Secret Created](../../../assets/integrations/data-catalogs/purview/qualytics-purview-secret-created.png)
+![Secret Created](../../../assets/integrations/data-catalogs/microsoft-purview/qualytics-purview-secret-created.png)
 
 <!-- Screenshot: Add a client secret dialog -->
 
 **Step 3:** Copy the **Value** immediately and store it securely.
 
-![Portal Azure](../../../assets/integrations/data-catalogs/purview/qualytics-purview-value.png){: style="height:300px"}
+![Portal Azure](../../../assets/integrations/data-catalogs/microsoft-purview/qualytics-purview-value.png){: style="height:300px"}
 
 !!! warning "Important"
     The client secret value is shown only once. Store it securely. This value is your `client_secret`.
@@ -75,9 +75,9 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 
 **Step 1:** In the app registration, open **API permissions** from the left sidebar and click **Add a permission**.
 
-![API permissions](../../../assets/integrations/data-catalogs/purview/api-permissions.png)
+![API permissions](../../../assets/integrations/data-catalogs/microsoft-purview/api-permissions.png)
 
-![Purview API Permission](../../../assets/integrations/data-catalogs/purview/microsoft-purview-api-permission.png)
+![Purview API Permission](../../../assets/integrations/data-catalogs/microsoft-purview/microsoft-purview-api-permission.png)
 
 **Step 2:** Search for and select **Microsoft Purview**, then add the following permissions:
 
@@ -86,17 +86,17 @@ Qualytics uses a service principal to securely authenticate with Microsoft Purvi
 | Delegated permissions | `Purview.DelegatedAccess` |
 | Application permissions | `Purview.ApplicationAccess` |
 
-![Portal Azure](../../../assets/integrations/data-catalogs/purview/microsoft-purview-delegated-access.png)
+![Portal Azure](../../../assets/integrations/data-catalogs/microsoft-purview/microsoft-purview-delegated-access.png)
 
-![Portal Azure](../../../assets/integrations/data-catalogs/purview/microsoft-purview-application-access.png)
+![Portal Azure](../../../assets/integrations/data-catalogs/microsoft-purview/microsoft-purview-application-access.png)
 
 **Step 3:** Click **Add permissions**, then click **Grant admin consent** and confirm the action.
 
-![API Add Permissions](../../../assets/integrations/data-catalogs/purview/api-add-permissions.png)
+![API Add Permissions](../../../assets/integrations/data-catalogs/microsoft-purview/api-add-permissions.png)
 
-![Grant Admin Consent](../../../assets/integrations/data-catalogs/purview/grant-admin-consent-for-qualytics.png)
+![Grant Admin Consent](../../../assets/integrations/data-catalogs/microsoft-purview/grant-admin-consent-for-qualytics.png)
 
-![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/purview/grant-admin-consent-for-qualytics-confirmation.png)
+![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/microsoft-purview/grant-admin-consent-for-qualytics-confirmation.png)
 
 ## Purview Setup
 
@@ -106,15 +106,15 @@ After creating the service principal, you need to assign the appropriate roles i
 
 **Step 1:** Open the [Microsoft Purview governance portal](https://purview.microsoft.com){target="_blank"}.
 
-![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/purview/microsoft-purview-overview.png)
+![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/microsoft-purview/microsoft-purview-overview.png)
 
 **Step 2:** Select **Data Map** from the navigation, then click **Collections**.
 
-![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/purview/data-map-overview.png)
+![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/microsoft-purview/data-map-overview.png)
 
 **Step 3:** Select the **root collection** (the top-level collection with the same name as your Purview account).
 
-![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/purview/domain-collection.png)
+![Grant Admin Confirmation](../../../assets/integrations/data-catalogs/microsoft-purview/domain-collection.png)
 
 **Step 4:** Open the **Role assignments** tab and assign the following roles to the service principal:
 
@@ -125,9 +125,9 @@ After creating the service principal, you need to assign the appropriate roles i
 | Collection Admin | Access Account & Metadata policy data planes |
 | Policy Author | Access DevOps policies API |
 
-![Purview Roles](../../../assets/integrations/data-catalogs/purview/purview-roles.png)
+![Purview Roles](../../../assets/integrations/data-catalogs/microsoft-purview/purview-roles.png)
 
-![Add Service to Roles](../../../assets/integrations/data-catalogs/purview/add-service-to-roles.png)
+![Add Service to Roles](../../../assets/integrations/data-catalogs/microsoft-purview/add-service-to-roles.png)
 
 !!! note
     You may assign roles to a sub-collection instead of the root collection, but API access will be limited to that scope.
@@ -136,7 +136,7 @@ After creating the service principal, you need to assign the appropriate roles i
 
 **Step 1:** In the Azure portal, open your Purview account and go to **Settings and properties**.
 
-![Purview Properties](../../../assets/integrations/data-catalogs/purview/purview-properties.png)
+![Purview Properties](../../../assets/integrations/data-catalogs/microsoft-purview/purview-properties.png)
 
 **Step 2:** Copy the **Atlas endpoint** and remove `/catalog` from the end of the URL.
 
@@ -173,11 +173,11 @@ A modal window titled **Add Purview Integration** appears. Fill in the connectio
 | 3. | Client ID | The Application (client) ID from your app registration |
 | 4. | Client Secret | The client secret value you generated |
 
-![Purview Properties](../../../assets/integrations/data-catalogs/purview/add-purview-integration.png)
+![Purview Properties](../../../assets/integrations/data-catalogs/microsoft-purview/add-purview-integration.png)
 
 **Step 4:** Click **Save** to create the integration.
 
-![Purview Properties](../../../assets/integrations/data-catalogs/purview/integration-successful-message.png)
+![Purview Properties](../../../assets/integrations/data-catalogs/microsoft-purview/integration-successful-message.png)
 
 **Step 5:** Once the integration is set up, it will appear in your integrations list.
 
@@ -191,11 +191,11 @@ After the integration is configured, you can synchronize metadata between Qualyt
 
 **Step 1:** Click the vertical ellipsis next to the Purview integration and select **Sync** from the dropdown.
 
-![Purview Properties](../../../assets/integrations/data-catalogs/purview/sync-metadata.png)
+![Purview Properties](../../../assets/integrations/data-catalogs/microsoft-purview/sync-metadata.png)
 
 **Step 2:** Select the synchronization options and click **Start**.
 
-![Purview Properties](../../../assets/integrations/data-catalogs/purview/purview-sync-options.png)
+![Purview Properties](../../../assets/integrations/data-catalogs/microsoft-purview/purview-sync-options.png)
 
 ## Troubleshooting
 

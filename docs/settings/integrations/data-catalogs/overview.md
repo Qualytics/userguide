@@ -60,7 +60,7 @@ Key capabilities include:
 - Automated updates based on Qualytics operations
 - This integration appears as Connected once successfully configured in Qualytics.
 
-For detailed configuration steps, see the [**Microsoft Purview**](./purview.md){target="_blank} documentation.
+For detailed configuration steps, see the [**Microsoft Purview**](./microsoft-purview.md){target="_blank"} documentation.
 
 ### Collibra
 
