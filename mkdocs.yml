@@ -321,9 +321,13 @@ nav:
       - quality-scores/what-are-quality-scores.md
       - printing.md
     - Misc:
-      - deployments/overview.md
-      - upgrades/qualytics-single-tenant-instance.md
-      - deployments/databricks-deployment.md
+      - Deployment Options: deployments/overview.md
+      - SSO Setup (Managed Customers): deployments/sso.md
+      - Self-Hosted Deployment:
+        - Deployment Guide: deployments/self-hosted-deployment.md
+        - OIDC Authentication: deployments/oidc-configuration.md
+        - Auth0 Authentication: deployments/auth0-setup.md
+      - Databricks Deployment: deployments/databricks-deployment.md
       - External Automation:
         - Overview: operation-automation/overview.md
         - Linux Machine: operation-automation/linux-machine.md
@@ -426,6 +430,7 @@ plugins:
       redirect_maps:
         'settings/integrations/atlan.md': 'settings/integrations/data-catalogs/atlan.md'
         'deployments/deployments.md': 'deployments/overview.md'
+        'upgrades/qualytics-single-tenant-instance.md': 'deployments/self-hosted-deployment.md'
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'

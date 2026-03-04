@@ -11,37 +11,45 @@ The Qualytics platform provides enterprise-grade authentication integration capa
 
 These authentication capabilities ensure that Qualytics seamlessly integrates with your organization's identity and access management infrastructure while maintaining the highest security standards.
 
-## SSO for PaaS Deployments
+## SSO for Managed (PaaS/SaaS) Deployments
 
-Qualytics platform harnesses the power of [Auth0's Single Sign-On](https://auth0.com/) (SSO) technology to create a frictionless authentication journey for our PaaS users. Once users have successfully logged in to Qualytics, they can conveniently access all linked external applications and services without the need for additional sign-ins. Depending on the application and its compatibility with federated SSO protocols such as SAML, OIDC, or any proprietary authentication methods, Qualytics, with the help of Auth0, establishes a secure connection for user authentication. In essence, SSO allows one central domain to authenticate and then share the session across various other domains. The method of sharing may vary between SSO protocols, but the principle remains constant.
+For Qualytics-managed deployments, SSO is configured by your Qualytics account manager using [Auth0](https://auth0.com/). You register Qualytics as an application in your Identity Provider and share the credentials with Qualytics — we handle the rest.
 
-Through Auth0's Integration Network (OIN), Qualytics extends SSO access to an extensive range of supported cloud-based applications. These integrations can utilize OpenID Connect (OIDC), SAML, SWA, or proprietary APIs for SSO. Maintenance of SSO protocols and provisioning APIs is reliably managed by Auth0.
+**For step-by-step setup instructions, see the [SSO Setup Guide](../../../deployments/sso.md).**
 
-In addition to this, Qualytics also leverages Auth0's capabilities to provide SSO integrations for on-premises web-based applications. You have the option to integrate these applications via SWA or SAML toolkits. In addition, Auth0 supports user provisioning and deprovisioning with applications that publicly offer their provisioning APIs.
+Supported Identity Providers include:
 
-Further enhancing our SSO integrations, Qualytics provides seamless access to mobile applications. Whether they are web applications optimized for mobile devices, native iOS apps, or Android apps, users can access web app integrations in the OIN using SSO from any mobile device. These mobile web apps can employ industry-standard OIDC, SAML, or Auth0 SWA technologies. To illustrate, Qualytics, in conjunction with Auth0, can integrate with native applications such as Box Mobile using SAML for registration and OAuth for continuous use.
-
-Auth0 supports the following enterprise providers out of the box:
--  [OAuth2](https://auth0.com/docs/authenticate/identity-providers/social-identity-providers/oauth2)
--   [Active Directory/LDAP](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap)
-
--   [ADFS](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/adfs)
-
--   [Azure Active Directory Native](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory-native)
-
--   [Google Workspace](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps)
-
--   [OpenID Connect](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/oidc)
-
--   [Okta](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/okta)
-
--   [PingFederate](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate)
-
--   [SAML](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/saml)
-
--   [Azure Active Directory](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2)
+- Microsoft Entra ID (Azure Active Directory)
+- Okta
+- Google Workspace
+- PingFederate
+- Active Directory / LDAP
+- ADFS
+- Any OIDC or SAML 2.0 compliant provider
 
 
 ## SSO for On-Premise Deployments
 
-In addition to the option of leveraging our robust Auth0 support for federated authentication, customer-managed deployments can choose to directly integrated with their IdP (Identity Provider such as Active Directory, ForgeRock, etc) using OpenID Connect (OIDC). Once configured for direct federated authentication using OIDC, the customer's own user login requirements fully govern the authentication process in support of a fully air-gapped deployment of Qualytics with no egress required for operations.
+Customer-managed (self-hosted) deployments have two options for authentication:
+
+### Option 1: OIDC — Direct IdP Integration (Recommended)
+
+Customer-managed deployments can directly integrate with their Identity Provider (such as Azure AD / Entra ID, Okta, Keycloak, ForgeRock, etc.) using OpenID Connect (OIDC). Once configured for direct federated authentication using OIDC, the customer's own user login requirements fully govern the authentication process — supporting fully air-gapped deployments with no egress required for operations.
+
+OIDC authentication provides:
+
+- Direct integration with your enterprise IdP — no third-party dependencies
+- Full support for air-gapped and on-premises environments
+- Three-tier security model (HttpOnly cookies + CSRF, token fingerprinting, DPoP)
+- Customizable claims mapping for non-standard IdP configurations
+
+For detailed setup instructions, see the **[OIDC Authentication Configuration Guide](../../../deployments/oidc-configuration.md)**.
+
+### Option 2: Auth0 — Managed by Qualytics
+
+Self-hosted customers can also leverage Auth0 for authentication. With this option, Qualytics manages the Auth0 infrastructure — you simply request Auth0 resources from your account manager and configure the provided credentials in your deployment. Auth0 supports SSO federation with all the enterprise providers listed in the [managed deployments section above](#sso-for-managed-paassaas-deployments).
+
+!!! note
+    Auth0 requires network egress to `https://auth.qualytics.io` and is not compatible with fully air-gapped deployments.
+
+For detailed setup instructions, see the **[Auth0 Authentication Setup Guide](../../../deployments/auth0-setup.md)**.
