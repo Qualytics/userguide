@@ -8,7 +8,7 @@ The Qualytics platform seamlessly connects with your enterprise technology ecosy
 
 Connect directly to your data wherever it lives - from traditional databases to modern cloud storage platforms. Qualytics provides unified quality management across your entire data landscape through our Datastore framework.
 
-### [Data Catalogs](./catalog/overview.md)
+### [Data Catalogs](./data-catalogs/overview.md)
 Surface data quality insights directly within your enterprise data catalogs, enhancing data discovery and governance with rich quality metrics and real-time anomaly detection.
 
 ### [Compute](./compute/compute.md)

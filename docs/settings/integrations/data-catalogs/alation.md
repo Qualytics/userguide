@@ -12,49 +12,49 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 
 **Step 1**: Navigate to the **"Profile Settings"**.
 
-![profile-settings](../../../assets/integrations/catalog/alation/alation-profile-settings-1.png)
+![profile-settings](../../../assets/integrations/data-catalogs/alation/alation-profile-settings-1.png)
 
 **Step 2:** Select the **"Authentication"** tab.
 
-![authentication](../../../assets/integrations/catalog/alation/alation-authentication-tab-2.png)
+![authentication](../../../assets/integrations/data-catalogs/alation/alation-authentication-tab-2.png)
 
 **Step 3:** Click on the **"Create Refresh Token"** button.
 
-![refresh-token](../../../assets/integrations/catalog/alation/alation-refresh-token-3.png)
+![refresh-token](../../../assets/integrations/data-catalogs/alation/alation-refresh-token-3.png)
 
 **Step 4:** Enter a **name** for the token.
 
-![refresh-token](../../../assets/integrations/catalog/alation/qualytics-alation-refresh-token-4.png)
+![refresh-token](../../../assets/integrations/data-catalogs/alation/qualytics-alation-refresh-token-4.png)
 
 **Step 5:** After entering the name for the token, click on **"Create Refresh Token"**.
 
-![refresh-token-name](../../../assets/integrations/catalog/alation/alation-refresh-token-name-5.png)
+![refresh-token-name](../../../assets/integrations/data-catalogs/alation/alation-refresh-token-name-5.png)
 
 **Step 6:** Your **"refresh"** token has been generated successfully. Please Copy and save it securely.
 
-![token-created](../../../assets/integrations/catalog/alation/alation-token-created-6.png){: style="height:450px;width:450px;"}
+![token-created](../../../assets/integrations/data-catalogs/alation/alation-token-created-6.png){: style="height:450px;width:450px;"}
 
 **Step 7:** Here you can view the token that is successfully added to the access tokens list.
 
-![refresh-token-listed](../../../assets/integrations/catalog/alation/alation-refresh-token-listed-7.png)
+![refresh-token-listed](../../../assets/integrations/data-catalogs/alation/alation-refresh-token-listed-7.png)
 
 ## Add Alation Integration
 
 **Step 1:**  Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.
 
-![global-setting](../../../assets/integrations/catalog/alation/global-setting-light-8.png)
+![global-setting](../../../assets/integrations/data-catalogs/alation/global-setting-light-8.png)
 
 **Step 2:** You will be directed to the **Settings** page, then click on the **"Integration"** tab.
 
-![integration](../../../assets/integrations/catalog/alation/qualytics-alation-integration-light-9.png)
+![integration](../../../assets/integrations/data-catalogs/alation/qualytics-alation-integration-light-9.png)
 
 **Step 3:** Click on the **"Add Integration"** button.
 
-![add integration](../../../assets/integrations/catalog/alation/add-integration-light-10.png)
+![add integration](../../../assets/integrations/data-catalogs/alation/add-integration-light-10.png)
 
 **Step 4:** Complete the configuration form by choosing the **Alation** integration type.
 
-![add integration](../../../assets/integrations/catalog/alation/qualytics-add-integration-light-11.png)
+![add integration](../../../assets/integrations/data-catalogs/alation/qualytics-add-integration-light-11.png)
 
 |REF.|FIELDS |ACTIONS|
 | ---| ----- | ----- |
@@ -69,11 +69,11 @@ Before setting up Alation Integration in Qualytics, you have to generate a Refre
 
 **Step 5:** Click on the **Save** button to integrate Alation with Qualytics. 
 
-![save-integration](../../../assets/integrations/catalog/alation/qualytics-add-integration-save-light-12.png)
+![save-integration](../../../assets/integrations/data-catalogs/alation/qualytics-add-integration-save-light-12.png)
 
 **Step 6:** Here you can view the **new integration** appearing in Qualytics.
 
-![data-mesh](../../../assets/integrations/catalog/alation/alation-data-mesh-light-13.png)
+![data-mesh](../../../assets/integrations/data-catalogs/alation/alation-data-mesh-light-13.png)
                  
 ## Synchronization
 
@@ -85,7 +85,7 @@ The Alation synchronization supports both push and pull operations. This include
 
 **Step 1:** To sync tags, simply click the **"Sync"** button next to the relevant integration card.
 
-![synchronization](../../../assets/integrations/catalog/alation/alation-syncronization-light-14.png)
+![synchronization](../../../assets/integrations/data-catalogs/alation/alation-syncronization-light-14.png)
 
 **Step 2:** After clicking the **Sync** button, you will have the following options:
 
@@ -94,37 +94,37 @@ The Alation synchronization supports both push and pull operations. This include
 
 Specify whether the synchronization will pull metadata, push metadata, or do both.
 
-![sync-modal](../../../assets/integrations/catalog/alation/alation-sync-modal-light-15.png)
+![sync-modal](../../../assets/integrations/data-catalogs/alation/alation-sync-modal-light-15.png)
 
 **Step 3:** After selecting the desired options, click on the **"Start"** button.
 
-![sync-modal-start](../../../assets/integrations/catalog/alation/alation-sync-modal-start-light.png)
+![sync-modal-start](../../../assets/integrations/data-catalogs/alation/alation-sync-modal-start-light.png)
 
 **Step 4:** After clicking the **Start** button, the synchronization process between Qualytics and Alation begins. This process pulls metadata from Alation and pushes Qualytics metadata, including tags, quality scores, anomaly counts, asset links, and many more.
 
-![integration-created](../../../assets/integrations/catalog/alation/qualytics-alation-integration-created-light-17.png)
+![integration-created](../../../assets/integrations/data-catalogs/alation/qualytics-alation-integration-created-light-17.png)
 
 **Step 5:** Once synchronization is complete, the mapped assets from **Alation** will display an external tag.
 
-![external-tags](../../../assets/integrations/catalog/alation/qualytics-external-tags-light-18.png)
+![external-tags](../../../assets/integrations/data-catalogs/alation/qualytics-external-tags-light-18.png)
 
 ## Alerts
 
 When Qualytics detects anomalies, alerts are sent to the assets in Alation, showing the number of active anomalies and providing a link to view them.
 
-![trust-flag](../../../assets/integrations/catalog/alation/alation-trust-flag-20.png)
+![trust-flag](../../../assets/integrations/data-catalogs/alation/alation-trust-flag-20.png)
 
 ## Metadata
 
 The Quality Score Total, the "Qualytics 8" metrics (completeness, coverage, conformity, consistency, precision, timeliness, volume, and accuracy), and counts of checks and anomalies per asset identified by Qualytics are pushed to Alation. This enables users to analyze assets based on data profiling and scanning metrics. A link to the asset in Qualytics is also provided.
 
-![metatag](../../../assets/integrations/catalog/alation/alation-metatag-21.png)
+![metatag](../../../assets/integrations/data-catalogs/alation/alation-metatag-21.png)
 
 ## Data Health
 
 On the Alation tables page, there's a tab called “Data Health” where Qualytics displays insights from data quality checks in a table format, showing the current status based on the number of anomalies per check.
 
-![data-health](../../../assets/integrations/catalog/alation/alation-data-health-22.png)
+![data-health](../../../assets/integrations/data-catalogs/alation/alation-data-health-22.png)
 
 | Column| Description |
 | ----- | ----- |

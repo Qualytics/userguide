@@ -48,7 +48,7 @@ Before connecting to Qualytics, you'll need to create an application in Collibra
 
 **Step 2:** Click on the **Integrations** tab.
 
-![qualytics-collibra-integration](../../../assets/integrations/catalog/collibra/qualytics-collibra-integration.png)
+![qualytics-collibra-integration](../../../assets/integrations/data-catalogs/collibra/qualytics-collibra-integration.png)
 
 ### Connect Collibra Integration
 
@@ -56,7 +56,7 @@ Before connecting to Qualytics, you'll need to create an application in Collibra
 
 A modal window titled **"Add Collibra Integration"** will appear, asking you to fill in your connection details.
 
-![qualytics-create-collibra-connection](../../../assets/integrations/catalog/collibra/qualytics-create-collibra-connection.png)
+![qualytics-create-collibra-connection](../../../assets/integrations/data-catalogs/collibra/qualytics-create-collibra-connection.png)
 
 **Step 2:** Fill in the following connection details:
 
@@ -69,7 +69,7 @@ A modal window titled **"Add Collibra Integration"** will appear, asking you to 
 | 5. | **Event Driven** | No | When turned on, Qualytics will automatically send updates to Collibra whenever scans complete, anomalies are detected, or checks are archived (default: on). For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
 | 6. | **Overwrite Tags** | No | When turned on, existing Qualytics tags with the same name are converted into external tags managed by the Collibra integration. When turned off, the existing Qualytics tag is left unchanged and the Collibra tag is skipped (default: off). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
-![add-collibra-integration](../../../assets/integrations/catalog/collibra/qualytics-add-collibra-integrations.png)
+![add-collibra-integration](../../../assets/integrations/data-catalogs/collibra/qualytics-add-collibra-integrations.png)
 
 **Step 3:** Click the **Create** button.
 
@@ -155,7 +155,7 @@ You can trigger a sync at any time to pull the latest information from Collibra 
 
 **Step 1:** Click the vertical ellipsis (three dots) next to the Collibra integration and select **Sync** from the dropdown.
 
-![Collibra Sync](../../../assets/integrations/catalog/collibra/sync-metadata.png)
+![Collibra Sync](../../../assets/integrations/data-catalogs/collibra/sync-metadata.png)
 
 **Step 2:** Choose what you'd like to sync:
 
@@ -164,7 +164,7 @@ You can trigger a sync at any time to pull the latest information from Collibra 
 
 You can select one or both options.
 
-![Collibra Sync Options](../../../assets/integrations/catalog/collibra/collibra-sync-options.png)
+![Collibra Sync Options](../../../assets/integrations/data-catalogs/collibra/collibra-sync-options.png)
 
 **Step 3:** Click the **"Start"** button.
 

@@ -15,11 +15,11 @@ These catalog integrations ensure that data quality insights are readily availab
 
 Navigate to Settings > Integration to configure your data catalog connection:
 
-![setting](../../../assets/integrations/overview/setting-button-light.png)
+![settings-button](../../../assets/integrations/data-catalogs/overview/settings-button.png)
 
-![tab](../../../assets/integrations/overview/tab-button-light.png)
+![integration-tab](../../../assets/integrations/data-catalogs/overview/integration-tab.png)
 
-![integration](../../../assets/integrations/overview/add-integration-button-light.png)
+![connect-integration-button](../../../assets/integrations/data-catalogs/overview/connect-integration-button.png)
 
 ## Supported Data Catalogs
 
@@ -60,7 +60,7 @@ Key capabilities include:
 - Automated updates based on Qualytics operations
 - This integration appears as Connected once successfully configured in Qualytics.
 
-For detailed configuration steps, see the [**Microsoft Purview**](./purview.md){target="_blank} documentation.
+For detailed configuration steps, see the [**Microsoft Purview**](./microsoft-purview.md){target="_blank"} documentation.
 
 ### Collibra
 
@@ -94,7 +94,7 @@ Qualytics provides flexible synchronization methods to match your workflow:
 
 Trigger complete metadata synchronization on-demand:
 
-![manual](../../../assets/integrations/overview/mannual-light.png)
+![manual-sync](../../../assets/integrations/data-catalogs/overview/manual-sync.png){: style="width:750px"}
 
 For detailed steps, see the [**Synchronization**](atlan.md/#synchronization){target="_blank} section.
 
@@ -102,7 +102,7 @@ For detailed steps, see the [**Synchronization**](atlan.md/#synchronization){tar
 
 When **Event Driven** is enabled on a data catalog integration, Qualytics automatically pushes metadata updates to the connected catalog whenever certain events occur. This is enabled by default for all catalog integrations.
 
-![event](../../../assets/integrations/overview/event-light.png)
+![event-driven](../../../assets/integrations/data-catalogs/overview/event-driven.png)
 
 The following events trigger an automatic push:
 
@@ -123,6 +123,8 @@ If multiple catalog integrations are connected, each one with Event Driven enabl
 ### Overwrite Tags
 
 The **Overwrite Tags** setting controls what happens during a **pull sync** when a tag from the data catalog has the same name as an existing Qualytics tag (global, entity, or lineage).
+
+![overwrite-tags](../../../assets/integrations/data-catalogs/overview/overwrite-tags.png)
 
 | Setting | Behavior |
 | :---- | :---- |
