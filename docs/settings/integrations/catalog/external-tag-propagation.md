@@ -8,19 +8,19 @@ Let’s get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the **Settings** button on the left side panel of the interface.
 
-![setting](../../../assets/integrations/catalog/external-tag-propagation/setting-light-1.png)
+![setting](../../../assets/integrations/data-catalogs/external-tag-propagation/setting-light-1.png)
 
 **Step 2:** You will be directed to the Settings page, then click on the **Integration** tab.
 
-![integration](../../../assets/integrations/catalog/external-tag-propagation/integration-light-2.png)
+![integration](../../../assets/integrations/data-catalogs/external-tag-propagation/integration-light-2.png)
 
 **Step 3:** Click on the **Add Integration** button.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/add-integration-light-3.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/add-integration-light-3.png)
 
 A modal window Add Integration will appear, providing you with the options to add integration.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/modal-window-light-4.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/modal-window-light-4.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -31,17 +31,17 @@ A modal window Add Integration will appear, providing you with the options to ad
 | 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
 | 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/detail-light-5.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/detail-light-5.png)
 
 For demonstration purposes we have selected **Atlan** integration type.
 
 **Step 5**: Click on the **Save** button to set up the Atlan integration.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/save-btn-light-6.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/save-btn-light-6.png)
 
 **Step 6**: Once the Atlan integration is set up with Qualytics, it will appear in Qualytics as a new integration.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/atlan-7-light.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/atlan-7-light.png)
 
 ## Synchronization
 
@@ -54,7 +54,7 @@ For demonstration purposes we have selected **Atlan** synchronization.
    
 **Step 1:** To sync tags, simply click on the **Sync** button next to the relevant integration card.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/sync-light-8.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/sync-light-8.png)
 
 **Step 2:** After clicking the **Sync** button, you will have the following options:
 
@@ -63,20 +63,20 @@ For demonstration purposes we have selected **Atlan** synchronization.
 
 Specify whether the synchronization will pull metadata, push metadata, or do both.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/sync-option-light-9.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/sync-option-light-9.png)
 
 **Step 3:** After selecting the desired options, click on the **Start** button.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/start-btn-light-10.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/start-btn-light-10.png)
 
 **Step 4:** After clicking the **Start** button, the synchronization process between Qualytics and Atlan begins. This process pulls metadata from Atlan and pushes Qualytics metadata, including tags, quality scores, anomaly counts, asset links, and many more.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/sync-light-11.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/sync-light-11.png)
 
 **Step 5:** Review the logs to verify which assets were successfully mapped from Atlan to Qualytics.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/review-logs-light-12.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/review-logs-light-12.png)
 
 **Step 6:** Once synchronization is complete, the mapped assets from **Atlan** will display an external tag.
 
-![Screenshot](../../../assets/integrations/catalog/external-tag-propagation/external-tag-light-13.png)
+![Screenshot](../../../assets/integrations/data-catalogs/external-tag-propagation/external-tag-light-13.png)

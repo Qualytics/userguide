@@ -14,39 +14,39 @@ Before using Atlan with your data source, authorize the API token with access to
 
 **Step 1.** Navigate to Governance, then select **“Personas”**.
 
-![atlan-governance-center](../../../assets/integrations/catalog/atlan/atlan-governance-center.png)
+![atlan-governance-center](../../../assets/integrations/data-catalogs/atlan/atlan-governance-center.png)
 
 **Step 2**: Click on **“+ New Persona Button”**.
 
-![add-new-persona](../../../assets/integrations/catalog/atlan/atlan-add-new-persona.png)
+![add-new-persona](../../../assets/integrations/data-catalogs/atlan/atlan-add-new-persona.png)
 
 **Step 3:** Enter a **Name** and **Description** for a new persona, then click the **“Create”** button.
 
-![create-new-persona](../../../assets/integrations/catalog/atlan/atlan-create-new-persona.png)
+![create-new-persona](../../../assets/integrations/data-catalogs/atlan/atlan-create-new-persona.png)
 
 **Step 4:** Here your new Atlan persona has been created.
 
-![new-persona-view](../../../assets/integrations/catalog/atlan/atlan-new-persona-view.png)
+![new-persona-view](../../../assets/integrations/data-catalogs/atlan/atlan-new-persona-view.png)
 
 **Step 5**: After creating a new Atlan persona you have to create policies to authorize the personal access token. Click on **"Add Policies"** to create a new policy or to add one if there isn't any available.
 
-![atlan-new-persona-view](../../../assets/integrations/catalog/atlan/atlan-add-policy.png)
+![atlan-new-persona-view](../../../assets/integrations/data-catalogs/atlan/atlan-add-policy.png)
 
 **Step 6**: Click on **"New Policy"** and select **"Metadata Policy"** from the dropdown menu.
 
-![new-policy-section](../../../assets/integrations/catalog/atlan/atlan-new-policy-section.png)
+![new-policy-section](../../../assets/integrations/data-catalogs/atlan/atlan-new-policy-section.png)
 
 **Step 7:** Enter a **"name"**, and choose the **"connection"**.  
 
-![atlan-policy-to-connection](../../../assets/integrations/catalog/atlan/atlan-policy-to-connection.png)
+![atlan-policy-to-connection](../../../assets/integrations/data-catalogs/atlan/atlan-policy-to-connection.png)
 
 **Step 8:** Customize the permissions and assets that Qualytics will access.
 
-![meta-policies-and-assets-configuration](../../../assets/integrations/catalog/atlan/atlan-metadata-policy-and-assets-configuration.png)
+![meta-policies-and-assets-configuration](../../../assets/integrations/data-catalogs/atlan/atlan-metadata-policy-and-assets-configuration.png)
 
 **Step 9**: Once the policy is created, you’ll see it listed in the Policies section.
 
-![atlan-policy-attached-to-persona](../../../assets/integrations/catalog/atlan/atlan-policy-attached-to-persona.png)
+![atlan-policy-attached-to-persona](../../../assets/integrations/data-catalogs/atlan/atlan-policy-attached-to-persona.png)
 
 ## **Create Atlan Personal Access Token**
 
@@ -54,19 +54,19 @@ After you’ve created the persona, the next step is to create a personal access
 
 **Step 1:** Navigate to the **API Tokens** section in the Admin Center.
 
-![atlan-admin-center](../../../assets/integrations/catalog/atlan/atlan-admin-center.png)
+![atlan-admin-center](../../../assets/integrations/data-catalogs/atlan/atlan-admin-center.png)
 
 **Step 2:** Click on **"Generate API Token"** button.
 
-![atlan-generate-api-token](../../../assets/integrations/catalog/atlan/atlan-generate-api-token.png)
+![atlan-generate-api-token](../../../assets/integrations/data-catalogs/atlan/atlan-generate-api-token.png)
 
 **Step 3**: Enter a **name** and **description**, and select the persona you created earlier.
 
-![atlan-add-new-api-token](../../../assets/integrations/catalog/atlan/atlan-add-new-api-token.png)
+![atlan-add-new-api-token](../../../assets/integrations/data-catalogs/atlan/atlan-add-new-api-token.png)
 
 **Step 4:** Click the **"Save"** button and make sure to store the token in a secure location.
 
-![atlan-token-generated](../../../assets/integrations/catalog/atlan/atlan-token-generated.png)
+![atlan-token-generated](../../../assets/integrations/data-catalogs/atlan/atlan-token-generated.png)
 
 ## Add Atlan Integration
 
@@ -74,19 +74,19 @@ Integrating Atlan with Qualytics enhances your data management capabilities, all
 
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.  
 
-![global-settings](../../../assets/integrations/catalog/atlan/qualytics-global-settings-light.png)
+![global-settings](../../../assets/integrations/data-catalogs/atlan/qualytics-global-settings-light.png)
 
 **Step 2:** You will be directed to the **Settings** page, then click on the **"Integration"** tab.
 
-![settings-section](../../../assets/integrations/catalog/atlan/qualytics-settings-section-light.png)
+![settings-section](../../../assets/integrations/data-catalogs/atlan/qualytics-settings-section-light.png)
 
 **Step 3:** Click on the **Connect** button next to Atlan to connect to the Atlan Integration.
 
-![click-add-integration](../../../assets/integrations/catalog/atlan/qualytics-click-add-integration-light.png)
+![click-add-integration](../../../assets/integrations/data-catalogs/atlan/qualytics-click-add-integration-light.png)
 
 A modal window titled **Add Atlan Integration** appears.
 
-![click-add-integration](../../../assets/integrations/catalog/atlan/modal-light.png)
+![click-add-integration](../../../assets/integrations/data-catalogs/atlan/modal-light.png)
 
  Fill in the connection properties to connect to Atlan.
 
@@ -99,15 +99,15 @@ A modal window titled **Add Atlan Integration** appears.
 | 5. | Event Driven | If enabled, the integration sync will be activated by operations, archiving anomalies, and checks. For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
 | 6. | Overwrite Tags | If enabled, Atlan tags will have precedence over Qualytics tags in cases of conflicts (when tags with the same name exist on both platforms). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
-![add-atlan-integration](../../../assets/integrations/catalog/atlan/qualytics-add-atlan-integrations-light.png)
+![add-atlan-integration](../../../assets/integrations/data-catalogs/atlan/qualytics-add-atlan-integrations-light.png)
 
 **Step 4:**  Click on the **Create** button to set up the Atlan integration. 
 
-![atlan-integration-click-save](../../../assets/integrations/catalog/atlan/atlan-integration-click-create-light.png)
+![atlan-integration-click-save](../../../assets/integrations/data-catalogs/atlan/atlan-integration-click-create-light.png)
 
 **Step 5:** Once the Atlan integration is set up with Qualytics, it will appear in Qualytics as a new integration. 
 
-![atlan-integration-created](../../../assets/integrations/catalog/atlan/qualytics-atlan-integration-created-light.png)
+![atlan-integration-created](../../../assets/integrations/data-catalogs/atlan/qualytics-atlan-integration-created-light.png)
 
 ## Synchronization
 
@@ -118,7 +118,7 @@ The Atlan synchronization supports both push and pull operations. This includes 
 
 **Step 1:** To sync tags, click the vertical ellipsis next to Atlan and select **Sync** from the dropdown.
 
-![atlan-click-sync](../../../assets/integrations/catalog/atlan/qualytics-atlan-click-sync-light.png)
+![atlan-click-sync](../../../assets/integrations/data-catalogs/atlan/qualytics-atlan-click-sync-light.png)
 
 **Step 2:** After clicking the **"Sync"** button, you will have the following options:
 
@@ -127,32 +127,32 @@ The Atlan synchronization supports both push and pull operations. This includes 
 
 Specify whether the synchronization will pull metadata, push metadata, or do both.
 
-![atlan-sync-modal](../../../assets/integrations/catalog/atlan/atlan-sync-modal-light.png)
+![atlan-sync-modal](../../../assets/integrations/data-catalogs/atlan/atlan-sync-modal-light.png)
 
 **Step 3:** After selecting the desired options, click on the **"Start"** button.
 
-![atlan-sync-modal-start](../../../assets/integrations/catalog/atlan/atlan-sync-modal-start-light-16.png)
+![atlan-sync-modal-start](../../../assets/integrations/data-catalogs/atlan/atlan-sync-modal-start-light-16.png)
 
 **Step 4:** After clicking the **Start** button, the synchronization process between Qualytics and Atlan begins. This process pulls metadata from Atlan and pushes Qualytics metadata, including tags, quality scores, anomaly counts, asset links, and many more.
 
-![atlan-syncing](../../../assets/integrations/catalog/atlan/qualytics-atlan-syncing-light.png)
+![atlan-syncing](../../../assets/integrations/data-catalogs/atlan/qualytics-atlan-syncing-light.png)
 
 **Step 5:** Review the logs to verify which assets were successfully mapped from Atlan to Qualytics.
 
-![atlan-logs](../../../assets/integrations/catalog/atlan/qualytics-atlan-logs-light.png)
+![atlan-logs](../../../assets/integrations/data-catalogs/atlan/qualytics-atlan-logs-light.png)
 
 **Step 6:** Once synchronization is complete, the mapped assets from **"Atlan"** will display an external tag.   
 
-![table-external-tag](../../../assets/integrations/catalog/atlan/qualytics-table-external-tag-light.png)
+![table-external-tag](../../../assets/integrations/data-catalogs/atlan/qualytics-table-external-tag-light.png)
 
 **Step 7:** When Qualytics detects anomalies, alerts are sent to the assets in Atlan, displaying the number of active anomalies and including a link to view the corresponding details
 
-![table-notification](../../../assets/integrations/catalog/atlan/atlan-qualytics-table-notification.png)
+![table-notification](../../../assets/integrations/data-catalogs/atlan/atlan-qualytics-table-notification.png)
 
 ## Metadata
 
 The Quality Score Total, along with the Qualytics 8 metrics (completeness, coverage, conformity, consistency, precision, timeliness, volume, and accuracy), and the count of checks and anomalies per asset identified by Qualytics, are pushed.
 
-![custom-metadata](../../../assets/integrations/catalog/atlan/altan-qualytics-custom-metadata.png)
+![custom-metadata](../../../assets/integrations/data-catalogs/atlan/altan-qualytics-custom-metadata.png)
 
 

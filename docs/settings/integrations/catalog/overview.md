@@ -15,11 +15,11 @@ These catalog integrations ensure that data quality insights are readily availab
 
 Navigate to Settings > Integration to configure your data catalog connection:
 
-![settings-button](../../../assets/integrations/overview/settings-button.png)
+![settings-button](../../../assets/integrations/data-catalogs/overview/settings-button.png)
 
-![integration-tab](../../../assets/integrations/overview/integration-tab.png)
+![integration-tab](../../../assets/integrations/data-catalogs/overview/integration-tab.png)
 
-![connect-integration-button](../../../assets/integrations/overview/connect-integration-button.png)
+![connect-integration-button](../../../assets/integrations/data-catalogs/overview/connect-integration-button.png)
 
 ## Supported Data Catalogs
 
@@ -94,7 +94,7 @@ Qualytics provides flexible synchronization methods to match your workflow:
 
 Trigger complete metadata synchronization on-demand:
 
-![manual-sync](../../../assets/integrations/overview/manual-sync.png){: style="width:750px"}
+![manual-sync](../../../assets/integrations/data-catalogs/overview/manual-sync.png){: style="width:750px"}
 
 For detailed steps, see the [**Synchronization**](atlan.md/#synchronization){target="_blank} section.
 
@@ -102,7 +102,7 @@ For detailed steps, see the [**Synchronization**](atlan.md/#synchronization){tar
 
 When **Event Driven** is enabled on a data catalog integration, Qualytics automatically pushes metadata updates to the connected catalog whenever certain events occur. This is enabled by default for all catalog integrations.
 
-![event-driven](../../../assets/integrations/overview/event-driven.png)
+![event-driven](../../../assets/integrations/data-catalogs/overview/event-driven.png)
 
 The following events trigger an automatic push:
 
@@ -124,7 +124,7 @@ If multiple catalog integrations are connected, each one with Event Driven enabl
 
 The **Overwrite Tags** setting controls what happens during a **pull sync** when a tag from the data catalog has the same name as an existing Qualytics tag (global, entity, or lineage).
 
-![overwrite-tags](../../../assets/integrations/overview/overwrite-tags.png)
+![overwrite-tags](../../../assets/integrations/data-catalogs/overview/overwrite-tags.png)
 
 | Setting | Behavior |
 | :---- | :---- |
