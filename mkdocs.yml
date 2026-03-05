@@ -103,6 +103,7 @@ nav:
         - Delete: container/manage-tables-and-files/delete.md
         - Mark Tables & Files as Favorite: container/manage-tables-and-files/mark-tables-&-files-as-favorite.md
       - Field Profiles: container/field-profiles.md
+      - Complex Data Types: container/complex-data-types.md
       - Computed Tables and Files:
         - Overview: container/computed-tables-and-files/overview.md
         - Computed Tables: container/computed-tables-and-files/computed-tables.md
