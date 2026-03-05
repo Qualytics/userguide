@@ -430,6 +430,13 @@ plugins:
   - redirects:
       redirect_maps:
         'settings/integrations/atlan.md': 'settings/integrations/data-catalogs/atlan.md'
+        'settings/integrations/catalog/atlan.md': 'settings/integrations/data-catalogs/atlan.md'
+        'settings/integrations/catalog/alation.md': 'settings/integrations/data-catalogs/alation.md'
+        'settings/integrations/catalog/collibra.md': 'settings/integrations/data-catalogs/collibra.md'
+        'settings/integrations/catalog/datahub.md': 'settings/integrations/data-catalogs/datahub.md'
+        'settings/integrations/catalog/external-tag-propagation.md': 'settings/integrations/data-catalogs/external-tag-propagation.md'
+        'settings/integrations/catalog/purview.md': 'settings/integrations/data-catalogs/microsoft-purview.md'
+        'settings/integrations/catalog/overview.md': 'settings/integrations/data-catalogs/overview.md'
         'deployments/deployments.md': 'deployments/overview.md'
         'upgrades/qualytics-single-tenant-instance.md': 'deployments/self-hosted-deployment.md'
   - print-site:
