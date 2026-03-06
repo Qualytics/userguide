@@ -2,6 +2,66 @@
 
 ## Release Notes
 
+### 2026.3.6 { id=2026.3.6 }
+
+#### Feature Enhancements
+
+- Introduced promote operation for copying computed assets and quality checks across datastores and containers.
+    - Users can promote computed tables, computed files, and computed fields from one datastore or container to another, eliminating the need to manually recreate definitions across environments.
+    - Promote enables environment-based management of computed assets and checks — each entity is matched by name on the destination and either created if missing, updated if the definition differs, or skipped if identical.
+    - Quality checks can now be promoted across containers as active or draft, replacing the previous check migration feature that only supported creating checks as drafts.
+    - Each promoted entity reports an individual result status (Created, Updated, Skipped, or Failed) with filterable results and expandable error details.
+    - Promote operations appear in the Activity list with progress tracking.
+
+- Introduced PagerDuty as a first-class alerting integration.
+    - PagerDuty now appears in the Integrations page alongside Slack and Microsoft Teams, with a new additional details field for including custom context in incident notifications and an optional routing key override for directing incidents to a different service than the one configured at the integration level.
+
+- Added container-level default variables for quality checks and computed containers.
+    - Containers now support additional metadata key-value pairs that serve as default variable values during scans, configurable from the container settings page.
+    - Scan operations include a Scan Variables section in advanced options, allowing users to override container defaults on a per-scan basis.
+    - Variable resolution follows a defined priority: container metadata provides defaults, scan-level variables override those, and system profile variables take highest precedence.
+
+- Enhanced Agent Q chat experience with background streaming, session management, and infinite scrolling.
+    - Chat sessions now support archiving, restoring, and permanent deletion, giving users full control over their conversation history.
+    - Chats continue generating responses when navigating away from the session, with a visual indicator for ongoing or interrupted streams.
+    - Infinite scrolling is now supported for chat messages, the chat history sidebar, and archived sessions, replacing manual pagination.
+    - Floating chat mode now includes a chat history dropdown for switching between sessions without leaving the floating interface.
+
+- Added a force refresh option for anomaly source records, allowing users to bypass the cache and fetch the latest available data directly from the API, with a tooltip displaying the last updated timestamp.
+
+#### General Fixes and Improvements
+
+- Resolved an error when favoriting a datastore, container, or quality check for the first time when no other assets had been previously favorited.
+
+- Corrected performance regressions in known pattern detection during profiling that caused redundant regex evaluations, significantly reducing constraint suggestion time on large datasets.
+
+- Addressed Aggregation Comparison check validation failing when using expression-only aggregations like `count(*)` with no explicit field references.
+
+- Fixed fields with "missing" status appearing in the sidebar tree view after schema changes, now showing only active fields to keep the navigation uncluttered.
+
+- Resolved computed join container previews returning empty results when sampled join keys from each side did not overlap.
+
+- Corrected inaccurate freshness check results on JDBC datastores caused by silent DATE-to-Timestamp coercion that applied the local timezone instead of UTC.
+
+- Addressed field profile metric preview charts that appeared empty on hover.
+
+- Resolved Expected Values checks rendering empty value lists in certain scenarios, such as numeric values, while other types displayed correctly.
+
+- Corrected BigQuery export and materialize operations displaying raw JDBC error messages on write failures, now providing user-actionable messages for common issues like quota limits, missing datasets, and permission errors.
+
+- Optimized Redshift write performance by aligning the JDBC batch insert size with the driver configuration, reducing overhead during data operations.
+
+- Improved dataDiff checks with granular change type filtering, allowing users to specify whether added, removed, or changed rows should trigger anomalies, with at least one type required and all three selected by default.
+
+- Enhanced the asset timeline with Agent Q co-authorship attribution, allowing users to identify which changes were made through AI-assisted workflows, with the Agent Q avatar and client name displayed on co-authored entries.
+
+- Improved the command palette with unified search and expanded asset support.
+    - Asset search is now integrated directly into the command palette alongside command search, replacing the previous standalone Search Assets shortcut.
+    - Assets can now be filtered by ID in addition to name, allowing users to jump directly to a specific item.
+    - Added support for new searchable asset types: quality checks, check templates, and anomalies.
+
+- General Fixes and Improvements.
+
 ### 2026.2.27 { id=2026.2.27 }
 
 #### Feature Enhancements
