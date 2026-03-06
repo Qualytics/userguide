@@ -13,17 +13,27 @@ These catalog integrations ensure that data quality insights are readily availab
 
 ## Setting Up Catalog Integration
 
-Navigate to Settings > Integration to configure your data catalog connection:
+Navigate to **Settings**:
 
 ![settings-button](../../../assets/integrations/data-catalogs/overview/settings-button.png)
 
-![integration-tab](../../../assets/integrations/data-catalogs/overview/integration-tab.png)
+Click on **Integrations** tab:
+![integration-tab](../../../assets/integrations/data-catalogs/overview/integration-tab.png){: style="height:200px"}
 
-![connect-integration-button](../../../assets/integrations/data-catalogs/overview/connect-integration-button.png)
+Click on **Connect**:
+![connect-integration-button](../../../assets/integrations/data-catalogs/overview/connect-integration-button.png){: style="height:300px"}
 
 ## Supported Data Catalogs
 
 Currently, Qualytics supports integration with the following data catalog platforms:
+
+| Catalog | Authentication | Status | Documentation |
+| :---- | :---- | :---- | :---- |
+| Atlan | API Token | GA | [Setup Guide](./atlan.md){target="_blank"} |
+| Alation | Refresh Token | GA | [Setup Guide](./alation.md){target="_blank"} |
+| Microsoft Purview | Service Principal (Client ID / Secret) | GA | [Setup Guide](./microsoft-purview.md){target="_blank"} |
+| Collibra | OAuth Client Credentials | Beta | [Setup Guide](./collibra.md){target="_blank"} |
+| DataHub | Personal Access Token | Beta | [Setup Guide](./datahub.md){target="_blank"} |
 
 ### Atlan
 

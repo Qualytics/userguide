@@ -56,7 +56,7 @@ Before connecting to Qualytics, you'll need to create an application in Collibra
 
 A modal window titled **"Add Collibra Integration"** will appear, asking you to fill in your connection details.
 
-![qualytics-create-collibra-connection](../../../assets/integrations/data-catalogs/collibra/qualytics-create-collibra-connection.png)
+![qualytics-create-collibra-connection](../../../assets/integrations/data-catalogs/collibra/qualytics-create-collibra-connection.png){: style="height:550px"}
 
 **Step 2:** Fill in the following connection details:
 
@@ -69,7 +69,7 @@ A modal window titled **"Add Collibra Integration"** will appear, asking you to 
 | 5. | **Event Driven** | No | When turned on, Qualytics will automatically send updates to Collibra whenever scans complete, anomalies are detected, or checks are archived (default: on). For more details, see [Event Driven](./overview.md#event-driven){:target="_blank"}. |
 | 6. | **Overwrite Tags** | No | When turned on, existing Qualytics tags with the same name are converted into external tags managed by the Collibra integration. When turned off, the existing Qualytics tag is left unchanged and the Collibra tag is skipped (default: off). For more details, see [Overwrite Tags](./overview.md#overwrite-tags){:target="_blank"}. |
 
-![add-collibra-integration](../../../assets/integrations/data-catalogs/collibra/qualytics-add-collibra-integrations.png)
+![add-collibra-integration](../../../assets/integrations/data-catalogs/collibra/qualytics-add-collibra-integrations.png){: style="height:550px"}
 
 **Step 3:** Click the **Create** button.
 
@@ -128,7 +128,6 @@ Once connected, you can sync data between Qualytics and Collibra in two directio
 | Direction | What | Description |
 | :---- | :---- | :---- |
 | **Pull** (Collibra → Qualytics) | Tags | Tags on Collibra assets are imported into Qualytics as **external tags**, keeping your governance labels visible in both platforms. |
-| **Pull** (Collibra → Qualytics) | Asset Info | Basic asset details and the sync timestamp are saved in Qualytics for reference. |
 | **Push** (Qualytics → Collibra) | Quality Score | An overall data quality score (0-100) for the asset. |
 | **Push** (Qualytics → Collibra) | Anomaly Count | How many active data quality issues exist for the asset. |
 | **Push** (Qualytics → Collibra) | Check Count | How many quality checks are actively monitoring the asset. |
@@ -243,3 +242,50 @@ As a Beta integration, there are some limitations to be aware of:
 
 !!! tip
     You can view detailed sync logs by clicking on the Collibra integration card. The logs show a summary for each datastore, including how many tables, columns, and tags were synced, along with any errors.
+
+## Examples
+
+### Asset Matching Example
+
+The following example shows how Qualytics maps a Snowflake database to Collibra assets during synchronization.
+
+**Source database:** Snowflake datastore `analytics_db.public` containing a table `orders` with a column `order_id`.
+
+During sync, Qualytics matches resources using the naming hierarchy:
+
+| Qualytics Resource | Name | Matched Collibra Asset | Collibra Asset Type |
+| :---- | :---- | :---- | :---- |
+| Datastore | `analytics_db.public` | `analytics_db` → `public` | Database → Schema |
+| Container | `orders` | `orders` | Table |
+| Field | `order_id` | `order_id` | Column |
+
+Qualytics walks through each level of the hierarchy — Database, Schema, Table, Column — and matches by name within the selected domains.
+
+### End-to-End Sync Scenario
+
+This example walks through a complete synchronization workflow between Qualytics and Collibra.
+
+**Step 1: Connect the integration**
+
+Set up the Collibra integration with your Client ID and Client Secret, then select the relevant domains (e.g., the "Analytics" domain containing your production database assets).
+
+**Step 2: Run a manual pull sync**
+
+Trigger a pull sync from Collibra. Qualytics scans the selected domains and matches Collibra assets to your datastores. Tags assigned to Collibra assets (e.g., `Certified`, `Business Critical`) appear in Qualytics as external tags on the matched datastores, tables, and columns.
+
+**Step 3: Run a scan in Qualytics**
+
+Execute a scan operation on your datastores. Qualytics evaluates your quality checks and generates quality scores, anomaly counts, and check counts for each table and column.
+
+**Step 4: Run a push sync**
+
+Trigger a push sync (or let Event Driven handle it automatically). Qualytics sends the following metadata to the matched Collibra assets:
+
+- **Quality Score** (0-100) at the datastore, table, and column level
+- **Anomaly Count** per asset
+- **Check Count** per asset
+- **Qualytics URL** linking back to the asset in Qualytics
+
+**Step 5: View results in Collibra**
+
+In Collibra, navigate to the matched table asset (e.g., `orders`). Under the custom attributes section, you will see the Qualytics Quality Score, Anomaly Count, Check Count, and a direct link to view the asset in Qualytics. These attributes are automatically created during the first push sync.
