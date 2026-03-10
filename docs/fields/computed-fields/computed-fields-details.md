@@ -48,3 +48,34 @@ The **Last Profile** timestamp helps users understand how up to date the field i
 ![last-profile](../../assets/fields/computed-fields/computed-fields-details/last-profile.png)
 
 This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
+
+## Delete a Computed Field
+
+Deleting a computed field permanently removes both the **transformation definition** and its **output field**. This is the only way to remove a computed field — computed fields cannot be excluded.
+
+### From the Field Listing
+
+1. Navigate to the container's field listing.
+2. Locate the computed field you want to delete.
+3. Click the vertical ellipsis menu (**&vellip;**) on the field row.
+4. Click the **Delete** option from the menu.
+5. Confirm the deletion in the dialog.
+
+### From the Field View
+
+1. Navigate to the computed field's detail page by clicking on the field name in the container's field listing.
+2. Click the **Delete** button in the top-right corner of the field page.
+3. Confirm the deletion in the dialog.
+
+### What Happens When a Computed Field is Deleted
+
+- The **transformation definition** is permanently removed
+- The **output field** is permanently removed
+- Any **quality checks** associated with the output field are deleted
+- **Source fields** are not affected — they retain their status and configuration
+
+!!! warning
+    This action is **irreversible**. Unlike excluding a source field (which preserves the computed field definition for later restoration), deleting a computed field permanently removes the definition and all associated data.
+
+!!! note
+    This is different from what happens when a source field is excluded. When a source field is excluded, the computed field output is also excluded but the definition is **preserved**, allowing restoration later. When you delete a computed field directly, the definition is permanently lost. For more details, see [Computed Fields and Exclusion](/fields/field-status/managing-field-status/exclude-a-field/#computed-fields-and-exclusion){target="_blank"}.
