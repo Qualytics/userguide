@@ -14,7 +14,7 @@ Computed Field Details provides a quick overview of the metrics generated from a
 
 **5 Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
-![Totals](../../assets/container/computed-fields/computed-fields-details/totals-light-9.png)
+![Totals](../../assets/fields/computed-fields/computed-fields-details/totals-overview.png)
 
 ### Profile
 
@@ -35,16 +35,16 @@ This provides detailed insights into the characteristics of the field, including
 | 11     | Q3                     | The third quartile; the central point between the median and the maximum.       |
 | 12     | Sum                    | Total sum of all observed numeric values.                                       |
 
-![Profile](../../assets/container/computed-fields/computed-fields-details/profile-light-10.png)
+![Profile](../../assets/fields/computed-fields/computed-fields-details/profile-tab.png)
 
 You can hover over the **(i)** button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
 
-![Hover](../../assets/container/computed-fields/computed-fields-details/hover-light-11.png)
+![Hover](../../assets/fields/computed-fields/computed-fields-details/hover-details.png)
 
 #### Last Profile
 
 The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
-![last-profile](../../assets/container/computed-fields/computed-fields-details/last-profile-light.png)
+![last-profile](../../assets/fields/computed-fields/computed-fields-details/last-profile.png)
 
 This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.

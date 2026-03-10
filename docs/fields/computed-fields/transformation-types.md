@@ -24,7 +24,7 @@ Use **Cast** when:
 | 5 | **Format** | Optional, Used only when converting text into dates or timestamps, so the system knows how to read the date format correctly. |
 | 6 | **Additional Metadata** | Optional information you can attach to the field to provide extra context or documentation. |
 
-![cast-options](../../assets/container/computed-fields/transformation-types/cast.png)
+![cast-options](../../assets/fields/computed-fields/transformation-types/cast.png)
 
 ### Target Type Examples
 
@@ -65,7 +65,7 @@ This transformation removes common business signifiers from entity names, making
 | 6 | **Terms to Ignore** | Specifies terms that should be excluded from the cleaning process and retained in the final output. |
 | 7 | **Additional Metadata** | Enables you to add custom metadata to enhance the computed field definition, such as descriptions or key-value attributes. |
 
-![cleaned-entity](../../assets/container/computed-fields/transformation-types/cleaned-entity-name.png)
+![cleaned-entity](../../assets/fields/computed-fields/transformation-types/cleaned-entity-name.png)
 
 ### Example for Cleaned Entity Name
 
@@ -90,7 +90,7 @@ This transformation converts formatted numeric values into a plain numeric forma
 | 3   | Field                | Selects the source field on which the transformation is applied. |
 | 4   | Additional Metadata  | Allows adding custom metadata to enhance the computed field definition (for example, descriptions or key-value attributes). |
 
-![converted-formatted-numeric](../../assets/container/computed-fields/transformation-types/converted-formatted-numeric.png)
+![converted-formatted-numeric](../../assets/fields/computed-fields/transformation-types/converted-formatted-numeric.png)
 
 ### Example for Convert Formatted Numeric
 
@@ -113,7 +113,7 @@ Enables the creation of a field based on a custom computation using Spark SQL. T
 | 3   | SQL Expression       | Enter the SQL logic used to compute the field. Use `Ctrl + Space` to view available hints and functions. |
 | 4   | Additional Metadata  | Allows adding custom metadata to enhance the computed field definition (for example, descriptions or key-value attributes). |
 
-![custom-expression](../../assets/container/computed-fields/transformation-types/custom-expression.png)
+![custom-expression](../../assets/fields/computed-fields/transformation-types/custom-expression.png)
 
 ### Using Custom Expression:
    You can combine multiple fields, apply conditional logic, or use any valid Spark SQL functions to derive your new computed field.

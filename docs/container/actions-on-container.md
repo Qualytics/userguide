@@ -29,7 +29,7 @@ The **Add** button allows users to add checks or computed fields. By clicking on
 | No. | Options | Description |
 | :---- | :---- | :---- |
 | **1.** | Checks | Checks allow you to add new checks or validation rules for the container.<br>**Note:** To learn how to add checks, refer to the [Check Templates documentation](../checks/checks-template.md){target="_blank"}.|
-| **2.** | Computed Field | Allows you to add a computed field.<br>**Note:** To learn how to create a computed field, refer to the [Computed Field Guide](../container/computed-fields/add-computed-fields.md){target="_blank"}.|
+| **2.** | Computed Field | Allows you to add a computed field.<br>**Note:** To learn how to create a computed field, refer to the [Computed Field Guide](../fields/computed-fields/add-computed-fields.md){target="_blank"}.|
 
 ## Run
 
