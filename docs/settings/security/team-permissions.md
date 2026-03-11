@@ -46,6 +46,12 @@ Legend:
 | Manage Tags (create / update / delete) | ❌ | ❌       | ✅         | ✅        | ✅             |
 | Assign Tags to Assets (Datastore, Container, Field, Check, Anomaly) | ❌ | ✅ | ✅ | ✅ |✅        |
 | Assign Tags in Flows         | ❌         | ❌       | ✅          | ✅        | ✅            |
+| View Datastore Groups        | ✅          | ✅        | ✅         | ✅        | ✅             |
+| Assign Datastore to Group    | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Manage Groups (create / edit / delete) | —  | —        | —          | —        | —              |
+
+!!! note "Datastore Group Management"
+    Creating, editing, and deleting datastore groups requires the **Manager** or **Admin** user role (organization-level) and is not controlled by Team Permissions. See [Grouping Permissions](../../source-datastore/navigation-and-organization/grouping/concepts/permissions.md){:target="_blank"} for full details.
 
 ## Add Team
 
