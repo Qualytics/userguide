@@ -39,6 +39,6 @@ The **Run** button provides options to execute operations on datasets, such as p
 
 | No. |          Options | Description |
 | :---- | :---- | :---- |
-| **1.** | Profile | **Profile** allows you to run a profiling operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling.<br>**Note:** For profile operation, please refer to the [Profile Operation documentation](../source-datastore/profile.md){target="_blank"}. |
-| **2.** | Scan  | **Scan** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset.<br>**Note:** For scan operation, please refer to the [Scan Operation documentation](../source-datastore/scan.md){target="_blank"}. |
-| **3.** | External Scan | **External Scan** allows you to upload a file and validate its data against predefined checks in the selected table.<br>**Note:** For external scan, please refer to the [ External Scan documentation](../source-datastore/external-scan.md){target="_blank"}. |
+| **1.** | Profile | **Profile** allows you to run a profiling operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling.<br>**Note:** For profile operation, please refer to the [Profile Operation documentation](../source-datastore/operations/profile.md){target="_blank"}. |
+| **2.** | Scan  | **Scan** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset.<br>**Note:** For scan operation, please refer to the [Scan Operation documentation](../source-datastore/operations/scan.md){target="_blank"}. |
+| **3.** | External Scan | **External Scan** allows you to upload a file and validate its data against predefined checks in the selected table.<br>**Note:** For external scan, please refer to the [ External Scan documentation](../source-datastore/operations/external-scan.md){target="_blank"}. |

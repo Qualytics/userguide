@@ -3,7 +3,7 @@
 Qualytics provides comprehensive support for **complex data types** (Arrays, Structs, and nested combinations) across the entire data quality pipeline: schema discovery, profiling, quality checks (scanning), anomaly reporting, and automatic constraint inference.
 
 !!! warning "DFS Datastores Only"
-    Complex data type support is currently available for **DFS (Data File System) datastores** only (e.g., Amazon S3, Azure Data Lake, Google Cloud Storage). It is **not supported** for JDBC-based datastores. For more information on DFS datastores, see the [DFS Datastore Overview](../add-datastores/overview-of-a-dfs-datastore.md){target="_blank"}.
+    Complex data type support is currently available for **DFS (Data File System) datastores** only (e.g., Amazon S3, Azure Data Lake, Google Cloud Storage). It is **not supported** for JDBC-based datastores. For more information on DFS datastores, see the [DFS Datastore Overview](../source-datastore/add-datastores/overview-of-a-dfs-datastore.md){target="_blank"}.
 
 ## What Are Complex Data Types?
 
@@ -131,7 +131,7 @@ The next scan immediately flagged **23 orders with negative quantities** and **4
 
 ## How Fields Are Discovered and Named
 
-All fields, including both top-level parents and complex type sub-fields, only appear in the UI after you run a [**Profile**](../source-datastore/profile.md){target="_blank"} operation. The profile operation discovers all fields, projects complex types (Array[Struct], nested Structs) into dot-path sub-fields, and computes statistical profiles.
+All fields, including both top-level parents and complex type sub-fields, only appear in the UI after you run a [**Profile**](../source-datastore/operations/profile.md){target="_blank"} operation. The profile operation discovers all fields, projects complex types (Array[Struct], nested Structs) into dot-path sub-fields, and computes statistical profiles.
 
 !!! warning "Important"
     You must run a **profile** operation before any fields appear in the field list. This is when complex type sub-fields (e.g., `items.sku`, `user.name.first`) are created via projection.
@@ -247,7 +247,7 @@ Same concept as Type Source, but specifically for **array element types**. Only 
 
 ## Profiling Behavior
 
-When you run a [**Profile**](../source-datastore/profile.md){target="_blank"} operation on data containing complex types, Qualytics generates rich statistical profiles, just as it does for scalar fields, but with additional metrics specific to arrays and their elements.
+When you run a [**Profile**](../source-datastore/operations/profile.md){target="_blank"} operation on data containing complex types, Qualytics generates rich statistical profiles, just as it does for scalar fields, but with additional metrics specific to arrays and their elements.
 
 **In simple terms:** Profiling tells you "what does my data look like?" For arrays, you get two layers of answers: what the arrays look like (sizes, completeness) **and** what the values inside the arrays look like (ranges, patterns, distribution).
 
