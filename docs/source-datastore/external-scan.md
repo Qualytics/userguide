@@ -8,35 +8,35 @@ Let’s get started 🚀
 
 **Step 1:** Select a source datastore from the side menu to perform the external scan operation.
 
-![datastore](../assets//external-scan/datastore-light-1.png)
+![datastore](../assets/source-datastores/external-scan/datastore-light-1.png)
 
 **Step 2:** After selecting your preferred source datastore, you will be taken to the details page. From there, click on **"Tables"** and select the table you want to perform the external scan operation on.
 
 !!! note
 	This example is based on a JDBC table, but the same steps apply to a DFS as well. For DFS source datastores, you will need to click on **"File Patterns"** and select a File Pattern to run the external scan.
 
-![tables](../assets//external-scan/tables-light-2.png)
+![tables](../assets/source-datastores/external-scan/tables-light-2.png)
 
 For demonstration purposes, we have selected the **“CUSTOMER”** table.
 
-![container](../assets//external-scan/container-light-3.png)
+![container](../assets/source-datastores/external-scan/container-light-3.png)
 
 ## External Scan Configuration
 
 **Step 1:** Click on the **“Run”** button and select the **“External Scan”** option. 
 
-![external-scan](../assets//external-scan/external-scan-light-4.png)
+![external-scan](../assets/source-datastores/external-scan/external-scan-light-4.png)
 
 **Step 2:** After selecting the **"External Scan"** option, a modal window will appear with an input for uploading your external file. After uploading the file, click the **“Run”** button to start the operation.
 
-![external-file](../assets//external-scan/external-file-light-5.png)
+![external-file](../assets/source-datastores/external-scan/external-file-light-5.png)
 
 !!! note
 	An External Scan operation supports the following file formats: CSV, XLSX, and XLS.
 
 **Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message if the operation is successfully triggered.
 
-![success](../assets//external-scan/success-light-6.png)
+![success](../assets/source-datastores/external-scan/success-light-6.png)
 
 ## Supported File Formats
 

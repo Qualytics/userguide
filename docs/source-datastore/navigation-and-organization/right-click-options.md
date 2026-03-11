@@ -22,7 +22,7 @@ Log in to your Qualytics account and right-click on the source datastore whether
 
 - Copy Name.
 
-![add-datastore](../assets/right-click/source-light-1.png)
+![add-datastore](../../assets/source-datastores/navigation-and-organization/right-click-options/source-light-1.png)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
@@ -33,7 +33,7 @@ Log in to your Qualytics account and right-click on the source datastore whether
 
 Alternatively, you can access these right-click options by performing the direct right-click operation on a source datastore from the list.
 
-![add-datastore](../assets/right-click/source-light-2.png)
+![add-datastore](../../assets/source-datastores/navigation-and-organization/right-click-options/source-light-2.png)
 
 ### Right Click Tables & Files
 
@@ -49,7 +49,7 @@ A dropdown list of options will appear:
 
 - Copy Name.
 
-![tables-files](../assets/right-click/tables-files-light-3.png)
+![tables-files](../../assets/source-datastores/navigation-and-organization/right-click-options/tables-files-light-3.png)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
@@ -60,7 +60,7 @@ A dropdown list of options will appear:
 
 Alternatively, you can access these right-click options by opening the dedicated page of the source datastore, navigating to its **Tables** or files section, and performing the right-click operation on any table or file from the list.
 
-![tables-files](../assets/right-click/tables-files-light-4.png)
+![tables-files](../../assets/source-datastores/navigation-and-organization/right-click-options/tables-files-light-4.png)
 
 ### Right Click Fields
 
@@ -76,7 +76,7 @@ A dropdown list of options will appear:
 
 - Copy Name.
 
-![field](../assets/right-click/field-light-5.png)
+![field](../../assets/source-datastores/navigation-and-organization/right-click-options/field-light-5.png)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
@@ -87,7 +87,7 @@ A dropdown list of options will appear:
 
 Alternatively, you can access these right-click options by opening the dedicated page of the table, navigating to its **Fields** section, and performing the right-click operation on any field from the list.
 
-![field](../assets/right-click/field-light-6.png)
+![field](../../assets/source-datastores/navigation-and-organization/right-click-options/field-light-6.png)
 
 ### Right Click Checks
 
@@ -103,7 +103,7 @@ A dropdown list of options will appear:
 
 - Copy Name.
 
-![checks](../assets/right-click/checks-light-7.png)
+![checks](../../assets/source-datastores/navigation-and-organization/right-click-options/checks-light-7.png)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
@@ -114,7 +114,7 @@ A dropdown list of options will appear:
 
 Alternatively, you can access these right-click options by navigating to the Checks from the Explore section.
 
-![checks](../assets/right-click/checks-light-8.png)
+![checks](../../assets/source-datastores/navigation-and-organization/right-click-options/checks-light-8.png)
 
 ### Right Click Anomalies
 
@@ -130,7 +130,7 @@ A dropdown list of options will appear:
 
 - Copy Name.
 
-![anomalies](../assets/right-click/anomalies-light-9.png)
+![anomalies](../../assets/source-datastores/navigation-and-organization/right-click-options/anomalies-light-9.png)
 
 | No | Field | Description |
 | :---- | :---- | :---- |
@@ -141,4 +141,4 @@ A dropdown list of options will appear:
 
 Alternatively, you can access these right-click options by navigating to the Anomalies from the Explore section.
 
-![anomalies](../assets/right-click/anomalies-light-10.png)
+![anomalies](../../assets/source-datastores/navigation-and-organization/right-click-options/anomalies-light-10.png)

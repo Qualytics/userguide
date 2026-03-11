@@ -6,28 +6,28 @@ In this documentation, we will explore the steps to assign a tag to the datastor
 
 **Step 1**: Login in to your Qualytics account and select the **datastore** from the left menu on which you want to assign a tag.
 
-![add-datastore](../assets/assign-tags/add-datastore-light-1.png)
+![add-datastore](../../assets/source-datastores/navigation-and-organization/assign-tags/add-datastore-light-1.png)
 
 **Step 2**: Click on **Assign Tag to this Datastore** located at the bottom-left corner of the interface.
 
-![assign-tag](../assets/assign-tags/assign-tag-light-2.png)
+![assign-tag](../../assets/source-datastores/navigation-and-organization/assign-tags/assign-tag-light-2.png)
 
 **Step 3**: A drop-up menu will appear, providing you with a list of tags. Assign an appropriate **tag** to your datastore to simplify sorting, accessing, and managing data.
 
-![select-tag](../assets/assign-tags/select-tag-light-3.png)
+![select-tag](../../assets/source-datastores/navigation-and-organization/assign-tags/select-tag-light-3.png)
 
  You can also create a new tag by clicking on the call to action (➕) button.
 
-![call-to-action](../assets/assign-tags/action-light-4.png)
+![call-to-action](../../assets/source-datastores/navigation-and-organization/assign-tags/action-light-4.png)
 
  A modal window will appear, providing the options to create the tag. Enter the required values to get started.
 
-![modal-window](../assets/assign-tags/modal-window-light-5.png)
+![modal-window](../../assets/source-datastores/navigation-and-organization/assign-tags/modal-window-light-5.png)
 
- For more information on creating tags, refer to the [Add Tag section](../tags/add-tag.md).
+ For more information on creating tags, refer to the [Add Tag section](../../tags/add-tag.md).
 
 **Step 4**: Once you have assigned a tag, the tag will be instantly labeled on your source Datastore, and all related records will be updated.
 
 For demonstration, we have assigned the **High** tag for the Snowflake source datastore **Covid-19 Data**, so it will automatically be applied to all related tables and checks within the datastore.
 
-![tag-snowflake](../assets/assign-tags/tag-snowflake-light-6.png)
+![tag-snowflake](../../assets/source-datastores/navigation-and-organization/assign-tags/tag-snowflake-light-6.png)
