@@ -2,7 +2,7 @@
 
 **Step 1:** Click on the **Enrichment** from the drop-down list.
 
-![enrichment-option](../assets/source-datastores/datastore-settings/unlink-enrichment/enrichment-light-6.png)
+![enrichment-option](../assets/source-datastores/datastore-settings/unlink-enrichment/enrichment-6.png)
 
 A modal window titled **Enrichment Datastore Settings** will appear, displaying configuration options for the linked enrichment datastore.
 

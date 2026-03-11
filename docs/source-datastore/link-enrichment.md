@@ -2,11 +2,11 @@
 
 **Step 1:** Click on the **Enrichment** from the dropdown list.
 
-![enrichment](../assets/source-datastores/datastore-settings/link-enrichment/enrichment-light-6.png)
+![enrichment](../assets/source-datastores/datastore-settings/link-enrichment/enrichment-6.png)
 
 A modal window **Link Enrichment Datastore** will appear, providing you with two options to link an **enrichment datastore**.
 
-![link-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/link-enrichment-light-7.png)
+![link-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/link-enrichment-7.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -23,7 +23,7 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 
 **Step 1:** Click on the caret button and select **Add Enrichment Datastore**.
 
-![caret](../assets/source-datastores/datastore-settings/link-enrichment/caret-light-8.png)
+![caret](../assets/source-datastores/datastore-settings/link-enrichment/caret-8.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
@@ -44,17 +44,17 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 !!! note
     Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking BigQuery as a new enrichment datastore.
 
-![select-new-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/select-new-enrichment-light-9.png)
+![select-new-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/select-new-enrichment-9.png)
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![connector-creds](../assets/source-datastores/datastore-settings/link-enrichment/connector-creds-light-10.png)
+![connector-creds](../assets/source-datastores/datastore-settings/link-enrichment/connector-creds-10.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
 **Step 4:** Click on the **Save** button.
 
-![save-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/save-enrichment-light-11.png)
+![save-enrichment](../assets/source-datastores/datastore-settings/link-enrichment/save-enrichment-11.png)
 
 After clicking on the **Save** button, a success notification appears on the screen showing the action was completed successfully.
 
@@ -80,7 +80,7 @@ If the **Use an existing enrichment datastore** option is selected from the drop
 
 **Step 3:** View and check the connection details of the enrichment datastore and click on the **Save** button.
 
-![save](../assets/source-datastores/datastore-settings/link-enrichment/save-light-15.png)
+![save](../assets/source-datastores/datastore-settings/link-enrichment/save-15.png)
 
 After clicking on the **Save** button, a success notification appears on the screen showing the action was completed successfully.
 
