@@ -102,7 +102,6 @@ nav:
         - Materialize: container/manage-tables-and-files/materialize.md
         - Delete: container/manage-tables-and-files/delete.md
         - Mark Tables & Files as Favorite: container/manage-tables-and-files/mark-tables-&-files-as-favorite.md
-      - Field Profiles: container/field-profiles.md
       - Complex Data Types: container/complex-data-types.md
       - Computed Tables and Files:
         - Overview: container/computed-tables-and-files/overview.md
@@ -110,15 +109,33 @@ nav:
         - Computed Files: container/computed-tables-and-files/computed-files.md
         - Computed Table VS File: container/computed-tables-and-files/computed-table-vs-file.md
       - Computed Join: container/computed-join.md
-      - Computed Fields: 
-        - Overview: container/computed-fields/overview.md
-        - Transformation Types: container/computed-fields/transformation-types.md
-        - Computed Fields Details: container/computed-fields/computed-fields-details.md
-        - Add Computed Fields: container/computed-fields/add-computed-fields.md
       - Data Preview: container/data-preview.md
       - Enrichment Operation:
         - Export Operation: container/enrichment-operation/export-operation.md
         - Materialize Operation: container/enrichment-operation/materialize-operation.md
+    - Fields:
+      - Overview: fields/field-profiles.md
+      - Field Status:
+        - Overview: fields/field-status/overview.md
+        - Concepts:
+          - Introduction: fields/field-status/concepts/understanding-field-status.md
+          - Status Types: fields/field-status/concepts/field-status-types.md
+          - Lifecycle: fields/field-status/concepts/field-status-lifecycle.md
+          - Merge Fields: fields/field-status/concepts/merge-fields.md
+          - API: fields/field-status/concepts/field-status-api.md
+          - FAQ: fields/field-status/concepts/field-status-faq.md
+        - Managing Field Status:
+          - Filtering by Status: fields/field-status/managing-field-status/filtering-by-status.md
+          - Mask a Field: fields/field-status/managing-field-status/mask-a-field.md
+          - Exclude a Field: fields/field-status/managing-field-status/exclude-a-field.md
+          - Restore a Field: fields/field-status/managing-field-status/restore-a-field.md
+          - Delete a Field: fields/field-status/managing-field-status/delete-a-field.md
+          - Merge Fields: fields/field-status/managing-field-status/merge-fields.md
+      - Computed Fields:
+        - Overview: fields/computed-fields/overview.md
+        - Transformation Types: fields/computed-fields/transformation-types.md
+        - Computed Fields Details: fields/computed-fields/computed-fields-details.md
+        - Add Computed Fields: fields/computed-fields/add-computed-fields.md
     - Weight:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:
@@ -439,6 +456,11 @@ plugins:
         'settings/integrations/catalog/overview.md': 'settings/integrations/data-catalogs/overview.md'
         'deployments/deployments.md': 'deployments/overview.md'
         'upgrades/qualytics-single-tenant-instance.md': 'deployments/self-hosted-deployment.md'
+        'container/field-profiles.md': 'fields/field-profiles.md'
+        'container/computed-fields/overview.md': 'fields/computed-fields/overview.md'
+        'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
+        'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
+        'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'

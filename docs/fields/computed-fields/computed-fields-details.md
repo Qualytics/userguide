@@ -14,7 +14,7 @@ Computed Field Details provides a quick overview of the metrics generated from a
 
 **5 Active Anomalies**: This tracks the number of anomalies or irregularities detected in the data. These could include outliers, duplicates, or inconsistencies that deviate from expected patterns. A count of zero indicates no anomalies, while a higher count suggests that further investigation is needed to resolve potential data quality issues.
 
-![Totals](../../assets/container/computed-fields/computed-fields-details/totals-light-9.png)
+![Totals](../../assets/fields/computed-fields/computed-fields-details/totals-overview.png)
 
 ### Profile
 
@@ -35,16 +35,47 @@ This provides detailed insights into the characteristics of the field, including
 | 11     | Q3                     | The third quartile; the central point between the median and the maximum.       |
 | 12     | Sum                    | Total sum of all observed numeric values.                                       |
 
-![Profile](../../assets/container/computed-fields/computed-fields-details/profile-light-10.png)
+![Profile](../../assets/fields/computed-fields/computed-fields-details/profile-tab.png)
 
 You can hover over the **(i)** button to view the native field properties, which provide detailed information such as the field's type (numeric), size, decimal digits, and whether it allows null values.
 
-![Hover](../../assets/container/computed-fields/computed-fields-details/hover-light-11.png)
+![Hover](../../assets/fields/computed-fields/computed-fields-details/hover-details.png)
 
 #### Last Profile
 
 The **Last Profile** timestamp helps users understand how up to date the field is. When you hover over the time indicator shown on the right side of the Last Profile label (e.g., "1 week ago"), a tooltip displays the complete date and time the field was last profiled.
 
-![last-profile](../../assets/container/computed-fields/computed-fields-details/last-profile-light.png)
+![last-profile](../../assets/fields/computed-fields/computed-fields-details/last-profile.png)
 
 This visibility ensures better context for interpreting profile metrics like mean, completeness, and anomalies.
+
+## Delete a Computed Field
+
+Deleting a computed field permanently removes both the **transformation definition** and its **output field**. This is the only way to remove a computed field — computed fields cannot be excluded.
+
+### From the Field Listing
+
+1. Navigate to the container's field listing.
+2. Locate the computed field you want to delete.
+3. Click the vertical ellipsis menu (**&vellip;**) on the field row.
+4. Click the **Delete** option from the menu.
+5. Confirm the deletion in the dialog.
+
+### From the Field View
+
+1. Navigate to the computed field's detail page by clicking on the field name in the container's field listing.
+2. Click the **Delete** button in the top-right corner of the field page.
+3. Confirm the deletion in the dialog.
+
+### What Happens When a Computed Field is Deleted
+
+- The **transformation definition** is permanently removed
+- The **output field** is permanently removed
+- Any **quality checks** associated with the output field are deleted
+- **Source fields** are not affected — they retain their status and configuration
+
+!!! warning
+    This action is **irreversible**. Unlike excluding a source field (which preserves the computed field definition for later restoration), deleting a computed field permanently removes the definition and all associated data.
+
+!!! note
+    This is different from what happens when a source field is excluded. When a source field is excluded, the computed field output is also excluded but the definition is **preserved**, allowing restoration later. When you delete a computed field directly, the definition is permanently lost. For more details, see [Computed Fields and Exclusion](/fields/field-status/managing-field-status/exclude-a-field/#computed-fields-and-exclusion){target="_blank"}.

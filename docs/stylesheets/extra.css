@@ -901,6 +901,15 @@ a.md-content__button {
 }
 
 /* Sidebar Navigation */
+.md-nav__item {
+  padding: 0;
+}
+
+.md-nav__item .md-nav__link {
+  margin-top: 0.625em;
+  margin-bottom: 0.625em;
+}
+
 .md-nav__link--active {
   color: var(--q-primary) !important;
   font-weight: 600;

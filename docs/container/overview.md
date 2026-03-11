@@ -59,9 +59,3 @@ Users can perform various operations on containers to manage datasets effectivel
 !!! note
     For more information, please refer to the [actions on container documentation](../container/actions-on-container.md){target="_blank"}.
 
-## Field Profiles
-
-After profiling a container, individual field profiles offer granular insights:
-
-!!! note
-    For more information, please refer to the [field profiles documentation](../container/field-profiles.md){target="_blank"}.
