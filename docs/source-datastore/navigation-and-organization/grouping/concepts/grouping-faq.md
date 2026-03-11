@@ -32,6 +32,9 @@ Users with **Editor** permission on a datastore can assign it to or remove it fr
 
 No. Group membership is purely organizational. It does not affect who can access, edit, or manage the datastore.
 
+!!! info "Full Permission Matrix"
+    For a complete overview of all permissions across all features, see the [Team Permissions](../../../../settings/security/team-permissions.md){:target="_blank"} page.
+
 ## Icons
 
 ### What icons are available?
