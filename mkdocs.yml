@@ -71,11 +71,11 @@ nav:
         - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
         - Grouping:
           - Overview: source-datastore/navigation-and-organization/grouping/overview.md
-          - Concepts:
+          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
+          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
+          - Deep Dive:
             - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
             - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
-            - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
-            - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
           - Managing:
             - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
             - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md

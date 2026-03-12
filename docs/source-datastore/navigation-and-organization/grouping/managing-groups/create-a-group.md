@@ -1,4 +1,4 @@
-# Create a Group
+# Create a Datastore Group
 
 This guide walks you through the steps to create a new datastore group in Qualytics.
 

@@ -1,4 +1,4 @@
-# Delete a Group
+# Delete a Datastore Group
 
 This guide walks you through the steps to delete a datastore group.
 

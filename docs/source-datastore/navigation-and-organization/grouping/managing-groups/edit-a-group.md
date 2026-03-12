@@ -1,4 +1,4 @@
-# Edit a Group
+# Edit a Datastore Group
 
 This guide walks you through the steps to edit an existing datastore group — including renaming it or changing its icon.
 
