@@ -13,21 +13,31 @@ As the number of datastores in your workspace grows, finding the right datastore
 - **Customize with icons**: Assign distinct icons to each group for quick visual identification.
 - **Filter by group**: Use group-based filtering on the datastore listing page to narrow down results.
 
-## Key Concepts
+## API
 
 | Topic | Description |
 | :--- | :--- |
-| [Understanding Datastore Grouping](concepts/understanding-grouping.md) | Learn how grouping works, its role in datastore organization, and best practices. |
-| [Permissions](concepts/permissions.md) | Understand who can create, edit, delete groups and assign datastores. |
 | [API](concepts/grouping-api.md) | API endpoints for managing datastore groups programmatically. |
+
+## FAQ
+
+| Topic | Description |
+| :--- | :--- |
 | [FAQ](concepts/grouping-faq.md) | Answers to common questions about datastore grouping. |
 
-## Managing Groups
+## Deep Dive
+
+| Topic | Description |
+| :--- | :--- |
+| [Introduction](concepts/understanding-grouping.md) | Learn how grouping works, its role in datastore organization, and best practices. |
+| [Permissions](concepts/permissions.md) | Understand who can create, edit, delete groups and assign datastores. |
+
+## Managing
 
 | Task | Description |
 | :--- | :--- |
 | [Create a Group](managing-groups/create-a-group.md) | Create a new datastore group with a custom name and icon. |
 | [Edit a Group](managing-groups/edit-a-group.md) | Rename a group or change its icon. |
 | [Delete a Group](managing-groups/delete-a-group.md) | Remove a group — datastores in the group become ungrouped. |
-| [Assign a Datastore to a Group](managing-groups/assign-a-datastore.md) | Add a datastore to an existing group. |
-| [Remove a Datastore from a Group](managing-groups/remove-a-datastore.md) | Remove a datastore from its current group. |
+| [Assign a Datastore](managing-groups/assign-a-datastore.md) | Add a datastore to an existing group. |
+| [Remove a Datastore](managing-groups/remove-a-datastore.md) | Remove a datastore from its current group. |
