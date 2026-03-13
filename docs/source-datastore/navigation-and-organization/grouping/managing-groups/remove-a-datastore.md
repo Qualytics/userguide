@@ -1,4 +1,4 @@
-# Remove a Datastore from a Group
+# Unassign a Datastore Group
 
 This guide walks you through the steps to remove a datastore from its current group.
 

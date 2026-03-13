@@ -80,8 +80,8 @@ nav:
             - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
             - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
             - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
-            - Assign a Datastore: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
-            - Remove a Datastore: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
+            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
+            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:

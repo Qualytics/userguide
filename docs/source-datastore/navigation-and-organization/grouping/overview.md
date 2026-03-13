@@ -39,5 +39,5 @@ As the number of datastores in your workspace grows, finding the right datastore
 | [Create a Group](managing-groups/create-a-group.md) | Create a new datastore group with a custom name and icon. |
 | [Edit a Group](managing-groups/edit-a-group.md) | Rename a group or change its icon. |
 | [Delete a Group](managing-groups/delete-a-group.md) | Remove a group — datastores in the group become ungrouped. |
-| [Assign a Datastore](managing-groups/assign-a-datastore.md) | Add a datastore to an existing group. |
-| [Remove a Datastore](managing-groups/remove-a-datastore.md) | Remove a datastore from its current group. |
+| [Assign a Group](managing-groups/assign-a-datastore.md) | Add a datastore to an existing group. |
+| [Unassign a Group](managing-groups/remove-a-datastore.md) | Remove a datastore from its current group. |

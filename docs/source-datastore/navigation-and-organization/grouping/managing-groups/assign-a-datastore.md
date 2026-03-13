@@ -1,4 +1,4 @@
-# Assign a Datastore to a Group
+# Assign a Datastore Group
 
 This guide walks you through the steps to assign a datastore to an existing group.
 
