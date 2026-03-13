@@ -1,8 +1,8 @@
 site_name: User Guide
 ## DEPLOYMENT URL
-site_url: https://userguide.qualytics.io/
+# site_url: https://userguide.qualytics.io/
 ## LOCAL URL
-#site_url: http://localhost:8001/userguide/
+site_url: http://localhost:8001/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
@@ -260,9 +260,31 @@ nav:
         - Overview: flows/overview-action.md
         - Operations: flows/operations.md
         - Anomaly: flows/anomaly.md
-        - Notifications: flows/notification.md
-        - Notification Tokens: flows/notification-tokens.md
-        - HTTP: flows/http.md 
+        - Notifications:
+          - Overview: flows/notifications/overview.md
+          - Message Variables: flows/notifications/message-variables.md
+          - FAQ: flows/notifications/faq.md
+          - In App:
+            - Overview: flows/notifications/in-app/overview.md
+            - API: flows/notifications/in-app/api.md
+            - FAQ: flows/notifications/in-app/faq.md
+          - Email:
+            - Overview: flows/notifications/email/overview.md
+            - API: flows/notifications/email/api.md
+            - FAQ: flows/notifications/email/faq.md
+          - Slack:
+            - Overview: flows/notifications/slack/overview.md
+            - API: flows/notifications/slack/api.md
+            - FAQ: flows/notifications/slack/faq.md
+          - Microsoft Teams:
+            - Overview: flows/notifications/microsoft-teams/overview.md
+            - API: flows/notifications/microsoft-teams/api.md
+            - FAQ: flows/notifications/microsoft-teams/faq.md
+          - PagerDuty:
+            - Overview: flows/notifications/pagerduty/overview.md
+            - API: flows/notifications/pagerduty/api.md
+            - FAQ: flows/notifications/pagerduty/faq.md
+        - HTTP: flows/http.md
         - Ticketing: flows/ticketing.md
       - View and Track Flow Executions: flows/view-created-flows.md
       - Manage Flow:
@@ -325,6 +347,15 @@ nav:
           - Overview: settings/integrations/alerting/overview.md
           - Slack: settings/integrations/alerting/slack.md
           - Microsoft Teams: settings/integrations/alerting/msft_teams.md
+          - PagerDuty:
+            - Overview: settings/integrations/alerting/pagerduty/overview.md
+            - Deep Dive: settings/integrations/alerting/pagerduty/deep-dive.md
+            - API: settings/integrations/alerting/pagerduty/pagerduty-api.md
+            - FAQ: settings/integrations/alerting/pagerduty/pagerduty-faq.md
+            - Managing PagerDuty:
+              - Add Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/add-integration.md
+              - Edit Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/edit-integration.md
+              - Remove Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/remove-integration.md
         - Ticketing: 
           - Overview: settings/integrations/ticketing/ticketing.md
           - Jira: settings/integrations/ticketing/jira.md
@@ -461,6 +492,13 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        'flows/notification.md': 'flows/notifications/overview.md'
+        'flows/notification-tokens.md': 'flows/notifications/message-variables.md'
+        'flows/notifications/in-app.md': 'flows/notifications/in-app/overview.md'
+        'flows/notifications/email.md': 'flows/notifications/email/overview.md'
+        'flows/notifications/slack.md': 'flows/notifications/slack/overview.md'
+        'flows/notifications/microsoft-teams.md': 'flows/notifications/microsoft-teams/overview.md'
+        'flows/notifications/pagerduty.md': 'flows/notifications/pagerduty/overview.md'
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'
