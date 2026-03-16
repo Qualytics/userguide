@@ -2,7 +2,7 @@
 
 Qualytics connects to source datastores using "Datastores," a framework that enables organizations to:
 
-* Connect with Apache Spark-compatible source datastores.
+* Connect with a wide range of source datastores through verified connectors.
 
 * Support both traditional databases and modern object storage.
 
@@ -50,7 +50,7 @@ Configure your source datastores in Qualytics by connecting them through a new d
 
 ## Available Datastore Connectors
 
-Qualytics supports a range of source datastores, including but not limited to:
+Qualytics provides verified connectors for the following source datastores:
 
 !!! tip
     Want to check which datastores have Enrichment support? 
