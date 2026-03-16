@@ -114,7 +114,7 @@ A data source experiences a temporary outage, and the next profile operation ret
 | **Mask sensitive fields** | Masking protects sensitive data while maintaining full quality monitoring. Use it for PII, financial data, or any field that should not be freely visible. |
 | **Exclude rather than delete** | Excluding preserves field history and allows restoration. Only hard-delete missing fields that were created by mistake and have no quality check references. |
 | **Investigate missing fields promptly** | Missing fields may indicate unplanned schema changes or data pipeline issues that require attention. |
-| **Use [merge](merge-fields.md) for column renames** | Merging preserves all historical profiles, anomalies, and quality checks under the new column name. |
+| **Use [merge](merge-fields.md){:target="_blank"} for column renames** | Merging preserves all historical profiles, anomalies, and quality checks under the new column name. |
 | **Review excluded fields periodically** | Fields that were excluded may become relevant again as business requirements change. |
 | **Re-enable quality checks after restoring** | Archived checks are not automatically restored — always verify that the appropriate checks are re-enabled after restoring a field. |
 | **Use status filters to monitor field health** | Regularly review the Missing and Excluded tabs to maintain awareness of your data model's current state. |

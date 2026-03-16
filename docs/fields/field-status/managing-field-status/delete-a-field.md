@@ -10,9 +10,9 @@ Only **missing** fields and **computed fields** can be permanently deleted. Acti
 | :--- | :--- | :--- |
 | **Missing** field | Yes | Must have never been referenced by any quality check (current or past) |
 | **Computed** field | Yes | Always deletable — removes both the definition and the output field |
-| **Active** field | No | Use [Exclude](exclude-a-field.md) to remove from monitoring instead |
-| **Masked** field | No | Use [Exclude](exclude-a-field.md) to remove from monitoring instead |
-| **Excluded** field | No | Use [Restore](restore-a-field.md) to bring it back to active first |
+| **Active** field | No | Use [Exclude](exclude-a-field.md){:target="_blank"} to remove from monitoring instead |
+| **Masked** field | No | Use [Exclude](exclude-a-field.md){:target="_blank"} to remove from monitoring instead |
+| **Excluded** field | No | Use [Restore](restore-a-field.md){:target="_blank"} to bring it back to active first |
 
 ## Delete from the Field Listing
 
