@@ -82,7 +82,7 @@ A modal window titled **“Anomaly Details”** will appear, displaying all the 
 
 ![modal](../assets/explore/anomalies/modal-light.png)
 
-For more details on Anomaly Details, please refer to the [**Anomaly Insights**](../anomalies/anomaly-insights.md) section in the documentation.
+For more details on Anomaly Details, please refer to the [**Anomaly Insights**](../anomalies/details/insights.md) section in the documentation.
 
 ## Acknowledged Anomalies
 
