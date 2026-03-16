@@ -117,13 +117,13 @@ nav:
       - Overview: fields/field-profiles.md
       - Field Status:
         - Overview: fields/field-status/overview.md
-        - Concepts:
+        - API: fields/field-status/concepts/field-status-api.md
+        - FAQ: fields/field-status/concepts/field-status-faq.md
+        - Deep Dive:
           - Introduction: fields/field-status/concepts/understanding-field-status.md
           - Status Types: fields/field-status/concepts/field-status-types.md
           - Lifecycle: fields/field-status/concepts/field-status-lifecycle.md
           - Merge Fields: fields/field-status/concepts/merge-fields.md
-          - API: fields/field-status/concepts/field-status-api.md
-          - FAQ: fields/field-status/concepts/field-status-faq.md
         - Managing Field Status:
           - Filtering by Status: fields/field-status/managing-field-status/filtering-by-status.md
           - Mask a Field: fields/field-status/managing-field-status/mask-a-field.md

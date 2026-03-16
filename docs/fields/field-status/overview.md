@@ -23,7 +23,14 @@ With Field Status, you can:
 - **Missing** fields were previously active but are no longer found in the source data. They are automatically restored if they reappear.
 - **Excluded** fields have been manually removed from monitoring by a user. Their quality checks are archived and the field is hidden from default listings.
 
-## Concepts
+## API & FAQ
+
+| Topic | Description |
+| :--- | :--- |
+| [Field Status API](concepts/field-status-api.md) | API endpoints for managing field status, viewing masked values, and accessing audit logs. |
+| [Field Status FAQ](concepts/field-status-faq.md) | Answers to common questions about field status behavior. |
+
+## Deep Dive
 
 | Topic | Description |
 | :--- | :--- |
@@ -31,8 +38,6 @@ With Field Status, you can:
 | [Status Types](concepts/field-status-types.md) | Detailed reference for all four statuses, how they are assigned, and visual indicators. |
 | [Status Lifecycle](concepts/field-status-lifecycle.md) | Status transition diagram and details on what triggers each transition. |
 | [Merge Fields](concepts/merge-fields.md) | How to combine a missing field with an active field after a column rename, preserving all history. |
-| [Field Status API](concepts/field-status-api.md) | API endpoints for managing field status, viewing masked values, and accessing audit logs. |
-| [Field Status FAQ](concepts/field-status-faq.md) | Answers to common questions about field status behavior. |
 
 ## Managing Field Status
 
