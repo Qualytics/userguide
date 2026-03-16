@@ -85,9 +85,7 @@ For detailed integration instructions, please refer to the [<u>quick start guide
 
 **Q 7: What types of database technology can you connect in Qualytics?**
 
-**A 7:** Qualytics supports any Apache Spark-compatible datastore, including:
-- Relational databases (RDBMS)
-- Raw file formats (CSV, XLSX, JSON, Avro, Parquet)
+**A 7:** Qualytics provides verified connectors for a wide range of datastores, including relational databases (RDBMS) and raw file formats (CSV, XLSX, JSON, Avro, Parquet). Because Qualytics is built on Apache Spark, additional JDBC-accessible datastores may be technically compatible. If your datastore is not listed among our verified connectors, contact us — our team will evaluate feasibility and work with you to determine whether a supported connection can be established.
 
 **Q 8: What is an enrichment datastore?**
 

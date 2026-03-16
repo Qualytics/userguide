@@ -33,7 +33,7 @@ Alignment of the content to the required standards, schemas, and formats.
 Components that can be easily connected to and used to integrate with other applications and databases. Common uses include sending and receiving data.
 
 !!! info
-    We can connect to any Apache Spark accessible datastore. If you have a datastore we don’t yet support, talk to us! We currently support: Files (CSV, JSON, XLSX, Parquet) on Object Storage (S3, Azure Blob, GCS); ETL/ELT Providers (Fivetran, Stitch, Airbyte, Matillion – and any of their connectors!); Data Warehouses (BigQuery, Snowflake, Redshift); Data Pipelining (Airflow, DBT, Prefect); Databases (MySQL, PostgreSQL, MSSQL, SQLite, etc.) and any other JDBC source.
+    Qualytics provides verified connectors for a wide range of datastores, including: Files (CSV, JSON, XLSX, Parquet, Delta, Iceberg) on Object Storage (S3, Azure Blob, GCS); Data Warehouses (BigQuery, Snowflake, Redshift); and Databases (Oracle, MSSQL, MySQL, PostgreSQL, Trino, etc.). Because Qualytics is built on Apache Spark, additional JDBC-accessible datastores or file formats may be technically compatible. If yours is not listed, contact us — our team will evaluate feasibility and work with you to determine whether a supported connection can be established.
 
 ### <a name="consistency"></a>__Consistency__
 
