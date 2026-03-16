@@ -70,9 +70,9 @@ Fields display visual status indicators to help you quickly identify their state
 
 | Ref. | Status | Color | Icon |
 | :--- | :--- | :--- | :--- |
-| 1 | **Active** | Default (neutral) | Standard field type icon |
+| 1 | **Active** | Default (neutral) | Check circle icon (`mdi-check-circle`) |
 | 2 | **Masked** | Amber/Warning | Shield lock icon (`mdi-shield-lock-outline`) |
-| 3 | **Missing** | Warning (yellow/orange) | Alert icon with "Missing field" tooltip |
-| 4 | **Excluded** | Negative (red) | Alert icon with "Excluded field" tooltip |
+| 3 | **Missing** | Warning (yellow/orange) | Alert circle icon (`mdi-alert-circle`) with "Missing field" tooltip |
+| 4 | **Excluded** | Negative (red) | Eye-off icon (`mdi-eye-off`) with "Excluded field" tooltip |
 
 ![status-indicators](../../../assets/fields/field-status/concepts/field-status-types/status-indicators.png)
