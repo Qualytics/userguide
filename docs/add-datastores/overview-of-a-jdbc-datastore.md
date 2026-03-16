@@ -1,6 +1,6 @@
 # JDBC Datastore Overview
 
-JDBC Datastore in Qualytics allows you to easily integrate and manage data from relational databases. Using the Java Database Connectivity (JDBC) API, you can securely connect to databases, analyze data, and perform data profiling. This feature supports a wide range of relational databases, providing you with a flexible solution for data discovery and quality checks.
+JDBC Datastore in Qualytics allows you to easily integrate and manage data from relational databases. Using the Java Database Connectivity (JDBC) API, you can securely connect to databases, analyze data, and perform data profiling. Qualytics provides verified connectors for the databases listed below. Because the platform is built on Apache Spark, additional JDBC-accessible databases may be technically compatible — contact us to evaluate feasibility for your specific datastore.
 
 ## Adding JDBC Datastore
 
@@ -12,7 +12,7 @@ For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Da
 
 ## Supported JDBC Databases
 
-Qualytics supports a range of relational databases, including but not limited to:
+Qualytics provides verified connectors for the following relational databases:
 
 * [Athena](../add-datastores/athena.md)  
 * [Databricks](../add-datastores/databricks.md)

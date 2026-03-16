@@ -80,7 +80,7 @@ Let's walk through each step in detail.
 
 ## Understanding Datastores
 
-In Qualytics, a Datastore represents your data source connection. Qualytics supports any Apache Spark-compatible data source, including:
+In Qualytics, a Datastore represents your data source connection. Qualytics provides verified connectors for a wide range of data sources, including:
 
 ### JDBC Datastores
 
