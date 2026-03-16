@@ -16,15 +16,15 @@ You can delete individual anomalies using one of two methods:
 
 **Step 1:** Click on **Archived** from the **navigation bar** in the **Anomalies** section to view all archived anomalies.
 
-![archive-anomaly](../assets/datastores/delete-anomalies/archive-anomaly.png)
+![archive-anomaly](../../assets/anomalies/manage-anomalies/delete-anomalies/archive-anomaly.png)
 
 **Step 2:** Locate the anomaly that you want to delete and click on the **Delete** icon located on the right side of the anomaly.
 
-![delete-anomaly](../assets/datastores/delete-anomalies/delete-anomaly.png)
+![delete-anomaly](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-anomaly.png)
 
 **Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
 
-![delete-button-1](../assets/datastores/delete-anomalies/delete-button-1.png)
+![delete-button-1](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-button-1.png)
 
 After clicking on the **Delete** button, your anomaly is successfully deleted and a confirmation message appears on the screen.
 
@@ -32,15 +32,15 @@ After clicking on the **Delete** button, your anomaly is successfully deleted an
 
 **Step 1:** Click on the archived anomaly from the list of archived anomalies that you want to delete.
 
-![delete-anomaly-1](../assets/datastores/delete-anomalies/delete-anomaly-1.png)
+![delete-anomaly-1](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-anomaly-1.png)
 
 **Step 2:** You will be directed to the anomaly details page. Click on the **Settings** icon located at the top right corner of the page and select **“Delete”** from the dropdown menu.
 
-![vertical-delete](../assets/datastores/delete-anomalies/vertical-delete.png)
+![vertical-delete](../../assets/anomalies/manage-anomalies/delete-anomalies/vertical-delete.png)
 
 **Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the anomaly from the system.
 
-![delete-button-2](../assets/datastores/delete-anomalies/delete-button-1.png)
+![delete-button-2](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-button-1.png)
 
 After clicking on the **Delete** button, your anomaly is successfully deleted and a confirmation message appears on the screen.
 
@@ -50,18 +50,18 @@ For more efficient management, you can delete multiple anomalies at once using t
 
 **Step 1:** Hover over the archived anomalies and click on the checkbox to select anomalies in bulk.
 
-![bulk-delete](../assets/datastores/delete-anomalies/bulk-delete.png)
+![bulk-delete](../../assets/anomalies/manage-anomalies/delete-anomalies/bulk-delete.png)
 
 When multiple anomalies are selected, an action toolbar appears, displaying the total number of anomalies chosen along with a vertical ellipsis for additional bulk action options.
 
-![bulk-delete-options](../assets/datastores/delete-anomalies/bulk-delete-options.png)
+![bulk-delete-options](../../assets/anomalies/manage-anomalies/delete-anomalies/bulk-delete-options.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Delete"** from the dropdown menu to delete the selected anomalies.
 
-![delete-bulk](../assets/datastores/delete-anomalies/delete-bulk.png)
+![delete-bulk](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-bulk.png)
 
 **Step 3:** A confirmation modal window will appear, click on the **Delete** button to permanently remove the selected anomalies from the system.
 
-![delete-button-3](../assets/datastores/delete-anomalies/delete-button-3.png)
+![delete-button-3](../../assets/anomalies/manage-anomalies/delete-anomalies/delete-button-3.png)
 
 After clicking on the **Delete** button, your anomalies are successfully deleted and a confirmation message appears on the screen.

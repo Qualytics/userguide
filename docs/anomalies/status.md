@@ -8,7 +8,7 @@ Let’s get started 🚀
 
 Open anomalies are data quality issues that have been detected but not yet resolved or archived. This category is divided into three sub-statuses that help track the progress and handling of each anomaly.
 
-![open-anomalies](../assets/datastores/anomaly-status/open-anomalies.png)
+![open-anomalies](../assets/anomalies/status/open-anomalies.png)
 
 **1 Active**: By clicking on the Active button, the user can see anomalies that are currently unresolved and have not been acknowledged, archived, or resolved. It may require immediate attention.
 
@@ -20,7 +20,7 @@ Open anomalies are data quality issues that have been detected but not yet resol
 
 Archived anomalies are issues that have already been reviewed and moved out of the active monitoring flow. These anomalies are categorized based on how they were resolved or classified, helping maintain a clear historical record without cluttering ongoing monitoring efforts.
 
-![archive-anomalies](../assets/datastores/anomaly-status/archive-anomalies.png)
+![archive-anomalies](../assets/anomalies/status/archive-anomalies.png)
 
 **1 Resolved**: This indicates that the anomaly was a legitimate data quality concern and has been addressed.
 
@@ -33,7 +33,7 @@ Archived anomalies are issues that have already been reviewed and moved out of t
     **Recommended approach:**  
     Set the anomaly as **Discarded** instead and include the **original anomaly ID** or a meaningful comment. This keeps the fingerprinting logic accurate.
 
-    For more information refer to the [Anomaly Fingerprint Documentation](../anomalies/anomaly-fingerprints.md)
+    For more information refer to the [Anomaly Fingerprint Documentation](../anomalies/fingerprints.md)
 
 **3 Invalid**: This indicates that the anomaly is not a legitimate data quality concern and does not require further action.
 

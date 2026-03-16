@@ -6,11 +6,11 @@ Let’s get started 🚀
 
 **Step 1:** Click on the anomaly that you want to see the details of.
 
-![anomaly-details](../assets/datastores/anomaly-insights/anomaly-details.png)
+![anomaly-details](../../assets/anomalies/details/insights/anomaly-details.png)
 
 You will be navigated to the details section, where you can view the **Summary**, **Failed Checks**, **Source Records** and **Activity** information.
 
-![anomaly-details-view](../assets/datastores/anomaly-insights/anomaly-details-view.png)
+![anomaly-details-view](../../assets/anomalies/details/insights/anomaly-details-view.png)
 
 ## Description
 
@@ -41,7 +41,7 @@ To edit an anomaly's description:
 
 The **Summary** section provides a quick overview of the anomaly's key attributes. It includes the anomaly's status, total anomalous records, failed checks, weight, detection time, scan information, and the corresponding datastore and table. This section helps users quickly understand where the anomaly occurred and its potential impact.
 
-![summary](../assets/datastores/anomaly-insights/summary.png)
+![summary](../../assets/anomalies/details/insights/summary.png)
 
 | No. | Field | Description |
 | :---- | :---- | :---- |
@@ -56,27 +56,27 @@ The **Summary** section provides a quick overview of the anomaly's key attribute
 | 9 | Location | Displays the full path of the table in the datastore. This helps users trace the exact location of the anomaly within the data pipeline. You can click on the copy icon to copy the full location path of the table where the anomaly was detected. |
 | 10 | Tags | Highlights the severity or categorization of the anomaly. The tag High indicates a high-priority issue. You can add or remove tags from the anomaly by clicking on the tag badge. |
 
-![summary-fields](../assets/datastores/anomaly-insights/summary-fields.png)
+![summary-fields](../../assets/anomalies/details/insights/summary-fields.png)
 
 ### Failed Checks
 
 The **Failed Checks** section lists the data quality checks that were violated and subsequently triggered the anomaly. Each listed item displays the check ID, type of violation, and a summarized description of the failure condition.
 
-![failed-checks-section](../assets/datastores/anomaly-insights/failed-checks-section.png)
+![failed-checks-section](../../assets/anomalies/details/insights/failed-checks-section.png)
 
 Click on a failed check to view the corresponding quality check information.
 
-![check](../assets/datastores/anomaly-insights/check.png)
+![check](../../assets/anomalies/details/insights/check.png)
 
 A right-side panel will open, allowing you to view the details without navigating to a different page.
 
-![right-panel](../assets/datastores/anomaly-insights/right-panel.png)
+![right-panel](../../assets/anomalies/details/insights/right-panel.png)
 
 ### Source Records
 
 The Source Records section displays all the data and fields related to the detected anomaly from the dataset. It is an Enrichment Datastore that is used to store the analyzed results, including any anomalies and additional metadata in files; therefore, it is recommended to add/link an enrichment datastore with your connected source datastore.
 
-![source-records](../assets/datastores/anomaly-insights/source-records.png)
+![source-records](../../assets/anomalies/details/insights/source-records.png)
 
 For more information on Source Records, please refer to the [Source Records](source-record.md) section in the documentation.
 
@@ -84,11 +84,11 @@ For more information on Source Records, please refer to the [Source Records](sou
 
 The **Activity** section provides a complete timeline of actions and events related to the anomaly. It helps users track how the anomaly has been handled and by whom, ensuring better collaboration and accountability.
 
-![activity-section](../assets/datastores/anomaly-insights/activity-section.png)
+![activity-section](../../assets/anomalies/details/insights/activity-section.png)
 
 Users can leave comments to discuss the issue, add context, or communicate decisions. All comments are timestamped and attributed to the respective user.
 
 !!! note
     Users can’t add, edit, or delete comments in the **Activity** section when an anomaly is archived **(Duplicated, Invalid, or Resolved)**. Restore the anomaly to make updates, then revert its status if needed.
 
-![comment](../assets/datastores/anomaly-insights/comment.png)
+![comment](../../assets/anomalies/details/insights/comment.png)

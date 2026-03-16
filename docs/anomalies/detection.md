@@ -45,4 +45,4 @@ The Scan operation asserts rigorous quality checks to identify any anomalies wit
 An Anomaly is a data record or column that fails a data quality check during a Scan Operation. These anomalies are identified through both Inferred and Authored Checks and are grouped together to highlight data quality issues. This process ensures that any deviations from expected data quality standards are promptly identified and addressed.
 
 !!! note 
-    For more information, please refer to the documentation [Anomalies Overview](anomalies.md).
+    For more information, please refer to the documentation [Anomalies Overview](overview.md).

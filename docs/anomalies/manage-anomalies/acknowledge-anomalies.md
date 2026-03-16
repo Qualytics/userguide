@@ -11,21 +11,21 @@ You can acknowledge individual anomalies either directly or through the action m
 
 **Step 1:** Log in to your Qualytics account and select the datastore from the left menu on which you want to manage your anomalies.
 
-![datastore-light-1](../assets/datastores/acknowledge-anomalies/datastore-light-1.png)
+![datastore-light-1](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/datastore-1.png)
 
 **Step 2**: Click on the **“Anomalies”** from the Navigation Tab.
 
-![anomalies](../assets/datastores/acknowledge-anomalies/anomalies.png)
+![anomalies](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/anomalies.png)
 
 **1. Acknowledge Directly**
 
 **Step 1:** Locate the active anomaly you want to acknowledge.
 
-![acknowledge-directly](../assets/datastores/acknowledge-anomalies/acknowledge-directly.png)
+![acknowledge-directly](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-directly.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Acknowledge”** from the dropdown menu.
 
-![acknowledge-option](../assets/datastores/acknowledge-anomalies/acknowledge-option.png)
+![acknowledge-option](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-option.png)
 
 After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a confirmation message appears on the screen.
 
@@ -33,11 +33,11 @@ After clicking on the **Acknowledge** button your anomaly is successfully moved 
 
 **Step 1**: Click on the active anomaly from the list of available anomalies that you want to acknowledge.
 
-![acknowledge-directly](../assets/datastores/acknowledge-anomalies/acknowledge-directly.png)
+![acknowledge-directly](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-directly.png)
 
 **Step 2:** You will be directed to the anomaly details page. Click on the **Acknowledge** button located at the top-right corner of the interface.
 
-![vertical-acknowledge](../assets/datastores/acknowledge-anomalies/vertical-acknowledge.png)
+![vertical-acknowledge](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/vertical-acknowledge.png)
 
 After clicking on the **Acknowledge** button your anomaly is successfully moved to the acknowledged state and a confirmation message appears on the screen.
 
@@ -47,24 +47,24 @@ By acknowledging anomalies in bulk, you can quickly mark multiple anomalies as r
 
 **Step 1:** Hover over the active anomalies and click on the checkbox to select multiple anomalies.
 
-![acknowledge-bulk](../assets/datastores/acknowledge-anomalies/acknowledge-bulk.png)
+![acknowledge-bulk](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-bulk.png)
 
 When multiple anomalies are selected, an action toolbar appears, displaying the total number of selected anomalies along with a vertical ellipsis for additional bulk action options.
 
-![action-toolbar](../assets/datastores/acknowledge-anomalies/action-toolbar.png)
+![action-toolbar](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/action-toolbar.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Acknowledge"** from the dropdown menu to acknowledge the selected anomalies.
 
-![vertical-acknowledge-1](../assets/datastores/acknowledge-anomalies/vertical-acknowledge-1.png)
+![vertical-acknowledge-1](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/vertical-acknowledge-1.png)
 
 A modal window titled **“Acknowledge Anomalies”** will appear, confirming that this action acknowledges the anomalies as a legitimate data quality concern.
 
 You also have the option to leave a comment in the provided field to provide additional context or details.
 
-![acknowledge-anomalies](../assets/datastores/acknowledge-anomalies/acknowledge-anomalies.png)
+![acknowledge-anomalies](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-anomalies.png)
 
 **Step 3:** Click on the **Acknowledge** button to acknowledge the anomalies.
 
-![acknowledge-button](../assets/datastores/acknowledge-anomalies/acknowledge-button.png)
+![acknowledge-button](../../assets/anomalies/manage-anomalies/acknowledge-anomalies/acknowledge-button.png)
 
 After clicking on the **Acknowledge** button your anomalies are successfully moved to the acknowledged state and a confirmation message appears on the screen.

@@ -10,11 +10,11 @@ You can archive individual anomalies either directly or through the action menu.
 
 **Step 1:** Locate the anomaly (whether Active or Acknowledged) you want to archive.
 
-![archive-action](../assets/datastores/archive-anomalies/archive-action.png)
+![archive-action](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-action.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** located on the right side of the anomaly and select **“Archive”** from the dropdown menu.
 
-![archive-option](../assets/datastores/archive-anomalies/archive-option.png)
+![archive-option](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-option.png)
 
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
@@ -23,15 +23,15 @@ You can archive individual anomalies either directly or through the action menu.
 * **Duplicate**: Choose this option if the anomaly is a duplicate of another existing data quality concern. This helps avoid redundant tracking and ensures that related issues are managed under a single, consolidated anomaly.
 * **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
-![archive-anomaly-options](../assets/datastores/archive-anomalies/archive-anomaly-options.png)
+![archive-anomaly-options](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-anomaly-options.png)
 
 You also have the option to leave a comment in the provided field to provide additional context or details.
 
-![comment-1](../assets/datastores/archive-anomalies/comment-1.png)
+![comment-1](../../assets/anomalies/manage-anomalies/archive-anomalies/comment-1.png)
 
 **Step 4:** Once you've made your selection, click the **Archive** button to proceed.
 
-![archive-button](../assets/datastores/archive-anomalies/archive-button.png)
+![archive-button](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-button.png)
 
 After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
 
@@ -39,11 +39,11 @@ After clicking on the **Archive** button, your anomaly is moved to the archive a
 
 **Step 1**: Click on the anomaly from the list of available (whether Active or Acknowledged) anomalies that you want to archive.
 
-![archive-action](../assets/datastores/archive-anomalies/archive-action.png)
+![archive-action](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-action.png)
 
 **Step 2:** You will be directed to the anomaly details page. Click on the **Archive** button located at the top right corner of the interface.
 
-![vertical-archive](../assets/datastores/archive-anomalies/vertical-archive.png)
+![vertical-archive](../../assets/anomalies/manage-anomalies/archive-anomalies/vertical-archive.png)
 
 **Step 3:** A modal window titled **“Archive Anomaly”** will appear, providing you with the following archive options:
 
@@ -52,15 +52,15 @@ After clicking on the **Archive** button, your anomaly is moved to the archive a
 * **Duplicate**: Choose this option if the anomaly is a duplicate of another existing data quality concern. This helps avoid redundant tracking and ensures that related issues are managed under a single, consolidated anomaly.
 * **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
-![archive-options](../assets/datastores/archive-anomalies/archive-anomaly-options.png)
+![archive-options](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-anomaly-options.png)
 
 You also have the option to leave a comment in the provided field to provide additional context or details.
 
-![comment-2](../assets/datastores/archive-anomalies/comment-1.png)
+![comment-2](../../assets/anomalies/manage-anomalies/archive-anomalies/comment-1.png)
 
 **Step 4:** Once you've made your selection, click the **Archive** button to proceed.
 
-![archive-button-2](../assets/datastores/archive-anomalies/archive-button.png)
+![archive-button-2](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-button.png)
 
 After clicking on the **Archive** button, your anomaly is moved to the archive and a confirmation message appears on the screen.
 
@@ -70,15 +70,15 @@ To handle multiple anomalies efficiently, you can archive them in bulk, allowing
 
 **Step 1:** Hover over the anomaly (whether Active or Acknowledged) and click on the checkbox to select multiple anomalies.
 
-![archive-bulk](../assets/datastores/archive-anomalies/archive-bulk.png)
+![archive-bulk](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-bulk.png)
 
 When multiple anomalies are selected, an action toolbar appears, displaying the total number of selected anomalies along with a vertical ellipsis for additional bulk action options.
 
-![archive-bulk-vertical](../assets/datastores/archive-anomalies/archive-bulk-vertical.png)
+![archive-bulk-vertical](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-bulk-vertical.png)
 
 **Step 2:** Click on the **vertical ellipsis (⋮)** and choose **"Archive"** from the dropdown menu to archive the selected anomalies.
 
-![archive-option-bulk](../assets/datastores/archive-anomalies/archive-option-bulk.png)
+![archive-option-bulk](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-option-bulk.png)
 
 **Step 3:** A modal window titled **“Archive Anomalies”** will appear, providing you with the following archive options:
 
@@ -87,14 +87,14 @@ When multiple anomalies are selected, an action toolbar appears, displaying the 
 * **Duplicate**: Choose this option if the anomaly is a duplicate of another existing data quality concern. This helps avoid redundant tracking and ensures that related issues are managed under a single, consolidated anomaly.
 * **Discarded**: Choose this option if the anomaly is no longer being reviewed or considered relevant. This helps remove outdated or unnecessary anomalies from the active list without marking them as invalid or resolved.
 
-![archive-bulk-options](../assets/datastores/archive-anomalies/archive-bulk-options.png)
+![archive-bulk-options](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-bulk-options.png)
 
 You also have the option to leave a comment in the provided field to provide additional context or details.
 
-![comment-3](../assets/datastores/archive-anomalies/comment-3.png)
+![comment-3](../../assets/anomalies/manage-anomalies/archive-anomalies/comment-3.png)
 
 **Step 4:** Once you've made your selection, click on the **Archive** button to proceed.
 
-![archive-button-2](../assets/datastores/archive-anomalies/archive-button-3.png)
+![archive-button-2](../../assets/anomalies/manage-anomalies/archive-anomalies/archive-button-3.png)
 
 After clicking on the **Archive** button, your anomalies are moved to the archive and a confirmation message appears on the screen.

@@ -6,7 +6,7 @@ Filter and Sort options allow you to organize your anomalies by various criteria
 
 You can sort your anomalies by **Anomalous Records**, **Created Date**, and **Weight** to easily organize and prioritize them according to your needs.
 
-![sort-options](../assets/datastores/filter-sort-anomalies/sort-options.png)
+![sort-options](../../assets/anomalies/manage-anomalies/filter-and-sort/sort-options.png)
 
 | No. | Sort By Option | Description |
 | :---- | :---- | :---- |
@@ -16,7 +16,7 @@ You can sort your anomalies by **Anomalous Records**, **Created Date**, and **We
 
 Whatever sorting option is selected, you can arrange the data either in ascending or descending order by clicking the caret button next to the selected sorting criteria.
 
-![sort-order](../assets/datastores/filter-sort-anomalies/sort-order.png)
+![sort-order](../../assets/anomalies/manage-anomalies/filter-and-sort/sort-order.png)
 
 ## Filter
 
@@ -24,11 +24,11 @@ Whatever sorting option is selected, you can arrange the data either in ascendin
     start='<!-- FUZZY-SEARCH --start -->' 
     end='<!-- FUZZY-SEARCH --end -->' 
 %}
-![filter](../assets/datastores/filter-sort-anomalies/fuzzy-anomalies.png)
+![filter](../../assets/anomalies/manage-anomalies/filter-and-sort/fuzzy-anomalies.png)
 
 You can filter your anomalies based on values like **Timeframe**, **Type**, **Rule**, and **Tags**, etc.
 
-![filter](../assets/datastores/filter-sort-anomalies/filter-1.png)
+![filter](../../assets/anomalies/manage-anomalies/filter-and-sort/filter-1.png)
 
 | No. | Field | Description |
 | :---- | :---- | :---- |
@@ -39,7 +39,7 @@ You can filter your anomalies based on values like **Timeframe**, **Type**, **Ru
 | 5 | Field | Filters anomalies based on the column in the table where the issue was found. |
 | 6 | Check | Filters anomalies based on the check that generated them. |
 
-![filter](../assets/datastores/filter-sort-anomalies/filter-2.png)
+![filter](../../assets/anomalies/manage-anomalies/filter-and-sort/filter-2.png)
 
 | No. | Filter | Description |
 | :---- | :---- | :---- |
