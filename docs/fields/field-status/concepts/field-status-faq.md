@@ -42,7 +42,7 @@ The field is automatically restored to **Active** status during the next profile
 
 #### Can I manually restore a missing field?
 
-No, a missing field cannot be manually restored. It is automatically restored to **Active** when the field reappears in the source data during a subsequent profile operation. If the field will not reappear, you can use the [merge](merge-fields.md){:target="_blank"} operation if the field was renamed.
+No, a missing field cannot be manually restored — the platform will reject the request. It is automatically restored to **Active** when the field reappears in the source data during a subsequent profile operation. If the field will not reappear, you can use the [merge](merge-fields.md){:target="_blank"} operation if the field was renamed.
 
 #### Does excluding a field affect computed fields that depend on it?
 

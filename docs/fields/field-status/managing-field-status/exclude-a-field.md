@@ -9,7 +9,7 @@ Only fields with **Active** or **Masked** status can be excluded.
 When you exclude a field:
 
 - **Field Profiling**: The field is no longer profiled
-- **Quality Checks**: Associated checks are set to Discarded; [Expected Schema](/checks/expected-schema-check/) checks remove the field from their properties
+- **Quality Checks**: Associated checks are set to Discarded; [Expected Schema](/checks/expected-schema-check/) checks are updated to remove the excluded field from their definition
 - **[Computed Fields](/fields/computed-fields/overview/)**: Any computed fields sourced from this field are also excluded (see [Computed Fields and Exclusion](#computed-fields-and-exclusion))
 
 ## Exclude from the Field Listing

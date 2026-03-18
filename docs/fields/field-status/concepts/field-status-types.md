@@ -2,7 +2,7 @@
 
 Qualytics assigns one of four statuses to each field:
 
-| Status | Assigned By | Description |
+| Status | Assignment | Description |
 | :--- | :--- | :--- |
 | **Active** | Automatic | The field is fully operational. It will be included in profiling (collecting metadata and statistics), scan operations (detecting anomalies), and quality checks will run against it. This is the default status assigned by the system when a field is first discovered during a profile operation. |
 | **Masked** | Manual | The field is fully operational (profiled, scanned, quality-checked) but its actual values are hidden by default. Users with Editor permission can request to view the real values, and every reveal action is audit-logged. |
@@ -49,7 +49,7 @@ Key behaviors for missing fields:
 
 - **Automatic restoration**: If the field reappears in a subsequent profile, it is automatically restored to **Active**
 - **No check archival**: Quality checks are not archived for missing fields (unlike excluded fields), since the status is expected to be transient
-- **Cascading**: If a source field goes missing, any computed fields that depend on it are also marked as **Missing**
+- **Cascading**: When a profile marks a source field as Missing, any computed fields that depend on it are also marked as **Missing** within that same run
 
 ### Excluded (Manual)
 
