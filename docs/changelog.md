@@ -2,6 +2,69 @@
 
 ## Release Notes
 
+### 2026.3.18 { id=2026.3.18 }
+
+#### Feature Enhancements
+
+- Renamed the Catalog operation to Sync, now performing delta-based processing that only analyzes changes instead of recalculating all container metadata.
+    - The Sync operation processes only what has changed since the last run, significantly reducing execution time on large datastores.
+
+- Introduced Field Masking to protect sensitive data such as PII and ePHI, allowing fields to be marked as masked so their values are scrubbed from all standard data responses.
+    - Masked field values are replaced with a placeholder ***MASKED*** in container previews, source record retrievals, enrichment reads, and quality check dry runs.
+    - Privileged users can request unmasked values through an explicit override, with all access recorded in an audit trail.
+    - Fields serving as container identifiers (incremental, partition, or group-by fields) cannot be masked to preserve operational integrity.
+
+- Display names and descriptions from data catalog integrations — When synced with a data catalog (Atlan, Alation, Microsoft Purview, Collibra, or DataHub), Qualytics automatically populates descriptions on datastores, and display names and descriptions on containers and fields from the catalog's asset metadata.
+    - When a display name is set, it is shown across the entire platform in place of the source name, with the original name still accessible via an info icon.
+    - Display names and descriptions can also be manually assigned directly in Qualytics, independently of any data catalog integration.
+
+- Added multi-schema source datastore creation, allowing users to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step.
+    - Available catalogs and schemas are automatically discovered from the connection, letting users browse and select which ones to onboard.
+    - An optional second step allows linking all newly created source datastores to a single enrichment datastore, either by selecting an existing one or creating a new one during the same flow.
+
+- Enabled a Business Context configuration in the LLM integration, providing personalized Agent Q suggestions tailored to each organization's data governance responsibilities.
+    - Administrators can describe their team's business focus and data quality scope in the LLM integration settings, providing Agent Q with relevant organizational context.
+    - Agent Q suggestions now incorporate both the organization's business context and a summary of the user's most recent chat session for more relevant recommendations.
+
+- Introduced team restriction mode, allowing administrators to view and interact with the platform from the perspective of a specific team.
+    - Administrators can select a team from the profile dropdown to restrict their session, temporarily assuming a Manager role scoped to that team's permissions and visibility.
+    - A visual indicator is displayed in the toolbar while a restriction is active, providing clear awareness of the current team context.
+    - The restriction persists across navigation and page reloads until explicitly removed by the user.
+
+#### General Fixes and Improvements
+
+- Resolved computed join container previews returning empty results under certain key overlap conditions.
+
+- Corrected timezone abbreviations not reflecting Daylight Saving Time, now dynamically displaying the correct label (e.g., EDT vs EST) based on the date being shown.
+
+- Addressed Agent Q chat context and message content overflowing the input field when expanding long responses.
+
+- Fixed freshness chart anomaly bars not displaying the correct highlight color and heatmap data reflecting all checks instead of only the selected one.
+
+- Resolved a race condition during API startup that could cause intermittent authentication errors.
+
+- Fixed stale scheduler jobs causing phantom flow executions after changing a flow's trigger type, now properly cleaning up scheduled jobs when the trigger type is modified or a flow is deleted.
+
+- Resolved the Atlan integration not populating check and anomaly counts, now correctly synchronizing metadata for both new and existing installations.
+
+- Corrected observability operations failing on datastores containing computed joins with computed fields.
+
+- Resolved reference filters in quality checks not substituting check variables, causing validation and scan errors on checks using dynamic placeholder values.
+
+- Added an Export as PDF option for Agent Q responses, allowing users to download individual messages as formatted PDFs that preserve the chat's visual layout.
+
+- Optimized profiling performance for containers with large field counts, including more efficient correlation analysis, significantly reducing execution time on wide schemas.
+
+- Enhanced datastore group visibility across the application, now displaying group information in breadcrumbs and adding management actions directly in the sidebar.
+
+- Updated delete confirmation dialogs across the application to clearly communicate the impact of each action before proceeding.
+
+- Improved Snowflake connection validation to surface warning messages about potential warehouse issues, such as undersized or suspended warehouses.
+
+- Removed the five key-value pair limit from the additional metadata editor, now supporting unlimited entries with scrollable and collapsible views.
+
+- General Fixes and Improvements.
+
 ### 2026.3.6 { id=2026.3.6 }
 
 #### Feature Enhancements
