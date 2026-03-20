@@ -78,7 +78,26 @@ Administrators can access the masking audit log to review all masked value revea
 
 #### How are masked values protected?
 
-Masked field values are automatically hidden everywhere in the platform — including Data Preview, Anomaly Source Records, field profile histograms, and external integrations. The platform ensures values are protected at multiple stages of data processing.
+Masked field values are automatically hidden at every stage of data processing:
+
+- **Data Preview** — values display as `***MASKED***`; users with Editor permission can reveal them with the "Show masked values" button
+- **Anomaly Source Records** — values are hidden by default; users with Editor permission can reveal them per record
+- **Field Profile Histograms** — chart values are replaced for masked fields in the UI
+- **Anomaly Assertion Context** — values in anomaly check details are unconditionally masked; there is no inline reveal
+- **Export Operation (Field Profiles)** — histogram bucket values are masked in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation** — source record values are masked in container snapshots written to the enrichment datastore
+
+Every reveal action in the UI is recorded in the masking audit log.
+
+#### Are masked values protected in Export and Materialize operation outputs?
+
+Yes. When you export Field Profiles, histogram bucket values for masked fields are replaced with `***MASKED***` in the output file written to the enrichment datastore (`_field_profiles_export`). When you run a Materialize operation, source record values for masked fields are also replaced with `***MASKED***` in the materialized container snapshot.
+
+These enrichment datastore outputs do not support inline reveal. To obtain unmasked data in export or materialize output, unmask the field in Qualytics and re-run the operation.
+
+#### Are masked values in anomaly details (assertion context) revealable?
+
+No. Masked field values that appear in anomaly check details and assertion context are unconditionally masked — there is no inline reveal for this surface. This is intentional: anomaly details are often shared, exported, or referenced in tickets, and sensitive values must not be exposed in those contexts. To investigate a specific value, use the Anomaly Source Records reveal toggle instead.
 
 #### Can I manage field status via API?
 

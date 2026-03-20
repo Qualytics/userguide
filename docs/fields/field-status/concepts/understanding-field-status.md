@@ -29,7 +29,16 @@ For example, if a table contains legacy columns that are no longer populated but
 
 Masking allows you to protect fields containing sensitive data (PII, financial data, health records) while maintaining full quality monitoring. Masked fields continue to be profiled, scanned, and evaluated by quality checks — the only difference is that their actual values are hidden across the platform by default.
 
-Users with Editor permission can request to view unmasked values when needed, and every reveal action is recorded in the masking audit log for compliance purposes.
+Masking is enforced at every point where field values are surfaced or written:
+
+- **Data Preview** — values display as `***MASKED***` and require an explicit reveal action
+- **Anomaly Source Records** — values are hidden by default; users can toggle reveal per record
+- **Field Profile Histograms** — chart values are replaced for masked fields in the UI
+- **Anomaly Assertion Context** — check detail values are unconditionally masked; no inline reveal is available
+- **Export Operation (Field Profiles)** — histogram bucket values are masked in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation** — source record values are masked in container snapshots written to the enrichment datastore
+
+Users with Editor permission can request to view unmasked values in the UI surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize outputs do not support inline reveal — to obtain unmasked data in those outputs, the field must first be unmasked and the operation re-run.
 
 ### Schema Change Detection
 
