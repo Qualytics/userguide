@@ -8,15 +8,15 @@ Let's get started 🚀
 
 **Step 1:** Login into your Qualytics account and select the **datastore** from the left menu on which you want to add a volumetric check.
 
-![volumetric-check](../assets/checks/volumetric-check/datastore-light-1.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/datastore.png)
 
 **Step 2:** Click the **Add** button and select **Checks**.
 
-![volumetric-check](../assets/checks/volumetric-check/check-light-2.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/check.png)
 
 **Step 3:** A modal window appears. Enter the required details to configure the **Volumetric Check.**
 
-![volumetric-check](../assets/checks/volumetric-check/modal-light-3.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/modal.png)
 
 **Step 4:** Enter the details to configure the volumetric check**:**
 
@@ -25,11 +25,11 @@ Let's get started 🚀
 |      **1.** |           Rule Type | Select the Volumetric Rule type from the dropdown. |
 |      **2.** |          Table | Select the table for the rule to apply. |
 
-![volumetric-check](../assets/checks/volumetric-check/name-light-4.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/name.png)
 
 **3. Comparison:**  Specifies the type of comparison: Absolute Change, Absolute Value, or Percentage Change:
 
-![volumetric-check](../assets/checks/volumetric-check/comparision-light-5.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/comparision.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -50,7 +50,7 @@ Let's get started 🚀
         | #3    | 250           | No               |
         | #4    | <div class="text-negative">310</div> | <div class="text-negative">Yes</div> |
     
-![volumetric-check](../assets/checks/volumetric-check/absolute-light-6.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/absolute.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -71,7 +71,7 @@ Let's get started 🚀
         | #3    | 150            | 220           | 70              | No               |
         | #4    | 220            | <div class="text-negative">300</div> | <div class="text-negative">80</div>  | <div class="text-negative">Yes</div> |
 
-![volumetric-check](../assets/checks/volumetric-check/change-light-7.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/change.png)
 
 !!! note "Details"
     ### Comparison Options
@@ -95,15 +95,15 @@ Let's get started 🚀
         | 4    | 120            | 65            | <div class="text-negative">-45.83%</div> | <div class="text-negative">Yes</div> |
         | 5    | 65             | 110           | <div class="text-negative">69.23%</div>  | <div class="text-negative">Yes</div>  |
 
-![volumetric-check](../assets/checks/volumetric-check/percentage-light-8.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/percentage.png)
 
 **4. Measurement Period Days:** Enter the number of days for measurement.
 
-![volumetric-check](../assets/checks/volumetric-check/measurement-light-9.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/measurement.png)
 
 **5. Threshold:** At least the Min or Max value must be specified, and including both is optional. These values determine the acceptable range or limit of change in the field's value.
 
-![volumetric-check](../assets/checks/volumetric-check/threshold-light-10.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/threshold.png)
 
 **Min Value**
 
@@ -111,13 +111,13 @@ Let's get started 🚀
 
 * A negative Min Value signifies an allowable decrease, determining the minimum value the field can drop to be considered valid.
 
-![volumetric-check](../assets/checks/volumetric-check/min-light-11.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/min.png)
 
 **Max Value**
 
 * Indicates the maximum allowable increase in the field’s value, setting an upper limit for the value's acceptable growth or change.
 
-![volumetric-check](../assets/checks/volumetric-check/max-light-12.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/max.png)
 
 | No. |                           Field |                                       Description |
 | :---- | :---- | :---- |
@@ -125,23 +125,23 @@ Let's get started 🚀
 | **7.** |                       **Tag** | Add tags for categorizing the check. |
 | **8.** |           **Additional Metadata** | Add custom metadata for additional details. |
 
-![volumetric-check](../assets/checks/volumetric-check/last-light-13.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/last.png)
 
 **Step 4:** After completing all the check details, click on the "Validate" button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
 
-![volumetric-check](../assets/checks/volumetric-check/validate-light-14.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/validate.png)
 
 If the validation is successful, a green message will appear saying "Validation Successful".
 
-![volumetric-check](../assets/checks/volumetric-check/msg-light-15.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/msg.png)
 
 **Step 5:** Once you have a successful validation, click the **"Save"** button.
 
-![volumetric-check](../assets/checks/volumetric-check/save-light-16.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/save.png)
 
 After clicking on the **“Save”** button your check is successfully created and a success flash message will appear saying **“Check successfully created”.**
 
-![volumetric-check](../assets/checks/volumetric-check/success-light-17.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/success.png)
 
 ### How It Works
 
@@ -181,4 +181,4 @@ Each time data volume is measured for an asset, the system automatically updates
 
 * Ensures quick detection and response to potential data issues.
 
-![volumetric-check](../assets/checks/volumetric-check/volumetric-check-light.png)
+![volumetric-check](../assets/data-quality-checks/volumetric-check/volumetric-check.png)

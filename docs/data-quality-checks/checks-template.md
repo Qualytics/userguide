@@ -10,15 +10,15 @@ Let's get started 🚀
 
 **Step 1:** Log in to your Qualytics account and click the **"Library"** button on the left-side panel.
 
-![library](../assets/checks/add-check-template/library-light-1.png)
+![library](../assets/data-quality-checks/checks-template/library.png)
 
 **Step 2:** Click on the **"Add Check Template"** button in the top-right corner.
 
-![add-check](../assets/checks/add-check-template/add-check-light-2.png)
+![add-check](../assets/data-quality-checks/checks-template/add-check.png)
 
 A modal titled **"Check Template Details"** will appear, providing you with the options to add the check template details.
 
-![template-detail](../assets/checks/add-check-template/template-detail.png)
+![template-detail](../assets/data-quality-checks/checks-template/template-detail.png)
 
 ## Create a Check Template
 
@@ -40,7 +40,7 @@ For more details about the available rule types, refer to the "[Check Rule Types
 !!! note
     Different rule types have different sets of fields and options appearing when selected.
 
-![rule-type](../assets/checks/add-check-template/rule-type.png)
+![rule-type](../assets/data-quality-checks/checks-template/rule-type.png)
 
 ### Filter Clause
 
@@ -50,7 +50,7 @@ The filter clause defines the conditions under which the check will be applied. 
 
 **Example:** A filter clause might be used to apply the check only to rows where a certain column meets a specific condition, such as `WHERE status = 'active'`.
 
-![filter-clause](../assets/checks/add-check-template/filter-clause.png)
+![filter-clause](../assets/data-quality-checks/checks-template/filter-clause.png)
 
 #### Using *each()*
 
@@ -145,7 +145,7 @@ Adjust the **Coverage** setting to specify the percentage of records that must c
 !!! note
     The Coverage setting applies to most rule types and allows you to specify the percentage of records that must meet the validation criteria.
 
-![coverage-setting](../assets/checks/add-check-template/coverage-setting.png)
+![coverage-setting](../assets/data-quality-checks/checks-template/coverage-setting.png)
 
 ### Template Options
 
@@ -153,7 +153,7 @@ Check or uncheck the **"Template Locked"** option to determine whether all check
 
 For more information about the template state, jump to the "[**Template State**](#template-state)" section below.  
 
-![template](../assets/checks/add-check-template/template.png)
+![template](../assets/data-quality-checks/checks-template/template.png)
 
 ### Description
 
@@ -163,30 +163,30 @@ Enter a detailed description of the check template, including its purpose, appli
 
 This description clarifies that the specified field must be present in a particular file (`bank_transactions_*.csv`) and column (`Total_Transaction_Amount`) within the Bank Dataset.
 
-![description](../assets/checks/add-check-template/description.png)
+![description](../assets/data-quality-checks/checks-template/description.png)
 
 ### Tags
 
 Assign relevant tags to your check template to facilitate easier searching and filtering based on categories like **"Analytics"**, **"CDE"**, or **"Demo"**.
 
-![tag](../assets/checks/add-check-template/tag.png)
+![tag](../assets/data-quality-checks/checks-template/tag.png)
 
 ### Additional Metadata
 
 Add key-value pairs as additional metadata to enrich your check. Click the plus icon **(+)** next to this section to open the metadata input form, where you can add key-value pairs.
 
-![metadata](../assets/checks/add-check-template/metadata.png)
+![metadata](../assets/data-quality-checks/checks-template/metadata.png)
 
 Enter the desired key-value pairs (e.g., **DataSourceType: SQL Database** and **PriorityLevel: High**). After entering the necessary metadata, click **"Confirm"** to save the custom metadata.  
 
-![key-value](../assets/checks/add-check-template/key-value.png)
+![key-value](../assets/data-quality-checks/checks-template/key-value.png)
 
 **Step 4:** Once you have entered all the required fields, click the **“Save”** button to finalize the template.
 
 !!! warning
     Once a template is saved, the selected rule type becomes locked and cannot be changed.
 
-![save-button](../assets/checks/add-check-template/save-button.png)
+![save-button](../assets/data-quality-checks/checks-template/save-button.png)
 
 After clicking the **Save** button, a success notification appears on the screen confirming that the check template was created successfully.
 
@@ -200,13 +200,13 @@ Once a check template is created, you can view its details by clicking on it, wh
 
 The **Overview** tab gives a complete view of a check template, showing its key details, configuration, and recent activities. In the **Summary** section, users can also use redirect buttons to quickly navigate to related tabs like **Checks** and **Active Anomalies**. Information is divided into three sections: **Summary**, **Activity**, and **Definition**.
 
-![details-view](../assets/checks/add-check-template/details-view.png)
+![details-view](../assets/data-quality-checks/checks-template/details-view.png)
 
 #### Summary
 
 The Summary section provides a quick overview of the check template's key details, including its name, type, priority, coverage, associated checks, active anomalies, description, and tags — helping users quickly understand its purpose and current status.
 
-![summary-section](../assets/checks/add-check-template/summary-section.png)
+![summary-section](../assets/data-quality-checks/checks-template/summary-section.png)
 
 | REF. | Field | Description |
 | :---- | :---- | :---- |
@@ -219,13 +219,13 @@ The Summary section provides a quick overview of the check template's key detail
 | 7 | Description | A short statement explaining the logic or purpose of the check template. |
 | 8 | Tags | Used to categorize and filter templates (e.g., “Sandbox”). Users can change the tags by clicking the tag badge. |
 
-![summary-fields](../assets/checks/add-check-template/summary-fields.png)
+![summary-fields](../assets/data-quality-checks/checks-template/summary-fields.png)
 
 #### Definition
 
 The Definition section displays the configuration details of a check template. It outlines the target conditions, specific properties, and any additional metadata associated with the template, providing clarity on how and where it is applied.
 
-![definition-section](../assets/checks/add-check-template/definition-section.png)
+![definition-section](../assets/data-quality-checks/checks-template/definition-section.png)
 
 | REF. | Field | Description |
 | :---- | :---- | :---- |
@@ -233,37 +233,37 @@ The Definition section displays the configuration details of a check template. I
 | 2 | Properties | Displays configuration details specific to the check type. Content varies based on the selected check: <br><ul><li> **Field Count Checks**: Shows "Number of Fields". </li><li> **Metric Checks**: Shows "Comparison", "Min Value", and "Max Value".</li> |
 | 3 | Metadata | Displays any custom metadata properties linked to the template. If none are defined, this section remains empty. |
 
-![definition-fields](../assets/checks/add-check-template/definition-fields.png)
+![definition-fields](../assets/data-quality-checks/checks-template/definition-fields.png)
 
 #### History
 
 The History section provides a chronological log of all actions and updates related to this template. It tracks key events such as creation, modifications, and other relevant activities, along with timestamps to show when they occurred.
 
-![activity](../assets/checks/add-check-template/activity.png)
+![activity](../assets/data-quality-checks/checks-template/activity.png)
 
 You can hover over a timestamp to view the full date and last modified time.
 
-![modified](../assets/checks/add-check-template/modified.png)
+![modified](../assets/data-quality-checks/checks-template/modified.png)
 
 ### Checks Tab
 
 The **Checks** tab provides a comprehensive view of all checks linked to the chosen datastore, container, or field, along with their source details such as computed table and field information. By clicking options such as **Active, Important, Favorite, Draft, Archived** (Invalid and Discarded), or **All,** users can instantly view checks based on their status. This categorization helps in organizing, reviewing, and managing checks more effectively for consistent data quality oversight.
 
-![checks](../assets/checks/add-check-template/checks-tab.png)
+![checks](../assets/data-quality-checks/checks-template/checks-tab.png)
 
 Alternatively, users can navigate to the **Checks** tab directly from the **Overview** tab by clicking the redirect button in the **Checks** section of the Summary panel.
 
-![checks-button](../assets/checks/add-check-template/redirect-checks.png)
+![checks-button](../assets/data-quality-checks/checks-template/redirect-checks.png)
 
 ### Anomalies Tab
 
 The **Anomalies** tab displays all anomalies detected for the selected check template, along with details such as source datastore, computed table, field, rule, and the number of anomalous records. Users can view anomalies based on their status: **Open, Active, Acknowledged, Archived,** or **All** and sort them based on specific parameters.
 
-![anomalies](../assets/checks/add-check-template/anomalies-tab.png)
+![anomalies](../assets/data-quality-checks/checks-template/anomalies-tab.png)
 
 Alternatively, users can navigate to the **Anomalies** tab directly from the **Overview** tab by clicking the redirect button in the **Active Anomalies** section of the Summary panel.
 
-![anomalies-button](../assets/checks/add-check-template/redirect-anomalies.png)
+![anomalies-button](../assets/data-quality-checks/checks-template/redirect-anomalies.png)
 
 ## Multiple Checks Creation
 
@@ -271,7 +271,7 @@ Users can create multiple checks at once by selecting a template and adding mult
 
 **Step 1:** Click on the **Add** button located in the top right corner and select **Multiple Checks** from the dropdown.
 
-![add-button](../assets/checks/add-check-template/add.png)
+![add-button](../assets/data-quality-checks/checks-template/add.png)
 
 A **Bulk Add Quality Checks** modal window will appear. Fill in the details:
 
@@ -282,11 +282,11 @@ A **Bulk Add Quality Checks** modal window will appear. Fill in the details:
 | 3.| Field | Select the field to apply the check on. |
 | 4.| Filter Clause | Specify a valid [Spark SQL](https://spark.apache.org/docs/latest/sql-ref.html) `WHERE` expression to filter the data on which the check will be applied. |
 
-![modal-window](../assets/checks/add-check-template/window.png)
+![modal-window](../assets/data-quality-checks/checks-template/window.png)
   
 **Step 2:** Click on the **Add Target** button to create another check. You can keep adding targets to create as many checks as you need within the same template.
 
-![add-target](../assets/checks/add-check-template/target.png)
+![add-target](../assets/data-quality-checks/checks-template/target.png)
 
 ## Template State
 

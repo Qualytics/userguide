@@ -111,7 +111,7 @@ After running the check, Qualytics produced the following **Source Records** vie
 | <span class="text-negative">{ "ssn": "913-38-6794" }</span> | 004881ebe3826fc16cfd124968f2a5bb | 12223 |
 | <span class="text-negative">{ "ssn": "796-00-1624" }</span> | 001d507e80c4e4d2ce4aba05590f8313 | 80971 |
 
-![anomaly-result](../assets/checks/contains-social-security-number/anomaly-result.png)
+![anomaly-result](../assets/data-quality-checks/contains-social-security-number/anomaly-result.png)
 
 ### What Contains Social Security Number Discovered
 

@@ -159,7 +159,7 @@ After running the Data Diff check, the system identified mismatched records betw
 | removed     | 10249    | 12.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Anna Brown → <span style="color:red">missing</span>         | USB Cable → <span style="color:red">missing</span>    |
 | removed     | 10250    | 29.00 → <span style="color:red">missing</span>      | 2025-01-15 → <span style="color:red">missing</span>       | Tom Wilson → <span style="color:red">missing</span>         | Mouse → <span style="color:red">missing</span>        |
 
-![deactivate-user](../assets/checks/data-diff/anomaly-result.png)
+![deactivate-user](../assets/data-quality-checks/data-diff/anomaly-result.png)
 
 ### 🔍 Summary
 - These three records exist in the **Original Orders Database** but are **missing from the Backup Orders Database**.  
@@ -225,7 +225,7 @@ The issue was detected in the **insurance_plan** field for the patient **Robert 
 |----------------|-------------------|-------------------|------------------------------|-----------------------------|
 | Changed        | Robert Martinez   | insurance_plan    | BlueCross Plan A             | <span style="color:red">BlueCross Plan B</span>            |
 
-![deactivate-user](../assets/checks/data-diff/anomaly-detail.png)
+![deactivate-user](../assets/data-quality-checks/data-diff/anomaly-detail.png)
 
 ## Key Takeaways
 

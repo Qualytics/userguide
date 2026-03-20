@@ -123,7 +123,7 @@ When reviewing the flagged records, the team noticed values like:
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
 | <span class="text-negative">Customer#000000002</span> | AUTOMOBILE | 23-768-687-3665 | 2 |
 
-![anomaly-result](../assets/checks/contains-email/anomaly-result.png)
+![anomaly-result](../assets/data-quality-checks/contains-email/anomaly-result.png)
 
 ### Summary
 

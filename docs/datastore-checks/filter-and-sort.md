@@ -35,7 +35,7 @@ You can filter your checks based on values like **Check Type**, **Asserted State
 
 |No     |     Filter  |   Filter Value  |  Description|
 | :---- |  :----       |  :----         |  :----      |
-| **1** | **Check Type** | **All** | Displays all types of checks, both [inferred](../checks/inferred-check.md) and [authored](../checks/authored-check.md). |
+| **1** | **Check Type** | **All** | Displays all types of checks, both [inferred](../data-quality-checks/inferred-check.md) and [authored](../data-quality-checks/authored-check.md). |
 |  |  | **Inferred** | Shows system-generated checks that automatically validate data based on detected patterns or logic. |
 |  |  | **Authored** | Displays user-created checks, allowing the user to focus on custom validations tailored to specific requirements. |
 | **2** | **Asserted State** | **All** | Displays all checks, regardless of their asserted status. This provides a full overview of both passed, failed, and not asserted checks. |
@@ -51,4 +51,4 @@ You can filter your checks based on values like **Check Type**, **Asserted State
 | **4** | **Tag** | **N/A** | Tag Filter displays only the tags associated with the currently visible items, along with their color icon, name, type, and the number of matching records. Selecting one or more tags refines the list based on your selection. If no matching items are found, a 'No options found' message is displayed.|
 | **5** | **Table** | **N/A** | Filters checks by the table to which they are applied. |
 | **6** | **Field** | **N/A** | Filters checks by the specific field/column name within a table. |
-| **7** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
+| **7** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../data-quality-checks/checks-template.md). |

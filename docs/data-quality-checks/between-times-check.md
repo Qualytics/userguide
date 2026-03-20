@@ -136,7 +136,7 @@ They configured a **Between Times** check on the `CREATED_DATE` field with the a
 | <span class="text-negative">1992-09-20T18:47:49.845Z</span> | 169 | 951372 | 1012 |
 | <span class="text-negative">2019-10-16T12:39:31.870Z</span> | 169 | 953637 | 1002 |
 
-![anomaly-result](../assets/checks/between-time/anomaly-result.png)
+![anomaly-result](../assets/data-quality-checks/between-time/anomaly-result.png)
 
 ### 🔍 Summary
 

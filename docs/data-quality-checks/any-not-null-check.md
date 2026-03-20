@@ -163,7 +163,7 @@ These records appeared under **Failed Checks** with a clear violation message:
 
 > There is no value set for any of `O_COMMENT` and `O_ORDERSTATUS`
 
-![anomaly-detail](../assets/checks/any-not-null/anomaly-detail.png)
+![anomaly-detail](../assets/data-quality-checks/any-not-null/anomaly-detail.png)
 
 ### What This Confirmed
 

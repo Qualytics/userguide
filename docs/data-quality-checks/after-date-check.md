@@ -176,7 +176,7 @@ All failed records shared the same issue:
 | <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer012@example.com | C012 |
 | <span class="text-negative">2022-03-01T10:00:00.000Z</span> | customer009@example.com | C009 |
 
-![anomaly-result](../assets/checks/after-date-time/anomaly-result.png)
+![anomaly-result](../assets/data-quality-checks/after-date-time/anomaly-result.png)
 
 **Why they failed:**
 

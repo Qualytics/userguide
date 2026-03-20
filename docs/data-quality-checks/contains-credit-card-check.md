@@ -95,7 +95,7 @@ During the scan, Qualytics identified **26 anomalous records** where the `CARD_N
 | <span class="text-negative">Missing</span> | customer008@example.com | P107 | 3  | 2022-02-01 |
 | <span class="text-negative">Missing</span> | customer004@example.com | P103 | 4  | 2022-02-01 |
 
-![output](../assets/checks/contains-credit-card/anomaly-detail.png)
+![output](../assets/data-quality-checks/contains-credit-card/anomaly-detail.png)
 
 !!! warning "Anomaly Detected"
     - **Rule Applied:** Contains Credit Card  

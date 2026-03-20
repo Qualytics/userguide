@@ -172,7 +172,7 @@ This ensured that every insurance record used a valid granularity level for risk
 | <span class="text-negative">6</span>  | 21986             | 152933   | -19570        |
 | <span class="text-negative">10</span> | 71621             | -12793   | -32706        |
 
-![between-check-anomaly-result](../assets/checks/between-check/anomaly-result.png)
+![between-check-anomaly-result](../assets/data-quality-checks/between-check/anomaly-result.png)
 
 These records were structurally valid but **numerically invalid** according to business rules.
 

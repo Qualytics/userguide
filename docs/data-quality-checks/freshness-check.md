@@ -85,15 +85,15 @@ Same behavior as Snowflake:
 
 **Step 1:** Log in into your Qualytics account and select the **datastore** from the left menu on which you want to add a volumetric check.
 
-![freshness-check](../assets/checks/freshness-check/select-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/select.png)
 
 **Step 2:** Click the **Add** button and select **Checks**.
 
-![freshness-check](../assets/checks/freshness-check/add-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/add.png)
 
 **Step 3:** A modal window appears. Enter the required details to configure the **Freshness Check.**
 
-![freshness-check](../assets/checks/freshness-check/window-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/window.png)
 
 **Step 4:** Enter the details to configure the volumetric check:
 
@@ -107,23 +107,23 @@ Same behavior as Snowflake:
 | 6. |               Tag | Add tags for categorizing the check. |
 | 7. |  Additional Metadata | Add custom metadata for additional details. |
 
-![freshness-check](../assets/checks/freshness-check/fields-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/fields.png)
 
 **Step 5:** After completing all the check details, click on the "Validate" button. This will perform a validation operation on the check without saving it. The validation allows you to verify that the logic and parameters defined for the check are correct. It ensures that the check will work as expected by running it against the data without committing any changes.
 
-![freshness-check](../assets/checks/freshness-check/validatebtn-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/validatebtn.png)
 
 If the validation is successful, a green message will appear saying "Validation Successful".
 
-![freshness-check](../assets/checks/freshness-check/validate-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/validate.png)
 
 **Step 6:** Once you have a successful validation, click the **"Save"** button.
 
-![freshness-check](../assets/checks/freshness-check/save-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/save.png)
 
 After clicking on the **“Save”** button your check is successfully created and a success flash message will appear saying **“Check successfully created”.**
 
-![freshness-check](../assets/checks/freshness-check/success-light.png)
+![freshness-check](../assets/data-quality-checks/freshness-check/success.png)
 
 ## Example 
 
