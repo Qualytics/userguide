@@ -29,7 +29,16 @@ For example, if a table contains legacy columns that are no longer populated but
 
 Masking allows you to protect fields containing sensitive data (PII, financial data, health records) while maintaining full quality monitoring. Masked fields continue to be profiled, scanned, and evaluated by quality checks — the only difference is that their actual values are hidden across the platform by default.
 
-Users with Editor permission can request to view unmasked values when needed, and every reveal action is recorded in the masking audit log for compliance purposes.
+Masking is enforced at every point where field values are surfaced or written:
+
+- **Data Preview** — values are obfuscated and require an explicit reveal action
+- **Anomaly Source Records** — values are obfuscated by default; users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
+- **Field Profile Histograms** — chart values are obfuscated for masked fields
+- **Anomaly Assertion Context** — check detail values are unconditionally obfuscated; no inline reveal is available
+- **Export Operation (Field Profiles)** — histogram bucket values are obfuscated in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation** — source record values are obfuscated in container snapshots written to the enrichment datastore
+
+Users with Editor permission can request to reveal values in the surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize operations also support reveal via the `include_masked` API parameter — this is not available in the UI.
 
 ### Schema Change Detection
 
@@ -90,7 +99,7 @@ Your team has decided to stop using the `legacy_customer_id` column. Instead of 
 Your dataset contains a `social_security_number` column that must be monitored for quality but should not be visible anywhere in the platform. You mask the field:
 
 1. Quality checks continue to run — you still detect anomalies in the SSN field.
-2. Actual SSN values are replaced with `***MASKED***` everywhere in the platform.
+2. Actual SSN values are obfuscated everywhere in the platform.
 3. In Data Preview and Anomaly Source Records, values are hidden by default.
 4. When an analyst needs to investigate a specific anomaly, they can reveal the masked values — and that access is audit-logged.
 

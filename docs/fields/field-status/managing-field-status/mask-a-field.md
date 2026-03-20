@@ -6,17 +6,32 @@ Only fields with **Active** status can be masked. This includes both regular fie
 
 ## What Happens When a Field is Masked
 
-When you mask a field:
+When you mask a field, its actual values are obfuscated everywhere they would otherwise appear. Quality checks, profiling, and scanning all continue to run normally — masking only affects value visibility.
 
-- **Everywhere in the platform**: Field values are replaced with `***MASKED***` (a placeholder text indicating the value is protected)
+Specifically, obfuscated values appear in the following places:
+
 - **Data Preview**: Values are hidden in the container preview — users must explicitly reveal them
-- **Anomaly Source Records**: Values are not shown by default — users can toggle reveal per record
-- **Field Profile Histograms**: Chart values are hidden for masked fields
+- **Anomaly Source Records**: Values are hidden by default — users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
+- **Field Profile Histograms**: Chart values are obfuscated for masked fields in the field profile view
+- **Anomaly Assertion Context**: The values embedded in anomaly check details are unconditionally obfuscated — they cannot be revealed inline
+- **Export Operation (Field Profiles)**: Histogram bucket values for masked fields are obfuscated in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation**: Source record values for masked fields are obfuscated in materialized container snapshots written to the enrichment datastore
 - **Quality Checks**: Continue to run normally — masking does not affect quality monitoring
 - **Profiling and Scanning**: Continue to run normally
 
 !!! info
-    Users with **Editor** permission or above can request to view unmasked values. Every reveal action is **audit-logged** for security and compliance purposes.
+    Users with **Editor** permission or above can request to reveal values in the surfaces that support reveal (Data Preview and Anomaly Source Records). Every reveal action is **audit-logged** for security and compliance purposes.
+
+## Where Masking Is Applied
+
+| Surface | Operation that produces it | Reveal available? |
+| :--- | :--- | :--- |
+| Data Preview | Container read (live query) | Yes — "Show masked values" button |
+| Anomaly Source Records | Scan / Dry Run | Yes — per-anomaly reveal toggle (all records revealed together) |
+| Field Profile Histograms (UI) | Profile | Yes — via `include_masked` API parameter |
+| Anomaly Assertion Context | Scan / Dry Run | No — unconditionally masked |
+| Field Profiles Export | Export Operation | Yes — via `include_masked` API parameter (not available in the UI) |
+| Materialized Snapshots | Materialize Operation | Yes — via `include_masked` API parameter (not available in the UI) |
 
 ## Mask a Field from the Container View
 
@@ -76,9 +91,11 @@ Unmasking a field restores its actual values across the platform, making them vi
 
 When you unmask a field:
 
-- **Everywhere in the platform**: Field values are fully visible without masking
-- **Data Preview**: Values are shown directly without reveal action
+- **Data Preview**: Values are shown directly without a reveal action
 - **Anomaly Source Records**: Values are visible by default
+- **Field Profile Histograms**: Chart values are shown normally
+- **Anomaly Assertion Context**: Values are visible in anomaly check details
+- **Future Export and Materialize runs**: Values will no longer be masked in new export and materialize outputs — previously written enrichment datastore files are not retroactively updated
 
 ### Unmask from the Container View
 
@@ -130,9 +147,9 @@ You can unmask multiple fields at once from the container's field listing.
 
     ![bulk-unmask-field-3](../../../assets/fields/field-status/managing-field-status/mask-a-field/bulk-unmask-field-3.png)
 
-## Viewing Masked Values
+## Revealing Masked Values
 
-Even when a field is masked, users with **Editor** permission can temporarily reveal its values in specific contexts:
+Users with **Editor** permission can temporarily reveal masked values in the surfaces that support inline reveal. Not every surface supports reveal — see the [Where Masking Is Applied](#where-masking-is-applied) table above.
 
 ### Data Preview
 
@@ -142,10 +159,17 @@ In the container's data preview, masked fields display their values as hidden (`
 
 ### Anomaly Source Records
 
-In anomaly source records, masked field values are hidden by default. You can toggle the visibility of masked values per record using the reveal control.
+In anomaly source records, masked field values are hidden by default. You can toggle the visibility of masked values using the reveal control — toggling it reveals all source records attached to that anomaly at once.
 
 ![masked-anomaly-source-records](../../../assets/fields/field-status/managing-field-status/mask-a-field/masked-anomaly-source-records.png)
 
+### Anomaly Assertion Context
+
+Masked field values that appear in anomaly check details and assertion context are **unconditionally masked**. There is no inline reveal for this surface — this is by design to ensure that sensitive values are never inadvertently exposed when reviewing anomaly descriptions or sharing anomaly details.
+
+### Export and Materialize Outputs
+
+Histogram bucket values in exported field profile files and source record values in materialized container snapshots are written with masking applied by default. To obtain revealed data in these outputs, pass `include_masked=true` when triggering the operation via the API. This parameter is not available in the UI.
 
 !!! warning
     Every time masked values are revealed, the action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields and resources accessed. Administrators can review these logs from the masking audit log page.

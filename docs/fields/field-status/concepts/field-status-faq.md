@@ -2,7 +2,7 @@
 
 #### What is the difference between active and masked?
 
-Both are **operational** statuses — profiling (collecting metadata and statistics), scanning (detecting anomalies), and quality checks run normally for both. The only difference is that masked field values are hidden across the platform by default (replaced with `***MASKED***`). Users with Editor permission can reveal masked values, and every access is audit-logged.
+Both are **operational** statuses — profiling (collecting metadata and statistics), scanning (detecting anomalies), and quality checks run normally for both. The only difference is that masked field values are obfuscated across the platform by default. Users with Editor permission can reveal masked values, and every access is audit-logged.
 
 #### What happens to my quality checks when I mask a field?
 
@@ -78,7 +78,26 @@ Administrators can access the masking audit log to review all masked value revea
 
 #### How are masked values protected?
 
-Masked field values are automatically hidden everywhere in the platform — including Data Preview, Anomaly Source Records, field profile histograms, and external integrations. The platform ensures values are protected at multiple stages of data processing.
+Masked field values are automatically hidden at every stage of data processing:
+
+- **Data Preview** — values are obfuscated; users with Editor permission can reveal them with the "Show masked values" button
+- **Anomaly Source Records** — values are obfuscated by default; users with Editor permission can reveal them per anomaly (all source records for the anomaly are revealed together)
+- **Field Profile Histograms** — chart values are obfuscated for masked fields
+- **Anomaly Assertion Context** — values in anomaly check details are unconditionally obfuscated; there is no inline reveal
+- **Export Operation (Field Profiles)** — histogram bucket values are obfuscated in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation** — source record values are obfuscated in container snapshots written to the enrichment datastore
+
+Every reveal action is recorded in the masking audit log.
+
+#### Are masked values protected in Export and Materialize operation outputs?
+
+Yes. When you export Field Profiles, histogram bucket values for masked fields are obfuscated in the output file written to the enrichment datastore (`_field_profiles_export`). When you run a Materialize operation, source record values for masked fields are also obfuscated in the materialized container snapshot.
+
+To obtain revealed data in these outputs, pass `include_masked=true` when triggering the Export or Materialize operation via the API. This parameter is not available in the UI.
+
+#### Are masked values in anomaly details (assertion context) revealable?
+
+No. Masked field values that appear in anomaly check details and assertion context are unconditionally masked — there is no inline reveal for this surface. This is intentional: anomaly details are often shared, exported, or referenced in tickets, and sensitive values must not be exposed in those contexts. To investigate a specific value, use the Anomaly Source Records reveal toggle instead.
 
 #### Can I manage field status via API?
 
