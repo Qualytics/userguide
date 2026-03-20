@@ -118,7 +118,7 @@ If your datastore contains [masked fields](../../fields/field-status/managing-fi
 
 Source record values for masked fields are obfuscated in every container snapshot written to the enrichment datastore. This applies to all containers included in the materialize run.
 
-- The masked output in the enrichment datastore cannot be unmasked retroactively. To obtain unmasked data in materialized snapshots, unmask the field in Qualytics and re-run the Materialize operation.
+- To obtain revealed data in materialized snapshots, pass `include_masked=true` when triggering the Materialize operation via the API. This parameter is not available in the UI.
 
 !!! note
     Masking is applied by Qualytics before writing each container to the enrichment datastore. The enrichment datastore always receives already-masked data for any fields designated as sensitive.

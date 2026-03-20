@@ -38,7 +38,7 @@ Masking is enforced at every point where field values are surfaced or written:
 - **Export Operation (Field Profiles)** — histogram bucket values are obfuscated in the `_field_profiles_export` file written to the enrichment datastore
 - **Materialize Operation** — source record values are obfuscated in container snapshots written to the enrichment datastore
 
-Users with Editor permission can request to reveal values in the surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize outputs do not support inline reveal — to obtain unobfuscated data in those outputs, the field must first be unmasked and the operation re-run.
+Users with Editor permission can request to reveal values in the surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize operations also support reveal via the `include_masked` API parameter — this is not available in the UI.
 
 ### Schema Change Detection
 

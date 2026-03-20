@@ -30,8 +30,8 @@ Specifically, obfuscated values appear in the following places:
 | Anomaly Source Records | Scan / Dry Run | Yes — per-anomaly reveal toggle (all records revealed together) |
 | Field Profile Histograms (UI) | Profile | Yes — via `include_masked` API parameter |
 | Anomaly Assertion Context | Scan / Dry Run | No — unconditionally masked |
-| Field Profiles Export | Export Operation | No — re-run export after unmasking |
-| Materialized Snapshots | Materialize Operation | No — re-run materialize after unmasking |
+| Field Profiles Export | Export Operation | Yes — via `include_masked` API parameter (not available in the UI) |
+| Materialized Snapshots | Materialize Operation | Yes — via `include_masked` API parameter (not available in the UI) |
 
 ## Mask a Field from the Container View
 
@@ -169,7 +169,7 @@ Masked field values that appear in anomaly check details and assertion context a
 
 ### Export and Materialize Outputs
 
-Histogram bucket values in exported field profile files and source record values in materialized container snapshots are written with masking applied. There is no inline reveal for enrichment datastore output. To obtain unmasked data in these outputs, unmask the field in Qualytics and re-run the Export or Materialize operation.
+Histogram bucket values in exported field profile files and source record values in materialized container snapshots are written with masking applied by default. To obtain revealed data in these outputs, pass `include_masked=true` when triggering the operation via the API. This parameter is not available in the UI.
 
 !!! warning
     Every time masked values are revealed, the action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields and resources accessed. Administrators can review these logs from the masking audit log page.

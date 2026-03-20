@@ -93,7 +93,7 @@ Every reveal action is recorded in the masking audit log.
 
 Yes. When you export Field Profiles, histogram bucket values for masked fields are obfuscated in the output file written to the enrichment datastore (`_field_profiles_export`). When you run a Materialize operation, source record values for masked fields are also obfuscated in the materialized container snapshot.
 
-These enrichment datastore outputs do not support inline reveal. To obtain unmasked data in export or materialize output, unmask the field in Qualytics and re-run the operation.
+To obtain revealed data in these outputs, pass `include_masked=true` when triggering the Export or Materialize operation via the API. This parameter is not available in the UI.
 
 #### Are masked values in anomaly details (assertion context) revealable?
 
