@@ -77,7 +77,7 @@ After clicking **Schedule**, a confirmation message appears stating **"Operation
 
 If your datastore contains [masked fields](../../fields/field-status/managing-field-status/mask-a-field.md), masking is applied to Field Profile exports before the data is written to the enrichment datastore.
 
-Specifically, **histogram bucket values** for masked fields are replaced with `***MASKED***` in the `_<enrichment_prefix>_field_profiles_export` output file. This ensures that the statistical distribution of sensitive field values is not exposed in your enrichment datastore.
+Specifically, **histogram bucket values** for masked fields are obfuscated in the `_<enrichment_prefix>_field_profiles_export` output file. This ensures that the statistical distribution of sensitive field values is not exposed in your enrichment datastore.
 
 - **Anomaly exports** and **Quality Check exports** are not affected by field masking.
 - The masked output in the enrichment datastore cannot be unmasked retroactively. To obtain unmasked histogram data in the export file, unmask the field in Qualytics and re-run the Export operation.

@@ -31,14 +31,14 @@ Masking allows you to protect fields containing sensitive data (PII, financial d
 
 Masking is enforced at every point where field values are surfaced or written:
 
-- **Data Preview** — values display as `***MASKED***` and require an explicit reveal action
-- **Anomaly Source Records** — values are hidden by default; users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
-- **Field Profile Histograms** — chart values are replaced for masked fields in the UI
-- **Anomaly Assertion Context** — check detail values are unconditionally masked; no inline reveal is available
-- **Export Operation (Field Profiles)** — histogram bucket values are masked in the `_field_profiles_export` file written to the enrichment datastore
-- **Materialize Operation** — source record values are masked in container snapshots written to the enrichment datastore
+- **Data Preview** — values are obfuscated and require an explicit reveal action
+- **Anomaly Source Records** — values are obfuscated by default; users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
+- **Field Profile Histograms** — chart values are obfuscated for masked fields
+- **Anomaly Assertion Context** — check detail values are unconditionally obfuscated; no inline reveal is available
+- **Export Operation (Field Profiles)** — histogram bucket values are obfuscated in the `_field_profiles_export` file written to the enrichment datastore
+- **Materialize Operation** — source record values are obfuscated in container snapshots written to the enrichment datastore
 
-Users with Editor permission can request to view unmasked values in the UI surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize outputs do not support inline reveal — to obtain unmasked data in those outputs, the field must first be unmasked and the operation re-run.
+Users with Editor permission can request to reveal values in the surfaces that support reveal (Data Preview and Anomaly Source Records), and every reveal action is recorded in the masking audit log for compliance purposes. Export and materialize outputs do not support inline reveal — to obtain unobfuscated data in those outputs, the field must first be unmasked and the operation re-run.
 
 ### Schema Change Detection
 
@@ -99,7 +99,7 @@ Your team has decided to stop using the `legacy_customer_id` column. Instead of 
 Your dataset contains a `social_security_number` column that must be monitored for quality but should not be visible anywhere in the platform. You mask the field:
 
 1. Quality checks continue to run — you still detect anomalies in the SSN field.
-2. Actual SSN values are replaced with `***MASKED***` everywhere in the platform.
+2. Actual SSN values are obfuscated everywhere in the platform.
 3. In Data Preview and Anomaly Source Records, values are hidden by default.
 4. When an analyst needs to investigate a specific anomaly, they can reveal the masked values — and that access is audit-logged.
 

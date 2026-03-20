@@ -29,7 +29,7 @@ User can download the source records that were captured for an anomaly during th
 
 ## Masked Fields in Source Records
 
-If a container contains [masked fields](../fields/field-status/managing-field-status/mask-a-field.md), their values are hidden by default in source records and displayed as `***MASKED***`.
+If a container contains [masked fields](../fields/field-status/managing-field-status/mask-a-field.md), their values are obfuscated by default in source records.
 
 Users with **Editor** permission can reveal masked values for an anomaly using the reveal toggle. Toggling reveal shows all source records attached to that anomaly at once — reveal is per-anomaly, not per-record. Every reveal action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields accessed — this log is reviewable by Administrators.
 
