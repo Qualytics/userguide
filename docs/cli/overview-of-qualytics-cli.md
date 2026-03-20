@@ -221,9 +221,9 @@ Options:
 
 _Note_: Errors during import will be logged in `$HOME/.qualytics/errors.log`.
 
-### Run a Catalog Operation on a Datastore
+### Run a Sync Operation on a Datastore
 
-Allows you to trigger a catalog operation on any current datastore (datastore permission required by admin)
+Allows you to trigger a sync operation on any current datastore (datastore permission required by admin)
 
 <!-- ![Screenshot](../assets/cli/qualytics-run-catalog.gif) -->
 === "Bash Example"

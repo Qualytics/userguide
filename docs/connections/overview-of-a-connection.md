@@ -10,11 +10,11 @@ To configure a datastore connection in Qualytics, begin by entering the required
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/connections/connection/add-datastore-light.png)
+![add-datastore](../assets/connections/overview-of-a-connection/add-source-datastore.png)
 
 **Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![details](../assets/connections/connection/details-light.png)
+![details](../assets/connections/overview-of-a-connection/add-datastore-modal.png)
 
 | REF. |                    FIELDS |                              ACTIONS |
 | :---- | :---- | :---- |
@@ -26,7 +26,7 @@ For demonstration purposes, we have selected the **BigQuery Connector**.
 
 **Step 3:** Add connection details such as temp dataset ID, service account key, project ID, and dataset ID.
 
-![detail](../assets/connections/connection/detail-light.png)
+![detail](../assets/connections/overview-of-a-connection/connection-details.png)
 
 **Secrets Management:** This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -42,11 +42,11 @@ For demonstration purposes, we have selected the **BigQuery Connector**.
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath | Specify the JSONPath to retrieve the secret data (e.g., $.data). |
 
-![secret](../assets/connections/connection/secret-light.png)
+![secret](../assets/connections/overview-of-a-connection/secrets-management.png)
 
 **Step 4:** The configuration form requests credential details before establishing a connection.
 
-![form](../assets/connections/connection/requesting-light.png)
+![form](../assets/connections/overview-of-a-connection/connection-form.png)
 
 !!! note 
 	Different connectors have unique fields and parameters. For this demonstration, we have selected the BigQuery Connector, so the fields displayed are specific to the BigQuery configuration. 
@@ -58,21 +58,21 @@ For demonstration purposes, we have selected the **BigQuery Connector**.
 | 3. | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522) (Required) | Enter the Project ID associated with BigQuery. |
 | 4. | Dataset ID (Required) | Enter the Dataset ID (schema name) associated with BigQuery. |
 | 5. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6. | Initiate Sync (Optional) | Tick the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 5:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test](../assets/connections/connection/test-light.png)
+![test](../assets/connections/overview-of-a-connection/test-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
 **Step 6:** Once the connection is verified, click the **Finish** button to complete the process.
 
-![finish](../assets/connections/connection/finish-light.png)
+![finish](../assets/connections/overview-of-a-connection/finish-setup.png)
 
 **Step 7:** A message will appear indicating that **your datastore has been successfully added**. Once the datastore is added, you can reuse the connection for future tasks without needing to re-enter the details.
 
-![msg](../assets/connections/connection/msg-light.png)
+![msg](../assets/connections/overview-of-a-connection/success-message.png)
 
 ## Reuse a Connection
 
@@ -80,11 +80,11 @@ The **Reuse Connection** feature lets you use existing credentials to set up a n
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add](../assets/connections/connection/add-datastore-light.png)
+![add](../assets/connections/overview-of-a-connection/add-source-datastore.png)
 
 **Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![details](../assets/connections/connection/details-light.png)
+![details](../assets/connections/overview-of-a-connection/add-datastore-modal.png)
 
 | REF. |                    FIELDS |                              ACTIONS |
 | :---- | :---- | :---- |
@@ -96,19 +96,19 @@ For demonstration purposes, we have selected the **BigQuery Connector**.
 
 **Step 3:** Add connection details such as temp dataset ID, service account key, project ID, and dataset ID.
 
-![detail](../assets/connections/connection/details-connection-light.png)
+![detail](../assets/connections/overview-of-a-connection/existing-connection-details.png)
 
 **Step 4:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection](../assets/connections/connection/test-light.png)
+![test-connection](../assets/connections/overview-of-a-connection/test-connection.png)
 
 **Step 5:** Once the connection is verified, click the **Finish** button to complete the process.
 
-![finish](../assets/connections/connection/finish-light.png)
+![finish](../assets/connections/overview-of-a-connection/finish-setup.png)
 
-A message will appear indicating that **your datastore has been successfully added**. 
+A message will appear indicating that **your datastore has been successfully added**.
 
-![msg](../assets/connections/connection/msg-light.png)
+![msg](../assets/connections/overview-of-a-connection/success-message.png)
 
 ## Manage Connection
 

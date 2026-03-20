@@ -48,7 +48,7 @@ A data operations team needs to monitor table volumes daily to detect unexpected
 
 ### Setup Requirements
 
-- **Initial Cataloging**: Ensure tables are cataloged in Qualytics
+- **Initial Sync**: Ensure tables are synced in Qualytics
 - **Enable Volume Tracking**: Turn on volume tracking for the specific container
 - **Automatic Monitoring**: The observability job handles all subsequent measurements
 

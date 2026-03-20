@@ -1,6 +1,6 @@
 # Redshift
 
-Adding and configuring a Redshift connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Redshift connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Redshift as both a source and an enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/redshift/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/redshift/add-datastore.png)
 
 **Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/redshift/select-a-connector-light.png)
+![select-a-connector](../assets/add-datastores/jdbc-datastores/redshift/select-a-connector.png)
 
 | REF. | FIELDS             | ACTIONS            |
 |------|--------------------|--------------------|
@@ -32,7 +32,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Redshift** connector from the dropdown list and add connection details such as **Secrets Management**, port, host, password, database, and schema.
 
-![add-datastore-credentials](../assets/datastores/redshift/add-datastore-credentials-light.png)
+![add-datastore-credentials](../assets/add-datastores/jdbc-datastores/redshift/add-datastore-credentials.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,11 +48,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![hashcorp-explain](../assets/datastores/redshift/hashcorp-explain-light.png)
+![hashcorp-explain](../assets/add-datastores/jdbc-datastores/redshift/hashcorp-explain.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/redshift/add-datastore-credentials-explain-light.png)
+![add-datastore-credentials-explain](../assets/add-datastores/jdbc-datastores/redshift/add-datastore-credentials-explain.png)
 
 | REF. | FIELDS            | ACTIONS                                                                                         |
 |------|-------------------|-------------------------------------------------------------------------------------------------|
@@ -63,11 +63,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Database (Required)          | Specify the database name.                                                                      |
 | 6. | Schema (Required)            | Define the schema within the database that should be used.                                      |
 | 7. | Teams (Required)             | Select one or more teams from the dropdown to associate with this source datastore.             |
-| 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8. | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/redshift/test-datastore-connection-light.png)
+![test-datastore-connection](../assets/add-datastores/jdbc-datastores/redshift/test-datastore-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -77,14 +77,14 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/redshift/use-existing-datastore-light.png)
+![use-existing-datastore](../assets/add-datastores/jdbc-datastores/redshift/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/redshift/test-connection-for-existing-datastore-light.png)
+![test-connection-for-existing-datastore](../assets/add-datastores/jdbc-datastores/redshift/test-connection-for-existing-datastore.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -98,11 +98,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/redshift/next-button-for-enrichment-light.png)
+![next-button-for-enrichment](../assets/add-datastores/jdbc-datastores/redshift/next-button-for-enrichment.png)
 
 **Step 2**: A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![select-enrichment-connector](../assets/datastores/redshift/select-enrichment-connector-light.png)
+![select-enrichment-connector](../assets/add-datastores/jdbc-datastores/redshift/select-enrichment-connector.png)
 
 | REF. | FIELDS  | ACTIONS                                                                                                           |
 |------|-----------------------|------------------------------------------------------------------------------------------------------------------|
@@ -116,11 +116,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![caret-button](../assets/datastores/redshift/add-enrichment-light.png)
+![caret-button](../assets/add-datastores/jdbc-datastores/redshift/add-enrichment.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![modal-window](../assets/datastores/redshift/add-enrichment-details-light.png)
+![modal-window](../assets/add-datastores/jdbc-datastores/redshift/add-enrichment-details.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -131,7 +131,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
-![modal-window](../assets/datastores/redshift/add-enrichment-detail-light.png)
+![modal-window](../assets/add-datastores/jdbc-datastores/redshift/add-enrichment-detail.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -147,11 +147,11 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![secret-management](../assets/datastores/redshift/secret-management-light.png)
+![secret-management](../assets/add-datastores/jdbc-datastores/redshift/secret-management.png)
 
 **Step 3:** The configuration form, requesting credential details after selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/redshift/enrichment-datastore-explain-light.png)
+![enrichment-datastore-explain](../assets/add-datastores/jdbc-datastores/redshift/enrichment-datastore-explain.png)
 
 | REF. | FIELDS    | ACTIONS                                                                                     |
 |------|-----------|---------------------------------------------------------------------------------------------|
@@ -165,17 +165,17 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 4**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/redshift/test-connection-for-enrichment-datastore-light.png)
+![test-connection-for-enrichment-datastore](../assets/add-datastores/jdbc-datastores/redshift/test-connection-for-enrichment-datastore.png)
 
 **Step 5**: Click on the **Finish** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/redshift/finish-configuration-light.png)
+![finish-configuration](../assets/add-datastores/jdbc-datastores/redshift/finish-configuration.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 6**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/redshift/data-operation-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/redshift/data-operation-page.png)
 
 ### Option II: Use an Existing Connection
 
@@ -183,11 +183,11 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![use-enrichment-datastore](../assets/datastores/redshift/use-enrichment-light.png)
+![use-enrichment-datastore](../assets/add-datastores/jdbc-datastores/redshift/use-enrichment.png)
 
 **Step 2**:  A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![select-existing-enrichment-datastore](../assets/datastores/redshift/select-existing-enrichment-datastore-light.png)
+![select-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/redshift/select-existing-enrichment-datastore.png)
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
@@ -204,17 +204,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 - **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![use-existing-enrichment-datastore](../assets/datastores/redshift/use-existing-enrichment-datastore-light.png)
+![use-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/redshift/use-existing-enrichment-datastore.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/redshift/finish-configuration-for-existing-enrichment-datastore-light.png)
+![finish-configuration-for-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/redshift/finish-configuration-for-existing-enrichment-datastore.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/redshift/data-operation-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/redshift/data-operation-page.png)
 
 ## API Payload Examples
 

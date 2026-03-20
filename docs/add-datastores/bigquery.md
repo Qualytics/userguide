@@ -1,6 +1,6 @@
 # BigQuery
 
-Adding and configuring a BigQuery connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring a BigQuery connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
 
 This documentation provides a step-by-step guide on adding BigQuery as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -18,11 +18,11 @@ It is recommended for efficient data management, performance optimization, and a
 
 **Step 1:** Navigate to the BigQuery console within your Google Cloud Platform (GCP) account.
 
-![google-cloud-platform-page](../assets/datastores/bigquery/google-cloud-platform-page.png)
+![google-cloud-platform-page](../assets/add-datastores/jdbc-datastores/bigquery/google-cloud-platform-page.png)
 
 **Step 2:** Click on the **vertical ellipsis**, it will open a popup menu for creating a dataset. Click on the **Create dataset** to set up a new dataset.
 
-![create-a-dataset](../assets/datastores/bigquery/create-a-dataset.png)
+![create-a-dataset](../assets/add-datastores/jdbc-datastores/bigquery/create-a-dataset.png)
 
 **Step 3:** Fill details for the following fields to create a new dataset.
 
@@ -30,15 +30,15 @@ It is recommended for efficient data management, performance optimization, and a
     - **Dataset Location:** Select the location that aligns with where your other datasets reside to minimize data transfer delays.
     - **Default Table Expiration:** Set the expiration to `1 day` to ensure any table created in this dataset is automatically deleted one day after its creation.
 
-![configure-dataset-details](../assets/datastores/bigquery/configure-dataset-details.png){: style=width:650px}
+![configure-dataset-details](../assets/add-datastores/jdbc-datastores/bigquery/configure-dataset-details.png){: style=width:650px}
 
 **Step 4:** Click the **Create Dataset** button to apply the configuration and create the dataset.
 
-![create-dataset-button](../assets/datastores/bigquery/create-dataset-button.png){: style=width:650px}
+![create-dataset-button](../assets/add-datastores/jdbc-datastores/bigquery/create-dataset-button.png){: style=width:650px}
 
 **Step 5:** Navigate to the **created dataset** and find the **Dataset ID** in the **Dataset Info**.
 
-![created-dataset-page](../assets/datastores/bigquery/created-dataset-page.png){: style=width:650px}
+![created-dataset-page](../assets/add-datastores/jdbc-datastores/bigquery/created-dataset-page.png){: style=width:650px}
 
 The Dataset info section contains the Dataset ID and other information related to the created dataset. This generated Dataset ID is used to configure the BigQuery datastore.
 
@@ -96,11 +96,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/bigquery/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/bigquery/add-datastore.png)
 
 **Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/bigquery/select-a-connector-light.png)
+![select-a-connector](../assets/add-datastores/jdbc-datastores/bigquery/select-a-connector.png)
 
 | REF. | FIELDS          | ACTIONS                                   |
 |------|-----------------|-------------------------------------------|
@@ -114,7 +114,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1:** Select the **BigQuery** connector from the dropdown list and add connection details such as temp dataset ID, service account key, project ID, and dataset ID.
 
-![add-datastore-credentials](../assets/datastores/bigquery/add-datastore-credentials-light.png)
+![add-datastore-credentials](../assets/add-datastores/jdbc-datastores/bigquery/add-datastore-credentials.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -130,11 +130,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![secrets-management](../assets/datastores/bigquery/secrets-management-light.png)
+![secrets-management](../assets/add-datastores/jdbc-datastores/bigquery/secrets-management.png)
 
 **Step 2:** The configuration form, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/bigquery/add-datastore-credentials-explain-light.png)
+![add-datastore-credentials-explain](../assets/add-datastores/jdbc-datastores/bigquery/add-datastore-credentials-explain.png)
 
 | REF. | FIELDS                               | ACTIONS                                    |
 |------|--------------------------------------|--------------------------------------------|
@@ -143,11 +143,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 |   3.   | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522){:target="_blank"} (Required)                 | Enter the Project ID associated with BigQuery.    |
 |   4.   | Dataset ID (Required)              | Enter the Dataset ID (schema name) associated with BigQuery.  |
 |   5.   | Teams (Required)                   | Select one or more teams from the dropdown to associate with this source datastore. |
-|   6.   | Initiate Cataloging (Optional)     | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+|   6.   | Initiate Sync (Optional)     | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/bigquery/test-datastore-connection-light.png)
+![test-datastore-connection](../assets/add-datastores/jdbc-datastores/bigquery/test-datastore-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -157,14 +157,14 @@ If the toggle for **Add New Connection** is turned off, then this will prompt yo
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/bigquery/use-existing-datastore-light.png)
+![use-existing-datastore](../assets/add-datastores/jdbc-datastores/bigquery/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Project ID, Dataset ID, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Project ID, Dataset ID, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/bigquery/test-connection-for-existing-datastore-light.png)
+![test-connection-for-existing-datastore](../assets/add-datastores/jdbc-datastores/bigquery/test-connection-for-existing-datastore.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -178,11 +178,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/bigquery/next-button-for-enrichment-light.png)
+![next-button-for-enrichment](../assets/add-datastores/jdbc-datastores/bigquery/next-button-for-enrichment.png)
 
 **Step 2:** A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![select-enrichment-connector](../assets/datastores/bigquery/select-enrichment-connector-light.png)
+![select-enrichment-connector](../assets/add-datastores/jdbc-datastores/bigquery/select-enrichment-connector.png)
 
 | REF. | FIELDS | ACTIONS |
 |------|--------|---------|
@@ -196,11 +196,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1:** Click on the caret button and select **Add Enrichment Datastore**.
 
-![select-enrichment-connector](../assets/datastores/bigquery/add-new-light.png)
+![select-enrichment-connector](../assets/add-datastores/jdbc-datastores/bigquery/add-new.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![select-enrichment-connector](../assets/datastores/bigquery/new-connection-detail-light.png)
+![select-enrichment-connector](../assets/add-datastores/jdbc-datastores/bigquery/new-connection-detail.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -211,7 +211,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/bigquery/new-detailss-light.png)
+![enrichment-datastore-explain](../assets/add-datastores/jdbc-datastores/bigquery/new-detailss.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -227,11 +227,11 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![hash-details](../assets/datastores/bigquery/hash-details-light.png)
+![hash-details](../assets/add-datastores/jdbc-datastores/bigquery/hash-details.png)
 
 **Step 3:** The configuration form, requesting credential details after selecting **enrichment datastore** connector.
 
-![connection-details](../assets/datastores/bigquery/connection-detailss-light.png)
+![connection-details](../assets/add-datastores/jdbc-datastores/bigquery/connection-detailss.png)
 
 | REF. | FIELD | ACTIONS |
 |------|-------|---------|
@@ -243,17 +243,17 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/bigquery/test-connection-for-enrichment-datastore-light.png)
+![test-connection-for-enrichment-datastore](../assets/add-datastores/jdbc-datastores/bigquery/test-connection-for-enrichment-datastore.png)
 
 **Step 5:** Click on the **Finish** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/bigquery/finish-configuration-light.png)
+![finish-configuration](../assets/add-datastores/jdbc-datastores/bigquery/finish-configuration.png)
 
 When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully.
 
 **Step 6:** Close the success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/bigquery/data-operations-page.png)
 
 ### Option II: Use an Existing Connection
 
@@ -261,11 +261,11 @@ If the **Use Enrichment Datastore** option is selected from the dropdown menu, y
 
 **Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
-![use-enrichment](../assets/datastores/bigquery/use-enrichment-light.png)
+![use-enrichment](../assets/add-datastores/jdbc-datastores/bigquery/use-enrichment.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![select-existing-enrichment-datastore](../assets/datastores/bigquery/select-existing-enrichment-datastore-light.png)
+![select-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/bigquery/select-existing-enrichment-datastore.png)
 
 | REF. | FIELDS  | ACTIONS  |
 |------|---------|----------|
@@ -282,17 +282,17 @@ If the **Use Enrichment Datastore** option is selected from the dropdown menu, y
 
 - **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![use-existing-enrichment-datastore](../assets/datastores/bigquery/use-existing-enrichment-datastore-light.png)
+![use-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/bigquery/use-existing-enrichment-datastore.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/bigquery/finish-configuration-for-existing-enrichment-datastore-light.png)
+![finish-configuration-for-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/bigquery/finish-configuration-for-existing-enrichment-datastore.png)
 
 When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/bigquery/data-operations-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/bigquery/data-operations-page.png)
 
 ## API Payload Examples
 
