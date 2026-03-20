@@ -15,7 +15,7 @@ Rather than treating all fields equally, Qualytics uses field status to:
 - **Manage the quality check lifecycle** — Field status transitions trigger automatic actions on associated quality checks, keeping your monitoring configuration consistent with the actual state of your data.
 - **Protect sensitive data** — Masked fields remain fully operational for quality monitoring while hiding raw values from API responses, with audit-logged access controls.
 
-## How Field Status Supports Data Quality
+## How Field Status Supports Data Quality?
 
 Field status plays a direct role in how you manage and maintain data quality across your datasets:
 

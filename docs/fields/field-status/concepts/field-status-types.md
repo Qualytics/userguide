@@ -12,7 +12,7 @@ Qualytics assigns one of four statuses to each field:
 !!! info
     **Active** and **Masked** are both considered **operational** statuses. Everything you can do with an active field, you can also do with a masked field — the only difference is that masked field values are hidden by default.
 
-## How Statuses Are Assigned
+## How Statuses Are Assigned?
 
 ### Active (Automatic)
 

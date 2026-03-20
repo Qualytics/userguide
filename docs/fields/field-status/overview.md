@@ -4,7 +4,7 @@ Field Status is a core concept in Qualytics that tracks the lifecycle state of e
 
 ![field-status-overview](../../assets/fields/field-status/field-status-overview.png)
 
-## Why Field Status Matters
+## Why Field Status Matters?
 
 In data quality management, not every field in a dataset requires the same level of attention. Some fields are critical to business operations and must be continuously monitored, while others may become irrelevant over time or disappear from the source entirely. Some fields contain sensitive data that needs protection while still being quality-checked. Field Status gives you visibility into these changes and the tools to respond accordingly.
 

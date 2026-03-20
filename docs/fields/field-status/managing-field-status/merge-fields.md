@@ -4,7 +4,7 @@ The merge operation combines a **Missing** field (the old field with history) wi
 
 This is the recommended approach when a column is renamed in the source data. For a detailed explanation of why and how merging works, see [Merge Fields Concept](../concepts/merge-fields.md){:target="_blank"}.
 
-## When to Merge
+## When to Merge?
 
 After a column rename in your source data, the next profile operation will:
 
@@ -51,7 +51,7 @@ You can also merge a field directly from its detail page.
 
     ![field-context-merge-3](../../../assets/fields/field-status/managing-field-status/merge-fields/field-context-merge-3.png)
 
-## What Happens After a Merge
+## What Happens After a Merge?
 
 | Step | Action |
 | :--- | :--- |

@@ -67,7 +67,7 @@ Deleting a computed field permanently removes both the **transformation definiti
 2. Click the **Delete** button in the top-right corner of the field page.
 3. Confirm the deletion in the dialog.
 
-### What Happens When a Computed Field is Deleted
+### What Happens When a Computed Field is Deleted?
 
 - The **transformation definition** is permanently removed
 - The **output field** is permanently removed

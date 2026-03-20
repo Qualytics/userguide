@@ -4,7 +4,7 @@ Excluding a field prevents the platform from analyzing or interacting with it. T
 
 Only fields with **Active** or **Masked** status can be excluded.
 
-## What Happens When a Field is Excluded
+## What Happens When a Field is Excluded?
 
 When you exclude a field:
 
