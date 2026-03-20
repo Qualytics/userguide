@@ -4,7 +4,7 @@ Masking a field hides its actual values across the platform while keeping the fi
 
 Only fields with **Active** status can be masked. This includes both regular fields and computed fields.
 
-## What Happens When a Field is Masked
+## What Happens When a Field is Masked?
 
 When you mask a field, its actual values are obfuscated everywhere they would otherwise appear. Quality checks, profiling, and scanning all continue to run normally — masking only affects value visibility.
 
@@ -87,7 +87,7 @@ You can mask multiple fields at once from the container's field listing.
 
 Unmasking a field restores its actual values across the platform, making them visible without requiring explicit reveal actions.
 
-### What Happens When a Field is Unmasked
+### What Happens When a Field is Unmasked?
 
 When you unmask a field:
 

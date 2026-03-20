@@ -30,7 +30,7 @@ Only **missing** fields and **computed fields** can be permanently deleted. Addi
 
 #### How do I know if a field has changed status?
 
-Fields display visual status indicators in the field listing. Masked fields show an amber shield icon, missing fields show a warning icon (yellow/orange), and excluded fields show a negative icon (red). You can also use the [status tabs](../managing-field-status/filtering-by-status.md) to filter and view fields by their current status.
+Fields display visual status indicators in the field listing. Masked fields show an amber shield icon, missing fields show a warning icon (yellow/orange), and excluded fields show a negative icon (red). You can also use the [status tabs](../managing-field-status/filtering-by-status.md){:target="_blank"} to filter and view fields by their current status.
 
 #### Will a missing field affect my data quality score?
 
@@ -42,7 +42,7 @@ The field is automatically restored to **Active** status during the next profile
 
 #### Can I manually restore a missing field?
 
-No, a missing field cannot be manually restored. It is automatically restored to **Active** when the field reappears in the source data during a subsequent profile operation. If the field will not reappear, you can use the [merge](merge-fields.md) operation if the field was renamed.
+No, a missing field cannot be manually restored — the platform will reject the request. It is automatically restored to **Active** when the field reappears in the source data during a subsequent profile operation. If the field will not reappear, you can use the [merge](merge-fields.md){:target="_blank"} operation if the field was renamed.
 
 #### Does excluding a field affect computed fields that depend on it?
 
@@ -58,7 +58,7 @@ No, the Missing status is automatically assigned by the system during profiling 
 
 #### What happens when I merge two fields?
 
-The source field (old, with history) adopts the target field's name, and the target field record is removed. All historical field profiles, anomalies, and quality checks from both fields are preserved under the merged field. The merged field is set to **Active** status. For more details, see [Merge Fields](merge-fields.md).
+The source field (old, with history) adopts the target field's name, and the target field record is removed. All historical field profiles, anomalies, and quality checks from both fields are preserved under the merged field. The merged field is set to **Active** status. For more details, see [Merge Fields](merge-fields.md){:target="_blank"}.
 
 #### What happens to container identifiers when a field goes missing?
 
@@ -101,12 +101,16 @@ No. Masked field values that appear in anomaly check details and assertion conte
 
 #### Can I manage field status via API?
 
-Yes. All field status operations — masking, excluding, restoring, deleting, and merging — are available through the Qualytics API. You can also perform bulk operations to update multiple fields at once. See the [Field Status API](field-status-api.md) page for endpoints, parameters, and examples.
+Yes. All field status operations — masking, excluding, restoring, deleting, and merging — are available through the Qualytics API. You can also perform bulk operations to update multiple fields at once. See the [Field Status API](field-status-api.md){:target="_blank"} page for endpoints, parameters, and examples.
 
 #### Can I mask or exclude multiple fields at once?
 
-Yes. The platform supports bulk operations for updating, excluding, and restoring fields. You can change the status of multiple fields in a single API request using the bulk endpoints. See the [Field Status API](field-status-api.md) for details.
+Yes. The platform supports bulk operations for masking, unmasking, excluding, restoring, and deleting fields. You can perform bulk actions directly from the container's field listing by selecting multiple fields and choosing the desired action from the toolbar. Bulk operations are also available via the API — see the [Field Status API](field-status-api.md){:target="_blank"} for details.
 
 #### Can I rename a field that is excluded or missing?
 
 No. Only **active** and **masked** fields can be renamed. Excluded and missing fields must first be restored to active status before they can be renamed.
+
+#### Can I mask an excluded or missing field directly?
+
+No. Only **active** fields can be masked. If a field is excluded, you must first restore it to active status and then mask it. Missing fields cannot be masked — they must reappear in the source data first.
