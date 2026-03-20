@@ -32,7 +32,7 @@ Masking allows you to protect fields containing sensitive data (PII, financial d
 Masking is enforced at every point where field values are surfaced or written:
 
 - **Data Preview** — values display as `***MASKED***` and require an explicit reveal action
-- **Anomaly Source Records** — values are hidden by default; users can toggle reveal per record
+- **Anomaly Source Records** — values are hidden by default; users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
 - **Field Profile Histograms** — chart values are replaced for masked fields in the UI
 - **Anomaly Assertion Context** — check detail values are unconditionally masked; no inline reveal is available
 - **Export Operation (Field Profiles)** — histogram bucket values are masked in the `_field_profiles_export` file written to the enrichment datastore

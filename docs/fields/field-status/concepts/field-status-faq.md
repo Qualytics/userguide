@@ -81,7 +81,7 @@ Administrators can access the masking audit log to review all masked value revea
 Masked field values are automatically hidden at every stage of data processing:
 
 - **Data Preview** — values display as `***MASKED***`; users with Editor permission can reveal them with the "Show masked values" button
-- **Anomaly Source Records** — values are hidden by default; users with Editor permission can reveal them per record
+- **Anomaly Source Records** — values are hidden by default; users with Editor permission can reveal them per anomaly (all source records for the anomaly are revealed together)
 - **Field Profile Histograms** — chart values are replaced for masked fields in the UI
 - **Anomaly Assertion Context** — values in anomaly check details are unconditionally masked; there is no inline reveal
 - **Export Operation (Field Profiles)** — histogram bucket values are masked in the `_field_profiles_export` file written to the enrichment datastore

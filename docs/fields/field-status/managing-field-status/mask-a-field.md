@@ -11,7 +11,7 @@ When you mask a field, its actual values are replaced with `***MASKED***` everyw
 Specifically, `***MASKED***` appears in the following places:
 
 - **Data Preview**: Values are hidden in the container preview — users must explicitly reveal them
-- **Anomaly Source Records**: Values are hidden by default — users can toggle reveal per record
+- **Anomaly Source Records**: Values are hidden by default — users can toggle reveal per anomaly (all source records for the anomaly are revealed together)
 - **Field Profile Histograms**: Chart values are hidden for masked fields in the field profile view
 - **Anomaly Assertion Context**: The values embedded in anomaly check details are unconditionally masked — they cannot be revealed inline
 - **Export Operation (Field Profiles)**: Histogram bucket values for masked fields are replaced with `***MASKED***` in the `_field_profiles_export` file written to the enrichment datastore
@@ -27,7 +27,7 @@ Specifically, `***MASKED***` appears in the following places:
 | Surface | Operation that produces it | Reveal available? |
 | :--- | :--- | :--- |
 | Data Preview | Container read (live query) | Yes — "Show masked values" button |
-| Anomaly Source Records | Scan / Dry Run | Yes — per-record reveal toggle |
+| Anomaly Source Records | Scan / Dry Run | Yes — per-anomaly reveal toggle (all records revealed together) |
 | Field Profile Histograms (UI) | Profile | Yes — via `include_masked` API parameter |
 | Anomaly Assertion Context | Scan / Dry Run | No — unconditionally masked |
 | Field Profiles Export | Export Operation | No — re-run export after unmasking |
@@ -159,7 +159,7 @@ In the container's data preview, masked fields display their values as hidden (`
 
 ### Anomaly Source Records
 
-In anomaly source records, masked field values are hidden by default. You can toggle the visibility of masked values per record using the reveal control.
+In anomaly source records, masked field values are hidden by default. You can toggle the visibility of masked values using the reveal control — toggling it reveals all source records attached to that anomaly at once.
 
 ![masked-anomaly-source-records](../../../assets/fields/field-status/managing-field-status/mask-a-field/masked-anomaly-source-records.png)
 
