@@ -16,7 +16,7 @@ Let's get started 🚀
 
 **Step 3:** In the top-right corner, click on the **"Run"** button, then select "**Profile**" from the dropdown menu. This action will initiate the profiling process that generates inferred checks.
 
-![run](../assetsAcho que você poderia criar um quaddr)
+![run](../assets/data-quality-checks/inferred-check/run.png)
 
 !!! note
     Inferred checks will be automatically updated with the next Profiling run. Manually updating an inferred check will take it out of the automatic update workflow.

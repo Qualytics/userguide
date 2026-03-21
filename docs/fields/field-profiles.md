@@ -2,7 +2,7 @@
 
 A Field Profile provides a detailed breakdown of a field’s data after a profiling operation. It helps you understand the structure, quality, and distribution of values for each field inside a container.
 
-## What Field Profiles Are Used For
+## What Field Profiles Are Used For?
 
 Field Profiles help you:
 
@@ -13,7 +13,7 @@ Field Profiles help you:
 
 These insights make it easier to detect data issues early and understand how a field behaves over time.
 
-## How Field Profiles Are Generated
+## How Field Profiles Are Generated?
 
 Field Profiles are automatically created when you run a [**Profile**](../source-datastore/profile.md){target="_blank"} operation on a container:
 

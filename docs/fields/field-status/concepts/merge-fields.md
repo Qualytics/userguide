@@ -2,7 +2,7 @@
 
 When a column is renamed in the source data, the next profile operation creates a new **Active** field with the updated name and marks the original field as **Missing**. The merge operation combines these two fields into one, preserving all historical data under the new column name.
 
-## Why Merge
+## Why Merge?
 
 Without merging, a column rename results in:
 
@@ -11,7 +11,7 @@ Without merging, a column rename results in:
 
 Merging transfers the historical context from the old field to the new one, ensuring continuity in your quality monitoring.
 
-## What Happens During a Merge
+## What Happens During a Merge?
 
 When you merge a **source field** (the old field with history) into a **target field** (the new field with the desired name):
 
@@ -23,7 +23,7 @@ When you merge a **source field** (the old field with history) into a **target f
 | 4 | All historical field profiles are renamed to match the new field name |
 | 5 | Quality checks from the target field are reassociated to the source field |
 
-## What Is Preserved
+## What Is Preserved?
 
 | Asset | Behavior |
 | :--- | :--- |
