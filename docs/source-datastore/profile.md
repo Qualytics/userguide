@@ -367,7 +367,7 @@ This status indicates that the profile operation is still running at the moment 
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (sync, profile, or scan).                         |
 | 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
 | 3.     | Progress Bar                     | The progress of the operation.                                                                         |
 | 4.     | Triggered By                     | The author who triggered the operation.                                                                |
@@ -388,7 +388,7 @@ This status indicates that the profile operation was manually stopped before it 
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (sync, profile, or scan).                         |
 | 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
 | 3.     | Progress Bar                     | The progress of the operation.                                                                         |
 | 4.     | Aborted By                     | The author who Aborted the operation.                                                                |
@@ -411,7 +411,7 @@ This status indicates that the profile operation failed due to unrecoverable err
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (sync, profile, or scan).                         |
 | 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
 | 3.     | Progress Bar                     | The progress of the operation at the time of failure.                                                  |
 | 4.     | Triggered By                     | The author who triggered the operation.                                                                |
@@ -435,7 +435,7 @@ This status signals that the profile operation completed but encountered some is
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                   |
 |--------|----------------------------------|-------------------------------------------------------------------------------------------------------|
-| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (catalog, profile, or scan).                         |
+| 1.     | Operation ID & Operation Type    | Unique identifier and type of operation performed (sync, profile, or scan).                         |
 | 2.     | Timestamp                        | Timestamp when the operation was started.                                                              |
 | 3.     | Progress Bar                     | The progress of the operation.                                                                         |
 | 4.     | Triggered By                     | The author who triggered the operation.                                                               |
@@ -458,7 +458,7 @@ This status confirms that the profile operation was completed successfully witho
 
 | **No.** | **Parameter**                   | **Interpretation**                                                                                                    |
 |---------|----------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| 1.      | Operation ID & Operation Type     | Unique identifier and type of operation performed (catalog, profile, or scan).                                         |
+| 1.      | Operation ID & Operation Type     | Unique identifier and type of operation performed (sync, profile, or scan).                                         |
 | 2.      | Timestamp                        | Timestamp when the operation was started.                                                                               |
 | 3.      | Progress Bar                     | The progress of the operation.                                                                                            |
 | 4.      | Triggered By                     | The author who triggered the operation.                                                                                 |

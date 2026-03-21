@@ -45,7 +45,7 @@ After adding a JDBC Datastore, you can initiate a **Sync operation** to extract 
 * Field names within each container.
 * Record counts for data analysis and profiling.
 
-![catalog](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/sync-operation-overview.png)
+![sync](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/sync-operation-overview.png)
 
 For more information about how to run a sync operation, refer to the [**Sync Operation**](../source-datastore/sync.md) documentation.
 
