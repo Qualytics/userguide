@@ -9,8 +9,8 @@ Only fields with **Active** or **Masked** status can be excluded.
 When you exclude a field:
 
 - **Field Profiling**: The field is no longer profiled
-- **Quality Checks**: Associated checks are set to Discarded; [Expected Schema](/checks/expected-schema-check/) checks remove the field from their properties
-- **[Computed Fields](/fields/computed-fields/overview/)**: Any computed fields sourced from this field are also excluded (see [Computed Fields and Exclusion](#computed-fields-and-exclusion))
+- **Quality Checks**: Associated checks are set to Discarded; [Expected Schema](/checks/expected-schema-check.md) checks remove the field from their properties
+- **[Computed Fields](/fields/computed-fields/overview.md)**: Any computed fields sourced from this field are also excluded (see [Computed Fields and Exclusion](#computed-fields-and-exclusion))
 
 ## Exclude from the Field Listing
 
@@ -74,7 +74,7 @@ You can exclude multiple fields at once from the container's field listing.
 
 ## Computed Fields and Exclusion
 
-[Computed fields](/fields/computed-fields/overview/) have a different relationship with exclusion compared to regular fields. A computed field depends on one or more **source fields** — if any source field becomes unavailable (missing or excluded), the computed field cannot function.
+[Computed fields](/fields/computed-fields/overview.md) have a different relationship with exclusion compared to regular fields. A computed field depends on one or more **source fields** — if any source field becomes unavailable (missing or excluded), the computed field cannot function.
 
 ### Computed fields cannot be excluded directly
 

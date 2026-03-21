@@ -38,7 +38,7 @@ Only **missing** fields and **computed fields** can be permanently deleted. Acti
 
 ### Delete a Computed Field
 
-Deleting a [computed field](/fields/computed-fields/overview/){target="_blank"} permanently removes both the **transformation definition** and its **output field**. This is the only way to remove a computed field — computed fields cannot be excluded.
+Deleting a [computed field](/fields/computed-fields/overview.md){target="_blank"} permanently removes both the **transformation definition** and its **output field**. This is the only way to remove a computed field — computed fields cannot be excluded.
 
 When a computed field is deleted:
 
@@ -48,7 +48,7 @@ When a computed field is deleted:
 - **Source fields** are not affected — they retain their status and configuration
 
 !!! info
-    For step-by-step instructions on how to delete a computed field, see [Delete a Computed Field](/fields/computed-fields/computed-fields-details/#delete-a-computed-field){target="_blank"}.
+    For step-by-step instructions on how to delete a computed field, see [Delete a Computed Field](/fields/computed-fields/computed-fields-details.md#delete-a-computed-field){target="_blank"}.
 
 ## Delete from the Field View
 
