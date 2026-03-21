@@ -6,7 +6,7 @@ JDBC Datastore in Qualytics allows you to easily integrate and manage data from 
 
 Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/jdbc-datastores/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/add-source-datastore.png)
 
 For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Datastore**](../add-datastores/athena.md#add-the-source-datastore) section of the documentation.
 
@@ -37,21 +37,21 @@ To connect to a JDBC datastore, users must provide the required connection detai
 
 For more information about connections, refer to the [**Connection Overview**](../connections/overview-of-a-connection.md) documentation.
 
-## Catalog Operation  
+## Sync Operation
 
-After adding a JDBC Datastore, you can initiate a **Catalog operation** to extract key metadata from the database. This operation provides:
+After adding a JDBC Datastore, you can initiate a **Sync operation** to extract key metadata from the database. This operation provides:
 
-* A list of containers (schemas, tables, or views).  
-* Field names within each container.  
+* A list of containers (schemas, tables, or views).
+* Field names within each container.
 * Record counts for data analysis and profiling.
 
-![catalog](../assets/datastores/jdbc-datastores/catalog-light.png)
+![catalog](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/sync-operation-overview.png)
 
-For more information about how to run catalog operation, refer to the [**Catalog Operation**](../source-datastore/catalog.md) documentation.
+For more information about how to run a sync operation, refer to the [**Sync Operation**](../source-datastore/sync.md) documentation.
 
 ## Field Types Inference
 
-Qualytics employs weighted histogram analysis during the Catalog operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
+Qualytics employs weighted histogram analysis during the Sync operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
 
 ## Containers Overview  
 

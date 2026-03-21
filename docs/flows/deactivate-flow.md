@@ -12,7 +12,7 @@ Deactivating a specific flow allows you to pause its triggers without deleting i
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to deactivate, then click on **Deactivate** from the dropdown menu.
 
-![deactivate](../assets/flows/deactivate-light-95.png)
+![deactivate](../assets/flows/manage-flow/deactivate-flow/deactivate.png)
 
 !!! note
     If you accidentally deactivate a flow, you can easily reactivate it by following the steps in the [Activate Flow guide](../flows/activate-flow.md){target="_blank"}.
@@ -28,15 +28,15 @@ Deactivating flows in bulk allows you to pause triggers for multiple flows at on
 
 **Step 1**: Hover over the flows list and select the **checkbox** next to the flows you want to deactivate.
 
-![deactivate](../assets/flows/deactivate-checkbox.png)
+![deactivate](../assets/flows/manage-flow/deactivate-flow/deactivate-checkbox.png)
 
 When multiple flows are selected, an action toolbar appears showing the total number of selected flows along with available bulk actions.
 
-![deactivate](../assets/flows/toolbar-checkbox.png)
+![deactivate](../assets/flows/manage-flow/deactivate-flow/toolbar-checkbox.png)
 
 **Step 2**: Click **Deactivate** from the action toolbar.
 
-![deactivate](../assets/flows/deactivate-button.png)
+![deactivate](../assets/flows/manage-flow/deactivate-flow/deactivate-button.png)
 
 After clicking **Deactivate**, a success notification appears confirming that the selected flows have been deactivated.
     

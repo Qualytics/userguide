@@ -48,7 +48,7 @@ Imagine you manage a retail company’s product database that gets updated every
 
 You can create a Flow like this:
 
-- **Trigger:** When a **Catalog Operation Completes** on your datastore.  
+- **Trigger:** When a **Sync Operation Completes** on your datastore.
 - **Action 1:** Automatically run a **Profile** to detect schema or data type changes.  
 - **Action 2:** Run a **Scan** to check for anomalies in product prices or availability.  
 - **Action 3:** Send a **Slack Notification** to your team if anomalies are detected.
@@ -59,17 +59,17 @@ This setup ensures every new data load is automatically checked, issues are flag
 
 **Step 1**: Log in to your Qualytics account and click on **Flows** on the left side panel of the interface.  
 
-![flows](../assets/flows/flow-light-1.png)
+![flows](../assets/flows/overview/flow.png)
 
 You will navigate to the Flows interface, where you can add and manage flows. At the top, you will see two tabs:
 
 * **Definitions:** Displays a list of all flows along with details like triggers, actions, tags, and the last triggered time.
 
-![definition](../assets/flows/definitions-light-2.png)
+![definition](../assets/flows/overview/definitions.png)
 
 * **Executions:** Provides the execution history of flows, including their status and timestamps.
 
-![execution](../assets/flows/execution-light-3.png)
+![execution](../assets/flows/overview/execution.png)
 
 ## Add Flow
 

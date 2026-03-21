@@ -8,9 +8,9 @@ Something that deviates from the standard, normal, or expected. This can be in t
 
 The data represents the real-world values they are expected to model.
 
-### <a name="catalog"></a>__Catalog Operation__
+### <a name="catalog"></a>__Sync Operation__
 
-Used to read fundamental metadata from a Datastore required for the proper functioning of subsequent Operations such as Profile, Hash, and Scan.
+Detects new, changed, or removed containers and fields in a Datastore. Works incrementally by comparing the current datastore state against what Qualytics already knows, only processing the differences. Required for the proper functioning of subsequent Operations such as Profile, Hash, and Scan. Previously known as "Catalog Operation".
 
 ### <a name="comparison"></a>__Comparison__
 

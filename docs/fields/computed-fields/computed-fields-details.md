@@ -67,7 +67,7 @@ Deleting a computed field permanently removes both the **transformation definiti
 2. Click the **Delete** button in the top-right corner of the field page.
 3. Confirm the deletion in the dialog.
 
-### What Happens When a Computed Field is Deleted
+### What Happens When a Computed Field is Deleted?
 
 - The **transformation definition** is permanently removed
 - The **output field** is permanently removed
@@ -78,4 +78,4 @@ Deleting a computed field permanently removes both the **transformation definiti
     This action is **irreversible**. Unlike excluding a source field (which preserves the computed field definition for later restoration), deleting a computed field permanently removes the definition and all associated data.
 
 !!! note
-    This is different from what happens when a source field is excluded. When a source field is excluded, the computed field output is also excluded but the definition is **preserved**, allowing restoration later. When you delete a computed field directly, the definition is permanently lost. For more details, see [Computed Fields and Exclusion](/fields/field-status/managing-field-status/exclude-a-field/#computed-fields-and-exclusion){target="_blank"}.
+    This is different from what happens when a source field is excluded. When a source field is excluded, the computed field output is also excluded but the definition is **preserved**, allowing restoration later. When you delete a computed field directly, the definition is permanently lost. For more details, see [Computed Fields and Exclusion](/fields/field-status/managing-field-status/exclude-a-field.md#computed-fields-and-exclusion){target="_blank"}.

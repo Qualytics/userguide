@@ -404,7 +404,7 @@ You can filter your checks based on values like **Source Datastores Check Type**
 
 |No     |     Filter  |   Filter Value  |  Description|
 | :---- |  :----       |  :----         |  :----      |
-| **3** | **Check Type** | **All** | Displays all types of checks, both [inferred](../checks/inferred-check.md) and [authored](../checks/authored-check.md). |
+| **3** | **Check Type** | **All** | Displays all types of checks, both [inferred](../data-quality-checks/inferred-check.md) and [authored](../data-quality-checks/authored-check.md). |
 |  |  | **Inferred** | Shows system-generated checks that automatically validate data based on detected patterns or logic. |
 |  |  | **Authored** | Displays user-created checks, allowing the user to focus on custom validations tailored to specific requirements. |
 | **4** | **Asserted State** | **All** | Displays all checks, regardless of their asserted status. This provides a full overview of both passed, failed, and not asserted checks. |
@@ -412,5 +412,5 @@ You can filter your checks based on values like **Source Datastores Check Type**
 |  |  | **Failed** | Displays checks that have failed assertion, indicating active anomalies or issues that need attention. |
 |  |  | **Not Asserted** | Filters out checks that have not yet been asserted, either because they haven’t been processed or validated yet. |
 | **5** | **Rule** | **N/A** | Select this to filter the checks based on specific rule type for data validation, such as checking non-null values, matching patterns, comparing numerical ranges, or verifying date-time constraints. By clicking on the caret down button next to the Rule field, the available rule types will be dynamically populated based on the rule types present in the results.<br> <br>The rules displayed are based on the current dataset and provide more granular control over filtering. Each rule type will show a counter next to it, displaying the total number of occurrences for that rule in the dataset.<br> <br>For example, the rule type **After Date Time** is displayed with a total of **46** occurrences.|
-| **6** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../checks/checks-template.md). |
+| **6** | **Template** | **N/A** | This filter allows users to view and apply predefined [check templates](../data-quality-checks/checks-template.md). |
 | **7** | **Created By** | **Select a user** | Filters checks based on the user or system that created them. The list is dynamically populated based on creators present in the current results, making it easier to review ownership or focus on checks created by specific users or automated services. |

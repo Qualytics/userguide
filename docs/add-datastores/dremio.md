@@ -1,6 +1,6 @@
 # Dremio
 
-Adding and configuring a Dremio connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Dremio connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Dremio as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-source-datastore](../assets/datastores/dremio/add-source-datastore-light-1.png)
+![add-source-datastore](../assets/add-datastores/jdbc-datastores/dremio/add-source-datastore-light-1.png)
 
 **Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![add-source-datastore](../assets/datastores/dremio/add-source-datastore-light-2.png)
+![add-source-datastore](../assets/add-datastores/jdbc-datastores/dremio/add-source-datastore-light-2.png)
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
@@ -32,7 +32,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Dremio** connector from the dropdown list and add connection properties such as **Secrets Management**, host, port, username, and password, along with datastore properties like catalog, database, etc.
 
-![add-source-datastore-details](../assets/datastores/dremio/add-source-datastore-details-light-3.png)
+![add-source-datastore-details](../assets/add-datastores/jdbc-datastores/dremio/add-source-datastore-details-light-3.png)
 
 **Secrets Management:** This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,11 +48,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath | Specify the JSONPath to retrieve the secret data (e.g., $.data). |
 
-![secret-management](../assets/datastores/dremio/secret-management-light-04.png)
+![secret-management](../assets/add-datastores/jdbc-datastores/dremio/secret-management-light-04.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-configure-details](../assets/datastores/dremio/add-configure-details-light-4.png)
+![add-configure-details](../assets/add-datastores/jdbc-datastores/dremio/add-configure-details-light-4.png)
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
@@ -63,11 +63,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Authentication | You can choose between Basic authentication or Access Token for validating and securing the connection to your Dremio instance. <br> <br>**Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Dremio. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Dremio.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul>**Access Token Authentication:** This method uses an access token for authentication. This is a more secure method compared to basic authentication.<ul><li> **Personal Access Token:** Enter the personal access token here to authenticate and access the resources securely.</li> </ul>|
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initial Cataloging | Tick the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8. | Initiate Sync | Tick the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-source-connection](../assets/datastores/dremio/test-source-connection-light-5.png)
+![test-source-connection](../assets/add-datastores/jdbc-datastores/dremio/test-source-connection-light-5.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -77,14 +77,14 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![add-datastore-details-existing](../assets/datastores/dremio/add-datastore-details-existing-light-6.png)
+![add-datastore-details-existing](../assets/add-datastores/jdbc-datastores/dremio/add-datastore-details-existing-light-6.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as **Schema**, **Teams** and **Initiate Cataloging**.
+    If you are using existing credentials, you can only edit the details such as **Schema**, **Teams** and **Initiate Sync**.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If the connection details are verified, a success message will be displayed.
 
-![test-existing-enrichment-connection](../assets/datastores/dremio/test-existing-enrichment-connection-light-7.png)
+![test-existing-enrichment-connection](../assets/add-datastores/jdbc-datastores/dremio/test-existing-enrichment-connection-light-7.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -101,11 +101,11 @@ After successfully testing and verifying your source datastore connection, you h
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![click-source](../assets/datastores/dremio/click-source-light-8.png)
+![click-source](../assets/add-datastores/jdbc-datastores/dremio/click-source-light-8.png)
 
 **Step 2**: A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![enrichment-details](../assets/datastores/dremio/enrichment-details-light-9.png)
+![enrichment-details](../assets/add-datastores/jdbc-datastores/dremio/enrichment-details-light-9.png)
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
@@ -119,11 +119,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![select-enrichment](../assets/datastores/dremio/select-enrichment-light-10.png)
+![select-enrichment](../assets/add-datastores/jdbc-datastores/dremio/select-enrichment-light-10.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![enrichment-detail](../assets/datastores/dremio/enrichment-details-light-11.png)
+![enrichment-detail](../assets/add-datastores/jdbc-datastores/dremio/enrichment-details-light-11.png)
 
 | REF. | FIELDS | ACTION |
 | ---- | ---- | ---- |
@@ -137,21 +137,21 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 !!! note
     Qualytics does not support Dremio as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using DB2 as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.  
 
-![add-enrichment-details](../assets/datastores/dremio/add-enrichment-details-light-12.png)
+![add-enrichment-details](../assets/add-datastores/jdbc-datastores/dremio/add-enrichment-details-light-12.png)
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.  
 
-![test-enrichment-connection](../assets/datastores/dremio/test-enrichment-connection-light-13.png)
+![test-enrichment-connection](../assets/add-datastores/jdbc-datastores/dremio/test-enrichment-connection-light-13.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process.
 
-![enrichment-details-finish](../assets/datastores/dremio/enrichment-details-finish-light-14.png)
+![enrichment-details-finish](../assets/add-datastores/jdbc-datastores/dremio/enrichment-details-finish-light-14.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![athena-created](../assets/datastores/dremio/dremio-created-light-16.png)
+![athena-created](../assets/add-datastores/jdbc-datastores/dremio/dremio-created-light-16.png)
 
 ### Option II: Use an Existing Connection
 
@@ -159,14 +159,14 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![select-enrichment-details](../assets/datastores/dremio/select-enrichment-light-17.png)
+![select-enrichment-details](../assets/add-datastores/jdbc-datastores/dremio/select-enrichment-light-17.png)
 
 **Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
 !!! note
     Qualytics does not support Dremio as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using DB2 as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
-![add-enrichment-details](../assets/datastores/dremio/add-enrichment-details-light-18.png)
+![add-enrichment-details](../assets/add-datastores/jdbc-datastores/dremio/add-enrichment-details-light-18.png)
 
 | REF. | FIELDS | ACTIONS |
 | ---- | ---- | ---- |
@@ -183,17 +183,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 - **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![add-existing-enrichment](../assets/datastores/dremio/add-existing-enrichment-light-19.png)
+![add-existing-enrichment](../assets/add-datastores/jdbc-datastores/dremio/add-existing-enrichment-light-19.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![click-finish](../assets/datastores/dremio/click-finish-light-20.png)
+![click-finish](../assets/add-datastores/jdbc-datastores/dremio/click-finish-light-20.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![athena-existing-created](../assets/datastores/dremio/dremio-created-light-16.png)
+![athena-existing-created](../assets/add-datastores/jdbc-datastores/dremio/dremio-created-light-16.png)
 
 ## API Payload Examples
 

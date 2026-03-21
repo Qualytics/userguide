@@ -1,6 +1,6 @@
 # Databricks
 
-Adding and configuring a Databricks connection within Qualytics empowers the platform to build a symbolic link with your database to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring a Databricks connection within Qualytics empowers the platform to build a symbolic link with your database to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
 
 This documentation provides a step-by-step guide on how to add Databricks as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -58,11 +58,11 @@ To improve the performance of all-purpose compute using node pools, you can foll
 
 **Step 1:** Configure details for Qualytics Node Pool.
 
-![configure-qualytics-node-pool](../assets/datastores/databricks/configure-qualytics-node-pool.png)
+![configure-qualytics-node-pool](../assets/add-datastores/jdbc-datastores/databricks/configure-qualytics-node-pool.png)
 
 **Step 2:** Attach Compute details with the Node Pool.
 
-![attach-compute-with-node-pool](../assets/datastores/databricks/attach-compute-with-node-pool.png)
+![attach-compute-with-node-pool](../assets/add-datastores/jdbc-datastores/databricks/attach-compute-with-node-pool.png)
 
 ### Retrieve the Connection Details
 
@@ -89,7 +89,7 @@ Follow the given steps to get the connection details for the SQL warehouse:
 3. Navigate to the **Connection Details** tab.
 4. Copy the connection details.
 
-![connection-details-for-sql-warehouse](../assets/datastores/databricks/connection-details-for-sql-warehouse.png)
+![connection-details-for-sql-warehouse](../assets/add-datastores/jdbc-datastores/databricks/connection-details-for-sql-warehouse.png)
 
 #### Get Connection Details for the Cluster
 
@@ -101,47 +101,47 @@ Follow the given steps to get the connection details for the cluster:
 4. Click on the **JDBC/ODBC** tab.
 5. Copy the connection details.
 
-![connection-details-for-the-cluster](../assets/datastores/databricks/connection-details-for-the-cluster.png)
+![connection-details-for-the-cluster](../assets/add-datastores/jdbc-datastores/databricks/connection-details-for-the-cluster.png)
 
 #### Get the Access Token
 
 **Step 1:** In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the dropdown menu.
 
-![user-settings](../assets/datastores/databricks/user-settings.png)
+![user-settings](../assets/add-datastores/jdbc-datastores/databricks/user-settings.png)
 
 !!! note
     Refer to the [**Databricks Official Docs**](https://docs.databricks.com/en/dev-tools/auth/pat.html){:target="_blank"} to generate the **Access Token**.
 
 **Step 2:** In the **Settings** page, select the **Developer** option in the **User** section.
 
-![developer-option](../assets/datastores/databricks/developer-options.png)
+![developer-option](../assets/add-datastores/jdbc-datastores/databricks/developer-options.png)
 
 **Step 3:** In the **Developer** page, click on **Manage** in Access Tokens.
 
-![manage-access-token](../assets/datastores/databricks/manage-access-token.png)
+![manage-access-token](../assets/add-datastores/jdbc-datastores/databricks/manage-access-token.png)
 
 **Step 4:** In the **Access Tokens** page, click on the **Generate new token** button.
 
-![generate-new-token](../assets/datastores/databricks/generate-new-token.png)
+![generate-new-token](../assets/add-datastores/jdbc-datastores/databricks/generate-new-token.png)
 
 **Step 5:** You will see a modal to add a description and validation time (in days) for the token.
 
-![add-a-description](../assets/datastores/databricks/add-a-description.png)
+![add-a-description](../assets/add-datastores/jdbc-datastores/databricks/add-a-description.png)
 
 **Step 6:** After adding the contents, click on **Generate**, and it will show the **token**.
 
-![generated-token](../assets/datastores/databricks/generated-token.png)
+![generated-token](../assets/add-datastores/jdbc-datastores/databricks/generated-token.png)
 
 !!! warning
     Before closing the modal window by clicking on the **Done** button, ensure the **Personal Access Token** is saved to a secure location.
 
 **Step 7:** You can see the new **token** on the **Access Tokens** page.
 
-![new-token](../assets/datastores/databricks/new-token.png)
+![new-token](../assets/add-datastores/jdbc-datastores/databricks/new-token.png)
 
 You can also revoke a **token** on the **Access Tokens** page by clicking on the **Revoke token** button.
 
-![revoke-token](../assets/datastores/databricks/revoke-token.png)
+![revoke-token](../assets/add-datastores/jdbc-datastores/databricks/revoke-token.png)
 
 ## Add a Source Datastore
 
@@ -149,11 +149,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/databricks/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/databricks/add-datastore.png)
 
 **Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/databricks/select-a-connector-light.png)
+![select-a-connector](../assets/add-datastores/jdbc-datastores/databricks/select-a-connector.png)
 
 | REF. | FIELDS         | ACTIONS              |
 |------|----------------|----------------------|
@@ -167,7 +167,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1:** Select the **Databricks** connector from the dropdown list and add connection details such as Secrets Management, host, HTTP path, database, and personal access token.
 
-![add-datastore-credentials](../assets/datastores/databricks/add-datastore-credentials-light.png)
+![add-datastore-credentials](../assets/add-datastores/jdbc-datastores/databricks/add-datastore-credentials.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -183,11 +183,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).       |
 
-![hashcorp-vault](../assets/datastores/databricks/hashcorp-light.png)
+![hashcorp-vault](../assets/add-datastores/jdbc-datastores/databricks/hashcorp.png)
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/databricks/add-datastore-credentials-explain-light.png)
+![add-datastore-credentials-explain](../assets/add-datastores/jdbc-datastores/databricks/add-datastore-credentials-explain.png)
 
 | REF. | FIELD   | ACTIONS   |
 |------|---------|-----------|
@@ -197,11 +197,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 4.   | Catalog (Required)  | Add a **Catalog** to fetch data structures and metadata from the Databricks. |
 | 5.   | Database (Optional) | Specify the database name to be accessed.|
 | 6.   | Teams (Required)    | Select one or more teams from the dropdown to associate with this source datastore.|
-| 7.   | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 7.   | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/databricks/test-datastore-connection-light.png)
+![test-datastore-connection](../assets/add-datastores/jdbc-datastores/databricks/test-datastore-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -211,14 +211,14 @@ If the toggle for **Add New Connection** is turned off, then this will prompt yo
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/databricks/use-existing-datastore-light.png)
+![use-existing-datastore](../assets/add-datastores/jdbc-datastores/databricks/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Catalog, Database, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Catalog, Database, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/databricks/test-connection-for-existing-datastore-light.png)
+![test-connection-for-existing-datastore](../assets/add-datastores/jdbc-datastores/databricks/test-connection-for-existing-datastore.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -232,11 +232,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/databricks/next-button-for-enrichment-light.png)
+![next-button-for-enrichment](../assets/add-datastores/jdbc-datastores/databricks/next-button-for-enrichment.png)
 
 **Step 2:** A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![select-enrichment-connector](../assets/datastores/databricks/select-enrichment-connector-light.png)
+![select-enrichment-connector](../assets/add-datastores/jdbc-datastores/databricks/select-enrichment-connector.png)
 
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
@@ -250,11 +250,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1:** Click on the caret button and select **Add Enrichment Datastore**.
 
-![caret-button](../assets/datastores/databricks/add-enrichment-light.png)
+![caret-button](../assets/add-datastores/jdbc-datastores/databricks/add-enrichment.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![modal-window](../assets/datastores/databricks/add-enrichment-detail-light.png)
+![modal-window](../assets/add-datastores/jdbc-datastores/databricks/add-enrichment-detail.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -265,7 +265,7 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/databricks/enrichment-datastore-explain-light.png)
+![enrichment-datastore-explain](../assets/add-datastores/jdbc-datastores/databricks/enrichment-datastore-explain.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -281,11 +281,11 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![secret-management](../assets/datastores/databricks/secret-management-light.png)
+![secret-management](../assets/add-datastores/jdbc-datastores/databricks/secret-management.png)
 
 **Step 3:** The configuration form, requesting credential details after selecting **enrichment datastore** connector.
 
-![config-details](../assets/datastores/databricks/config-details-light.png)
+![config-details](../assets/add-datastores/jdbc-datastores/databricks/config-details.png)
 
 | REF. | FIELD     | ACTIONS     |
 |------|------------|-------------|
@@ -298,17 +298,17 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 4:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the enrichment datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/databricks/test-connection-for-enrichment-datastore-light.png)
+![test-connection-for-enrichment-datastore](../assets/add-datastores/jdbc-datastores/databricks/test-connection-for-enrichment-datastore.png)
 
 **Step 5:** Click on the **Finish** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/databricks/finish-configuration-light.png)
+![finish-configuration](../assets/add-datastores/jdbc-datastores/databricks/finish-configuration.png)
 
 When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully.
 
 **Step 6:** Close the success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/databricks/data-operations-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/databricks/data-operations-page.png)
 
 ### Option II: Use an Existing Connection
 
@@ -316,11 +316,11 @@ If the **Use Enrichment Datastore** option is selected from the caret button, yo
 
 **Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
-![use-enrichment-datastore](../assets/datastores/databricks/use-enrichment-light.png)
+![use-enrichment-datastore](../assets/add-datastores/jdbc-datastores/databricks/use-enrichment.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![use-enrichment-details](../assets/datastores/databricks/use-enrichment-details-light.png)
+![use-enrichment-details](../assets/add-datastores/jdbc-datastores/databricks/use-enrichment-details.png)
 
 | REF. | FIELDS  | ACTIONS   |
 |------|---------|-----------|
@@ -337,17 +337,17 @@ If the **Use Enrichment Datastore** option is selected from the caret button, yo
 
 - **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![use-existing-enrichment-datastore](../assets/datastores/databricks/use-existing-enrichment-datastore-light.png)
+![use-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/databricks/use-existing-enrichment-datastore.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/databricks/finish-configuration-for-existing-enrichment-datastore-light.png)
+![finish-configuration-for-existing-enrichment-datastore](../assets/add-datastores/jdbc-datastores/databricks/finish-configuration-for-existing-enrichment-datastore.png)
 
 When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/databricks/data-operations-page-light.png)
+![data-operation-page](../assets/add-datastores/jdbc-datastores/databricks/data-operations-page.png)
 
 ## API Payload Examples
 

@@ -1,6 +1,6 @@
 # Presto
 
-Adding and configuring a Presto connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Presto connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Presto as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add](../assets/datastores/presto/add-light-1.png)
+![add](../assets/add-datastores/jdbc-datastores/presto/add-light-1.png)
 
 **Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![detail](../assets/datastores/presto/detail-light-2.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-2.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -32,7 +32,7 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 
 **Step 1**: Select the **Presto** connector from the dropdown list and add connection details such as **Secrets Management**, host, port, username, database, and schema.
 
-![connector](../assets/datastores/presto/connector-light-3.png)
+![connector](../assets/add-datastores/jdbc-datastores/presto/connector-light-3.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,11 +48,11 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath | Specify the JSONPath to retrieve the secret data (e.g., $.data). |
 
-![vault](../assets/datastores/presto/vault-light-4.png)
+![vault](../assets/add-datastores/jdbc-datastores/presto/vault-light-4.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![detail](../assets/datastores/presto/detail-light-5.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-5.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -63,11 +63,11 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 | 5. | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Presto. |
 | 6. | Schema (Required) | Define the schema within the database that should be used. |
 | 7. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
+| 8. | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.  
 
-![test](../assets/datastores/presto/test-light-6.png)
+![test](../assets/add-datastores/jdbc-datastores/presto/test-light-6.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -77,14 +77,14 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![detail](../assets/datastores/presto/detail-light-7.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-7.png)
 
 !!! note 
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync. 
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.  
 
-![test](../assets/datastores/presto/test-light-8.png)
+![test](../assets/add-datastores/jdbc-datastores/presto/test-light-8.png)
 
 !!! note 
     Clicking on the Finish button will create the source datastore and bypass the enrichment datastore configuration step. 
@@ -101,11 +101,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next](../assets/datastores/presto/next-light-9.png)
+![next](../assets/add-datastores/jdbc-datastores/presto/next-light-9.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![enrichment](../assets/datastores/presto/enrichment-light-10.png)
+![enrichment](../assets/add-datastores/jdbc-datastores/presto/enrichment-light-10.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -119,11 +119,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![add](../assets/datastores/presto/add-light-11.png)
+![add](../assets/add-datastores/jdbc-datastores/presto/add-light-11.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![detail](../assets/datastores/presto/detail-light-12.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-12.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -134,24 +134,24 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
-![detail](../assets/datastores/presto/detail-light-13.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-13.png)
 
 !!! note 
     Qualytics does not support Presto as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration. 
 
 **Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test](../assets/datastores/presto/test-light-14.png)
+![test](../assets/add-datastores/jdbc-datastores/presto/test-light-14.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process.
 
-![finish](../assets/datastores/presto/finish-light-15.png)
+![finish](../assets/add-datastores/jdbc-datastores/presto/finish-light-15.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5:** Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![overview](../assets/datastores/presto/overview-light-17.png)
+![overview](../assets/add-datastores/jdbc-datastores/presto/overview-light-17.png)
 
 ### Option II: Use an Existing Connection
 
@@ -159,11 +159,11 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![use](../assets/datastores/presto/use-light-18.png)
+![use](../assets/add-datastores/jdbc-datastores/presto/use-light-18.png)
 
 **Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![link](../assets/datastores/presto/link-light-19.png)
+![link](../assets/add-datastores/jdbc-datastores/presto/link-light-19.png)
 
 !!! note 
     Qualytics does not support Presto as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using Microsoft SQL Server as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration. 
@@ -180,17 +180,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 * **Database:** Refers to the specific database within the enrichment datastore environment where the data is stored.  
 * **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![detail](../assets/datastores/presto/detail-light-20.png)
+![detail](../assets/add-datastores/jdbc-datastores/presto/detail-light-20.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish](../assets/datastores/presto/finish-light-21.png)
+![finish](../assets/add-datastores/jdbc-datastores/presto/finish-light-21.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your data has been successfully added.  
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.  
 
-![overview](../assets/datastores/presto/overview-light-23.png)
+![overview](../assets/add-datastores/jdbc-datastores/presto/overview-light-23.png)
 
 ## API Payload Examples
 

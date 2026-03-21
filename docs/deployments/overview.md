@@ -26,7 +26,7 @@ For detailed instructions on setting up the Qualytics dataplane in Databricks, s
 In this model, the Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer's choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.
 
 <figure markdown>
-  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.svg)](../assets/deployments/paas_architectural_diagram.jpg)
+  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.svg)](../assets/deployments/paas_architectural_diagram.svg)
   <figcaption>PaaS Deployment Architecture</figcaption>
 </figure>
 

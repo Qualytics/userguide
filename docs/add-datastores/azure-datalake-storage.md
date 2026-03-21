@@ -1,6 +1,6 @@
 # Azure Datalake Storage
 
-Adding and configuring an Azure Datalake Storage connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring an Azure Datalake Storage connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Azure Datalake Storage as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -36,7 +36,7 @@ To configure Azure Datalake Storage Datastore in Qualytics, you need the account
 
 2. Click on **Access Keys** tab and copy the values.
 
-![get-azure-datalake-account-credentials](../assets/datastores/azure-datalake-storage/get-azure-datalake-account-credentials.png)
+![get-azure-datalake-account-credentials](../assets/add-datastores/dfs-datastores/azure-datalake-storage/get-azure-datalake-account-credentials.png)
 
 !!! tip
     Refer to the [**Azure Datalake Storage documentation**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal){:target="_blank"} for more information on how to retrieve the account name and access key of your storage account.
@@ -71,11 +71,11 @@ A source datastore is a storage location used to connect and access data from ex
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/azure-datalake-storage/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/add-datastore.png)
 
 **Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![select-a-connector](../assets/datastores/azure-datalake-storage/select-a-connector-light.png)
+![select-a-connector](../assets/add-datastores/dfs-datastores/azure-datalake-storage/select-a-connector.png)
 
 | REF     | FIELDS    | ACTIONS          |
 |---------|-----------|------------------|
@@ -89,7 +89,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Azure Datalake Storage** connector from the dropdown list and add connection details such as Secrets Management, URI, account name, access key, root path, and teams.
 
-![add-datastore-credentials](../assets/datastores/azure-datalake-storage/add-datastore-credentials-light.png)
+![add-datastore-credentials](../assets/add-datastores/dfs-datastores/azure-datalake-storage/add-datastore-credentials.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -105,18 +105,18 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![secret-management](../assets/datastores/azure-datalake-storage/secret-management-light-04.png)
+![secret-management](../assets/add-datastores/dfs-datastores/azure-datalake-storage/secret-management-light-04.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![add-datastore-credentials-explain](../assets/datastores/azure-datalake-storage/add-datastore-credentials-explain-light.png)
+![add-datastore-credentials-explain](../assets/add-datastores/dfs-datastores/azure-datalake-storage/add-datastore-credentials-explain.png)
 
 | REF | FIELDS | ACTIONS |
 |-----|--------|---------|
 | 1.  | URI (Required) | Enter the Uniform Resource Identifier (URI) of the Azure Datalake Storage. |
 | 2.  | Root Path (Required) | Specify the root path where the data is stored. |
 | 3.  | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 4.  | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 4.  | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Authentication**: Select the authentication method to connect to Azure Datalake Storage. You can choose between **Shared Key** (default) or **Service Principal**.
 
@@ -140,7 +140,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-datastore-connection](../assets/datastores/azure-datalake-storage/test-datastore-connection-light.png)
+![test-datastore-connection](../assets/add-datastores/dfs-datastores/azure-datalake-storage/test-datastore-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -150,14 +150,14 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![use-existing-datastore](../assets/datastores/azure-datalake-storage/use-existing-datastore-light.png)
+![use-existing-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/use-existing-datastore.png)
 
 !!! note
-     If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Cataloging.
+     If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test-connection-for-existing-datastore](../assets/datastores/azure-datalake-storage/test-datastore-connection-light.png)
+![test-connection-for-existing-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/test-datastore-connection.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -171,11 +171,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next-button-for-enrichment](../assets/datastores/azure-datalake-storage/next-button-for-enrichment-light.png)
+![next-button-for-enrichment](../assets/add-datastores/dfs-datastores/azure-datalake-storage/next-button-for-enrichment.png)
 
 **Step 2**:  A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![select-enrichment-connector](../assets/datastores/azure-datalake-storage/select-enrichment-connector-light.png)
+![select-enrichment-connector](../assets/add-datastores/dfs-datastores/azure-datalake-storage/select-enrichment-connector.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -189,11 +189,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![select-enrichment](../assets/datastores/azure-datalake-storage/select-enrichment-light-10.png)
+![select-enrichment](../assets/add-datastores/dfs-datastores/azure-datalake-storage/select-enrichment-light-10.png)
 
 A modal window - **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![enrichment-detail](../assets/datastores/azure-datalake-storage/enrichment-details-light-11.png)
+![enrichment-detail](../assets/add-datastores/dfs-datastores/azure-datalake-storage/enrichment-details-light-11.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -204,7 +204,7 @@ A modal window - **Link Enrichment Datastore** will appear. Enter the following 
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-explain](../assets/datastores/azure-datalake-storage/enrichment-datastore-explain-light.png)
+![enrichment-datastore-explain](../assets/add-datastores/dfs-datastores/azure-datalake-storage/enrichment-datastore-explain.png)
 
 | REF | FIELDS | ACTIONS |
 |------|-------|---------|
@@ -234,19 +234,19 @@ A modal window - **Link Enrichment Datastore** will appear. Enter the following 
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-for-enrichment-datastore](../assets/datastores/azure-datalake-storage/test-connection-for-enrichment-datastore-light.png)
+![test-connection-for-enrichment-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/test-connection-for-enrichment-datastore.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process.
 
-![finish-configuration](../assets/datastores/azure-datalake-storage/finish-configuration-light.png)
+![finish-configuration](../assets/add-datastores/dfs-datastores/azure-datalake-storage/finish-configuration.png)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your datastore has been successfully added**.
 
-![success-message](../assets/datastores/azure-datalake-storage/success-message-light.png)
+![success-message](../assets/add-datastores/dfs-datastores/azure-datalake-storage/success-message.png)
 
 **Step 5**: Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/azure-datalake-storage/data-operation-page-light.png)
+![data-operation-page](../assets/add-datastores/dfs-datastores/azure-datalake-storage/data-operation-page.png)
 
 ### Option II: Use an Existing Connection
 
@@ -254,11 +254,11 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![select-enrichment-details](../assets/datastores/azure-datalake-storage/select-enrichment-light-17.png)
+![select-enrichment-details](../assets/add-datastores/dfs-datastores/azure-datalake-storage/select-enrichment-light-17.png)
 
 **Step 2**: A modal window - **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![add-enrichment-details](../assets/datastores/azure-datalake-storage/add-enrichment-details-light-18.png)
+![add-enrichment-details](../assets/add-datastores/dfs-datastores/azure-datalake-storage/add-enrichment-details-light-18.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -273,19 +273,19 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 -   **Root Path:** Specify the root path where the data is stored. This path defines the base directory or folder from which all data operations will be performed.
 
-![use-existing-enrichment-datastore](../assets/datastores/azure-datalake-storage/use-existing-enrichment-datastore-light.png)
+![use-existing-enrichment-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/use-existing-enrichment-datastore.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-configuration-for-existing-enrichment-datastore](../assets/datastores/azure-datalake-storage/finish-configuration-for-existing-enrichment-datastore-light.png)
+![finish-configuration-for-existing-enrichment-datastore](../assets/add-datastores/dfs-datastores/azure-datalake-storage/finish-configuration-for-existing-enrichment-datastore.png)
 
 When the configuration process is finished, a modal will display a **success message** indicating that **your data has been successfully added**.
 
-![success-message](../assets/datastores/azure-datalake-storage/success-message-light.png)
+![success-message](../assets/add-datastores/dfs-datastores/azure-datalake-storage/success-message.png)
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![data-operation-page](../assets/datastores/azure-datalake-storage/data-operation-page-light.png)
+![data-operation-page](../assets/add-datastores/dfs-datastores/azure-datalake-storage/data-operation-page.png)
 
 ## API Payload Examples
 
