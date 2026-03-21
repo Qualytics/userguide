@@ -27,6 +27,15 @@ User can download the source records that were captured for an anomaly during th
 
 ![record](../assets/datastores/source-records/download-source-record.png)
 
+## Masked Fields in Source Records
+
+If a container contains [masked fields](../fields/field-status/managing-field-status/mask-a-field.md), their values are obfuscated by default in source records.
+
+Users with **Editor** permission can reveal masked values for an anomaly using the reveal toggle. Toggling reveal shows all source records attached to that anomaly at once — reveal is per-anomaly, not per-record. Every reveal action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields accessed — this log is reviewable by Administrators.
+
+!!! info
+    To protect sensitive data consistently, masking also applies to anomaly assertion context (the values embedded in check detail descriptions). That surface does not support inline reveal — use the source record reveal toggle to investigate specific values.
+
 ## Comparison Source Records
 
 Anomalies identified by the Data Diff rule type, configured with Row Identifiers, are displayed with a detailed source record comparison. This visualization highlights differences between rows, making it easier to identify specific discrepancies.

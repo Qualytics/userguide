@@ -112,6 +112,17 @@ After clicking **Schedule**, a confirmation message appears stating **"Operation
 
 ![operation-scheduled](../../assets/container/operations/materialize-operation/operation-scheduled.png)
 
+## Field Masking and Materialize
+
+If your datastore contains [masked fields](../../fields/field-status/managing-field-status/mask-a-field.md), masking is applied to the source data before it is written to the enrichment datastore during a Materialize operation.
+
+Source record values for masked fields are obfuscated in every container snapshot written to the enrichment datastore. This applies to all containers included in the materialize run.
+
+- To obtain revealed data in materialized snapshots, pass `include_masked=true` when triggering the Materialize operation via the API. This parameter is not available in the UI.
+
+!!! note
+    Masking is applied by Qualytics before writing each container to the enrichment datastore. The enrichment datastore always receives already-masked data for any fields designated as sensitive.
+
 ## Review Materialized Data
 
 **Step 1:** Once the selected containers are materialized, go to **Enrichment Datastores** from the left menu. 

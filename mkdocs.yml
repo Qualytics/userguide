@@ -25,6 +25,7 @@ nav:
     - web-app.md
     - keyboard-shortcuts.md
     - Source Datastores:
+<<<<<<< HEAD
       - source-datastore/add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
         - source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
@@ -58,6 +59,14 @@ nav:
         - Profile: source-datastore/operations/profile.md
         - Scan: source-datastore/operations/scan.md
         - External Scan: source-datastore/operations/external-scan.md
+=======
+      - Right Click Options: source-datastore/right-click-options.md
+      - Assign Tags: source-datastore/assign-tags.md
+      - Sync: source-datastore/sync.md
+      - Profile: source-datastore/profile.md
+      - Scan: source-datastore/scan.md
+      - External Scan: source-datastore/external-scan.md
+>>>>>>> main
       - Datastore Settings:
         - Settings Overview: source-datastore/datastore-settings/settings-overview.md
         - Edit Datastore: source-datastore/datastore-settings/edit-datastore.md
@@ -115,22 +124,22 @@ nav:
         - Materialize Operation: container/operations/materialize-operation.md
     - Fields:
       - Overview: fields/field-profiles.md
-      - Field Status:
-        - Overview: fields/field-status/overview.md
-        - Concepts:
+      - Status:
+        - Getting Started: fields/field-status/overview.md
+        - Deep Dive:
           - Introduction: fields/field-status/concepts/understanding-field-status.md
           - Status Types: fields/field-status/concepts/field-status-types.md
           - Lifecycle: fields/field-status/concepts/field-status-lifecycle.md
           - Merge Fields: fields/field-status/concepts/merge-fields.md
-          - API: fields/field-status/concepts/field-status-api.md
-          - FAQ: fields/field-status/concepts/field-status-faq.md
-        - Managing Field Status:
+        - Managing:
           - Filtering by Status: fields/field-status/managing-field-status/filtering-by-status.md
           - Mask a Field: fields/field-status/managing-field-status/mask-a-field.md
           - Exclude a Field: fields/field-status/managing-field-status/exclude-a-field.md
           - Restore a Field: fields/field-status/managing-field-status/restore-a-field.md
           - Delete a Field: fields/field-status/managing-field-status/delete-a-field.md
           - Merge Fields: fields/field-status/managing-field-status/merge-fields.md
+        - API: fields/field-status/concepts/field-status-api.md
+        - FAQ: fields/field-status/concepts/field-status-faq.md
       - Computed Fields:
         - Overview: fields/computed-fields/overview.md
         - Transformation Types: fields/computed-fields/transformation-types.md
@@ -139,62 +148,62 @@ nav:
     - Weight:
       - Weight Mechanism: weight/weighting.md
     - Data Quality Checks:
-      - Overview: checks/overview-of-a-check.md
-      - Authored: checks/authored-check.md
-      - Inferred: checks/inferred-check.md
+      - Overview: data-quality-checks/overview-of-a-check.md
+      - Authored: data-quality-checks/authored-check.md
+      - Inferred: data-quality-checks/inferred-check.md
       - Rule Types:
-        - Rule Types Overview: checks/rule-types-overview.md
-        - After Date Time: checks/after-date-check.md
-        - Aggregation Comparison: checks/aggregation-comparison-check.md
-        - Any Not Null: checks/any-not-null-check.md
-        - Before Date Time: checks/before-date-time-check.md
-        - Between: checks/between-check.md
-        - Between Times: checks/between-times-check.md
-        - Contains Credit Card: checks/contains-credit-card-check.md
-        - Contains Email: checks/contains-email-check.md
-        - Contains Social Security Number: checks/contains-social-security-number-check.md
-        - Contains Url: checks/contains-url.md
-        - Data Diff: checks/data-diff-check.md
-        - Distinct Count: checks/distinct-count-check.md
-        - Entity Resolution: checks/entity-resolution.md
-        - Equal to: checks/equal-to-check.md
-        - Equal to Field: checks/equal-to-field-check.md
-        - Exists In: checks/exists-in-check.md
-        - Expected Schema: checks/expected-schema-check.md
-        - Expected Values: checks/expected-values-check.md
-        - Field Count: checks/field-count-check.md
-        - Freshness Checks: checks/freshness-check.md
-        - Greater Than: checks/greater-than-check.md
-        - Greater Than Field: checks/greater-than-field-check.md
-        - Is Address: checks/is-address.md
-        - Is Credit Card: checks/is-credit-card-check.md
-        - Is Replica Of: checks/is-replica-of-check.md
-        - Is Type: checks/is-type-check.md
-        - Less Than: checks/less-than-check.md
-        - Less Than Field: checks/less-than-field-check.md
-        - Matches Pattern: checks/matches-pattern-check.md
-        - Max Length: checks/max-length-check.md
-        - Max Partition Size: checks/max-partition-size-check.md
-        - Max Value: checks/max-value-check.md
-        - Metric: checks/metric-check.md
-        - Min Length: checks/min-length-check.md
-        - Min Partition Size: checks/min-partition-size-check.md
-        - Min Value: checks/min-value-check.md
-        - Not Exists In: checks/not-exists-in-check.md
-        - Not Future: checks/not-future-check.md
-        - Not Negative: checks/not-negative-check.md
-        - Not Null: checks/not-null-check.md
-        - Positive: checks/positive-check.md
-        - Predicted By: checks/predicted-by-check.md
-        - Required Values: checks/required-values-check.md
-        - Satisfies Expression: checks/satisfies-expression-check.md
-        - Sum: checks/sum-check.md
-        - Time Distribution Size: checks/time-distribution-size-check.md
-        - Unique: checks/unique-check.md
-        - Volumetric Checks: checks/volumetric-check.md
-      - Check Templates: checks/checks-template.md
-      - Apply Check Template for Quality Check: checks/apply-check-template-for-quality-checks.md
-      - Export Check Templates: checks/export-check-templates.md
+        - Rule Types Overview: data-quality-checks/rule-types-overview.md
+        - After Date Time: data-quality-checks/after-date-check.md
+        - Aggregation Comparison: data-quality-checks/aggregation-comparison-check.md
+        - Any Not Null: data-quality-checks/any-not-null-check.md
+        - Before Date Time: data-quality-checks/before-date-time-check.md
+        - Between: data-quality-checks/between-check.md
+        - Between Times: data-quality-checks/between-times-check.md
+        - Contains Credit Card: data-quality-checks/contains-credit-card-check.md
+        - Contains Email: data-quality-checks/contains-email-check.md
+        - Contains Social Security Number: data-quality-checks/contains-social-security-number-check.md
+        - Contains Url: data-quality-checks/contains-url.md
+        - Data Diff: data-quality-checks/data-diff-check.md
+        - Distinct Count: data-quality-checks/distinct-count-check.md
+        - Entity Resolution: data-quality-checks/entity-resolution.md
+        - Equal to: data-quality-checks/equal-to-check.md
+        - Equal to Field: data-quality-checks/equal-to-field-check.md
+        - Exists In: data-quality-checks/exists-in-check.md
+        - Expected Schema: data-quality-checks/expected-schema-check.md
+        - Expected Values: data-quality-checks/expected-values-check.md
+        - Field Count: data-quality-checks/field-count-check.md
+        - Freshness Checks: data-quality-checks/freshness-check.md
+        - Greater Than: data-quality-checks/greater-than-check.md
+        - Greater Than Field: data-quality-checks/greater-than-field-check.md
+        - Is Address: data-quality-checks/is-address.md
+        - Is Credit Card: data-quality-checks/is-credit-card-check.md
+        - Is Replica Of: data-quality-checks/is-replica-of-check.md
+        - Is Type: data-quality-checks/is-type-check.md
+        - Less Than: data-quality-checks/less-than-check.md
+        - Less Than Field: data-quality-checks/less-than-field-check.md
+        - Matches Pattern: data-quality-checks/matches-pattern-check.md
+        - Max Length: data-quality-checks/max-length-check.md
+        - Max Partition Size: data-quality-checks/max-partition-size-check.md
+        - Max Value: data-quality-checks/max-value-check.md
+        - Metric: data-quality-checks/metric-check.md
+        - Min Length: data-quality-checks/min-length-check.md
+        - Min Partition Size: data-quality-checks/min-partition-size-check.md
+        - Min Value: data-quality-checks/min-value-check.md
+        - Not Exists In: data-quality-checks/not-exists-in-check.md
+        - Not Future: data-quality-checks/not-future-check.md
+        - Not Negative: data-quality-checks/not-negative-check.md
+        - Not Null: data-quality-checks/not-null-check.md
+        - Positive: data-quality-checks/positive-check.md
+        - Predicted By: data-quality-checks/predicted-by-check.md
+        - Required Values: data-quality-checks/required-values-check.md
+        - Satisfies Expression: data-quality-checks/satisfies-expression-check.md
+        - Sum: data-quality-checks/sum-check.md
+        - Time Distribution Size: data-quality-checks/time-distribution-size-check.md
+        - Unique: data-quality-checks/unique-check.md
+        - Volumetric Checks: data-quality-checks/volumetric-check.md
+      - Check Templates: data-quality-checks/checks-template.md
+      - Apply Check Template for Quality Check: data-quality-checks/apply-check-template-for-quality-checks.md
+      - Export Check Templates: data-quality-checks/export-check-templates.md
     - Datastore Checks:
       - Checks : datastore-checks/checks-datastore.md
       - Manage Checks :
@@ -262,7 +271,7 @@ nav:
         - Anomaly: flows/anomaly.md
         - Notifications: flows/notification.md
         - Notification Tokens: flows/notification-tokens.md
-        - HTTP: flows/http.md 
+        - Workflow: flows/workflow.md
         - Ticketing: flows/ticketing.md
       - View and Track Flow Executions: flows/view-created-flows.md
       - Manage Flow:
@@ -461,6 +470,7 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+<<<<<<< HEAD
         # Source Datastore reorganization
         'source-datastore/catalog.md': 'source-datastore/operations/catalog.md'
         'source-datastore/profile.md': 'source-datastore/operations/profile.md'
@@ -504,6 +514,65 @@ plugins:
         'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
         'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
+=======
+        'source-datastore/catalog.md': 'source-datastore/sync.md'
+        'flows/http.md': 'flows/workflow.md'
+        'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'
+        'checks/authored-check.md': 'data-quality-checks/authored-check.md'
+        'checks/inferred-check.md': 'data-quality-checks/inferred-check.md'
+        'checks/rule-types-overview.md': 'data-quality-checks/rule-types-overview.md'
+        'checks/after-date-check.md': 'data-quality-checks/after-date-check.md'
+        'checks/aggregation-comparison-check.md': 'data-quality-checks/aggregation-comparison-check.md'
+        'checks/any-not-null-check.md': 'data-quality-checks/any-not-null-check.md'
+        'checks/before-date-time-check.md': 'data-quality-checks/before-date-time-check.md'
+        'checks/between-check.md': 'data-quality-checks/between-check.md'
+        'checks/between-times-check.md': 'data-quality-checks/between-times-check.md'
+        'checks/contains-credit-card-check.md': 'data-quality-checks/contains-credit-card-check.md'
+        'checks/contains-email-check.md': 'data-quality-checks/contains-email-check.md'
+        'checks/contains-social-security-number-check.md': 'data-quality-checks/contains-social-security-number-check.md'
+        'checks/contains-url.md': 'data-quality-checks/contains-url.md'
+        'checks/data-diff-check.md': 'data-quality-checks/data-diff-check.md'
+        'checks/distinct-count-check.md': 'data-quality-checks/distinct-count-check.md'
+        'checks/entity-resolution.md': 'data-quality-checks/entity-resolution.md'
+        'checks/equal-to-check.md': 'data-quality-checks/equal-to-check.md'
+        'checks/equal-to-field-check.md': 'data-quality-checks/equal-to-field-check.md'
+        'checks/exists-in-check.md': 'data-quality-checks/exists-in-check.md'
+        'checks/expected-schema-check.md': 'data-quality-checks/expected-schema-check.md'
+        'checks/expected-values-check.md': 'data-quality-checks/expected-values-check.md'
+        'checks/field-count-check.md': 'data-quality-checks/field-count-check.md'
+        'checks/freshness-check.md': 'data-quality-checks/freshness-check.md'
+        'checks/greater-than-check.md': 'data-quality-checks/greater-than-check.md'
+        'checks/greater-than-field-check.md': 'data-quality-checks/greater-than-field-check.md'
+        'checks/is-address.md': 'data-quality-checks/is-address.md'
+        'checks/is-credit-card-check.md': 'data-quality-checks/is-credit-card-check.md'
+        'checks/is-replica-of-check.md': 'data-quality-checks/is-replica-of-check.md'
+        'checks/is-type-check.md': 'data-quality-checks/is-type-check.md'
+        'checks/less-than-check.md': 'data-quality-checks/less-than-check.md'
+        'checks/less-than-field-check.md': 'data-quality-checks/less-than-field-check.md'
+        'checks/matches-pattern-check.md': 'data-quality-checks/matches-pattern-check.md'
+        'checks/max-length-check.md': 'data-quality-checks/max-length-check.md'
+        'checks/max-partition-size-check.md': 'data-quality-checks/max-partition-size-check.md'
+        'checks/max-value-check.md': 'data-quality-checks/max-value-check.md'
+        'checks/metric-check.md': 'data-quality-checks/metric-check.md'
+        'checks/min-length-check.md': 'data-quality-checks/min-length-check.md'
+        'checks/min-partition-size-check.md': 'data-quality-checks/min-partition-size-check.md'
+        'checks/min-value-check.md': 'data-quality-checks/min-value-check.md'
+        'checks/not-exists-in-check.md': 'data-quality-checks/not-exists-in-check.md'
+        'checks/not-future-check.md': 'data-quality-checks/not-future-check.md'
+        'checks/not-negative-check.md': 'data-quality-checks/not-negative-check.md'
+        'checks/not-null-check.md': 'data-quality-checks/not-null-check.md'
+        'checks/positive-check.md': 'data-quality-checks/positive-check.md'
+        'checks/predicted-by-check.md': 'data-quality-checks/predicted-by-check.md'
+        'checks/required-values-check.md': 'data-quality-checks/required-values-check.md'
+        'checks/satisfies-expression-check.md': 'data-quality-checks/satisfies-expression-check.md'
+        'checks/sum-check.md': 'data-quality-checks/sum-check.md'
+        'checks/time-distribution-size-check.md': 'data-quality-checks/time-distribution-size-check.md'
+        'checks/unique-check.md': 'data-quality-checks/unique-check.md'
+        'checks/volumetric-check.md': 'data-quality-checks/volumetric-check.md'
+        'checks/checks-template.md': 'data-quality-checks/checks-template.md'
+        'checks/apply-check-template-for-quality-checks.md': 'data-quality-checks/apply-check-template-for-quality-checks.md'
+        'checks/export-check-templates.md': 'data-quality-checks/export-check-templates.md'
+>>>>>>> main
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'

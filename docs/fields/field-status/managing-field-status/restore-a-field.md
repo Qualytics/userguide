@@ -3,14 +3,14 @@
 Restoring a field changes its status back to **Active**, making it available for profiling and scanning operations again. Only fields with **Excluded** status can be restored.
 
 !!! tip
-    To change a **Masked** field back to **Active**, use the [Unmask](mask-a-field.md#unmask-a-field) operation instead.
+    To change a **Masked** field back to **Active**, use the [Unmask](mask-a-field.md#unmask-a-field){:target="_blank"} operation instead.
 
-## What Happens When a Field is Restored
+## What Happens When a Field is Restored?
 
 When you restore a field:
 
 - **Active Status**: The field is restored to **Active** status
-- **Field Profiling**: The field becomes eligible for profiling again (but may be flagged Missing if not found in the source)
+- **Field Profiling**: The field becomes eligible for profiling again. If it is not found in the source, it will be marked as missing on the next profile run
 - **Quality Checks**: Previously archived checks remain archived and must be restored separately
 
 ## Restore a Field

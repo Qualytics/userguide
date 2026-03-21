@@ -16,9 +16,9 @@ Qualytics supports DFS Datastores, catering to distributed file systems like:
 
 Users provide connection details for DFS Datastores, allowing Qualytics to establish a connection to the distributed file system.
 
-## Catalog Operation
+## Sync Operation
 
-The Catalog operation involves walking the directory tree, reading files with supported filename extensions, and creating containers based on file metadata.
+The Sync operation involves walking the directory tree, reading files with supported filename extensions, and creating containers based on file metadata.
 
 ## Supported File Formats
 
@@ -53,7 +53,7 @@ This section covers topics such as container deletion, field deletion, and the i
 
 ## Multi-Token Filename Globbing and Container Formation
 
-Filenames with similar structures in the same folder are automatically included in a single globbed container during the Catalog operation.
+Filenames with similar structures in the same folder are automatically included in a single globbed container during the Sync operation.
 
 ### Use Folders for Precise File Grouping
 

@@ -1,6 +1,6 @@
 # Anomaly Detection Process
 
-The anomaly detection process in Qualytics ensures data quality by identifying deviations from expected patterns through a structured workflow. It starts with configuring datastores, cataloging metadata, and profiling data to understand its structure. Users then apply quality checks—either authored or inferred—during Scan operations. Any failures are flagged as anomalies, enabling timely detection and resolution of data issues to maintain overall data integrity.
+The anomaly detection process in Qualytics ensures data quality by identifying deviations from expected patterns through a structured workflow. It starts with configuring datastores, syncing metadata, and profiling data to understand its structure. Users then apply quality checks—either authored or inferred—during Scan operations. Any failures are flagged as anomalies, enabling timely detection and resolution of data issues to maintain overall data integrity.
 
 Let’s get started 🚀
 
@@ -11,12 +11,12 @@ By setting up a datastore and establishing a connection to your data source (dat
 !!! note 
     For more information, please refer to the [Configuring Source Datastores](../source-datastore/add-datastores/overview-of-a-datastore.md#configuring-source-datastores) documentation.
 
-**2. Catalog Operation**
+**2. Sync Operation**
 
-The Catalog operation involves systematically collecting data structures along with their corresponding metadata. This process also includes a thorough analysis of the existing metadata within the datastore. This ensures a solid foundation for the subsequent Profile and Scan operations.
+The Sync operation detects new, changed, or removed containers and fields by comparing the current datastore state against what Qualytics already knows. It works incrementally, only processing the differences. This ensures a solid foundation for the subsequent Profile and Scan operations.
 
-!!! note 
-    For more information, please refer to the [Catalog Operation](../source-datastore/operations/catalog.md) Documentation.
+!!! note
+    For more information, please refer to the [Sync Operation](../source-datastore/operations/catalog.md) Documentation.
 
 **3. Profile Operation**
 
@@ -31,7 +31,7 @@ Authored Checks are manually created data quality checks in Qualytics, defined b
 Authored checks can range from simple, template-based checks to more complex rules implemented through SQL or user-defined functions (UDFs) in Scala. By allowing users to define precise criteria for data quality, authored checks enable detailed monitoring and validation of data within the datastore, ensuring that it meets the specified standards and requirements.
 
 !!! note
-    For more information, please refer to the documentation [Authored Checks](../checks/authored-check.md). 
+    For more information, please refer to the documentation [Authored Checks](../data-quality-checks/authored-check.md). 
 
 **5. Scan Operation**
 

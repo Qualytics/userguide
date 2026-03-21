@@ -28,7 +28,7 @@ Let's get started! 🚀
 ![details-page](../../assets/source-datastores/operations/scan/details-page.png)
 
 !!! note
-    Scanning operation can be commenced once the catalog operation and profile operation are completed.
+    Scanning operation can be commenced once the sync operation and profile operation are completed.
 
 ## Configuration
 
@@ -605,6 +605,7 @@ This payload is to run a scheduled scan operation every day at 00:00
 
 ## Troubleshooting
 
+<!--
 ### Unloadable Container Error
 
 When running a scan operation, you may encounter the following error for specific containers:
@@ -618,14 +619,15 @@ Container '<CONTAINER_NAME>' is marked as Unloadable. No attempt was made to loa
 **Resolution:** To resolve this issue and re-enable the container for scanning:
 
 1. Navigate to your source datastore
-2. Run a [Catalog Operation](./catalog.md) on the datastore
-3. Once the catalog operation completes successfully, the container status will be reset
+2. Run a [Sync Operation](./sync.md) on the datastore
+3. Once the sync operation completes successfully, the container status will be reset
 4. Run the scan operation again - the previously unloadable container should now be processed normally
 
 !!! tip
-    If the container continues to fail after re-cataloging, investigate the underlying cause of the failures. Common causes include:
+    If the container continues to fail after re-syncing, investigate the underlying cause of the failures. Common causes include:
 
     - Permission issues accessing the container
     - Schema changes that invalidate existing configurations
     - Network connectivity problems to the data source
     - Resource constraints or timeouts during data loading
+-->

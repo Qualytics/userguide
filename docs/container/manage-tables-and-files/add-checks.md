@@ -14,4 +14,4 @@ A modal window will appear to add checks against the selected table.
 ![check-window](../../assets/container/manage-tables-and-files/add-checks/check-light-15.png)
 
 !!! note
-    To understand how to add checks, you can follow the remaining steps from the documentation [Checks Template](../../checks/checks-template.md){target="_blank"}.
+    To understand how to add checks, you can follow the remaining steps from the documentation [Checks Template](../../data-quality-checks/checks-template.md){target="_blank"}.

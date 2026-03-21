@@ -4,7 +4,7 @@
 
 The **Cast** transformation converts field values to a specified target data type using Spark SQL casting rules. This is commonly used when a field is ingested as a string but must behave as a numeric, date, timestamp, or boolean value for profiling, checks, or downstream computations.
 
-### When to Use Cast
+### When to Use Cast?
 
 Use **Cast** when:
 

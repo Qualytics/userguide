@@ -55,7 +55,7 @@ Ideal for:
 - Proof of Concept (POC) phases.
 - Environments without SSO integration.
 
-![sign-in](assets/quick-start-guide/sign-in-light.png)
+![sign-in](assets/using-the-platform/quick-start-guide/sign-in.png)
 
 ### Method 2: Enterprise SSO
 
@@ -65,7 +65,7 @@ For production deployments:
 - Supports standard SSO protocols.
 - Provides seamless access management.
 
-![sign-in](assets/quick-start-guide/welcome-screen-light.png)
+![sign-in](assets/using-the-platform/quick-start-guide/welcome-screen.png)
 
 ## Getting Started Checklist
 
@@ -100,7 +100,7 @@ In Qualytics, a Datastore represents your data source connection. Qualytics prov
 
 1. From the main menu, select "Add Source Datastore":
 
-   ![add-first-datastore](assets/quick-start-guide/add-first-datastore-light.png)
+   ![add-first-datastore](assets/using-the-platform/quick-start-guide/add-first-datastore.png)
 
 2. Select your datastore type.
 3. Provide connection details.
@@ -128,16 +128,16 @@ You can either:
 
 After connecting your datastore, three fundamental operations manage data quality:
 
-### 1. Catalog Operation
+### 1. Sync Operation
 
 The first step in understanding your data:
 
-- Systematically collects data structures.
-- Analyzes existing metadata.
+- Detects new, changed, or removed containers and fields.
+- Works incrementally, only processing differences since the last sync.
 - Prepares for profiling and scanning.
 - Runs automatically on datastore creation.
 
-![catalog-operation](assets/quick-start-guide/catalog-operation-light.png)
+![sync-operation](assets/using-the-platform/quick-start-guide/sync-operation.png)
 
 ### 2. Profile Operation
 
@@ -151,7 +151,7 @@ The Profile operation performs deep analysis of your data:
 - Automatically infers data quality rules.
 - Uses machine learning for pattern detection.
 
-![profile-operation](assets/quick-start-guide/profile-operation-light.png)
+![profile-operation](assets/using-the-platform/quick-start-guide/profile-operation.png)
 
 Our profiling engine analyzes:
 
@@ -177,7 +177,7 @@ The Scan operation actively monitors data quality:
 - Records results in the Enrichment Datastore.
 - Generates quality scores.
 
-![scan-operation](assets/quick-start-guide/scan-operation-light.png)
+![scan-operation](assets/using-the-platform/quick-start-guide/scan-operation.png)
 
 The first scan runs as a "Full" scan to establish baselines. After completion, you can review:
 
@@ -199,7 +199,7 @@ Qualytics uses two types of quality checks:
 - Based on statistical analysis and ML.
 - Continuously refined through operation.
 
-![inferred-check-details](assets/quick-start-guide/inferred-check-details-light.png)
+![inferred-check-overview](assets/using-the-platform/quick-start-guide/inferred-check-details.png)
 
 #### 2. Authored Checks
 
@@ -208,7 +208,7 @@ Qualytics uses two types of quality checks:
 - Use Spark SQL or Scala UDFs.
 - Can be templated and shared.
 
-![authored-check-details](assets/quick-start-guide/authored-check-details-light.png)
+![authored-check-overview](assets/using-the-platform/quick-start-guide/authored-check-details.png)
 
 ## Platform Navigation
 
@@ -222,7 +222,7 @@ The Explore interface provides comprehensive visibility:
 - Quality monitoring metrics.
 - Filterable by source, tags, and dates.
 
-  ![explore-insights](assets/quick-start-guide/explore-insights-light.png)
+  ![explore-insights](assets/using-the-platform/quick-start-guide/explore-insights.png)
   
 #### 2. Activity
 
@@ -230,7 +230,7 @@ The Explore interface provides comprehensive visibility:
 - Data volume heatmaps.
 - Anomaly tracking.
 
-  ![explore-activity](assets/quick-start-guide/explore-activity-light.png)
+  ![explore-activity](assets/using-the-platform/quick-start-guide/explore-activity.png)
 
 #### 3. Profiles
 
@@ -240,7 +240,7 @@ Unified view of all data assets:
 - Computed Assets.
 - Field-level Details.
 
-  ![explore-profiles](assets/quick-start-guide/explore-profiles-light.png)
+  ![explore-profiles](assets/using-the-platform/quick-start-guide/explore-profiles.png)
 
 #### 4. Observability
 
@@ -250,7 +250,7 @@ Monitor platform health and performance:
 - Quality trends.
 - System health.
 
-  ![observability](assets/quick-start-guide/observability-light.png)
+  ![explore-observability](assets/using-the-platform/quick-start-guide/explore-observability.png)
 
 #### 5. Checks
 
@@ -260,7 +260,7 @@ Unified view of all data quality validations across datastores:
 - Filter by Source Datastore, Tags, or Importance.
 - View validation results by table and field, including pass/fail status and anomaly counts.
 
-  ![checks](assets/quick-start-guide/explore-checks-light.png)
+  ![checks](assets/using-the-platform/quick-start-guide/explore-checks.png)
 
 #### 6. Anomalies
 
@@ -270,7 +270,7 @@ Centralized view of all detected data issues across datastores:
 - View details including datastore, table, affected fields, rules triggered, and detection date.
 - Track anomaly trends and weights to prioritize investigation and resolution.
 
-  ![anomalies](assets/quick-start-guide/explore-anomalies-light.png)
+  ![anomalies](assets/using-the-platform/quick-start-guide/explore-anomalies.png)
  
 ## Configuration & Management
 
@@ -282,7 +282,7 @@ Organize and prioritize:
 - Drive notifications.
 - Weight importance.
 
-  ![settings-tags](assets/quick-start-guide/settings-tags-light.png)
+  ![settings-tags](assets/using-the-platform/quick-start-guide/settings-tags.png)
 
 ### Flows
 
@@ -292,7 +292,7 @@ Automate and streamline:
 - Manage workflows efficiently.
 - Monitor and track execution status.
 
-  ![flows](assets/quick-start-guide/flows-light.png)
+  ![explore-flows](assets/using-the-platform/quick-start-guide/explore-flows.png)
 
 ### Platform Settings
 
@@ -302,25 +302,32 @@ Access key configuration areas:
     - Manage datastores.
     - Configure integrations.
 
-      ![settings-connection](assets/quick-start-guide/settings-connections-light.png)
+      ![settings-connections](assets/using-the-platform/quick-start-guide/settings-connections.png)
 
-2. **Security**
-    - User management.
-    - Role assignments.
-
-      ![settings-security](assets/quick-start-guide/settings-security-light.png)
-
-3. **Integrations**
+2. **Integrations**
     - External tool setup.
     - API configuration.
 
-      ![settings-integrations](assets/quick-start-guide/settings-integrations-light.png)
+      ![settings-integrations](assets/using-the-platform/quick-start-guide/settings-integrations.png)
 
-4. **Status**
+3. **Security**
+    - User management.
+    - Role assignments.
+
+      ![settings-security](assets/using-the-platform/quick-start-guide/settings-security.png)
+
+4. **Tokens**
+    - Generate and manage API tokens for programmatic access.
+    - Supports both Personal and Service token types.
+    - Tokens can be revoked, restored, or deleted at any time.
+
+      ![settings-tokens](assets/using-the-platform/quick-start-guide/settings-tokens.png)
+
+5. **Status**
     - Deployment status.
     - Analytics engine management.
 
-      ![settings-status](assets/quick-start-guide/settings-status-light.png)
+      ![settings-status](assets/using-the-platform/quick-start-guide/settings-status.png)
 
 ## Next Steps
 
