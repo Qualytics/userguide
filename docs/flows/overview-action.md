@@ -4,19 +4,21 @@ Actions define the specific steps the system will execute after a flow is trigge
 
 **Step 1:** After completing the **"Trigger"** node setup, users can click on the **"Actions"** node.  
 
-![action](../assets/flows/action-light-22.png)
+![action](../assets/flows/actions-node/overview/action.png)
 
-A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into four groups:
+A panel will appear on the right-hand side displaying the list of available actions. These actions define what the system will execute after the flow is triggered. The actions are categorized into five groups:
 
-* Operations.
+| REF. | CATEGORY | AVAILABLE ACTIONS |
+|:----:|----------|-------------------|
+| 1 | Operation | Sync, Profile, Scan, Export, Materialize |
+| 2 | Anomaly | Archive, Delete |
+| 3 | Notification | In App, Email, Slack, Microsoft Teams, Pager Duty |
+| 4 | Workflow | Webhook, HTTP Action, n8n |
+| 5 | Ticketing | Create Ticket, Update Ticket Status |
 
-* Notifications.
+![action-list-1](../assets/flows/actions-node/overview/action-list-1.png)
 
-* HTTP.
-
-* Ticketing.
-
-![actionlist](../assets/flows/actionlist-light-23.png)
+![action-list-2](../assets/flows/actions-node/overview/action-list2.png)
 
 !!! info
     Inline summaries are shown within action nodes, displaying key details based on the action type—for example, datastore names for operations, Slack or Teams channels for notifications, and webhook URLs for HTTP actions. This enhancement provides quick clarity during flow configuration.
@@ -25,6 +27,11 @@ A panel will appear on the right-hand side displaying the list of available acti
 
 !!! note
     For more detailed information, review the [operations documentation](../flows/operations.md){target="_blank"}.
+
+## Anomaly
+
+!!! note
+    For more detailed information, review the [anomaly documentation](../flows/anomaly.md){target="_blank"}.
 
 ## Notifications
 
@@ -36,10 +43,10 @@ A panel will appear on the right-hand side displaying the list of available acti
 !!! note
     For more detailed information, review the [notification tokens documentation](../flows/notification-tokens.md){target="_blank"}.
 
-## HTTP
+## Workflow
 
 !!! note
-    For more detailed information, review the [http documentation](../flows/http.md){target="_blank"}.
+    For more detailed information, review the [workflow documentation](../flows/workflow.md){target="_blank"}.
 
 ## Ticketing
 

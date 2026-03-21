@@ -28,7 +28,7 @@ A Datastore in Qualytics represents any structured source datastore, such as:
 
 Qualytics integrates with these source datastores through a layered architecture:
 
-![datastore](../assets/datastores/what-is/datastore.png)
+![datastore](../assets/add-datastores/source-datastore/overview-of-a-datastore/datastore-architecture.png)
 
 ## Configuring Source Datastores
 
@@ -36,11 +36,11 @@ Configure your source datastores in Qualytics by connecting them through a new d
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add](../assets/datastores/what-is/add-light-1.png)
+![add](../assets/add-datastores/source-datastore/overview-of-a-datastore/add-source-datastore.png)
 
 **Step 2**: A modal window, **Add Datastore**, will appear, providing you with the options to connect a datastore.
 
-![connector](../assets/datastores/what-is/connector-light-2.png)
+![connector](../assets/add-datastores/source-datastore/overview-of-a-datastore/add-datastore-modal.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -93,27 +93,27 @@ If the toggle for **Add New Connection** is turned on, this will prompt you to a
 
 **Step 1**: Select any connector (as we are selecting the **Snowflake** connector) from the dropdown list and add connection properties such as Secrets Management, host, port, username, and password, along with datastore properties like catalog, database, etc.
 
-![detail](../assets/datastores/what-is/detail-light-3.png)
+![detail](../assets/add-datastores/source-datastore/overview-of-a-datastore/connection-details.png)
 
 For the next steps, refer to the "[**Add Source Datastore**](../add-datastores/snowflake.md#add-a-source-datastore)" section in the **Snowflake** Datastore documentation.
 
 Once a datastore is verified and created, it appears in your source datastores.
 
-![home](../assets/datastores/what-is/home-light-4.png)
+![home](../assets/add-datastores/source-datastore/overview-of-a-datastore/datastore-created.png)
 
 ## Datastore Operations
 
 Once a datastore is added in Qualytics, you can perform three key operations to manage and ensure data quality effectively:
 
-**1. Catalog Operation**
+**1. Sync Operation**
 
-   This operation imports named data collections such as tables, views, and files into the source datastore. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.  
+   This operation detects new, changed, or removed containers and fields in the source datastore. It works incrementally, comparing the current state against what Qualytics already knows and only processing the differences. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.
 
-   For more details about the catalog operation, refer to the "[**Catalog Operation**](../source-datastore/catalog.md)" document.
+   For more details about the sync operation, refer to the "[**Sync Operation**](../source-datastore/sync.md)" document.
 
 **2. Profile Operation**
 
-   After cataloging, the Profile Operation analyzes each record within the collections to assess and improve data quality. By generating detailed metadata and interacting with the Qualytics Inference Engine, it identifies quality issues and refines checks for maintaining data integrity.
+   After syncing, the Profile Operation analyzes each record within the collections to assess and improve data quality. By generating detailed metadata and interacting with the Qualytics Inference Engine, it identifies quality issues and refines checks for maintaining data integrity.
 
    For more details about the profile operation, refer to the "[**Profile Operation**](../source-datastore/profile.md)" document.
 
@@ -131,8 +131,8 @@ Once the datastores are connected, you can run operations on the selected datast
 
 **Step 1:** Simply click to open the datastore on which you ran the operation.
 
-![home](../assets/datastores/what-is/home-light-5.png)
+![home](../assets/add-datastores/source-datastore/overview-of-a-datastore/datastore-home.png)
 
 **Step 2:** After clicking on the datastore, select the "Activity" tab to view the ongoing operation.
 
-![activity](../assets/datastores/what-is/activity-light-6.png)
+![activity](../assets/add-datastores/source-datastore/overview-of-a-datastore/activity-tab.png)

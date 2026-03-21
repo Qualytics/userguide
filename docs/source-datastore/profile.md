@@ -222,7 +222,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 | Inferred Checks | Reference |
 |-------|-------|
-| Data Diff | [See more.](../checks/data-diff-check.md) |
+| Data Diff | [See more.](../data-quality-checks/data-diff-check.md) |
 | Exists In | [See more.](https://userguide.qualytics.io/checks/exists-in-check/) |
 | Not Exists In | [See more.](https://userguide.qualytics.io/checks/not-exists-in-check/) |
 | Predicted By | [See more.](https://userguide.qualytics.io/checks/predicted-by-check/) |

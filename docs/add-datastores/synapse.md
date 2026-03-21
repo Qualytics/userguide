@@ -1,6 +1,6 @@
 # Synapse
 
-Adding and configuring a Synapse connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Synapse connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Synapse as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add](../assets/datastores/synapse/add-light.png)
+![add](../assets/add-datastores/jdbc-datastores/synapse/add.png)
 
 **Step 2**: A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![add-datastore](../assets/datastores/synapse/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/synapse/add-datastore.png)
 
 | REF. | FIELDS  | ACTIONS |
 | :---- | :---- | :---- |
@@ -32,7 +32,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Synapse** connector from the dropdown list and add connection details such as Secret Management, host, port, username, etc.
 
-![synapse-connector](../assets/datastores/synapse/synapse-connector-light.png)
+![synapse-connector](../assets/add-datastores/jdbc-datastores/synapse/synapse-connector.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,11 +48,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath | Specify the JSONPath to retrieve the secret data (e.g., $data). |
 
-![secret-management](../assets/datastores/synapse/secret-management-light.png)
+![secret-management](../assets/add-datastores/jdbc-datastores/synapse/secret-management.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![credential](../assets/datastores/synapse/credential-light.png)
+![credential](../assets/add-datastores/jdbc-datastores/synapse/credential.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -63,11 +63,11 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 5. | Database | Specify the database name. |
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams | Select one or more teams from the dropdown to associate with the source datastore. |
-| 8. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8. | Initiate Sync | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-connection](../assets/datastores/synapse/test-connection-light.png)
+![test-connection](../assets/add-datastores/jdbc-datastores/synapse/test-connection.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -77,14 +77,14 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![existing-credentials](../assets/datastores/synapse/existing-credentials-light.png)
+![existing-credentials](../assets/add-datastores/jdbc-datastores/synapse/existing-credentials.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Teams, and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
-![test-connection-2](../assets/datastores/synapse/test-connection-2-light.png)
+![test-connection-2](../assets/add-datastores/jdbc-datastores/synapse/test-connection-2.png)
 
 !!! note
     Clicking on the Finish button will create the source datastore and bypass the enrichment datastore configuration step.  
@@ -101,11 +101,11 @@ After successfully testing and verifying your source datastore connection, you h
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next](../assets/datastores/synapse/next-light.png)
+![next](../assets/add-datastores/jdbc-datastores/synapse/next.png)
 
 **Step 2**: A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![link-enrichment-datastore](../assets/datastores/synapse/link-enrichment-datastore-light.png)
+![link-enrichment-datastore](../assets/add-datastores/jdbc-datastores/synapse/link-enrichment-datastore.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -119,11 +119,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![add-enrichment-datastore](../assets/datastores/synapse/add-enrichment-datastore-light.png)
+![add-enrichment-datastore](../assets/add-datastores/jdbc-datastores/synapse/add-enrichment-datastore.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![add-enrichment-datastore-2](../assets/datastores/synapse/add-enrichment-datastore-2-light.png)
+![add-enrichment-datastore-2](../assets/add-datastores/jdbc-datastores/synapse/add-enrichment-datastore-2.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -134,23 +134,23 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-datastore-connector](../assets/datastores/synapse/enrichment-datastore-connector-light.png)
+![enrichment-datastore-connector](../assets/add-datastores/jdbc-datastores/synapse/enrichment-datastore-connector.png)
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
 If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-connection-3](../assets/datastores/synapse/test-connection-3-light.png)
+![test-connection-3](../assets/add-datastores/jdbc-datastores/synapse/test-connection-3.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process.
 
-![finish-2](../assets/datastores/synapse/finish-2-light.png)
+![finish-2](../assets/add-datastores/jdbc-datastores/synapse/finish-2.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5**: Close the Success dialogue and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![overview](../assets/datastores/synapse/overview-light.png)
+![overview](../assets/add-datastores/jdbc-datastores/synapse/overview.png)
 
 ### Option II: Use an Existing Connection
 
@@ -158,11 +158,11 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![use-enrichment-datastore](../assets/datastores/synapse/use-enrichment-datastore-light.png)
+![use-enrichment-datastore](../assets/add-datastores/jdbc-datastores/synapse/use-enrichment-datastore.png)
 
 **Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![link-enrichment-datastore-2](../assets/datastores/synapse/link-enrichment-datastore-2-light.png)
+![link-enrichment-datastore-2](../assets/add-datastores/jdbc-datastores/synapse/link-enrichment-datastore-2.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -176,17 +176,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 * **Database**: Refers to the specific database within the enrichment datastore environment where the data is stored.  
 * **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![enrichment-detail](../assets/datastores/synapse/enrichment-detail-light.png)
+![enrichment-detail](../assets/add-datastores/jdbc-datastores/synapse/enrichment-detail.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish-2](../assets/datastores/synapse/finish-2-light.png)
+![finish-2](../assets/add-datastores/jdbc-datastores/synapse/finish-2.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your data has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![overview-2](../assets/datastores/synapse/overview-2-light.png)
+![overview-2](../assets/add-datastores/jdbc-datastores/synapse/overview-2.png)
 
 ## API Payload Examples
 

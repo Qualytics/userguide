@@ -2,9 +2,9 @@
 
 The merge operation combines a **Missing** field (the old field with history) with an **Active** field (the new field with the desired name) into a single field, preserving all historical data under the new column name.
 
-This is the recommended approach when a column is renamed in the source data. For a detailed explanation of why and how merging works, see [Merge Fields Concept](../concepts/merge-fields.md).
+This is the recommended approach when a column is renamed in the source data. For a detailed explanation of why and how merging works, see [Merge Fields Concept](../concepts/merge-fields.md){:target="_blank"}.
 
-## When to Merge
+## When to Merge?
 
 After a column rename in your source data, the next profile operation will:
 
@@ -51,7 +51,7 @@ You can also merge a field directly from its detail page.
 
     ![field-context-merge-3](../../../assets/fields/field-status/managing-field-status/merge-fields/field-context-merge-3.png)
 
-## What Happens After a Merge
+## What Happens After a Merge?
 
 | Step | Action |
 | :--- | :--- |
@@ -73,4 +73,4 @@ You can also merge a field directly from its detail page.
     Merge is the recommended approach when dealing with column renames. It preserves your complete quality monitoring history and avoids the need to reconfigure quality checks from scratch on the renamed field.
 
 !!! info
-    For more details on what is preserved during a merge and how it works, see [Merge Fields Concept](../concepts/merge-fields.md).
+    For more details on what is preserved during a merge and how it works, see [Merge Fields Concept](../concepts/merge-fields.md){:target="_blank"}.
