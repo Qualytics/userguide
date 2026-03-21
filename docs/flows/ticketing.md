@@ -11,7 +11,7 @@ Flows support the following ticketing actions:
 - **Create Ticket** – Creates a new ticket when the Flow is triggered.
 - **Update Ticket Status** – Updates the status of an existing ticket.
 
-![available](../assets/flows/available.png)
+![available](../assets/flows/actions-node/ticketing/available.png)
 
 These actions are available under the **Ticketing** section when adding an action to a Flow.
 
@@ -19,7 +19,7 @@ These actions are available under the **Ticketing** section when adding an actio
 
 The **Create Ticket** action automatically creates a new ticket when the Flow is triggered. This action is typically used to open a ticket when an anomaly is detected or when an anomaly changes to a specific status.
 
-![create-ticket](../assets/flows/create-ticket.png)
+![create-ticket](../assets/flows/actions-node/ticketing/create-ticket.png)
 
 ### Configuration
 
@@ -38,17 +38,17 @@ When configuring the **Create Ticket** action, provide the following details:
 | 9.   | Assignment Group  | Identifies the team or group responsible for investigating and resolving the issue. |
 | 10.  | Assigned To       | Specifies the individual responsible for working on the ticket.             |
 
-![configuration](../assets/flows/configuration-2.png)
+![configuration](../assets/flows/actions-node/ticketing/configuration.png)
 
 After completing the configuration, click **Save** to add the action to the Flow.
 
-![save](../assets/flows/save.png)
+![save](../assets/flows/actions-node/ticketing/save.png)
 
 ## Update Ticket Status
 
 The **Update Ticket Status** action updates the status of an existing ticket when the Flow is triggered. This action is commonly used to reflect progress or resolution as anomaly conditions change.
 
-![update-ticket-status](../assets/flows/update-ticket-status.png)
+![update-ticket-status](../assets/flows/actions-node/ticketing/update-ticket-status.png)
 
 ### Configuration
 
@@ -56,11 +56,11 @@ The **Update Ticket Status** action updates the status of an existing ticket whe
 |------|-------------|
 | **Target Ticket Status** | The status to apply to the ticket (for example, *In Progress*, *Resolved*, or *Closed*). |
 
-![configuration](../assets/flows/target-ticket-status.png)
+![configuration](../assets/flows/actions-node/ticketing/target-ticket-status.png)
 
 After configuring the target status, click **Save** to add the action to the Flow.
 
-![save](../assets/flows/save-2.png)
+![save](../assets/flows/actions-node/ticketing/save-2.png)
 
 ## Notifications for Ticketing Actions
 

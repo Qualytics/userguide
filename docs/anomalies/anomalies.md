@@ -11,7 +11,7 @@ Qualytics classifies anomalies into two types: **Record Anomalies** and **Shape 
 
 ## Anomaly Detection Process
 
-The anomaly detection process in Qualytics ensures data quality by identifying deviations from expected patterns through a structured workflow. It starts with configuring datastores, cataloging metadata, and profiling data to understand its structure. Users then apply quality checks—either authored or inferred—during Scan operations. Any failures are flagged as anomalies, enabling timely detection and resolution of data issues to maintain overall data integrity.
+The anomaly detection process in Qualytics ensures data quality by identifying deviations from expected patterns through a structured workflow. It starts with configuring datastores, syncing metadata, and profiling data to understand its structure. Users then apply quality checks—either authored or inferred—during Scan operations. Any failures are flagged as anomalies, enabling timely detection and resolution of data issues to maintain overall data integrity.
 
 !!! note
     For more information, please refer to the [Anomaly Detection Process](anomaly-detection.md) Documentation.

@@ -1,6 +1,6 @@
 # Hive
 
-Adding and configuring a Hive connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Hive connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Hive as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![source](../assets/datastores/hive/source-datastore-light.png)
+![source](../assets/add-datastores/jdbc-datastores/hive/source-datastore.png)
 
 **Step 2:** A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![window](../assets/datastores/hive/window-datastore-light.png)
+![window](../assets/add-datastores/jdbc-datastores/hive/window-datastore.png)
 
 | REF. | FIELDS | ACTIONS                               |
 | :---- | :---- | :---- |
@@ -32,7 +32,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1:** Select the **Hive** connector from the dropdown list and add the connection details.
 
-![connector](../assets/datastores/hive/connector-datastore-light.png)
+![connector](../assets/add-datastores/jdbc-datastores/hive/connector-datastore.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,7 +48,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Token Header Name | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6. | Data JSONPath | Specify the JSONPath to retrieve the secret data (e.g., $.data). |
 
-![Secrets](../assets/datastores/hive/secret-datastore-light.png)
+![Secrets](../assets/add-datastores/jdbc-datastores/hive/secret-datastore.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
@@ -59,13 +59,13 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 3. | Authentication | You can choose between Basic Authentication and Kerberos Authentication for validating and securing the connection to your Hive instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Hive. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Hive.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Kerberos Authentication:** This method uses Kerberos tickets for authentication. It relies on a secure, ticket-based mechanism managed by your environment’s Kerberos configuration. <ul> <li>**Type:** Select Kerberos from the authentication type dropdown.</li><li>**Principal:** Enter the Kerberos principal (for example: `hive/_HOST@DOMAIN.COM`) that Qualytics will use to connect to Hive. </li> </ul>|
 | 4. | Schema(Required) | Define the schema within the database that should be used. |
 | 5. | Teams(Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6. | Initial Cataloging(Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6. | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
-![form](../assets/datastores/hive/form-datastore-light.png)
+![form](../assets/add-datastores/jdbc-datastores/hive/form-datastore.png)
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test](../assets/datastores/hive/test-datastore-light.png)
+![test](../assets/add-datastores/jdbc-datastores/hive/test-datastore.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -75,14 +75,14 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![connections](../assets/datastores/hive/connection-datastore-light.png)
+![connections](../assets/add-datastores/jdbc-datastores/hive/connection-datastore.png)
 
 !!! note 
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync. 
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![test](../assets/datastores/hive/test-datastore-light.png)
+![test](../assets/add-datastores/jdbc-datastores/hive/test-datastore.png)
 
 !!! note 
     Clicking on the Finish button will create the source datastore and bypass the enrichment datastore configuration step. 
@@ -99,11 +99,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next](../assets/datastores/hive/next-datastore-light.png)
+![next](../assets/add-datastores/jdbc-datastores/hive/next-datastore.png)
 
 **Step 2:** A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![link](../assets/datastores/hive/link-datastore-light.png)
+![link](../assets/add-datastores/jdbc-datastores/hive/link-datastore.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -117,11 +117,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1:** Click on the caret button and select Add Enrichment Datastore.
 
-![caret](../assets/datastores/hive/caret-datastore-light.png)
+![caret](../assets/add-datastores/jdbc-datastores/hive/caret-datastore.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![enrichment](../assets/datastores/hive/enrichment-datastore-light.png)
+![enrichment](../assets/add-datastores/jdbc-datastores/hive/enrichment-datastore.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -135,21 +135,21 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 !!! note 
     Qualytics does not support Hive as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration. 
 
-![datastore](../assets/datastores/hive/datastore-light.png)
+![datastore](../assets/add-datastores/jdbc-datastores/hive/datastore.png)
 
 **Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test](../assets/datastores/hive/create-test-light.png)
+![test](../assets/add-datastores/jdbc-datastores/hive/create-test.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process.
 
-![test](../assets/datastores/hive/tests-datastore-light.png)
+![test](../assets/add-datastores/jdbc-datastores/hive/tests-datastore.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the Success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![dialog](../assets/datastores/hive/operation-datastore-light.png)
+![dialog](../assets/add-datastores/jdbc-datastores/hive/operation-datastore.png)
 
 ### Option II: Use an Existing Connection
 
@@ -157,11 +157,11 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
 
-![caret](../assets/datastores/hive/carett-datastore-light.png)
+![caret](../assets/add-datastores/jdbc-datastores/hive/carett-datastore.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![link](../assets/datastores/hive/linkk-datastore-light.png)
+![link](../assets/add-datastores/jdbc-datastores/hive/linkk-datastore.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -175,17 +175,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 * **Database:** Refers to the specific database within the enrichment datastore environment where the data is stored.  
 * **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![enrichment](../assets/datastores/hive/enrichmentt-datastore-light.png)
+![enrichment](../assets/add-datastores/jdbc-datastores/hive/enrichmentt-datastore.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finish](../assets/datastores/hive/finishh-datastore-light.png)
+![finish](../assets/add-datastores/jdbc-datastores/hive/finishh-datastore.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your data has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![operation](../assets/datastores/hive/operation-datastore-light.png)
+![operation](../assets/add-datastores/jdbc-datastores/hive/operation-datastore.png)
 
 ## API Payload Examples
 

@@ -1,6 +1,6 @@
 # MariaDB
 
-Adding and configuring a MariaDB connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a MariaDB connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add MariaDB as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1:** Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![source](../assets/datastores/maria-db/datastore-light.png)
+![source](../assets/add-datastores/jdbc-datastores/maria-db/datastore.png)
 
 **Step 2:** A modal window - **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![source](../assets/datastores/maria-db/add-light.png)
+![source](../assets/add-datastores/jdbc-datastores/maria-db/add.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -32,14 +32,14 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1:** Select the **MariaDB** connector from the dropdown list and add connection details such as Secrets Management, host, port, user, password, SSL connection, database, and schema.
 
-![connector](../assets/datastores/maria-db/connector-light.png)
+![connector](../assets/add-datastores/jdbc-datastores/maria-db/connector.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
 !!! note
     After configuring HashiCorp Vault integration, you can use ${key} in any Connection property to reference a key from the configured Vault secret. Each time the Connection is initiated, the corresponding secret value will be retrieved dynamically.
 
-![secret](../assets/datastores/maria-db/secret-light.png)
+![secret](../assets/add-datastores/jdbc-datastores/maria-db/secret.png)
 
 | REF | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -52,7 +52,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 2:** The configuration form will expand, requesting credential details before establishing the connection.
 
-![form](../assets/datastores/maria-db/form-light.png)
+![form](../assets/add-datastores/jdbc-datastores/maria-db/form.png)
 
 | REF. | FIELDS |     ACTIONS |
 | :---- | :---- | :---- |
@@ -62,11 +62,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 4. | Password | Enter the **password** to connect to the database. |
 | 5. | Database | Specify the database name. |
 | 6. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 7. | Initial Cataloging | Check the checkbox to automatically perform a catalog operation on the configured source to gather data structures and corresponding metadata. |
+| 7. | Initiate Sync | Check the checkbox to automatically perform a sync operation on the configured source to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test](../assets/datastores/maria-db/test-light.png)
+![test](../assets/add-datastores/jdbc-datastores/maria-db/test.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -76,14 +76,14 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 **Step 1:** Select a **connection** to reuse existing credentials.
 
-![connections](../assets/datastores/maria-db/connections-light.png)
+![connections](../assets/add-datastores/jdbc-datastores/maria-db/connections.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 
-![tests](../assets/datastores/maria-db/tests-light.png)
+![tests](../assets/add-datastores/jdbc-datastores/maria-db/tests.png)
 
 !!! note
     Clicking on the Finish button will create the source datastore and bypass the enrichment datastore configuration step.
@@ -97,11 +97,11 @@ Once you have successfully tested and verified your source datastore connection,
 
 **Step 1:** Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![next](../assets/datastores/maria-db/next-light.png)
+![next](../assets/add-datastores/jdbc-datastores/maria-db/next.png)
 
 **Step 2:** A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![modal](../assets/datastores/maria-db/modal-light.png)
+![modal](../assets/add-datastores/jdbc-datastores/maria-db/modal.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -115,11 +115,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![caret](../assets/datastores/maria-db/caret-light.png)
+![caret](../assets/add-datastores/jdbc-datastores/maria-db/caret.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![windoww](../assets/datastores/maria-db/windoww-light.png)
+![windoww](../assets/add-datastores/jdbc-datastores/maria-db/windoww.png)
 
 | REF. |          FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -130,21 +130,21 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2:** Add connection details for your selected **enrichment datastore** connector.
 
-![details](../assets/datastores/maria-db/details-light.png)
+![details](../assets/add-datastores/jdbc-datastores/maria-db/details.png)
 
 **Step 3:** Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![testss](../assets/datastores/maria-db/testss-light.png)
+![testss](../assets/add-datastores/jdbc-datastores/maria-db/testss.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process.
 
-![finish](../assets/datastores/maria-db/finish-light.png)
+![finish](../assets/add-datastores/jdbc-datastores/maria-db/finish.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5:** Close the success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured source datastore.
 
-![operations](../assets/datastores/maria-db/operatons-light.png)
+![operations](../assets/add-datastores/jdbc-datastores/maria-db/operatons.png)
 
 ### Option II: Use an Existing Connection
 
@@ -152,11 +152,11 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![carett](../assets/datastores/maria-db/carett-light.png)
+![carett](../assets/add-datastores/jdbc-datastores/maria-db/carett.png)
 
 **Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![windowww](../assets/datastores/maria-db/windowww-light.png)
+![windowww](../assets/add-datastores/jdbc-datastores/maria-db/windowww.png)
 
 | REF. | FIELDS | ACTIONS |
 | :---- | :---- | :---- |
@@ -170,17 +170,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 * **Database:** Refers to the specific database within the MariaDB environment where the data is stored.  
 * **Schema:** The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![enrichment](../assets/datastores/maria-db/enrichment-light.png)
+![enrichment](../assets/add-datastores/jdbc-datastores/maria-db/enrichment.png)
 
 **Step 4:** Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![finishh](../assets/datastores/maria-db/finishh-light.png)
+![finishh](../assets/add-datastores/jdbc-datastores/maria-db/finishh.png)
 
 When the configuration process is finished, a modal window will display and a success flash message stating that your data has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured source datastore.
 
-![operation](../assets/datastores/maria-db/operatons-light.png)
+![operation](../assets/add-datastores/jdbc-datastores/maria-db/operatons.png)
 
 ## API Payload Examples
 

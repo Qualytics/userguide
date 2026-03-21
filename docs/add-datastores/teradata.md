@@ -1,6 +1,6 @@
 # Teradata
 
-Adding and configuring a Teradata connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring a Teradata connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
 
 This documentation provides a step-by-step guide on adding Teradata as a source datastore in Qualytics. It covers the entire process from initial connection setup to testing and finalizing the configuration.
 
@@ -14,11 +14,11 @@ A source datastore is a storage location used to connect to and access data from
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-source-teradata](../assets/datastores/teradata/add-source-teradata-light-1.png)
+![add-source-teradata](../assets/add-datastores/jdbc-datastores/teradata/add-source-teradata-light-1.png)
 
 **Step 2**: A modal window- **Add Datastore** will appear, providing you with the options to connect a datastore.
 
-![add-teradata-connection](../assets/datastores/teradata/add-teradata-connection-light-2.png)
+![add-teradata-connection](../assets/add-datastores/jdbc-datastores/teradata/add-teradata-connection-light-2.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -32,7 +32,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 
 **Step 1**: Select the **Teradata** connector from the dropdown list and add connection details such as Secret Management, host, port, username, etc.
 
-![add-connection-details](../assets/datastores/teradata/add-connection-details-light-3.png)
+![add-connection-details](../assets/add-datastores/jdbc-datastores/teradata/add-connection-details-light-3.png)
 
 **Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
 
@@ -48,11 +48,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5.  | Token Header Name    | Set the header name used for the authentication token (e.g., X-Vault-Token). |
 | 6.  | Data JSONPath        | Specify the JSONPath to retrieve the secret data (e.g., $.data).        |
 
-![hashcorp-explain](../assets/datastores/teradata/hashcorp-explain-light.png)
+![hashcorp-explain](../assets/add-datastores/jdbc-datastores/teradata/hashcorp-explain.png)
 
 **Step 2**: The configuration form will expand, requesting credential details before establishing the connection.
 
-![enter-teradata-details](../assets/datastores/teradata/enter-teradata-details-light-4.png)
+![enter-teradata-details](../assets/add-datastores/jdbc-datastores/teradata/enter-teradata-details-light-4.png)
 
 | REF.              | FIELDS                  | ACTIONS                                    |
 |-------------------|-------------------------|--------------------------------------------|
@@ -62,11 +62,11 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 4.                | Password                | Enter the **password** to connect to the database. |
 | 5.                | Database                | Specify the database name. |
 | 6.                | Teams                   | Select one or more teams from the dropdown to associate with this source datastore. |
-| 7.                | Initial Cataloging      | Check the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata.|
+| 7.                | Initiate Sync            | Check the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields.|
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
-![test-connection-success](../assets/datastores/teradata/test-connection-success-new-light-5.png)
+![test-connection-success](../assets/add-datastores/jdbc-datastores/teradata/test-connection-success-new-light-5.png)
 
 If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
@@ -76,14 +76,14 @@ If the toggle for **Use an existing connection** is turned off, then this will p
 
 **Step 1**: Select a **connection** to reuse existing credentials.
 
-![existing-connection](../assets/datastores/teradata/existing-connection-teradata-light-6.png)
+![existing-connection](../assets/add-datastores/jdbc-datastores/teradata/existing-connection-teradata-light-6.png)
 
 !!! note
-    If you are using existing credentials, you can only edit details such as Database, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit details such as Database, Teams, and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 
-![test-connection-success-existing](../assets/datastores/teradata/test-connection-success-existing-light-7.png)
+![test-connection-success-existing](../assets/add-datastores/jdbc-datastores/teradata/test-connection-success-existing-light-7.png)
 
 !!! note
     Clicking on the **Finish** button will create the source datastore and bypass the **enrichment datastore** configuration step.
@@ -100,11 +100,11 @@ After successfully testing and verifying your source datastore connection, you h
 
 **Step 1**: Whether you have added a source datastore by creating a new datastore connection or using an existing connection, click on the **Next** button to start adding the **Enrichment Datastore**.
 
-![enrichment-next](../assets/datastores/teradata/enrichment-next-light-8.png)
+![enrichment-next](../assets/add-datastores/jdbc-datastores/teradata/enrichment-next-light-8.png)
 
 **Step 2**: A modal window- **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
 
-![add-enrichment-details](../assets/datastores/teradata/add-enrichment-details-light-9.png)
+![add-enrichment-details](../assets/add-datastores/jdbc-datastores/teradata/add-enrichment-details-light-9.png)
 
 | REF. | FIELDS  | ACTIONS                                                                                                           |
 |------|-----------------------|------------------------------------------------------------------------------------------------------------------|
@@ -118,11 +118,11 @@ If the toggle **Add new connection** is turned on, then this will prompt you to 
 
 **Step 1**: Click on the caret button and select Add Enrichment Datastore.
 
-![caret-button](../assets/datastores/teradata/add-enrichment-light.png)
+![caret-button](../assets/add-datastores/jdbc-datastores/teradata/add-enrichment.png)
 
 A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
 
-![modal-window](../assets/datastores/teradata/add-enrichment-details-light.png)
+![modal-window](../assets/add-datastores/jdbc-datastores/teradata/add-enrichment-details.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -133,24 +133,24 @@ A modal window **Link Enrichment Datastore** will appear. Enter the following de
 
 **Step 2**: Add connection details for your selected **enrichment datastore** connector.
 
-![enrichment-details-added](../assets/datastores/teradata/enrichment-details-added-light-10.png)
+![enrichment-details-added](../assets/add-datastores/jdbc-datastores/teradata/enrichment-details-added-light-10.png)
 
 !!! note
     Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 3**: Click on the **Test Connection** button to verify the selected enrichment datastore connection. If the connection is verified, a flash message will indicate that the connection with the datastore has been successfully verified.
 
-![test-enrichment-success](../assets/datastores/teradata/test-enrichment-success-light-11.png)
+![test-enrichment-success](../assets/add-datastores/jdbc-datastores/teradata/test-enrichment-success-light-11.png)
 
 **Step 4**:  Click on the **Finish** button to complete the configuration process.
 
-![test-enrichment-finish](../assets/datastores/teradata/test-enrichment-finish-light-12.png)
+![test-enrichment-finish](../assets/add-datastores/jdbc-datastores/teradata/test-enrichment-finish-light-12.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 **Step 5**: Close the success dialog and the page will automatically redirect you to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![source-datastore-teradata](../assets/datastores/teradata/source-datastore-teradata-overview-light-14.png)
+![source-datastore-teradata](../assets/add-datastores/jdbc-datastores/teradata/source-datastore-teradata-overview-light-14.png)
 
 ### Option II: Use an Existing Connection
 
@@ -158,14 +158,14 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 **Step 1**: Click on the caret button and select **Use Enrichment Datastore**.
 
-![use-enrichment-datastore](../assets/datastores/teradata/use-enrichment-light.png)
+![use-enrichment-datastore](../assets/add-datastores/jdbc-datastores/teradata/use-enrichment.png)
 
 !!! note
     Qualytics does not support Teradata as an enrichment datastore. Instead, you can select a different enrichment datastore for this purpose. For demonstration purposes, we are using BigQuery as the enrichment datastore. You can use any other JDBC or DFS datastore of your choice for the enrichment datastore configuration.
 
 **Step 2**: A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
 
-![add-enrichment-details-existing](../assets/datastores/teradata/add-enrichment-details-existing-light-15.png)
+![add-enrichment-details-existing](../assets/add-datastores/jdbc-datastores/teradata/add-enrichment-details-existing-light-15.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
 |-------------------|--------------|--------------------------------------------|
@@ -182,17 +182,17 @@ If the **Use enrichment datastore** option is selected from the caret button, yo
 
 - **Schema**: The schema used in the enrichment datastore. The schema is a logical grouping of database objects (tables, views, etc.). Each schema belongs to a single database.
 
-![enrichment-details-check](../assets/datastores/teradata/enrichment-details-check-light-16.png)
+![enrichment-details-check](../assets/add-datastores/jdbc-datastores/teradata/enrichment-details-check-light-16.png)
 
 **Step 4**: Click on the **Finish** button to complete the configuration process for the existing **enrichment datastore**.
 
-![enrichment-details-finish](../assets/datastores/teradata/enrichment-details-finish-light-17.png)
+![enrichment-details-finish](../assets/add-datastores/jdbc-datastores/teradata/enrichment-details-finish-light-17.png)
 
 When the configuration process is finished, a modal will display a success message indicating that your datastore has been successfully added.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
-![teradata-source-overview](../assets/datastores/teradata/teradata-source-overview-light-19.png)
+![teradata-source-overview](../assets/add-datastores/jdbc-datastores/teradata/teradata-source-overview-light-19.png)
 
 ## API Payload Examples
 

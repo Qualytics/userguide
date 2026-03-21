@@ -2,7 +2,7 @@
 
 Qualytics assigns one of four statuses to each field:
 
-| Status | Assigned By | Description |
+| Status | Assignment | Description |
 | :--- | :--- | :--- |
 | **Active** | Automatic | The field is fully operational. It will be included in profiling (collecting metadata and statistics), scan operations (detecting anomalies), and quality checks will run against it. This is the default status assigned by the system when a field is first discovered during a profile operation. |
 | **Masked** | Manual | The field is fully operational (profiled, scanned, quality-checked) but its actual values are hidden by default. Users with Editor permission can request to view the real values, and every reveal action is audit-logged. |
@@ -12,7 +12,7 @@ Qualytics assigns one of four statuses to each field:
 !!! info
     **Active** and **Masked** are both considered **operational** statuses. Everything you can do with an active field, you can also do with a masked field — the only difference is that masked field values are hidden by default.
 
-## How Statuses Are Assigned
+## How Statuses Are Assigned?
 
 ### Active (Automatic)
 
@@ -49,7 +49,7 @@ Key behaviors for missing fields:
 
 - **Automatic restoration**: If the field reappears in a subsequent profile, it is automatically restored to **Active**
 - **No check archival**: Quality checks are not archived for missing fields (unlike excluded fields), since the status is expected to be transient
-- **Cascading**: If a source field goes missing, any computed fields that depend on it are also marked as **Missing**
+- **Cascading**: When a profile marks a source field as Missing, any computed fields that depend on it are also marked as **Missing** within that same run
 
 ### Excluded (Manual)
 
@@ -70,9 +70,9 @@ Fields display visual status indicators to help you quickly identify their state
 
 | Ref. | Status | Color | Icon |
 | :--- | :--- | :--- | :--- |
-| 1 | **Active** | Default (neutral) | Standard field type icon |
+| 1 | **Active** | Default (neutral) | Check circle icon (`mdi-check-circle`) |
 | 2 | **Masked** | Amber/Warning | Shield lock icon (`mdi-shield-lock-outline`) |
-| 3 | **Missing** | Warning (yellow/orange) | Alert icon with "Missing field" tooltip |
-| 4 | **Excluded** | Negative (red) | Alert icon with "Excluded field" tooltip |
+| 3 | **Missing** | Warning (yellow/orange) | Alert circle icon (`mdi-alert-circle`) with "Missing field" tooltip |
+| 4 | **Excluded** | Negative (red) | Eye-off icon (`mdi-eye-off`) with "Excluded field" tooltip |
 
 ![status-indicators](../../../assets/fields/field-status/concepts/field-status-types/status-indicators.png)

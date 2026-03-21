@@ -12,15 +12,15 @@ Deleting a specific flow allows you to permanently remove an individual flow tha
 
 **Step 1**: Click the **vertical ellipsis (⋮)** next to the flow that you want to delete, then click on **Delete** from the dropdown menu.
 
-![delete](../assets/flows/delete-light-91.png)
+![delete](../assets/flows/manage-flow/delete-flow/delete.png)
 
 After clicking the delete button, a confirmation modal window **Delete Flow** will appear.
 
-![delete](../assets/flows/delete-light-92.png)
+![delete](../assets/flows/manage-flow/delete-flow/delete-2.png)
 
 **Step 2**: Click on the **Delete** button to delete the flow.
 
-![delete](../assets/flows/delete-light-93.png)
+![delete](../assets/flows/manage-flow/delete-flow/delete-3.png)
 
 After clicking the **Delete** button, a success notification appears confirming the deletion.
 
@@ -33,18 +33,18 @@ Deleting flows in bulk allows you to permanently remove multiple flows at once. 
 
 **Step 1**: Hover over the flows list and select the checkbox next to the flows you want to delete.
 
-![delete](../assets/flows/list-hover.png)
+![delete](../assets/flows/manage-flow/delete-flow/list-hover.png)
 
 When multiple flows are selected, an action toolbar appears showing the total number of selected flows along with a vertical ellipsis (⋮) for additional actions.
 
-![delete](../assets/flows/toolbar.png)
+![delete](../assets/flows/manage-flow/delete-flow/toolbar.png)
 
 **Step 2**: Click on the vertical ellipsis (⋮) and select **Delete** from the dropdown menu.
 
-![delete](../assets/flows/drop-delete.png)
+![delete](../assets/flows/manage-flow/delete-flow/drop-delete.png)
 
 **Step 3**: A confirmation modal window appears, click on the **Delete** button to delete the selected flows.
 
-![delete](../assets/flows/button-delete.png)
+![delete](../assets/flows/manage-flow/delete-flow/button-delete.png)
 
 After clicking the **Delete** button, a success notification appears confirming the deletion.

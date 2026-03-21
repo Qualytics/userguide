@@ -99,9 +99,9 @@ For detailed integration instructions, please refer to the [<u>quick start guide
 
 **A 10:** Quality Scores measure data quality at the field, container, and datastore levels, recorded as a time series to track improvements. Scores range from 0-100, with higher scores indicating better quality.
 
-**Q 11: What is a catalog operation?**
+**Q 11: What is a sync operation?**
 
-**A 11:** A Catalog Operation scans your datastore to import named collections (tables, views, files). It automatically identifies optimal approaches for:
+**A 11:** A Sync Operation (previously known as Catalog Operation) detects new, changed, or removed containers and fields in your datastore. It works incrementally by comparing the current state against what Qualytics already knows, and automatically identifies optimal approaches for:
 - Incremental scanning
 - Data partitioning
 - Record identification
