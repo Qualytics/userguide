@@ -46,7 +46,7 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## Workflow
 
 !!! note
-    For more detailed information, review the [workflow documentation](../flows/http.md){target="_blank"}.
+    For more detailed information, review the [workflow documentation](../flows/workflow.md){target="_blank"}.
 
 ## Ticketing
 
