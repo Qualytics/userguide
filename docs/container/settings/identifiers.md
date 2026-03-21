@@ -113,12 +113,12 @@ Each partition can be analyzed independently, enabling simultaneous examination 
 
 This not only increases the efficiency of data processing but also ensures a more streamlined and scalable approach to handling large volumes of data, making it an indispensable tool in data analysis and management.
 
-The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however, alternatives are automatically identified and set during a Catalog operation.
+The ideal Partition Identifier is an Incremental Identifier of type **datetime** such as a last-modified field, however, alternatives are automatically identified and set during a Sync operation.
 
 ![partition](../../assets/container/identifiers/identifiers/partition-light.png)
 
 !!! info
-    * **Partition Field Selection**: When selecting a partition field for a table during catalog operation, we will attempt to select a field with no nulls where possible. 
+    * **Partition Field Selection**: When selecting a partition field for a table during a sync operation, we will attempt to select a field with no nulls where possible.
     * **User-Specified Partition Fields**: Users are permitted to specify partition fields manually. While we ensure that the user selects a field of a supported data type, we do not currently enforce non-nullability or completeness. Care should be given to select partition fields with no or a low percentage of nulls in order to avoid unbalanced partitioning.
 
 !!! warning

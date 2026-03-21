@@ -184,7 +184,7 @@ Restores a masked field back to `active` status, making its values visible again
 
 ## Exclude a Field
 
-Excludes a field from quality monitoring. Associated quality checks are archived (except [Expected Schema](/checks/expected-schema-check/) checks, which are updated to remove the field).
+Excludes a field from quality monitoring. Associated quality checks are archived (except [Expected Schema](/data-quality-checks/expected-schema-check.md) checks, which are updated to remove the field).
 
 **Endpoint**: `DELETE /api/fields/{id}?archive=true`
 
