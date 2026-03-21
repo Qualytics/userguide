@@ -1,6 +1,6 @@
 # Hive
 
-Adding and configuring a Hive connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Hive connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Hive as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -59,7 +59,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 3. | Authentication | You can choose between Basic Authentication and Kerberos Authentication for validating and securing the connection to your Hive instance. <br> <br> **Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Hive. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Hive.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul> **Kerberos Authentication:** This method uses Kerberos tickets for authentication. It relies on a secure, ticket-based mechanism managed by your environment’s Kerberos configuration. <ul> <li>**Type:** Select Kerberos from the authentication type dropdown.</li><li>**Principal:** Enter the Kerberos principal (for example: `hive/_HOST@DOMAIN.COM`) that Qualytics will use to connect to Hive. </li> </ul>|
 | 4. | Schema(Required) | Define the schema within the database that should be used. |
 | 5. | Teams(Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6. | Initial Cataloging(Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6. | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 ![form](../../assets/source-datastores/add-datastores/hive/form-datastore.png)
 
@@ -78,7 +78,7 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 ![connections](../../assets/source-datastores/add-datastores/hive/connection-datastore.png)
 
 !!! note 
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync. 
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 

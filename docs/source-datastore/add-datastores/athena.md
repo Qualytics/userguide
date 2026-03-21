@@ -1,6 +1,6 @@
 # Athena
 
-Adding and configuring an Amazon Athena connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring an Amazon Athena connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
 
 This documentation provides a step-by-step guide on adding Athena as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -64,7 +64,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 | 6.                | Catalog      | Enter the catalog name. In AWS Athena, this refers to the data catalog that contains database and table metadata. |
 | 7.                | Database     | Specify the database name. |
 | 8.                | Teams        | Select one or more teams from the dropdown to associate with this source datastore. |
-| 9.                | Initiate Cataloging  | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 9.                | Initiate Sync  | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -81,7 +81,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![add-datastore-details-existing](../../assets/source-datastores/add-datastores/athena/add-datastore-details-existing-6.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as **Catalog**, **Database**, **Teams**, and **Initiate Cataloging**.
+    If you are using existing credentials, you can only edit the details such as **Catalog**, **Database**, **Teams**, and **Initiate Sync**.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 

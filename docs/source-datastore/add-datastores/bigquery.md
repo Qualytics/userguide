@@ -1,6 +1,6 @@
 # BigQuery
 
-Adding and configuring a BigQuery connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring a BigQuery connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
 
 This documentation provides a step-by-step guide on adding BigQuery as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -143,7 +143,7 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 |   3.   | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522){:target="_blank"} (Required)                 | Enter the Project ID associated with BigQuery.    |
 |   4.   | Dataset ID (Required)              | Enter the Dataset ID (schema name) associated with BigQuery.  |
 |   5.   | Teams (Required)                   | Select one or more teams from the dropdown to associate with this source datastore. |
-|   6.   | Initiate Cataloging (Optional)     | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+|   6.   | Initiate Sync (Optional)     | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -160,7 +160,7 @@ If the toggle for **Add New Connection** is turned off, then this will prompt yo
 ![use-existing-datastore](../../assets/source-datastores/add-datastores/bigquery/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Project ID, Dataset ID, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Project ID, Dataset ID, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 

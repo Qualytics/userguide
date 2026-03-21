@@ -1,6 +1,6 @@
 # Amazon S3
 
-Adding and configuring an Amazon S3 connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring an Amazon S3 connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Amazon S3 as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -172,7 +172,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 3.  | Secret Key (Required)      | Input the secret key associated with the access key for secure authentication.                 |
 | 4.  | Root Path (Required)       | Specify the root path where the data is stored.                                                |
 | 5.  | Teams (Required)          | Select one or more teams from the dropdown to associate with this source datastore.            |
-| 6.  | Initiate Cataloging (Optional)| Check the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6.  | Initiate Sync (Optional)| Check the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -189,7 +189,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![use-existing-datastore](../../assets/source-datastores/add-datastores/amazon-s3/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Root Path, Teams, and initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 

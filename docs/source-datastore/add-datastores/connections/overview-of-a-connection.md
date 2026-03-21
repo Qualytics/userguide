@@ -58,7 +58,7 @@ For demonstration purposes, we have selected the **BigQuery Connector**.
 | 3. | [Project ID](https://support.google.com/googleapi/answer/7014113?hl=en&ref_topic=7014522) (Required) | Enter the Project ID associated with BigQuery. |
 | 4. | Dataset ID (Required) | Enter the Dataset ID (schema name) associated with BigQuery. |
 | 5. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 6. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 6. | Initiate Sync (Optional) | Tick the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 5:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 

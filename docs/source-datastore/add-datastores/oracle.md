@@ -1,6 +1,6 @@
 # Oracle
 
-Adding and configuring an Oracle connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring an Oracle connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Oracle as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -64,7 +64,7 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 | 6. | Password | Enter the “password” to connect to the database. |
 | 7. | Schema | Define the schema within the database that should be used.|
 | 8. | Teams | Select one or more teams from the dropdown to associate with this source data store. |
-| 9. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 9. | Initiate Sync | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -81,7 +81,7 @@ If the toggle for **add new connection** is turned off, then this will prompt yo
 ![existing-source-datastore](../../assets/source-datastores/add-datastores/oracle/existing-source-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If the connection details are verified, a success message will be displayed.
 

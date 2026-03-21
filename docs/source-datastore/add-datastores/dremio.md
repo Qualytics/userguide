@@ -1,6 +1,6 @@
 # Dremio
 
-Adding and configuring a Dremio connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Dremio connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Dremio as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -63,7 +63,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 5. | Authentication | You can choose between Basic authentication or Access Token for validating and securing the connection to your Dremio instance. <br> <br>**Basic Authentication:** This method uses a username and password combination for authentication. It is a straightforward method where the user's credentials are directly used to access Dremio. <ul><li>**Type:** Select the authentication type from the dropdown menu.</li><li>**User:** Enter the username that Qualytics will use to connect to Dremio.</li><li>**Password:** Enter the password associated with the specified user account.</li></ul>**Access Token Authentication:** This method uses an access token for authentication. This is a more secure method compared to basic authentication.<ul><li> **Personal Access Token:** Enter the personal access token here to authenticate and access the resources securely.</li> </ul>|
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initial Cataloging | Tick the checkbox to automatically perform a catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8. | Initiate Sync | Tick the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -80,7 +80,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![add-datastore-details-existing](../../assets/source-datastores/add-datastores/dremio/add-datastore-details-existing-6.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as **Schema**, **Teams** and **Initiate Cataloging**.
+    If you are using existing credentials, you can only edit the details such as **Schema**, **Teams** and **Initiate Sync**.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source data connection. If the connection details are verified, a success message will be displayed.
 

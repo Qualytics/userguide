@@ -105,15 +105,15 @@ Once a datastore is verified and created, it appears in your source datastores.
 
 Once a datastore is added in Qualytics, you can perform three key operations to manage and ensure data quality effectively:
 
-**1. Catalog Operation**
+**1. Sync Operation**
 
-   This operation imports named data collections such as tables, views, and files into the source datastore. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.  
+   This operation detects new, changed, or removed containers and fields in the source datastore. It works incrementally, comparing the current state against what Qualytics already knows and only processing the differences. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.
 
-   For more details about the catalog operation, refer to the "[**Catalog Operation**](../../source-datastore/operations/catalog.md)" document.
+   For more details about the sync operation, refer to the "[**Sync Operation**](../../source-datastore/operations/catalog.md)" document.
 
 **2. Profile Operation**
 
-   After cataloging, the Profile Operation analyzes each record within the collections to assess and improve data quality. By generating detailed metadata and interacting with the Qualytics Inference Engine, it identifies quality issues and refines checks for maintaining data integrity.
+   After syncing, the Profile Operation analyzes each record within the collections to assess and improve data quality. By generating detailed metadata and interacting with the Qualytics Inference Engine, it identifies quality issues and refines checks for maintaining data integrity.
 
    For more details about the profile operation, refer to the "[**Profile Operation**](../../source-datastore/operations/profile.md)" document.
 

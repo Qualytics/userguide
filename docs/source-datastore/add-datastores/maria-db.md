@@ -1,6 +1,6 @@
 # MariaDB
 
-Adding and configuring a MariaDB connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a MariaDB connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add MariaDB as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -62,7 +62,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 4. | Password | Enter the **password** to connect to the database. |
 | 5. | Database | Specify the database name. |
 | 6. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 7. | Initial Cataloging | Check the checkbox to automatically perform a catalog operation on the configured source to gather data structures and corresponding metadata. |
+| 7. | Initiate Sync | Check the checkbox to automatically perform a sync operation on the configured source to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -79,7 +79,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![connections](../../assets/source-datastores/add-datastores/maria-db/connections.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.
 

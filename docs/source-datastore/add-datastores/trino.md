@@ -1,6 +1,6 @@
 # Trino
 
-Adding and configuring a Trino connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Trino connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Trino as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -63,7 +63,7 @@ If the toggle for **Add new connection** is turned on, then this will prompt you
 | 5. | Catalog | Add a **Catalog** to fetch data structures and metadata from Trino. |
 | 6. | Schema | Define the schema within the database that should be used. |
 | 7. | Teams | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initial Cataloging | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 8. | Initiate Sync | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -80,7 +80,7 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 ![existing](../../assets/source-datastores/add-datastores/trino/existing.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Database, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Database, Teams, and Initiate Sync.
 
 **Step 2**: Click on the **Test Connection** button to check and verify the source datastore connection. If connection details are verified, a success message will be displayed.
 

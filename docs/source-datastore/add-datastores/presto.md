@@ -1,6 +1,6 @@
 # Presto
 
-Adding and configuring a Presto connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Presto connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Presto as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -63,7 +63,7 @@ If the toggle for **Add New existing connection** is turned on, then this will p
 | 5. | Catalog (Required) | Add a **Catalog** to fetch data structures and metadata from Presto. |
 | 6. | Schema (Required) | Define the schema within the database that should be used. |
 | 7. | Teams (Required) | Select one or more teams from the dropdown to associate with this source datastore. |
-| 8. | Initiate Cataloging (Optional) | Tick the checkbox to automatically perform catalog operation on the configured source datastore. |
+| 8. | Initiate Sync (Optional) | Tick the checkbox to automatically perform sync operation on the configured source datastore. |
 
 **Step 3**: After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.  
 
@@ -80,7 +80,7 @@ If the toggle for **Add new connection** is turned off, then this will prompt yo
 ![detail](../../assets/source-datastores/add-datastores/presto/detail-7.png)
 
 !!! note 
-    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Cataloging. 
+    If you are using existing credentials, you can only edit the details such as Database, Schema, Teams, and Initiate Sync. 
 
 **Step 2**: Click on the **Test Connection** button to verify the existing connection details. If connection details are verified, a success message will be displayed.  
 

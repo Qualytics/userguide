@@ -1,6 +1,6 @@
 # Google Cloud Storage 
 
-Adding and configuring a Google Cloud Storage connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, cataloging, profiling, scanning, anomaly surveillance, and more.
+Adding and configuring a Google Cloud Storage connection within Qualytics empowers the platform to build a symbolic link with your file system to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on how to add Google Cloud Storage as both a source and enrichment datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
@@ -112,7 +112,7 @@ If the toggle for **Add New connection** is turned on, then this will prompt you
 | 2.     | Service Account Key (Required)  | Upload a JSON file that contains the credentials required for accessing the Google Cloud Storage.                  |
 | 3.     | Root Path (Required)           | Specify the root path where the data is stored.                                                                   |
 | 4.     | Teams (Required)               | Select one or more teams from the dropdown to associate with this source datastore.                                |
-| 5.     | Initiate Cataloging (Optional)   | Tick the checkbox to automatically perform catalog operation on the configured source datastore to gather data structures and corresponding metadata. |
+| 5.     | Initiate Sync (Optional)   | Tick the checkbox to automatically perform sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
 
 **Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
 
@@ -129,7 +129,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 ![use-existing-datastore](../../assets/source-datastores/add-datastores/google-cloud-storage/use-existing-datastore.png)
 
 !!! note
-    If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Cataloging.
+    If you are using existing credentials, you can only edit the details such as Root Path, Teams, and Initiate Sync.
 
 **Step 2:** Click on the **Test Connection** button to check and verify the source data connection. If connection details are verified, a success message will be displayed.
 

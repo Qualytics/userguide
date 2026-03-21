@@ -25,7 +25,6 @@ nav:
     - web-app.md
     - keyboard-shortcuts.md
     - Source Datastores:
-<<<<<<< HEAD
       - source-datastore/add-datastores/overview-of-a-datastore.md
       - JDBC Datastores:
         - source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
@@ -55,18 +54,10 @@ nav:
         - source-datastore/add-datastores/google-cloud-storage.md
       - source-datastore/add-datastores/connections/overview-of-a-connection.md
       - Operations:
-        - Catalog: source-datastore/operations/catalog.md
+        - Sync: source-datastore/operations/catalog.md
         - Profile: source-datastore/operations/profile.md
         - Scan: source-datastore/operations/scan.md
         - External Scan: source-datastore/operations/external-scan.md
-=======
-      - Right Click Options: source-datastore/right-click-options.md
-      - Assign Tags: source-datastore/assign-tags.md
-      - Sync: source-datastore/sync.md
-      - Profile: source-datastore/profile.md
-      - Scan: source-datastore/scan.md
-      - External Scan: source-datastore/external-scan.md
->>>>>>> main
       - Datastore Settings:
         - Settings Overview: source-datastore/datastore-settings/settings-overview.md
         - Edit Datastore: source-datastore/datastore-settings/edit-datastore.md
@@ -470,7 +461,6 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
-<<<<<<< HEAD
         # Source Datastore reorganization
         'source-datastore/catalog.md': 'source-datastore/operations/catalog.md'
         'source-datastore/profile.md': 'source-datastore/operations/profile.md'
@@ -514,9 +504,11 @@ plugins:
         'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
         'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
-=======
-        'source-datastore/catalog.md': 'source-datastore/sync.md'
+        # Catalog to Sync redirect (from main)
+        'source-datastore/sync.md': 'source-datastore/operations/catalog.md'
+        # Flows redirect (from main)
         'flows/http.md': 'flows/workflow.md'
+        # Checks renamed to data-quality-checks (from main)
         'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'
         'checks/authored-check.md': 'data-quality-checks/authored-check.md'
         'checks/inferred-check.md': 'data-quality-checks/inferred-check.md'
@@ -572,7 +564,6 @@ plugins:
         'checks/checks-template.md': 'data-quality-checks/checks-template.md'
         'checks/apply-check-template-for-quality-checks.md': 'data-quality-checks/apply-check-template-for-quality-checks.md'
         'checks/export-check-templates.md': 'data-quality-checks/export-check-templates.md'
->>>>>>> main
   - print-site:
       add_to_navigation: false
       print_page_title: 'Print Site'
