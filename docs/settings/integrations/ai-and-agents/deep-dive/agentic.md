@@ -31,73 +31,68 @@ Before using the Agentic API, you must configure your LLM provider credentials. 
 
 ### Supported Providers
 
-The Agentic API supports major LLM providers including:
+The Agentic API supports 22+ LLM providers. For the full list, see [Supported LLM Providers](../managing/add-agent-q-integration.md#supported-llm-providers){:target="_blank"} in the Add Integration guide.
 
-- Anthropic (Claude)
-- OpenAI (GPT-4, GPT-4o)
-- Azure OpenAI
-- Other OpenAI-compatible APIs
+Common providers include:
+
+- **OpenAI** — GPT-4o, GPT-4, o1, o3
+- **Anthropic** — Claude Sonnet, Claude Opus, Claude Haiku
+- **Google Gemini** — Gemini 2.0 Flash, Gemini 2.5 Pro
+- **Amazon Bedrock** — Claude, Titan, and other models via AWS
+- **Google Vertex AI** — Gemini models via GCP
+- **Groq** — Llama, Mixtral (low-latency inference)
+- **Mistral** — Mistral Large, Codestral
+- **DeepSeek** — DeepSeek-V3, DeepSeek-R1
+- **Ollama** — Self-hosted open-source models (requires custom base URL)
+
+!!! tip
+    Use the `GET /api/agent/supported-models` endpoint to dynamically retrieve the current list of supported providers and their available models.
 
 ### Managing LLM Configuration
 
-#### Create Configuration
+LLM configuration is managed through the Qualytics UI, just like any other integration:
 
-Set up your LLM provider credentials:
+1. Navigate to **Settings** > **Integrations** in your Qualytics instance
+2. Click **Connect** next to **LLM Configuration**
+3. Select your **Provider**, **Model**, and enter your **API Key**
+4. Optionally provide a **Base URL** if required by your provider
+5. Click **Save** to complete the configuration
 
-```bash
-curl -X POST "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "provider": "anthropic",
-    "api_key": "YOUR_LLM_API_KEY",
-    "model": "claude-sonnet-4-20250514"
-  }'
-```
-
-#### View Configuration
-
-Check your current LLM configuration:
-
-```bash
-curl -X GET "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
-```
-
-#### Update Configuration
-
-Modify your LLM settings:
-
-```bash
-curl -X PATCH "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "claude-sonnet-4-20250514"
-  }'
-```
-
-#### Delete Configuration
-
-Remove your LLM configuration:
-
-```bash
-curl -X DELETE "https://your-qualytics.qualytics.io/api/agent/llm-config" \
-  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
-```
+For detailed setup instructions with screenshots, see [Add Integration](../managing/add-agent-q-integration.md){:target="_blank"}.
 
 ## Capabilities
 
 ### Chat with Agent
 
-The chat endpoint provides a conversational interface for exploring and managing your data quality infrastructure. This is the most flexible endpoint, allowing free-form natural language interactions.
+The chat endpoint provides a streaming conversational interface for exploring and managing your data quality infrastructure. This is the most flexible endpoint, allowing free-form natural language interactions with real-time streaming responses.
 
 ```bash
 curl -X POST "https://your-qualytics.qualytics.io/api/agent/chat" \
   -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
-    "message": "What tables are in our sales_db datastore and what quality checks do we have on them?"
+    "messages": [
+      {"role": "user", "content": "What tables are in our sales_db datastore and what quality checks do we have on them?"}
+    ]
+  }'
+```
+
+The response is delivered as a Server-Sent Events (SSE) stream following the Vercel AI Data Stream Protocol. Each event contains either text content, tool execution progress, or error information.
+
+**Multi-turn Conversations:**
+
+Include previous messages to maintain conversation context. Pass the `session_id` returned in the `X-Chat-Session-Id` response header to continue an existing conversation:
+
+```bash
+curl -X POST "https://your-qualytics.qualytics.io/api/agent/chat?session_id=42" \
+  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [
+      {"role": "user", "content": "What tables are in our sales_db datastore?"},
+      {"role": "assistant", "content": "I found 12 tables in the sales_db datastore..."},
+      {"role": "user", "content": "Set up quality checks on the orders table"}
+    ]
   }'
 ```
 
@@ -141,9 +136,10 @@ Create computed assets—tables, files, or cross-datastore joins—through natur
 curl -X POST "https://your-qualytics.qualytics.io/api/agent/transform-dataset" \
   -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{
-    "description": "Create a computed table in sales_db that aggregates daily revenue by product category from the transactions table, including only completed orders from the last 90 days"
-  }'
+  -G \
+  --data-urlencode "asset_name=daily_revenue_by_category" \
+  --data-urlencode "source_description=transactions table in sales_db" \
+  --data-urlencode "transformation_criteria=Aggregate daily revenue by product category, including only completed orders from the last 90 days"
 ```
 
 **Use Cases:**
@@ -165,10 +161,10 @@ Create data quality checks by describing the business rule or validation require
 ```bash
 curl -X POST "https://your-qualytics.qualytics.io/api/agent/generate-quality-check" \
   -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "description": "Ensure the email field in the customers table of sales_db is never null and matches a valid email format"
-  }'
+  -G \
+  --data-urlencode "datastore_name=sales_db" \
+  --data-urlencode "container_name=customers" \
+  --data-urlencode "expectation=Ensure the email field is never null and matches a valid email format"
 ```
 
 **Use Cases:**
@@ -192,10 +188,8 @@ Get detailed, contextual explanations of data quality issues:
 ```bash
 curl -X POST "https://your-qualytics.qualytics.io/api/agent/investigate-anomaly" \
   -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "anomaly_id": 12345
-  }'
+  -G \
+  --data-urlencode "anomaly_identifier=12345"
 ```
 
 **Use Cases:**
@@ -212,6 +206,65 @@ curl -X POST "https://your-qualytics.qualytics.io/api/agent/investigate-anomaly"
 - Count and pattern of affected records
 - Potential business impact
 - Suggested investigation or remediation steps
+
+### Analyze Trends
+
+Analyze data quality trends over time for a specific data asset:
+
+```bash
+curl -X POST "https://your-qualytics.qualytics.io/api/agent/analyze-trends" \
+  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN" \
+  -G \
+  --data-urlencode "datastore_name=sales_db" \
+  --data-urlencode "container_name=orders" \
+  --data-urlencode "timeframe=month"
+```
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `datastore_name` | Yes | The name of the datastore to analyze |
+| `container_name` | No | Specific table or container (omit for datastore-level trends) |
+| `field_name` | No | Specific field to focus on |
+| `timeframe` | No | Time period to analyze: `week`, `month` (default), `quarter`, or `year` |
+
+**Use Cases:**
+
+- **Quality Reporting**: Generate trend reports for stakeholders and management
+- **Improvement Tracking**: Measure the impact of quality initiatives over time
+- **Regression Detection**: Identify when quality metrics started declining
+
+### Get Suggestions
+
+Retrieve AI-generated contextual suggestions for the chat interface:
+
+```bash
+curl -X GET "https://your-qualytics.qualytics.io/api/agent/suggestions" \
+  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
+```
+
+Returns a list of suggested prompts based on the available tools and data sources. Useful for building guided user experiences.
+
+### List Supported Models
+
+Retrieve the list of supported LLM providers and their available models:
+
+```bash
+curl -X GET "https://your-qualytics.qualytics.io/api/agent/supported-models" \
+  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
+```
+
+Returns provider metadata including display names, available models, whether the provider accepts arbitrary model names, and whether it requires a custom base URL. Use this endpoint to dynamically build provider selection UIs.
+
+### Check LLM Configuration Status
+
+Check whether an LLM provider is configured without retrieving the full configuration:
+
+```bash
+curl -X GET "https://your-qualytics.qualytics.io/api/agent/llm-config/status" \
+  -H "Authorization: Bearer YOUR_QUALYTICS_TOKEN"
+```
+
+Returns `is_configured` (boolean), `model_name` (if configured), and `web_search_enabled` status. This lightweight endpoint is ideal for conditionally rendering UI elements.
 
 ## Integration Patterns
 

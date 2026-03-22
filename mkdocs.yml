@@ -333,8 +333,6 @@ nav:
         - Analytics: settings/integrations/analytics/analytics.md
         - AI & Agents:
           - Overview: settings/integrations/ai-and-agents/overview.md
-          - API: settings/integrations/ai-and-agents/agent-q-api.md
-          - FAQ: settings/integrations/ai-and-agents/agent-q-faq.md
           - Deep Dive:
             - MCP: settings/integrations/ai-and-agents/deep-dive/mcp.md
             - Agent Q in Action: settings/integrations/ai-and-agents/deep-dive/agent-q-in-action.md
@@ -343,6 +341,7 @@ nav:
             - Agent Q Limits: settings/integrations/ai-and-agents/deep-dive/agent-q-limits.md
             - Agentic API: settings/integrations/ai-and-agents/deep-dive/agentic.md
           - Managing:
+            - Connecting External AI Clients: settings/integrations/ai-and-agents/managing/connecting-external-ai-clients.md
             - Add Integration: settings/integrations/ai-and-agents/managing/add-agent-q-integration.md
             - Update Integration: settings/integrations/ai-and-agents/managing/update-agent-q-integration.md
             - Remove Integration: settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md
@@ -354,6 +353,8 @@ nav:
             - Delete a Conversation: settings/integrations/ai-and-agents/managing/delete-a-conversation.md
             - Search Conversations: settings/integrations/ai-and-agents/managing/search-conversations.md
             - Chat Interface Tips: settings/integrations/ai-and-agents/managing/chat-interface-tips.md
+          - API: settings/integrations/ai-and-agents/agent-q-api.md
+          - FAQ: settings/integrations/ai-and-agents/agent-q-faq.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md

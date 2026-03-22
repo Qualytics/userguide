@@ -54,6 +54,37 @@ MCP supports multiple transport mechanisms. Qualytics exposes its MCP server ove
 - Authentication is handled via HTTP headers (Bearer token).
 - Streaming responses are supported for long-running tool executions.
 
+## What You Can Do with MCP + Qualytics
+
+### Quality Trends & Insights
+
+Analyze data quality trends over time to understand how your quality posture is evolving:
+
+- *"How has the quality score for our orders table changed over the past month?"*
+- *"Show me the trend of anomaly volume across all datastores"*
+- *"What are the top anomaly drivers in our production database?"*
+
+The AI retrieves time-series quality metrics, operation execution insights, and trend analysis to help you identify patterns and measure improvement.
+
+### Global Search & Asset Discovery
+
+Search across your entire data landscape to find specific assets, tables, fields, or quality checks:
+
+- *"Find all tables related to customer data across all our datastores"*
+- *"Search for any containers named 'transactions'"*
+- *"What quality checks mention revenue?"*
+
+### Operational Actions
+
+Trigger and monitor data operations, manage tags, send notifications, and create tickets through conversation:
+
+- *"Run a profile operation on the customers table"*
+- *"Tag the orders and transactions tables as 'finance-critical'"*
+- *"Send a notification to the data-engineering Slack channel about the quality issue"*
+- *"Create a Jira ticket for the null values in the merchant_id field"*
+
+For the complete list of available tools and capabilities, see [Agent Q in Action](./agent-q-in-action.md){:target="_blank"}.
+
 ## Why MCP Matters for Data Quality
 
 Traditional integrations between AI tools and data platforms require custom-built connectors, hardcoded API calls, and constant maintenance as APIs evolve. MCP standardizes this — any MCP-compatible AI client can connect to any MCP server and immediately discover its capabilities.
@@ -72,4 +103,4 @@ Qualytics implements an MCP server that exposes its entire data quality infrastr
 ## Next Steps
 
 - [Agent Q in Action](./agent-q-in-action.md){:target="_blank"} — How Qualytics implements MCP as a server.
-- [Add Integration](../managing/add-agent-q-integration.md#connecting-external-ai-clients){:target="_blank"} — Connect external AI clients (Claude Desktop, ChatGPT, Cursor) to the Qualytics MCP server.
+- [Connecting External AI Clients](../managing/connecting-external-ai-clients.md){:target="_blank"} — Connect external AI clients (ChatGPT, Claude Desktop, Claude Code, Cursor, VS Code, Windsurf, Amazon Q Developer) to the Qualytics MCP server.

@@ -169,6 +169,6 @@ Workflow tools execute multi-step guided processes for complex tasks. Each retur
 
 ## Connecting External Clients
 
-For step-by-step instructions on connecting ChatGPT, Claude Desktop, Cursor, and other MCP-compatible clients to the Qualytics MCP server, see [Add Integration](../managing/add-agent-q-integration.md#connecting-external-ai-clients){:target="_blank"}.
+For step-by-step instructions on connecting ChatGPT, Claude Desktop, Cursor, and other MCP-compatible clients to the Qualytics MCP server, see [Connecting External AI Clients](../managing/connecting-external-ai-clients.md){:target="_blank"}.
 
 For example conversations showing Agent Q in use, see [Conversations, Responses & Context](./agent-q-conversations.md#example-conversations){:target="_blank"}.
