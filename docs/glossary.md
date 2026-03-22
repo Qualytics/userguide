@@ -136,7 +136,7 @@ A type of data storage used for handling large amounts of unstructured data mana
 
 ### <a name="operation"></a>__Operation__
 
-The asynchronous (often long-running) tasks that operate on Datastores are collectively referred to as "Operations". Examples include Catalog, Profile, Hash, and Scan.
+The asynchronous (often long-running) tasks that operate on Datastores are collectively referred to as "Operations". Examples include Sync, Profile, Hash, and Scan.
 
 ### <a name="partition"></a>__Partition Identifier__
 

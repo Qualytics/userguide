@@ -299,7 +299,7 @@ This status indicates that the scan operation is still running at the moment and
 
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 1   | Operation ID and Type   | Unique identifier and type of operation performed (catalog, profile, or scan).                               |
+| 1   | Operation ID and Type   | Unique identifier and type of operation performed (sync, profile, or scan).                               |
 | 2   | Timestamp              | Timestamp when the operation was started.                                                                    |
 | 3   | Progress Bar            | The progress of the operation.                                                                               |
 | 4   | Triggered By            | The author who triggered the operation.                                                                      |
@@ -325,7 +325,7 @@ This status indicates that the scan operation was manually stopped before it cou
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
-| 1       | Operation ID and Type     | Unique identifier and type of operation performed (catalog, profile, or scan).     |
+| 1       | Operation ID and Type     | Unique identifier and type of operation performed (sync, profile, or scan).     |
 | 2       | Timestamp                 | Timestamp when the operation was started                                           |
 | 3       | Progress Bar              | The progress of the operation                                                      |
 | 4       | Aborted By              | The author who triggered the operation                                             |
@@ -353,7 +353,7 @@ This status signals that the scan operation encountered some issues and displays
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
-| 1       | Operation ID and Type     | Unique identifier and type of operation performed (catalog, profile, or scan).     |
+| 1       | Operation ID and Type     | Unique identifier and type of operation performed (sync, profile, or scan).     |
 | 2       | Timestamp                 | Timestamp when the operation was started                                           |
 | 3       | Progress Bar              | The progress of the operation                                                      |
 | 4       | Triggered By              | The author who triggered the operation                                             |
@@ -380,7 +380,7 @@ The summary section provides an overview of the **scan** operation upon successf
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
-| 1       | Operation ID and Type     | Unique identifier and type of operation performed (catalog, profile, or scan).     |
+| 1       | Operation ID and Type     | Unique identifier and type of operation performed (sync, profile, or scan).     |
 | 2       | Timestamp                 | Timestamp when the operation was started                                           |
 | 3       | Progress Bar              | The progress of the operation                                                      |
 | 4       | Triggered By              | The author who triggered the operation                                             |
