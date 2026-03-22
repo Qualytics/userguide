@@ -37,12 +37,10 @@ Agent Q is the AI assistant built into the Qualytics platform. Powered by the Mo
 - **Background Streaming** — If you navigate away while Agent Q is generating, the stream continues in the background. The response is waiting when you return to that session.
 - **PDF Export** — Export any Agent Q response as a PDF for sharing and reporting.
 
-## Reference
+## Deep Dive
 
 | Section | Description |
 | :--- | :--- |
-| [API](agent-q-api.md) | REST API reference for Agent Q — chat, sessions, specialized endpoints, and LLM configuration management. |
-| [FAQ](agent-q-faq.md) | Answers to frequently asked questions about Agent Q, security, usage limits, and troubleshooting. |
 | [MCP](deep-dive/mcp.md) | What is the Model Context Protocol — how it works, key concepts, and why it matters. |
 | [Agent Q in Action](deep-dive/agent-q-in-action.md) | How Qualytics implements MCP — endpoint, tools, and tool step labels. |
 | [Conversations, Responses & Context](deep-dive/agent-q-conversations.md) | How to write prompts, understand Agent Q responses, and use context-aware conversations. |
@@ -54,7 +52,8 @@ Agent Q is the AI assistant built into the Qualytics platform. Powered by the Mo
 
 | Task | Description |
 | :--- | :--- |
-| [Add Integration](managing/add-agent-q-integration.md) | Configure your LLM provider and optionally connect external AI clients (ChatGPT, Claude Desktop, Cursor) to the Qualytics MCP server. |
+| [Connecting External AI Clients](managing/connecting-external-ai-clients.md) | Connect ChatGPT, Claude Desktop, Claude Code, Cursor, VS Code, Windsurf, or Amazon Q Developer to the Qualytics MCP server. |
+| [Add Integration](managing/add-agent-q-integration.md) | Configure your LLM provider to power Agent Q's built-in chat. |
 | [Update Agent Q Integration](managing/update-agent-q-integration.md) | Change your LLM provider, model, or API key. |
 | [Remove Agent Q Integration](managing/remove-agent-q-integration.md) | Disconnect your LLM provider from Agent Q. |
 | [Start a New Conversation](managing/start-a-new-conversation.md) | Create a fresh chat session from the sidebar, chat header, or floating chat. |
@@ -65,3 +64,10 @@ Agent Q is the AI assistant built into the Qualytics platform. Powered by the Mo
 | [Delete a Conversation](managing/delete-a-conversation.md) | Permanently remove an archived session. |
 | [Search Conversations](managing/search-conversations.md) | Filter active sessions by title or message content to find a specific conversation. |
 | [Chat Interface Tips](managing/chat-interface-tips.md) | Refresh the chat list, collapse or expand the sidebar, expand the floating chat, stop a response, paste large content, and use prompt suggestions. |
+
+## Reference
+
+| Section | Description |
+| :--- | :--- |
+| [API](agent-q-api.md) | REST API reference for Agent Q — chat, sessions, specialized endpoints, and LLM configuration management. |
+| [FAQ](agent-q-faq.md) | Answers to frequently asked questions about Agent Q, security, usage limits, and troubleshooting. |

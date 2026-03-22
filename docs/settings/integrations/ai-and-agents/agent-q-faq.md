@@ -153,7 +153,27 @@ The [Model Context Protocol](https://modelcontextprotocol.io/) is an open standa
 
 ### Can I connect external AI clients to Qualytics?
 
-Yes. Beyond the built-in Agent Q, you can connect ChatGPT, Claude Desktop, Cursor, and any MCP-compatible client directly to the Qualytics MCP server using your Personal API Token. See the [Add Integration](managing/add-agent-q-integration.md#connecting-external-ai-clients){:target="_blank"} guide for step-by-step instructions for each client.
+Yes. Beyond the built-in Agent Q, you can connect ChatGPT, Claude Desktop, Claude Code, Cursor, VS Code (GitHub Copilot), Windsurf, Amazon Q Developer, and any MCP-compatible client directly to the Qualytics MCP server using your Personal API Token. See the [Connecting External AI Clients](managing/connecting-external-ai-clients.md){:target="_blank"} guide for step-by-step instructions for each client.
+
+### Which external AI clients are supported?
+
+Qualytics provides step-by-step setup guides for the following MCP clients:
+
+| Client | Transport |
+|--------|-----------|
+| **ChatGPT** | Streamable HTTP (native MCP support) |
+| **Claude Desktop** | Custom Connectors (native HTTP transport) |
+| **Claude Code** | Streamable HTTP via CLI (`claude mcp add`) |
+| **Cursor** | Streamable HTTP via `~/.cursor/mcp.json` |
+| **VS Code (GitHub Copilot)** | Streamable HTTP via `.vscode/mcp.json` |
+| **Windsurf** | Streamable HTTP via `~/.codeium/windsurf/mcp_config.json` |
+| **Amazon Q Developer** | Streamable HTTP via `~/.aws/amazonq/mcp.json` |
+
+Any other MCP-compatible client that supports **Streamable HTTP** transport can also connect. See the [Connecting External AI Clients](managing/connecting-external-ai-clients.md){:target="_blank"} guide for full instructions.
+
+### Do external clients have the same capabilities as Agent Q?
+
+External MCP clients share the same tool set as Agent Q — they connect to the same MCP server and have access to the same tools for exploration, quality checks, transformations, anomalies, operations, and integrations. However, features specific to the Qualytics UI (context injection, smart suggestions, session management, PDF export) are only available in the built-in Agent Q chat.
 
 ### What is the difference between Agent Q, the MCP server, and the Agentic API?
 

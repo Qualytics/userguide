@@ -31,7 +31,7 @@ Before using the Agentic API, you must configure your LLM provider credentials. 
 
 ### Supported Providers
 
-The Agentic API supports 22+ LLM providers. For the full list, see [Supported LLM Providers](./mcp-quickstart.md#supported-llm-providers) in the Agent Q Quickstart guide.
+The Agentic API supports 22+ LLM providers. For the full list, see [Supported LLM Providers](../managing/add-agent-q-integration.md#supported-llm-providers){:target="_blank"} in the Add Integration guide.
 
 Common providers include:
 
@@ -58,7 +58,7 @@ LLM configuration is managed through the Qualytics UI, just like any other integ
 4. Optionally provide a **Base URL** if required by your provider
 5. Click **Save** to complete the configuration
 
-For detailed setup instructions with screenshots, see [Agent Q Quickstart — LLM Setup](./mcp-quickstart.md#before-you-start-llm-setup-required).
+For detailed setup instructions with screenshots, see [Add Integration](../managing/add-agent-q-integration.md){:target="_blank"}.
 
 ## Capabilities
 
