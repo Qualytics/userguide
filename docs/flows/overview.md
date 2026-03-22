@@ -27,7 +27,7 @@ This is where you decide whether the Flow is active or paused.
 Decides *when* your Flow starts.  
 Triggers can be:
 
-- **Operation-based:** Starts after a Catalog, Profile, or Scan completes.  
+- **Operation-based:** Starts after a Sync, Profile, or Scan completes.  
 - **Anomaly-based:** Starts when Qualytics detects data issues.  
 - **Manual:** Starts only when you trigger it yourself.
 
