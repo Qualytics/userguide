@@ -332,9 +332,28 @@ nav:
         - Workflow: settings/integrations/workflow/workflow.md
         - Analytics: settings/integrations/analytics/analytics.md
         - AI & Agents:
-          - MCP: settings/integrations/ai/mcp.md
-          - Agentic API: settings/integrations/ai/agentic.md
-          - MCP Quickstart: settings/integrations/ai/mcp-quickstart.md
+          - Overview: settings/integrations/ai-and-agents/overview.md
+          - API: settings/integrations/ai-and-agents/agent-q-api.md
+          - FAQ: settings/integrations/ai-and-agents/agent-q-faq.md
+          - Deep Dive:
+            - MCP: settings/integrations/ai-and-agents/deep-dive/mcp.md
+            - Agent Q in Action: settings/integrations/ai-and-agents/deep-dive/agent-q-in-action.md
+            - Conversations, Responses & Context: settings/integrations/ai-and-agents/deep-dive/agent-q-conversations.md
+            - Best Practices: settings/integrations/ai-and-agents/deep-dive/agent-q-best-practices.md
+            - Agent Q Limits: settings/integrations/ai-and-agents/deep-dive/agent-q-limits.md
+            - Agentic API: settings/integrations/ai-and-agents/deep-dive/agentic.md
+          - Managing:
+            - Add Integration: settings/integrations/ai-and-agents/managing/add-agent-q-integration.md
+            - Update Integration: settings/integrations/ai-and-agents/managing/update-agent-q-integration.md
+            - Remove Integration: settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md
+            - Start a New Conversation: settings/integrations/ai-and-agents/managing/start-a-new-conversation.md
+            - Resume a Conversation: settings/integrations/ai-and-agents/managing/resume-a-conversation.md
+            - Rename a Conversation: settings/integrations/ai-and-agents/managing/rename-a-conversation.md
+            - Archive a Conversation: settings/integrations/ai-and-agents/managing/archive-a-conversation.md
+            - Restore a Conversation: settings/integrations/ai-and-agents/managing/restore-a-conversation.md
+            - Delete a Conversation: settings/integrations/ai-and-agents/managing/delete-a-conversation.md
+            - Search Conversations: settings/integrations/ai-and-agents/managing/search-conversations.md
+            - Chat Interface Tips: settings/integrations/ai-and-agents/managing/chat-interface-tips.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
@@ -461,6 +480,12 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
+        'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
+        'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/update-llm-integration.md': 'settings/integrations/ai-and-agents/managing/update-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/remove-llm-integration.md': 'settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/how-to-use-agent-q.md': 'settings/integrations/ai-and-agents/overview.md'
         'source-datastore/catalog.md': 'source-datastore/sync.md'
         'flows/http.md': 'flows/workflow.md'
         'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'

@@ -1,6 +1,6 @@
 # Agentic API
 
-The Qualytics Agentic API brings the same conversational AI capabilities available through [MCP](./mcp.md) directly into your applications and workflows. Using your own LLM API key, you can integrate natural language data quality management into custom tools, scripts, automation pipelines, and internal platforms.
+The Qualytics Agentic API brings the same conversational AI capabilities available through [MCP](./mcp.md){:target="_blank"} directly into your applications and workflows. Using your own LLM API key, you can integrate natural language data quality management into custom tools, scripts, automation pipelines, and internal platforms.
 
 ## Overview
 
@@ -23,7 +23,7 @@ Include the token in the `Authorization` header:
 Authorization: Bearer YOUR_QUALYTICS_API_TOKEN
 ```
 
-For instructions on generating a token, see [Tokens](../../tokens/overview-of-tokens.md).
+For instructions on generating a token, see [Tokens](../../../tokens/overview-of-tokens.md){:target="_blank"}.
 
 ## LLM Configuration
 
@@ -290,31 +290,3 @@ def create_dataset():
     }
 ```
 
-## Best Practices
-
-### Prompt Design
-
-For best results when using the Agentic API:
-
-- **Be specific about datastores and tables**: Include the datastore name and container/table name when referencing data assets
-- **Describe business intent**: Explain what you're trying to accomplish, not just the technical operation
-- **Include constraints**: Mention filtering criteria, date ranges, or other limitations upfront
-
-### Cost Management
-
-Since you're using your own LLM API key:
-
-- Use the `prompt` endpoint for simple, single-turn queries instead of `chat` when conversation context isn't needed
-- Cache responses for frequently-requested information
-- Consider rate limiting in your applications to control API costs
-
-### Error Handling
-
-The Agentic API returns structured responses that include:
-
-- Success/failure status
-- Generated SQL or configuration (when applicable)
-- Validation errors or issues with the request
-- Suggestions for how to refine ambiguous requests
-
-Always check response status and handle cases where the AI may need clarification or additional context.
