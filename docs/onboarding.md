@@ -85,9 +85,7 @@ For detailed integration instructions, please refer to the [<u>quick start guide
 
 **Q 7: What types of database technology can you connect in Qualytics?**
 
-**A 7:** Qualytics supports any Apache Spark-compatible datastore, including:
-- Relational databases (RDBMS)
-- Raw file formats (CSV, XLSX, JSON, Avro, Parquet)
+**A 7:** Qualytics provides verified connectors for a wide range of datastores, including relational databases (RDBMS) and raw file formats (CSV, XLSX, JSON, Avro, Parquet). Because Qualytics is built on Apache Spark, additional JDBC-accessible datastores may be technically compatible. If your datastore is not listed among our verified connectors, contact us — our team will evaluate feasibility and work with you to determine whether a supported connection can be established.
 
 **Q 8: What is an enrichment datastore?**
 
@@ -101,9 +99,9 @@ For detailed integration instructions, please refer to the [<u>quick start guide
 
 **A 10:** Quality Scores measure data quality at the field, container, and datastore levels, recorded as a time series to track improvements. Scores range from 0-100, with higher scores indicating better quality.
 
-**Q 11: What is a catalog operation?**
+**Q 11: What is a sync operation?**
 
-**A 11:** A Catalog Operation scans your datastore to import named collections (tables, views, files). It automatically identifies optimal approaches for:
+**A 11:** A Sync Operation (previously known as Catalog Operation) detects new, changed, or removed containers and fields in your datastore. It works incrementally by comparing the current state against what Qualytics already knows, and automatically identifies optimal approaches for:
 - Incremental scanning
 - Data partitioning
 - Record identification

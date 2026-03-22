@@ -1,18 +1,18 @@
 # JDBC Datastore Overview
 
-JDBC Datastore in Qualytics allows you to easily integrate and manage data from relational databases. Using the Java Database Connectivity (JDBC) API, you can securely connect to databases, analyze data, and perform data profiling. This feature supports a wide range of relational databases, providing you with a flexible solution for data discovery and quality checks.
+JDBC Datastore in Qualytics allows you to easily integrate and manage data from relational databases. Using the Java Database Connectivity (JDBC) API, you can securely connect to databases, analyze data, and perform data profiling. Qualytics provides verified connectors for the databases listed below. Because the platform is built on Apache Spark, additional JDBC-accessible databases may be technically compatible — contact us to evaluate feasibility for your specific datastore.
 
 ## Adding JDBC Datastore
 
 Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../assets/datastores/jdbc-datastores/add-datastore-light.png)
+![add-datastore](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/add-source-datastore.png)
 
 For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Datastore**](../add-datastores/athena.md#add-the-source-datastore) section of the documentation.
 
 ## Supported JDBC Databases
 
-Qualytics supports a range of relational databases, including but not limited to:
+Qualytics provides verified connectors for the following relational databases:
 
 * [Athena](../add-datastores/athena.md)  
 * [Databricks](../add-datastores/databricks.md)
@@ -37,21 +37,21 @@ To connect to a JDBC datastore, users must provide the required connection detai
 
 For more information about connections, refer to the [**Connection Overview**](../connections/overview-of-a-connection.md) documentation.
 
-## Catalog Operation  
+## Sync Operation
 
-After adding a JDBC Datastore, you can initiate a **Catalog operation** to extract key metadata from the database. This operation provides:
+After adding a JDBC Datastore, you can initiate a **Sync operation** to extract key metadata from the database. This operation provides:
 
-* A list of containers (schemas, tables, or views).  
-* Field names within each container.  
+* A list of containers (schemas, tables, or views).
+* Field names within each container.
 * Record counts for data analysis and profiling.
 
-![catalog](../assets/datastores/jdbc-datastores/catalog-light.png)
+![sync](../assets/add-datastores/jdbc-datastores/overview-of-a-jdbc-datastore/sync-operation-overview.png)
 
-For more information about how to run catalog operation, refer to the [**Catalog Operation**](../source-datastore/catalog.md) documentation.
+For more information about how to run a sync operation, refer to the [**Sync Operation**](../source-datastore/sync.md) documentation.
 
 ## Field Types Inference
 
-Qualytics employs weighted histogram analysis during the Catalog operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
+Qualytics employs weighted histogram analysis during the Sync operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
 
 ## Containers Overview  
 

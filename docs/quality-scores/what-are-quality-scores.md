@@ -58,10 +58,21 @@ score(n) = 100 × (1 - e^(-k × n))
 ```
 where n is the number of checks and k is tuned so that 1 check = 60.
 
+The first few checks have the greatest impact, and additional checks contribute progressively less:
+
+| Checks | Approximate Score |
+|:-------|:------------------|
+| 0 | 0 |
+| 1 | ~60 |
+| 2 | ~84 |
+| 3 | ~94 |
+| 4+ | ~97–100 |
+
 **Why This Model?**
 
 - **Strong early reward**: The first check dramatically increases confidence in field coverage
 - **Fair balance**: More checks always improve the score, but the improvement diminishes as coverage becomes robust, preventing runaway inflation
+- **Practical takeaway**: The first check has the biggest impact. 3 checks per field gets you to ~94%
 
 !!! note "Field vs. Container Coverage"
     At the **field level**, Coverage reflects the **number of distinct quality checks** defined for that field.
@@ -172,6 +183,21 @@ Both the **Timeliness** and **Volumetrics** dimensions are measured at the conta
 
 A container (table, view, file, or other structured data asset or any aggregation of data assets such as assets that share a common tag) receives an overall quality score derived from its constituent fields and additional container-specific metrics.
 
+### Which Containers Get a Score?
+
+A container receives a quality score **only if it has both** a completed **profile** and a completed **scan**. Containers that have not been both profiled and scanned display **`-`** in the UI and are completely excluded from the datastore aggregate — they do not participate in the calculation.
+
+| Container State | UI Display | In Datastore Aggregate? |
+|:----------------|:-----------|:-----------------------|
+| Cataloged only (no profile, no scan) | **-** | No |
+| Profiled only (no scan) | **-** | No |
+| Scanned only (no profile) | **-** | No |
+| Profiled + Scanned, no checks | **Numeric score** (low) | **Yes** |
+| Profiled + Scanned, with checks | **Numeric score** | **Yes** |
+
+!!! warning "Common Misconception"
+    Containers showing `-` are **not** scored as 0 and do **not** drag down your datastore score. They are completely excluded from the aggregate — neither in the numerator nor the denominator. However, a container that was profiled and scanned but has no quality checks **will** receive a low numeric score (because unmonitored dimensions like coverage and accuracy are penalized heavily) and **will** participate in the aggregate.
+
 ### How Container Scores Are Calculated
 
 Your container's total Quality Score starts at a **baseline of 70**. Each of the eight data quality dimensions then adjusts this baseline:
@@ -185,12 +211,44 @@ Your container's total Quality Score starts at a **baseline of 70**. Each of the
     - **Accuracy**: Weighted average of field accuracy scores
     - **Timeliness**: Calculated using process described below
     - **Volumetrics**: Calculated using process described below
-- **Proportional adjustment**: Each dimension adjusts the score proportionally to its 0–100 rating
-- **Influence capping**: Every dimension has maximum positive and negative impact limits
-- **Weight controls**: Higher weights make dimensions more influential; zero weight removes effect entirely
-- **Missing value handling**: Documented defaults substitute for unmeasurable dimensions
-- **Special case**: If only one dimension is weighted, the Quality Score mirrors that dimension's rating
+- **Multiplicative adjustment**: Each dimension applies a multiplicative factor to the baseline. Dimensions with strong quality signals boost the score slightly, while dimensions with poor signals or missing data can reduce it significantly.
+
+    ```
+    score = baseline × f(coverage) × f(accuracy) × f(conformity) × f(precision)
+                     × f(consistency) × f(completeness) × f(timeliness) × f(volumetrics)
+    ```
+
+    Each factor is bounded — no single dimension can take over the entire score. The system caps both the maximum penalty and the maximum boost per dimension.
+
+- **Weight controls**: Higher weights make dimensions more influential; setting a weight to zero removes that dimension's effect entirely
+- **Missing value handling**: When a dimension cannot be measured (e.g., no checks of that type exist), the system applies a default assumption. For some dimensions this means "assumed fine" (no penalty), while for others it means "unverified" (score reduction). See [How Dimensions Influence the Score](#how-dimensions-influence-the-score) for details.
+- **Special case**: If only one dimension is weighted, the Quality Score mirrors that dimension's rating directly
 - **Final clipping**: Result is always constrained between 0 and 100
+
+#### How Dimensions Influence the Score
+
+Each dimension has a bounded range of influence — it can penalize the score when quality is poor and boost it slightly when quality is strong. The system is calibrated so that **some dimensions have much more impact than others**, reflecting their importance to overall data trustworthiness.
+
+| Dimension | Influence Level | When No Checks Exist |
+|:----------|:---------------|:---------------------|
+| Coverage | **High** | Score drops significantly — you can't trust what you don't measure |
+| Accuracy | **High** | Score drops significantly — unvalidated data is assumed unreliable |
+| Consistency | **High** | Score drops significantly — without profiling history, stability is unknown |
+| Conformity | **Low** | No penalty — absence of format-specific checks doesn't imply bad data |
+| Precision | **Low** | No penalty — absence of granularity checks doesn't imply bad data |
+| Completeness | **Moderate** | Small penalty — completeness is measured directly from profiling, not checks |
+| Timeliness | **Moderate** | Small penalty — without freshness checks, a slight confidence reduction is applied |
+| Volumetrics | **Moderate** | Small penalty — without volumetric checks, a slight confidence reduction is applied |
+
+!!! info "Why Coverage and Accuracy Have the Biggest Impact"
+    **Coverage** and **Accuracy** are the two most influential dimensions because they represent fundamental aspects of data governance:
+
+    - **Coverage** measures whether you are actively monitoring your data at all. A field with zero quality checks provides zero assurance — the score reflects this lack of observability.
+    - **Accuracy** measures whether your data passes the checks you've defined. If no accuracy-relevant checks exist, the system cannot confirm data correctness, so confidence is low.
+
+    By contrast, **Conformity** and **Precision** address specific formatting and granularity concerns. The absence of these checks doesn't mean the data is wrong — it simply means those particular aspects aren't being monitored. The system gives you the benefit of the doubt for these dimensions.
+
+    **Consistency** is also heavily weighted because it detects data drift. Without sufficient profiling history, the system cannot confirm that your data is stable, which reduces confidence.
 
 !!! note "Why a 70-Point Baseline?"
     The **70-point baseline** represents a **neutral confidence starting point**.
@@ -207,19 +265,18 @@ The **Timeliness** score gauges whether data is available according to its expec
 - **Scale**: 0 to 100 based on adherence to freshness requirements
 - **Field level**: Directly inherited from the container's timeliness score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
-- **Formula (container)**: Scores start at 100 and decrease based on anomaly count
-    - First anomaly causes a 40-point drop (score becomes 60)
-    - Each additional anomaly has diminishing impact
-    - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
-    - Where k is calibrated so one anomaly = 40% score reduction
+- **Scoring model**: Scores start at 100 and decrease based on anomaly count
+    - The first anomaly has the largest impact
+    - Each additional anomaly has diminishing impact (exponential decay)
+    - As anomaly count grows, the score approaches 0 but the marginal penalty per anomaly shrinks
 - **Applicable rule types**: Time distribution size, freshness constraints<br>_<span class="text-sm">See [Appendix: Timeliness Rule Types](#timeliness-rule-types) for the full Timeliness rule type list.</span>_
 
 **Score Interpretation**
 
 - **100**: No timeliness anomalies detected
-- **60**: One anomaly detected (40-point penalty)
-- **40-60**: Multiple anomalies with diminishing penalties
-- **0-40**: Significant anomaly counts indicating serious issues
+- **60–80**: A small number of anomalies detected — worth investigating
+- **40–60**: Multiple anomalies indicating recurring timeliness issues
+- **Below 40**: Significant and frequent anomaly counts indicating serious issues
 - **None/Null**: No checks of this type configured (unmeasured)
 
 ### Volumetrics Dimension
@@ -235,11 +292,10 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
 - **Scale**: 0 to 100 based on volumetric stability
 - **Field level**: Directly inherited from the container's volumetrics score
 - **Anomaly counting**: Counts distinct anomalies from the relevant check types within the measurement period (cutoff date)
-- **Formula (container)**: Scores start at 100 and decrease based on anomaly count
-    - First anomaly causes a 40-point drop (score becomes 60)
-    - Each additional anomaly has diminishing impact
-    - Formula: `Score = 100 - min(100 × (1 - e^(-k × anomaly_count)), 100)`
-    - Where k is calibrated so one anomaly = 40% score reduction
+- **Scoring model**: Scores start at 100 and decrease based on anomaly count
+    - The first anomaly has the largest impact
+    - Each additional anomaly has diminishing impact (exponential decay)
+    - As anomaly count grows, the score approaches 0 but the marginal penalty per anomaly shrinks
 - **Applicable rule types**: Row count size, partition size constraints<br>_<span class="text-sm">See [Appendix: Volumetric Rule Types](#volumetric-rule-types) for the full Volumetric rule type list.</span>_
 
 **Examples**
@@ -253,9 +309,9 @@ The **Volumetrics** score analyzes consistency in data size and shape over time.
 
 Beyond the eight dimensions, containers incorporate:
 
-- **Scanning frequency**: More frequent scanning improves confidence and boosts coverage scores
-- **Profiling frequency**: Regular profiling ensures statistics remain current and boosts consistency scores
-- **Field tag weights**: Field weights are used when calculated weighted averages for container-level dimensions
+- **Scanning frequency**: More frequent scanning improves confidence and boosts coverage scores. Infrequent scanning reduces the coverage modifier; daily or more frequent scanning maximizes it. This applies when both metadata and integrity scans exist.
+- **Profiling frequency**: Regular profiling ensures statistics remain current and boosts consistency scores. Weekly or more frequent profiling gives the maximum boost. The consistency score is capped at 100 after the modifier is applied.
+- **Field tag weights**: Field weights (derived from tags) are used when calculating weighted averages for container-level dimensions. Fields with higher-weight tags have more influence on their container's dimension scores.
 
 ### Most Impactful Dimensions
 
@@ -264,6 +320,75 @@ While specific scoring weights [can be customized](#customizing-quality-score-we
 - **Coverage**: Asserting frequent, comprehensive quality checks is critical
 - **Accuracy**: Large volumes of anomalies severely impact scores
 - **Consistency**: Erratic or unstable data characteristics reduce confidence
+
+## Datastore-Level Quality Scoring
+
+The datastore quality score is a **weighted average** of all scored containers:
+
+```
+Datastore Score = SUM(container_score × container_weight) / SUM(container_weight)
+```
+
+**Only containers with a score participate.** Containers that have not been both profiled and scanned are excluded from both the numerator and the denominator.
+
+### How Tags Affect the Datastore Score
+
+Each container's weight in the aggregate formula is derived from its tags:
+
+```
+container weight = sum(tag weight modifiers on this container), normalized so the minimum is at least 1
+```
+
+- A container with no tags has weight = 1 (default)
+- Tags with positive weight modifiers increase a container's influence on the datastore score
+- Tags with negative weight modifiers decrease a container's influence
+
+**Example:** If you tag your 2 most important tables with a `Critical (weight: +10)` tag, each gets weight ~11 while untagged tables remain at weight 1. Your important tables now dominate the aggregate.
+
+### Historical Daily Scores
+
+Daily datastore scores use the last 10 unique dates with quality score activity. For each date, each container's **latest score up to that date** is used (not just scores from that exact day), providing a continuous trend even when not all containers are scored daily.
+
+## Worked Example: Understanding an Unexpected Datastore Score
+
+### Scenario
+
+- A datastore has 100 cataloged tables
+- The user is actively monitoring 2 tables (one scores 100, one scores 0)
+- The datastore score shows **8**
+- The user expects ~50 (the average of 100 and 0)
+
+### What's Actually Happening
+
+Since containers showing `-` are excluded, a score of 8 means **more than 2 tables have scores**. The most common cause is running a profile and scan operation on the entire datastore (not just the 2 monitored tables). Every table that was both profiled and scanned now has a score — even tables nobody intended to monitor.
+
+**Profiled+scanned tables with no checks score very low.** With no quality checks defined, each table's score is heavily penalized by several dimensions:
+
+- **Coverage**: No checks defined → treated as unmonitored → **significant penalty**
+- **Accuracy**: No accuracy checks → data correctness is unverified → **significant penalty**
+- **Consistency**: No profiling history → stability is unknown → **significant penalty**
+- **Completeness**: Measured from profiling data → **minimal penalty**
+- **Conformity**: No conformity checks → assumed fine → **no penalty**
+- **Precision**: No precision checks → assumed fine → **no penalty**
+- **Timeliness**: No freshness checks → slight confidence reduction → **small penalty**
+- **Volumetrics**: No volumetric checks → slight confidence reduction → **small penalty**
+
+The combined effect of these penalties brings an unchecked table's score down to **roughly 10–15** (from the 70-point baseline). When 98 tables score this low and only 2 monitored tables score 100 and 0, a datastore score of 8 is entirely plausible.
+
+### Recommended Actions
+
+When your datastore score is lower than expected because unmonitored tables are pulling down the average, here are your options:
+
+| Approach | Effort | Description |
+|:---------|:-------|:------------|
+| **Explore + tag filter** | Low | Create a tag (e.g., "Monitored"), apply it to your tables, and filter by it in **Explore**. The aggregate score shown will only include those tables. |
+| **Tag weights** | Low | Apply a high-weight tag (e.g., +10) to your monitored tables so they dominate the datastore aggregate. |
+| **Dimension weights** | Low | Set Coverage and/or Accuracy weight to 0 in **Settings → Score** to remove the "no checks defined" penalty for all tables. |
+| **Shorten decay period** | Low | Reduce the decay period (default 180 days) to 60–90 days so tables profiled long ago drop out of the aggregate. |
+| **Selective profiling/scanning** | Medium | Only run profile and scan operations on the tables you intend to monitor. This prevents the problem entirely. |
+
+!!! tip "Root Cause"
+    The most common cause of unexpectedly low datastore scores is a **datastore-wide profile + scan** during initial setup. This gives every table a score — even ones nobody intended to monitor. Those check-less tables receive very low scores and flood the average. Going forward, consider running operations on selected tables only.
 
 ## How to Interpret and Use Quality Scores
 
@@ -313,6 +438,27 @@ data events defaults to 180 days but can be customized to fit your operational n
 
     Proceed carefully, and document any custom weighting rationale.
 
+
+## Quality Score Settings Reference
+
+The following settings are configurable at the **container** or **datastore** level. Container settings override datastore settings.
+
+| Setting | Default | Description |
+|:--------|:--------|:------------|
+| Decay Period | 180 days | How far back to look for profiles and scans |
+| Coverage Weight | 1.0 | Coverage dimension weight (0 = disable) |
+| Accuracy Weight | 1.0 | Accuracy dimension weight |
+| Conformity Weight | 1.0 | Conformity dimension weight |
+| Precision Weight | 1.0 | Precision dimension weight |
+| Consistency Weight | 1.0 | Consistency dimension weight |
+| Completeness Weight | 1.0 | Completeness dimension weight |
+| Timeliness Weight | 1.0 | Timeliness dimension weight |
+| Volumetrics Weight | 1.0 | Volumetrics dimension weight |
+
+Setting any weight to **0** disables that dimension's penalty. The factor becomes a slight boost instead.
+
+!!! note "Single-Dimension Mode"
+    If exactly **one dimension** has a non-zero weight (all others set to 0), the container score directly mirrors that dimension's score instead of using the multiplicative formula. This is useful when you only care about one aspect of quality.
 
 ## Appendix: Rule Types
 

@@ -2,6 +2,181 @@
 
 ## Release Notes
 
+### 2026.3.20 { id=2026.3.20 }
+
+#### Feature Enhancements
+
+- Renamed the Catalog operation to Sync, now performing delta-based processing that only analyzes changes instead of recalculating all container metadata.
+    - The Sync operation processes only what has changed since the last run, significantly reducing execution time on large datastores.
+
+- Introduced Field Masking to protect sensitive data such as PII and ePHI, allowing fields to be marked as masked so their values are scrubbed from all standard data responses.
+    - Masked field values are replaced with a placeholder ***MASKED*** in container previews, source record retrievals, enrichment reads, and quality check dry runs.
+    - Privileged users can request unmasked values through an explicit override, with all access recorded in an audit trail.
+    - Fields serving as container identifiers (incremental, partition, or group-by fields) cannot be masked to preserve operational integrity.
+
+- Display names and descriptions from data catalog integrations — When synced with a data catalog (Atlan, Alation, Microsoft Purview, Collibra, or DataHub), Qualytics automatically populates descriptions on datastores, and display names and descriptions on containers and fields from the catalog's asset metadata.
+    - When a display name is set, it is shown across the entire platform in place of the source name, with the original name still accessible via an info icon.
+    - Display names and descriptions can also be manually assigned directly in Qualytics, independently of any data catalog integration.
+
+- Added multi-schema source datastore creation, allowing users to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step.
+    - Available catalogs and schemas are automatically discovered from the connection, letting users browse and select which ones to onboard.
+    - An optional second step allows linking all newly created source datastores to a single enrichment datastore, either by selecting an existing one or creating a new one during the same flow.
+
+- Enabled a Business Context configuration in the LLM integration, providing personalized Agent Q suggestions tailored to each organization's data governance responsibilities.
+    - Administrators can describe their team's business focus and data quality scope in the LLM integration settings, providing Agent Q with relevant organizational context.
+    - Agent Q suggestions now incorporate both the organization's business context and a summary of the user's most recent chat session for more relevant recommendations.
+
+- Introduced team restriction mode, allowing administrators to view and interact with the platform from the perspective of a specific team.
+    - Administrators can select a team from the profile dropdown to restrict their session, temporarily assuming a Manager role scoped to that team's permissions and visibility.
+    - A visual indicator is displayed in the toolbar while a restriction is active, providing clear awareness of the current team context.
+    - The restriction persists across navigation and page reloads until explicitly removed by the user.
+
+#### General Fixes and Improvements
+
+- Resolved computed join container previews returning empty results under certain key overlap conditions.
+
+- Corrected timezone abbreviations not reflecting Daylight Saving Time, now dynamically displaying the correct label (e.g., EDT vs EST) based on the date being shown.
+
+- Addressed Agent Q chat context and message content overflowing the input field when expanding long responses.
+
+- Fixed freshness chart anomaly bars not displaying the correct highlight color and heatmap data reflecting all checks instead of only the selected one.
+
+- Resolved a race condition during API startup that could cause intermittent authentication errors.
+
+- Fixed stale scheduler jobs causing phantom flow executions after changing a flow's trigger type, now properly cleaning up scheduled jobs when the trigger type is modified or a flow is deleted.
+
+- Resolved the Atlan integration not populating check and anomaly counts, now correctly synchronizing metadata for both new and existing installations.
+
+- Corrected observability operations failing on datastores containing computed joins with computed fields.
+
+- Resolved reference filters in quality checks not substituting check variables, causing validation and scan errors on checks using dynamic placeholder values.
+
+- Added an Export as PDF option for Agent Q responses, allowing users to download individual messages as formatted PDFs that preserve the chat's visual layout.
+
+- Optimized profiling performance for containers with large field counts, including more efficient correlation analysis, significantly reducing execution time on wide schemas.
+
+- Enhanced datastore group visibility across the application, now displaying group information in breadcrumbs and adding management actions directly in the sidebar.
+
+- Updated delete confirmation dialogs across the application to clearly communicate the impact of each action before proceeding.
+
+- Improved Snowflake connection validation to surface warning messages about potential warehouse issues, such as undersized or suspended warehouses.
+
+- Removed the five key-value pair limit from the additional metadata editor, now supporting unlimited entries with scrollable and collapsible views.
+
+- General Fixes and Improvements.
+
+### 2026.3.6 { id=2026.3.6 }
+
+#### Feature Enhancements
+
+- Introduced promote operation for copying computed assets and quality checks across datastores and containers.
+    - Users can promote computed tables, computed files, and computed fields from one datastore or container to another, eliminating the need to manually recreate definitions across environments.
+    - Promote enables environment-based management of computed assets and checks — each entity is matched by name on the destination and either created if missing, updated if the definition differs, or skipped if identical.
+    - Quality checks can now be promoted across containers as active or draft, replacing the previous check migration feature that only supported creating checks as drafts.
+    - Each promoted entity reports an individual result status (Created, Updated, Skipped, or Failed) with filterable results and expandable error details.
+    - Promote operations appear in the Activity list with progress tracking.
+
+- Introduced PagerDuty as a first-class alerting integration.
+    - PagerDuty now appears in the Integrations page alongside Slack and Microsoft Teams, with a new additional details field for including custom context in incident notifications and an optional routing key override for directing incidents to a different service than the one configured at the integration level.
+
+- Added container-level default variables for quality checks and computed containers.
+    - Containers now support additional metadata key-value pairs that serve as default variable values during scans, configurable from the container settings page.
+    - Scan operations include a Scan Variables section in advanced options, allowing users to override container defaults on a per-scan basis.
+    - Variable resolution follows a defined priority: container metadata provides defaults, scan-level variables override those, and system profile variables take highest precedence.
+
+- Enhanced Agent Q chat experience with background streaming, session management, and infinite scrolling.
+    - Chat sessions now support archiving, restoring, and permanent deletion, giving users full control over their conversation history.
+    - Chats continue generating responses when navigating away from the session, with a visual indicator for ongoing or interrupted streams.
+    - Infinite scrolling is now supported for chat messages, the chat history sidebar, and archived sessions, replacing manual pagination.
+    - Floating chat mode now includes a chat history dropdown for switching between sessions without leaving the floating interface.
+
+- Added a force refresh option for anomaly source records, allowing users to bypass the cache and fetch the latest available data directly from the API, with a tooltip displaying the last updated timestamp.
+
+#### General Fixes and Improvements
+
+- Resolved an error when favoriting a datastore, container, or quality check for the first time when no other assets had been previously favorited.
+
+- Corrected performance regressions in known pattern detection during profiling that caused redundant regex evaluations, significantly reducing constraint suggestion time on large datasets.
+
+- Addressed Aggregation Comparison check validation failing when using expression-only aggregations like `count(*)` with no explicit field references.
+
+- Fixed fields with "missing" status appearing in the sidebar tree view after schema changes, now showing only active fields to keep the navigation uncluttered.
+
+- Resolved computed join container previews returning empty results when sampled join keys from each side did not overlap.
+
+- Corrected inaccurate freshness check results on JDBC datastores caused by silent DATE-to-Timestamp coercion that applied the local timezone instead of UTC.
+
+- Addressed field profile metric preview charts that appeared empty on hover.
+
+- Resolved Expected Values checks rendering empty value lists in certain scenarios, such as numeric values, while other types displayed correctly.
+
+- Corrected BigQuery export and materialize operations displaying raw JDBC error messages on write failures, now providing user-actionable messages for common issues like quota limits, missing datasets, and permission errors.
+
+- Optimized Redshift write performance by aligning the JDBC batch insert size with the driver configuration, reducing overhead during data operations.
+
+- Improved dataDiff checks with granular change type filtering, allowing users to specify whether added, removed, or changed rows should trigger anomalies, with at least one type required and all three selected by default.
+
+- Enhanced the asset timeline with Agent Q co-authorship attribution, allowing users to identify which changes were made through AI-assisted workflows, with the Agent Q avatar and client name displayed on co-authored entries.
+
+- Improved the command palette with unified search and expanded asset support.
+    - Asset search is now integrated directly into the command palette alongside command search, replacing the previous standalone Search Assets shortcut.
+    - Assets can now be filtered by ID in addition to name, allowing users to jump directly to a specific item.
+    - Added support for new searchable asset types: quality checks, check templates, and anomalies.
+
+- General Fixes and Improvements.
+
+### 2026.2.27 { id=2026.2.27 }
+
+#### Feature Enhancements
+
+- Introduced field status management to preserve historical data when source schema changes occur.
+    - Fields removed or renamed at the source are now marked as "missing" instead of being permanently deleted, preserving all associated quality checks, anomalies, and metadata.
+    - Added merge capability for renamed fields, allowing users to transfer all dependencies — including checks and anomalies — from a missing field to its active counterpart in a single action.
+    - Field exclusion now assigns a dedicated "excluded" status to individual fields, while remaining accessible from both the field level and the container settings for pre-profile exclusion workflows.
+    - Excluded fields can be restored to active status without requiring a new profile run.
+    - Added status indicators, filtering tabs, and a dedicated status filter across field listing pages for clear visibility into active, missing, and excluded fields.
+
+- Introduced Datastore Grouping for organized sidebar navigation.
+    - Users can now create custom groups to organize datastores in the sidebar by environment, purpose, or any preferred category.
+    - Groups support custom icons and names, with a dedicated management menu for renaming and deleting groups.
+    - Datastores can be assigned to groups directly from the tree view, with grouped datastores visually organized under collapsible sections.
+    - Added group-based filtering on the datastore listing page for focused browsing across large deployments.
+    - Group icons are displayed alongside datastore identifiers in card and list views for quick visual identification.
+
+- Introduced floating chat interface for Agent Q, accessible from any page in the platform.
+    - A persistent floating action button allows users to open Agent Q without navigating away from their current workflow.
+    - The assistant automatically detects the current page context — including datastore, container, field, check, and anomaly — and injects relevant metadata into conversations for context-aware responses.
+    - Supports paste attachments for large clipboard content, enabling users to share text snippets directly in the chat.
+    - Added `Q` keyboard shortcut for quick access to the floating chat from anywhere in the application.
+    - Chat history sessions are accessible from both the floating panel and the full-page Agent Q experience.
+
+- Enhanced Agent Q with chat history management, expanded tool capabilities, and performance optimizations.
+    - Chat conversations are now persisted and accessible through a searchable sidebar, allowing users to resume previous sessions and review past interactions.
+    - Introduced five new assistant capabilities: tag management, operation execution, notification delivery, ticket creation, and integration listing — enabling broader task automation through natural language.
+    - Added per-user rate limiting and prompt injection defenses for improved security and resource protection.
+    - Added `G + Q` keyboard shortcut for quick access to the Agent Q page from anywhere in the application.
+    - Optimized agent performance with singleton caching, deferred tool loading, and conversation summarization to reduce token overhead across sessions.
+
+#### General Fixes and Improvements
+
+- Corrected percentage value conversion in Volumetric check templates where min and max values for Percentage Change comparisons were sent as whole numbers instead of decimal format.
+
+- Resolved misleading warning logs during computed file profiling that incorrectly reported fields as missing from the source container when they were intentionally removed from the computed file's SELECT statement.
+
+- Resolved profile operation failures on Oracle datastores caused by undetected XMLType columns, now properly handling XML data by serializing it as readable text during profiling.
+
+- Optimized anomaly and field-profile query performance for large-scale deployments, significantly reducing load times for anomaly listings and field profile pages in datastores with high anomaly volumes.
+
+- Improved Aggregation Comparison anomaly messages to display evaluated values alongside expression names, making violation details immediately actionable without requiring manual investigation.
+
+- Reduced Agent Q token consumption through conversation compaction and deferred tool loading, lowering per-request overhead and extending effective conversation length within model context limits.
+
+- Improved database connection error messages with clearer root cause identification and actionable remediation guidance when connection pool limits are reached.
+
+- Improved authentication error handling to display clear, user-friendly messages on the login page when access is denied due to group authorization restrictions.
+
+- General Fixes and Improvements.
+
 ### 2026.2.21 { id=2026.2.21 }
 
 #### Feature Enhancements

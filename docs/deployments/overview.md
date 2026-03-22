@@ -26,7 +26,7 @@ For detailed instructions on setting up the Qualytics dataplane in Databricks, s
 In this model, the Qualytics platform is deployed to a single-tenant virtual private cloud provisioned by Qualytics and with the provider and in the region of Customer's choosing. This VPC is not shared (single-tenant) and contains a single Customer Qualytics deployment.
 
 <figure markdown>
-  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.svg)](../assets/deployments/paas_architectural_diagram.jpg)
+  [![PaaS Deployment Architecture](../assets/deployments/paas_architectural_diagram.svg)](../assets/deployments/paas_architectural_diagram.svg)
   <figcaption>PaaS Deployment Architecture</figcaption>
 </figure>
 
@@ -68,6 +68,6 @@ This model requires that the Kubernetes nodes supporting Qualytics' analytics en
 #### Considerations
 This model supports organizations that due to regulatory or other restrictions cannot permit READ access to their datastore(s) from a third-party hosted product. This model requires Customer to manage and operate the appropriate infrastructure and ensure it is granted all necessary access to the targeted datastore(s).
 
-For deployments to supported commercial Kubernetes control planes (EKS, AKS, GKE, OKE) and at the Customer's discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer. Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](../upgrades/qualytics-single-tenant-instance.md).
+For deployments to supported commercial Kubernetes control planes (EKS, AKS, GKE, OKE) and at the Customer's discretion, Qualytics will provision the deployment and transfer ownership of the applicable infrastructure to the Customer. Otherwise, the Customer shall be responsible for both the provisioning of a cluster meeting the requisite system requirements and the deployment of the Qualytics platform via [Qualytics provided Helm chart](self-hosted-deployment.md).
 
 > **Terraform Templates Available**: To simplify infrastructure provisioning, we provide ready-to-use Terraform templates for [AWS](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/aws), [GCP](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/gcp), and [Azure](https://github.com/Qualytics/qualytics-self-hosted/tree/main/terraform/azure). These templates create Kubernetes clusters with the correct node pools, labels, storage classes, and networking configuration required for Qualytics deployments.

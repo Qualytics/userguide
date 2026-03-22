@@ -27,8 +27,9 @@ The Add Computed Join form consists of:
 | 4 | **Right Reference**    | • **Datastore**: Source datastore containing the second container.<br>• **Container**: The right container to join.<br>• **Field**: The key (column) to join on.<br>• **Prefix**: A label (e.g., `right`) applied to all columns from this container. |
 | 5 | **Select Expression**  | A list of columns to include in the result. Columns are automatically prefixed (e.g., `left_name`, `right_name`) to avoid conflicts.                         |
 | 6 | **Filter Clause (WHERE)** | Additional filters applied to the join result.                                                                                                            |
+| 7 | **Group By Clause (GROUP BY)** | Specifies how the result should be grouped when using aggregate functions (e.g., `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) in the Select Expression. All non-aggregated fields in the SELECT statement must also appear in the GROUP BY clause. Must be valid Spark SQL. |
 
-![computed-join](../assets/container/computed-join/computed-join-light.png)
+![computed-join](../assets/container/computed-join/computed-join.png)
 
 ## Example Use Case
 
@@ -116,6 +117,28 @@ We want to join:
 * Use Select Expression to choose only the columns you need.
 * Apply a Filter Clause for better performance by reducing unnecessary data.
 * Test the join type with sample data to verify expected behavior.
+
+## Query Diff for Computed Join
+
+Computed Joins include a side-by-side query diff view in the History panel, allowing you to compare previous and updated versions of your join configuration. This makes it easy to identify changes, troubleshoot issues, and maintain better audit visibility of modifications.
+
+The following fields are tracked in the History panel:
+
+| Field | Description |
+|-------|-------------|
+| **Select Clause** | Shows changes to the selected columns in the join result. |
+| **Where Clause** | Shows changes to the filter conditions applied to the join. |
+| **Group By Clause** | Shows changes to the grouping configuration. |
+| **Join Type** | Shows when the join type is changed (e.g., from Inner Join to Left Join). |
+
+When a change is detected, the History panel displays a clickable icon next to the modified field. Clicking it opens a dialog with:
+
+- **From**: The previous version of the clause, with removed portions highlighted in red.
+- **To**: The updated version of the clause, with added portions highlighted in green.
+
+The dialog also shows who made the change and when it was made.
+
+![query-diff](../assets/container/computed-join/query-diff.png)
 
 ## Limitations
 

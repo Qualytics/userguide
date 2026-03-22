@@ -5,6 +5,6 @@
 
     > “The following value has leading or trailing spaces: ‘ship ’”
 
-![warning](/assets/checks/expected-values/warning.png)
+![warning](/assets/data-quality-checks/expected-values/warning.png)
 
 <!-- SPACING-WARNING --end -->
