@@ -358,7 +358,7 @@ To run a sync operation, use the API payload example below and replace the place
 
 ```json
 {
-  "type": "catalog",
+  "type": "sync",
   "datastore_id": "datastore-id",
   "prune": false,
   "recreate": false,
@@ -370,7 +370,7 @@ To run a sync operation, use the API payload example below and replace the place
 ```
 
 !!! note
-    The API type value remains `"catalog"` for backwards compatibility.
+    The legacy value `"catalog"` is still accepted for backwards compatibility but is deprecated. Use `"sync"` for all new integrations.
 
 ### Retrieving Sync Operation Status
 
@@ -384,7 +384,7 @@ To retrieve the sync operation status, use the API payload example below and rep
     {
       "id": 12345,
       "created": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
-      "type": "catalog",
+      "type": "sync",
       "start_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
       "end_time": "YYYY-MM-DDTHH:MM:SS.ssssssZ",
       "result": "success",

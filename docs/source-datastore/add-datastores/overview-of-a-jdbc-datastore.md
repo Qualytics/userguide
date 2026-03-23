@@ -47,7 +47,7 @@ After adding a JDBC Datastore, you can initiate a **Sync operation** to extract 
 
 ![catalog](../../assets/source-datastores/add-datastores/jdbc-datastores/catalog.png)
 
-For more information about how to run a sync operation, refer to the [**Sync Operation**](../../source-datastore/operations/catalog.md) documentation.
+For more information about how to run a sync operation, refer to the [**Sync Operation**](../../source-datastore/operations/sync.md) documentation.
 
 ## Field Types Inference
 
