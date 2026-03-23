@@ -9,21 +9,21 @@ Let’s get started 🚀
 By setting up a datastore and establishing a connection to your data source (database or file system), you create a robust foundation for effective data management and analysis in Qualytics. This setup enables you to access, manipulate, and utilize your data efficiently, paving the way for advanced data quality checks, profiling, scanning, anomaly surveillance, and other analytics tasks.
 
 !!! note 
-    For more information, please refer to the [Configuring Source Datastores](../add-datastores/overview-of-a-datastore.md#configuring-source-datastores) documentation.
+    For more information, please refer to the [Configuring Source Datastores](../source-datastore/add-datastores/overview-of-a-datastore.md#configuring-source-datastores) documentation.
 
 **2. Sync Operation**
 
 The Sync operation detects new, changed, or removed containers and fields by comparing the current datastore state against what Qualytics already knows. It works incrementally, only processing the differences. This ensures a solid foundation for the subsequent Profile and Scan operations.
 
 !!! note
-    For more information, please refer to the [Sync Operation](../source-datastore/sync.md) Documentation.
+    For more information, please refer to the [Sync Operation](../source-datastore/operations/catalog.md) Documentation.
 
 **3. Profile Operation**
 
 The Profile operation enables training of the collected data structures and their associated metadata values. This is crucial for gathering comprehensive aggregated statistics on the selected data, providing deeper insights, and preparing the data for quality assessment.
 
 !!! note 
-    For more information, please refer to the documentation [Profile Operation](../source-datastore/profile.md).
+    For more information, please refer to the documentation [Profile Operation](../source-datastore/operations/profile.md).
 
 **4. Create Authored Checks**
 
@@ -38,7 +38,7 @@ Authored checks can range from simple, template-based checks to more complex rul
 The Scan operation asserts rigorous quality checks to identify any anomalies within the data. This step ensures data integrity and reliability by recording the analyzed data in your configured enrichment datastore, facilitating continuous data quality improvement.
 
 !!! note 
-    For more information, please refer to the documentation [Scan Operation](../source-datastore/scan.md). 
+    For more information, please refer to the documentation [Scan Operation](../source-datastore/operations/scan.md). 
 
 **6. Anomaly Analysis**
 
