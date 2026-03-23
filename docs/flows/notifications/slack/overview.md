@@ -7,6 +7,8 @@ Qualytics integrates with Slack to deliver real-time, interactive notifications 
 
 ## Lifecycle
 
+<div style="text-align:center" markdown>
+
 ```mermaid
 flowchart TD
     A[Flow Trigger Fires] --> B[Resolve Message Variables]
@@ -17,17 +19,9 @@ flowchart TD
     F --> G[View in Qualytics]
     F --> H[Acknowledge Anomaly]
     F --> I[Comment or Archive]
-
-    style A fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style B fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style C fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style D fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style E fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style F fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style G fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style H fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style I fill:#E8EAF6,color:#1A237E,stroke:#7986CB
 ```
+
+</div>
 
 ## Configuration
 

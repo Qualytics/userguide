@@ -14,10 +14,6 @@ flowchart LR
     Active -- User excludes the field --> Excluded
     Masked -- User excludes the field --> Excluded
     Excluded -- User restores the field --> Active
-
-    style Active fill:#4CAF50,color:#fff,stroke:#388E3C
-    style Masked fill:#FFA726,color:#fff,stroke:#F57C00
-    style Excluded fill:#EF5350,color:#fff,stroke:#C62828
 ```
 
 ## Automatic Transitions
@@ -33,12 +29,6 @@ flowchart LR
     Missing -- Field reappears in profile results --> Active
 
     Missing -- Permanently delete --> End(( ))
-
-    style Active fill:#4CAF50,color:#fff,stroke:#388E3C
-    style Masked fill:#FFA726,color:#fff,stroke:#F57C00
-    style Missing fill:#FFEE58,color:#000,stroke:#F9A825
-    style Start fill:#333,stroke:#333
-    style End fill:#333,stroke:#333
 ```
 
 ## Transition Details

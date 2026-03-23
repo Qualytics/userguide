@@ -6,19 +6,17 @@ Email is well suited for stakeholders who need a persistent, searchable record o
 
 ## Lifecycle
 
+<div style="text-align:center" markdown>
+
 ```mermaid
 flowchart TD
     A[Flow Trigger Fires] --> B[Resolve Message Variables]
     B --> C[Build Email with Subject & Body]
     C --> D[Send to Configured Addresses]
     D --> E[Email Delivered to Inbox]
-
-    style A fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style B fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style C fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style D fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style E fill:#E8EAF6,color:#1A237E,stroke:#7986CB
 ```
+
+</div>
 
 ## Configuration
 

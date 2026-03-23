@@ -7,19 +7,17 @@ Microsoft Teams notifications deliver data quality alerts directly into your Tea
 
 ## Lifecycle
 
+<div style="text-align:center" markdown>
+
 ```mermaid
 flowchart TD
     A[Flow Trigger Fires] --> B[Resolve Message Variables]
     B --> C[Build Adaptive Card]
     C --> D[Send to Selected Channel]
     D --> E[Card Appears in Teams]
-
-    style A fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style B fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style C fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style D fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style E fill:#E8EAF6,color:#1A237E,stroke:#7986CB
 ```
+
+</div>
 
 ## Configuration
 

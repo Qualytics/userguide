@@ -6,19 +6,17 @@ Notifications appear in the **bell icon** in the navigation bar, where users can
 
 ## Lifecycle
 
+<div style="text-align:center" markdown>
+
 ```mermaid
 flowchart TD
     A[Flow Trigger Fires] --> B[Resolve Message Variables]
     B --> C[Identify Target Object Teams]
     C --> D[Send to Admins + Team Members]
     D --> E[Notification Appears in Bell Icon]
-
-    style A fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style B fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style C fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style D fill:#E8EAF6,color:#1A237E,stroke:#7986CB
-    style E fill:#E8EAF6,color:#1A237E,stroke:#7986CB
 ```
+
+</div>
 
 ## Configuration
 
