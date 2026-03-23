@@ -146,7 +146,7 @@ The Explore section in Qualytics enables effective data management and analysis 
 
 - **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can export the insight reports in PDF format.  
 
-- **Activity**: Provides a detailed view of operations (catalog, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
+- **Activity**: Provides a detailed view of operations (sync, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
 
 - **Profiles**: Unifies all containers, including tables, views, computed tables, computed files, and fields, with search, sort, and filter functionalities.
 

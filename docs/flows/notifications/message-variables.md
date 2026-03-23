@@ -50,7 +50,7 @@ The following tokens are available when a Flow is triggered by an operation.
 | `{{flow_name}}` | Name of the Flow |
 | `{{datastore_name}}` | Datastore involved in the operation |
 | `{{datastore_link}}` | Link to the datastore |
-| `{{operation_type}}` | Type of operation executed (Catalog, Profile, Scan) |
+| `{{operation_type}}` | Type of operation executed (Sync, Profile, Scan) |
 | `{{operation_result}}` | Result of the operation (Success or Failure) |
 | `{{operation_message}}` | Message describing the operation execution |
 | `{{target_link}}` | Direct link to view operation details |

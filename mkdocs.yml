@@ -24,50 +24,63 @@ nav:
     - quick-start-guide.md
     - web-app.md
     - keyboard-shortcuts.md
-    - Add Datastores:
-      - add-datastores/overview-of-a-datastore.md
-      - JDBC Datastores:
-        - add-datastores/overview-of-a-jdbc-datastore.md
-        - add-datastores/athena.md
-        - add-datastores/bigquery.md
-        - add-datastores/databricks.md
-        - add-datastores/db2.md
-        - add-datastores/fabric-analytics.md
-        - add-datastores/hive.md
-        - add-datastores/maria-db.md
-        - add-datastores/microsoft-sql-server.md
-        - add-datastores/mysql.md
-        - add-datastores/oracle.md
-        - add-datastores/postgresql.md
-        - add-datastores/presto.md
-        - add-datastores/redshift.md
-        - add-datastores/snowflake.md
-        - add-datastores/synapse.md
-        - add-datastores/teradata.md
-        - add-datastores/timescale-db.md
-        - add-datastores/trino.md
-        - add-datastores/dremio.md
-      - DFS Datastores:
-        - add-datastores/overview-of-a-dfs-datastore.md
-        - add-datastores/amazon-s3.md
-        - add-datastores/azure-datalake-storage.md
-        - add-datastores/google-cloud-storage.md
-      - connections/overview-of-a-connection.md
-    # new page tree structure end
     - Source Datastores:
-      - Right Click Options: source-datastore/right-click-options.md
-      - Assign Tags: source-datastore/assign-tags.md
-      - Sync: source-datastore/sync.md
-      - Profile: source-datastore/profile.md
-      - Scan: source-datastore/scan.md
-      - External Scan: source-datastore/external-scan.md
+      - source-datastore/add-datastores/overview-of-a-datastore.md
+      - JDBC Datastores:
+        - source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
+        - source-datastore/add-datastores/athena.md
+        - source-datastore/add-datastores/bigquery.md
+        - source-datastore/add-datastores/databricks.md
+        - source-datastore/add-datastores/db2.md
+        - source-datastore/add-datastores/fabric-analytics.md
+        - source-datastore/add-datastores/hive.md
+        - source-datastore/add-datastores/maria-db.md
+        - source-datastore/add-datastores/microsoft-sql-server.md
+        - source-datastore/add-datastores/mysql.md
+        - source-datastore/add-datastores/oracle.md
+        - source-datastore/add-datastores/postgresql.md
+        - source-datastore/add-datastores/presto.md
+        - source-datastore/add-datastores/redshift.md
+        - source-datastore/add-datastores/snowflake.md
+        - source-datastore/add-datastores/synapse.md
+        - source-datastore/add-datastores/teradata.md
+        - source-datastore/add-datastores/timescale-db.md
+        - source-datastore/add-datastores/trino.md
+        - source-datastore/add-datastores/dremio.md
+      - DFS Datastores:
+        - source-datastore/add-datastores/overview-of-a-dfs-datastore.md
+        - source-datastore/add-datastores/amazon-s3.md
+        - source-datastore/add-datastores/azure-datalake-storage.md
+        - source-datastore/add-datastores/google-cloud-storage.md
+      - source-datastore/add-datastores/connections/overview-of-a-connection.md
+      - Operations:
+        - Sync: source-datastore/operations/catalog.md
+        - Profile: source-datastore/operations/profile.md
+        - Scan: source-datastore/operations/scan.md
+        - External Scan: source-datastore/operations/external-scan.md
       - Datastore Settings:
-        - Settings Overview: source-datastore/settings-overview.md
-        - Edit Datastore: source-datastore/edit-datastore.md
-        - Link Enrichment: source-datastore/link-enrichment.md
-        - Unlink Enrichment: source-datastore/unlink-enrichment.md
-        - Quality Score Settings: source-datastore/quality-score-settings.md
-        - Delete Datastore: source-datastore/delete-datastore.md
+        - Settings Overview: source-datastore/datastore-settings/settings-overview.md
+        - Edit Datastore: source-datastore/datastore-settings/edit-datastore.md
+        - Link Enrichment: source-datastore/datastore-settings/link-enrichment.md
+        - Unlink Enrichment: source-datastore/datastore-settings/unlink-enrichment.md
+        - Quality Score Settings: source-datastore/datastore-settings/quality-score-settings.md
+        - Delete Datastore: source-datastore/datastore-settings/delete-datastore.md
+      - Navigation & Organization:
+        - Right Click Options: source-datastore/navigation-and-organization/right-click-options.md
+        - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
+        - Grouping:
+          - Overview: source-datastore/navigation-and-organization/grouping/overview.md
+          - Deep Dive:
+            - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
+            - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
+          - Managing:
+            - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
+            - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
+            - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
+            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
+            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
+          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
+          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:
@@ -110,9 +123,9 @@ nav:
         - Computed Table VS File: container/computed-tables-and-files/computed-table-vs-file.md
       - Computed Join: container/computed-join.md
       - Data Preview: container/data-preview.md
-      - Enrichment Operation:
-        - Export Operation: container/enrichment-operation/export-operation.md
-        - Materialize Operation: container/enrichment-operation/materialize-operation.md
+      - Operations:
+        - Export Operation: container/operations/export-operation.md
+        - Materialize Operation: container/operations/materialize-operation.md
     - Fields:
       - Overview: fields/field-profiles.md
       - Status:
@@ -363,9 +376,29 @@ nav:
         - Workflow: settings/integrations/workflow/workflow.md
         - Analytics: settings/integrations/analytics/analytics.md
         - AI & Agents:
-          - MCP: settings/integrations/ai/mcp.md
-          - Agentic API: settings/integrations/ai/agentic.md
-          - MCP Quickstart: settings/integrations/ai/mcp-quickstart.md
+          - Overview: settings/integrations/ai-and-agents/overview.md
+          - Deep Dive:
+            - MCP: settings/integrations/ai-and-agents/deep-dive/mcp.md
+            - Agent Q in Action: settings/integrations/ai-and-agents/deep-dive/agent-q-in-action.md
+            - Conversations, Responses & Context: settings/integrations/ai-and-agents/deep-dive/agent-q-conversations.md
+            - Best Practices: settings/integrations/ai-and-agents/deep-dive/agent-q-best-practices.md
+            - Agent Q Limits: settings/integrations/ai-and-agents/deep-dive/agent-q-limits.md
+            - Agentic API: settings/integrations/ai-and-agents/deep-dive/agentic.md
+          - Managing:
+            - Connecting External AI Clients: settings/integrations/ai-and-agents/managing/connecting-external-ai-clients.md
+            - Add Integration: settings/integrations/ai-and-agents/managing/add-agent-q-integration.md
+            - Update Integration: settings/integrations/ai-and-agents/managing/update-agent-q-integration.md
+            - Remove Integration: settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md
+            - Start a New Conversation: settings/integrations/ai-and-agents/managing/start-a-new-conversation.md
+            - Resume a Conversation: settings/integrations/ai-and-agents/managing/resume-a-conversation.md
+            - Rename a Conversation: settings/integrations/ai-and-agents/managing/rename-a-conversation.md
+            - Archive a Conversation: settings/integrations/ai-and-agents/managing/archive-a-conversation.md
+            - Restore a Conversation: settings/integrations/ai-and-agents/managing/restore-a-conversation.md
+            - Delete a Conversation: settings/integrations/ai-and-agents/managing/delete-a-conversation.md
+            - Search Conversations: settings/integrations/ai-and-agents/managing/search-conversations.md
+            - Chat Interface Tips: settings/integrations/ai-and-agents/managing/chat-interface-tips.md
+          - API: settings/integrations/ai-and-agents/agent-q-api.md
+          - FAQ: settings/integrations/ai-and-agents/agent-q-faq.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
@@ -414,7 +447,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-  logo: assets/Logo.png
+  logo: assets/logo-light.svg
   favicon: assets/favicon.ico
   name: material
   custom_dir: overrides
@@ -492,6 +525,7 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        # Notifications restructure
         'flows/notification.md': 'flows/notifications/overview.md'
         'flows/notification-tokens.md': 'flows/notifications/message-variables.md'
         'flows/notifications/in-app.md': 'flows/notifications/in-app/overview.md'
@@ -499,8 +533,60 @@ plugins:
         'flows/notifications/slack.md': 'flows/notifications/slack/overview.md'
         'flows/notifications/microsoft-teams.md': 'flows/notifications/microsoft-teams/overview.md'
         'flows/notifications/pagerduty.md': 'flows/notifications/pagerduty/overview.md'
-        'source-datastore/catalog.md': 'source-datastore/sync.md'
+        # Source Datastore reorganization
+        'source-datastore/catalog.md': 'source-datastore/operations/catalog.md'
+        'source-datastore/profile.md': 'source-datastore/operations/profile.md'
+        'source-datastore/scan.md': 'source-datastore/operations/scan.md'
+        'source-datastore/external-scan.md': 'source-datastore/operations/external-scan.md'
+        'source-datastore/right-click-options.md': 'source-datastore/navigation-and-organization/right-click-options.md'
+        'source-datastore/assign-tags.md': 'source-datastore/navigation-and-organization/assign-tags.md'
+        'source-datastore/settings-overview.md': 'source-datastore/datastore-settings/settings-overview.md'
+        'source-datastore/edit-datastore.md': 'source-datastore/datastore-settings/edit-datastore.md'
+        'source-datastore/link-enrichment.md': 'source-datastore/datastore-settings/link-enrichment.md'
+        'source-datastore/unlink-enrichment.md': 'source-datastore/datastore-settings/unlink-enrichment.md'
+        'source-datastore/quality-score-settings.md': 'source-datastore/datastore-settings/quality-score-settings.md'
+        'source-datastore/delete-datastore.md': 'source-datastore/datastore-settings/delete-datastore.md'
+        # Container Operations reorganization
+        'container/enrichment-operation/export-operation.md': 'container/operations/export-operation.md'
+        'container/enrichment-operation/materialize-operation.md': 'container/operations/materialize-operation.md'
+        # Add Datastores moved into Source Datastores
+        'add-datastores/overview-of-a-datastore.md': 'source-datastore/add-datastores/overview-of-a-datastore.md'
+        'add-datastores/overview-of-a-jdbc-datastore.md': 'source-datastore/add-datastores/overview-of-a-jdbc-datastore.md'
+        'add-datastores/overview-of-a-dfs-datastore.md': 'source-datastore/add-datastores/overview-of-a-dfs-datastore.md'
+        'add-datastores/athena.md': 'source-datastore/add-datastores/athena.md'
+        'add-datastores/bigquery.md': 'source-datastore/add-datastores/bigquery.md'
+        'add-datastores/databricks.md': 'source-datastore/add-datastores/databricks.md'
+        'add-datastores/db2.md': 'source-datastore/add-datastores/db2.md'
+        'add-datastores/fabric-analytics.md': 'source-datastore/add-datastores/fabric-analytics.md'
+        'add-datastores/hive.md': 'source-datastore/add-datastores/hive.md'
+        'add-datastores/maria-db.md': 'source-datastore/add-datastores/maria-db.md'
+        'add-datastores/microsoft-sql-server.md': 'source-datastore/add-datastores/microsoft-sql-server.md'
+        'add-datastores/mysql.md': 'source-datastore/add-datastores/mysql.md'
+        'add-datastores/oracle.md': 'source-datastore/add-datastores/oracle.md'
+        'add-datastores/postgresql.md': 'source-datastore/add-datastores/postgresql.md'
+        'add-datastores/presto.md': 'source-datastore/add-datastores/presto.md'
+        'add-datastores/redshift.md': 'source-datastore/add-datastores/redshift.md'
+        'add-datastores/snowflake.md': 'source-datastore/add-datastores/snowflake.md'
+        'add-datastores/synapse.md': 'source-datastore/add-datastores/synapse.md'
+        'add-datastores/teradata.md': 'source-datastore/add-datastores/teradata.md'
+        'add-datastores/timescale-db.md': 'source-datastore/add-datastores/timescale-db.md'
+        'add-datastores/trino.md': 'source-datastore/add-datastores/trino.md'
+        'add-datastores/dremio.md': 'source-datastore/add-datastores/dremio.md'
+        'add-datastores/amazon-s3.md': 'source-datastore/add-datastores/amazon-s3.md'
+        'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
+        'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
+        'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
+        # Catalog to Sync redirect
+        'source-datastore/sync.md': 'source-datastore/operations/catalog.md'
+        # AI integrations redirects
+        'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
+        'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
+        'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/update-llm-integration.md': 'settings/integrations/ai-and-agents/managing/update-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/remove-llm-integration.md': 'settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/how-to-use-agent-q.md': 'settings/integrations/ai-and-agents/overview.md'
         'flows/http.md': 'flows/workflow.md'
+        # Checks renamed to data-quality-checks (from main)
         'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'
         'checks/authored-check.md': 'data-quality-checks/authored-check.md'
         'checks/inferred-check.md': 'data-quality-checks/inferred-check.md'
