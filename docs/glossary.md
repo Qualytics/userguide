@@ -8,9 +8,9 @@ Something that deviates from the standard, normal, or expected. This can be in t
 
 The data represents the real-world values they are expected to model.
 
-### <a name="catalog"></a>__Catalog Operation__
+### <a name="catalog"></a>__Sync Operation__
 
-Used to read fundamental metadata from a Datastore required for the proper functioning of subsequent Operations such as Profile, Hash, and Scan.
+Detects new, changed, or removed containers and fields in a Datastore. Works incrementally by comparing the current datastore state against what Qualytics already knows, only processing the differences. Required for the proper functioning of subsequent Operations such as Profile, Hash, and Scan. Previously known as "Catalog Operation".
 
 ### <a name="comparison"></a>__Comparison__
 
@@ -69,7 +69,7 @@ aka "Check" is an expression regarding the values of a Container that can be eva
 
 ### <a name="datastore"></a>__Datastore__
 
-Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](add-datastores/overview-of-a-datastore.md).
+Where data is persisted in a database, file system, or other connected retrieval systems. You can check more in [Datastore Overview](source-datastore/add-datastores/overview-of-a-datastore.md).
 
 ### <a name="datawarehouse"></a>__Data Warehouse__
 
@@ -136,7 +136,7 @@ A type of data storage used for handling large amounts of unstructured data mana
 
 ### <a name="operation"></a>__Operation__
 
-The asynchronous (often long-running) tasks that operate on Datastores are collectively referred to as "Operations". Examples include Catalog, Profile, Hash, and Scan.
+The asynchronous (often long-running) tasks that operate on Datastores are collectively referred to as "Operations". Examples include Sync, Profile, Hash, and Scan.
 
 ### <a name="partition"></a>__Partition Identifier__
 
@@ -225,6 +225,54 @@ It can be calculated as the time between when information should be available an
 ### <a name="volumetrics"></a>__Volumetrics__
 
 Data has the same size and shape across similar cycles. It includes statistics about the size of a data set including calculations or predictions on the rate of change over time.
+
+### <a name="agent-q"></a>__Agent Q__
+
+The AI assistant built into the Qualytics platform. Powered by the Model Context Protocol (MCP) and your choice of LLM provider, Agent Q turns natural language into action — exploring datastores, building transformations, creating quality checks, investigating anomalies, and more. Learn more in [AI & Agents Overview](settings/integrations/ai-and-agents/overview.md).
+
+### <a name="mcp"></a>__Model Context Protocol (MCP)__
+
+An [open standard](https://modelcontextprotocol.io/) that enables AI assistants to securely connect to external data sources, tools, and services. MCP defines a common language for how AI models discover and call capabilities exposed by external systems. Qualytics implements an MCP server that exposes its data quality infrastructure as callable tools. Learn more in [MCP](settings/integrations/ai-and-agents/deep-dive/mcp.md).
+
+### <a name="mcp-server"></a>__MCP Server__
+
+An application that exposes a set of tools and resources through the Model Context Protocol. The Qualytics MCP server handles authentication, executes tool logic, and returns structured results to connected AI clients.
+
+### <a name="mcp-client"></a>__MCP Client__
+
+An AI assistant or agent (like Claude Desktop, ChatGPT, Cursor, or Agent Q) that connects to one or more MCP servers and can call their tools during a conversation.
+
+### <a name="mcp-tool"></a>__MCP Tool__
+
+A discrete capability exposed by an MCP server that an AI assistant can call. Each tool has a name, description, input schema, and structured output. Examples include `list_datastores`, `create_quality_check`, and `anomaly_describe`.
+
+### <a name="agentic-api"></a>__Agentic API__
+
+REST API endpoints that bring Agent Q's conversational AI capabilities directly into custom applications and automation workflows. Provides the same capabilities as MCP through standard REST calls. Learn more in [Agentic API](settings/integrations/ai-and-agents/deep-dive/agentic.md).
+
+### <a name="llm"></a>__LLM (Large Language Model)__
+
+An AI model trained on large amounts of text data that can understand and generate natural language. Agent Q uses your configured LLM provider (e.g., OpenAI, Anthropic, Google Gemini) to interpret requests and decide which tools to call.
+
+### <a name="topic-guardrail"></a>__Topic Guardrail__
+
+A lightweight LLM classifier that runs before Agent Q processes a request. It checks whether the message relates to data quality, governance, databases, anomalies, transformations, or the Qualytics platform, and politely declines off-topic requests.
+
+### <a name="dynamic-tool-discovery"></a>__Dynamic Tool Discovery__
+
+A mechanism where Agent Q starts with a small core set of tools and loads additional tools on demand as the conversation progresses, using the `discover_tools` meta-tool. This keeps token usage lean while making all capabilities available.
+
+### <a name="context-injection"></a>__Context Injection__
+
+When Agent Q is opened from a page with relevant data (a datastore, container, field, quality check, or anomaly), the asset's identity is automatically embedded in the conversation context. This allows the user to ask questions without specifying which asset they mean.
+
+### <a name="co-authorship"></a>__Co-Authorship Tracking__
+
+All platform changes made through Agent Q are stamped with a co-author record in the audit trail alongside the user's identity. This ensures full traceability of AI-assisted actions.
+
+### <a name="guided-workflow"></a>__Guided Workflow__
+
+A multi-step tool that executes a structured process for complex tasks. Agent Q includes guided workflows for analyzing trends, investigating anomalies, interpreting quality scores, generating quality checks, and creating computed assets.
 
 ### <a name="weight"></a>__Weight__
 

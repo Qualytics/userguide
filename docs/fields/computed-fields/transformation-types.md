@@ -4,7 +4,7 @@
 
 The **Cast** transformation converts field values to a specified target data type using Spark SQL casting rules. This is commonly used when a field is ingested as a string but must behave as a numeric, date, timestamp, or boolean value for profiling, checks, or downstream computations.
 
-### When to Use Cast
+### When to Use Cast?
 
 Use **Cast** when:
 
@@ -141,7 +141,7 @@ We'll simply add a Computed Field to our table named **"Next_Lease_Start"** and 
 | 3           | 42          | 1/1/2026         |   2/1/2026    |             |
 | 4           | 43          | 2/2/2026         |   2/1/2027    |             |
 
-Now you can author a Quality Check stating that **Lease_End** should always be less than **"Next_Lease_Start"** to catch any errors of this type. In fact, Qualytics will automatically infer that check for you at [Level 3 Inference](../../source-datastore/profile.md#level-3-time-series-and-comparative-relationship-checks){target="_blank"}!
+Now you can author a Quality Check stating that **Lease_End** should always be less than **"Next_Lease_Start"** to catch any errors of this type. In fact, Qualytics will automatically infer that check for you at [Level 3 Inference](../../source-datastore/operations/profile.md#level-3-time-series-and-comparative-relationship-checks){target="_blank"}!
 
 ### More Examples for Custom Expression
 

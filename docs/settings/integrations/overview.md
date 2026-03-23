@@ -4,7 +4,7 @@ The Qualytics platform seamlessly connects with your enterprise technology ecosy
 
 ## Available Integrations
 
-### [Source Datastores](../../add-datastores/overview-of-a-datastore.md)
+### [Source Datastores](../../source-datastore/add-datastores/overview-of-a-datastore.md)
 
 Connect directly to your data wherever it lives - from traditional databases to modern cloud storage platforms. Qualytics provides unified quality management across your entire data landscape through our Datastore framework.
 
@@ -29,5 +29,5 @@ Visualize data quality metrics and trends through your preferred business intell
 ### [Single Sign-On](./sso/sso.md)
 Enable secure, frictionless access to Qualytics through your enterprise identity provider, maintaining consistent authentication and access control policies.
 
-### [AI & Agents](./ai/mcp.md)
-Leverage AI-powered natural language interfaces to manage data quality conversationally. Connect AI assistants via the [Model Context Protocol (MCP)](./ai/mcp.md) for interactive use, or integrate the [Agentic API](./ai/agentic.md) into your applications and automation workflows using your own LLM API key.
+### [AI & Agents](./ai-and-agents/overview.md)
+Leverage AI-powered natural language interfaces to manage data quality conversationally. Connect AI assistants via the [Model Context Protocol (MCP)](./ai-and-agents/deep-dive/mcp.md) for interactive use, or integrate the [Agentic API](./ai-and-agents/deep-dive/agentic.md) into your applications and automation workflows using your own LLM API key.

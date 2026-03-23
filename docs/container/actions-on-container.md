@@ -28,7 +28,7 @@ The **Add** button allows users to add checks or computed fields. By clicking on
 
 | No. | Options | Description |
 | :---- | :---- | :---- |
-| **1.** | Checks | Checks allow you to add new checks or validation rules for the container.<br>**Note:** To learn how to add checks, refer to the [Check Templates documentation](../checks/checks-template.md){target="_blank"}.|
+| **1.** | Checks | Checks allow you to add new checks or validation rules for the container.<br>**Note:** To learn how to add checks, refer to the [Check Templates documentation](../data-quality-checks/checks-template.md){target="_blank"}.|
 | **2.** | Computed Field | Allows you to add a computed field.<br>**Note:** To learn how to create a computed field, refer to the [Computed Field Guide](../fields/computed-fields/add-computed-fields.md){target="_blank"}.|
 
 ## Run
@@ -39,6 +39,6 @@ The **Run** button provides options to execute operations on datasets, such as p
 
 | No. |          Options | Description |
 | :---- | :---- | :---- |
-| **1.** | Profile | **Profile** allows you to run a profiling operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling.<br>**Note:** For profile operation, please refer to the [Profile Operation documentation](../source-datastore/profile.md){target="_blank"}. |
-| **2.** | Scan  | **Scan** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset.<br>**Note:** For scan operation, please refer to the [Scan Operation documentation](../source-datastore/scan.md){target="_blank"}. |
-| **3.** | External Scan | **External Scan** allows you to upload a file and validate its data against predefined checks in the selected table.<br>**Note:** For external scan, please refer to the [ External Scan documentation](../source-datastore/external-scan.md){target="_blank"}. |
+| **1.** | Profile | **Profile** allows you to run a profiling operation to analyze the data structure, gather metadata, set thresholds, and define record limits for comprehensive dataset profiling.<br>**Note:** For profile operation, please refer to the [Profile Operation documentation](../source-datastore/operations/profile.md){target="_blank"}. |
+| **2.** | Scan  | **Scan** allows you to perform data quality checks, configure scan strategies, and detect anomalies in the dataset.<br>**Note:** For scan operation, please refer to the [Scan Operation documentation](../source-datastore/operations/scan.md){target="_blank"}. |
+| **3.** | External Scan | **External Scan** allows you to upload a file and validate its data against predefined checks in the selected table.<br>**Note:** For external scan, please refer to the [ External Scan documentation](../source-datastore/operations/external-scan.md){target="_blank"}. |

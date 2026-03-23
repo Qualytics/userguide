@@ -13,7 +13,7 @@ The **Global Search (Command Palette)** in Qualytics is a single, easy-to-use to
 !!! tip
     Press the shortcut key: Ctrl+K for quick access to Global Search.
 
-![global-search](assets/dashboard/global-search-light.png)
+![global-search](assets/using-the-platform/web-app/global-search-light.png)
 
 ## In-App Notifications
 
@@ -21,7 +21,7 @@ In Qualytics, notifications keep users updated on flow executions in real time. 
 
 Clicking on a notification provides more details, including any detected anomalies. These notifications help users monitor workflows efficiently and respond quickly to important updates.
 
-![nav-notification](assets/dashboard/nav-notification-light.png)
+![nav-notification](assets/using-the-platform/web-app/nav-notification-light.png)
 
 ## Discover
 
@@ -43,7 +43,7 @@ The **Discover** option in Qualytics features a dropdown menu that provides acce
 
 - **Qualytics Helpdesk**: Provides users with access to a support environment where they can get assistance with any issues or questions related to the platform.
 
-![discovery](assets/dashboard/discovery-light.png)
+![discovery](assets/using-the-platform/web-app/discovery-light.png)
 
 ## Theme
 
@@ -76,7 +76,7 @@ Qualytics offers both dark mode and light mode to enhance user experience and ca
 !!! tip
     Users can still manually select **dark** or **light** mode if they prefer a fixed theme.
 
-![light-mode-theme](assets/dashboard/light-mode-theme.png)
+![light-mode-theme](assets/using-the-platform/web-app/light-mode-theme.png)
 
 ## View Mode
 
@@ -86,13 +86,13 @@ In Qualytics, users have the option to switch between two display modes: List Vi
 
 - **Card View**: Card View displays items as individual cards arranged in a grid. Each card typically includes a summary of the most important information about the item. To switch to Card View, click the "Card View" button (represented by an icon with a grid of squares) located at the top of the page.
 
-![view-mode](assets/dashboard/view-mode-light.png)
+![view-mode](assets/using-the-platform/web-app/view-mode-light.png)
 
 ## Product Updates
 
 In Qualytics, the Product Updates feature helps users stay up to date with the latest changes. They can see new features, bug fixes, and improvements directly in the app, with links to full release notes for more details.
 
-![product-updates](assets/dashboard/product-updates-light.png)
+![product-updates](assets/using-the-platform/web-app/product-updates-light.png)
 
 ## User Profile
 
@@ -110,7 +110,7 @@ The user profile section in Qualytics provides essential information and setting
 
 - **Version**: Displays the current version of the Qualytics platform being used, which is helpful for troubleshooting and ensuring compatibility with other tools and features.
 
-![profile-menu](assets/dashboard/profile-menu-light.png)
+![profile-menu](assets/using-the-platform/web-app/profile-menu-light.png)
 
 ## Navigation Menu (Left Sidebar)
 
@@ -128,7 +128,7 @@ Lists all the source datastores connected to Qualytics in the left sidebar. It a
 
 - Filter source datastores.
 
-![source-datastore-nav](assets/dashboard/source-datastore-nav-light.png)
+![source-datastore-nav](assets/using-the-platform/web-app/source-datastore-nav-light.png)
 
 ### Enrichment Datastores
 
@@ -138,7 +138,7 @@ Lists all the enrichment datastores connected to Qualytics in the left sidebar. 
 - Search from existing enrichment datastores.
 - Sort existing datastores based on the name, records, checks, etc.
 
-![enrichment-datastore-nav](assets/dashboard/enrichment-datastore-nav-light.png)
+![enrichment-datastore-nav](assets/using-the-platform/web-app/enrichment-datastore-nav-light.png)
 
 ### Explore
 
@@ -146,7 +146,7 @@ The Explore section in Qualytics enables effective data management and analysis 
 
 - **Insights**: Offers an overview of anomaly detection and data monitoring, allowing users to filter by source datastores, tags, and dates. It displays profile data, applied checks, quality scores, records scanned, and more. Moreover, you can export the insight reports in PDF format.  
 
-- **Activity**: Provides a detailed view of operations (catalog, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
+- **Activity**: Provides a detailed view of operations (sync, profile, and scan) across source datastores with a heatmap to visualize daily activities and detected anomalies.
 
 - **Profiles**: Unifies all containers, including tables, views, computed tables, computed files, and fields, with search, sort, and filter functionalities.
 
@@ -156,7 +156,7 @@ The Explore section in Qualytics enables effective data management and analysis 
 
 - **Anomalies**: Lists all detected anomalies across source datastores for quick identification and resolution of issues.
 
-![explore-nav](assets/dashboard/explore-nav-light.png)
+![explore-nav](assets/using-the-platform/web-app/explore-nav-light.png)
 
 ### Library
 
@@ -169,25 +169,25 @@ The library section allows for managing check templates and editing applied chec
 !!! tip
     You can also search, sort, and filter checks across the source datastores.
 
-![library-access](assets/dashboard/library-access-light.png)
+![library-access](assets/using-the-platform/web-app/library-access-light.png)
 
 ### Tags
 
 Tags help users organize and prioritize data assets by categorizing them. They can be applied to Datastores, Profiles, Fields, Checks, and Anomalies, improving data management and workflows.
 
-![tags-nav](assets/dashboard/tags-light.png)
+![tags-nav](assets/using-the-platform/web-app/tags-light.png)
 
 ### Flows
 
 Qualytics allows users to set up flows, enabling them to create pipelines by chaining actions and configuring how they are triggered. Triggers can be set based on predefined events and filters, providing a flexible and efficient way to automate processes. These actions can include notifications or operations, allowing users to notify various channels or execute tasks based on specific operations.
 
-![notification-nav](assets/dashboard/flows-light.png)
+![notification-nav](assets/using-the-platform/web-app/flows-light.png)
 
 ### Agent-Q (AI Assistant)
 
 Agent-Q is Qualytics’ built-in AI assistant powered by the Model Context Protocol (MCP). It enables users to manage data quality workflows through natural language conversations directly within the platform. Agent-Q can explore datastores, validate queries, create computed assets, manage quality checks, and investigate anomalies. It provides real-time visibility into each action performed, making complex data quality tasks faster and easier to execute.
 
-![agent-q](assets/dashboard/agent-q.png)
+![agent-q](assets/using-the-platform/web-app/agent-q.png)
 
 ### Global Settings
 
@@ -203,4 +203,4 @@ Manage global configurations with the following options:
 
 - **Status**: Monitor and restart the Qualytics deployment.
 
-![global-settings](assets/dashboard/global-settings-light.png)
+![global-settings](assets/using-the-platform/web-app/global-settings-light.png)

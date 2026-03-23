@@ -69,7 +69,7 @@ The lack of a persistent identifier means **Qualytics** cannot distinguish betwe
 
 To handle recurring anomalies in truncate-and-reload tables, configure your scan to use fingerprint-based duplicate handling.
 
-Follow the steps in the [scan operation configuration](../source-datastore/scan.md#configuration) to reach the correct settings. Then, under **Step 8 → Scan Settings**, open the [anomaly options section](https://userguide.qualytics.io/source-datastore/scan/#configuration:~:text=Step%208%3A%20Configure%20the%20Scan%20Settings) and enable both duplicate-handling options:
+Follow the steps in the [scan operation configuration](../source-datastore/operations/scan.md#configuration) to reach the correct settings. Then, under **Step 8 → Scan Settings**, open the [anomaly options section](https://userguide.qualytics.io/source-datastore/scan/#configuration:~:text=Step%208%3A%20Configure%20the%20Scan%20Settings) and enable both duplicate-handling options:
 
 - **Archive Duplicate Anomalies:** When the same 127 anomalies appear again after the table reload, Qualytics recognizes their fingerprints and automatically marks them as duplicates rather than new anomalies.  
 - **Reactivate Recurring Anomalies:** If an anomaly was previously archived or resolved but reappears in subsequent scans, Qualytics reactivates the original anomaly record, maintaining full historical context.  

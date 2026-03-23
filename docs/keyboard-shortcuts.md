@@ -9,7 +9,7 @@ The search bar at the top of the Qualytics dashboard functions as a **Command Ba
 The Command Bar is designed to:
 
 - Navigate to product areas (Explore, Flows, Library, Settings, Tags)
-- Run operations (catalog, scan, export, profile, materialize)
+- Run operations (sync, scan, export, profile, materialize)
 - Create new entities (checks, templates, flows, tags)
 - Open documentation (User Guide, API Docs)
 - View keyboard shortcuts
@@ -25,11 +25,11 @@ Let’s get started 🚀
 
 Alternatively, you can press **Ctrl + K** on Windows/Linux or **⌘ + K** on macOS to open the Search bar directly.
 
-![search](assets/keyboard-shortcuts/search.png)
+![search](assets/using-the-platform/keyboard-shortcuts/search.png)
 
 A popup window will appear, presenting various search options.
 
-![search-options](assets/keyboard-shortcuts/search-options.png)
+![search-options](assets/using-the-platform/keyboard-shortcuts/search-options.png)
 
 ### ⚠️ How the Enter Key Works in the Command Bar
 
@@ -78,15 +78,15 @@ This ensures you are using **Asset Search mode** instead of executing a command.
 
 **Step 2:** Click on **Search Keyboard Shortcuts** to see all the shortcuts in one place.
 
-![click-search-key-shortcuts](assets/keyboard-shortcuts/click-search-key-shortcuts.png)
+![click-search-key-shortcuts](assets/using-the-platform/keyboard-shortcuts/click-search-key-shortcuts.png)
 
 A window will appear, displaying a comprehensive list of all shortcuts organized by category.
 
-![keyboard-shortcuts](assets/keyboard-shortcuts/keyboard-shortcuts.png)
+![keyboard-shortcuts](assets/using-the-platform/keyboard-shortcuts/keyboard-shortcuts.png)
 
 **Step 3:** You can now either search for a specific shortcut or scroll through the list to see all available options.
 
-![search-key-shortcuts](assets/keyboard-shortcuts/search-key-shortcuts.png)
+![search-key-shortcuts](assets/using-the-platform/keyboard-shortcuts/search-key-shortcuts.png)
 
 Qualytics supports a wide range of keyboard shortcut categories, including but not limited to:
 
@@ -238,11 +238,11 @@ The Interface Shortcuts let you control the look and feel of the platform, such 
 
 ### Operations
 
-The Operations Shortcuts provide fast commands for running catalog, export, materialize, profile, and scan operations on datastores.
+The Operations Shortcuts provide fast commands for running sync, export, materialize, profile, and scan operations on datastores.
 
 | Action | Windows/Linux | macOS |
 |--------|--------------|--------|
-| Run catalog operation | R then C | R then C |
+| Run sync operation | R then C | R then C |
 | Run export operation | R then E | R then E |
 | Run materialize operation | R then M | R then M |
 | Run profile operation | R then P | R then P |

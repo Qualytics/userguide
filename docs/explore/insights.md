@@ -153,11 +153,11 @@ The Checks & Profiling section provides a consolidated view of your active check
 
 ![Screenshot](../assets/explore/insights/checks-7-light.png)
 
-**1. Passing Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating that the data met the set quality criteria.
+**1. Passing Check:** Displays the real-time number of passed checks that were successfully completed during the [**scan**](../source-datastore/operations/scan.md) or [**profile operation**](../source-datastore/operations/profile.md), indicating that the data met the set quality criteria.
 
 ![passed-check](../assets/explore/insights/passed-check-8-light.png)
 
-**2. Failing Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/scan.md) or [**profile operation**](../source-datastore/profile.md), indicating data that did not meet the quality criteria.
+**2. Failing Checks:** This shows the real-time number of checks that did not pass during the [**scan**](../source-datastore/operations/scan.md) or [**profile operation**](../source-datastore/operations/profile.md), indicating data that did not meet the quality criteria.
 
 ![failed-check](../assets/explore/insights/failed-check-9-light.png)
 
@@ -165,11 +165,11 @@ The Checks & Profiling section provides a consolidated view of your active check
 
 ![not-asserted](../assets/explore/insights/not-asserted-10-light.png)
 
-**4. Inferred Checks:** This shows the real-time number of system-generated [**Inferred Checks**](../checks/inferred-check.md).These checks are automatically created during a Profile operation using statistical analysis and machine learning methods.
+**4. Inferred Checks:** This shows the real-time number of system-generated [**Inferred Checks**](../data-quality-checks/inferred-check.md).These checks are automatically created during a Profile operation using statistical analysis and machine learning methods.
 
 ![inferred-check](../assets/explore/insights/inferred-light.png)
 
-**5. Authored Check:** This shows the [**Authored Checks**](../checks/authored-check.md) that are manually created by users within the Qualytics platform or API. These checks can range from simple templates for common validations to complex rules using Spark SQL and User-Defined Functions (UDF) in Scala. 
+**5. Authored Check:** This shows the [**Authored Checks**](../data-quality-checks/authored-check.md) that are manually created by users within the Qualytics platform or API. These checks can range from simple templates for common validations to complex rules using Spark SQL and User-Defined Functions (UDF) in Scala. 
 
 ![authored-check](../assets/explore/insights/authored-light.png)
 
@@ -248,7 +248,7 @@ By clicking the caret down 🔽 button, users can choose either the top 5 or top
 
 ## Profiles
 
-[**Profiles**](../source-datastore/profile.md) section provides a clear view of data profiling activities over time, showing how often profiling is performed and the amount of data (records) analyzed.
+[**Profiles**](../source-datastore/operations/profile.md) section provides a clear view of data profiling activities over time, showing how often profiling is performed and the amount of data (records) analyzed.
 
 ![profiles](../assets/explore/insights/profiles-17-light.png)
 
@@ -274,7 +274,7 @@ Field Profiled shows the number of fields processed during the profile runs. It 
 
 ## Scans
 
-[**Scans**](../source-datastore/scan.md) section provides a clear overview of all scanning activities within a selected period. It helps users keep track of how many scans were performed and how many anomalies were detected during those scans. This section makes it easier to understand the scanning process and manage data by offering insight into how often scans occur. 
+[**Scans**](../source-datastore/operations/scan.md) section provides a clear overview of all scanning activities within a selected period. It helps users keep track of how many scans were performed and how many anomalies were detected during those scans. This section makes it easier to understand the scanning process and manage data by offering insight into how often scans occur. 
 
 ![scans](../assets/explore/insights/scan-22-light.png)
 

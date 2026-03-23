@@ -2,7 +2,7 @@
 
 **Activity** in Qualytics provides a comprehensive view of all operations, helping users monitor and analyze the performance and workflows across various source datastores. Activities are categorized into **Runs** and **Schedule** operations, offering distinct insights into executed and scheduled activities.
 
-The Rerun and Resume options depend on the type of operation. [Profile](../source-datastore/profile.md) and [Scan](../source-datastore/scan.md) support both because the system can remember where it stopped and continue from there. [Catalog](../source-datastore/catalog.md), [Export](../container/enrichment-operation/export-operation.md), and [Materialize](../container/enrichment-operation/materialize-operation.md) only support Rerun, since the system can't pick up from where it left off and must start over. External Scan doesn't support either option, as they don't apply to it.
+The Rerun and Resume options depend on the type of operation. [Profile](../source-datastore/operations/profile.md) and [Scan](../source-datastore/operations/scan.md) support both because the system can remember where it stopped and continue from there. [Sync](../source-datastore/operations/catalog.md), [Export](../container/operations/export-operation.md), and [Materialize](../container/operations/materialize-operation.md) only support Rerun, since the system can't pick up from where it left off and must start over. External Scan doesn't support either option, as they don't apply to it.
 
 Let’s get started 🚀
 
@@ -16,7 +16,7 @@ Let’s get started 🚀
 
 ![activity](../assets/explore/activity/activity-light.png)
 
-You will be navigated to the **Activity** tab and here you'll see a list of operations [catalog](../source-datastore/catalog.md), [profile](../source-datastore/profile.md), [scan](../source-datastore/scan.md), and [external scan](../source-datastore/external-scan.md) across different source datastores.
+You will be navigated to the **Activity** tab and here you'll see a list of operations [sync](../source-datastore/operations/catalog.md), [profile](../source-datastore/operations/profile.md), [scan](../source-datastore/operations/scan.md), and [external scan](../source-datastore/operations/external-scan.md) across different source datastores.
 
 ![list](../assets/explore/activity/list-light.png)
 
@@ -28,7 +28,7 @@ Activities are divided into two categories: Runs and Schedule Operations. Runs p
 
 ### Runs
 
-Runs provide a complete record of all executed operations across various source datastores. This section enables users to monitor and review activities such as [catalog](../source-datastore/catalog.md), [profile](../source-datastore/profile.md), [scan](../source-datastore/scan.md), and [external scan](../source-datastore/external-scan.md). Each run displays key details like the operation type, status, execution time, duration, and triggering method, offering a clear overview of system performance and data processing workflows.
+Runs provide a complete record of all executed operations across various source datastores. This section enables users to monitor and review activities such as [sync](../source-datastore/operations/catalog.md), [profile](../source-datastore/operations/profile.md), [scan](../source-datastore/operations/scan.md), and [external scan](../source-datastore/operations/external-scan.md). Each run displays key details like the operation type, status, execution time, duration, and triggering method, offering a clear overview of system performance and data processing workflows.
 
 ![run](../assets/explore/activity/runs-light.png)
 
@@ -37,9 +37,9 @@ Runs provide a complete record of all executed operations across various source 
 | 1. | Select Source Datastore | Select specific source datastores to focus on their operations. |
 | 2. | Search | This feature helps users quickly find specific identifiers. |
 | 3. | Sort By | **Sort By** option helps users organize the list of performed operations by criteria like Duration and Created Date for quick access. |
-| 4. | Filter | The filter lets users easily refine the list of performed operations by choosing a specific Type [Scan](../source-datastore/scan.md), [Catalog](../source-datastore/catalog.md), [Profile](../source-datastore/profile.md), [External Scan](../source-datastore/external-scan.md), etc. along with Status (Success, Failure, Running, and Aborted) or **Has Logs** to view operations that completed with logs. |
+| 4. | Filter | The filter lets users easily refine the list of performed operations by choosing a specific Type [Scan](../source-datastore/operations/scan.md), [Sync](../source-datastore/operations/catalog.md), [Profile](../source-datastore/operations/profile.md), [External Scan](../source-datastore/operations/external-scan.md), etc. along with Status (Success, Failure, Running, and Aborted) or **Has Logs** to view operations that completed with logs. |
 | 5. | Activity Heatmap | The **Activity Heatmap** shows daily activity levels, with color intensity indicating operation counts. Hovering over a square reveals details for that day. |
-| 6. | Operation List | Shows a list of operations [**catalog**](../source-datastore/catalog.md), [**profile**](../source-datastore/profile.md), [**scan**](../source-datastore/scan.md), and [**external scan**](../source-datastore/external-scan.md), etc performed across various source datastores. |
+| 6. | Operation List | Shows a list of operations [**sync**](../source-datastore/operations/catalog.md), [**profile**](../source-datastore/operations/profile.md), [**scan**](../source-datastore/operations/scan.md), and [**external scan**](../source-datastore/operations/external-scan.md), etc performed across various source datastores. |
 
 ### Activity Heatmap
 
@@ -98,7 +98,7 @@ If the operation is a **Materialize** or **Export** run, users can click the **V
 
 ### Schedule
 
-The Schedule section provides a complete record of all scheduled operations across various source datastores. This section enables users to monitor and review scheduled operations such as [catalog](../source-datastore/catalog.md), [profile](../source-datastore/profile.md), and [scan](../source-datastore/scan.md). Each scheduled operation includes key details like operation type, scheduled time, and triggering method, giving users a clear overview of system performance and data workflows.
+The Schedule section provides a complete record of all scheduled operations across various source datastores. This section enables users to monitor and review scheduled operations such as [sync](../source-datastore/operations/catalog.md), [profile](../source-datastore/operations/profile.md), and [scan](../source-datastore/operations/scan.md). Each scheduled operation includes key details like operation type, scheduled time, and triggering method, giving users a clear overview of system performance and data workflows.
 
 ![schedule](../assets/explore/activity/schedule-light.png)
 
@@ -107,8 +107,8 @@ The Schedule section provides a complete record of all scheduled operations acro
 | 1. | Selected Source Datastores | Select specific source datastores to focus on their operations. |
 | 2. | Search | This feature helps users quickly find specific identifiers. |
 | 3. | Sort By | **Sort By** option helps users organize the list of scheduled operations by criteria like Created Date and Operations for quick access. |
-| 4. | Filter | The filter lets users easily refine the list of scheduled operations by choosing a specific operation type: [Scan](../source-datastore/scan.md), [Catalog](../source-datastore/catalog.md), [Profile](../source-datastore/profile.md), etc. to view. |
-| 5. | Operation List | Shows the list of scheduled operations such as [catalog](../source-datastore/catalog.md), [profile](../source-datastore/profile.md), [scan](../source-datastore/scan.md), etc across various source datastores. |
+| 4. | Filter | The filter lets users easily refine the list of scheduled operations by choosing a specific operation type: [Scan](../source-datastore/operations/scan.md), [Sync](../source-datastore/operations/catalog.md), [Profile](../source-datastore/operations/profile.md), etc. to view. |
+| 5. | Operation List | Shows the list of scheduled operations such as [sync](../source-datastore/operations/catalog.md), [profile](../source-datastore/operations/profile.md), [scan](../source-datastore/operations/scan.md), etc across various source datastores. |
 
 #### Deactivate Schedule Operation
 

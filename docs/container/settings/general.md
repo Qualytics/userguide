@@ -84,9 +84,9 @@ If the data source lacks a defined schema (CSV), the flag is set to "True".
 
 ## Override file pattern for DFS datastores
 
-Override the file pattern to include files with the same schema but don't match the automatically generated pattern from the initial cataloging.
+Override the file pattern to include files with the same schema but don't match the automatically generated pattern from the initial sync.
 
-In some cases, you may have multiple files that share the same schema but don't match the automatically generated file pattern during the initial cataloging process. To address this, Qualytics has the ability to override file patterns in the UI. This allows you to specify a custom pattern that encompasses all files with the shared schema, ensuring they are properly included in profiling and analysis.
+In some cases, you may have multiple files that share the same schema but don't match the automatically generated file pattern during the initial sync process. To address this, Qualytics has the ability to override file patterns in the UI. This allows you to specify a custom pattern that encompasses all files with the shared schema, ensuring they are properly included in profiling and analysis.
 
 ### Explore Deeper Knowledge
 
@@ -94,4 +94,4 @@ If you want to go deeper into the knowledge or if you are curious and want to le
 
 ### Important Considerations
 
-Subsequent catalog operations without pruning (`Disabled`) will use the new pattern.
+Subsequent sync operations without pruning (`Disabled`) will use the new pattern.

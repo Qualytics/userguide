@@ -25,4 +25,4 @@ This measures the timeliness of data by monitoring when new data was last added 
 |     17. |   **Graph Visualization** |  Graph illustrates consistent data patterns over time, with sudden anomalies marked by spikes in red. It reflects changes in data freshness and highlights when the data was last updated. |
 
 !!! note
-    For more information please refer to the [**Freshness Check**](../checks/freshness-check.md) documentation..
+    For more information please refer to the [**Freshness Check**](../data-quality-checks/freshness-check.md) documentation..
