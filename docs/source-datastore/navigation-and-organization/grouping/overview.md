@@ -13,18 +13,6 @@ As the number of datastores in your workspace grows, finding the right datastore
 - **Customize with icons**: Assign distinct icons to each group for quick visual identification.
 - **Filter by group**: Use group-based filtering on the datastore listing page to narrow down results.
 
-## API
-
-| Topic | Description |
-| :--- | :--- |
-| [API](concepts/grouping-api.md) | API endpoints for managing datastore groups programmatically. |
-
-## FAQ
-
-| Topic | Description |
-| :--- | :--- |
-| [FAQ](concepts/grouping-faq.md) | Answers to common questions about datastore grouping. |
-
 ## Deep Dive
 
 | Topic | Description |
@@ -41,3 +29,15 @@ As the number of datastores in your workspace grows, finding the right datastore
 | [Delete a Group](managing-groups/delete-a-group.md) | Remove a group — datastores in the group become ungrouped. |
 | [Assign a Group](managing-groups/assign-a-datastore.md) | Add a datastore to an existing group. |
 | [Unassign a Group](managing-groups/remove-a-datastore.md) | Remove a datastore from its current group. |
+
+## API
+
+| Topic | Description |
+| :--- | :--- |
+| [API](concepts/grouping-api.md) | API endpoints for managing datastore groups programmatically. |
+
+## FAQ
+
+| Topic | Description |
+| :--- | :--- |
+| [FAQ](concepts/grouping-faq.md) | Answers to common questions about datastore grouping. |
