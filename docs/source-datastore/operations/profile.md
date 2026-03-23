@@ -30,17 +30,17 @@ The inferred data quality checks are rigorously tested against the actual source
 
 **Step 1**: Select a source datastore from the side menu on which you would like to perform the profile operation.
 
-![adding-source-datastore](../../assets/source-datastores/operations/profile/adding-source-datastore.png)
+![Select a source datastore from the side menu](../../assets/source-datastore/sync/select-source-datastore.png)
   
 **Step 2**: Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Profile** to initiate the profile operation.
 
-![profile](../../assets/source-datastores/operations/profile/profile.png)
+![Run button under Profile in the datastore overview](../../assets/source-datastore/profile/run-button-overview.png)
 
 ## Configuration
 
 **Step 1**: Click on the **Run** button to initiate the profile operation.
 
-![run-profile](../../assets/source-datastores/operations/profile/run-profile.png)
+![Initiate profile operation button](../../assets/source-datastore/profile/initiate-profile-button.png)
   
 !!! note
     You can run Profile Operation anytime to update the inferred data quality checks, automatically based on new data in the datastore. It is recommended to schedule the profile operations periodically to update inferred rules. More details are discussed in the **Schedule** section below.
@@ -51,23 +51,23 @@ The inferred data quality checks are rigorously tested against the actual source
 
 This option includes all tables or files currently available in the datastore for profiling. Selecting this will profile every table within the source datastore without the need for further selection.
 
-![profile-operation-all](../../assets/source-datastores/operations/profile/profile-operation-all.png)
+![Select all tables or file patterns for profiling](../../assets/source-datastore/profile/select-all-tables.png)
 
 **2. Specific**
 
 This option allows users to manually select individual tables or files for profiling. It provides the flexibility to focus on particular tables of interest, which can be useful if the user is only interested in a subset of the available data.
 
-![profile-operation-specific](../../assets/source-datastores/operations/profile/profile-operation-specific.png)
+![Select specific tables for profiling](../../assets/source-datastore/profile/select-specific-tables.png)
 
 **3. Tag**
 
 This option automatically profiles tables associated with selected tags. Tags are used to categorize tables, and by selecting a specific tag, all tables associated with that tag will be profiled. This option helps in managing and profiling grouped data efficiently.
 
-![profile-operation-tag](../../assets/source-datastores/operations/profile/profile-operation-tag.png)
+![Select tables by tag for profiling](../../assets/source-datastore/profile/select-by-tag.png)
   
 **Step 3**: After making the relevant selections, click on the **Next** button to configure the **Operation Settings**.
 
-![profile-operation-next](../../assets/source-datastores/operations/profile/profile-operation-next.png)
+![Next button to configure operation settings](../../assets/source-datastore/profile/next-operation-settings.png)
   
 **Step 4**: Configure the following two **Read Settings**:
 
@@ -85,24 +85,24 @@ This setting allows users to specify a minimum incremental identifier value to s
 !!! note 
     The starting threshold i.e. **Greater Than Time** and **Greater Than Batch** are applicable only to the tables or files with an incremental timestamp strategy.
 
-![starting-threshold](../../assets/source-datastores/operations/profile/starting-threshold.png)
+![Starting threshold configuration with greater than time and batch options](../../assets/source-datastore/profile/starting-threshold.png)
 
 ### Record Limit 
 
 Define the number of records to be profiled per table: This feature allows users to manually enter a custom record limit value using a text field in the profile operation. This setting helps in controlling the scope of the profiling operation, particularly for large datasets, by capping the number of records to analyze.
 
-![record-limit](../../assets/source-datastores/operations/profile/record-limit.png)
+![Record limit input field](../../assets/source-datastore/profile/record-limit-input.png)
 
 You can also use a drop-down menu to quickly select from commonly used limits such as 1M, 10M, 100M, and All.
 
-![record-dropdown](../../assets/source-datastores/operations/profile/record-dropdown.png)
+![Record limit dropdown with preset values](../../assets/source-datastore/profile/record-limit-dropdown.png)
 
 !!! note
     The number of records must be between **1** and **1,000,000,000**.
 
 **Step 5:** After making the relevant selections, click on the **Next** button to configure the **Inference Settings**. 
 
-![next](../../assets/source-datastores/operations/profile/next.png)
+![Next button to configure inference settings](../../assets/source-datastore/profile/next-inference-settings.png)
 
 **Step 6:** Configure the following two **Inference Settings**: 
 
@@ -117,7 +117,7 @@ The Inference Threshold allows you to customize the data quality checks that are
 
 By default, the Inference Threshold is set to **2**, which provides a comprehensive range of checks designed to ensure data integrity across different scenarios. Users have the flexibility to adjust this threshold based on their specific needs, allowing for either basic or advanced checks as required.
 
-![default-configuration](../../assets/source-datastores/operations/profile/default-configuration.png)
+![Default inference threshold configuration set to level 2](../../assets/source-datastore/profile/inference-threshold-default.png)
 
 #### Levels of Check Inference
 
@@ -130,7 +130,7 @@ The Inference Threshold ranges from **0** to **5**, with each level including pr
 
 At this level, no checks are automatically inferred. This is suitable when users want complete control over which checks are applied, or if no checks are needed. Ideal for scenarios where profiling should not infer any constraints, and all checks will be manually defined.
 
-![inference-threshold-level0](../../assets/source-datastores/operations/profile/inference-threshold-level0.png)
+![Inference threshold set to level 0 with no automatic checks](../../assets/source-datastore/profile/inference-threshold-level0.png)
 
 ##### Level 1: Basic Data Integrity and Simple Value Threshold Checks
 
@@ -156,7 +156,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 | Not Negative | [See more.](https://userguide.qualytics.io/checks/not-negative-check/) |
 | Not Future | [See more.](https://userguide.qualytics.io/checks/not-future-check/) |
 
-![inference-threshold-level1](../../assets/source-datastores/operations/profile/inference-threshold-level1.png)
+![Inference threshold set to level 1 with basic integrity checks](../../assets/source-datastore/profile/inference-threshold-level1.png)
 
 ##### Level 2: Value Range and Pattern Checks
 
@@ -181,7 +181,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 | Matches Pattern | [See more.](https://userguide.qualytics.io/checks/matches-pattern-check/) |
 | Unique | [See more.](https://userguide.qualytics.io/checks/unique-check/) |
 
-![inference-threshold-level2](../../assets/source-datastores/operations/profile/inference-threshold-level2.png)
+![Inference threshold set to level 2 with value range and pattern checks](../../assets/source-datastore/profile/inference-threshold-level2.png)
 
 ##### Level 3: Time Series and Comparative Relationship Checks
 
@@ -206,7 +206,7 @@ The following table shows the inferred checks that the Analytics Engine can gene
 | Less Than Field | [See more.](https://userguide.qualytics.io/checks/less-than-field-check/) |
 | Equal To Field | [See more.](https://userguide.qualytics.io/checks/equal-to-field-check/) |
 
-![inference-threshold-level3](../../assets/source-datastores/operations/profile/inference-threshold-level3.png)
+![Inference threshold set to level 3 with time series and comparative checks](../../assets/source-datastore/profile/inference-threshold-level3.png)
 
 ##### Level 4: Linear Regression and Cross-Datastore Relationship Checks
 
@@ -222,13 +222,13 @@ The following table shows the inferred checks that the Analytics Engine can gene
 
 | Inferred Checks | Reference |
 |-------|-------|
-| Data Diff | [See more.](../../checks/data-diff-check.md) |
+| Data Diff | [See more.](../../data-quality-checks/data-diff-check.md) |
 | Exists In | [See more.](https://userguide.qualytics.io/checks/exists-in-check/) |
 | Not Exists In | [See more.](https://userguide.qualytics.io/checks/not-exists-in-check/) |
 | Predicted By | [See more.](https://userguide.qualytics.io/checks/predicted-by-check/) |
 | Is Replica Of (_is sunsetting_) | [See more.](https://userguide.qualytics.io/checks/is-replica-of-check/) |
 
-![inference-threshold-level4](../../assets/source-datastores/operations/profile/inference-threshold-level4.png)
+![Inference threshold set to level 4 with regression and cross-datastore checks](../../assets/source-datastore/profile/inference-threshold-level4.png)
 
 ##### Level 5: Shape Checks
 
@@ -246,7 +246,7 @@ This table shows the inferred checks that the Analytics Engine can generate base
 | Matches Pattern (Shape) | [See more.](https://userguide.qualytics.io/checks/matches-pattern-check/) |
 | Not Null (Shape) | [See more.](https://userguide.qualytics.io/checks/not-null-check/) |
 
-![inference-threshold-level5](../../assets/source-datastores/operations/profile/inference-threshold-level5.png)
+![Inference threshold set to level 5 with shape checks](../../assets/source-datastore/profile/inference-threshold-level5.png)
 
 !!! warning 
     If the checks inferred during a profile operation do not detect any anomalies, and the check inference level decreases in the next profile operation, the checks that did not generate anomalies will be archived or discarded. However, if the checks detect any anomalies, they will be retained to continue monitoring the data and addressing potential issues.
@@ -255,37 +255,37 @@ This table shows the inferred checks that the Analytics Engine can generate base
 
 Check the box labeled **"Infer As Draft"** to ensure that all inferred checks will be generated in a draft state. This allows for greater flexibility as you can review and refine these checks before they are finalized.
 
-![inference-state](../../assets/source-datastores/operations/profile/inference-state.png)
+![Infer as Draft checkbox option](../../assets/source-datastore/profile/infer-as-draft.png)
 
 ### Run Instantly
 
 Click on the **Run Now** button, and perform the profile operation immediately.
 
-![run](../../assets/source-datastores/operations/profile/run.png)
+![Run Now button to execute profile operation immediately](../../assets/source-datastore/profile/run-now-button.png)
   
 ### Schedule
 
 **Step 1**: Click on the **Schedule** button to configure the available schedule options in the profile operation.
 
-![schedule](../../assets/source-datastores/operations/profile/schedule.png)
+![Schedule button to configure profile operation scheduling](../../assets/source-datastore/profile/schedule-button.png)
   
 **Step 2**: Set the scheduling preferences for the profile operation.
 
 **1. Hourly**: This option allows you to schedule the profile operation to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the profiling should start. Example: If set to "Every 1 hour(s) on minute 0," the profile operation will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00).
 
-![hourly](../../assets/source-datastores/operations/profile/hourly.png)
+![Hourly schedule configuration](../../assets/source-datastore/profile/schedule-hourly.png)
   
 **2. Daily**: This option schedules the profile operation to run once every day at a specific time. You specify the number of days between scans and the exact time of day in UTC. Example: If set to "Every 1 day(s) at 00:00 UTC," the scan will run every day at midnight UTC.
 
-![daily](../../assets/source-datastores/operations/profile/daily.png)
+![Daily schedule configuration](../../assets/source-datastore/profile/schedule-daily.png)
   
 **3. Weekly**: This option schedules the profile operation to run on specific days of the week at a set time. You select the days of the week and the exact time of day in UTC for the profile operation to run. Example: If configured to run on "Sunday" and "Friday" at 00:00 UTC, the scan will execute at midnight UTC on these days.
 
-![weekly](../../assets/source-datastores/operations/profile/weekly.png)
+![Weekly schedule configuration](../../assets/source-datastore/profile/schedule-weekly.png)
   
 **4. Monthly**: This option schedules the profile operation to run once a month on a specific day at a set time. You specify the day of the month and the time of day in UTC. If set to "On the 1st day of every 1 month(s), at 00:00 UTC," the profile operation will run on the first day of each month at midnight UTC.
 
-![monthly](../../assets/source-datastores/operations/profile/monthly.png)
+![Monthly schedule configuration](../../assets/source-datastore/profile/schedule-monthly.png)
   
 **5. Advanced**: The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for profile operations with precision.
 
@@ -315,15 +315,15 @@ Users can define other specific schedules by adjusting the Cron expression. For 
     
 To define a custom schedule, enter the appropriate Cron expression in the **Custom Cron Schedule (UTC)** field before specifying the schedule name. This will allow for precise control over the timing of the profile operation, ensuring it runs exactly when needed according to your specific requirements.
 
-![advanced](../../assets/source-datastores/operations/profile/advanced.png)
+![Advanced schedule configuration with cron expression](../../assets/source-datastore/profile/schedule-advanced.png)
   
 **Step 3**: Define the **Schedule Name** to identify the scheduled operation at the running time.
 
-![schedule-name](../../assets/source-datastores/operations/profile/schedule-name.png)
+![Schedule name input field](../../assets/source-datastore/profile/schedule-name.png)
 
 **Step 4**: Click on the **Schedule** button to activate your profile operation schedule.
 
-![profile-operation-schedule](../../assets/source-datastores/operations/profile/profile-operation-schedule.png)
+![Schedule confirm button to activate the profile operation schedule](../../assets/source-datastore/profile/schedule-confirm-button.png)
   
 !!! note 
     You will receive a notification when the profile operation is completed.
@@ -348,7 +348,7 @@ When the profile operation is completed, you will receive the notification and c
 -   Operation Status
 -   Table
 
-![activity-fields](../../assets/source-datastores/operations/profile/activity-fields.png)
+![Activity tab top panel with runs, schedule, search, sort, and filter options](../../assets/source-datastore/profile/activity-top-panel.png)
   
 ### Activity Heatmap
 
@@ -357,7 +357,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 !!! tip
     You can click on any of the squares from the Activity Heatmap to filter operations
 
-![activity-table](../../assets/source-datastores/operations/profile/activity-table.png)
+![Activity heatmap showing operation frequency over time](../../assets/source-datastore/profile/activity-heatmap.png)
 
 ### Operation Detail
 
@@ -380,7 +380,7 @@ This status indicates that the profile operation is still running at the moment 
 | 11.    | Abort                            | The "Abort" button enables you to stop the ongoing profile operation.                                  |
 | 12.    |Summary                          | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that have been profiled so far. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**:  This represents the total number of records that were included in the profiling process. </li><li> **Field Profiles Updates**:  This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**:  This indicates the number of inferred checks that were synchronized based on the profile operation. </li></li> </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
-![profile-running](../../assets/source-datastores/operations/profile/profile-running.png)
+![Profile operation with running status showing progress and details](../../assets/source-datastore/profile/operation-status-running.png)
   
 #### Aborted
 
@@ -403,9 +403,7 @@ This status indicates that the profile operation was manually stopped before it 
 | 13.    | Delete                           | Removes the record of the aborted profile operation from the system, permanently deleting results.      |
 | 14.  |   Summary              | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></li> </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
-![profile-aborted](../../assets/source-datastores/operations/profile/profile-aborted.png)
-  
-#### Warning
+![Profile operation with aborted status showing resume and rerun options](../../assets/source-datastore/profile/operation-status-aborted.png)
 
 #### Failure
 
@@ -429,7 +427,7 @@ This status indicates that the profile operation failed due to unrecoverable err
 | 14.    | Summary                          | The "Summary" section provides an overview of the profile operation's progress before failure. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation failed. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process failed. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li></ul> |
 | 15.    | Logs                             | Logs include error messages, connection failures, permission issues, and other pertinent information that caused the profile operation to fail. |
 
-![Profile operation with failure status showing error logs and recovery options](../assets/source-datastore/profile/operation-status-failure.png)
+![Profile operation with failure status showing error logs and recovery options](../../assets/source-datastore/profile/operation-status-failure.png)
 
 #### Success with Warning
 
@@ -452,7 +450,7 @@ This status signals that the profile operation completed but encountered some is
 | 13.     | Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested.</li><li> **Tables Profiled**: The number of tables that were profiled before the operation completed. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was completed. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation.</li><li>  **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li></ul> |
 | 14.    |   Logs                    | Logs include error messages, warnings, and other pertinent information that occurred during the execution of the Profile Operation. |
 
-![profile-warning](../../assets/source-datastores/operations/profile/profile-warning.png)
+![Profile operation completed with success-warning status and logs](../../assets/source-datastore/profile/operation-status-success-warning.png)
   
 #### Success
 
@@ -474,23 +472,23 @@ This status confirms that the profile operation was completed successfully witho
 | 12.     | Delete                           | Removes the record of the profile operation from the system, permanently deleting all results; this action cannot be undone. |
 | 13. |   Summary                 | The "Summary" section provides a real-time overview of the profile operation's progress. It includes key metrics such as: <br><ul><li> **Tables Requested**: The total number of tables that were requested for profiling. Click on the adjacent magnifying glass icon to view the tables requested. </li><li> **Tables Profiled**: The number of tables that were profiled before the operation was aborted. Click on the adjacent magnifying glass icon to view the tables profiled. </li><li> **Records Profiled**: This represents the total number of records that were included before the profiling process was aborted. </li><li> **Field Profiles Updates**: This number shows how many field profiles were updated as a result of the profiling operation. </li><li> **Inferred Checks Synchronized**: This indicates the number of inferred checks that were synchronized based on the profile operation. </li><li> **Added**: Shows the count of newly added inferred checks. </li><li> **Updated**: Indicates the count of checks that were updated in the operation.</li> |
 
-![profile-success](../../assets/source-datastores/operations/profile/profile-success.png)
+![Profile operation completed with success status](../../assets/source-datastore/profile/operation-status-success.png)
 
 #### Full View of Metrics in Operation Summary
 
 Users can now hover over abbreviated metrics to see the full value for better clarity. For demonstration purposes, we are hovering over the **Records Profiled** field to display the full value.
 
-![records-profiled-operation](../../assets/source-datastores/operations/profile/profile-scan-operation.png)
+![Hovering over abbreviated metrics to see full value](../../assets/source-datastore/profile/operation-metrics-hover.png)
 
 ## Post Operation Details
 
 **Step 1**: Click on any of the successful **Profile Operations** from the list and hit the Results button.
 
-![profile-result](../../assets/source-datastores/operations/profile/profile-result.png)
+![Results button on a successful profile operation](../../assets/source-datastore/profile/results-button.png)
   
 **Step 2:** The **Profile Results** modal displays a list of both profiled and non-profiled containers. You can filter the view to show only non-profiled containers by toggling on button, which will display the complete list of unprofiled containers.
 
-![profiled](../../assets/source-datastores/operations/profile/profiled.png)
+![Profile results modal with list of profiled and non-profiled containers](../../assets/source-datastore/profile/results-container-list.png)
 
  The **Profile Results** modal also provides two analysis options for you:
 
@@ -499,54 +497,9 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 
 Unwrap any of the containers from the **Profile Results** modal and click on the arrow icon.
 
-![view-table](../../assets/source-datastores/operations/profile/view-table.png)
+![Expand container in profile results to view fields](../../assets/source-datastore/profile/results-expand-container.png)
   
-### Details for a Specific Container (Container's Profile)
-
-Based on your selection of container from the profile operation results, you will be automatically redirected to the container details on the source datastore details page.
-
-![sandbox-tpch](../../assets/source-datastores/operations/profile/sandbox-tpch.png)
-  
-The following details (metrics) will be visible for analyzing the specific container you selected:
-
-1. **Quality Score (79)**: This represents an overall quality assessment of the field, likely on a scale of 0 to 100. A score of 79 suggests that the data quality is relatively good but may need further improvement.
-
-2. **Sampling (100%)**: Indicates that 100% of the data in this field was sampled for analysis. This means the entire dataset for this field was reviewed.
-
-3. **Completeness (100%)**: Suggests that all entries in this field are complete, with no missing or null values, signifying data integrity.
-
-4. **Active Checks (2)**: This shows that 2 data quality checks are actively running on this field. These checks likely monitor aspects such as format, uniqueness, or consistency.
-
-5. **Active Anomalies (0)**: Indicates that there are no active anomalies or issues detected in the field, meaning no irregularities have been found during the checks.
-
-![total-anomalies](../../assets/source-datastores/operations/profile/total-anomalies.png)
-
-### Details for a Specific Field of a Container (Field Profile)
-
-Unwrap the container to view the underlying fields. The following details (metrics) will be visible for analyzing a specific field of the container:
-
-| **No** | **Profile**                     | **Description**                                                                 |
-|-------|--------------------------------|---------------------------------------------------------------------------------|
-| 1     | Declared Type                  | Indicates whether the type is declared by the source or inferred.               |
-| 2     | Distinct Values                | Count of distinct values observed in the dataset.                               |
-| 3     | Min Length                     | Shortest length of the observed string values or lowest value for numerics.     |
-| 4     | Max Length                     | Greatest length of the observed string values or highest value for numerics.    |
-| 5     | Mean                           | Mathematical average of the observed numeric values.                            |
-| 6     | Median                         | The median of the observed numeric values.                                      |
-| 7     | Standard Deviation             | Measure of the amount of variation in observed numeric values.                  |
-| 8     | Kurtosis                       | Measure of the 'tailedness' of the distribution of observed numeric values.     |
-| 9     | Skewness                       | Measure of the asymmetry of the distribution of observed numeric values.        |
-| 10    | Q1                             | The first quartile; the central point between the minimum and the median.      |
-| 11    | Q3                             | The third quartile; the central point between the median and the maximum.      |
-| 12    | Sum                            | Total sum of all observed numeric values.                                       |
-
-![total-profile](../../assets/source-datastores/operations/profile/totals-profile.png)
-
-### Histogram
-
-Shows how the values in the field are spread out. Each bar represents how many values fall within a certain range, making it easy to spot trends and outliers.
-
-![histogram](../../assets/source-datastores/operations/profile/histogram.png)
+For detailed information about container quality metrics, observability charts, and profiling history, see [Container Attributes](../../container/container-attributes.md). For field-level profile statistics such as distinct values, mean, median, and distribution metrics, see [Field Profiles](../../fields/field-profiles.md).
   
 ## API Payload Examples
 
