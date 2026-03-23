@@ -249,11 +249,11 @@ Allows you to trigger a sync operation on any current datastore (datastore permi
         )
     ```
     ```bash
-        Started Catalog operation 29464 for datastore: 1172 
+        Started Sync operation 29464 for datastore: 1172
         Waiting for operation to finish
         Waiting for operation to finish
         Waiting for operation to finish
-        Successfully Finished Catalog operation 29464for datastore: 1172 
+        Successfully Finished Sync operation 29464 for datastore: 1172
         Processing... ---------------------------------------- 100% 0:00:29
     ```
 Options:
@@ -264,7 +264,7 @@ Options:
 | `--include`        | TEXT     | Comma-separated list of include types or array-like format. Example: "table,view" or "[table,view]"                       | No       |
 | `--prune`           | BOOL     | Prune the operation. Do not include if you want prune == false                                                           | No       |
 | `--recreate`        | BOOL     | Recreate the operation. Do not include if you want recreate == false                                                     | No       |
-| `--background`      | BOOL     | Starts the catalog but does not wait for the operation to finish                                                         | No       |
+| `--background`      | BOOL     | Starts the sync but does not wait for the operation to finish                                                            | No       |
 
 
 ### Run a Profile Operation on a Datastore
@@ -333,7 +333,7 @@ Options:
 | `--greater_than_time`                  | DATETIME | Only include rows where the incremental field's value is greater than this time. Use one of these formats %Y-%m-%dT%H:%M:%S or %Y-%m-%d %H:%M:%S | No       |
 | `--greater_than_batch`                 | FLOAT    | Only include rows where the incremental field's value is greater than this number                                                                | No       |
 | `--histogram_max_distinct_values`      | INT      | Number of max distinct values of the histogram                                                                                                   | No       |
-| `--background`                         | BOOL     | Starts the catalog but does not wait for the operation to finish                                                                                 | No       |
+| `--background`                         | BOOL     | Starts the profile but does not wait for the operation to finish                                                                                 | No       |
 
 ### Run a Scan Operation on a Datastore
 
@@ -397,7 +397,7 @@ Options:
 | `--enrichment_source_record_limit`     | INT      | Limit of enrichment source records per . Value must be Greater than or equal to -1                                                               | No       |
 | `--greater_than_date`                  | DATETIME | Only include rows where the incremental field's value is greater than this time. Use one of these formats %Y-%m-%dT%H:%M:%S or %Y-%m-%d %H:%M:%S | No       |
 | `--greater_than_batch`                 | FLOAT    | Only include rows where the incremental field's value is greater than this number                                                                | No       |
-| `--background`                         | BOOL     | Starts the catalog but does not wait for the operation to finish                                                                                 | No       |
+| `--background`                         | BOOL     | Starts the scan but does not wait for the operation to finish                                                                                    | No       |
 
 _Note_: Errors during any of the three operations will be logged in `$HOME/.qualytics/operation-error.log`.
 

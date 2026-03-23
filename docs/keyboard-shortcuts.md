@@ -9,7 +9,7 @@ The search bar at the top of the Qualytics dashboard functions as a **Command Ba
 The Command Bar is designed to:
 
 - Navigate to product areas (Explore, Flows, Library, Settings, Tags)
-- Run operations (catalog, scan, export, profile, materialize)
+- Run operations (sync, scan, export, profile, materialize)
 - Create new entities (checks, templates, flows, tags)
 - Open documentation (User Guide, API Docs)
 - View keyboard shortcuts
@@ -238,7 +238,7 @@ The Interface Shortcuts let you control the look and feel of the platform, such 
 
 ### Operations
 
-The Operations Shortcuts provide fast commands for running catalog, export, materialize, profile, and scan operations on datastores.
+The Operations Shortcuts provide fast commands for running sync, export, materialize, profile, and scan operations on datastores.
 
 | Action | Windows/Linux | macOS |
 |--------|--------------|--------|

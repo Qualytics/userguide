@@ -68,6 +68,19 @@ nav:
       - Navigation & Organization:
         - Right Click Options: source-datastore/navigation-and-organization/right-click-options.md
         - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
+        - Grouping:
+          - Overview: source-datastore/navigation-and-organization/grouping/overview.md
+          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
+          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
+          - Deep Dive:
+            - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
+            - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
+          - Managing:
+            - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
+            - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
+            - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
+            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
+            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:
@@ -332,9 +345,29 @@ nav:
         - Workflow: settings/integrations/workflow/workflow.md
         - Analytics: settings/integrations/analytics/analytics.md
         - AI & Agents:
-          - MCP: settings/integrations/ai/mcp.md
-          - Agentic API: settings/integrations/ai/agentic.md
-          - MCP Quickstart: settings/integrations/ai/mcp-quickstart.md
+          - Overview: settings/integrations/ai-and-agents/overview.md
+          - Deep Dive:
+            - MCP: settings/integrations/ai-and-agents/deep-dive/mcp.md
+            - Agent Q in Action: settings/integrations/ai-and-agents/deep-dive/agent-q-in-action.md
+            - Conversations, Responses & Context: settings/integrations/ai-and-agents/deep-dive/agent-q-conversations.md
+            - Best Practices: settings/integrations/ai-and-agents/deep-dive/agent-q-best-practices.md
+            - Agent Q Limits: settings/integrations/ai-and-agents/deep-dive/agent-q-limits.md
+            - Agentic API: settings/integrations/ai-and-agents/deep-dive/agentic.md
+          - Managing:
+            - Connecting External AI Clients: settings/integrations/ai-and-agents/managing/connecting-external-ai-clients.md
+            - Add Integration: settings/integrations/ai-and-agents/managing/add-agent-q-integration.md
+            - Update Integration: settings/integrations/ai-and-agents/managing/update-agent-q-integration.md
+            - Remove Integration: settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md
+            - Start a New Conversation: settings/integrations/ai-and-agents/managing/start-a-new-conversation.md
+            - Resume a Conversation: settings/integrations/ai-and-agents/managing/resume-a-conversation.md
+            - Rename a Conversation: settings/integrations/ai-and-agents/managing/rename-a-conversation.md
+            - Archive a Conversation: settings/integrations/ai-and-agents/managing/archive-a-conversation.md
+            - Restore a Conversation: settings/integrations/ai-and-agents/managing/restore-a-conversation.md
+            - Delete a Conversation: settings/integrations/ai-and-agents/managing/delete-a-conversation.md
+            - Search Conversations: settings/integrations/ai-and-agents/managing/search-conversations.md
+            - Chat Interface Tips: settings/integrations/ai-and-agents/managing/chat-interface-tips.md
+          - API: settings/integrations/ai-and-agents/agent-q-api.md
+          - FAQ: settings/integrations/ai-and-agents/agent-q-faq.md
     - FAQ:
       - quality-scores/what-are-quality-scores.md
       - printing.md
@@ -383,7 +416,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-  logo: assets/Logo.png
+  logo: assets/logo-light.svg
   favicon: assets/favicon.ico
   name: material
   custom_dir: overrides
@@ -504,9 +537,15 @@ plugins:
         'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
         'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
-        # Catalog to Sync redirect (from main)
+        # Catalog to Sync redirect
         'source-datastore/sync.md': 'source-datastore/operations/catalog.md'
-        # Flows redirect (from main)
+        # AI integrations redirects (from main)
+        'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
+        'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
+        'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/update-llm-integration.md': 'settings/integrations/ai-and-agents/managing/update-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/remove-llm-integration.md': 'settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md'
+        'settings/integrations/ai-and-agents/managing/how-to-use-agent-q.md': 'settings/integrations/ai-and-agents/overview.md'
         'flows/http.md': 'flows/workflow.md'
         # Checks renamed to data-quality-checks (from main)
         'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'

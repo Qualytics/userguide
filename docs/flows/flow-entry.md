@@ -9,7 +9,7 @@ A Flow begins when one of its Triggers activates. Here are the six available tri
 | Trigger Type | Description |
 |--------------|-------------|
 | [**Schedule**](../flows/trigger-node.md#schedule){target="_blank"} | Starts the Flow automatically based on a defined schedule (hourly, daily, weekly, monthly, or custom cron). |
-| [**Operation Completes**](../flows/trigger-node.md#operation-completes){target="_blank"} | Starts the Flow when a catalog, scan, or profile operation finishes. |
+| [**Operation Completes**](../flows/trigger-node.md#operation-completes){target="_blank"} | Starts the Flow when a sync, scan, or profile operation finishes. |
 | [**Anomalous Table or File Detected**](../flows/trigger-node.md#anomalous-table-or-file-detected){target="_blank"} | Starts the Flow when anomalies are detected in a table or file. |
 | [**Anomaly Detected**](../flows/trigger-node.md#anomaly-detected){target="_blank"} | Starts the Flow when a single anomaly event occurs. |
 | [**Anomaly Status Changed**](../flows/trigger-node.md#anomaly-status-changed){target="_blank"} | Starts the Flow when the status of an anomaly changes to a specified state (for example, Open, Acknowledged, or Resolved). |

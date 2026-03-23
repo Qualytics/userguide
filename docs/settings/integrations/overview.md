@@ -29,5 +29,5 @@ Visualize data quality metrics and trends through your preferred business intell
 ### [Single Sign-On](./sso/sso.md)
 Enable secure, frictionless access to Qualytics through your enterprise identity provider, maintaining consistent authentication and access control policies.
 
-### [AI & Agents](./ai/mcp.md)
-Leverage AI-powered natural language interfaces to manage data quality conversationally. Connect AI assistants via the [Model Context Protocol (MCP)](./ai/mcp.md) for interactive use, or integrate the [Agentic API](./ai/agentic.md) into your applications and automation workflows using your own LLM API key.
+### [AI & Agents](./ai-and-agents/overview.md)
+Leverage AI-powered natural language interfaces to manage data quality conversationally. Connect AI assistants via the [Model Context Protocol (MCP)](./ai-and-agents/deep-dive/mcp.md) for interactive use, or integrate the [Agentic API](./ai-and-agents/deep-dive/agentic.md) into your applications and automation workflows using your own LLM API key.

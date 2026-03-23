@@ -46,6 +46,15 @@ Legend:
 | Manage Tags (create / update / delete) | ❌ | ❌       | ✅         | ✅        | ✅             |
 | Assign Tags to Assets (Datastore, Container, Field, Check, Anomaly) | ❌ | ✅ | ✅ | ✅ |✅        |
 | Assign Tags in Flows         | ❌         | ❌       | ✅          | ✅        | ✅            |
+| View Datastore Groups        | ✅          | ✅        | ✅         | ✅        | ✅             |
+| Assign Datastore to Group    | ❌          | ❌        | ❌         | ❌        | ✅             |
+| View Field Status                | ✅          | ✅        | ✅         | ✅        | ✅             |
+| Mask / Unmask Field              | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Exclude Field                    | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Restore Field                    | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Delete Field                     | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Merge Fields                     | ❌          | ❌        | ❌         | ❌        | ✅             |
+| View Masked Field Values         | ❌          | ❌        | ❌         | ❌        | ✅             |
 
 ## Add Team
 
@@ -91,6 +100,12 @@ Editor role allows users to manage datastore functions comprehensively. They can
 |                        | Delete Computed             | ❌                 | ✅            |
 | **Field Context**      | Edit Field Context          | ❌                 | ✅            |
 |                        | Delete Field Context        | ❌                 | ✅            |
+| **Field Status**       | Mask / Unmask Field         | ❌                 | ✅            |
+|                        | Exclude Field               | ❌                 | ✅            |
+|                        | Restore Field               | ❌                 | ✅            |
+|                        | Delete Field                | ❌                 | ✅            |
+|                        | Merge Fields                | ❌                 | ✅            |
+|                        | View Masked Field Values    | ✅                 | ✅            |
 
 #### Author
 
@@ -107,6 +122,7 @@ Author role focuses on managing checks within the system. Users can activate, va
 |                       | Edit Metadata              | ❌                   | ✅          |
 |                       | Anomalies                  | ❌                   | ✅          |
 | **Anomalies**         | Change Status of Anomalies | ❌                   | ✅          |
+| **Field Status**      | View Field Status          | ✅                   | ❌          |
 
 #### Drafter
 
@@ -121,6 +137,7 @@ Drafter role is designed specifically for adding and saving data within the syst
 | **Profiles**           | Add Check             | ❌         | ✅          |
 | **Checks**             | Create as Draft       | ❌         | ✅          |
 | **Field Context**      | Add Check             | ❌         | ✅          |
+| **Field Status**       | View Field Status     | ✅         | ❌          |
 
 #### Viewer
 
@@ -137,6 +154,7 @@ Viewer role is focused on viewing anomalies within the system and creating notes
 |                        | Preview               | ✅         | ❌          |
 | **Explore**            | Anomalies             | ✅         | ❌          |
 |                        | Source Records        | ✅         | ❌          |
+| **Field Status**       | View Field Status     | ✅         | ❌          |
 
 #### Reporter
 
@@ -155,6 +173,7 @@ Reporter role provides access to all report-related information, including dashb
 |                       | Checks                 | ✅         | ❌          |
 |                       | Anomalies              | ✅         | ❌          |
 |                       | Fields (Containers)    | ✅         | ❌          |
+| **Field Status**      | View Field Status      | ✅         | ❌          |
 | **Enrichment Datastores**| List                | ✅         | ❌          |
 | **Explore**            | Insights              | ✅         | ❌          |
 |                       | Activity               | ✅         | ❌          |

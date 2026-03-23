@@ -23,7 +23,7 @@ Users can execute specific operations when the trigger activates. They can choos
 
 **Step 1:** Click on **Sync.**
 
-![sync](../assets/flows/actions-node/operations/catalog.png)
+![sync](../assets/flows/actions-node/operations/sync.png)
 
 A panel **Sync Settings** will appear on the right-hand side. This window allows you to configure the sync operation.
 
@@ -34,7 +34,7 @@ A panel **Sync Settings** will appear on the right-hand side. This window allows
 | 3. | Recreate | Checkbox to enable or disable the recreation of previously deleted named collections in Qualytics. |
 | 4. | Include | Checkboxes to select Tables, Views, or both, specifying the resources to include in the sync. |
 
-![sync](../assets/flows/actions-node/operations/catalog-2.png)
+![sync](../assets/flows/actions-node/operations/sync-2.png)
 
 **Step 2:** After configuring the settings, click Save to apply and proceed with the sync operation.
 
