@@ -17,22 +17,22 @@ The **Quality Score Settings** allow users to tailor the impact of each quality 
 
 **Step 1**: Click on the **Score** option in the settings icon.
 
-![score](../assets/datastore-settings/quality-score-settings/score-light-17.png)
+![score](../assets/source-datastores/datastore-settings/quality-score-settings/score-17.png)
 
 **Step 2**: A modal window "**Quality Score Settings**" will appear.
 
-![score-settings](../assets/datastore-settings/quality-score-settings/score-settings-light-18.png)
+![score-settings](../assets/source-datastores/datastore-settings/quality-score-settings/score-settings-18.png)
 
 **Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days, but can be customized to fit your operational needs, ensuring the scores reflect the most relevant data quality insights.
 
-![decay-period](../assets/datastore-settings/quality-score-settings/decay-period-light-19.png)
+![decay-period](../assets/source-datastores/datastore-settings/quality-score-settings/decay-period-19.png)
 
 **Step 4**: Adjust the **Factor Weights** using the sliding bar. The factor weights determine the importance of different data quality aspects.
 
-![factor-weights](../assets/datastore-settings/quality-score-settings/factor-weights-light-20.png)
+![factor-weights](../assets/source-datastores/datastore-settings/quality-score-settings/factor-weights-20.png)
 
 **Step 5**: Click on the **Save** button to save the quality score settings.
 
-![score-save](../assets/datastore-settings/quality-score-settings/score-save-light-21.png)
+![score-save](../assets/source-datastores/datastore-settings/quality-score-settings/score-save-21.png)
 
 After clicking the **Save** button, a success notification appears on the screen showing the action was completed successfully.

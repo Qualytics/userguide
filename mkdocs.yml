@@ -55,8 +55,6 @@ nav:
       - connections/overview-of-a-connection.md
     # new page tree structure end
     - Source Datastores:
-      - Right Click Options: source-datastore/right-click-options.md
-      - Assign Tags: source-datastore/assign-tags.md
       - Sync: source-datastore/sync.md
       - Profile: source-datastore/profile.md
       - Scan: source-datastore/scan.md
@@ -68,6 +66,22 @@ nav:
         - Unlink Enrichment: source-datastore/unlink-enrichment.md
         - Quality Score Settings: source-datastore/quality-score-settings.md
         - Delete Datastore: source-datastore/delete-datastore.md
+      - Navigation & Organization:
+        - Right Click Options: source-datastore/navigation-and-organization/right-click-options.md
+        - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
+        - Grouping:
+          - Overview: source-datastore/navigation-and-organization/grouping/overview.md
+          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
+          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
+          - Deep Dive:
+            - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
+            - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
+          - Managing:
+            - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
+            - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
+            - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
+            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
+            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:
@@ -403,7 +417,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-  logo: assets/Logo.png
+  logo: assets/logo-light.svg
   favicon: assets/favicon.ico
   name: material
   custom_dir: overrides
@@ -481,6 +495,8 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        'source-datastore/right-click-options.md': 'source-datastore/navigation-and-organization/right-click-options.md'
+        'source-datastore/assign-tags.md': 'source-datastore/navigation-and-organization/assign-tags.md'
         'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
         'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
         'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'

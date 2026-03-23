@@ -33,6 +33,10 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 |                       | Team (Manage) | Manage teams by adding or removing members, and setting team-specific permissions. |
 |                       | Health          | Monitor the system’s health status and performance metrics.                 |
 |                  | Restart Analytical Engine | Restart the analytics engine to refresh data processing or resolve issues.  |
+| Field Status      | Manage         | Full access to all field status operations (mask, unmask, exclude, restore, delete, merge). |
+|                   | Masking Audit Log | View the masking audit log to review all masked value reveal actions. |
+| Datastore Grouping | Manage         | Create, edit, and delete datastore groups. |
+|                    | Assign         | Assign or remove datastores from groups (requires Editor team permission on the datastore). |
 
 - **Manager**: Manager role has limited administrative access over global assets but remains subject to team permissions when interacting with datastores. Managers cannot manage user roles or teams. They can list all datastores (but cannot view their content without explicit team permission) and create datastores for teams where they have Editor permission. Additionally, Managers on a team with Editor permission can manage datastore teams. They can manage global assets such as Tags, Templates, and Notifications but do not have the ability to manage user accounts or team permissions like Admins.
 
@@ -65,6 +69,9 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 |                       | Sync           | Sync external data with the system to ensure the most up-to-date information.|
 | Health                | View           | View the health status of the system to monitor performance and stability.   |
 | API only (ATM)        | Transaction History | View the history of transactions made via the API for auditing and tracking.|
+| Field Status          | Manage         | Manage field status operations (mask, unmask, exclude, restore, delete, merge) on datastores where the user has Editor team permission. |
+| Datastore Grouping    | Manage         | Create, edit, and delete datastore groups. |
+|                       | Assign         | Assign or remove datastores from groups (requires Editor team permission on the datastore). |
 
 - **Member**: Members are normal users with access explicitly granted to them, usually inherited from the teams they are assigned to.
 
@@ -81,6 +88,8 @@ In Qualytics, every user is assigned a role: ```Admin```,```Manager``` or ```Mem
 |                       | Restore         | Reactivate previously revoked tokens.                     |
 |                       | Delete          | Permanently remove tokens.                                |
 |                       | View            | Access and review all token details.                      |
+| Field Status          | Manage         | Manage field status operations (mask, unmask, exclude, restore, delete, merge) on datastores where the user has Editor team permission. |
+| Datastore Grouping    | Assign         | Assign or remove datastores from groups (requires Editor team permission on the datastore). Members cannot create, edit, or delete groups. |
 
 ## Manage Users
 
