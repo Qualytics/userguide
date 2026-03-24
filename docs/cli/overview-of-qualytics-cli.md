@@ -225,14 +225,13 @@ _Note_: Errors during import will be logged in `$HOME/.qualytics/errors.log`.
 
 Allows you to trigger a sync operation on any current datastore (datastore permission required by admin)
 
-<!-- ![Screenshot](../assets/cli/qualytics-run-catalog.gif) -->
 === "Bash Example"
     ```bash
-        qualytics run catalog 
-            --datastore "DATSTORE_ID_LIST" 
-            --include "INCLUDE_LIST" 
-            --prune 
-            --recreate 
+        qualytics run sync
+            --datastore "DATSTORE_ID_LIST"
+            --include "INCLUDE_LIST"
+            --prune
+            --recreate
             --background
     ```
 === "Python Example"
@@ -240,7 +239,7 @@ Allows you to trigger a sync operation on any current datastore (datastore permi
         import qualytics.qualytics as qualytics
         
         DATASTORE_ID = "1172"
-        qualytics.catalog_operation(
+        qualytics.sync_operation(
             datastores=DATASTORE_ID, 
             include=None,
             prune=None ,

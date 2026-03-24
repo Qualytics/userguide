@@ -142,7 +142,7 @@ Agent Q and external MCP clients share the same tool set. Agent Q loads a core s
 
 | Tool | Description |
 |------|-------------|
-| `run_operation` | Trigger an operation on a datastore or container. Requires `datastore_id` and `operation_type` (`catalog`, `profile`, `scan`, `export`, `materialize`). Accepts optional `container_ids` to scope to specific containers. Returns the operation ID. |
+| `run_operation` | Trigger an operation on a datastore or container. Requires `datastore_id` and `operation_type` (`sync`, `profile`, `scan`, `export`, `materialize`). Accepts optional `container_ids` to scope to specific containers. Returns the operation ID. |
 | `get_operation_status` | Poll the status of a running operation. Requires `operation_id`. Returns `running`, `completed`, `failed`, or `cancelled` along with progress details. Agent Q uses this to wait for profile completion before creating quality checks on new computed assets. |
 | `send_notification` | Send an alert via a configured notification channel. Requires `integration_id` and `message`. Supports Slack, Microsoft Teams, Email, Webhook, and PagerDuty channels. |
 | `create_ticket` | Create a ticket in a configured ticketing integration. Requires `integration_id`, `title`, and `description`. Accepts optional `anomaly_id` to link the ticket to a specific anomaly. Supports Jira and ServiceNow. |
