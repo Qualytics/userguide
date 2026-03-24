@@ -56,6 +56,12 @@ Create and manage data quality checks through natural conversation:
 
 The AI translates your intent into the appropriate rule type and parameters automatically.
 
+#### Automating Controls from Regulatory Documents
+
+Agent Q can parse regulatory publications such as [BCBS 239](https://www.bis.org/publ/bcbs239.htm){:target="_blank"} (Principles for effective risk data aggregation and risk reporting), analyze their applicability to a specific datastore, and automatically create tagged quality checks — preserving full traceability back to the original requirement.
+
+<div style="position: relative; padding-bottom: 55.104166666666664%; height: 0;"><iframe src="https://www.loom.com/embed/03b2ed2b26cb4a338bbff09bde53f5a0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Anomaly Investigation
 
 Investigate quality issues conversationally:
