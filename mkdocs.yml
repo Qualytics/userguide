@@ -320,8 +320,21 @@ nav:
         - Best Practices: settings/service-token/best-practices.md
       - Status: settings/status/overview-of-status.md
     - Qualytics CLI:
+        - Overview: cli/overview.md
+        - Authentication: cli/authentication.md
+        - Connections: cli/connections.md
+        - Datastores: cli/datastores.md
+        - Containers: cli/containers.md
+        - Quality Checks: cli/quality-checks.md
+        - Operations: cli/operations.md
+        - Anomalies: cli/anomalies.md
+        - Users: cli/users.md
+        - Teams: cli/teams.md
+        - Tags: cli/tags.md
+        - Config as Code: cli/config-as-code.md
+        - MCP Server: cli/mcp-server.md
+        - Automation & CI/CD: cli/automation.md
         - Installing Python: cli/python-installation.md
-        - Overview: cli/overview-of-qualytics-cli.md
     - Integrations:
         - Overview: settings/integrations/overview.md
         - Data Catalogs:
