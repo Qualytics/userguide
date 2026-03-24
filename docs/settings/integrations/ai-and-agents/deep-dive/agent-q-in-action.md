@@ -25,7 +25,7 @@ To generate a token, navigate to **Settings** > **Tokens** and click **Generate 
 
 ## Capabilities
 
-This video demonstrates the power of one-shot prompting using the Qualytics MCP server:
+This video demonstrates the power of one-shot prompting using the Qualytics MCP server — a single natural-language prompt instructs Agent Q to join data across two different datastores (Databricks and BigQuery), aggregate customer spending on a monthly basis, and author a quality check on the result, all without specifying technical details like join keys, rule types, or field mappings.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/4b204d88eef6467aa3548fb1d9847710" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
