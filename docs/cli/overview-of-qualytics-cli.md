@@ -225,7 +225,6 @@ _Note_: Errors during import will be logged in `$HOME/.qualytics/errors.log`.
 
 Allows you to trigger a sync operation on any current datastore (datastore permission required by admin)
 
-<!-- ![Screenshot](../assets/cli/qualytics-run-catalog.gif) -->
 === "Bash Example"
     ```bash
         qualytics run sync
