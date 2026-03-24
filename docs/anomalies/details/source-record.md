@@ -15,44 +15,54 @@ If the Anomaly Type is **Record**, you will find the highlighted row(s) in the s
 
 ## Source Record Visualization
 
-Users can view source records with selectable display limits of 10, 100, 1,000, or 10,000 records for comprehensive dataset analysis. The interface includes sticky headers that remain visible when scrolling through large datasets, making navigation easier during data review.
+The number of source records displayed per anomaly is determined by the **Maximum Source Examples per Anomaly** setting, which can be configured during [scan setup](../../source-datastore/operations/scan.md#configuration){:target="_blank"}. The available limits are 10, 100, 1,000, or 10,000 records. The interface includes sticky headers that remain visible when scrolling through large datasets, making navigation easier during data review.
 
 ![record](../../assets/anomalies/details/source-record/visualization.png)
 
 ## Force Refresh Source Records
 
-Source records are cached locally for up to **8 hours** to improve performance and reduce unnecessary API calls. However, if the underlying data has changed or a new scan has been run, you may want to fetch the most recent version of the source records.
+Source records are cached locally for up to **8 hours** to improve performance. If you need to view the most recent data, click the **Refresh :material-refresh:** button in the source records toolbar to bypass the cache and fetch the latest records directly from the API.
 
-The **Force Refresh** button allows you to bypass the local cache and retrieve the latest available source records directly from the API. This ensures you are always viewing the most up-to-date data without waiting for the cache to expire.
+A tooltip on the button displays the **last updated timestamp**, helping you track when the data was last refreshed.
 
-### How to Force Refresh
+![source-records-refresh](../../assets/anomalies/details/insights/source-records-refresh.png)
 
-**Step 1:** Navigate to the **Source Records** section, either through the **Anomaly Details** modal or the **Anomaly Overview** page.
+## Download Source Records
 
-**Step 2:** Click the **Refresh** button :material-refresh: located in the source records toolbar, next to the download button.
+Click the **Download :material-download:** button to export all source records as a compressed `.csv` file, with a maximum size of **250MB**.
 
-![force-refresh](../../assets/anomalies/details/source-record/force-refresh.png)
-
-**Step 3:** The source records table will display a loading indicator while fetching the latest data from the API.
+![source-records-download](../../assets/anomalies/details/insights/source-records-download.png)
 
 !!! note
-    After refreshing, a tooltip on the refresh button displays the **last updated timestamp**, so you can always verify when the data was last fetched.
-
-![force-refresh-tooltip](../../assets/anomalies/details/source-record/force-refresh-tooltip.png)
-
-## Download Source Record
-
-User can download the source records that were captured for an anomaly during the scan run. The download always includes only the records that were selected to be stored in the [scan settings](../../source-datastore/operations/scan.md#configuration) at the time the scan was configured.
- 
-**For example**, if the user selected **100** as the maximum number of source records per anomaly, then **100 anomalous records will be shown on the Source Records** page and the same **100 records will be available for download**. If the **user selected 10**, only those **10 records will be displayed and downloadable**. If the user needs to download more source records, the limit must be increased in the scan settings and the scan must be re-run, as records that were not captured during the scan cannot be downloaded later.
-
-![record](../../assets/anomalies/details/source-record/download-source-record.png)
+    The download includes only the records that were captured during the scan. The number of available records depends on the **maximum source records per anomaly** configured in the [scan settings](../../source-datastore/operations/scan.md#configuration){:target="_blank"}. If you need more records, increase the limit and re-run the scan.
 
 ## Masked Fields in Source Records
 
-If a container contains [masked fields](../fields/field-status/managing-field-status/mask-a-field.md), their values are obfuscated by default in source records.
+If a container contains [masked fields](../../fields/field-status/managing-field-status/mask-a-field.md){:target="_blank"}, their values are obfuscated by default in source records.
 
-Users with **Editor** permission can reveal masked values for an anomaly using the reveal toggle. Toggling reveal shows all source records attached to that anomaly at once — reveal is per-anomaly, not per-record. Every reveal action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields accessed — this log is reviewable by Administrators.
+Users with **Editor** permission can reveal masked values for an anomaly using the reveal toggle. Toggling reveal shows all source records attached to that anomaly at once — reveal is per-anomaly, not per-record.
+
+### Revealing Masked Values
+
+**Step 1:** Click the **Show masked values :material-shield-lock-outline:** toggle in the source records toolbar to initiate the reveal process.
+
+![masked-fields-toggle](../../assets/anomalies/details/source-record/masked-fields-toggle.png)
+
+**Step 2:** A confirmation dialog will appear indicating the number of masked fields to be revealed and the number of records affected. Click **Reveal :material-eye:** to proceed, or **Cancel** to discard.
+
+![masked-fields-reveal-confirmation](../../assets/anomalies/details/source-record/masked-fields-reveal-confirmation.png)
+
+### Masking Audit Log
+
+Every reveal action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields accessed — this log is reviewable by Administrators.
+
+**Step 1:** Click the **Show Audit Log :material-history:** button in the source records toolbar to open the audit log panel.
+
+![masked-fields-audit-log-button](../../assets/anomalies/details/source-record/masked-fields-audit-log-button.png)
+
+**Step 2:** A right-side panel will open displaying the **Masking Audit Log** with details including the user name, email, revealed fields, IP address, and timestamp of each reveal action.
+
+![masked-fields-audit-log](../../assets/anomalies/details/source-record/masked-fields-audit-log.png)
 
 !!! info
     To protect sensitive data consistently, masking also applies to anomaly assertion context (the values embedded in check detail descriptions). That surface does not support inline reveal — use the source record reveal toggle to investigate specific values.

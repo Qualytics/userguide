@@ -42,4 +42,4 @@ Archived anomalies are issues that have already been reviewed and moved out of t
 **5 All**: Displays all archived anomalies, including those marked as Resolved, Duplicate, and Invalid, giving a comprehensive view of all past issues.
 
 !!! note 
-    For more information, refer to the [Archived Anomalies Documentation](archive-anomalies.md).
+    For more information, refer to the [Archived Anomalies Documentation](manage-anomalies/archive-anomalies.md).
