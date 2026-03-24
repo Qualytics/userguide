@@ -54,7 +54,7 @@ nav:
         - source-datastore/add-datastores/google-cloud-storage.md
       - source-datastore/add-datastores/connections/overview-of-a-connection.md
       - Operations:
-        - Sync: source-datastore/operations/catalog.md
+        - Sync: source-datastore/operations/sync.md
         - Profile: source-datastore/operations/profile.md
         - Scan: source-datastore/operations/scan.md
         - External Scan: source-datastore/operations/external-scan.md
@@ -508,7 +508,8 @@ plugins:
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
         # Source Datastore reorganization
-        'source-datastore/catalog.md': 'source-datastore/operations/catalog.md'
+        'source-datastore/catalog.md': 'source-datastore/operations/sync.md'
+        'source-datastore/operations/catalog.md': 'source-datastore/operations/sync.md'
         'source-datastore/profile.md': 'source-datastore/operations/profile.md'
         'source-datastore/scan.md': 'source-datastore/operations/scan.md'
         'source-datastore/external-scan.md': 'source-datastore/operations/external-scan.md'
@@ -551,7 +552,7 @@ plugins:
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
         'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
         # Catalog to Sync redirect
-        'source-datastore/sync.md': 'source-datastore/operations/catalog.md'
+        'source-datastore/sync.md': 'source-datastore/operations/sync.md'
         # AI integrations redirects (from main)
         'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
         'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'

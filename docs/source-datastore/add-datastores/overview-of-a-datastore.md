@@ -109,7 +109,7 @@ Once a datastore is added in Qualytics, you can perform three key operations to 
 
    This operation detects new, changed, or removed containers and fields in the source datastore. It works incrementally, comparing the current state against what Qualytics already knows and only processing the differences. It identifies incremental fields for scans and allows you to recreate or delete containers, streamlining data organization and enhancing discovery.
 
-   For more details about the sync operation, refer to the "[**Sync Operation**](../../source-datastore/operations/catalog.md)" document.
+   For more details about the sync operation, refer to the "[**Sync Operation**](../../source-datastore/operations/sync.md)" document.
 
 **2. Profile Operation**
 

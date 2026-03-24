@@ -16,7 +16,7 @@ By setting up a datastore and establishing a connection to your data source (dat
 The Sync operation detects new, changed, or removed containers and fields by comparing the current datastore state against what Qualytics already knows. It works incrementally, only processing the differences. This ensures a solid foundation for the subsequent Profile and Scan operations.
 
 !!! note
-    For more information, please refer to the [Sync Operation](../source-datastore/operations/catalog.md) Documentation.
+    For more information, please refer to the [Sync Operation](../source-datastore/operations/sync.md) Documentation.
 
 **3. Profile Operation**
 
