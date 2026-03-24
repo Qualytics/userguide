@@ -17,7 +17,7 @@ For more steps, refer to the [windows machine documentation](windows-machine.md)
 ## Installation – Qualytics CLI
 
 This page points you to the **Qualytics CLI Overview**, where you can find installation and initialization instructions.
-For more steps, refer to the [qualytics CLI documentation](../cli/overview-of-qualytics-cli.md).
+For more steps, refer to the [Qualytics CLI documentation](../cli/overview.md).
 
 ## Automation Setup Using Qualytics CLI
 
