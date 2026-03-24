@@ -19,6 +19,27 @@ Users can view source records with selectable display limits of 10, 100, 1,000, 
 
 ![record](../../assets/anomalies/details/source-record/visualization.png)
 
+## Force Refresh Source Records
+
+Source records are cached locally for up to **8 hours** to improve performance and reduce unnecessary API calls. However, if the underlying data has changed or a new scan has been run, you may want to fetch the most recent version of the source records.
+
+The **Force Refresh** button allows you to bypass the local cache and retrieve the latest available source records directly from the API. This ensures you are always viewing the most up-to-date data without waiting for the cache to expire.
+
+### How to Force Refresh
+
+**Step 1:** Navigate to the **Source Records** section, either through the **Anomaly Details** modal or the **Anomaly Overview** page.
+
+**Step 2:** Click the **Refresh** button :material-refresh: located in the source records toolbar, next to the download button.
+
+![force-refresh](../../assets/anomalies/details/source-record/force-refresh.png)
+
+**Step 3:** The source records table will display a loading indicator while fetching the latest data from the API.
+
+!!! note
+    After refreshing, a tooltip on the refresh button displays the **last updated timestamp**, so you can always verify when the data was last fetched.
+
+![force-refresh-tooltip](../../assets/anomalies/details/source-record/force-refresh-tooltip.png)
+
 ## Download Source Record
 
 User can download the source records that were captured for an anomaly during the scan run. The download always includes only the records that were selected to be stored in the [scan settings](../../source-datastore/operations/scan.md#configuration) at the time the scan was configured.

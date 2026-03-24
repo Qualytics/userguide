@@ -38,7 +38,9 @@ Legend:
 | View Anomalies               | ✅          | ✅        | ✅         | ✅        | ✅             |
 | View Anomaly Source Records  | ❌          | ✅        | ✅         | ✅        | ✅             |
 | Change Anomaly Status        | ❌          | ❌        | ❌         | ✅        | ✅             |
+| Edit Anomaly Description     | ❌          | ❌        | ❌         | ❌        | ✅             |
 | Add Comment to Anomaly       | ❌          | ✅        | ✅         | ✅        | ✅             |
+| Link/Create/Unlink Tickets   | ❌          | ❌        | ❌         | ✅        | ✅             |
 | Delete Enrichment Datastore  | ❌          | ❌        | ❌         | ❌        | ❌             |
 | View Enrichment Datastore    | ❌          | ✅        | ✅         | ✅        | ✅             |
 | Preview Enrichment Datastore | ❌          | ✅        | ✅         | ✅        | ✅             |
