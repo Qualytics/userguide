@@ -22,11 +22,11 @@ flowchart TD
 
 **Step 1:** Click on **Email.**
 
-![notification](../../../assets/flows/notifications/email/notification-49.png)
+![select-email](../../../assets/flows/notifications/email/select-email.png)
 
 A panel **Email Settings** will appear on the right-hand side, allowing you to add email addresses, specify an email subject, and configure the notification message.
 
-![notification](../../../assets/flows/notifications/email/notification-50.png)
+![email-settings-panel](../../../assets/flows/notifications/email/email-settings-panel.png)
 
 | No. | Field | Description |
 | :---- | :---- | :---- |
@@ -34,18 +34,18 @@ A panel **Email Settings** will appear on the right-hand side, allowing you to a
 | 2. | Email Subject | Enter the subject line for the notification email. This helps recipients quickly identify the purpose and priority of the message in their inbox. |
 | 3. | Message | Text area to customize the notification message content with dynamic variables like `{{ flow_name }}`, `{{ operation_type }}`, and `{{ operation_result }}`. |
 
-![notification](../../../assets/flows/notifications/email/notification-51.png)
+![email-settings-fields](../../../assets/flows/notifications/email/email-settings-fields.png)
 
 !!! tip
     Use the autocomplete feature (triggered by `Ctrl+Space`) to insert variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. The autocomplete only suggests variables that are valid for the selected Flow trigger type.
 
 **Step 2:** Click the **Test Notification** button to send a test email to the provided address. If the email is successfully sent, you will receive a confirmation message indicating **"Notification successfully sent."**
 
-![test](../../../assets/flows/notifications/email/test-52.png)
+![test-notification-success](../../../assets/flows/notifications/email/test-notification-success.png)
 
 **Step 3:** Once all fields are configured, click the **Save** button to finalize the email notification setup.
 
-![save](../../../assets/flows/notifications/email/save-8.png)
+![save-button](../../../assets/flows/notifications/email/save-button.png)
 
 ## Message Variables
 

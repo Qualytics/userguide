@@ -2,7 +2,7 @@
 
 Notifications are Flow actions that deliver real-time alerts through external channels when data quality events occur. Every time a Flow trigger fires — whether from an anomaly detection, an operation completion, a partition scan, or a scheduled event — Qualytics resolves the configured message variables, builds a channel-appropriate payload, and dispatches it to the target destination.
 
-![notification](../../assets/flows/notifications/notification-44.png)
+![notification-channels](../../assets/flows/notifications/notification-channels.png)
 
 ## Why Notifications Matter
 

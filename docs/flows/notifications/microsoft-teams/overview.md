@@ -23,29 +23,29 @@ flowchart TD
 
 **Step 1:** Click on **Microsoft Teams.**
 
-![notification](../../../assets/flows/notifications/microsoft-teams/notification-59.png)
+![select-microsoft-teams](../../../assets/flows/notifications/microsoft-teams/select-microsoft-teams.png)
 
 A panel **Microsoft Teams Settings** will appear on the right-hand side, allowing you to select a channel and configure the notification message.
 
-![notification](../../../assets/flows/notifications/microsoft-teams/notification-60.png)
+![teams-settings-panel](../../../assets/flows/notifications/microsoft-teams/teams-settings-panel.png)
 
 | No. | Field | Description |
 | :---- | :---- | :---- |
 | 1. | Channel | Select the Teams channel where the notification should be sent. |
 | 2. | Message | Text area to customize the notification message content with dynamic placeholders like `{{ flow_name }}`, `{{ operation_type }}`, and `{{ operation_result }}`. |
 
-![notification](../../../assets/flows/notifications/microsoft-teams/notification-61.png)
+![teams-settings-fields](../../../assets/flows/notifications/microsoft-teams/teams-settings-fields.png)
 
 !!! tip
     Use the autocomplete feature (triggered by `Ctrl+Space`) to insert variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. The autocomplete only suggests variables that are valid for the selected Flow trigger type.
 
 **Step 2:** Click the **"Test Notification"** button to send a test message to the selected channel. If the message is successfully sent, you will receive a confirmation notification indicating **"Notification successfully sent".**
 
-![test](../../../assets/flows/notifications/microsoft-teams/test-52.png)
+![test-notification-success](../../../assets/flows/notifications/microsoft-teams/test-notification-success.png)
 
 **Step 3:** Once all fields are configured, click the **Save** button to finalize the Microsoft Teams notification setup.
 
-![save](../../../assets/flows/notifications/microsoft-teams/save-8.png)
+![save-button](../../../assets/flows/notifications/microsoft-teams/save-button.png)
 
 ## Message Variables
 

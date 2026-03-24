@@ -57,7 +57,7 @@ A prompt appears stating **Notification successfully sent** once the notificatio
 
 **Step 4:** After confirming that the notification was received successfully, return and click the Save button.
 
-![save](../../../assets/flows/notifications/slack/save-8.png)
+![save-button](../../../assets/flows/notifications/slack/save-button.png)
 
 ## Examples of Trigger Messages
 

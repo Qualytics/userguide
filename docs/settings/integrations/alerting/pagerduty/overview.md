@@ -2,7 +2,7 @@
 
 PagerDuty integration in Qualytics connects your data quality platform directly to PagerDuty's incident management workflow. When data quality events occur — anomalies detected, operations completed, or thresholds breached — Qualytics automatically triggers PagerDuty incidents, ensuring the right people are notified at the right time.
 
-![pagerduty-overview](../../../../docs/assets/integrations/alerting/pagerduty/pagerduty-overview/pagerduty-overview.png)
+![pagerduty-overview](../../../../assets/integrations/alerting/pagerduty/pagerduty-overview/pagerduty-overview.png)
 
 ## Why PagerDuty?
 

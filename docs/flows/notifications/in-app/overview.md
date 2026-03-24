@@ -22,22 +22,22 @@ flowchart TD
 
 **Step 1:** Click on **In App.**
 
-![notification](../../../assets/flows/notifications/in-app/notification-45.png)
+![select-in-app](../../../assets/flows/notifications/in-app/select-in-app.png)
 
 A panel **In App Settings** will appear on the right-hand side, allowing you to configure the notification message.
 
-![notification](../../../assets/flows/notifications/in-app/notification-46.png)
+![in-app-settings-panel](../../../assets/flows/notifications/in-app/in-app-settings-panel.png)
 
 **Message:** Enter your custom message in the Message field. You can use dynamic variables that will be replaced with real values when the notification is sent. The available variables depend on the Flow trigger type (e.g., Anomaly, Operation, Partition Scan).
 
-![notification](../../../assets/flows/notifications/in-app/notification-47.png)
+![in-app-message-variables](../../../assets/flows/notifications/in-app/in-app-message-variables.png)
 
 !!! tip
     Use the autocomplete feature (triggered by `Ctrl+Space`) to insert variables such as `{{ flow_name }}`, `{{ container_name }}`, and `{{ datastore_name }}`. The autocomplete only suggests variables that are valid for the selected Flow trigger type.
 
 **Step 2:** After configuring the message, click **Save** to finalize the settings.
 
-![save](../../../assets/flows/notifications/in-app/save-8.png)
+![save-button](../../../assets/flows/notifications/in-app/save-button.png)
 
 ## Message Variables
 

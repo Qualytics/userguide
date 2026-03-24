@@ -25,17 +25,17 @@ flowchart TD
 
 **Step 1:** Click on **PagerDuty.**
 
-![notification](../../../assets/flows/notifications/pagerduty/notification-64.png)
+![select-pagerduty](../../../assets/flows/notifications/pagerduty/select-pagerduty.png)
 
 A **PagerDuty Settings** panel will appear on the right-hand side, enabling users to configure and send PagerDuty notifications.
 
-![notification](../../../assets/flows/notifications/pagerduty/notification-65.png)
+![pagerduty-settings-panel](../../../assets/flows/notifications/pagerduty/pagerduty-settings-panel.png)
 
 ### Message
 
 Enter your custom message using variables in the **Message** field. This becomes the incident summary in PagerDuty — the first thing responders see when an incident is triggered.
 
-![notification](../../../assets/flows/notifications/pagerduty/notification-68.png)
+![pagerduty-message-variables](../../../assets/flows/notifications/pagerduty/pagerduty-message-variables.png)
 
 !!! tip
     You can write your custom notification message by utilizing the autocomplete feature. This feature allows you to easily insert internal variables such as `{{ flow_name }}`, `{{ operation_type }}`, and `{{ datastore_name }}`. As you start typing, the autocomplete will suggest and recommend relevant variables in the dropdown.
@@ -47,7 +47,7 @@ Enter your custom message using variables in the **Message** field. This becomes
 
 Select the appropriate PagerDuty severity level to categorize incidents based on their urgency and impact. The severity controls how PagerDuty handles the incident based on your service's urgency settings and notification rules.
 
-![notification](../../../assets/flows/notifications/pagerduty/notification-67.png)
+![severity-dropdown](../../../assets/flows/notifications/pagerduty/severity-dropdown.png)
 
 | Severity | Description | Recommended Use |
 | :--- | :--- | :--- |
@@ -83,11 +83,11 @@ To override, enter the Routing Key of the target PagerDuty service in the **Rout
 !!! warning
     Unlike connection validation (which uses Change Events), test notifications **will create an incident** in your PagerDuty service.
 
-![test](../../../assets/flows/notifications/pagerduty/test-52.png)
+![test-notification-success](../../../assets/flows/notifications/pagerduty/test-notification-success.png)
 
 **Step 3:** Once you have entered all the values, then click on the **Save** button.
 
-![save](../../../assets/flows/notifications/pagerduty/save-8.png)
+![save-button](../../../assets/flows/notifications/pagerduty/save-button.png)
 
 ## Message Variables
 
