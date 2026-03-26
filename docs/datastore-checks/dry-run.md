@@ -44,6 +44,9 @@ Highlights any violations detected during the dry run, such as constraint breach
 
 The **Source Records** section presents a detailed, tabular view of all records that were evaluated by the selected quality check. This section is designed to help users investigate the underlying data issues that may have led to anomalies, offering clear visibility into the records that failed to meet the defined constraint.
 
+!!! info "Masked Fields in Dry Runs"
+    If a container contains [masked fields](../fields/field-status/concepts/field-masking.md), their values are automatically obfuscated in dry run source records. Masking in dry runs is **unconditional** — there is no inline reveal option. This ensures sensitive data is protected even during ad-hoc check testing. To investigate specific masked values, use the [Data Preview](../container/data-preview.md#masked-fields-in-data-preview) or [Anomaly Source Records](../anomalies/source-record.md#masked-fields-in-source-records) reveal controls instead.
+
 ![source-records](../assets/datastore-checks/dry-run/source-records-light.png)
 
 ### Sort Options

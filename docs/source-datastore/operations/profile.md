@@ -328,6 +328,18 @@ To define a custom schedule, enter the appropriate Cron expression in the **Cust
 !!! note 
     You will receive a notification when the profile operation is completed.
 
+## Field Masking and Profiling
+
+Profiling runs normally on [masked fields](../../fields/field-status/concepts/field-masking.md) — masking does not affect the collection of statistical metadata. The platform continues to compute all profile metrics (distinct values, min/max, mean, standard deviation, completeness, etc.) using the actual source data.
+
+However, when profile results are displayed or exported, masked field values are obfuscated:
+
+- **Field Profile Histograms** in the UI show obfuscated bucket values for masked fields
+- **Exported Field Profiles** (`_field_profiles_export`) written to the enrichment datastore contain obfuscated histogram values for masked fields
+
+!!! info
+    To obtain revealed histogram data in exported field profiles, pass `include_masked=true` when triggering the Export operation via the API. This parameter is not available in the UI. See [Field Masking and Export](../../container/operations/export-operation.md#field-masking-and-export) for details.
+
 ## Operation Insights
 
 When the profile operation is completed, you will receive the notification and can navigate to the Activity tab for the datastore on which you triggered the Profile Operation and learn about the operation results.
