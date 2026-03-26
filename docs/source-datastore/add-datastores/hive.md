@@ -45,6 +45,45 @@ GRANT SELECT ON ALL TABLES IN DATABASE <database_name> TO USER qualytics_read;
 | `Could not open client transport`              | HiveServer2 is not reachable or the port (default 10000) is incorrect        | Verify the host, port, and that HiveServer2 is running                                  |
 | `Database does not exist`                      | The database name (schema) in the connection form is incorrect               | Verify the database name with `SHOW DATABASES` in HiveQL                                |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `GSS initiate failed` (Kerberos) or `Could not open client transport` indicates an authentication or transport problem.
+
+Common causes:
+
+- **Kerberos ticket expired** — the Kerberos ticket has expired and needs to be renewed with `kinit`.
+- **Wrong principal** — the Kerberos principal in the connection form does not match the one configured in the Hive server.
+- **KDC unreachable** — the Key Distribution Center (KDC) is not reachable from the Qualytics server.
+- **HiveServer2 not running** — the HiveServer2 process is not started or has crashed.
+
+!!! note
+    If using basic authentication (username/password), ensure HiveServer2 is configured to accept password-based authentication (`hive.server2.authentication=CUSTOM` or `LDAP`).
+
+#### Permission Errors
+
+The error `Permission denied: user does not have SELECT privilege` means the user authenticated successfully but lacks the necessary Hive grants.
+
+Common causes:
+
+- **Missing `SELECT` on database** — the user does not have `SELECT` on the target database.
+- **Missing `SELECT` on table** — the user has database-level access but not table-level access.
+- **Ranger/Sentry policy** — if Apache Ranger or Sentry is enabled, permissions are managed through policies rather than Hive `GRANT` statements.
+
+#### Connection Errors
+
+The error `Could not open client transport` or `User is not allowed to impersonate` indicates a transport or proxy user issue.
+
+Common causes:
+
+- **HiveServer2 not reachable** — the host or port (default 10000) is incorrect.
+- **Proxy user not allowed** — the `hadoop.proxyuser.<hive_user>.users` property in `core-site.xml` does not include the Qualytics user.
+- **SSL required** — HiveServer2 requires SSL but the connection is not configured for it.
+
+!!! tip
+    Start by confirming credentials and Kerberos configuration are valid (authentication errors), then verify Hive grants or Ranger policies (permission errors), and finally check HiveServer2 connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Hive is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

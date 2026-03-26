@@ -31,6 +31,25 @@ The actual permissions depend on the Presto security model configured for your d
 !!! note
     Qualytics does not support Presto as an enrichment datastore. You can point to a different enrichment datastore instead.
 
+### Example: File-Based Access Control Configuration
+
+If your Presto deployment uses file-based access control (`rules.json`), ensure the Qualytics user has `SELECT` access to the target catalog and schema:
+
+```json
+{
+  "catalogs": [
+    {
+      "user": "qualytics_read",
+      "catalog": "<catalog_name>",
+      "allow": "read-only"
+    }
+  ]
+}
+```
+
+!!! tip
+    If your Presto deployment uses connector-level security (e.g., Hive Metastore), grant the equivalent `SELECT` permissions directly in the underlying data source instead of using `rules.json`.
+
 ### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
@@ -40,6 +59,44 @@ The actual permissions depend on the Presto security model configured for your d
 | `Schema does not exist`                        | The schema name does not exist in the specified catalog                       | Verify available schemas with `SHOW SCHEMAS FROM <catalog>`                             |
 | `Connection refused`                           | The Presto coordinator is not reachable or the port (default 8080) is incorrect | Verify the host, port, and that the Presto coordinator is running                      |
 | `Authentication failed`                        | Incorrect username or password, or the Presto server requires a different authentication method | Verify credentials and check if the Presto server uses LDAP, Kerberos, or password file authentication |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Authentication failed` indicates that the credentials are incorrect or the authentication method does not match the server configuration.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one configured in the Presto server.
+- **Wrong authentication method** — the Presto server uses LDAP or Kerberos, but the connection form provides basic username/password.
+- **HTTPS required** — the Presto coordinator requires HTTPS connections, but the connection is using HTTP.
+
+!!! note
+    Presto authentication is configured at the coordinator level. Check the `password-authenticator.properties` file for the configured authentication method.
+
+#### Permission Errors
+
+The error `Access Denied: Cannot select from table` means the user authenticated successfully but lacks access to the target table.
+
+Common causes:
+
+- **File-based access control** — the `rules.json` file does not grant `SELECT` access to the Qualytics user on the target catalog or schema.
+- **Connector-level security** — the underlying data source (e.g., Hive Metastore) does not grant read access to the user.
+- **Catalog-level restriction** — the user has access to the schema but the catalog itself is restricted.
+
+#### Connection Errors
+
+The error `Connection refused` or `Catalog does not exist` indicates a connectivity or configuration issue.
+
+Common causes:
+
+- **Coordinator not reachable** — the Presto coordinator host or port (default 8080) is incorrect.
+- **Wrong catalog name** — the catalog name in the connection form does not match a configured Presto catalog.
+- **Coordinator not running** — the Presto coordinator process is not started.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify access control rules (permission errors), and finally check coordinator connectivity (connection errors).
 
 ## Add a Source Datastore
 

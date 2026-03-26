@@ -32,6 +32,19 @@ Dremio supports two authentication methods:
 | **Basic (Username & Password)** | Use the Dremio username and password directly                            |
 | **Personal Access Token (PAT)** | Generate a PAT from **Account Settings > Personal Access Tokens** in Dremio and use it as the authentication credential |
 
+### Example: Granting Permissions in Dremio
+
+In the Dremio UI, navigate to the target source or dataset and grant `SELECT` access to the Qualytics user:
+
+```sql
+GRANT SELECT ON TABLE <source>.<schema>.<dataset> TO USER qualytics_read;
+-- Or grant access to all datasets in a schema:
+GRANT SELECT ON SCHEMA <source>.<schema> TO USER qualytics_read;
+```
+
+!!! tip
+    If using **Dremio Cloud**, ensure the Project ID is included in the connection form. You can find the Project ID in the Dremio Cloud project settings.
+
 ### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
@@ -42,6 +55,44 @@ Dremio supports two authentication methods:
 | `Connection refused`                           | The Dremio coordinator is not reachable or the port (default 32010) is incorrect | Verify the host, port, and that the Dremio coordinator is running                    |
 | `Project ID is required` (Cloud only)          | The Dremio Cloud project ID was not provided in the connection form           | Add the Project ID from your Dremio Cloud project settings                              |
 | `SSL handshake failed`                         | SSL is required but not configured, or the SSL certificate is not trusted     | Enable SSL in the connection parameters or add the Dremio certificate to the trust store |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Authentication failed` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the Dremio user account.
+- **Invalid PAT** — the Personal Access Token is expired, revoked, or was generated in a different Dremio instance.
+- **PAT permissions** — the PAT does not have sufficient permissions for the requested operation.
+
+!!! note
+    Dremio Personal Access Tokens are user-scoped. Ensure the PAT belongs to a user with the required permissions on the target datasets.
+
+#### Permission Errors
+
+The error `Permission denied on dataset` means the user authenticated successfully but lacks access to the target dataset.
+
+Common causes:
+
+- **Missing `SELECT` on dataset** — the user does not have `SELECT` permission on the specific dataset.
+- **Source not shared** — in Dremio, datasets derived from a source must be explicitly shared with users.
+- **Project scope** (Cloud only) — the dataset exists in a different project than the one configured in the connection.
+
+#### Connection Errors
+
+The error `Connection refused` or `SSL handshake failed` indicates a connectivity issue.
+
+Common causes:
+
+- **Coordinator not reachable** — the Dremio coordinator host or port (default 32010) is incorrect.
+- **SSL not configured** — the Dremio server requires SSL but the connection is not configured for it.
+- **Project ID missing** (Cloud only) — Dremio Cloud requires a Project ID to scope queries.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify dataset permissions (permission errors), and finally check coordinator connectivity and SSL configuration (connection errors).
 
 ## Add the Source Datastore
 

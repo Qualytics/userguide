@@ -73,6 +73,45 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT, INSERT, UPDATE, D
 | `permission denied to create relation`         | The enrichment user lacks `CREATE` on the schema                             | Run `GRANT CREATE ON SCHEMA <schema_name> TO <user>`                                    |
 | `Connection refused`                           | The Redshift cluster is not reachable or the security group blocks the Qualytics IP | Add the Qualytics IP to the Redshift cluster security group inbound rules          |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `FATAL: password authentication failed` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **User does not exist** — the username was misspelled or was never created.
+- **Master user required** — some operations may require the Redshift cluster's master user credentials.
+
+!!! note
+    Redshift uses PostgreSQL-compatible authentication. Check the Redshift cluster's parameter group for authentication settings.
+
+#### Permission Errors
+
+The error `permission denied for schema` or `permission denied for relation` means the user authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Missing `USAGE` on schema** — the user cannot access the schema even if table-level grants exist.
+- **Missing `SELECT` on tables** — the user has schema access but cannot read specific tables.
+- **Default privileges not set** — new tables created by other users after the initial grant are not automatically accessible. Use `ALTER DEFAULT PRIVILEGES` to fix this.
+- **Table owner mismatch** — the table was created by a different user, and default privileges were not granted.
+
+#### Connection Errors
+
+The error `Connection refused` means the Redshift cluster is not reachable from the Qualytics server.
+
+Common causes:
+
+- **Security group** — the Redshift cluster's VPC security group does not allow inbound connections from the Qualytics IP on port 5439.
+- **Cluster not publicly accessible** — the cluster was created without public accessibility and Qualytics is connecting from outside the VPC.
+- **Cluster paused** — the Redshift cluster is in a paused state and needs to be resumed.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check network connectivity and security group rules (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Redshift is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

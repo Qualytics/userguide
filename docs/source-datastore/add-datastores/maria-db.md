@@ -74,6 +74,44 @@ FLUSH PRIVILEGES;
 | `CREATE command denied to user`                | The enrichment user lacks `CREATE` on the database                           | Run `GRANT CREATE ON <database_name>.* TO ‘<user>’@’%’`                                 |
 | `SSL connection is required`                   | The MariaDB server enforces SSL but the connection is not configured for it  | Enable SSL in the connection parameters or configure the MariaDB user to not require SSL |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Access denied for user` indicates that the credentials are incorrect or the user does not have access from the connecting host.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **Host restriction** — the user was created with a specific host (e.g., `'user'@'localhost'`) but Qualytics connects from a different IP.
+- **User does not exist** — the username was misspelled or was never created.
+
+!!! note
+    MariaDB differentiates users by both username and host. `'qualytics'@'localhost'` and `'qualytics'@'%'` are treated as two separate users with potentially different passwords and permissions.
+
+#### Permission Errors
+
+The error `SELECT command denied to user` means the user authenticated successfully but lacks the necessary grants on the target database.
+
+Common causes:
+
+- **Missing `SELECT` grant** — the user does not have `SELECT` on the target database.
+- **Wrong database** — the user has permissions on a different database than the one specified in the connection form.
+- **Grant not flushed** — after running `GRANT` statements, `FLUSH PRIVILEGES` was not executed.
+
+#### Connection Errors
+
+The error `Host is not allowed to connect` means the MariaDB server rejects the connection from the Qualytics host IP.
+
+Common causes:
+
+- **User host restriction** — the user was created with `'user'@'localhost'` instead of `'user'@'%'`.
+- **Firewall or network** — a firewall is blocking connections on port 3306.
+- **Bind address** — MariaDB is configured to listen only on `127.0.0.1` (`bind-address` in `my.cnf`).
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify database permissions (permission errors), and finally check network connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. MariaDB is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

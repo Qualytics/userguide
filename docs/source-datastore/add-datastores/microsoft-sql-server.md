@@ -90,6 +90,45 @@ GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO qualytics_readwrite;
 | `CREATE TABLE permission denied in database`   | The enrichment user lacks `CREATE TABLE` permission                          | Run `GRANT CREATE TABLE TO <user>`                                                      |
 | `Cannot find the object because it does not exist or you do not have permissions` | The user lacks `VIEW DEFINITION` on the schema | Run `GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO <user>`                          |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Login failed for user` indicates that the credentials are incorrect or the login does not exist at the server level.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the login.
+- **Login does not exist** — the login was never created at the server level with `CREATE LOGIN`.
+- **User not mapped** — the login exists but no user is mapped to it in the target database.
+- **Service Principal misconfiguration** — when using Entra ID authentication, the Client ID, Client Secret, or Tenant ID is incorrect.
+
+!!! note
+    SQL Server distinguishes between **logins** (server-level) and **users** (database-level). A login must exist at the server level, and a corresponding user must be created in each target database.
+
+#### Permission Errors
+
+The error `The SELECT permission was denied on object` means the user authenticated successfully but lacks the necessary grants on the target schema.
+
+Common causes:
+
+- **Missing `SELECT ON SCHEMA`** — the user does not have `SELECT` on the target schema.
+- **Wrong schema** — the user has permissions on `dbo` but the target tables are in a different schema.
+- **Missing `VIEW DEFINITION`** — the user cannot see object metadata needed for catalog discovery.
+
+#### Connection Errors
+
+The error `Cannot open database requested by the login` means the user does not have access to the specified database.
+
+Common causes:
+
+- **No user in database** — the login exists but `CREATE USER ... FOR LOGIN` was not run in the target database.
+- **Database does not exist** — the database name in the connection form is incorrect.
+- **Database is offline** — the target database is in a recovery or offline state.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check database access (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Microsoft SQL Server is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

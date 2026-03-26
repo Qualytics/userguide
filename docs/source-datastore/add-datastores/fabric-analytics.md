@@ -117,6 +117,21 @@ Qualytics connects to Fabric Analytics through the **Microsoft JDBC driver for S
 !!! note
     Qualytics does not support Fabric Analytics as an enrichment datastore. You can point to a different enrichment datastore instead.
 
+#### Example: Verifying Service Principal Access
+
+After configuring the Service Principal, you can verify access using the Azure CLI:
+
+```bash
+# Verify the app registration exists
+az ad app show --id <client_id>
+
+# Verify the Service Principal has the Contributor role on the Fabric workspace
+az role assignment list --assignee <client_id> --scope <workspace_resource_id>
+```
+
+!!! tip
+    You can also verify the connection by using the SQL analytics endpoint directly with a SQL client tool (e.g., Azure Data Studio) before configuring it in Qualytics.
+
 #### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
@@ -126,6 +141,44 @@ Qualytics connects to Fabric Analytics through the **Microsoft JDBC driver for S
 | `Service principals are not allowed`           | The Fabric tenant setting **"Service principals can use Fabric APIs"** is disabled | Enable the setting in the Fabric Admin Portal under **Tenant settings**                 |
 | `The SELECT permission was denied on object`   | The Service Principal lacks `SELECT` on one or more tables                    | Verify the workspace role grants sufficient read access to the Lakehouse/Warehouse      |
 | `SQL analytics endpoint is not available`      | The SQL analytics endpoint is not enabled for the Lakehouse/Warehouse        | Ensure the SQL analytics endpoint is enabled in the Fabric workspace settings           |
+
+#### Detailed Troubleshooting Notes
+
+##### Authentication Errors
+
+The error `Login failed for user` indicates that the Service Principal credentials are incorrect or expired.
+
+Common causes:
+
+- **Expired Client Secret** — the Client Secret has a configurable expiration date. It may have expired since the connection was created.
+- **Wrong Tenant ID** — the Tenant ID does not match the Microsoft Entra ID tenant where the app is registered.
+- **Wrong Client ID** — the Client ID (Application ID) does not match the app registration.
+
+!!! note
+    Service Principal Client Secrets have an expiration date configured during creation. Set a reminder to rotate the secret before it expires to avoid connection failures.
+
+##### Permission Errors
+
+The error `The SELECT permission was denied on object` or `Service principals are not allowed` means the Service Principal authenticated successfully but lacks the necessary access.
+
+Common causes:
+
+- **Workspace role insufficient** — the Service Principal needs at least the **Contributor** role on the Fabric workspace.
+- **Tenant setting disabled** — the **"Service principals can use Fabric APIs"** setting is not enabled in the Fabric Admin Portal.
+- **Security group restriction** — the tenant setting is enabled but restricted to a specific security group that does not include the Service Principal.
+
+##### Connection Errors
+
+The error `SQL analytics endpoint is not available` or `Cannot open database requested by the login` indicates a configuration issue.
+
+Common causes:
+
+- **SQL endpoint not enabled** — the SQL analytics endpoint is not enabled for the Lakehouse or Warehouse.
+- **Wrong endpoint** — the SQL analytics endpoint URL does not match the target Lakehouse/Warehouse.
+- **Fabric capacity paused** — the Fabric capacity is paused, making the SQL endpoint unavailable.
+
+!!! tip
+    Start by confirming Service Principal credentials are valid (authentication errors), then verify workspace roles and tenant settings (permission errors), and finally check the SQL analytics endpoint availability (connection errors).
 
 ### Retrieve the SQL Analytics Endpoint
 

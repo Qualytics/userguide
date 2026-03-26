@@ -116,6 +116,31 @@ Specific permissions included in this role:
 !!! note
     If the storage account uses **hierarchical namespace** (Azure Data Lake Storage Gen2), ensure the Service Principal also has appropriate ACL permissions at the directory level if RBAC alone is not sufficient.
 
+### Example: Assigning RBAC Roles via Azure CLI
+
+Replace `<service_principal_id>`, `<storage_account_name>`, and `<container_name>` with your actual values.
+
+**Source Datastore (Read-Only):**
+
+```bash
+az role assignment create \
+  --assignee <service_principal_id> \
+  --role "Storage Blob Data Reader" \
+  --scope "/subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>/blobServices/default/containers/<container_name>"
+```
+
+**Enrichment Datastore (Read-Write):**
+
+```bash
+az role assignment create \
+  --assignee <service_principal_id> \
+  --role "Storage Blob Data Contributor" \
+  --scope "/subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>/blobServices/default/containers/<container_name>"
+```
+
+!!! tip
+    You can also assign roles through the Azure Portal by navigating to the storage account or container, selecting **Access Control (IAM)**, and clicking **Add role assignment**.
+
 ### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
@@ -125,6 +150,46 @@ Specific permissions included in this role:
 | `ContainerNotFound`                            | The container name in the URI does not exist                                 | Verify the container name in the Azure Portal under the storage account's **Containers** section |
 | `InvalidUri`                                   | The URI format is incorrect — it must follow `abfss://<container>@<account>.dfs.core.windows.net` | Verify the URI format matches the expected pattern                                      |
 | `This request is not authorized to perform this operation` | The Service Principal has `Storage Blob Data Reader` but the operation requires write access | Upgrade the role assignment to `Storage Blob Data Contributor` for enrichment datastores |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `AuthenticationFailed` indicates that the credentials are incorrect or the authentication method is misconfigured.
+
+Common causes:
+
+- **Incorrect access key** — the storage account access key was copied incorrectly or has been rotated since the connection was created.
+- **Wrong account name** — the account name does not match the storage account.
+- **Expired Client Secret** — when using Service Principal authentication, the Client Secret has expired.
+- **Wrong Tenant ID** — the Tenant ID does not match the Microsoft Entra ID tenant where the app is registered.
+
+!!! note
+    Access keys provide the simplest authentication but grant full access to the storage account. For least-privilege access, use Service Principal authentication with RBAC role assignments scoped to the specific container.
+
+#### Permission Errors
+
+The error `AuthorizationPermissionMismatch` or `This request is not authorized to perform this operation` means the credentials are valid but lack the required permissions.
+
+Common causes:
+
+- **Missing RBAC role** — the Service Principal does not have `Storage Blob Data Reader` (source) or `Storage Blob Data Contributor` (enrichment) assigned.
+- **Role assigned at wrong scope** — the role is assigned at the subscription or resource group level but not at the container level, or vice versa.
+- **ACL restrictions** — when using hierarchical namespace (Data Lake Storage Gen2), POSIX ACLs may restrict access even if RBAC roles are assigned.
+- **Source vs. enrichment mismatch** — the Service Principal has `Storage Blob Data Reader` but the operation requires write access (enrichment).
+
+#### Connection Errors
+
+The error `ContainerNotFound` or `InvalidUri` indicates a configuration issue with the URI or container name.
+
+Common causes:
+
+- **Container does not exist** — the container name in the URI was misspelled or the container has not been created.
+- **Invalid URI format** — the URI must follow `abfss://<container>@<account>.dfs.core.windows.net`. Missing the `abfss://` scheme or using the wrong account suffix (`.blob.core.windows.net` instead of `.dfs.core.windows.net`) will cause failures.
+- **Storage account firewall** — the storage account firewall blocks connections from the Qualytics IP.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify RBAC role assignments (permission errors), and finally check the URI format and container existence (connection errors).
 
 ## Add a Source Datastore
 

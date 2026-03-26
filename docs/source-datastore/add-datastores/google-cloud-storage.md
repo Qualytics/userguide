@@ -89,6 +89,29 @@ When using Google Cloud Storage as an enrichment datastore, the following additi
 !!! tip
     You can grant all required permissions (read + write) by assigning the **Storage Object Admin** (`roles/storage.objectAdmin`) role to the service account on the target bucket.
 
+### Example: Assigning Roles via gcloud CLI
+
+Replace `<service_account_email>` and `<bucket_name>` with your actual values.
+
+**Source Datastore (Read-Only):**
+
+```bash
+gsutil iam ch \
+  serviceAccount:<service_account_email>:roles/storage.objectViewer \
+  gs://<bucket_name>
+```
+
+**Enrichment Datastore (Read-Write):**
+
+```bash
+gsutil iam ch \
+  serviceAccount:<service_account_email>:roles/storage.objectAdmin \
+  gs://<bucket_name>
+```
+
+!!! tip
+    You can also assign roles through the Google Cloud Console by navigating to the bucket, selecting **Permissions**, and clicking **Grant Access**.
+
 ### GCS Roles Summary
 
 | Role                                          | Use Case                  | Permissions Included                                                  |
@@ -105,6 +128,45 @@ When using Google Cloud Storage as an enrichment datastore, the following additi
 | `Invalid credentials`                          | The Access Key / Secret Key pair is incorrect or the service account key file is malformed | Regenerate the HMAC keys from **Cloud Storage > Settings > Interoperability** or re-download the service account key |
 | `The caller does not have storage.objects.list access` | The service account has object-level access but lacks bucket-level `list` permission | Assign the `Storage Object Viewer` role at the bucket level (not just object level)    |
 | `The caller does not have storage.objects.create access` | The enrichment service account lacks write permissions                | Upgrade the role assignment from `Storage Object Viewer` to `Storage Object Admin`      |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Invalid credentials` indicates that the HMAC keys or service account key are incorrect or malformed.
+
+Common causes:
+
+- **Incorrect Access Key / Secret Key** — the HMAC key pair was copied incorrectly or has been deleted.
+- **Malformed service account key** — the JSON key file is corrupted, truncated, or belongs to a different project.
+- **Service account disabled** — the service account has been disabled in the Google Cloud Console.
+
+!!! note
+    HMAC keys are tied to a specific service account. If the service account is deleted or disabled, the HMAC keys will stop working even if they have not been explicitly revoked.
+
+#### Permission Errors
+
+The error `403 Forbidden` or `The caller does not have storage.objects.list access` means the credentials are valid but lack the required IAM permissions.
+
+Common causes:
+
+- **Missing IAM role** — the service account does not have `Storage Object Viewer` (source) or `Storage Object Admin` (enrichment) assigned on the target bucket.
+- **Role assigned at wrong level** — the role is assigned at the project level but a bucket-level policy overrides it.
+- **Uniform bucket-level access** — if the bucket uses uniform bucket-level access (recommended), ensure IAM policies are set at the bucket level, not through ACLs.
+- **Source vs. enrichment mismatch** — the service account has `Storage Object Viewer` but the operation requires write access (enrichment).
+
+#### Connection Errors
+
+The error `404 Not Found: Bucket not found` indicates a configuration issue with the bucket name or URI.
+
+Common causes:
+
+- **Bucket does not exist** — the bucket name was misspelled or the bucket has been deleted.
+- **Wrong project** — the service account belongs to a different Google Cloud project than the bucket.
+- **Invalid URI format** — the URI must follow `gs://bucket-name`. Extra path segments or incorrect formatting will cause failures.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify IAM role assignments (permission errors), and finally check the bucket name and URI format (connection errors).
 
 ## Add a Source Datastore
 

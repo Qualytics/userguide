@@ -124,6 +124,45 @@ GRANT CREATE TABLE ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
 | `Cluster is not running`                       | The All-Purpose Cluster is stopped and `AUTO_RESUME` is not enabled          | Start the cluster manually or switch to a SQL Warehouse with auto-resume                |
 | `HTTP Path is invalid`                         | The HTTP Path in the connection form does not match the warehouse or cluster | Copy the correct HTTP Path from **SQL Warehouses > Connection Details** or **Compute > JDBC/ODBC** |
 
+#### Detailed Troubleshooting Notes
+
+##### Authentication Errors
+
+The error `INVALID_CREDENTIALS` indicates that the Personal Access Token (PAT) or OAuth credentials are invalid.
+
+Common causes:
+
+- **Expired PAT** — Personal Access Tokens have a configurable expiration date. The token may have expired since the connection was created.
+- **Revoked PAT** — the token was manually revoked from the Databricks workspace.
+- **Wrong workspace** — the PAT was generated in a different Databricks workspace than the one being connected to.
+- **OAuth secret expired** — when using OAuth M2M, the Service Principal's secret has expired.
+
+!!! note
+    Databricks PATs are workspace-scoped. A token generated in workspace A cannot be used to connect to workspace B.
+
+##### Permission Errors
+
+The error `User does not have USAGE permission` or `User does not have SELECT permission` means the user authenticated successfully but lacks Unity Catalog grants.
+
+Common causes:
+
+- **Missing `USAGE` on catalog** — the user cannot access the catalog. This is the most common issue — `USAGE` must be granted on both the catalog and the schema.
+- **Missing `SELECT` on schema** — the user has catalog access but cannot read tables in the specific schema.
+- **Unity Catalog not enabled** — the workspace uses the legacy Hive metastore instead of Unity Catalog, and permissions are managed differently.
+
+##### Compute Errors
+
+The error `Cluster is not running` or `HTTP Path is invalid` indicates a problem with the compute resource, not with data permissions.
+
+Common causes:
+
+- **Cluster stopped** — All-Purpose Clusters do not auto-resume by default. The cluster must be started manually or switched to a SQL Warehouse with auto-resume.
+- **Wrong HTTP Path** — the HTTP Path was copied incorrectly or the warehouse/cluster has been recreated with a new path.
+- **No compute access** — the user lacks `CAN USE` permission on the SQL Warehouse or cluster.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify Unity Catalog permissions (permission errors), and finally check compute resource availability (compute errors).
+
 ### Retrieve the Connection Details
 
 This section explains how to retrieve the connection details that you need to connect to Databricks.

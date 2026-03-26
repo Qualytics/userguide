@@ -79,6 +79,44 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT, INSERT, UPDATE, D
 | `permission denied for table`          | The role lacks `SELECT` on one or more tables                               | Run `GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO <role>`                      |
 | `permission denied to create table`    | The enrichment role lacks `CREATE` on the schema                            | Run `GRANT CREATE ON SCHEMA <schema_name> TO <role>`                                    |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `FATAL: password authentication failed` indicates that the credentials provided are incorrect or the role does not exist.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the role.
+- **Role does not exist** — the role name was misspelled or was never created.
+- **Authentication method mismatch** — the `pg_hba.conf` file requires a different authentication method (e.g., `md5` vs `scram-sha-256`).
+
+!!! note
+    PostgreSQL logs detailed authentication errors in the server log. Check `pg_log` or `log_directory` for the exact reason.
+
+#### Permission Errors
+
+The error `permission denied for schema` or `permission denied for table` means the role authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Missing `USAGE` on schema** — the role cannot access the schema even if table-level grants exist.
+- **Missing `SELECT` on tables** — the role has schema access but cannot read specific tables.
+- **Default privileges not set** — new tables created after the initial grant are not automatically accessible. Use `ALTER DEFAULT PRIVILEGES` to fix this.
+
+#### Connection Errors
+
+The error `FATAL: no pg_hba.conf entry for host` means the PostgreSQL server does not recognize the Qualytics host IP.
+
+Common causes:
+
+- **IP not whitelisted** — the Qualytics server IP is not listed in `pg_hba.conf`.
+- **Wrong database name** — the `pg_hba.conf` entry restricts access to specific databases.
+- **SSL required** — the server requires SSL connections but the client is connecting without SSL.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check network connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. PostgreSQL is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

@@ -64,6 +64,9 @@ GRANT CREATEIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
 GRANT ALTERIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
 ```
 
+!!! note
+    Qualytics queries DB2 system catalogs (`SYSCAT.SCHEMATA`, `SYSCAT.TABLES`) during catalog discovery. Ensure the Qualytics user has `SELECT` access to these system catalog views.
+
 ### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
@@ -73,6 +76,45 @@ GRANT ALTERIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
 | `SQL0551N: User does not have the required authorization` | The user lacks `SELECT` or other required permissions on a table    | Grant the missing permission on the specific table or schema                            |
 | `SQL0204N: Name is an undefined name`          | The schema or table does not exist, or the user cannot see it               | Verify the schema name matches exactly (DB2 stores unquoted schema names in uppercase by default) |
 | `SQL0552N: User is not authorized to perform the requested command` | The enrichment user lacks `CREATETAB` or `CREATEIN`          | Run `GRANT CREATETAB ON DATABASE TO USER <user>` and `GRANT CREATEIN ON SCHEMA <schema_name> TO USER <user>` |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `SQL30082N: Security processing failed` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **User does not exist** — the username was misspelled or does not exist in the DB2 instance.
+- **Authentication plugin mismatch** — the DB2 server uses a different authentication mechanism than expected (e.g., Kerberos, LDAP).
+
+!!! note
+    DB2 authentication is handled at the operating system or LDAP level, not within the database itself. Ensure the credentials match the OS or LDAP user account.
+
+#### Permission Errors
+
+The error `SQL0551N: User does not have the required authorization` means the user authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Missing `SELECT` on tables** — the user does not have `SELECT` on the target tables in the schema.
+- **Missing `CONNECT` on database** — the user cannot connect to the database.
+- **Missing `USAGE` on schema** — the user cannot access objects within the schema.
+- **System catalog access** — the user lacks `SELECT` access to `SYSCAT.SCHEMATA` or `SYSCAT.TABLES` needed for catalog discovery.
+
+#### Connection Errors
+
+The error `SQL1060N: User does not have the CONNECT privilege` means the user lacks the `CONNECT` privilege on the database.
+
+Common causes:
+
+- **Missing `CONNECT` grant** — `GRANT CONNECT ON DATABASE TO USER <user>` was not executed.
+- **Database not cataloged** — the target database is not cataloged on the DB2 client.
+- **Network issues** — a firewall is blocking connections on the DB2 port (default 50000).
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check database connectivity (connection errors).
 
 ## Add a Source Datastore
 

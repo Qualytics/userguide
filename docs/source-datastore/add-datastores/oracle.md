@@ -75,6 +75,44 @@ GRANT qualytics_read_role TO qualytics_read;
 | `ORA-12505: TNS:listener does not currently know of SID` | The SID provided in the connection form does not match the database instance | Verify the SID or switch to using a Service Name instead                                |
 | `ORA-12514: TNS:listener does not currently know of service` | The Service Name is incorrect or the service is not registered with the listener | Verify the service name with `lsnrctl status` on the Oracle server                     |
 
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `ORA-01017: invalid username/password` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match. Oracle passwords are case-sensitive by default.
+- **Account locked** — the account has been locked due to too many failed login attempts. Unlock with `ALTER USER <user> ACCOUNT UNLOCK`.
+- **Password expired** — the password has expired per the user's profile settings.
+
+!!! note
+    Oracle passwords are case-sensitive by default (since Oracle 11g). Ensure the password is entered with the correct case in the connection form.
+
+#### Permission Errors
+
+The error `ORA-00942: table or view does not exist` can mean either the object truly does not exist or the user lacks `SELECT` access to it.
+
+Common causes:
+
+- **Missing `SELECT` grant** — the user does not have `SELECT` on the target table. Oracle does not distinguish between "table not found" and "no permission" for security reasons.
+- **Schema not specified** — the table exists in a different schema and the user is querying without the schema prefix.
+- **Synonym not created** — the user expects to access the table without the schema prefix, but no synonym exists.
+
+#### Connection Errors
+
+The error `ORA-12505: TNS:listener does not currently know of SID` or `ORA-12514: TNS:listener does not currently know of service` means the connection identifier is incorrect.
+
+Common causes:
+
+- **Wrong SID or Service Name** — the value does not match the database instance configuration.
+- **Listener not running** — the Oracle listener process is not started on the server.
+- **Wrong host or port** — the host or port (default 1521) does not match the Oracle server configuration.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify table permissions (permission errors), and finally check the connection identifier — SID or Service Name (connection errors).
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Oracle, for example, is a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Oracle datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
