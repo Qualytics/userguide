@@ -29,6 +29,7 @@ With Field Status, you can:
 | [Understanding Field Status](concepts/understanding-field-status.md) | Learn how field status works, its role in data quality, practical scenarios, and best practices. |
 | [Status Types](concepts/field-status-types.md) | Detailed reference for all four statuses, how they are assigned, and visual indicators. |
 | [Status Lifecycle](concepts/field-status-lifecycle.md) | Status transition diagram and details on what triggers each transition. |
+| [Field Masking](concepts/field-masking.md) | How masking works, where it is applied, revealing values, unmasking behavior, audit logging, and field restrictions. |
 | [Merge Fields](concepts/merge-fields.md) | How to combine a missing field with an active field after a column rename, preserving all history. |
 
 ## Managing Field Status
@@ -37,6 +38,8 @@ With Field Status, you can:
 | :--- | :--- |
 | [Filtering by Status](managing-field-status/filtering-by-status.md) | Use status tabs to find specific fields in Explore and Container views. |
 | [Mask a Field](managing-field-status/mask-a-field.md) | Protect sensitive field values while maintaining quality monitoring. |
+| [Unmask a Field](managing-field-status/unmask-a-field.md) | Restore masked field values to full visibility across the platform. |
+| [Masking Audit Log](managing-field-status/masking-audit-log.md) | View and filter the audit trail of masked value reveal actions. |
 | [Exclude a Field](managing-field-status/exclude-a-field.md) | Remove a field from quality monitoring, including computed field cascade behavior. |
 | [Restore a Field](managing-field-status/restore-a-field.md) | Bring an excluded field back to active monitoring. |
 | [Delete a Field](managing-field-status/delete-a-field.md) | Permanently remove a missing or computed field. |
