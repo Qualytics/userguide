@@ -3,7 +3,7 @@
 Restoring a field changes its status back to **Active**, making it available for profiling and scanning operations again. Only fields with **Excluded** status can be restored.
 
 !!! tip
-    To change a **Masked** field back to **Active**, use the [Unmask](mask-a-field.md#unmask-a-field){:target="_blank"} operation instead.
+    To change a **Masked** field back to **Active**, use the [Unmask](unmask-a-field.md){:target="_blank"} operation instead.
 
 ## What Happens When a Field is Restored?
 

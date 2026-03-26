@@ -114,7 +114,7 @@ After clicking **Schedule**, a confirmation message appears stating **"Operation
 
 ## Field Masking and Materialize
 
-If your datastore contains [masked fields](../../fields/field-status/managing-field-status/mask-a-field.md), masking is applied to the source data before it is written to the enrichment datastore during a Materialize operation.
+If your datastore contains [masked fields](../../fields/field-status/concepts/field-masking.md), masking is applied to the source data before it is written to the enrichment datastore during a Materialize operation.
 
 Source record values for masked fields are obfuscated in every container snapshot written to the enrichment datastore. This applies to all containers included in the materialize run.
 
