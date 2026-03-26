@@ -8,6 +8,41 @@ By following these instructions, enterprises can ensure their Dremio environment
 
 Let’s get started 🚀
 
+## Dremio Setup Guide
+
+Qualytics connects to Dremio through the **Dremio JDBC driver** (Arrow Flight SQL, default port 32010). It uses standard SQL queries for data profiling and scanning. Dremio permissions are managed through its own privilege model, which controls access to sources, spaces, and datasets.
+
+### Minimum Dremio Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `SELECT` on target datasets                   | Read data from tables/views for profiling and scanning                  |
+| `VIEW` on the source                          | Browse available schemas and datasets                                   |
+| Access to the Dremio project (Cloud only)     | Scope queries to the correct project in Dremio Cloud                    |
+
+!!! note
+    Qualytics does not support Dremio as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Authentication Methods
+
+Dremio supports two authentication methods:
+
+| Method                          | Configuration                                                            |
+|---------------------------------|--------------------------------------------------------------------------|
+| **Basic (Username & Password)** | Use the Dremio username and password directly                            |
+| **Personal Access Token (PAT)** | Generate a PAT from **Account Settings > Personal Access Tokens** in Dremio and use it as the authentication credential |
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Authentication failed`                        | Incorrect username/password or invalid PAT                                   | Verify credentials or generate a new PAT from Dremio account settings                   |
+| `Source not found`                             | The schema (source) name in the connection form does not match a configured Dremio source | Verify available sources in the Dremio UI or with `SHOW SCHEMAS`                  |
+| `Permission denied on dataset`                 | The user lacks `SELECT` on the target dataset                                | Grant `SELECT` permission on the dataset in Dremio's privilege settings                 |
+| `Connection refused`                           | The Dremio coordinator is not reachable or the port (default 32010) is incorrect | Verify the host, port, and that the Dremio coordinator is running                    |
+| `Project ID is required` (Cloud only)          | The Dremio Cloud project ID was not provided in the connection form           | Add the Project ID from your Dremio Cloud project settings                              |
+| `SSL handshake failed`                         | SSL is required but not configured, or the SSL certificate is not trusted     | Enable SSL in the connection parameters or add the Dremio certificate to the trust store |
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Dremio is an example of such a datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Dremio datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

@@ -100,6 +100,33 @@ Before configuring the Fabric Analytics datastore in Qualytics, ensure the follo
 
 ![azure-add-service-principal-to-workspace](../../assets/source-datastores/add-datastores/fabric/azure-add-service-principal-to-workspace.png)
 
+### Datastore Fabric Analytics Privileges
+
+Qualytics connects to Fabric Analytics through the **Microsoft JDBC driver for SQL Server** using the SQL analytics endpoint. It queries system views (`sys.schemas`, `sys.database_principals`) to discover schemas and uses standard JDBC metadata APIs for tables, columns, and primary keys.
+
+#### Minimum Fabric Analytics Permissions (Source Datastore)
+
+| Permission                                                    | Purpose                                                                 |
+|---------------------------------------------------------------|-------------------------------------------------------------------------|
+| **Contributor** role (or higher) on the Fabric workspace      | Access the workspace and its Lakehouse/Warehouse resources              |
+| `SELECT` on target tables/views                               | Read data from tables for profiling and scanning                        |
+| `SELECT ON sys.schemas`                                       | Discover available schemas in the database                              |
+| `SELECT ON sys.database_principals`                           | Resolve schema ownership for catalog discovery                          |
+| **Service principals can use Fabric APIs** (tenant setting)   | Allow the Service Principal to authenticate via the SQL analytics endpoint |
+
+!!! note
+    Qualytics does not support Fabric Analytics as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+#### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Login failed for user`                        | The Service Principal credentials (Client ID, Client Secret, Tenant ID) are incorrect or the Client Secret has expired | Verify the credentials in the Azure Portal app registration and regenerate the Client Secret if needed |
+| `Cannot open database requested by the login`  | The Service Principal does not have access to the Fabric workspace            | Add the Service Principal as a **Contributor** (or higher) to the target Fabric workspace |
+| `Service principals are not allowed`           | The Fabric tenant setting **"Service principals can use Fabric APIs"** is disabled | Enable the setting in the Fabric Admin Portal under **Tenant settings**                 |
+| `The SELECT permission was denied on object`   | The Service Principal lacks `SELECT` on one or more tables                    | Verify the workspace role grants sufficient read access to the Lakehouse/Warehouse      |
+| `SQL analytics endpoint is not available`      | The SQL analytics endpoint is not enabled for the Lakehouse/Warehouse        | Ensure the SQL analytics endpoint is enabled in the Fabric workspace settings           |
+
 ### Retrieve the SQL Analytics Endpoint
 
 **1.** Open your **Lakehouse** or **Warehouse** in the Fabric workspace and copy the **SQL analytics endpoint** from the connection string area.

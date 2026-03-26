@@ -8,6 +8,39 @@ By following these instructions, enterprises can ensure their Presto environment
 
 Let’s get started 🚀
 
+## Presto Setup Guide
+
+Qualytics connects to Presto through the **Presto JDBC driver**. It uses standard SQL queries for data profiling and scanning. Since Presto is a distributed query engine, permissions are determined by the underlying data source (connector) configured in the Presto catalog (e.g., Hive, MySQL, PostgreSQL).
+
+### Minimum Presto Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `SELECT` on target tables                     | Read data from tables for profiling and scanning                        |
+| Access to the Presto catalog                  | Browse available schemas and tables                                     |
+| Access to the Presto schema                   | Browse available tables and columns                                     |
+
+The actual permissions depend on the Presto security model configured for your deployment:
+
+| Security Model              | How Permissions Are Managed                                                  |
+|-----------------------------|------------------------------------------------------------------------------|
+| **No security (default)**   | All users have full read access to all catalogs and schemas                  |
+| **File-based access control** | Permissions are defined in `rules.json` — ensure the Qualytics user has `SELECT` on the target catalog and schema |
+| **Connector-level security** | Permissions are delegated to the underlying data source (e.g., Hive Metastore, RDBMS grants) — ensure the Qualytics user has read access at the source level |
+
+!!! note
+    Qualytics does not support Presto as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Access Denied: Cannot select from table`      | The user lacks `SELECT` on the target table in the Presto access control rules or the underlying connector | Add `SELECT` permission for the user in `rules.json` or grant access in the underlying data source |
+| `Catalog does not exist`                       | The catalog name in the connection form does not match a configured Presto catalog | Verify available catalogs with `SHOW CATALOGS` in Presto                               |
+| `Schema does not exist`                        | The schema name does not exist in the specified catalog                       | Verify available schemas with `SHOW SCHEMAS FROM <catalog>`                             |
+| `Connection refused`                           | The Presto coordinator is not reachable or the port (default 8080) is incorrect | Verify the host, port, and that the Presto coordinator is running                      |
+| `Authentication failed`                        | Incorrect username or password, or the Presto server requires a different authentication method | Verify credentials and check if the Presto server uses LDAP, Kerberos, or password file authentication |
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Presto is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

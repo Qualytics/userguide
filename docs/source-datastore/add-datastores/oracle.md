@@ -8,6 +8,73 @@ By following these instructions, enterprises can ensure their Oracle environment
 
 Let’s get started 🚀
 
+## Oracle Setup Guide
+
+Qualytics connects to Oracle through the **Oracle JDBC Thin driver**. It uses JDBC metadata APIs to discover schemas, tables, columns, and primary keys. Qualytics automatically filters out Oracle system schemas (`SYS`, `SYSTEM`, `DBSNMP`, `OUTLN`, `APPQOSSYS`, `CTXSYS`, `MDSYS`, `OLAPSYS`, `ORDDATA`, `ORDSYS`, `WMSYS`, `XDB`, `LBACSYS`, `DVSYS`, `AUDSYS`, and others) during catalog discovery.
+
+### Minimum Oracle Permissions (Source Datastore)
+
+| Permission                          | Purpose                                                                     |
+|-------------------------------------|-----------------------------------------------------------------------------|
+| `CREATE SESSION`                    | Allow the user to connect to the database instance                          |
+| `SELECT ON <schema>.<table>`        | Read data from tables for profiling and scanning                            |
+| `SELECT_CATALOG_ROLE` (optional)    | Read data dictionary views for comprehensive metadata discovery             |
+
+!!! note
+    Qualytics does not support Oracle as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Example: Source Datastore User (Read-Only) — Schema-Level Access
+
+Replace `<schema_name>` and `<password>` with your actual values.
+
+```sql
+-- Create a dedicated read-only user
+CREATE USER qualytics_read IDENTIFIED BY "<password>"
+  DEFAULT TABLESPACE users
+  TEMPORARY TABLESPACE temp;
+
+-- Grant connection privileges
+GRANT CREATE SESSION TO qualytics_read;
+
+-- Option A: Grant read access to ALL tables (broad access)
+GRANT SELECT ANY TABLE TO qualytics_read;
+
+-- Option B: Grant read access to a specific schema (restrictive access)
+-- Run this for each table you want Qualytics to access:
+-- GRANT SELECT ON <schema_name>.<table_name> TO qualytics_read;
+```
+
+### Example: Source Datastore User (Read-Only) — Using a Role
+
+For organizations that prefer role-based access control:
+
+```sql
+-- Create a custom read-only role
+CREATE ROLE qualytics_read_role;
+
+-- Grant SELECT on all tables in the target schema
+BEGIN
+  FOR t IN (SELECT table_name FROM all_tables WHERE owner = UPPER('<schema_name>'))
+  LOOP
+    EXECUTE IMMEDIATE 'GRANT SELECT ON <schema_name>.' || t.table_name || ' TO qualytics_read_role';
+  END LOOP;
+END;
+/
+
+-- Assign the role to the Qualytics user
+GRANT qualytics_read_role TO qualytics_read;
+```
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `ORA-01017: invalid username/password`         | Incorrect username or password                                               | Verify the credentials and ensure the user exists with `SELECT username FROM dba_users`  |
+| `ORA-01045: user lacks CREATE SESSION privilege` | The user cannot establish a session                                        | Run `GRANT CREATE SESSION TO <user>`                                                    |
+| `ORA-00942: table or view does not exist`      | The user lacks `SELECT` on the target table, or the table does not exist     | Grant `SELECT` on the specific table or use `SELECT ANY TABLE`                          |
+| `ORA-12505: TNS:listener does not currently know of SID` | The SID provided in the connection form does not match the database instance | Verify the SID or switch to using a Service Name instead                                |
+| `ORA-12514: TNS:listener does not currently know of service` | The Service Name is incorrect or the service is not registered with the listener | Verify the service name with `lsnrctl status` on the Oracle server                     |
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Oracle, for example, is a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Oracle datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

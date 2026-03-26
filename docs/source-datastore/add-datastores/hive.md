@@ -8,6 +8,43 @@ By following these instructions, enterprises can ensure their Hive environment i
 
 Let’s get started 🚀
 
+## Hive Setup Guide
+
+Qualytics connects to Hive through the **Hive JDBC driver** (HiveServer2). It accesses the Hive metastore for schema and table discovery, and reads table data via HiveQL `SELECT` queries for profiling and scanning operations. Qualytics also identifies partition columns from Hive metastore metadata for optimized data reading.
+
+### Minimum Hive Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `SELECT ON DATABASE <database_name>`          | Access the database and its metadata                                    |
+| `SELECT ON TABLE <database_name>.*`           | Read data from all tables for profiling and scanning                    |
+
+!!! note
+    Qualytics does not support Hive as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<database_name>` with your actual value.
+
+```sql
+-- Grant read access to the target database and all its tables
+GRANT SELECT ON DATABASE <database_name> TO USER qualytics_read;
+GRANT SELECT ON ALL TABLES IN DATABASE <database_name> TO USER qualytics_read;
+```
+
+!!! note
+    If using **Kerberos authentication**, ensure the Kerberos principal has been granted the same `SELECT` privileges on the target database. Configure the Kerberos principal in the connection form instead of username/password.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `User is not allowed to impersonate`           | The HiveServer2 proxy user configuration does not allow the Qualytics user   | Add the Qualytics user to the `hadoop.proxyuser.<hive_user>.users` property in `core-site.xml` |
+| `Permission denied: user does not have SELECT privilege` | The user lacks `SELECT` on the target database or table         | Run `GRANT SELECT ON DATABASE <database_name> TO USER <user>`                           |
+| `GSS initiate failed` (Kerberos)               | Kerberos ticket is expired, the principal is incorrect, or the KDC is unreachable | Verify the Kerberos principal, ensure the keytab is valid, and check KDC connectivity  |
+| `Could not open client transport`              | HiveServer2 is not reachable or the port (default 10000) is incorrect        | Verify the host, port, and that HiveServer2 is running                                  |
+| `Database does not exist`                      | The database name (schema) in the connection form is incorrect               | Verify the database name with `SHOW DATABASES` in HiveQL                                |
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Hive is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

@@ -8,6 +8,85 @@ By following these instructions, enterprises can ensure their Synapse environmen
 
 Let’s get started 🚀
 
+## Synapse Setup Guide
+
+Qualytics connects to Azure Synapse Analytics through the **Microsoft JDBC driver for SQL Server**. Synapse follows the same permission model as Microsoft SQL Server. It queries system views (`sys.schemas`, `sys.database_principals`) to discover schemas and uses standard JDBC metadata APIs for tables, columns, and primary keys.
+
+### Minimum Synapse Permissions (Source Datastore)
+
+| Permission                              | Purpose                                                                 |
+|-----------------------------------------|-------------------------------------------------------------------------|
+| `CONNECT`                               | Allow the user to connect to the database                               |
+| `SELECT ON SCHEMA::<schema_name>`       | Read data from all tables and views for profiling and scanning          |
+| `VIEW DEFINITION ON SCHEMA::<schema_name>` | Read object definitions for metadata discovery                       |
+| `SELECT ON sys.schemas`                 | Discover available schemas in the database                              |
+| `SELECT ON sys.database_principals`     | Resolve schema ownership for catalog discovery                          |
+
+### Additional Permissions for Enrichment Datastore
+
+When using Synapse as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                   | Purpose                                                            |
+|----------------------------------------------|--------------------------------------------------------------------|
+| `CREATE TABLE`                               | Create enrichment tables (`_qualytics_*`)                          |
+| `INSERT ON SCHEMA::<schema_name>`            | Write anomaly records, scan results, and check metrics             |
+| `UPDATE ON SCHEMA::<schema_name>`            | Update enrichment records during rescans                           |
+| `DELETE ON SCHEMA::<schema_name>`            | Remove stale enrichment records                                    |
+| `ALTER ON SCHEMA::<schema_name>`             | Modify enrichment table schemas during version migrations          |
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<database_name>`, `<schema_name>`, and `<password>` with your actual values.
+
+```sql
+-- Create a login at the server level
+CREATE LOGIN qualytics_read WITH PASSWORD = ‘<password>’;
+
+-- Switch to the target database
+USE <database_name>;
+
+-- Create a user mapped to the login
+CREATE USER qualytics_read FOR LOGIN qualytics_read;
+
+-- Grant connection and read-only access
+GRANT CONNECT TO qualytics_read;
+GRANT SELECT ON SCHEMA::<schema_name> TO qualytics_read;
+GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO qualytics_read;
+```
+
+### Example: Enrichment Datastore User (Read-Write)
+
+```sql
+-- Create a login at the server level
+CREATE LOGIN qualytics_readwrite WITH PASSWORD = ‘<password>’;
+
+-- Switch to the target database
+USE <database_name>;
+
+-- Create a user mapped to the login
+CREATE USER qualytics_readwrite FOR LOGIN qualytics_readwrite;
+
+-- Grant connection, read-write, and table management access
+GRANT CONNECT TO qualytics_readwrite;
+GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::<schema_name> TO qualytics_readwrite;
+GRANT CREATE TABLE TO qualytics_readwrite;
+GRANT ALTER ON SCHEMA::<schema_name> TO qualytics_readwrite;
+GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO qualytics_readwrite;
+```
+
+!!! note
+    Qualytics automatically filters out system schemas (`INFORMATION_SCHEMA`, `sys`, and schemas starting with `db_`) during catalog discovery. You do not need to restrict access to these schemas manually.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Login failed for user`                        | Incorrect username or password, or the login does not exist                  | Verify the login exists at the server level with `SELECT name FROM sys.sql_logins`      |
+| `Cannot open database requested by the login`  | The user does not have access to the specified database                       | Ensure a user is mapped to the login in the target database with `CREATE USER ... FOR LOGIN` |
+| `The SELECT permission was denied on object`   | The user lacks `SELECT` on one or more tables in the schema                  | Run `GRANT SELECT ON SCHEMA::<schema_name> TO <user>`                                   |
+| `CREATE TABLE permission denied in database`   | The enrichment user lacks `CREATE TABLE` permission                          | Run `GRANT CREATE TABLE TO <user>`                                                      |
+| `Cannot find the object because it does not exist or you do not have permissions` | The user lacks `VIEW DEFINITION` on the schema | Run `GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO <user>`                          |
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Synapse is an example of such a datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Synapse datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

@@ -8,6 +8,71 @@ By following these instructions, enterprises can ensure their Redshift environme
 
 Let’s get started 🚀
 
+## Redshift Setup Guide
+
+Qualytics connects to Amazon Redshift through the **Redshift JDBC driver** (PostgreSQL-compatible). It uses standard JDBC metadata APIs to discover schemas, tables, columns, and primary keys. Qualytics automatically filters out system schemas (`pg_catalog`, `pg_toast`, `pg_internal`, `information_schema`) during catalog discovery.
+
+### Minimum Redshift Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `USAGE ON SCHEMA <schema_name>`               | Access objects within the target schema                                 |
+| `SELECT ON ALL TABLES IN SCHEMA`              | Read data from all tables for profiling and scanning                    |
+
+### Additional Permissions for Enrichment Datastore
+
+When using Redshift as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `CREATE ON SCHEMA <schema_name>`              | Create enrichment tables (`_qualytics_*`)                               |
+| `INSERT ON ALL TABLES IN SCHEMA`              | Write anomaly records, scan results, and check metrics                  |
+| `UPDATE ON ALL TABLES IN SCHEMA`              | Update enrichment records during rescans                                |
+| `DELETE ON ALL TABLES IN SCHEMA`              | Remove stale enrichment records                                         |
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<schema_name>` and `<password>` with your actual values.
+
+```sql
+-- Create a dedicated read-only user
+CREATE USER qualytics_read PASSWORD ‘<password>’;
+
+-- Grant schema access and read permissions
+GRANT USAGE ON SCHEMA <schema_name> TO qualytics_read;
+GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO qualytics_read;
+
+-- Grant read access to future tables automatically
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT ON TABLES TO qualytics_read;
+```
+
+### Example: Enrichment Datastore User (Read-Write)
+
+```sql
+-- Create a dedicated read-write user
+CREATE USER qualytics_readwrite PASSWORD ‘<password>’;
+
+-- Grant schema access, table creation, and data manipulation
+GRANT USAGE, CREATE ON SCHEMA <schema_name> TO qualytics_readwrite;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA <schema_name> TO qualytics_readwrite;
+
+-- Grant full access to future tables automatically
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO qualytics_readwrite;
+```
+
+!!! note
+    Qualytics automatically filters out system schemas (`pg_catalog`, `pg_toast`, `pg_internal`, `information_schema`) during catalog discovery. You do not need to restrict access to these schemas manually.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `FATAL: password authentication failed`        | Incorrect username or password                                               | Verify the credentials and ensure the user exists in the Redshift cluster               |
+| `permission denied for schema`                 | The user lacks `USAGE` on the target schema                                  | Run `GRANT USAGE ON SCHEMA <schema_name> TO <user>`                                     |
+| `permission denied for relation`               | The user lacks `SELECT` on one or more tables                                | Run `GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO <user>`                      |
+| `permission denied to create relation`         | The enrichment user lacks `CREATE` on the schema                             | Run `GRANT CREATE ON SCHEMA <schema_name> TO <user>`                                    |
+| `Connection refused`                           | The Redshift cluster is not reachable or the security group blocks the Qualytics IP | Add the Qualytics IP to the Redshift cluster security group inbound rules          |
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Redshift is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

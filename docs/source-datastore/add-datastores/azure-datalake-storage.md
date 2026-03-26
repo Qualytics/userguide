@@ -65,6 +65,67 @@ After completing the setup, you will have the following credentials:
 !!! tip
     For detailed step-by-step instructions on creating a service principal in the Azure Portal, refer to the [**Microsoft documentation**](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target="_blank"}.
 
+## Datastore Azure Datalake Storage Privileges
+
+The permissions required depend on the authentication method and whether you are using Azure Datalake Storage as a source or enrichment datastore.
+
+### Minimum Permissions (Source Datastore)
+
+#### Access Key Authentication
+
+Access keys provide full read/write access to the storage account by default. No additional role assignments are needed.
+
+#### Service Principal Authentication
+
+The Service Principal must be assigned the following Azure RBAC role on the target container or storage account:
+
+| Role / Permission                              | Purpose                                                                 |
+|------------------------------------------------|-------------------------------------------------------------------------|
+| `Storage Blob Data Reader`                     | Read and list blobs (files) in the container                            |
+
+Specific permissions included in this role:
+
+| Permission                                     | Purpose                                                                 |
+|------------------------------------------------|-------------------------------------------------------------------------|
+| `Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read` | Read blob (file) contents for profiling and scanning |
+| `Microsoft.Storage/storageAccounts/blobServices/containers/read`       | List blobs in the container to discover data assets |
+
+### Additional Permissions for Enrichment Datastore
+
+#### Access Key Authentication
+
+Access keys provide full read/write access by default. No additional role assignments are needed.
+
+#### Service Principal Authentication
+
+For enrichment, the Service Principal must be assigned a higher-privilege role:
+
+| Role / Permission                              | Purpose                                                                 |
+|------------------------------------------------|-------------------------------------------------------------------------|
+| `Storage Blob Data Contributor`                | Read, write, and delete blobs in the container                          |
+
+Specific permissions included in this role:
+
+| Permission                                     | Purpose                                                                 |
+|------------------------------------------------|-------------------------------------------------------------------------|
+| `Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read`   | Read blob contents                            |
+| `Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write`  | Write enrichment result files                 |
+| `Microsoft.Storage/storageAccounts/blobServices/containers/blobs/delete` | Remove temporary or outdated enrichment files |
+| `Microsoft.Storage/storageAccounts/blobServices/containers/read`         | List blobs in the container                   |
+
+!!! note
+    If the storage account uses **hierarchical namespace** (Azure Data Lake Storage Gen2), ensure the Service Principal also has appropriate ACL permissions at the directory level if RBAC alone is not sufficient.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `AuthenticationFailed`                         | Incorrect account name, access key, or Service Principal credentials (Client ID, Client Secret, Tenant ID) | Verify credentials in the Azure Portal — check the storage account access keys or app registration |
+| `AuthorizationPermissionMismatch`              | The Service Principal does not have the required RBAC role on the container or storage account | Assign `Storage Blob Data Reader` (source) or `Storage Blob Data Contributor` (enrichment) to the Service Principal |
+| `ContainerNotFound`                            | The container name in the URI does not exist                                 | Verify the container name in the Azure Portal under the storage account's **Containers** section |
+| `InvalidUri`                                   | The URI format is incorrect — it must follow `abfss://<container>@<account>.dfs.core.windows.net` | Verify the URI format matches the expected pattern                                      |
+| `This request is not authorized to perform this operation` | The Service Principal has `Storage Blob Data Reader` but the operation requires write access | Upgrade the role assignment to `Storage Blob Data Contributor` for enrichment datastores |
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect and access data from external sources. Azure Datalake Storage is an example of a source datastore, specifically a type of Distributed File System (DFS) datastore that is designed to handle data stored in distributed file systems. Configuring a DFS datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

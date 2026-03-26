@@ -64,6 +64,66 @@ To improve the performance of all-purpose compute using node pools, you can foll
 
 ![attach-compute-with-node-pool](../../assets/source-datastores/add-datastores/databricks/attach-compute-with-node-pool.png)
 
+### Databricks Privileges and Permissions
+
+Qualytics connects to Databricks via JDBC using either a **Personal Access Token (PAT)** or **OAuth M2M** authentication. It uses the Hive metastore or Unity Catalog metadata APIs to discover catalogs, schemas, tables, columns, and partition information.
+
+#### Minimum Databricks Permissions (Source Datastore)
+
+| Permission                                          | Purpose                                                                 |
+|-----------------------------------------------------|-------------------------------------------------------------------------|
+| `USAGE ON CATALOG <catalog_name>`                   | Access the catalog                                                      |
+| `USAGE ON SCHEMA <catalog_name>.<schema_name>`      | Access objects within the schema                                        |
+| `SELECT ON SCHEMA <catalog_name>.<schema_name>`     | Read data from all tables and views for profiling and scanning          |
+| `CAN USE` on the SQL Warehouse or Cluster           | Execute queries on the compute resource                                 |
+
+#### Additional Permissions for Enrichment Datastore
+
+When using Databricks as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                                      | Purpose                                                         |
+|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| `CREATE TABLE ON SCHEMA <catalog_name>.<schema_name>`           | Create enrichment tables (`_qualytics_*`)                       |
+| `MODIFY ON SCHEMA <catalog_name>.<schema_name>`                 | Write, update, and delete data in enrichment tables             |
+
+#### Example: Source Datastore Permissions (Read-Only)
+
+Replace `<catalog_name>`, `<schema_name>`, and `<user_or_group>` with your actual values.
+
+```sql
+-- Grant catalog and schema access
+GRANT USAGE ON CATALOG <catalog_name> TO <user_or_group>;
+GRANT USAGE ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
+
+-- Grant read access to all tables in the schema
+GRANT SELECT ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
+```
+
+#### Example: Enrichment Datastore Permissions (Read-Write)
+
+```sql
+-- Grant catalog and schema access
+GRANT USAGE ON CATALOG <catalog_name> TO <user_or_group>;
+GRANT USAGE ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
+
+-- Grant read-write access and table creation
+GRANT SELECT, MODIFY ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
+GRANT CREATE TABLE ON SCHEMA <catalog_name>.<schema_name> TO <user_or_group>;
+```
+
+!!! note
+    The Databricks user or service principal must also have `CAN USE` permission on the **compute resource** (SQL Warehouse or All-Purpose Cluster) used for the connection. Without compute access, queries cannot be executed regardless of data permissions.
+
+#### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `INVALID_CREDENTIALS`                          | The Personal Access Token (PAT) is invalid, expired, or revoked             | Generate a new PAT from **User Settings > Developer > Access Tokens** in Databricks     |
+| `User does not have USAGE permission`          | The user lacks `USAGE` on the catalog or schema                              | Run `GRANT USAGE ON CATALOG <catalog> TO <user>` and `GRANT USAGE ON SCHEMA <catalog>.<schema> TO <user>` |
+| `User does not have SELECT permission`         | The user lacks `SELECT` on the schema or specific tables                     | Run `GRANT SELECT ON SCHEMA <catalog>.<schema> TO <user>`                               |
+| `Cluster is not running`                       | The All-Purpose Cluster is stopped and `AUTO_RESUME` is not enabled          | Start the cluster manually or switch to a SQL Warehouse with auto-resume                |
+| `HTTP Path is invalid`                         | The HTTP Path in the connection form does not match the warehouse or cluster | Copy the correct HTTP Path from **SQL Warehouses > Connection Details** or **Compute > JDBC/ODBC** |
+
 ### Retrieve the Connection Details
 
 This section explains how to retrieve the connection details that you need to connect to Databricks.

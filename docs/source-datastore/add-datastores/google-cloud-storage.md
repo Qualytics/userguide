@@ -57,8 +57,54 @@ For example, once you generate the keys, they might look like this:
 
  - Secret Key: `abcd1234efgh5678ijklmnopqrstuvwx`
 
-!!! warning 
-    Make sure to store these keys securely, as they provide access to your Google Cloud Storage resources. 
+!!! warning
+    Make sure to store these keys securely, as they provide access to your Google Cloud Storage resources.
+
+## Datastore Google Cloud Storage Privileges
+
+The permissions required depend on whether you are using Google Cloud Storage as a source or enrichment datastore. Qualytics accesses GCS using HMAC keys (Access Key / Secret Key) or a Service Account Key.
+
+### Minimum Permissions (Source Datastore)
+
+The service account or HMAC key must have the following permissions:
+
+| Permission                | Purpose                                                                 |
+|---------------------------|-------------------------------------------------------------------------|
+| `storage.buckets.get`     | Validate the bucket exists and retrieve its metadata                    |
+| `storage.objects.get`     | Read file contents for profiling and scanning                           |
+| `storage.objects.list`    | List files in the bucket to discover data assets                        |
+
+!!! tip
+    You can grant these permissions by assigning the **Storage Object Viewer** (`roles/storage.objectViewer`) role to the service account on the target bucket.
+
+### Additional Permissions for Enrichment Datastore
+
+When using Google Cloud Storage as an enrichment datastore, the following additional permissions are required:
+
+| Permission                | Purpose                                                                 |
+|---------------------------|-------------------------------------------------------------------------|
+| `storage.objects.create`  | Write enrichment result files                                           |
+| `storage.objects.delete`  | Remove temporary or outdated enrichment files                           |
+
+!!! tip
+    You can grant all required permissions (read + write) by assigning the **Storage Object Admin** (`roles/storage.objectAdmin`) role to the service account on the target bucket.
+
+### GCS Roles Summary
+
+| Role                                          | Use Case                  | Permissions Included                                                  |
+|-----------------------------------------------|---------------------------|-----------------------------------------------------------------------|
+| `roles/storage.objectViewer`                  | Source Datastore           | `storage.objects.get`, `storage.objects.list`, `storage.buckets.get`  |
+| `roles/storage.objectAdmin`                   | Enrichment Datastore       | `storage.objects.get`, `storage.objects.list`, `storage.objects.create`, `storage.objects.delete`, `storage.buckets.get` |
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `403 Forbidden`                                | The service account or HMAC key lacks the required permissions on the bucket | Assign the appropriate role (`Storage Object Viewer` or `Storage Object Admin`) to the service account on the target bucket |
+| `404 Not Found: Bucket not found`              | The bucket name in the URI is incorrect or the bucket does not exist         | Verify the bucket name and ensure the URI follows the format `gs://bucket-name`         |
+| `Invalid credentials`                          | The Access Key / Secret Key pair is incorrect or the service account key file is malformed | Regenerate the HMAC keys from **Cloud Storage > Settings > Interoperability** or re-download the service account key |
+| `The caller does not have storage.objects.list access` | The service account has object-level access but lacks bucket-level `list` permission | Assign the `Storage Object Viewer` role at the bucket level (not just object level)    |
+| `The caller does not have storage.objects.create access` | The enrichment service account lacks write permissions                | Upgrade the role assignment from `Storage Object Viewer` to `Storage Object Admin`      |
 
 ## Add a Source Datastore
 
