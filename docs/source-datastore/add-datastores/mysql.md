@@ -44,6 +44,9 @@ CREATE USER ‘qualytics_read’@’%’ IDENTIFIED BY ‘<password>’;
 -- Grant read access to all tables and views
 GRANT SELECT, SHOW VIEW ON <database_name>.* TO ‘qualytics_read’@’%’;
 
+-- Grant the global PROCESS privilege (required by the JDBC driver for connection metadata)
+GRANT PROCESS ON *.* TO ‘qualytics_read’@’%’;
+
 -- Apply the changes
 FLUSH PRIVILEGES;
 ```
@@ -56,6 +59,9 @@ CREATE USER ‘qualytics_readwrite’@’%’ IDENTIFIED BY ‘<password>’;
 
 -- Grant full data manipulation and table management
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP, SHOW VIEW ON <database_name>.* TO ‘qualytics_readwrite’@’%’;
+
+-- Grant the global PROCESS privilege (required by the JDBC driver for connection metadata)
+GRANT PROCESS ON *.* TO ‘qualytics_readwrite’@’%’;
 
 -- Apply the changes
 FLUSH PRIVILEGES;
