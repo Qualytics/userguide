@@ -29,6 +29,8 @@ When using Redshift as an enrichment datastore, the following additional permiss
 | `INSERT ON ALL TABLES IN SCHEMA`              | Write anomaly records, scan results, and check metrics                  |
 | `UPDATE ON ALL TABLES IN SCHEMA`              | Update enrichment records during rescans                                |
 | `DELETE ON ALL TABLES IN SCHEMA`              | Remove stale enrichment records                                         |
+| `ALTER TABLE`                                 | Modify enrichment table schemas during version migrations               |
+| `DROP TABLE`                                  | Remove enrichment tables during cleanup or when the datastore is unlinked |
 
 ### Example: Source Datastore User (Read-Only)
 
@@ -59,6 +61,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA <schema_name> TO qu
 -- Grant full access to future tables automatically
 ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO qualytics_readwrite;
 ```
+
+!!! note
+    The enrichment user also needs `ALTER TABLE` and `DROP TABLE` permissions for schema migrations and cleanup operations. The `ALTER DEFAULT PRIVILEGES` command with `SELECT, INSERT, UPDATE, DELETE` covers most operations, but `ALTER TABLE` and `DROP TABLE` are inherited through table ownership when Qualytics creates the enrichment tables.
 
 !!! note
     Qualytics automatically filters out system schemas (`pg_catalog`, `pg_toast`, `pg_internal`, `information_schema`) during catalog discovery. You do not need to restrict access to these schemas manually.

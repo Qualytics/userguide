@@ -34,6 +34,7 @@ When using DB2 as an enrichment datastore, the following additional permissions 
 | `INSERT ON ALL TABLES IN SCHEMA`          | Write anomaly records, scan results, and check metrics                      |
 | `UPDATE ON ALL TABLES IN SCHEMA`          | Update enrichment records during rescans                                    |
 | `DELETE ON ALL TABLES IN SCHEMA`          | Remove stale enrichment records                                             |
+| `DROPIN ON SCHEMA <schema_name>`          | Remove enrichment tables during cleanup or when the datastore is unlinked   |
 
 ### Example: Source Datastore User (Read-Only)
 
@@ -66,6 +67,9 @@ GRANT ALTERIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
 
 !!! note
     Qualytics queries DB2 system catalogs (`SYSCAT.SCHEMATA`, `SYSCAT.TABLES`) during catalog discovery. Ensure the Qualytics user has `SELECT` access to these system catalog views.
+
+!!! info
+    If your DB2 server requires encrypted connections, enable the **SSL** toggle in the connection form. This establishes a TLS-encrypted connection between Qualytics and the DB2 instance.
 
 ### Troubleshooting Common Errors
 

@@ -29,6 +29,8 @@ When using Trino as an enrichment datastore, the following additional permission
 | `CREATE TABLE` in the schema                  | Create enrichment tables (`_qualytics_*`)                               |
 | `INSERT` into tables                          | Write anomaly records, scan results, and check metrics                  |
 | `DELETE` from tables                          | Remove stale enrichment records                                         |
+| `ALTER TABLE` in the schema                   | Modify enrichment table schemas during version migrations               |
+| `DROP TABLE` in the schema                    | Remove enrichment tables during cleanup or when the datastore is unlinked |
 
 The actual permissions depend on the Trino security model configured for your deployment:
 

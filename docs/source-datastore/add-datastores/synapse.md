@@ -33,6 +33,7 @@ When using Synapse as an enrichment datastore, the following additional permissi
 | `UPDATE ON SCHEMA::<schema_name>`            | Update enrichment records during rescans                           |
 | `DELETE ON SCHEMA::<schema_name>`            | Remove stale enrichment records                                    |
 | `ALTER ON SCHEMA::<schema_name>`             | Modify enrichment table schemas during version migrations          |
+| `DROP TABLE`                                         | Remove enrichment tables during cleanup or when the datastore is unlinked |
 
 ### Example: Source Datastore User (Read-Only)
 

@@ -89,24 +89,55 @@ When using Google Cloud Storage as an enrichment datastore, the following additi
 !!! tip
     You can grant all required permissions (read + write) by assigning the **Storage Object Admin** (`roles/storage.objectAdmin`) role to the service account on the target bucket.
 
-### Example: Assigning Roles via gcloud CLI
+### Example IAM Policy
 
-Replace `<service_account_email>` and `<bucket_name>` with your actual values.
+Replace `<SERVICE_ACCOUNT_EMAIL>` and `<BUCKET_NAME>` with your actual values.
 
-**Source Datastore (Read-Only):**
+#### Source Datastore (Read-Only)
 
-```bash
-gsutil iam ch \
-  serviceAccount:<service_account_email>:roles/storage.objectViewer \
-  gs://<bucket_name>
+```json
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectViewer",
+      "members": [
+        "serviceAccount:<SERVICE_ACCOUNT_EMAIL>"
+      ]
+    }
+  ]
+}
 ```
 
-**Enrichment Datastore (Read-Write):**
+#### Enrichment Datastore (Read-Write)
+
+```json
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectAdmin",
+      "members": [
+        "serviceAccount:<SERVICE_ACCOUNT_EMAIL>"
+      ]
+    }
+  ]
+}
+```
+
+!!! tip
+    If you need both `storage.buckets.get` and object-level permissions but want to avoid a broader role, you can create a custom role with only the specific permissions listed in the [Minimum Permissions](#minimum-permissions-source-datastore) section.
+
+#### Assigning via gcloud CLI
 
 ```bash
+# Source Datastore (Read-Only)
 gsutil iam ch \
-  serviceAccount:<service_account_email>:roles/storage.objectAdmin \
-  gs://<bucket_name>
+  serviceAccount:<SERVICE_ACCOUNT_EMAIL>:roles/storage.objectViewer \
+  gs://<BUCKET_NAME>
+
+# Enrichment Datastore (Read-Write)
+gsutil iam ch \
+  serviceAccount:<SERVICE_ACCOUNT_EMAIL>:roles/storage.objectAdmin \
+  gs://<BUCKET_NAME>
 ```
 
 !!! tip

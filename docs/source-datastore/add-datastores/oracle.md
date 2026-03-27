@@ -23,6 +23,9 @@ Qualytics connects to Oracle through the **Oracle JDBC Thin driver**. It uses JD
 !!! note
     Qualytics does not support Oracle as an enrichment datastore. You can point to a different enrichment datastore instead.
 
+!!! info
+    Oracle connections support both **TCP** and **TCPS** (SSL/TLS) protocols. If your Oracle server requires encrypted connections, select **TCPS** as the protocol in the connection form and ensure the Oracle server's SSL certificate is trusted.
+
 ### Example: Source Datastore User (Read-Only) — Schema-Level Access
 
 Replace `<schema_name>` and `<password>` with your actual values.

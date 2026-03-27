@@ -32,6 +32,7 @@ When using PostgreSQL as an enrichment datastore, the following additional permi
 | `UPDATE ON ALL TABLES IN SCHEMA`                  | Update enrichment records during rescans                        |
 | `DELETE ON ALL TABLES IN SCHEMA`                   | Remove stale enrichment records                                 |
 | `ALTER TABLE`                                      | Modify enrichment table schemas during version migrations       |
+| `DROP` (on enrichment tables)                      | Remove enrichment tables if the datastore is unlinked or during cleanup |
 
 ### Example: Source Datastore Role (Read-Only)
 
@@ -68,6 +69,9 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT, INSERT, UPDATE, D
 
 !!! note
     Qualytics automatically filters out system schemas (`pg_catalog`, `pg_toast`, `pg_internal`, `information_schema`) during catalog discovery. You do not need to restrict access to these schemas manually.
+
+!!! info
+    For optimal **incremental profiling** performance, it is recommended to enable `track_commit_timestamp = on` in your PostgreSQL configuration (`postgresql.conf`). This allows Qualytics to detect recently modified rows using transaction commit timestamps (`pg_xact_commit_timestamp`), reducing the amount of data scanned during profiling operations.
 
 ### Troubleshooting Common Errors
 

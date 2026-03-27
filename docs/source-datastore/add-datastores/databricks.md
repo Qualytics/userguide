@@ -179,6 +179,9 @@ To configure Databricks, you need the following credentials:
 | 4.  | Database (Required)  | Specify the database name to be accessed. |
 | 5.  | Personal Access Token (Required) | Generate a Personal Access Token from your Databricks account and add it for authentication.|
 
+!!! note
+    Databricks also supports **OAuth M2M (Machine-to-Machine)** authentication as an alternative to Personal Access Tokens. To use OAuth M2M, provide the **Service Principal Application ID** and **OAuth Secret** instead of a Personal Access Token. This method is recommended for production environments as it does not depend on individual user tokens.
+
 #### Get Connection Details for the SQL Warehouse
 
 Follow the given steps to get the connection details for the SQL warehouse:

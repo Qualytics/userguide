@@ -116,26 +116,54 @@ Specific permissions included in this role:
 !!! note
     If the storage account uses **hierarchical namespace** (Azure Data Lake Storage Gen2), ensure the Service Principal also has appropriate ACL permissions at the directory level if RBAC alone is not sufficient.
 
-### Example: Assigning RBAC Roles via Azure CLI
+### Example IAM Role Assignment
 
-Replace `<service_principal_id>`, `<storage_account_name>`, and `<container_name>` with your actual values.
+Replace `<SERVICE_PRINCIPAL_ID>`, `<SUBSCRIPTION_ID>`, `<RESOURCE_GROUP>`, `<STORAGE_ACCOUNT>`, and `<CONTAINER>` with your actual values.
 
-**Source Datastore (Read-Only):**
+#### Source Datastore (Read-Only)
 
-```bash
-az role assignment create \
-  --assignee <service_principal_id> \
-  --role "Storage Blob Data Reader" \
-  --scope "/subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>/blobServices/default/containers/<container_name>"
+```json
+{
+  "properties": {
+    "roleDefinitionId": "/subscriptions/<SUBSCRIPTION_ID>/providers/Microsoft.Authorization/roleDefinitions/2a2b9908-6ea1-4ae2-8e65-a410df84e7d1",
+    "principalId": "<SERVICE_PRINCIPAL_ID>",
+    "scope": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/blobServices/default/containers/<CONTAINER>"
+  }
+}
 ```
 
-**Enrichment Datastore (Read-Write):**
+!!! note
+    The role definition ID `2a2b9908-6ea1-4ae2-8e65-a410df84e7d1` corresponds to the **Storage Blob Data Reader** built-in role.
+
+#### Enrichment Datastore (Read-Write)
+
+```json
+{
+  "properties": {
+    "roleDefinitionId": "/subscriptions/<SUBSCRIPTION_ID>/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+    "principalId": "<SERVICE_PRINCIPAL_ID>",
+    "scope": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/blobServices/default/containers/<CONTAINER>"
+  }
+}
+```
+
+!!! note
+    The role definition ID `ba92f5b4-2d11-453d-a403-e96b0029c9fe` corresponds to the **Storage Blob Data Contributor** built-in role.
+
+#### Assigning via Azure CLI
 
 ```bash
+# Source Datastore (Read-Only)
 az role assignment create \
-  --assignee <service_principal_id> \
+  --assignee <SERVICE_PRINCIPAL_ID> \
+  --role "Storage Blob Data Reader" \
+  --scope "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/blobServices/default/containers/<CONTAINER>"
+
+# Enrichment Datastore (Read-Write)
+az role assignment create \
+  --assignee <SERVICE_PRINCIPAL_ID> \
   --role "Storage Blob Data Contributor" \
-  --scope "/subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.Storage/storageAccounts/<storage_account_name>/blobServices/default/containers/<container_name>"
+  --scope "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Storage/storageAccounts/<STORAGE_ACCOUNT>/blobServices/default/containers/<CONTAINER>"
 ```
 
 !!! tip

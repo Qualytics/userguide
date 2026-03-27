@@ -19,6 +19,7 @@ Qualytics connects to Teradata through the **Teradata JDBC driver**. It uses JDB
 | `LOGON`                             | Allow the user to log on to the Teradata system                             |
 | `SELECT ON <database_name>`         | Read data from all tables for profiling and scanning                        |
 | `SHOW ON <database_name>`           | View object definitions (DDL) for metadata discovery                        |
+| `SELECT ON DBC.DatabasesV`          | Read database metadata for catalog discovery                                |
 
 !!! note
     Qualytics does not support Teradata as an enrichment datastore. You can point to a different enrichment datastore instead.

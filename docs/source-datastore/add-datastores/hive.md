@@ -35,6 +35,9 @@ GRANT SELECT ON ALL TABLES IN DATABASE <database_name> TO USER qualytics_read;
 !!! note
     If using **Kerberos authentication**, ensure the Kerberos principal has been granted the same `SELECT` privileges on the target database. Configure the Kerberos principal in the connection form instead of username/password.
 
+!!! info
+    If your Hive environment uses **ZooKeeper** for HiveServer2 high availability (HA), enable the **ZooKeeper HA** toggle in the connection form. This allows Qualytics to discover and connect to available HiveServer2 instances automatically through the ZooKeeper quorum.
+
 ### Troubleshooting Common Errors
 
 | Error                                          | Likely Cause                                                                 | Fix                                                                                     |
