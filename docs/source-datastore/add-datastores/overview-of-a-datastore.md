@@ -81,6 +81,18 @@ Qualytics provides verified connectors for the following source datastores:
 | 21. | [Timescale DB](../add-datastores/timescale-db.md)|
 | 22. | [Trino](../add-datastores/trino.md)|
 
+## Multi-Schema Source Datastore Creation
+
+For JDBC-based connectors, Qualytics supports creating multiple source datastores from a single connection in one step. This is useful when your database has multiple schemas that need to be onboarded simultaneously.
+
+With multi-schema creation, you can:
+
+* Automatically discover available catalogs and schemas from a connection.
+* Select multiple schemas and create all corresponding datastores in a single operation.
+* Optionally link all newly created datastores to an enrichment datastore.
+
+For detailed instructions, refer to the [**Multi-Schema Source Datastore Creation**](../add-datastores/multi-schema/overview.md) documentation.
+
 ## Connection Management
 
 To connect to a datastore, users must provide the required connection details, such as Host/Port or URI. These fields may vary depending on the datastore and are essential for establishing a secure and reliable connection to the target database.
