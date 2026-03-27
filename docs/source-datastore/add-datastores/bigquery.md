@@ -90,6 +90,55 @@ Grants read and write access for data editing and management:
 | 3.  | `roles/bigquery.jobUser` | Enables running of jobs such as queries and data loading. |
 | 4.  | `roles/bigquery.readSessionUser` | Facilitates the creation of read sessions for efficient data retrieval. |
 
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Access Denied: 403`                           | The service account lacks the required BigQuery roles                        | Assign `bigquery.dataViewer` and `bigquery.jobUser` roles to the service account        |
+| `Not found: Dataset`                           | The Dataset ID in the connection form does not exist or the service account cannot see it | Verify the Dataset ID in the BigQuery Console and ensure the service account has `bigquery.dataViewer` on the dataset |
+| `Not found: Project`                           | The Project ID is incorrect or the service account does not belong to the project | Verify the Project ID in the Google Cloud Console                                       |
+| `The caller does not have bigquery.jobs.create permission` | The service account lacks the `bigquery.jobUser` role               | Assign `roles/bigquery.jobUser` to the service account at the project level             |
+| `Invalid service account key`                  | The JSON key file is malformed, truncated, or belongs to a different project | Re-download the service account key from **IAM & Admin > Service Accounts** in the Google Cloud Console |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Invalid service account key` indicates that the JSON key file used for authentication is incorrect or corrupted.
+
+Common causes:
+
+- **Malformed JSON** — the key file was modified or truncated after download.
+- **Wrong project** — the service account key belongs to a different Google Cloud project than the one specified in the connection form.
+- **Key deleted or disabled** — the key was deleted from the service account in the Google Cloud Console.
+
+!!! note
+    Service account keys do not expire, but they can be deleted or disabled by project administrators. If the key stops working, verify its status in **IAM & Admin > Service Accounts > Keys**.
+
+#### Permission Errors
+
+The error `Access Denied: 403` or `The caller does not have bigquery.jobs.create permission` means the service account authenticated successfully but lacks the required roles.
+
+Common causes:
+
+- **Missing `bigquery.jobUser`** — the service account cannot run queries without this role. It must be assigned at the project level.
+- **Missing `bigquery.dataViewer`** — the service account cannot read dataset or table metadata.
+- **Missing `bigquery.readSessionUser`** — the service account cannot create read sessions for efficient data retrieval via the Storage API.
+- **Dataset-level vs. project-level** — some roles are assigned at the dataset level but the operation requires project-level access (e.g., `bigquery.jobUser`).
+
+#### Connection Errors
+
+The error `Not found: Dataset` or `Not found: Project` indicates a configuration issue with the Project ID or Dataset ID.
+
+Common causes:
+
+- **Wrong Project ID** — the Project ID does not match the Google Cloud project.
+- **Wrong Dataset ID** — the Dataset ID was misspelled or does not exist in the specified project.
+- **Regional mismatch** — the temporary dataset is in a different region than the source dataset, causing cross-region query failures.
+
+!!! tip
+    Start by confirming the service account key is valid (authentication errors), then verify BigQuery roles (permission errors), and finally check the Project ID and Dataset ID (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. BigQuery is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

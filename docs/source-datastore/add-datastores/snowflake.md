@@ -110,6 +110,57 @@ For detailed information on the migration plan and implementation:
 !!! info "Migration Recommendation"
     While Basic authentication is currently supported, migrating to Key-Pair authentication ensures your Snowflake connections remain secure and future-proof as Snowflake implements their deprecation timeline.
 
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Incorrect username or password`               | The username or password is incorrect                                        | Verify the credentials and ensure the user exists with `SHOW USERS` in Snowflake        |
+| `No active warehouse selected`                 | The user does not have a default warehouse or the warehouse specified in the connection form does not exist | Verify the warehouse name and run `ALTER USER <user> SET DEFAULT_WAREHOUSE = <warehouse>` |
+| `Insufficient privileges to operate on schema` | The role lacks `USAGE` on the target schema                                  | Run `GRANT USAGE ON SCHEMA <database>.<schema> TO ROLE <role>`                          |
+| `Object does not exist or not authorized`      | The role lacks `SELECT` on the target table or the table does not exist      | Run `GRANT SELECT ON ALL TABLES IN SCHEMA <database>.<schema> TO ROLE <role>`           |
+| `Warehouse is suspended`                       | The warehouse is suspended and `AUTO_RESUME` is not enabled                  | Resume the warehouse with `ALTER WAREHOUSE <warehouse> RESUME` or enable `AUTO_RESUME`  |
+| `Private key provided is invalid`              | The private key file is malformed or the passphrase is incorrect (Key-Pair auth) | Verify the private key format (PKCS#8 PEM) and the passphrase                          |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Incorrect username or password` or `Private key provided is invalid` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **Account identifier wrong** — the Snowflake host format must be `<account>.<region>.snowflakecomputing.com`. An incorrect account identifier will fail to connect.
+- **Key-Pair format** — the private key must be in PKCS#8 PEM format. DER or PKCS#1 formats are not supported.
+- **Passphrase mismatch** — if the private key is encrypted, the passphrase provided does not match.
+
+!!! note
+    Snowflake is migrating service accounts to Key-Pair authentication. If using basic authentication with a `TYPE=SERVICE` user, consider migrating to Key-Pair before Snowflake deprecates basic auth for service users.
+
+#### Permission Errors
+
+The error `Insufficient privileges` or `Object does not exist or not authorized` means the role authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Wrong role** — the user's current role does not have the required privileges. Verify the role with `SELECT CURRENT_ROLE()`.
+- **Missing `USAGE` on warehouse** — the role cannot execute queries without warehouse access.
+- **Missing `USAGE` on database/schema** — the role cannot browse objects in the database or schema.
+- **Future grants not set** — new tables created after the initial grant are not automatically accessible. Use `GRANT SELECT ON FUTURE TABLES IN SCHEMA` to fix this.
+
+#### Connection Errors
+
+The error `No active warehouse selected` or `Warehouse is suspended` indicates a compute resource issue.
+
+Common causes:
+
+- **Warehouse does not exist** — the warehouse name in the connection form was misspelled or the warehouse was dropped.
+- **Warehouse suspended** — the warehouse is suspended and `AUTO_RESUME = FALSE`. Resume it manually or enable auto-resume.
+- **No default warehouse** — the user does not have a default warehouse assigned with `ALTER USER ... SET DEFAULT_WAREHOUSE`.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify role privileges (permission errors), and finally check warehouse availability (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Snowflake is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

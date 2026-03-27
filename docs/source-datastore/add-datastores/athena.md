@@ -1,12 +1,181 @@
 # Athena
 
-Adding and configuring an Amazon Athena connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.  
+Adding and configuring an Amazon Athena connection within Qualytics empowers the platform to build a symbolic link with your schema to perform operations like data discovery, visualization, reporting, syncing, profiling, scanning, anomaly surveillance, and more.
 
 This documentation provides a step-by-step guide on adding Athena as a source datastore in Qualytics. It covers the entire process, from initial connection setup to testing and finalizing the configuration.
 
-By following these instructions, enterprises can ensure their Athena environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle.  
+By following these instructions, enterprises can ensure their Athena environment is properly connected with Qualytics, unlocking the platform's potential to help you proactively manage your full data quality lifecycle.
 
-Let’s get started 🚀
+Let's get started 🚀
+
+## Athena Setup Guide
+
+Qualytics connects to Athena through the **Simba Athena JDBC driver** — it makes no direct AWS SDK calls of its own. All AWS API interactions (Athena, Glue, S3) happen inside the driver using the credentials you provide in the connection form.
+
+### Minimum Athena Permissions
+
+| Permission                      | Purpose                                                                                          |
+|---------------------------------|--------------------------------------------------------------------------------------------------|
+| `athena:StartQueryExecution`    | Submit queries                                                                                   |
+| `athena:StopQueryExecution`     | Cancel running queries                                                                           |
+| `athena:GetQueryExecution`      | Poll query status                                                                                |
+| `athena:GetQueryResults`        | Fetch result rows (used directly by the JDBC driver via `ResultFetcher=GetQueryResults`)         |
+| `athena:ListDatabases`          | Discover schemas                                                                                 |
+| `athena:ListTableMetadata`      | Discover tables and columns                                                                      |
+| `athena:GetTableMetadata`       | Read column definitions                                                                          |
+| `athena:GetWorkGroup`           | Validate the workgroup configuration                                                             |
+
+### Minimum Glue Permissions (Read-Only)
+
+Athena delegates all catalog and schema metadata to AWS Glue. Only read permissions are needed — Qualytics never creates, modifies, or deletes catalog objects.
+
+| Permission                                                          | Purpose                                      |
+|---------------------------------------------------------------------|----------------------------------------------|
+| `glue:GetDatabase` / `glue:GetDatabases`                           | Read database metadata                       |
+| `glue:GetCatalog` / `glue:GetCatalogs`                             | Read catalog metadata                        |
+| `glue:GetTable` / `glue:GetTables`                                 | Read table and column definitions             |
+| `glue:GetPartition` / `glue:GetPartitions` / `glue:BatchGetPartition` | Read partition metadata for query planning |
+
+### Minimum S3 Permissions (Query Result Output Location)
+
+The **S3 Output Location** field in the connection form (`s3://<bucket>/<prefix>/`) requires read and write access on that bucket path. The bucket must already exist — Qualytics does not create buckets.
+
+| Permission                       | Resource                                | Purpose                                                                      |
+|----------------------------------|-----------------------------------------|------------------------------------------------------------------------------|
+| `s3:PutObject`                   | `arn:aws:s3:::<bucket>/<prefix>/*`      | Write query result files                                                     |
+| `s3:GetObject`                   | `arn:aws:s3:::<bucket>/<prefix>/*`      | Read result files back                                                       |
+| `s3:ListBucket`                  | `arn:aws:s3:::<bucket>`                 | List result files                                                            |
+| `s3:GetBucketLocation`           | `arn:aws:s3:::<bucket>`                 | Validate bucket region                                                       |
+| `s3:ListBucketMultipartUploads`  | `arn:aws:s3:::<bucket>`                 | Track in-progress multipart uploads (used by JDBC driver for large result sets) |
+| `s3:ListMultipartUploadParts`    | `arn:aws:s3:::<bucket>/<prefix>/*`      | List parts of an in-progress upload                                          |
+| `s3:AbortMultipartUpload`        | `arn:aws:s3:::<bucket>/<prefix>/*`      | Clean up incomplete multipart uploads                                        |
+
+!!! note
+    If your Glue catalog is governed by **AWS Lake Formation**, also add `lakeformation:GetDataAccess` on `"*"`. Athena requests this permission transparently on every query against Lake Formation–managed tables.
+
+### Example IAM Policy
+
+Replace `<YOUR_BUCKET>` and `<YOUR_PREFIX>` with the bucket name and path prefix configured in the **S3 Output Location** field.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AthenaQueryAccess",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:StopQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "athena:ListDatabases",
+        "athena:ListTableMetadata",
+        "athena:GetTableMetadata",
+        "athena:GetWorkGroup"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "GlueCatalogReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetDatabases",
+        "glue:GetCatalog",
+        "glue:GetCatalogs",
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:GetPartition",
+        "glue:GetPartitions",
+        "glue:BatchGetPartition"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3QueryResultsBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:ListBucketMultipartUploads",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<YOUR_BUCKET>",
+        "arn:aws:s3:::<YOUR_BUCKET>/<YOUR_PREFIX>/*"
+      ]
+    }
+  ]
+}
+```
+
+!!! tip
+    If you use a named Athena workgroup, scope the Athena actions to `arn:aws:athena:<region>:<account-id>:workgroup/<workgroup-name>` instead of `"*"` for tighter least-privilege access.
+
+### Troubleshooting Common Errors
+
+| Error                            | Likely Cause                          | Fix                                    |
+|----------------------------------|---------------------------------------|----------------------------------------|
+| `AccessDenied`                   | The IAM identity is missing one or more of the permissions listed above | Add the missing permission to the policy and re-test the connection |
+| `Output location is not valid`   | The S3 bucket does not exist, the path is malformed, or the bucket is in a different region than your Athena workgroup | Verify the bucket name, prefix format (`s3://bucket/prefix/`), and that the bucket region matches the Athena region |
+| `The request signature we calculated does not match the signature you provided` | AWS credentials are invalid or incomplete — mismatched access key / secret key pair, or a temporary credential is missing its session token | Double-check the Access Key ID and Secret Access Key; if using temporary credentials (STS / assumed role), ensure the session token field is also provided |
+
+### Detailed Troubleshooting Notes
+
+#### Signature Mismatch Errors
+
+The error `The request signature we calculated does not match the signature you provided` is an **AWS authentication/signing failure** — it is not a permissions or S3 configuration issue. AWS rejects the request before any permission checks are evaluated because the cryptographic signature computed from your credentials does not match what AWS expects.
+
+Common causes:
+
+- **Mismatched access key / secret key pair** — the Access Key ID and Secret Access Key do not belong to the same IAM identity.
+- **Incorrectly copied secret key** — an extra space, trailing newline, or truncated character was introduced when pasting the secret key into the connection form.
+- **Rotated or expired credentials** — the access key has been deactivated or replaced since the connection was originally configured.
+- **Temporary credentials (STS / SSO) without a session token** — if the IAM identity uses assumed-role or SSO credentials, a session token is required alongside the access key and secret key. Omitting it produces a signature mismatch, not an explicit "missing token" error.
+
+!!! note
+    This error occurs at the AWS request-signing layer, **before** any IAM permission policies are evaluated. If you see this error, focus on validating the credentials themselves rather than adjusting IAM policies.
+
+#### S3 Output Location Issues
+
+The error `Output location is not valid` indicates a problem with the S3 bucket configured in the **S3 Output Location** field, not with Athena or Glue permissions.
+
+Common causes:
+
+- **Incorrect bucket name** — a typo, missing hyphen, or wrong account bucket name.
+- **Invalid path format** — the value must follow the format `s3://bucket/prefix/`. A missing `s3://` scheme or trailing slash can cause validation to fail.
+- **Bucket does not exist** — the specified bucket has not been created or was deleted.
+- **Region mismatch** — the S3 bucket is in a different AWS region than the Athena workgroup. Athena requires the output bucket to be in the same region.
+
+!!! tip
+    You can verify the bucket exists and check its region by running `aws s3api get-bucket-location --bucket <YOUR_BUCKET>` in the AWS CLI.
+
+#### Permission-Related Errors
+
+The error `AccessDenied` means the IAM identity authenticated successfully but lacks one or more of the required permissions listed in the [Minimum Athena Permissions](#minimum-athena-permissions), [Minimum Glue Permissions](#minimum-glue-permissions-read-only), or [Minimum S3 Permissions](#minimum-s3-permissions-query-result-output-location) tables above.
+
+To resolve:
+
+- Review the IAM policy attached to the user or role and compare it against the [Example IAM Policy](#example-iam-policy).
+- Use **AWS CloudTrail** to identify the exact API call that was denied — the CloudTrail event will show the specific action and resource that triggered the `AccessDenied` response.
+- If using **AWS Lake Formation**, ensure `lakeformation:GetDataAccess` is also granted.
+
+#### General Debugging Guidance
+
+When diagnosing connection failures, the error message itself indicates which category of issue to investigate:
+
+| Error Pattern | Category | Where to Look |
+|---------------|----------|---------------|
+| `The request signature we calculated does not match...` | Credentials | Verify the Access Key ID, Secret Access Key, and session token (if applicable) are correct and active |
+| `AccessDenied` | IAM Permissions | Compare the attached IAM policy against the minimum permissions tables and use CloudTrail to identify the denied action |
+| `Output location is not valid` | S3 Configuration | Confirm the bucket name, path format (`s3://bucket/prefix/`), existence, and region alignment with Athena |
+
+!!! tip
+    Start by confirming credentials are valid (signature errors), then verify IAM permissions (access denied errors), and finally check S3 configuration (output location errors). This order mirrors the sequence AWS evaluates requests: authenticate first, authorize second, then execute.
 
 ## Add the Source Datastore
 
@@ -70,13 +239,13 @@ If the toggle for **Add New Connection** is turned on, then this will prompt you
 
 ![test-source-connection](../../assets/source-datastores/add-datastores/athena/test-source-connection-5.png)
 
-If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified. 
+If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
 
 ### Option II: Use an Existing Connection
 
 If the toggle for **Add New connection** is turned off, then this will prompt you to configure the source datastore using the existing connection details.
 
-**Step 1**: Select a **connection** to reuse existing credentials. 
+**Step 1**: Select a **connection** to reuse existing credentials.
 
 ![add-datastore-details-existing](../../assets/source-datastores/add-datastores/athena/add-datastore-details-existing-6.png)
 
@@ -95,7 +264,7 @@ If the toggle for **Add New connection** is turned off, then this will prompt yo
 
 ## Add Enrichment Datastore
 
-After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including any anomalies and additional metadata in tables. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.  
+After successfully testing and verifying your source datastore connection, you have the option to add an enrichment datastore (recommended). This datastore is used to store analyzed results, including any anomalies and additional metadata in tables. This setup provides comprehensive visibility into your data quality, enabling you to manage and improve it effectively.
 
 !!! warning
     Qualytics does not support the Athena connector as an enrichment datastore, but you can point to a different enrichment datastore.
@@ -105,7 +274,7 @@ After successfully testing and verifying your source datastore connection, you h
 ![click-source](../../assets/source-datastores/add-datastores/athena/click-source-8.png)
 
 **Step 2**: A modal window - **Link Enrichment Datastore** will appear, providing you with the options to configure an **enrichment datastore**.
-  
+
 ![enrichment-details](../../assets/source-datastores/add-datastores/athena/enrichment-details-9.png)
 
 | REF.              | FIELDS       | ACTIONS                                    |
@@ -192,7 +361,7 @@ If the toggle for **Use an existing enrichment datastore** is turned on, you wil
 
 ![click-finish](../../assets/source-datastores/add-datastores/athena/click-finish-20.png)
 
-When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully. 
+When the configuration process is finished, a success notification appears on the screen indicating that the datastore was added successfully.
 
 Close the success message and you will be automatically redirected to the **Source Datastore Details** page where you can perform data operations on your configured **source datastore**.
 
@@ -226,7 +395,7 @@ This section provides a sample payload for creating an Athena datastore. Replace
     }
     ```
 === "Create a Source Datastore with an existing Connection"
-    ```json 
+    ```json
     {
         "name": "your_datastore_name",
         "teams": ["Public"],
@@ -236,7 +405,7 @@ This section provides a sample payload for creating an Athena datastore. Replace
         "trigger_catalog": true,
         "connection": connection_id
     }
-    ``` 
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 

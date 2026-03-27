@@ -57,8 +57,147 @@ For example, once you generate the keys, they might look like this:
 
  - Secret Key: `abcd1234efgh5678ijklmnopqrstuvwx`
 
-!!! warning 
-    Make sure to store these keys securely, as they provide access to your Google Cloud Storage resources. 
+!!! warning
+    Make sure to store these keys securely, as they provide access to your Google Cloud Storage resources.
+
+## Datastore Google Cloud Storage Privileges
+
+The permissions required depend on whether you are using Google Cloud Storage as a source or enrichment datastore. Qualytics accesses GCS using HMAC keys (Access Key / Secret Key) or a Service Account Key.
+
+### Minimum Permissions (Source Datastore)
+
+The service account or HMAC key must have the following permissions:
+
+| Permission                | Purpose                                                                 |
+|---------------------------|-------------------------------------------------------------------------|
+| `storage.buckets.get`     | Validate the bucket exists and retrieve its metadata                    |
+| `storage.objects.get`     | Read file contents for profiling and scanning                           |
+| `storage.objects.list`    | List files in the bucket to discover data assets                        |
+
+!!! tip
+    You can grant these permissions by assigning the **Storage Object Viewer** (`roles/storage.objectViewer`) role to the service account on the target bucket.
+
+### Additional Permissions for Enrichment Datastore
+
+When using Google Cloud Storage as an enrichment datastore, the following additional permissions are required:
+
+| Permission                | Purpose                                                                 |
+|---------------------------|-------------------------------------------------------------------------|
+| `storage.objects.create`  | Write enrichment result files                                           |
+| `storage.objects.delete`  | Remove temporary or outdated enrichment files                           |
+
+!!! tip
+    You can grant all required permissions (read + write) by assigning the **Storage Object Admin** (`roles/storage.objectAdmin`) role to the service account on the target bucket.
+
+### Example IAM Policy
+
+Replace `<SERVICE_ACCOUNT_EMAIL>` and `<BUCKET_NAME>` with your actual values.
+
+#### Source Datastore (Read-Only)
+
+```json
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectViewer",
+      "members": [
+        "serviceAccount:<SERVICE_ACCOUNT_EMAIL>"
+      ]
+    }
+  ]
+}
+```
+
+#### Enrichment Datastore (Read-Write)
+
+```json
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectAdmin",
+      "members": [
+        "serviceAccount:<SERVICE_ACCOUNT_EMAIL>"
+      ]
+    }
+  ]
+}
+```
+
+!!! tip
+    If you need both `storage.buckets.get` and object-level permissions but want to avoid a broader role, you can create a custom role with only the specific permissions listed in the [Minimum Permissions](#minimum-permissions-source-datastore) section.
+
+#### Assigning via gcloud CLI
+
+```bash
+# Source Datastore (Read-Only)
+gsutil iam ch \
+  serviceAccount:<SERVICE_ACCOUNT_EMAIL>:roles/storage.objectViewer \
+  gs://<BUCKET_NAME>
+
+# Enrichment Datastore (Read-Write)
+gsutil iam ch \
+  serviceAccount:<SERVICE_ACCOUNT_EMAIL>:roles/storage.objectAdmin \
+  gs://<BUCKET_NAME>
+```
+
+!!! tip
+    You can also assign roles through the Google Cloud Console by navigating to the bucket, selecting **Permissions**, and clicking **Grant Access**.
+
+### GCS Roles Summary
+
+| Role                                          | Use Case                  | Permissions Included                                                  |
+|-----------------------------------------------|---------------------------|-----------------------------------------------------------------------|
+| `roles/storage.objectViewer`                  | Source Datastore           | `storage.objects.get`, `storage.objects.list`, `storage.buckets.get`  |
+| `roles/storage.objectAdmin`                   | Enrichment Datastore       | `storage.objects.get`, `storage.objects.list`, `storage.objects.create`, `storage.objects.delete`, `storage.buckets.get` |
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `403 Forbidden`                                | The service account or HMAC key lacks the required permissions on the bucket | Assign the appropriate role (`Storage Object Viewer` or `Storage Object Admin`) to the service account on the target bucket |
+| `404 Not Found: Bucket not found`              | The bucket name in the URI is incorrect or the bucket does not exist         | Verify the bucket name and ensure the URI follows the format `gs://bucket-name`         |
+| `Invalid credentials`                          | The Access Key / Secret Key pair is incorrect or the service account key file is malformed | Regenerate the HMAC keys from **Cloud Storage > Settings > Interoperability** or re-download the service account key |
+| `The caller does not have storage.objects.list access` | The service account has object-level access but lacks bucket-level `list` permission | Assign the `Storage Object Viewer` role at the bucket level (not just object level)    |
+| `The caller does not have storage.objects.create access` | The enrichment service account lacks write permissions                | Upgrade the role assignment from `Storage Object Viewer` to `Storage Object Admin`      |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Invalid credentials` indicates that the HMAC keys or service account key are incorrect or malformed.
+
+Common causes:
+
+- **Incorrect Access Key / Secret Key** — the HMAC key pair was copied incorrectly or has been deleted.
+- **Malformed service account key** — the JSON key file is corrupted, truncated, or belongs to a different project.
+- **Service account disabled** — the service account has been disabled in the Google Cloud Console.
+
+!!! note
+    HMAC keys are tied to a specific service account. If the service account is deleted or disabled, the HMAC keys will stop working even if they have not been explicitly revoked.
+
+#### Permission Errors
+
+The error `403 Forbidden` or `The caller does not have storage.objects.list access` means the credentials are valid but lack the required IAM permissions.
+
+Common causes:
+
+- **Missing IAM role** — the service account does not have `Storage Object Viewer` (source) or `Storage Object Admin` (enrichment) assigned on the target bucket.
+- **Role assigned at wrong level** — the role is assigned at the project level but a bucket-level policy overrides it.
+- **Uniform bucket-level access** — if the bucket uses uniform bucket-level access (recommended), ensure IAM policies are set at the bucket level, not through ACLs.
+- **Source vs. enrichment mismatch** — the service account has `Storage Object Viewer` but the operation requires write access (enrichment).
+
+#### Connection Errors
+
+The error `404 Not Found: Bucket not found` indicates a configuration issue with the bucket name or URI.
+
+Common causes:
+
+- **Bucket does not exist** — the bucket name was misspelled or the bucket has been deleted.
+- **Wrong project** — the service account belongs to a different Google Cloud project than the bucket.
+- **Invalid URI format** — the URI must follow `gs://bucket-name`. Extra path segments or incorrect formatting will cause failures.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify IAM role assignments (permission errors), and finally check the bucket name and URI format (connection errors).
 
 ## Add a Source Datastore
 

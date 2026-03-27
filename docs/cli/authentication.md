@@ -80,6 +80,7 @@ Environment variables take precedence over the config file. Combined with `QUALY
 
 ### GitHub Actions Example
 
+{% raw %}
 ```yaml
 jobs:
   quality-scan:
@@ -95,3 +96,4 @@ jobs:
         run: |
           qualytics operations scan --datastore-id 1 --background
 ```
+{% endraw %}
