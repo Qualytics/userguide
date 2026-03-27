@@ -248,6 +248,16 @@
     background-color: var(--q-white);
   }
 
+  /* Grid Cards */
+  .md-typeset .grid.cards > ul > li {
+    background-color: var(--q-white);
+  }
+
+  .md-typeset .grid.cards > ul > li:hover {
+    border-color: var(--q-brick);
+    box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
+  }
+
   /* Admonitions (Example boxes) */
   .md-typeset .admonition {
     background-color: var(--q-white);
@@ -556,6 +566,16 @@
 
   .md-typeset table:not([class]) td {
     background-color: var(--q-black);
+  }
+
+  /* Grid Cards */
+  .md-typeset .grid.cards > ul > li {
+    background-color: var(--q-black);
+  }
+
+  .md-typeset .grid.cards > ul > li:hover {
+    border-color: var(--q-brick);
+    box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
   }
 
   /* Admonitions (Example boxes) */
