@@ -8,6 +8,108 @@ By following these instructions, enterprises can ensure their Trino environment 
 
 Let’s get started 🚀
 
+## Trino Setup Guide
+
+Qualytics connects to Trino through the **Trino JDBC driver**. It uses standard SQL queries for data profiling and scanning. Since Trino is a distributed query engine, permissions are determined by the underlying data source (connector) configured in the Trino catalog (e.g., Hive, Delta Lake, Iceberg, RDBMS).
+
+### Minimum Trino Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `SELECT` on target tables                     | Read data from tables for profiling and scanning                        |
+| Access to the Trino catalog                   | Browse available schemas and tables                                     |
+| Access to the Trino schema                    | Browse available tables and columns                                     |
+
+### Additional Permissions for Enrichment Datastore
+
+When using Trino as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `CREATE TABLE` in the schema                  | Create enrichment tables (`_qualytics_*`)                               |
+| `INSERT` into tables                          | Write anomaly records, scan results, and check metrics                  |
+| `DELETE` from tables                          | Remove stale enrichment records                                         |
+| `ALTER TABLE` in the schema                   | Modify enrichment table schemas during version migrations               |
+| `DROP TABLE` in the schema                    | Remove enrichment tables during cleanup or when the datastore is unlinked |
+
+The actual permissions depend on the Trino security model configured for your deployment:
+
+| Security Model              | How Permissions Are Managed                                                  |
+|-----------------------------|------------------------------------------------------------------------------|
+| **No security (default)**   | All users have full read/write access to all catalogs and schemas            |
+| **File-based access control** | Permissions are defined in `rules.json` — ensure the Qualytics user has `SELECT` (and `INSERT`, `CREATE TABLE` for enrichment) on the target catalog and schema |
+| **Connector-level security** | Permissions are delegated to the underlying data source — ensure the Qualytics user has read (and write for enrichment) access at the source level |
+
+### Example: File-Based Access Control Configuration
+
+If your Trino deployment uses file-based access control (`rules.json`), ensure the Qualytics user has appropriate access to the target catalog and schema:
+
+```json
+{
+  "catalogs": [
+    {
+      "user": "qualytics_read",
+      "catalog": "<catalog_name>",
+      "allow": "read-only"
+    }
+  ]
+}
+```
+
+For enrichment datastores, use `"allow": "all"` instead of `"read-only"` to enable write operations.
+
+!!! note
+    Trino permissions are managed through the underlying connector's security model (e.g., Hive, Delta Lake, Iceberg). Ensure the Trino user has the appropriate access to the backing data source.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Access Denied: Cannot select from table`      | The user lacks `SELECT` on the target table in the Trino access control rules or the underlying connector | Add `SELECT` permission for the user in `rules.json` or grant access in the underlying data source |
+| `Access Denied: Cannot create table`           | The enrichment user lacks `CREATE TABLE` on the target schema                | Add `CREATE TABLE` permission in the access control rules or underlying data source     |
+| `Catalog does not exist`                       | The catalog name in the connection form does not match a configured Trino catalog | Verify available catalogs with `SHOW CATALOGS` in Trino                               |
+| `Schema does not exist`                        | The schema name does not exist in the specified catalog                       | Verify available schemas with `SHOW SCHEMAS FROM <catalog>`                             |
+| `Connection refused`                           | The Trino coordinator is not reachable or the port (default 8080) is incorrect | Verify the host, port, and that the Trino coordinator is running                      |
+| `Authentication failed`                        | Incorrect username or password, or the Trino server requires a different authentication method | Verify credentials and check if the Trino server uses LDAP, Kerberos, or password authentication |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Authentication failed` indicates that the credentials are incorrect or the authentication method does not match the server configuration.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one configured in the Trino server.
+- **Wrong authentication method** — the Trino server uses LDAP or Kerberos, but the connection form provides basic username/password.
+- **HTTPS required** — the Trino coordinator requires HTTPS connections, but the connection is using HTTP.
+
+!!! note
+    Trino authentication is configured at the coordinator level. Check the `password-authenticator.properties` file for the configured authentication method.
+
+#### Permission Errors
+
+The error `Access Denied: Cannot select from table` or `Access Denied: Cannot create table` means the user authenticated successfully but lacks access to the target resource.
+
+Common causes:
+
+- **File-based access control** — the `rules.json` file does not grant the required permissions to the Qualytics user.
+- **Connector-level security** — the underlying data source does not grant the necessary access.
+- **Missing enrichment permissions** — for enrichment datastores, the user lacks `CREATE TABLE` or `INSERT` permissions in addition to `SELECT`.
+
+#### Connection Errors
+
+The error `Connection refused` or `Catalog does not exist` indicates a connectivity or configuration issue.
+
+Common causes:
+
+- **Coordinator not reachable** — the Trino coordinator host or port (default 8080) is incorrect.
+- **Wrong catalog name** — the catalog name in the connection form does not match a configured Trino catalog.
+- **Coordinator not running** — the Trino coordinator process is not started.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify access control rules (permission errors), and finally check coordinator connectivity (connection errors).
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Trino is an example of such a datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Trino datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

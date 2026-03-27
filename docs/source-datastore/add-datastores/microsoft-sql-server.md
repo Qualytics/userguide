@@ -8,6 +8,128 @@ By following these instructions, enterprises can ensure their Microsoft SQL Serv
 
 Let’s get started 🚀
 
+## Microsoft SQL Server Setup Guide
+
+Qualytics connects to Microsoft SQL Server through the **Microsoft JDBC driver for SQL Server**. It queries system views (`sys.schemas`, `sys.database_principals`) to discover schemas and uses standard JDBC metadata APIs for tables, columns, and primary keys.
+
+### Minimum SQL Server Permissions (Source Datastore)
+
+| Permission                              | Purpose                                                                 |
+|-----------------------------------------|-------------------------------------------------------------------------|
+| `CONNECT`                               | Allow the user to connect to the database                               |
+| `SELECT ON SCHEMA::<schema_name>`       | Read data from all tables and views for profiling and scanning          |
+| `VIEW DEFINITION ON SCHEMA::<schema_name>` | Read object definitions for metadata discovery                       |
+| `SELECT ON sys.schemas`                 | Discover available schemas in the database                              |
+| `SELECT ON sys.database_principals`     | Resolve schema ownership for catalog discovery                          |
+
+### Additional Permissions for Enrichment Datastore
+
+When using SQL Server as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                   | Purpose                                                            |
+|----------------------------------------------|--------------------------------------------------------------------|
+| `CREATE TABLE`                               | Create enrichment tables (`_qualytics_*`)                          |
+| `INSERT ON SCHEMA::<schema_name>`            | Write anomaly records, scan results, and check metrics             |
+| `UPDATE ON SCHEMA::<schema_name>`            | Update enrichment records during rescans                           |
+| `DELETE ON SCHEMA::<schema_name>`            | Remove stale enrichment records                                    |
+| `ALTER ON SCHEMA::<schema_name>`             | Modify enrichment table schemas during version migrations          |
+| `DROP TABLE`                                         | Remove enrichment tables during cleanup or when the datastore is unlinked |
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<database_name>`, `<schema_name>`, and `<password>` with your actual values.
+
+```sql
+-- Create a login at the server level
+CREATE LOGIN qualytics_read WITH PASSWORD = ‘<password>’;
+
+-- Switch to the target database
+USE <database_name>;
+
+-- Create a user mapped to the login
+CREATE USER qualytics_read FOR LOGIN qualytics_read;
+
+-- Grant connection and read-only access
+GRANT CONNECT TO qualytics_read;
+GRANT SELECT ON SCHEMA::<schema_name> TO qualytics_read;
+GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO qualytics_read;
+```
+
+### Example: Enrichment Datastore User (Read-Write)
+
+```sql
+-- Create a login at the server level
+CREATE LOGIN qualytics_readwrite WITH PASSWORD = ‘<password>’;
+
+-- Switch to the target database
+USE <database_name>;
+
+-- Create a user mapped to the login
+CREATE USER qualytics_readwrite FOR LOGIN qualytics_readwrite;
+
+-- Grant connection, read-write, and table management access
+GRANT CONNECT TO qualytics_readwrite;
+GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::<schema_name> TO qualytics_readwrite;
+GRANT CREATE TABLE TO qualytics_readwrite;
+GRANT ALTER ON SCHEMA::<schema_name> TO qualytics_readwrite;
+GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO qualytics_readwrite;
+```
+
+!!! note
+    If using **Service Principal** authentication, ensure the Service Principal has been added as an external user in the database with the same permissions listed above. Use the Client ID, Client Secret, and Tenant ID from your Microsoft Entra ID app registration.
+
+!!! note
+    Qualytics automatically filters out system schemas (`INFORMATION_SCHEMA`, `sys`, and schemas starting with `db_`) during catalog discovery. You do not need to restrict access to these schemas manually.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Login failed for user`                        | Incorrect username or password, or the login does not exist                  | Verify the login exists at the server level with `SELECT name FROM sys.sql_logins`      |
+| `Cannot open database requested by the login`  | The user does not have access to the specified database                       | Ensure a user is mapped to the login in the target database with `CREATE USER ... FOR LOGIN` |
+| `The SELECT permission was denied on object`   | The user lacks `SELECT` on one or more tables in the schema                  | Run `GRANT SELECT ON SCHEMA::<schema_name> TO <user>`                                   |
+| `CREATE TABLE permission denied in database`   | The enrichment user lacks `CREATE TABLE` permission                          | Run `GRANT CREATE TABLE TO <user>`                                                      |
+| `Cannot find the object because it does not exist or you do not have permissions` | The user lacks `VIEW DEFINITION` on the schema | Run `GRANT VIEW DEFINITION ON SCHEMA::<schema_name> TO <user>`                          |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Login failed for user` indicates that the credentials are incorrect or the login does not exist at the server level.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the login.
+- **Login does not exist** — the login was never created at the server level with `CREATE LOGIN`.
+- **User not mapped** — the login exists but no user is mapped to it in the target database.
+- **Service Principal misconfiguration** — when using Entra ID authentication, the Client ID, Client Secret, or Tenant ID is incorrect.
+
+!!! note
+    SQL Server distinguishes between **logins** (server-level) and **users** (database-level). A login must exist at the server level, and a corresponding user must be created in each target database.
+
+#### Permission Errors
+
+The error `The SELECT permission was denied on object` means the user authenticated successfully but lacks the necessary grants on the target schema.
+
+Common causes:
+
+- **Missing `SELECT ON SCHEMA`** — the user does not have `SELECT` on the target schema.
+- **Wrong schema** — the user has permissions on `dbo` but the target tables are in a different schema.
+- **Missing `VIEW DEFINITION`** — the user cannot see object metadata needed for catalog discovery.
+
+#### Connection Errors
+
+The error `Cannot open database requested by the login` means the user does not have access to the specified database.
+
+Common causes:
+
+- **No user in database** — the login exists but `CREATE USER ... FOR LOGIN` was not run in the target database.
+- **Database does not exist** — the database name in the connection form is incorrect.
+- **Database is offline** — the target database is in a recovery or offline state.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check database access (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Microsoft SQL Server is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

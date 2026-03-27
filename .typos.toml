@@ -7,6 +7,8 @@ OpenAPIv3 = "OpenAPIv3"
 AKS = "AKS"
 IST = "IST"
 LGPD = "LGPD"
+CREATEIN = "CREATEIN"
+ALTERIN = "ALTERIN"
 
 [files]
 extend-exclude = [

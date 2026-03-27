@@ -8,6 +8,92 @@ By following these instructions, enterprises can ensure their Teradata environme
 
 Let’s get started 🚀
 
+## Teradata Setup Guide
+
+Qualytics connects to Teradata through the **Teradata JDBC driver**. It uses JDBC metadata APIs to discover databases, tables, columns, and primary keys. Qualytics automatically filters out Teradata system databases (`DBC`, `SYSLIB`, `SYSSPATIAL`, `SYSUDTLIB`, `SystemFe`, `TDQCD`, `TDStats`, `TDPUSER`, `SYSUIF`, `All`, `Crashdumps`, `EXTUSER`, `LockLogShredder`, `SQLJ`, `SYSADMIN`, `SYSBAR`, `SYSJDBC`) during catalog discovery.
+
+### Minimum Teradata Permissions (Source Datastore)
+
+| Permission                          | Purpose                                                                     |
+|-------------------------------------|-----------------------------------------------------------------------------|
+| `LOGON`                             | Allow the user to log on to the Teradata system                             |
+| `SELECT ON <database_name>`         | Read data from all tables for profiling and scanning                        |
+| `SHOW ON <database_name>`           | View object definitions (DDL) for metadata discovery                        |
+| `SELECT ON DBC.DatabasesV`          | Read database metadata for catalog discovery                                |
+
+!!! note
+    Qualytics does not support Teradata as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<database_name>` and `<password>` with your actual values.
+
+```sql
+-- Create a dedicated read-only user
+CREATE USER qualytics_read AS
+  PASSWORD = '<password>'
+  PERM = 0
+  SPOOL = 1000000000;
+
+-- Grant logon access
+GRANT LOGON ON ALL TO qualytics_read;
+
+-- Grant read access to the target database
+GRANT SELECT ON <database_name> TO qualytics_read;
+GRANT SHOW ON <database_name> TO qualytics_read;
+```
+
+!!! tip
+    If using **LDAP authentication**, ensure the LDAP user has the same `SELECT` and `SHOW` privileges on the target database.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Authentication failed`                        | Incorrect username or password                                               | Verify the credentials and ensure the user exists in the Teradata system                |
+| `User does not have SELECT access`             | The user lacks `SELECT` on the target database or table                      | Run `GRANT SELECT ON <database_name> TO <user>`                                         |
+| `User does not have SHOW access`               | The user lacks `SHOW` on the target database                                 | Run `GRANT SHOW ON <database_name> TO <user>`                                           |
+| `Connection refused`                           | The Teradata server is not reachable or the port is incorrect                | Verify the host and port, and ensure the Teradata server allows connections from the Qualytics IP |
+| `Database does not exist`                      | The database name provided in the connection form is incorrect               | Verify the database name with `SELECT DatabaseName FROM DBC.DatabasesV`                 |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Authentication failed` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **User does not exist** — the username was misspelled or does not exist in the Teradata system.
+- **LDAP authentication** — if LDAP is enabled, the credentials must match the LDAP directory, not the Teradata internal user store.
+
+!!! note
+    Teradata authentication can be configured to use internal, LDAP, or Kerberos mechanisms. Ensure the authentication method in the connection form matches the server configuration.
+
+#### Permission Errors
+
+The error `User does not have SELECT access` means the user authenticated successfully but lacks the necessary grants on the target database.
+
+Common causes:
+
+- **Missing `SELECT` on database** — the user does not have `SELECT` on the target database or specific tables.
+- **Missing `SHOW` on database** — the user cannot view object definitions needed for metadata discovery.
+- **Access to system databases** — the user is trying to access a filtered system database (e.g., `DBC`, `SYSLIB`).
+
+#### Connection Errors
+
+The error `Connection refused` means the Teradata server is not reachable from the Qualytics server.
+
+Common causes:
+
+- **Firewall** — a firewall is blocking connections on the Teradata port (default 1025).
+- **Server not running** — the Teradata server is not started or is in a maintenance state.
+- **Wrong host** — the hostname or IP address in the connection form is incorrect.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify database permissions (permission errors), and finally check network connectivity (connection errors).
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Teradata is an example of such a datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the Teradata datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
