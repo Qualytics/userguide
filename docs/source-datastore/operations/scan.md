@@ -159,7 +159,7 @@ However, when scan results are displayed, masked field values are obfuscated in 
 
 - **Anomaly Source Records** — values are hidden by default; users with Editor permission can reveal them per anomaly
 - **Anomaly Assertion Context** — values embedded in anomaly check details are unconditionally obfuscated
-- **Enrichment Datastore** — source record values written during remediation are obfuscated for masked fields
+- **Enrichment Datastore** — source record values written during a [Materialize operation](../../container/operations/materialize-operation.md#field-masking-and-materialize) are obfuscated for masked fields
 
 For more details, see [Masked Fields in Source Records](../../anomalies/source-record.md#masked-fields-in-source-records).
 
