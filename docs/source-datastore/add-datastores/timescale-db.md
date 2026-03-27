@@ -8,6 +8,91 @@ By following these instructions, enterprises can ensure their TimescaleDB enviro
 
 Let’s get started 🚀
 
+## TimescaleDB Setup Guide
+
+Qualytics connects to TimescaleDB through the **PostgreSQL JDBC driver**. TimescaleDB is a PostgreSQL extension, so the permission model follows the same PostgreSQL conventions. Qualytics uses standard JDBC metadata APIs and queries `pg_catalog` system tables to discover schemas, tables (including hypertables), columns, and primary keys. Qualytics automatically filters out TimescaleDB internal schemas (`timescaledb_information`, `timescaledb_experimental`) during catalog discovery.
+
+### Minimum TimescaleDB Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `CONNECT ON DATABASE`                         | Allow the role to connect to the target database                        |
+| `USAGE ON SCHEMA <schema_name>`               | Access objects within the target schema                                 |
+| `SELECT ON ALL TABLES IN SCHEMA`              | Read data from all existing tables (including hypertables) for profiling and scanning |
+| `SELECT ON ALL SEQUENCES IN SCHEMA`           | Read sequence metadata for incremental field detection                  |
+
+!!! note
+    Qualytics does not support TimescaleDB as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Example: Source Datastore Role (Read-Only)
+
+Replace `<database_name>`, `<schema_name>`, and `<password>` with your actual values.
+
+```sql
+-- Create a dedicated read-only role
+CREATE ROLE qualytics_read_role LOGIN PASSWORD ‘<password>’;
+
+-- Grant connection and schema access
+GRANT CONNECT ON DATABASE <database_name> TO qualytics_read_role;
+GRANT USAGE ON SCHEMA <schema_name> TO qualytics_read_role;
+
+-- Grant read access to all existing and future tables (including hypertables)
+GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO qualytics_read_role;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA <schema_name> TO qualytics_read_role;
+ALTER DEFAULT PRIVILEGES IN SCHEMA <schema_name> GRANT SELECT ON TABLES TO qualytics_read_role;
+```
+
+!!! note
+    Qualytics automatically filters out system schemas (`pg_catalog`, `pg_toast`, `pg_internal`, `information_schema`, `timescaledb_information`, `timescaledb_experimental`) during catalog discovery. You do not need to restrict access to these schemas manually.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `FATAL: password authentication failed`        | Incorrect username or password                                               | Verify the credentials and ensure the role exists with `\du` in psql                    |
+| `FATAL: no pg_hba.conf entry for host`         | The TimescaleDB server does not allow connections from the Qualytics host IP | Add the Qualytics IP to `pg_hba.conf` and reload the configuration                     |
+| `permission denied for schema`                 | The role lacks `USAGE` on the target schema                                  | Run `GRANT USAGE ON SCHEMA <schema_name> TO <role>`                                     |
+| `permission denied for table`                  | The role lacks `SELECT` on one or more tables                                | Run `GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO <role>`                      |
+| `relation does not exist`                      | The hypertable or table name is incorrect, or the user cannot see it         | Verify the table exists with `\dt` in psql and check schema permissions                 |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `FATAL: password authentication failed` indicates that the credentials provided are incorrect or the role does not exist.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the role.
+- **Role does not exist** — the role name was misspelled or was never created.
+- **Authentication method mismatch** — the `pg_hba.conf` file requires a different authentication method (e.g., `md5` vs `scram-sha-256`).
+
+!!! note
+    TimescaleDB uses the same authentication system as PostgreSQL. Check `pg_hba.conf` and PostgreSQL server logs for detailed error information.
+
+#### Permission Errors
+
+The error `permission denied for schema` or `permission denied for table` means the role authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Missing `USAGE` on schema** — the role cannot access the schema even if table-level grants exist.
+- **Missing `SELECT` on tables** — the role has schema access but cannot read specific tables or hypertables.
+- **Default privileges not set** — new tables created after the initial grant are not automatically accessible. Use `ALTER DEFAULT PRIVILEGES` to fix this.
+
+#### Connection Errors
+
+The error `FATAL: no pg_hba.conf entry for host` means the TimescaleDB server does not recognize the Qualytics host IP.
+
+Common causes:
+
+- **IP not whitelisted** — the Qualytics server IP is not listed in `pg_hba.conf`.
+- **Wrong database name** — the `pg_hba.conf` entry restricts access to specific databases.
+- **SSL required** — the server requires SSL connections but the client is connecting without SSL.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check network connectivity (connection errors).
+
 ## Add the Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. TimescaleDB is an example of such a datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the TimescaleDB datastore allows the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

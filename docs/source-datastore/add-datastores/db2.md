@@ -8,6 +8,118 @@ By following these instructions, enterprises can ensure their DB2 environment is
 
 Let’s get started 🚀
 
+## DB2 Setup Guide
+
+Qualytics connects to DB2 through the **IBM DB2 JDBC driver**. It queries DB2 system catalogs (`SYSCAT.SCHEMATA`, `SYSCAT.TABLES`) to discover schemas and uses standard JDBC metadata APIs for tables, columns, and primary keys.
+
+### Minimum DB2 Permissions (Source Datastore)
+
+| Permission                                | Purpose                                                                     |
+|-------------------------------------------|-----------------------------------------------------------------------------|
+| `CONNECT ON DATABASE`                     | Allow the user to connect to the database                                   |
+| `USAGE ON SCHEMA <schema_name>`           | Access objects within the target schema                                     |
+| `SELECT ON ALL TABLES IN SCHEMA`          | Read data from all tables for profiling and scanning                        |
+| `SELECT ON SYSCAT.SCHEMATA`               | Discover available schemas in the database                                  |
+| `SELECT ON SYSCAT.TABLES`                 | Discover available tables and filter empty schemas                          |
+
+### Additional Permissions for Enrichment Datastore
+
+When using DB2 as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission                                | Purpose                                                                     |
+|-------------------------------------------|-----------------------------------------------------------------------------|
+| `CREATETAB ON DATABASE`                   | Create enrichment tables (`_qualytics_*`)                                   |
+| `CREATEIN ON SCHEMA <schema_name>`        | Create new objects within the schema                                        |
+| `ALTERIN ON SCHEMA <schema_name>`         | Modify enrichment table schemas during version migrations                   |
+| `INSERT ON ALL TABLES IN SCHEMA`          | Write anomaly records, scan results, and check metrics                      |
+| `UPDATE ON ALL TABLES IN SCHEMA`          | Update enrichment records during rescans                                    |
+| `DELETE ON ALL TABLES IN SCHEMA`          | Remove stale enrichment records                                             |
+| `DROPIN ON SCHEMA <schema_name>`          | Remove enrichment tables during cleanup or when the datastore is unlinked   |
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<schema_name>` with your actual value.
+
+```sql
+-- Grant connection and schema access
+GRANT CONNECT ON DATABASE TO USER qualytics_read;
+GRANT USAGE ON SCHEMA <schema_name> TO USER qualytics_read;
+
+-- Grant read access to all tables in the schema
+GRANT SELECT ON ALL TABLES IN SCHEMA <schema_name> TO USER qualytics_read;
+```
+
+### Example: Enrichment Datastore User (Read-Write)
+
+```sql
+-- Grant connection and schema access
+GRANT CONNECT ON DATABASE TO USER qualytics_readwrite;
+GRANT USAGE ON SCHEMA <schema_name> TO USER qualytics_readwrite;
+
+-- Grant full data manipulation on all tables
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA <schema_name> TO USER qualytics_readwrite;
+
+-- Grant table creation and schema modification
+GRANT CREATETAB ON DATABASE TO USER qualytics_readwrite;
+GRANT CREATEIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
+GRANT ALTERIN ON SCHEMA <schema_name> TO USER qualytics_readwrite;
+```
+
+!!! note
+    Qualytics queries DB2 system catalogs (`SYSCAT.SCHEMATA`, `SYSCAT.TABLES`) during catalog discovery. Ensure the Qualytics user has `SELECT` access to these system catalog views.
+
+!!! info
+    If your DB2 server requires encrypted connections, enable the **SSL** toggle in the connection form. This establishes a TLS-encrypted connection between Qualytics and the DB2 instance.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `SQL30082N: Security processing failed`        | Incorrect username or password                                               | Verify the credentials and ensure the user exists in the DB2 instance                   |
+| `SQL1060N: User does not have the CONNECT privilege` | The user lacks `CONNECT` on the database                              | Run `GRANT CONNECT ON DATABASE TO USER <user>`                                          |
+| `SQL0551N: User does not have the required authorization` | The user lacks `SELECT` or other required permissions on a table    | Grant the missing permission on the specific table or schema                            |
+| `SQL0204N: Name is an undefined name`          | The schema or table does not exist, or the user cannot see it               | Verify the schema name matches exactly (DB2 stores unquoted schema names in uppercase by default) |
+| `SQL0552N: User is not authorized to perform the requested command` | The enrichment user lacks `CREATETAB` or `CREATEIN`          | Run `GRANT CREATETAB ON DATABASE TO USER <user>` and `GRANT CREATEIN ON SCHEMA <schema_name> TO USER <user>` |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `SQL30082N: Security processing failed` indicates that the credentials are incorrect.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **User does not exist** — the username was misspelled or does not exist in the DB2 instance.
+- **Authentication plugin mismatch** — the DB2 server uses a different authentication mechanism than expected (e.g., Kerberos, LDAP).
+
+!!! note
+    DB2 authentication is handled at the operating system or LDAP level, not within the database itself. Ensure the credentials match the OS or LDAP user account.
+
+#### Permission Errors
+
+The error `SQL0551N: User does not have the required authorization` means the user authenticated successfully but lacks the necessary grants.
+
+Common causes:
+
+- **Missing `SELECT` on tables** — the user does not have `SELECT` on the target tables in the schema.
+- **Missing `CONNECT` on database** — the user cannot connect to the database.
+- **Missing `USAGE` on schema** — the user cannot access objects within the schema.
+- **System catalog access** — the user lacks `SELECT` access to `SYSCAT.SCHEMATA` or `SYSCAT.TABLES` needed for catalog discovery.
+
+#### Connection Errors
+
+The error `SQL1060N: User does not have the CONNECT privilege` means the user lacks the `CONNECT` privilege on the database.
+
+Common causes:
+
+- **Missing `CONNECT` grant** — `GRANT CONNECT ON DATABASE TO USER <user>` was not executed.
+- **Database not cataloged** — the target database is not cataloged on the DB2 client.
+- **Network issues** — a firewall is blocking connections on the DB2 port (default 50000).
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify schema/table permissions (permission errors), and finally check database connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. DB2 is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

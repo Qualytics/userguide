@@ -8,6 +8,116 @@ By following these instructions, enterprises can ensure their MariaDB environmen
 
 Let’s get started 🚀
 
+## MariaDB Setup Guide
+
+Qualytics connects to MariaDB through the **MariaDB JDBC driver**. It uses standard JDBC metadata APIs to discover databases, tables, columns, and primary keys. MariaDB uses the same permission model as MySQL — the database name you provide in the connection form is the scope for all operations.
+
+### Minimum MariaDB Permissions (Source Datastore)
+
+| Permission    | Purpose                                                                     |
+|---------------|-----------------------------------------------------------------------------|
+| `SELECT`      | Read data from all tables for profiling and scanning                        |
+| `SHOW VIEW`   | Read view definitions for metadata discovery                                |
+| `PROCESS`     | View active queries (used by the JDBC driver for connection metadata)       |
+
+### Additional Permissions for Enrichment Datastore
+
+When using MariaDB as an enrichment datastore, the following additional permissions are required for Qualytics to write metadata tables (e.g., `_qualytics_*`):
+
+| Permission    | Purpose                                                                     |
+|---------------|-----------------------------------------------------------------------------|
+| `CREATE`      | Create enrichment tables (`_qualytics_*`)                                   |
+| `ALTER`       | Modify enrichment table schemas during version migrations                   |
+| `INSERT`      | Write anomaly records, scan results, and check metrics                      |
+| `UPDATE`      | Update enrichment records during rescans                                    |
+| `DELETE`      | Remove stale enrichment records                                             |
+| `DROP`        | Remove enrichment tables if the datastore is unlinked                       |
+
+### Example: Source Datastore User (Read-Only)
+
+Replace `<database_name>` and `<password>` with your actual values.
+
+```sql
+-- Create a dedicated read-only user
+CREATE USER ‘qualytics_read’@’%’ IDENTIFIED BY ‘<password>’;
+
+-- Grant read access to all tables and views
+GRANT SELECT, SHOW VIEW ON <database_name>.* TO ‘qualytics_read’@’%’;
+
+-- Grant the global PROCESS privilege (required by the JDBC driver for connection metadata)
+GRANT PROCESS ON *.* TO ‘qualytics_read’@’%’;
+
+-- Apply the changes
+FLUSH PRIVILEGES;
+```
+
+### Example: Enrichment Datastore User (Read-Write)
+
+```sql
+-- Create a dedicated read-write user
+CREATE USER ‘qualytics_readwrite’@’%’ IDENTIFIED BY ‘<password>’;
+
+-- Grant full data manipulation and table management
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP, SHOW VIEW ON <database_name>.* TO ‘qualytics_readwrite’@’%’;
+
+-- Grant the global PROCESS privilege (required by the JDBC driver for connection metadata)
+GRANT PROCESS ON *.* TO ‘qualytics_readwrite’@’%’;
+
+-- Apply the changes
+FLUSH PRIVILEGES;
+```
+
+!!! note
+    Qualytics automatically filters out system databases (`information_schema`, `mysql`, `performance_schema`, `sys`) during catalog discovery. You do not need to restrict access to these databases manually.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Access denied for user`                       | Incorrect username, password, or the user does not have access from the connecting host | Verify credentials and ensure the user is created with `’%’` or the specific Qualytics host IP |
+| `Host is not allowed to connect`               | The MariaDB server rejects connections from the Qualytics host IP            | Create the user with `’qualytics_read’@’<qualytics_ip>’` or use `’%’` for any host     |
+| `SELECT command denied to user`                | The user lacks `SELECT` on the target database                               | Run `GRANT SELECT ON <database_name>.* TO ‘<user>’@’%’`                                 |
+| `CREATE command denied to user`                | The enrichment user lacks `CREATE` on the database                           | Run `GRANT CREATE ON <database_name>.* TO ‘<user>’@’%’`                                 |
+| `SSL connection is required`                   | The MariaDB server enforces SSL but the connection is not configured for it  | Enable SSL in the connection parameters or configure the MariaDB user to not require SSL |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Access denied for user` indicates that the credentials are incorrect or the user does not have access from the connecting host.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one set for the user.
+- **Host restriction** — the user was created with a specific host (e.g., `'user'@'localhost'`) but Qualytics connects from a different IP.
+- **User does not exist** — the username was misspelled or was never created.
+
+!!! note
+    MariaDB differentiates users by both username and host. `'qualytics'@'localhost'` and `'qualytics'@'%'` are treated as two separate users with potentially different passwords and permissions.
+
+#### Permission Errors
+
+The error `SELECT command denied to user` means the user authenticated successfully but lacks the necessary grants on the target database.
+
+Common causes:
+
+- **Missing `SELECT` grant** — the user does not have `SELECT` on the target database.
+- **Wrong database** — the user has permissions on a different database than the one specified in the connection form.
+- **Grant not flushed** — after running `GRANT` statements, `FLUSH PRIVILEGES` was not executed.
+
+#### Connection Errors
+
+The error `Host is not allowed to connect` means the MariaDB server rejects the connection from the Qualytics host IP.
+
+Common causes:
+
+- **User host restriction** — the user was created with `'user'@'localhost'` instead of `'user'@'%'`.
+- **Firewall or network** — a firewall is blocking connections on port 3306.
+- **Bind address** — MariaDB is configured to listen only on `127.0.0.1` (`bind-address` in `my.cnf`).
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify database permissions (permission errors), and finally check network connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. MariaDB is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

@@ -6,6 +6,8 @@ MyApp = "MyApp"
 OpenAPIv3 = "OpenAPIv3"
 AKS = "AKS"
 IST = "IST"
+CREATEIN = "CREATEIN"
+ALTERIN = "ALTERIN"
 
 [files]
 extend-exclude = [
