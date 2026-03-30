@@ -8,7 +8,7 @@ Let's get started 🚀
 
 **Step 1**: Select a source **datastore** from the side menu for which you would like to manage the settings.
 
-![add-datastore](../../assets/source-datastores/datastore-settings/settings-overview/add-datastore-1.png)
+![add-datastore](../../assets/source-datastores/managing-datastores/settings-overview/add-datastore-1.png)
 
 **Step 2**: Click on the **Settings** icon from the top right window. A drop-down menu will appear with the following options:
 
@@ -17,7 +17,7 @@ Let's get started 🚀
 3. Score  
 4. Delete
 
-![settings](../../assets/source-datastores/datastore-settings/settings-overview/settings-2.png)
+![settings](../../assets/source-datastores/managing-datastores/settings-overview/settings-2.png)
 
 ## Edit Datastore
 

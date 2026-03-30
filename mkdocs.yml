@@ -68,29 +68,28 @@ nav:
         - Profile: source-datastore/operations/profile.md
         - Scan: source-datastore/operations/scan.md
         - External Scan: source-datastore/operations/external-scan.md
-      - Datastore Settings:
-        - Settings Overview: source-datastore/datastore-settings/settings-overview.md
-        - Edit Datastore: source-datastore/datastore-settings/edit-datastore.md
-        - Link Enrichment: source-datastore/datastore-settings/link-enrichment.md
-        - Unlink Enrichment: source-datastore/datastore-settings/unlink-enrichment.md
-        - Quality Score Settings: source-datastore/datastore-settings/quality-score-settings.md
-        - Delete Datastore: source-datastore/datastore-settings/delete-datastore.md
-      - Navigation & Organization:
-        - Right Click Options: source-datastore/navigation-and-organization/right-click-options.md
-        - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
+      - Managing Datastores:
+        - Settings Overview: source-datastore/managing-datastores/settings-overview.md
+        - Edit Datastore: source-datastore/managing-datastores/edit-datastore.md
+        - Link Enrichment: source-datastore/managing-datastores/link-enrichment.md
+        - Unlink Enrichment: source-datastore/managing-datastores/unlink-enrichment.md
+        - Quality Score Settings: source-datastore/managing-datastores/quality-score-settings.md
+        - Delete Datastore: source-datastore/managing-datastores/delete-datastore.md
+        - Right Click Options: source-datastore/managing-datastores/right-click-options.md
+        - Assign Tags: source-datastore/managing-datastores/assign-tags.md
         - Grouping:
-          - Overview: source-datastore/navigation-and-organization/grouping/overview.md
+          - Overview: source-datastore/managing-datastores/grouping/overview.md
           - Deep Dive:
-            - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
-            - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
+            - Introduction: source-datastore/managing-datastores/grouping/concepts/understanding-grouping.md
+            - Permissions: source-datastore/managing-datastores/grouping/concepts/permissions.md
           - Managing:
-            - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
-            - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
-            - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
-            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
-            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
-          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
-          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
+            - Create a Group: source-datastore/managing-datastores/grouping/managing-groups/create-a-group.md
+            - Edit a Group: source-datastore/managing-datastores/grouping/managing-groups/edit-a-group.md
+            - Delete a Group: source-datastore/managing-datastores/grouping/managing-groups/delete-a-group.md
+            - Assign a Group: source-datastore/managing-datastores/grouping/managing-groups/assign-a-datastore.md
+            - Unassign a Group: source-datastore/managing-datastores/grouping/managing-groups/remove-a-datastore.md
+          - API: source-datastore/managing-datastores/grouping/concepts/grouping-api.md
+          - FAQ: source-datastore/managing-datastores/grouping/concepts/grouping-faq.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:

@@ -2,7 +2,7 @@
 
 Datastore Grouping is a feature in Qualytics that allows you to organize your datastores into custom groups within the tree view. Instead of browsing a flat list of datastores, you can create meaningful categories — such as by environment, team, domain, or priority — making it easier to locate and manage your data sources.
 
-![grouping-overview](../../../assets/source-datastores/navigation-and-organization/grouping/grouping-overview.png)
+![grouping-overview](../../../assets/source-datastores/managing-datastores/grouping/grouping-overview.png)
 
 ## Why Datastore Grouping Matters
 

@@ -72,7 +72,7 @@ For example, with the template `production_{{schema}}` and schemas `public`, `st
 | Field | Required | Description |
 | :--- | :--- | :--- |
 | **Teams** | Yes | One or more teams to associate with all newly created datastores. |
-| **Group** | No | Assign all datastores to a [datastore group](../../../navigation-and-organization/grouping/overview.md). |
+| **Group** | No | Assign all datastores to a [datastore group](../../../managing-datastores/grouping/overview.md). |
 | **Initiate Sync** | No | Automatically run a sync operation on each newly created datastore after creation. |
 
 ### Validation
