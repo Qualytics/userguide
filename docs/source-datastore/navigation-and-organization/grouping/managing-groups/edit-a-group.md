@@ -9,7 +9,7 @@ This guide walks you through the steps to edit an existing datastore group — i
 
 **Step 1**: Click on the **Manage groups** button (bookmark icon) in the tree view header.
 
-![manage-groups-button](../../../../assets/source-datastores/navigation-and-organization/grouping/managing-groups/create-a-group/manage-groups-button.png)
+![manage-groups-button](../../../../assets/source-datastores/shared/manage-groups-button.png)
 
 **Step 2**: In the Manage Groups panel, find the group you want to edit and click the **Edit group** button (pencil icon).
 

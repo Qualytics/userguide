@@ -52,14 +52,17 @@ nav:
         - source-datastore/add-datastores/amazon-s3.md
         - source-datastore/add-datastores/azure-datalake-storage.md
         - source-datastore/add-datastores/google-cloud-storage.md
-      - source-datastore/add-datastores/connections/overview-of-a-connection.md
-      - Multi-Schema:
-          - Getting Started: source-datastore/add-datastores/multi-schema/overview.md
-          - Deep Dive:
-            - How It Works: source-datastore/add-datastores/multi-schema/concepts/how-it-works.md
-            - Supported Connectors: source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md
-          - API: source-datastore/add-datastores/multi-schema/concepts/multi-schema-api.md
-          - FAQ: source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md
+      - Connections:
+          - Getting Started: source-datastore/add-datastores/connections/overview-of-a-connection.md
+          - New Connection: source-datastore/add-datastores/connections/new-connection.md
+          - Existing Connection: source-datastore/add-datastores/connections/existing-connection.md
+          - Multi-Schema:
+            - Getting Started: source-datastore/add-datastores/multi-schema/overview.md
+            - Deep Dive:
+              - How It Works: source-datastore/add-datastores/multi-schema/concepts/how-it-works.md
+              - Supported Connectors: source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md
+            - API: source-datastore/add-datastores/multi-schema/concepts/multi-schema-api.md
+            - FAQ: source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md
       - Operations:
         - Sync: source-datastore/operations/sync.md
         - Profile: source-datastore/operations/profile.md

@@ -9,7 +9,7 @@ This guide walks you through the steps to create a new datastore group in Qualyt
 
 **Step 1**: Log in to your Qualytics account and click on the **Manage groups** button (bookmark icon) in the tree view header.
 
-![manage-groups-button](../../../../assets/source-datastores/navigation-and-organization/grouping/managing-groups/create-a-group/manage-groups-button.png)
+![manage-groups-button](../../../../assets/source-datastores/shared/manage-groups-button.png)
 
 **Step 2**: In the Manage Groups panel, click the **Create group** button.
 

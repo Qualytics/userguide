@@ -2,7 +2,7 @@
 
 Multi-Schema Creation allows you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. Instead of adding each schema individually, you can onboard multiple schemas at once, streamlining the setup process for organizations with many schemas across their data platforms.
 
-![multi-schema-overview](../../../assets/source-datastores/multi-schema/overview/overview.png)
+![multi-schema-overview](../../../assets/source-datastores/add-datastores/connections/multi-schema/overview/overview.png)
 
 ## Why Multi-Schema Creation Matters
 
@@ -28,7 +28,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     Create multiple source datastores by setting up a new connection from scratch.
 
-    [:octicons-arrow-right-24: Setup a Connection](../connections/overview-of-a-connection.md#setup-a-connection)
+    [:octicons-arrow-right-24: Setup a Connection](../connections/new-connection.md)
 
 -   :material-link-variant:{ .lg .middle } **Add Datastore with an Existing Connection**
 
@@ -36,7 +36,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     Create multiple source datastores by reusing credentials from a connection that already exists.
 
-    [:octicons-arrow-right-24: Reuse a Connection](../connections/overview-of-a-connection.md#reuse-a-connection)
+    [:octicons-arrow-right-24: Reuse a Connection](../connections/existing-connection.md)
 
 </div>
 
