@@ -154,6 +154,7 @@ qualytics config import --input ./qualytics-config
 
 ### GitHub Actions Example
 
+{% raw %}
 ```yaml
 name: Promote Quality Config
 on:
@@ -188,3 +189,4 @@ jobs:
           DB_PASSWORD: ${{ secrets.PROD_DB_PASSWORD }}
         run: qualytics config import --input ./qualytics-config
 ```
+{% endraw %}

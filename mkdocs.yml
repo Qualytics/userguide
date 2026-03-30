@@ -510,11 +510,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - search:
-      exclude:
-        - components/anomaly-support/*
-        - components/comparators/*
-        - components/general-props/*
+  - search
+  - exclude:
+      glob:
         - components/anomaly-support/*
         - components/comparators/*
         - components/general-props/*

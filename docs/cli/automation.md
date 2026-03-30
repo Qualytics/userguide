@@ -71,6 +71,7 @@ qualytics operations scan --datastore-id 1 --background
 
 ### Quality Scan on Schedule
 
+{% raw %}
 ```yaml
 name: Nightly Quality Scan
 on:
@@ -93,9 +94,11 @@ jobs:
           qualytics operations profile --datastore-id ${{ vars.DATASTORE_ID }}
           qualytics operations scan --datastore-id ${{ vars.DATASTORE_ID }}
 ```
+{% endraw %}
 
 ### Config Promotion (Dev to Prod)
 
+{% raw %}
 ```yaml
 name: Promote Quality Config
 on:
@@ -123,9 +126,11 @@ jobs:
           qualytics config import --input ./qualytics-config --dry-run
           qualytics config import --input ./qualytics-config
 ```
+{% endraw %}
 
 ### Check Export and Import Across Environments
 
+{% raw %}
 ```yaml
 name: Sync Checks Dev → Staging
 on:
@@ -152,6 +157,7 @@ jobs:
           QUALYTICS_TOKEN: ${{ secrets.STAGING_QUALYTICS_TOKEN }}
         run: qualytics checks import --datastore-id ${{ vars.STAGING_DATASTORE_ID }} --input ./checks
 ```
+{% endraw %}
 
 ## Secrets Management
 
