@@ -2,7 +2,7 @@ site_name: User Guide
 ## DEPLOYMENT URL
 site_url: https://userguide.qualytics.io/
 ## LOCAL URL
-#site_url: http://localhost:8001/userguide/
+# site_url: http://localhost:8001/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
@@ -273,8 +273,30 @@ nav:
         - Overview: flows/overview-action.md
         - Operations: flows/operations.md
         - Anomaly: flows/anomaly.md
-        - Notifications: flows/notification.md
-        - Notification Tokens: flows/notification-tokens.md
+        - Notifications:
+          - Overview: flows/notifications/overview.md
+          - Message Variables: flows/notifications/message-variables.md
+          - In App:
+            - Overview: flows/notifications/in-app/overview.md
+            - API: flows/notifications/in-app/api.md
+            - FAQ: flows/notifications/in-app/faq.md
+          - Email:
+            - Overview: flows/notifications/email/overview.md
+            - API: flows/notifications/email/api.md
+            - FAQ: flows/notifications/email/faq.md
+          - Slack:
+            - Overview: flows/notifications/slack/overview.md
+            - API: flows/notifications/slack/api.md
+            - FAQ: flows/notifications/slack/faq.md
+          - Microsoft Teams:
+            - Overview: flows/notifications/microsoft-teams/overview.md
+            - API: flows/notifications/microsoft-teams/api.md
+            - FAQ: flows/notifications/microsoft-teams/faq.md
+          - PagerDuty:
+            - Overview: flows/notifications/pagerduty/overview.md
+            - API: flows/notifications/pagerduty/api.md
+            - FAQ: flows/notifications/pagerduty/faq.md
+          - FAQ: flows/notifications/faq.md
         - Workflow: flows/workflow.md
         - Ticketing: flows/ticketing.md
       - View and Track Flow Executions: flows/view-created-flows.md
@@ -351,6 +373,15 @@ nav:
           - Overview: settings/integrations/alerting/overview.md
           - Slack: settings/integrations/alerting/slack.md
           - Microsoft Teams: settings/integrations/alerting/msft_teams.md
+          - PagerDuty:
+            - Overview: settings/integrations/alerting/pagerduty/overview.md
+            - Deep Dive: settings/integrations/alerting/pagerduty/deep-dive.md
+            - API: settings/integrations/alerting/pagerduty/pagerduty-api.md
+            - FAQ: settings/integrations/alerting/pagerduty/pagerduty-faq.md
+            - Managing PagerDuty:
+              - Add Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/add-integration.md
+              - Edit Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/edit-integration.md
+              - Remove Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/remove-integration.md
         - Ticketing: 
           - Overview: settings/integrations/ticketing/ticketing.md
           - Jira: settings/integrations/ticketing/jira.md
@@ -479,11 +510,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - search:
-      exclude:
-        - components/anomaly-support/*
-        - components/comparators/*
-        - components/general-props/*
+  - search
+  - exclude:
+      glob:
         - components/anomaly-support/*
         - components/comparators/*
         - components/general-props/*
@@ -507,6 +536,14 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        # Notifications restructure
+        'flows/notification.md': 'flows/notifications/overview.md'
+        'flows/notification-tokens.md': 'flows/notifications/message-variables.md'
+        'flows/notifications/in-app.md': 'flows/notifications/in-app/overview.md'
+        'flows/notifications/email.md': 'flows/notifications/email/overview.md'
+        'flows/notifications/slack.md': 'flows/notifications/slack/overview.md'
+        'flows/notifications/microsoft-teams.md': 'flows/notifications/microsoft-teams/overview.md'
+        'flows/notifications/pagerduty.md': 'flows/notifications/pagerduty/overview.md'
         # Source Datastore reorganization
         'source-datastore/catalog.md': 'source-datastore/operations/sync.md'
         'source-datastore/operations/catalog.md': 'source-datastore/operations/sync.md'
@@ -553,7 +590,7 @@ plugins:
         'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
         # Catalog to Sync redirect
         'source-datastore/sync.md': 'source-datastore/operations/sync.md'
-        # AI integrations redirects (from main)
+        # AI integrations redirects
         'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
         'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
         'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'
