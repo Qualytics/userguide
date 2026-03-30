@@ -4,3 +4,12 @@ repos:
     hooks:
       - id: typos
         args: ["--config", ".typos.toml"]
+  - repo: local
+    hooks:
+      - id: mkdocs-warnings
+        name: mkdocs build (check for warnings)
+        entry: bash -c 'output=$(source venv/bin/activate && mkdocs build 2>&1); if echo "$output" | grep -q "WARNING"; then echo ""; echo "⚠️  MkDocs build produced warnings that might affect production:"; echo "$output" | grep "WARNING"; echo ""; fi; exit 0'
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
