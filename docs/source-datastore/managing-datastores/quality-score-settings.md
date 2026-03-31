@@ -1,38 +1,44 @@
 # Quality Score Settings
 
-Quality Scores are quantified measures of data quality calculated at the field and container levels recorded as time series to enable tracking of changes over time. Scores range from 0-100, with higher values indicating superior quality. These scores integrate eight distinct factors, providing a granular analysis of the attributes that impact the overall data quality.
+Quality Scores are quantified measures of data quality calculated at the field and container levels, recorded as time series to enable tracking of changes over time. Scores range from 0–100, with higher values indicating superior quality. These scores integrate eight distinct dimensions, providing a granular analysis of the attributes that impact the overall data quality.
 
-Each field receives a total quality score based on eight key factors, each evaluated on a 0-100 scale. The overall score is a composite reflecting the relative importance and configured weights of these factors:
+## Steps
 
-* **Completeness**: Measures the average completeness of a field across all profiles.  
-* **Coverage**: Assesses the adequacy of data quality checks for the field.  
-* **Conformity**: Checks alignment with standards defined by quality checks.  
-* **Consistency**: Ensures uniformity in type and scale across all data representations.  
-* **Precision**: Evaluates the resolution of field values against defined quality checks.  
-* **Timeliness**: Gauges data availability according to schedule, inheriting the container's timeliness.  
-* **Volumetrics**: Analyzes consistency in data size and shape over time, inheriting the container's volumetrics.  
-* **Accuracy**: Determines the fidelity of field values to their real-world counterparts.
+**Step 1**: Navigate to your datastore overview and click the **Settings :material-cog-outline:** button located at the top-right corner of the interface.
 
-The **Quality Score Settings** allow users to tailor the impact of each quality factor on the total score by adjusting their weights, allowing the scoring system to align with your organization’s data governance priorities.
+![settings-button](../../assets/source-datastores/data-quality-score/managing/settings/step-1-settings-button.png)
 
-**Step 1**: Click on the **Score** option in the settings icon.
+**Step 2**: A dropdown menu will appear. Click on **Score** to open the quality score settings.
 
-![score](../../assets/source-datastores/managing-datastores/quality-score-settings/score-17.png)
+![score-menu](../../assets/source-datastores/data-quality-score/managing/settings/step-2-score-menu.png)
 
-**Step 2**: A modal window "**Quality Score Settings**" will appear.
+**Step 3**: A modal window — **Quality Score Settings** — will appear with the decay period and dimension weights configuration.
 
-![score-settings](../../assets/source-datastores/managing-datastores/quality-score-settings/score-settings-18.png)
+![quality-score-settings](../../assets/source-datastores/data-quality-score/managing/settings/step-3-quality-score-settings.png)
 
-**Step 3**: The **Decay Period** slider sets the time frame over which the system evaluates historical data to determine the quality score. The decay period for considering past data events defaults to 180 days, but can be customized to fit your operational needs, ensuring the scores reflect the most relevant data quality insights.
+**Step 4**: Configure the **Decay Period** — the time frame over which the system evaluates historical data to determine the quality score. The default is 180 days, but it can be customized to fit your operational needs.
 
-![decay-period](../../assets/source-datastores/managing-datastores/quality-score-settings/decay-period-19.png)
+![decay-period](../../assets/source-datastores/data-quality-score/managing/settings/step-4-decay-period.png)
 
-**Step 4**: Adjust the **Factor Weights** using the sliding bar. The factor weights determine the importance of different data quality aspects.
+**Step 5**: Adjust the **Dimension Weights** to control the importance of each quality factor in the total score. Each dimension can be enabled or disabled and its weight adjusted using the slider.
 
-![factor-weights](../../assets/source-datastores/managing-datastores/quality-score-settings/factor-weights-20.png)
+![dimension-weight-detail](../../assets/source-datastores/data-quality-score/managing/settings/step-5-dimension-weight-detail.png)
 
-**Step 5**: Click on the **Save** button to save the quality score settings.
+The eight quality dimensions are:
 
-![score-save](../../assets/source-datastores/managing-datastores/quality-score-settings/score-save-21.png)
+| Dimension | Description |
+| :--- | :--- |
+| **Completeness** | Measures the percentage of fields with non-null values. |
+| **Coverage** | Assesses the count and frequency of checks asserted for each asset. |
+| **Conformity** | Checks adherence to specified formats and business rules. |
+| **Consistency** | Ensures uniform data types and representation over time. |
+| **Precision** | Evaluates the resolution against defined quality checks. |
+| **Timeliness** | Gauges data availability according to expected schedules. |
+| **Volumetrics** | Analyzes consistency in data volume and shape over time. |
+| **Accuracy** | Determines how well field values match real-world counterparts. |
 
-After clicking the **Save** button, a success notification appears on the screen showing the action was completed successfully.
+**Step 6**: Click the **Save** button to apply the quality score settings.
+
+![save-button](../../assets/source-datastores/data-quality-score/managing/settings/step-6-save-button.png)
+
+After clicking **Save**, a success notification will confirm that the settings have been applied. The quality scores for all containers and fields in the datastore will be recalculated based on the new configuration.

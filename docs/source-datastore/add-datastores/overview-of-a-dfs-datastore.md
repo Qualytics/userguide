@@ -1,168 +1,63 @@
-# DFS Datastore Overview
+# Understanding DFS
 
-The DFS (Distributed File System) Datastore feature in Qualytics is designed to handle data stored in distributed file systems. 
+## What is DFS?
 
-This includes file systems like Hadoop Distributed File System (HDFS) or similar distributed storage solutions.
+A **Distributed File System (DFS)** is a storage architecture that allows data to be stored across multiple machines or locations, while providing access to it as if it were on a single local system. DFS splits files into chunks and distributes them across nodes, enabling scalable storage, fault tolerance through replication, and parallel access for high-performance data processing.
 
-## Supported Distributed File Systems
+In the context of modern cloud platforms, DFS encompasses cloud object storage services like **Amazon S3**, **Azure Data Lake Storage**, and **Google Cloud Storage** — which store data as objects (files) organized in buckets and folders, supporting formats like Parquet, AVRO, CSV, and JSON.
 
-Qualytics supports DFS Datastores, catering to distributed file systems like:
+!!! info "Learn more"
+    For a deeper understanding of distributed file systems, see [Distributed File System](https://learn.microsoft.com/en-us/windows/win32/dfs/distributed-file-system){:target="_blank"} on Microsoft Learn.
 
-- [**Amazon S3**](./amazon-s3.md)
-- [**Google Cloud Storage**](./google-cloud-storage.md)
-- [**Windows Azure Storage Blob**](./azure-datalake-storage.md)
+## How DFS Works in Qualytics
 
-## Connection Details
+Qualytics uses DFS connectors powered by [Apache Spark](https://spark.apache.org/){:target="_blank"} to connect to cloud object storage and distributed file systems. When you add a DFS datastore, Qualytics:
 
-Users provide connection details for DFS Datastores, allowing Qualytics to establish a connection to the distributed file system.
+1. **Establishes a secure connection** to your storage platform using credentials (access keys, service accounts, or connection strings).
+2. **Walks the directory tree** during the Sync operation — reading files with supported extensions and creating containers based on file metadata and naming patterns.
+3. **Reads data through Spark** using native cloud connectors for optimized, parallel file reads across partitions.
+4. **Writes enrichment data** (all 3 DFS connectors support enrichment) back to the storage platform to persist scan results, anomalies, and remediation records.
 
-## Sync Operation
+### Data Organization
 
-The Sync operation involves walking the directory tree, reading files with supported filename extensions, and creating containers based on file metadata.
+In DFS datastores, data is organized as:
 
-## Supported File Formats
+- **Containers** — Files in a folder that share a common schema. Qualytics automatically groups files with similar naming patterns into a single globbed container (e.g., `orders_*.csv`).
+- **Fields** — Columns within each file, detected automatically based on the file format and schema.
+- **Records** — Rows of data within each file, analyzed during profile and scan operations.
 
-Qualytics supports the following file formats in the DFS Datastore.
+!!! info "Containers"
+    For a detailed understanding of how Qualytics manages containers in DFS datastores, see the [Containers Overview](../../container/overview.md){:target="_blank"} documentation.
 
-| No | File Format | Extension Example |
-|------|--------------|-------------------|
-| 1 | Avro | `.avro` |
-| 2 | CSV | `.csv`, `.csv.gz` |
-| 3 | TSV | `.tsv`, `.tsv.gz` |
-| 4 | TXT | `.txt`, `.txt.gz` |
-| 5 | PSV | `.psv`, `.psv.gz` |
-| 6 | SKV | `.skv`, `.skv.gz` |
-| 7 | JSON | `.json`, `.json.gz` |
-| 8 | ORC | `.orc` |
-| 9 | Delta | `.delta` |
-| 10 | Iceberg | `.iceberg` |
-| 11 | Parquet | `.parquet` |
-| 12 | XLS | `.xls` |
-| 13 | XLSX | `.xlsx` |
-| 14 | XLSM | `.xlsm` |
+## Getting Started
 
-## Data Quality and Profiling
+!!! info "Add a DFS Datastore"
+    To add a new DFS datastore, follow the step-by-step guide for your connector: [Amazon S3](amazon-s3.md){:target="_blank"}, [Azure Data Lake Storage](azure-datalake-storage.md){:target="_blank"}, or [Google Cloud Storage](google-cloud-storage.md){:target="_blank"}.
 
-DFS Datastores support the initiation of Profile Operations, allowing users to understand the structure and characteristics of the data stored in the distributed file system.
+!!! info "Available DFS Connectors"
+    For the full list of supported DFS connectors, see the [Available Datastore Connectors](available-datastore-connectors.md){:target="_blank"} page.
 
-## Containers Overview
+!!! info "Connections"
+    To learn how to configure connection details (access keys, service accounts, connection strings), see the [Connections Overview](connections/overview-of-a-connection.md){:target="_blank"} documentation.
 
-For a more detailed understanding of how Qualytics manages and interacts with containers in DFS Datastores, please refer to the [Containers](../../container/overview.md) section in our comprehensive user guide. 
+## Available Operations
 
-This section covers topics such as container deletion, field deletion, and the initial profile of a Datastore's containers.
+Once a DFS datastore is added, you can run the following operations:
 
-## Multi-Token Filename Globbing and Container Formation
+| Operation | Description |
+| :--- | :--- |
+| [Sync](../../source-datastore/operations/sync.md){:target="_blank"} | Walks the directory tree, reads files with supported extensions, and creates containers based on file metadata and naming patterns. Detects new, changed, or removed files incrementally. |
+| [Profile](../../source-datastore/operations/profile.md){:target="_blank"} | Analyzes records across containers to compute statistics, detect data patterns, and automatically infer quality checks. |
+| [Scan](../../source-datastore/operations/scan.md){:target="_blank"} | Executes quality checks against the data, measures data quality metrics, and detects anomalies at the record and schema levels. |
+| [External Scan](../../source-datastore/operations/external-scan.md){:target="_blank"} | Runs scan operations using externally provided data files. |
 
-Filenames with similar structures in the same folder are automatically included in a single globbed container during the Sync operation.
+!!! tip
+    The recommended sequence is **Sync → Profile → Scan**. This cycle is repeatable — as your data evolves, re-running these operations keeps your quality checks and anomaly detection up to date.
 
-### Use Folders for Precise File Grouping
+## Deep Dive
 
-Organizing files within distinct folders is a straightforward and effective strategy in Distributed File Systems (DFS). 
+!!! info "Supported File Formats"
+    Qualytics supports 14 file formats including AVRO, Parquet, CSV, JSON, Delta, Iceberg, and more. See the [Supported File Formats](dfs-supported-file-formats.md){:target="_blank"} page for the full list.
 
-When all files in a folder share a common schema, it simplifies the process of grouping and managing them. 
-
-This approach ensures precise file grouping without relying on complex glob patterns.
-
-#### How to Use Folders for Shared Schema
-
-##### 1. **Create a Folder:**
-
-!!! example "Begin by creating a new folder in your distributed file system."
-
-    - Suppose you have order data files with filenames like `orders_20240229.csv`, `orders-20240228.csv`, `orders-20240227.csv`.
-
-    - Create a folder named `Orders` to group these files.
-
-    **Qualytics Pattern:** Qualytics will automatically create the container `orders_*.csv` based on the filenames.
-
-##### 2. **Place Related Files in the Folder:**
-
-!!! example "Move or upload files that share a common schema into the created folder."
-     - Move the order data files into the `Orders` folder.
-
-##### 3. **Repeat for Each Schema:**
-
-!!! example "Create separate folders for different schemas, and organize files accordingly."
-    - Suppose you have customer data files with filenames like `customers_us.csv`, `customers_eu.csv`.
-    - Create a folder named `Customers` to group these files.
-
-    **Qualytics Pattern:** Qualytics will automatically create the pattern `customers_*.csv` based on the filenames.
-
-##### 4. **Naming Conventions:**
-
-!!! example "Consider adopting clear and consistent naming conventions for folders to enhance organization."
-
-    - Use descriptive names for folders, such as `Orders`, `Customers`, to make it easier to identify the contents.
-
-###### Flowchart: Using Folders for Shared Schema
-
-```mermaid
-graph TD
-  A[Start] -->|Create a Folder| B(Create Folder)
-  B -->|Place Related Files| C(Move or Upload Files)
-  C -->|Repeat for Each Schema| D(Create Separate Folders)
-  D -->|Naming Conventions| E(Consider Clear Naming)
-  E --> F[End]
-```
-
-### Use Filename Conventions for Posix Globs:
-
-This option leverages filename conventions that align with POSIX globs, allowing the system to automatically organize files for you. 
-
-The system intelligently analyzes filename patterns, making the process seamless and efficient.
-
-#### How to Use Filename Conventions for Posix Globs
-
-##### 1. **Follow Clear Filename Conventions:**
-
-!!! example "Adopt clear and consistent filename conventions that lend themselves to POSIX globs."
-    - Suppose you have log files with filenames like `app_log_20240229.txt`, `app_log_20240228.txt`, `app_log_20240227.txt`.
-    - Use a consistent naming convention like `app_log_*.txt`, where `*` serves as a placeholder for varying elements.
-    - _**The `*` in the convention acts as a wildcard, representing any variation in the filename. In this example, it matches the date part (`20240229`, `20240228`, etc.).**_
-
-##### 2. **Upload or Move Files:**
-
-!!! example "Upload or move files with filenames following the adopted conventions to your distributed file system."
-
-    - Move log files with the specified naming convention to your DFS.
-
-##### 3. **System Analysis:**
-
-!!! example "The system will automatically detect and analyze the filename conventions, creating appropriate glob patterns."
-
-    - With filenames like `app_log_20240229.txt`, `app_log_20240228.txt`, the system will create the pattern `app_log_*.txt`.
-
-##### Flowchart: Using Folders for Filename Conventions
-
-```mermaid
-graph TD
-  A[Start] -->|Follow Clear Conventions| B(Adopt Consistent Conventions)
-  B -->|Upload or Move Files| C(Move Files to DFS)
-  C -->|System Analysis| D(Automatic Pattern Creation)
-  D --> E[End]
-```
-
-### Why not manually creating your own Globs?
-
-While the system offers powerful features to automate file organization, manually creating globs is strongly discouraged.
-
-This option may lead to errors, inconsistencies, and hinder the efficiency of the system.
-
-It is recommended to leverage the automated tools for a seamless and error-free experience.
-
-#### Complexity and Error-Prone:
-
-!!! warning "Manually creating globs can be complex, prone to typos, and susceptible to errors in pattern formation."
-
-    - Suppose you want to group log files with the pattern `app_log_*.txt`. A manual attempt might result in mistakes like `app_log_202*.txt` or `app_log_*.tx`.
-
-
-#### Inconsistencies Across Files:
-
-!!! warning "Manual glob creation may lead to inconsistencies across different files, making it challenging to establish a uniform file organization."
-
-    - Trying to manually create globs for order data files with varying date formats (`orders_20240229.csv`, `orders-20240228.csv`) can result in inconsistent patterns.
-
-## Explore Deeper Knowledge
-
-If you want to go deeper into the knowledge or if you are curious and want to learn more about DFS filename globbing, you can explore our comprehensive guide here: [How DFS Filename Globbing Works](../../dfs-globbing/how-dfs-filename-globbing-works.md).
+!!! info "Filename Globbing"
+    Learn how Qualytics automatically groups files with similar naming patterns into containers, and best practices for organizing your files. See the [Filename Globbing and Container Formation](dfs-filename-globbing.md){:target="_blank"} page.

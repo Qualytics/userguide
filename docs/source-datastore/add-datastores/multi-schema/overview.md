@@ -1,8 +1,6 @@
-# Multi-Schema Overview
+# Getting Started with Multiple-Schema
 
 Multi-Schema Creation allows you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. Instead of adding each schema individually, you can onboard multiple schemas at once, streamlining the setup process for organizations with many schemas across their data platforms.
-
-![multi-schema-overview](../../../assets/source-datastores/add-datastores/connections/multi-schema/overview/overview.png)
 
 ## Why Multi-Schema Creation Matters
 
@@ -52,7 +50,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     [:octicons-arrow-right-24: How It Works](concepts/how-it-works.md)
 
--   :material-database-check:{ .lg .middle } **Supported Connectors**
+-   :material-database-outline:{ .lg .middle } **Supported Connectors**
 
     ---
 
@@ -74,7 +72,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     [:octicons-arrow-right-24: API](concepts/multi-schema-api.md)
 
--   :material-frequently-asked-questions:{ .lg .middle } **FAQ**
+-   :material-help-circle-outline:{ .lg .middle } **FAQ**
 
     ---
 

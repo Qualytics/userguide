@@ -1,64 +1,68 @@
-# JDBC Datastore Overview
+# Understanding JDBC
 
-JDBC Datastore in Qualytics allows you to easily integrate and manage data from relational databases. Using the Java Database Connectivity (JDBC) API, you can securely connect to databases, analyze data, and perform data profiling. Qualytics provides verified connectors for the databases listed below. Because the platform is built on Apache Spark, additional JDBC-accessible databases may be technically compatible — contact us to evaluate feasibility for your specific datastore.
+## What is JDBC?
 
-## Adding JDBC Datastore
+**JDBC (Java Database Connectivity)** is a standard Java API that provides a universal interface for connecting to relational databases. It acts as a bridge between applications and databases, allowing programs to execute SQL queries, retrieve results, and manage data — regardless of which database vendor is being used.
 
-Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
+JDBC has been the industry standard for database connectivity since its introduction in 1997 and is supported by virtually every relational database management system (RDBMS) available today.
 
-![add-datastore](../../assets/source-datastores/add-datastores/jdbc-datastores/add-datastore.png)
+!!! info "Learn more"
+    For a deeper understanding of the JDBC standard, see the [JDBC Overview](https://docs.oracle.com/javase/tutorial/jdbc/overview/index.html){:target="_blank"} from Oracle's official Java documentation.
 
-For detailed steps on adding a JDBC Datastore, refer to the [**Add the Source Datastore**](../add-datastores/athena.md#add-the-source-datastore) section of the documentation.
+## How JDBC Works in Qualytics
 
-## Supported JDBC Databases
+Qualytics uses JDBC connectors powered by [Apache Spark](https://spark.apache.org/){:target="_blank"} to connect to relational databases. When you add a JDBC datastore, Qualytics:
 
-Qualytics provides verified connectors for the following relational databases:
+1. **Establishes a secure connection** to your database using the credentials and connection properties you provide (host, port, username, password, database, schema).
+2. **Discovers your schema** by reading the database catalog — tables, views, columns, and data types are automatically detected during the Sync operation.
+3. **Reads data through Spark** using optimized JDBC queries, enabling parallel reads across partitions for large datasets.
+4. **Writes enrichment data** (for connectors with enrichment support) back to the database to persist scan results, anomalies, and remediation records.
 
-* [Athena](../add-datastores/athena.md)  
-* [Databricks](../add-datastores/databricks.md)
-* [DB2](../add-datastores/db2.md)
-* [Fabric Analytics](../add-datastores/fabric-analytics.md)
-* [Hive](../add-datastores/hive.md)  
-* [MariaDB](../add-datastores/maria-db.md)  
-* [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)  
-* [MySQL](../add-datastores/mysql.md)  
-* [Oracle](../add-datastores/oracle.md)  
-* [PostgreSQL](../add-datastores/postgresql.md)  
-* [Presto](../add-datastores/presto.md)  
-* [Amazon Redshift](../add-datastores/redshift.md)  
-* [Snowflake](../add-datastores/snowflake.md)  
-* [Synapse](../add-datastores/synapse.md)  
-* [Timescale DB](../add-datastores/timescale-db.md)  
-* [Trino](../add-datastores/trino.md)
+Because Qualytics is built on Apache Spark, additional JDBC-accessible databases beyond the verified list may be technically compatible — contact us to evaluate feasibility for your specific datastore.
 
-## Multi-Schema Source Datastore Creation
+### Data Organization
 
-JDBC datastores support multi-schema creation, allowing you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. This eliminates the need to add each schema individually.
+In JDBC datastores, data is organized as:
 
-For detailed instructions, refer to the [**Multi-Schema Source Datastore Creation**](multi-schema/overview.md) documentation.
+- **Containers** — Tables and views in the database. Each container represents a structured dataset that Qualytics can profile, scan, and monitor.
+- **Fields** — Columns within each table/view. Qualytics detects field names, data types, and constraints automatically.
+- **Records** — Rows of data within each container, analyzed during profile and scan operations.
 
-## Connection Details
+!!! info "Containers"
+    For a detailed understanding of how Qualytics manages containers in JDBC datastores, see the [Containers Overview](../../container/overview.md){:target="_blank"} documentation.
 
-To connect to a JDBC datastore, users must provide the required connection details, such as Host/Port or URI. These fields may vary depending on the datastore and are essential for establishing a secure and reliable connection to the target database.
+### Field Type Inference
 
-For more information about connections, refer to the [**Connection Overview**](connections/overview-of-a-connection.md) documentation.
+During the Sync operation, Qualytics employs **weighted histogram analysis** to automatically infer field types. This advanced method ensures accurate detection of data types within the JDBC datastore — including distinguishing between integers, decimals, dates, timestamps, and text fields — enhancing the precision of data profiling and quality checks.
 
-## Sync Operation
+### Multi-Schema Support
 
-After adding a JDBC Datastore, you can initiate a **Sync operation** to extract key metadata from the database. This operation provides:
+JDBC datastores support **multi-schema creation**, allowing you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. This eliminates the need to add each schema individually.
 
-* A list of containers (schemas, tables, or views).
-* Field names within each container.
-* Record counts for data analysis and profiling.
+!!! info "Multiple-Schema"
+    For detailed instructions on multi-schema creation, refer to the [Multiple-Schema](multi-schema/overview.md){:target="_blank"} documentation.
 
-![catalog](../../assets/source-datastores/add-datastores/jdbc-datastores/catalog.png)
+## Getting Started
 
-For more information about how to run a sync operation, refer to the [**Sync Operation**](../../source-datastore/operations/sync.md) documentation.
+!!! info "Add a JDBC Datastore"
+    To add a new JDBC datastore, follow the step-by-step guide in the [Add Datastore with a New Connection](connections/new-connection.md){:target="_blank"} or [Add Datastore with an Existing Connection](connections/existing-connection.md){:target="_blank"} documentation.
 
-## Field Types Inference
+!!! info "Available JDBC Connectors"
+    For the full list of supported JDBC connectors, see the [Available Datastore Connectors](available-datastore-connectors.md){:target="_blank"} page.
 
-Qualytics employs weighted histogram analysis during the Sync operation to infer field types automatically. This advanced method ensures accurate detection of data types within the JDBC Datastore, enhancing the precision of data profiling.
+!!! info "Connections"
+    To learn how to configure connection details (host, port, credentials, secrets management), see the [Connections Overview](connections/overview-of-a-connection.md){:target="_blank"} documentation.
 
-## Containers Overview  
+## Available Operations
 
-Containers are fundamental entities representing structured data sets. These containers could manifest as tables in JDBC datastores or as files within DFS datastores. They play a pivotal role in data organization, profiling, and quality checks within the Qualytics application. For a more detailed understanding of how Qualytics manages and interacts with containers in JDBC Datastores, please refer to the [**Containers overview**](../../container/overview.md) documentation.
+Once a JDBC datastore is added, you can run the following operations to manage and ensure data quality:
+
+| Operation | Description |
+| :--- | :--- |
+| [Sync](../../source-datastore/operations/sync.md){:target="_blank"} | Discovers tables, views, and fields from your database. Detects new, changed, or removed containers incrementally. This is always the first operation after adding a datastore. |
+| [Profile](../../source-datastore/operations/profile.md){:target="_blank"} | Analyzes records across containers to compute statistics, detect data patterns, and automatically infer quality checks using the Qualytics Inference Engine. |
+| [Scan](../../source-datastore/operations/scan.md){:target="_blank"} | Executes quality checks against the data, measures data quality metrics, and detects anomalies at the record and schema levels. |
+| [External Scan](../../source-datastore/operations/external-scan.md){:target="_blank"} | Runs scan operations using externally provided data files instead of reading directly from the database. |
+
+!!! tip
+    The recommended sequence is **Sync → Profile → Scan**. This cycle is repeatable — as your data evolves, re-running these operations keeps your quality checks and anomaly detection up to date.
