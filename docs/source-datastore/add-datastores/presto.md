@@ -8,6 +8,96 @@ By following these instructions, enterprises can ensure their Presto environment
 
 Let’s get started 🚀
 
+## Presto Setup Guide
+
+Qualytics connects to Presto through the **Presto JDBC driver**. It uses standard SQL queries for data profiling and scanning. Since Presto is a distributed query engine, permissions are determined by the underlying data source (connector) configured in the Presto catalog (e.g., Hive, MySQL, PostgreSQL).
+
+### Minimum Presto Permissions (Source Datastore)
+
+| Permission                                    | Purpose                                                                 |
+|-----------------------------------------------|-------------------------------------------------------------------------|
+| `SELECT` on target tables                     | Read data from tables for profiling and scanning                        |
+| Access to the Presto catalog                  | Browse available schemas and tables                                     |
+| Access to the Presto schema                   | Browse available tables and columns                                     |
+
+The actual permissions depend on the Presto security model configured for your deployment:
+
+| Security Model              | How Permissions Are Managed                                                  |
+|-----------------------------|------------------------------------------------------------------------------|
+| **No security (default)**   | All users have full read access to all catalogs and schemas                  |
+| **File-based access control** | Permissions are defined in `rules.json` — ensure the Qualytics user has `SELECT` on the target catalog and schema |
+| **Connector-level security** | Permissions are delegated to the underlying data source (e.g., Hive Metastore, RDBMS grants) — ensure the Qualytics user has read access at the source level |
+
+!!! note
+    Qualytics does not support Presto as an enrichment datastore. You can point to a different enrichment datastore instead.
+
+### Example: File-Based Access Control Configuration
+
+If your Presto deployment uses file-based access control (`rules.json`), ensure the Qualytics user has `SELECT` access to the target catalog and schema:
+
+```json
+{
+  "catalogs": [
+    {
+      "user": "qualytics_read",
+      "catalog": "<catalog_name>",
+      "allow": "read-only"
+    }
+  ]
+}
+```
+
+!!! tip
+    If your Presto deployment uses connector-level security (e.g., Hive Metastore), grant the equivalent `SELECT` permissions directly in the underlying data source instead of using `rules.json`.
+
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `Access Denied: Cannot select from table`      | The user lacks `SELECT` on the target table in the Presto access control rules or the underlying connector | Add `SELECT` permission for the user in `rules.json` or grant access in the underlying data source |
+| `Catalog does not exist`                       | The catalog name in the connection form does not match a configured Presto catalog | Verify available catalogs with `SHOW CATALOGS` in Presto                               |
+| `Schema does not exist`                        | The schema name does not exist in the specified catalog                       | Verify available schemas with `SHOW SCHEMAS FROM <catalog>`                             |
+| `Connection refused`                           | The Presto coordinator is not reachable or the port (default 8080) is incorrect | Verify the host, port, and that the Presto coordinator is running                      |
+| `Authentication failed`                        | Incorrect username or password, or the Presto server requires a different authentication method | Verify credentials and check if the Presto server uses LDAP, Kerberos, or password file authentication |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `Authentication failed` indicates that the credentials are incorrect or the authentication method does not match the server configuration.
+
+Common causes:
+
+- **Incorrect password** — the password does not match the one configured in the Presto server.
+- **Wrong authentication method** — the Presto server uses LDAP or Kerberos, but the connection form provides basic username/password.
+- **HTTPS required** — the Presto coordinator requires HTTPS connections, but the connection is using HTTP.
+
+!!! note
+    Presto authentication is configured at the coordinator level. Check the `password-authenticator.properties` file for the configured authentication method.
+
+#### Permission Errors
+
+The error `Access Denied: Cannot select from table` means the user authenticated successfully but lacks access to the target table.
+
+Common causes:
+
+- **File-based access control** — the `rules.json` file does not grant `SELECT` access to the Qualytics user on the target catalog or schema.
+- **Connector-level security** — the underlying data source (e.g., Hive Metastore) does not grant read access to the user.
+- **Catalog-level restriction** — the user has access to the schema but the catalog itself is restricted.
+
+#### Connection Errors
+
+The error `Connection refused` or `Catalog does not exist` indicates a connectivity or configuration issue.
+
+Common causes:
+
+- **Coordinator not reachable** — the Presto coordinator host or port (default 8080) is incorrect.
+- **Wrong catalog name** — the catalog name in the connection form does not match a configured Presto catalog.
+- **Coordinator not running** — the Presto coordinator process is not started.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify access control rules (permission errors), and finally check coordinator connectivity (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect to and access data from external sources. Presto is an example of a source datastore, specifically a type of JDBC datastore that supports connectivity through the JDBC API. Configuring the JDBC datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.

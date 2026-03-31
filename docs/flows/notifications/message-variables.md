@@ -1,4 +1,4 @@
-# Notification Tokens
+# Message Variables
 
 Qualytics allows you to customize notification messages using dynamic variables (tokens). These tokens are automatically replaced with real values when a Flow is triggered.
 
@@ -83,4 +83,16 @@ The following tokens are available when a Flow is triggered by permanent anomaly
 
 !!! note
     Notification tokens appear in the autocomplete menu only if they are valid for the selected Flow trigger type. If a token does not appear in the list, it is not supported for that trigger.
+
+## Channel-Specific Variables
+
+Some notification channels support additional tokens beyond the ones listed above.
+
+| Channel | Additional Variables |
+| :--- | :--- |
+| [In App](./in-app/overview.md) | Standard tokens only. |
+| [Email](./email/overview.md) | Standard tokens only. |
+| [Slack](./slack/overview.md) | `{{operation_result_color}}` — hex color code based on operation result. |
+| [Microsoft Teams](./microsoft-teams/overview.md) | `{{operation_result_color__msft_teams}}` — hex color code for Adaptive Card theming. |
+| [PagerDuty](./pagerduty/overview.md) | Standard tokens only. Severity and custom details are configured separately. |
 
