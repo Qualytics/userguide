@@ -6,11 +6,11 @@ This guide walks you through creating a new source datastore by reusing credenti
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
 
-![add-datastore](../../../assets/source-datastores/add-datastores/connections/existing-connection/add-datastore.png)
+![add-datastore](../../../assets/source-datastores/datastore/managing/add-datastore-with-existing-connection/add-datastore.png)
 
 **Step 2**: A modal window — **Add Datastore** — will appear. Toggle **off** the **Add New Connection** option and select a connector from the dropdown list.
 
-![details](../../../assets/source-datastores/add-datastores/connections/existing-connection/details.png)
+![details](../../../assets/source-datastores/datastore/managing/add-datastore-with-existing-connection/details.png)
 
 | REF. | FIELDS | REQUIRED | ACTIONS |
 |------|--------|----------|---------|
@@ -20,15 +20,15 @@ This guide walks you through creating a new source datastore by reusing credenti
 
 **Step 3**: Select an existing connection from the dropdown and configure the datastore-specific properties.
 
-![details-connection](../../../assets/source-datastores/add-datastores/connections/existing-connection/details-connection.png)
+![details-connection](../../../assets/source-datastores/datastore/managing/add-datastore-with-existing-connection/details-connection.png)
 
 !!! note
     The **Connection Properties** section will appear collapsed. You can expand it to review the connection details, but the fields are **read-only** and cannot be modified.
 
 **Step 4**: Click the **Test Connection** button to verify the existing connection details. If the connection details are verified, a success message will be displayed.
 
-![test-connection](../../../assets/source-datastores/add-datastores/connections/existing-connection/test-connection.png)
+![test-connection](../../../assets/source-datastores/datastore/managing/add-datastore-with-existing-connection/test-connection.png)
 
 **Step 5**: Once the connection is verified, click the **Finish** button to complete the process. A message will appear indicating that your datastore has been successfully added.
 
-![finish](../../../assets/source-datastores/add-datastores/connections/existing-connection/finish.png)
+![finish](../../../assets/source-datastores/datastore/managing/add-datastore-with-existing-connection/finish.png)

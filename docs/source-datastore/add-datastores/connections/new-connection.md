@@ -2,58 +2,65 @@
 
 This guide walks you through creating a new source datastore by setting up a new connection from scratch with your own credentials.
 
+!!! info "Connector-Specific Fields"
+    The connection fields vary depending on the connector you select. This page covers the general flow that applies to all connectors. For connector-specific field details, refer to the individual connector page (e.g., [PostgreSQL](../postgresql.md), [Snowflake](../snowflake.md), [BigQuery](../bigquery.md)).
+
+## Datastore Properties
+
+The lower section of the **Add Source Datastores** modal contains fields common to all datastores. The fields vary slightly depending on whether you are adding a **JDBC** or **DFS** datastore.
+
+=== "JDBC"
+
+    ![datastore-properties-jdbc](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/datastore-properties-jdbc.png)
+
+    | REF. | FIELD | REQUIRED | DESCRIPTION |
+    |:---:|:---|:---:|:---|
+    | 1 | Name Template | No | Defines the naming pattern for each source datastore being created. Use `{{schema}}` as a placeholder that gets replaced with the actual schema name (e.g., `prod_{{schema}}` produces `prod_public`, `prod_sales`). |
+    | 2 | Group | No | Organizes your datastores under a shared group in the navigation tree. Select an existing group or create a new one with the **Add New Group** toggle. |
+    | 3 | Teams | Yes | Select one or more teams to associate with this source datastore. |
+    | 4 | Initiate Sync | No | Automatically sync the datastore to detect containers and fields after creation. |
+    | 5 | Connection Info | — | Displays the resolved connection host and IP for verification. |
+    | 6 | Test Connection | — | Click to verify the connection credentials before proceeding. |
+
+=== "DFS"
+
+    ![datastore-properties-dfs](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/datastore-properties-dfs.png)
+
+    | REF. | FIELD | REQUIRED | DESCRIPTION |
+    |:---:|:---|:---:|:---|
+    | 1 | Root Path | Yes | The base directory path in the file system where the datastore data resides. |
+    | 2 | Name | Yes | The display name for the datastore (e.g., `analytics_bronze`). |
+    | 3 | Group | No | Organizes your datastores under a shared group in the navigation tree. Select an existing group or create a new one with the **Add New Group** toggle. |
+    | 4 | Teams | Yes | Select one or more teams to associate with this source datastore. |
+    | 5 | Initiate Sync | No | Automatically sync the datastore to detect containers and fields after creation. |
+    | 6 | Connection Info | — | Displays the resolved connection host and IP for verification. |
+    | 7 | Test Connection | — | Click to verify the connection credentials before proceeding. |
+
 ## Steps
 
-**Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore** button located at the top-right corner of the interface.
+**Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore :material-plus:** button located at the top-right corner of the interface.
 
-![add-datastore](../../../assets/source-datastores/add-datastores/connections/new-connection/add-datastore.png)
+![step-1-add-source-datastore](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-1-add-source-datastore.png)
 
-**Step 2**: A modal window — **Add Datastore** — will appear. Ensure the **Add New Connection** toggle is turned **on** and select a connector from the dropdown list.
+**Step 2**: A modal window — **Add Source Datastores** — will appear. Ensure the **Add New Connection** toggle is turned **on** and select a connector from the dropdown list.
 
-![details](../../../assets/source-datastores/add-datastores/connections/new-connection/details.png)
+![step-2-add-new-connection](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-2-add-new-connection.png)
 
-| REF. | FIELDS | REQUIRED | ACTIONS |
-|------|--------|----------|---------|
-| 1 | Name | Required | Specify the name of the datastore (e.g., the specified name will appear on the datastore cards). |
-| 2 | Toggle Button | Required | Toggle **ON** to create a new source datastore from scratch. |
-| 3 | Connector | Required | Select a connector from the dropdown list. |
+**Step 3**: Fill in the connection details for your selected connector and configure the datastore properties as described in the [Datastore Properties](#datastore-properties) section above.
 
-**Step 3**: Add connection details specific to your selected connector.
+![step-3-connection-details](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-3-connection-details.png)
 
-![detail](../../../assets/source-datastores/add-datastores/connections/new-connection/connection-details.png)
+**Step 4**: Click the **Test Connection** button to verify the connection. If the credentials and provided details are verified, a success message will be displayed.
 
-!!! note
-    Different connectors have unique fields and parameters. The fields displayed are specific to the connector you selected. For connector-specific details, refer to the individual connector page (e.g., [PostgreSQL](../postgresql.md), [Snowflake](../snowflake.md), [BigQuery](../bigquery.md)).
+![step-4-test-connection](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-4-test-connection.png)
 
-**Secrets Management**: This is an optional connection property that allows you to securely store and manage credentials by integrating with HashiCorp Vault and other secret management systems. Toggle it **ON** to enable Vault integration for managing secrets.
+**Step 5**: Once the connection is verified, click the **Finish** button to complete the process.
 
-!!! note
-    After configuring **HashiCorp Vault** integration, you can use ${key} in any connection property to reference a key from the configured Vault secret. Each time the connection is initiated, the corresponding secret value will be retrieved dynamically.
+!!! tip "Link an Enrichment Datastore"
+    Before clicking **Finish**, you can optionally link an enrichment datastore to persist scan results and anomalies from the very first operation. See the [Link Enrichment on Datastore Creation](../../enrichment-datastore/link-during-creation.md){:target="_blank"} documentation.
 
-![secret](../../../assets/source-datastores/add-datastores/connections/new-connection/secret.png)
+![step-5-finish-button](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-5-finish-button.png)
 
-| REF. | FIELDS | REQUIRED | ACTIONS |
-|------|--------|----------|---------|
-| 1 | Login URL | Required | Enter the URL used to authenticate with HashiCorp Vault. |
-| 2 | Credentials Payload | Required | Input a valid JSON containing credentials for Vault authentication. |
-| 3 | Token JSONPath | Required | Specify the JSONPath to retrieve the client authentication token from the response (e.g., `$.auth.client_token`). |
-| 4 | Secret URL | Required | Enter the URL where the secret is stored in Vault. |
-| 5 | Token Header Name | Required | Set the header name used for the authentication token (e.g., `X-Vault-Token`). |
-| 6 | Data JSONPath | Required | Specify the JSONPath to retrieve the secret data (e.g., `$.data`). |
+**Step 6**: A success message will appear indicating that your datastore has been successfully added.
 
-**Step 4**: Configure the datastore properties.
-
-![form](../../../assets/source-datastores/add-datastores/connections/new-connection/datastore-properties.png)
-
-| REF. | FIELDS | REQUIRED | ACTIONS |
-|------|--------|----------|---------|
-| 1 | Teams | Required | Select one or more teams from the dropdown to associate with this source datastore. |
-| 2 | Initiate Sync | Optional | Tick the checkbox to automatically perform a sync operation on the configured source datastore to detect new, changed, or removed containers and fields. |
-
-**Step 5**: Click the **Test Connection** button to verify the connection. If the credentials and provided details are verified, a success message will be displayed.
-
-![test](../../../assets/source-datastores/add-datastores/connections/new-connection/test-connection.png)
-
-**Step 6**: Once the connection is verified, click the **Finish** button to complete the process. A message will appear indicating that your datastore has been successfully added.
-
-![finish](../../../assets/source-datastores/add-datastores/connections/new-connection/finish.png)
+![step-6-success](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-6-success.png)
