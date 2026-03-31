@@ -10,13 +10,13 @@ This guide walks you through the steps to delete a datastore group.
 
 ## Steps
 
-**Step 1**: Click on the **Manage groups** button (bookmark icon) in the tree view header.
+**Step 1**: Click on the **Manage groups :material-bookmark-box-outline:** button in the tree view header.
 
-![manage-groups-button](../../../../assets/source-datastores/shared/manage-groups-button.png)
+![step-1-manage-groups-button](../../../../assets/source-datastores/grouping/managing-groups/shared/step-1-manage-groups-button.png)
 
-**Step 2**: In the Manage Groups panel, find the group you want to delete and click the **Delete group** button (trash icon). The group will be deleted immediately.
+**Step 2**: In the Manage Groups panel, find the group you want to delete and click the **Delete group :material-trash-can-outline:** button. The group will be deleted immediately.
 
-![delete-button](../../../../assets/source-datastores/managing-datastores/grouping/managing-groups/delete-a-group/delete-button.png)
+![step-2-delete-button](../../../../assets/source-datastores/grouping/managing-groups/delete-a-group/step-2-delete-button.png)
 
 !!! warning
     The deletion happens immediately — there is no confirmation dialog. Make sure you are deleting the correct group.

@@ -1,4 +1,4 @@
-# Understanding Datastore Grouping
+# Datastore Grouping Introduction
 
 ## What is Datastore Grouping?
 

@@ -7,18 +7,18 @@ This guide walks you through the steps to remove a datastore from its current gr
 
 ## Steps
 
-**Step 1**: In the tree view, hover over the datastore you want to remove from its group. An **assign menu** icon will appear.
+**Step 1**: In the tree view, hover over the datastore you want to remove from its group. The **Assign to group :material-bookmark-box-outline:** button will appear.
 
-![assign-icon](../../../../assets/source-datastores/managing-datastores/grouping/managing-groups/remove-a-datastore/assign-icon.png)
+![step-1-assign-icon](../../../../assets/source-datastores/grouping/managing-groups/remove-a-datastore/step-1-assign-icon.png)
 
-**Step 2**: Click the assign menu icon. A dropdown will appear showing the currently assigned group.
+**Step 2**: Click the **Assign to group :material-bookmark-box-outline:** button. A dropdown will appear showing the currently assigned group.
 
-![assign-dropdown](../../../../assets/source-datastores/managing-datastores/grouping/managing-groups/remove-a-datastore/assign-dropdown.png)
+![step-2-assign-dropdown](../../../../assets/source-datastores/grouping/managing-groups/remove-a-datastore/step-2-assign-dropdown.png)
 
-**Step 3**: Click the **close icon** (x) next to the currently selected group.
+**Step 3**: Click the **Close :material-close:** button next to the currently selected group.
 
-![remove-group](../../../../assets/source-datastores/managing-datastores/grouping/managing-groups/remove-a-datastore/remove-group.png)
+![step-3-remove-group](../../../../assets/source-datastores/grouping/managing-groups/remove-a-datastore/step-3-remove-group.png)
 
 **Step 4**: The datastore will move to the **Ungrouped** section of the tree view.
 
-![datastore-ungrouped](../../../../assets/source-datastores/managing-datastores/grouping/managing-groups/remove-a-datastore/datastore-ungrouped.png)
+![step-4-datastore-ungrouped](../../../../assets/source-datastores/grouping/managing-groups/remove-a-datastore/step-4-datastore-ungrouped.png)

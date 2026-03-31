@@ -10,6 +10,10 @@ No. A datastore can belong to **zero or one** group at a time. If you assign a d
 
 Yes. Groups are **workspace-wide** — all users in the workspace see the same groups and the same datastore assignments.
 
+### If I create or modify a group, does it affect all users?
+
+Yes. Groups are shared across the entire workspace. When you create a group, assign a datastore to a group, rename a group, or delete a group, **every user** in the workspace sees the change immediately. There are no personal or private groups — all grouping is organization-wide.
+
 ### What happens to datastores when I delete a group?
 
 The datastores are **not deleted**. They simply become ungrouped and appear in the "Ungrouped" section of the tree view.
