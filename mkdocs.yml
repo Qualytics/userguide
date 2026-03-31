@@ -64,7 +64,6 @@ nav:
           - How It Works: source-datastore/add-datastores/multi-schema/concepts/how-it-works.md
           - Supported Connectors: source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md
           - Permissions: source-datastore/add-datastores/multi-schema/concepts/multi-schema-permissions.md
-          - API: source-datastore/add-datastores/multi-schema/concepts/multi-schema-api.md
           - FAQ: source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md
         - Managing:
           - Add Datastore with new connection: source-datastore/add-datastores/connections/new-connection.md

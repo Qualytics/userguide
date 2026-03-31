@@ -64,14 +64,6 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
 <div class="grid cards" markdown>
 
--   :material-api:{ .lg .middle } **API**
-
-    ---
-
-    API endpoints for bulk datastore creation, schema discovery, and validation.
-
-    [:octicons-arrow-right-24: API](concepts/multi-schema-api.md)
-
 -   :material-help-circle-outline:{ .lg .middle } **FAQ**
 
     ---

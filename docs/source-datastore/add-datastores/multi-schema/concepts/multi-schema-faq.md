@@ -34,7 +34,7 @@ Yes. You can set `enrichment_only: true` in the bulk creation request to create 
 
 Run the multi-schema flow again using the same connection. The schema discovery will show all available schemas, including the new one. Schemas that already have a datastore will display a warning icon, so you can easily identify and select only the new schema.
 
-Alternatively, you can use the [API](multi-schema-api.md) to discover and create the datastore for the new schema programmatically.
+Alternatively, you can use the [Datastore API](../../api.md) to discover and create the datastore for the new schema programmatically.
 
 ### How do I know which datastores were created by multi-schema vs. individually?
 
@@ -157,7 +157,7 @@ The sync operations are triggered sequentially as each datastore is created, but
 
 ### Can I schedule operations in bulk for the datastores created?
 
-There is no bulk scheduling option tied to multi-schema creation. Operations (sync, profile, scan) must be scheduled individually for each datastore. However, you can use the [API](multi-schema-api.md) to automate scheduling across multiple datastores programmatically.
+There is no bulk scheduling option tied to multi-schema creation. Operations (sync, profile, scan) must be scheduled individually for each datastore. However, you can use the [Datastore API](../../api.md) to automate scheduling across multiple datastores programmatically.
 
 ## Performance
 
@@ -185,7 +185,7 @@ The bulk creation operation is non-atomic — schemas that succeed are created, 
 
 ### How do I retry only the schemas that failed?
 
-Run the multi-schema flow again (or use the API) with only the failed schema names. The previously created datastores will not be affected. See the [Handling Errors](multi-schema-api.md#handling-errors-and-retrying-failed-schemas) section in the API documentation for a practical example.
+Run the multi-schema flow again (or use the [Datastore API](../../api.md)) with only the failed schema names. The previously created datastores will not be affected.
 
 ### I don't see the catalog/schema dropdowns. Why?
 
