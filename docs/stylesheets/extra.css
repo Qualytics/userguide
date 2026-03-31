@@ -1,3 +1,5 @@
+/* OS-specific shortcut display */
+
 /* ===== LIGHT MODE ===== */
 [data-md-color-scheme="default"] {
   /* Brand Colors */
@@ -251,11 +253,57 @@
   /* Grid Cards */
   .md-typeset .grid.cards > ul > li {
     background-color: var(--q-white);
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
   }
 
   .md-typeset .grid.cards > ul > li:hover {
     border-color: var(--q-brick);
     box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child {
+    margin-top: auto;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a {
+    position: static;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* Connector Tables - fixed column widths */
+  .connector-table table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .connector-table table th:nth-child(1),
+  .connector-table table td:nth-child(1) {
+    width: 5%;
+  }
+
+  .connector-table table th:nth-child(2),
+  .connector-table table td:nth-child(2) {
+    width: 45%;
+  }
+
+  .connector-table table th:nth-child(3),
+  .connector-table table td:nth-child(3) {
+    width: 15%;
+  }
+
+  .connector-table table th:nth-child(4),
+  .connector-table table td:nth-child(4) {
+    width: 35%;
   }
 
   /* Admonitions (Example boxes) */
@@ -571,11 +619,31 @@
   /* Grid Cards */
   .md-typeset .grid.cards > ul > li {
     background-color: var(--q-black);
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
   }
 
   .md-typeset .grid.cards > ul > li:hover {
     border-color: var(--q-brick);
     box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child {
+    margin-top: auto;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a {
+    position: static;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
   }
 
   /* Admonitions (Example boxes) */
@@ -1221,4 +1289,17 @@ pre,
 div.highlight {
   scrollbar-width: thin !important;
   scrollbar-color: var(--q-primary) transparent !important;
+}
+
+/* Permission & Connector Table Icons - Positive/Negative Colors */
+.md-typeset span.twemoji[title="Allowed"] svg,
+.md-typeset span.twemoji[title="Supported"] svg {
+  color: #21BA45 !important;
+  fill: #21BA45 !important;
+}
+
+.md-typeset span.twemoji[title="Not allowed"] svg,
+.md-typeset span.twemoji[title="Not supported"] svg {
+  color: #E91E63 !important;
+  fill: #E91E63 !important;
 }
