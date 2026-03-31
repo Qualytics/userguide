@@ -1,89 +1,90 @@
-# Link Enrichment
+# Link Enrichment Datastore
 
-**Step 1:** Click on the **Enrichment** from the dropdown list.
+Linking an enrichment datastore to a source datastore gives Qualytics a dedicated place to persist scan results, anomalies, source record examples, and remediation data directly in your own infrastructure.
 
-![enrichment](../../assets/source-datastores/managing-datastores/link-enrichment/enrichment-6.png)
+!!! info "Link During Datastore Creation"
+    You can also link an enrichment datastore during the datastore creation wizard. See the [Link on Datastore Creation](../enrichment-datastore/link-during-creation.md) documentation.
 
-A modal window **Link Enrichment Datastore** will appear, providing you with two options to link an **enrichment datastore**.
+## Enrichment Settings
 
-![link-enrichment](../../assets/source-datastores/managing-datastores/link-enrichment/link-enrichment-7.png)
+The **Link Enrichment Datastore** modal contains the following fields that you will configure during the linking process:
 
-| REF. | FIELDS | ACTIONS |
-| :---- | :---- | :---- |
-| 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2. | Caret Down Button | Click the caret down to select either **Use Enrichment Datastore** or **Add Enrichment Datastore**. |
-| 3. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
-| 4. | Maximum Record Anomaly Per Check | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
-| 5. | Maximum Source Examples Per Anomaly | This setting lets you choose how many source records to keep for each anomaly. When a scan finds an anomaly, only these records are saved and can be downloaded later. **For example**, if you set the value to **10**, you’ll be able to view or download only **10 records per anomaly**. If you need more records, increase this value **before running the scan**.|
-| 6. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
+![step-5-modal-fields-reference](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-5-modal-fields-reference.png)
 
-### Option I: Link New Enrichment
+| REF. | FIELD | DEFAULT | RANGE | DESCRIPTION |
+|:---:|:---|:---:|:---:|:---|
+| 1 | Prefix | Auto-generated | — | A prefix added to all enrichment table names to distinguish them from source tables. Auto-generated from the datastore name, normalized to lowercase with underscores (e.g., `_healthcare_analytics`). Each source datastore linked to the same enrichment datastore **must have a unique prefix** to avoid table name conflicts. Maximum 60 characters. |
+| 2 | Enrichment Datastore | — | — | Select an existing enrichment datastore from the dropdown. Only datastores created as enrichment-only with write capabilities are shown. See the [Supported Enrichment Datastores](../../enrichment-support/supported-enrichment-datastores.md){:target="_blank"} page for the full list of connectors that support enrichment. |
+| 3 | Maximum Record Anomalies per Check | `10` | 1–1,000 | How many individual anomalies can be created per quality check before they are grouped into one rolled-up anomaly. |
+| 4 | Maximum Source Examples per Anomaly | `10` | 1–1,000,000,000 | How many source data rows are stored in the enrichment datastore as examples when a quality check fails. |
+| 5 | Remediation Strategy: None | — | — | Do not replicate anomalous source tables. Only anomaly metadata is tracked within Qualytics. This is the default. |
+| 6 | Remediation Strategy: Append | — | — | Anomalous source records are appended to enrichment tables after each scan. Builds a historical audit trail of all anomalous data over time — useful for compliance and governance. |
+| 7 | Remediation Strategy: Overwrite | — | — | Enrichment tables are replaced with anomalous records from the latest scan. Only the most recent anomalous data is kept — useful when you only need the current state. |
 
-If the toggle for **Add new connection** is turned on, then this will prompt you to link a new enrichment datastore from scratch without using existing connection details.
+---
 
-**Step 1:** Click on the caret button and select **Add Enrichment Datastore**.
+There are two ways to link an enrichment datastore:
 
-![caret](../../assets/source-datastores/managing-datastores/link-enrichment/caret-8.png)
+- [**Option I**](#option-i-via-settings-menu): Through the Settings menu
+- [**Option II**](#option-ii-via-tree-footer): Through the tree footer panel
 
-A modal window **Link Enrichment Datastore** will appear. Enter the following details to create an enrichment datastore with a new connection.
+---
 
-![window](../../assets/source-datastores/managing-datastores/link-enrichment/window.png)
+## Option I: Via Settings Menu
 
-| REF. | FIELDS | ACTIONS |
-| :---- | :---- | :---- |
-| 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2. | Name | Give a name for the enrichment datastore. |
-| 3. | Toggle Button for adding new connection | Toggle ON to create a new enrichment from scratch or toggle OFF to reuse credentials from an existing connection. |
-| 4. | Connector | Select a datastore connector from the dropdown list. |
-| 5. | Maximum Record Anomaly Per Check | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
-| 6. | Maximum Source Examples Per Anomaly | Choose how many source records are saved for each anomaly. Only the saved records can be downloaded later. **For example**, if this is set to **10**, only **10 source records will be available**.|
-| 7. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
+**Step 1**: Navigate to your datastore overview and click the **Settings :material-cog-outline:** button located at the top-right corner of the interface.
 
-**Step 2:** Add connection details for your selected **enrichment datastore** connector.
+![step-1-settings-button](../../assets/source-datastores/enrichment-datastore/managing/shared/step-1-settings-button.png)
 
-!!! note
-    Connection details can vary from datastore to datastore. For illustration, we have demonstrated linking BigQuery as a new enrichment datastore.
+**Step 2**: A dropdown menu will appear. Click on **Enrichment :material-database-import-outline:** to open the Link Enrichment Datastore modal.
 
-![select-new-enrichment](../../assets/source-datastores/managing-datastores/link-enrichment/select-new-enrichment-9.png)
+![step-2-enrichment-menu](../../assets/source-datastores/enrichment-datastore/managing/shared/step-2-enrichment-menu.png)
 
-**Step 3:** After adding the source datastore details, click on the **Test Connection** button to check and verify its connection.
+**Step 3**: The **Link Enrichment Datastore** modal will appear.
 
-![connector-creds](../../assets/source-datastores/managing-datastores/link-enrichment/connector-creds-10.png)
+![step-3-modal-empty](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-3-modal-empty.png)
 
-If the credentials and provided details are verified, a success message will be displayed indicating that the connection has been verified.
+**Step 4**: Select an existing enrichment datastore from the **Use Enrichment Datastore** dropdown.
 
-**Step 4:** Click on the **Save** button.
+![step-4-select-enrichment](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-4-select-enrichment.png)
 
-![save-enrichment](../../assets/source-datastores/managing-datastores/link-enrichment/save-enrichment-11.png)
+**Step 5**: Configure the enrichment settings (prefix, anomaly thresholds, remediation strategy) as described in the [Enrichment Settings](#enrichment-settings) section above. After configuring all fields, click **Save** to link the enrichment datastore.
 
-After clicking on the **Save** button, a success notification appears on the screen showing the action was completed successfully.
+![step-6-modal-configured](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-6-modal-configured.png)
 
-### Option II: Link Existing Connection
+**Step 6**: A success message will confirm that the datastore has been updated successfully.
 
-If the **Use an existing enrichment datastore** option is selected from the dropdown menu, you will be prompted to link the enrichment datastore using existing connection details.
+![step-7-success](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-7-success.png)
 
-**Step 1:** Click on the caret button and select **Use Enrichment Datastore**.
+---
 
-![caret](../../assets/source-datastores/managing-datastores/link-enrichment/caret2.png)
+## Option II: Via Tree Footer
 
-**Step 2:** A modal window **Link Enrichment Datastore** will appear. Add a prefix name and select an existing enrichment datastore from the dropdown list.
+**Step 1**: Select the datastore from the tree view on the left side. In the footer panel, locate the **Enrichment Datastore** section showing "None configured".
 
-![modal](../../assets/source-datastores/managing-datastores/link-enrichment/modal.png)
+![step-1-footer-no-enrichment](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-1-footer-no-enrichment.png)
 
-| REF. | FIELDS | ACTIONS |
-| :---- | :---- | :---- |
-| 1. | Prefix | Add a prefix name to uniquely identify tables/files when Qualytics writes metadata from the source datastore to your enrichment datastore. |
-| 2. | Enrichment Datastore | Select an enrichment datastore from the dropdown list. |
-| 3. | Maximum Record Anomalies per Check | Sets the maximum number of anomalies per check before they are merged into one anomaly. Value must be between 1 and 1,000. |
-| 4. | Maximum Source Examples per Anomaly | Sets how many source records are kept per anomaly during a scan. **For example**, if this is set to **10**, only **10 records per anomaly will be saved or downloaded**. Increase this value before running the scan to access more records. |
-| 5. | Remediation Strategy | The Remediation Strategy defines how anomalous source tables are replicated in the enrichment datastore. You can choose **None** (no replication), **Append** (append new data), or **Overwrite** (replace existing data). |
+**Step 2**: Click the **Link Enrichment Datastore :material-link-variant:** button to open the Link Enrichment Datastore modal.
 
-**Step 3:** View and check the connection details of the enrichment datastore and click on the **Save** button.
+![step-2-footer-link-button](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-2-footer-link-button.png)
 
-![save](../../assets/source-datastores/managing-datastores/link-enrichment/save-15.png)
+**Step 3**: The **Link Enrichment Datastore** modal will appear.
 
-After clicking on the **Save** button, a success notification appears on the screen showing the action was completed successfully.
+![step-3-modal-empty](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-3-modal-empty.png)
 
-## Endpoint (Patch)
+**Step 4**: Select an existing enrichment datastore from the **Use Enrichment Datastore** dropdown.
 
-`/api/datastores/{datastore-id}/enrichment/{enrichment-id}` _(patch)_
+![step-4-select-enrichment](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-4-select-enrichment.png)
+
+**Step 5**: Configure the enrichment settings (prefix, anomaly thresholds, remediation strategy) as described in the [Enrichment Settings](#enrichment-settings) section above. After configuring all fields, click **Save** to link the enrichment datastore.
+
+![step-6-modal-configured](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-6-modal-configured.png)
+
+**Step 6**: A success message will confirm that the datastore has been updated successfully.
+
+![step-7-success](../../assets/source-datastores/enrichment-datastore/managing/link-enrichment/step-7-success.png)
+
+---
+
+!!! info "Unlink Enrichment Datastore"
+    To remove the enrichment link, see the [Unlink Enrichment Datastore](unlink-enrichment.md) documentation.
