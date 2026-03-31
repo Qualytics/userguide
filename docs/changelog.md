@@ -2,6 +2,49 @@
 
 ## Release Notes
 
+### 2026.3.25 { id=2026.3.25 }
+
+#### Feature Enhancements
+
+- Added timezone-aware cron scheduling, allowing users to schedule operations and flows in their local timezone with automatic Daylight Saving Time adjustment.
+    - A searchable IANA timezone selector is available when creating or editing schedules for Scan, Profile, Sync, Materialize, Export, and Flow operations.
+    - Schedules automatically adjust for DST transitions, ensuring operations run at the intended local time year-round without manual cron changes.
+    - UTC remains the default for all new and existing schedules, preserving full backward compatibility.
+    - Schedule cards and labels now display the configured timezone abbreviation instead of a hardcoded UTC indicator.
+
+- Introduced a Last Active column in the admin user listing, providing visibility into each user's most recent login activity.
+    - The column displays relative time labels such as "3 days ago" or "Just now" for recent logins, with a tooltip showing the exact UTC timestamp.
+    - Users who have never logged in display a "Never" indicator for easy identification of inactive accounts.
+    - The user listing supports sorting by last login date, enabling administrators to quickly identify dormant or recently active users.
+
+#### General Fixes and Improvements
+
+- Corrected user avatars displaying a blank colored circle instead of the user's initials when a profile picture was unavailable or failed to load.
+
+- Addressed misclicks on card selection checkboxes triggering navigation instead of toggling selection, now ensuring the full clickable area registers as a selection action.
+
+- Fixed the API accepting empty strings for required fields such as names, queries, and crontab expressions, now enforcing proper validation across all inbound schemas.
+
+- Fixed computed assets incorrectly showing a display name versus source name distinction when renamed, now updating the actual name directly since computed tables, files, joins, and fields exist only in Qualytics.
+
+- Improved Agent Q to support PDF file uploads, allowing users to attach documents via drag-and-drop or the paperclip button for model-assisted analysis when a compatible LLM provider is configured.
+
+- Configured Agent Q to honor team restriction mode, scoping chat responses and data discovery to the restricted team's datastores when a team restriction is active.
+
+- Optimized Agent Q conversation history management, improving context retention and response quality across longer chat sessions.
+
+- Expanded Agent Q tooling to support editor-level actions, including quality check management, operation and schedule lifecycle controls, anomaly investigation, stewardship of field, container, and datastore metadata, and computed asset maintenance.
+
+- Updated the CodeMirror syntax editor theme for improved contrast and readability across light and dark modes, aligning with the current design system.
+
+- Added check variable syntax highlighting in the editor, visually distinguishing `{{variable}}` placeholders and providing autocomplete suggestions from container metadata keys.
+
+- Enhanced computed field promotion to automatically resolve nested dependencies, ensuring parent computed fields are included and processed before their dependents.
+
+- Improved profiling performance for data type inference, significantly reducing execution time on datasets with large string columns.
+
+- General Fixes and Improvements.
+
 ### 2026.3.20 { id=2026.3.20 }
 
 #### Feature Enhancements

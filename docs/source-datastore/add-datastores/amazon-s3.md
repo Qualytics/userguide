@@ -119,6 +119,56 @@ To create a policy, follow these steps:
 !!! warning
     Currently, object-level permissions alone are insufficient to authenticate the connection. Please ensure you also include bucket-level permissions as demonstrated in the example above.
 
+### Troubleshooting Common Errors
+
+| Error                                          | Likely Cause                                                                 | Fix                                                                                     |
+|------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `AccessDenied`                                 | The IAM identity lacks one or more of the required S3 permissions            | Add the missing permissions to the IAM policy and re-test the connection                |
+| `InvalidAccessKeyId`                           | The Access Key ID does not exist or has been deactivated                     | Verify the Access Key ID in **IAM > Users > Security credentials** or generate a new key pair |
+| `SignatureDoesNotMatch`                        | The Secret Access Key is incorrect or was copied with extra whitespace       | Re-enter the Secret Access Key carefully, ensuring no trailing spaces or newlines        |
+| `NoSuchBucket`                                 | The bucket name in the URI does not exist                                    | Verify the bucket name and ensure the URI follows the format `s3://bucket-name`         |
+| `AllAccessDisabled`                            | The bucket policy explicitly denies access or the bucket is in a different account | Check the bucket policy for explicit `Deny` statements and verify the bucket is in the correct AWS account |
+
+### Detailed Troubleshooting Notes
+
+#### Authentication Errors
+
+The error `InvalidAccessKeyId` or `SignatureDoesNotMatch` indicates that the AWS credentials are incorrect or malformed.
+
+Common causes:
+
+- **Incorrect Access Key ID** — the Access Key ID was misspelled or has been deactivated in the IAM Console.
+- **Incorrect Secret Access Key** — the Secret Access Key was copied with extra whitespace, a trailing newline, or was truncated.
+- **Rotated credentials** — the access key pair has been rotated since the connection was created.
+- **Temporary credentials** — if using STS assumed-role credentials, the session token may be missing or expired.
+
+!!! note
+    The Secret Access Key is only visible once at creation time. If you cannot verify it, generate a new access key pair from the IAM Console.
+
+#### Permission Errors
+
+The error `AccessDenied` means the IAM identity authenticated successfully but lacks the required S3 permissions.
+
+Common causes:
+
+- **Missing bucket-level permissions** — the IAM policy grants object-level permissions (`s3:GetObject`) but not bucket-level permissions (`s3:ListBucket`). Both are required.
+- **Bucket policy conflict** — the bucket has a resource-based policy with an explicit `Deny` that overrides the IAM policy.
+- **S3 Block Public Access** — the bucket's public access settings may block access even for authenticated IAM users if the policy references public access.
+- **Wrong resource ARN** — the IAM policy specifies a different bucket or path than the one in the connection form.
+
+#### Connection Errors
+
+The error `NoSuchBucket` or `AllAccessDisabled` indicates a configuration issue with the bucket.
+
+Common causes:
+
+- **Bucket does not exist** — the bucket name was misspelled or the bucket was deleted.
+- **Wrong region** — the bucket is in a different AWS region than expected, causing endpoint resolution failures.
+- **Bucket in different account** — the bucket belongs to a different AWS account and cross-account access is not configured.
+
+!!! tip
+    Start by confirming credentials are valid (authentication errors), then verify IAM policy permissions (permission errors), and finally check the bucket name and region (connection errors).
+
 ## Add a Source Datastore
 
 A source datastore is a storage location used to connect and access data from external sources. Amazon S3 is an example of a source datastore, specifically a type of Distributed File System (DFS) datastore that is designed to handle data stored in distributed file systems. Configuring a DFS datastore enables the Qualytics platform to access and perform operations on the data, thereby generating valuable insights.
