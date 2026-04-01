@@ -8,25 +8,25 @@ The table below shows each supported connector, the field used for catalog selec
 
 | Connector | Catalog Field | Schema Field |
 |-----------|--------------|--------------|
-| [Athena](../../athena.md) | Catalog | Schema |
-| [BigQuery](../../bigquery.md) | Project | Dataset |
-| [Databricks](../../databricks.md) | Catalog | Schema |
-| [DB2](../../db2.md) | — | Schema |
-| [Dremio](../../dremio.md) | — | Schema |
-| [Fabric Analytics](../../fabric-analytics.md) | Database | Schema |
-| [Hive](../../hive.md) | — | Database |
-| [MariaDB](../../maria-db.md) | — | Database |
-| [Microsoft SQL Server](../../microsoft-sql-server.md) | Database | Schema |
-| [MySQL](../../mysql.md) | — | Database |
-| [Oracle](../../oracle.md) | — | Schema |
-| [PostgreSQL](../../postgresql.md) | Database | Schema |
-| [Presto](../../presto.md) | Catalog | Schema |
-| [Redshift](../../redshift.md) | Database | Schema |
-| [Snowflake](../../snowflake.md) | Database | Schema |
-| [Synapse](../../synapse.md) | Database | Schema |
-| [Teradata](../../teradata.md) | — | Database |
-| [Timescale DB](../../timescale-db.md) | — | Schema |
-| [Trino](../../trino.md) | Catalog | Schema |
+| [Athena](../athena.md) | Catalog | Schema |
+| [BigQuery](../bigquery.md) | Project | Dataset |
+| [Databricks](../databricks.md) | Catalog | Schema |
+| [DB2](../db2.md) | — | Schema |
+| [Dremio](../dremio.md) | — | Schema |
+| [Fabric Analytics](../fabric-analytics.md) | Database | Schema |
+| [Hive](../hive.md) | — | Database |
+| [MariaDB](../maria-db.md) | — | Database |
+| [Microsoft SQL Server](../microsoft-sql-server.md) | Database | Schema |
+| [MySQL](../mysql.md) | — | Database |
+| [Oracle](../oracle.md) | — | Schema |
+| [PostgreSQL](../postgresql.md) | Database | Schema |
+| [Presto](../presto.md) | Catalog | Schema |
+| [Redshift](../redshift.md) | Database | Schema |
+| [Snowflake](../snowflake.md) | Database | Schema |
+| [Synapse](../synapse.md) | Database | Schema |
+| [Teradata](../teradata.md) | — | Database |
+| [Timescale DB](../timescale-db.md) | — | Schema |
+| [Trino](../trino.md) | Catalog | Schema |
 
 ## Understanding the Columns
 

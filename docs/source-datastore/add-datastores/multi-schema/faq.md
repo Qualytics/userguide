@@ -20,11 +20,11 @@ There is no hard limit on the number of schemas you can select for creation. How
 
 ### Can I edit the datastores created in bulk after creation?
 
-Yes. Each datastore created through the multi-schema flow is a regular source datastore. You can edit, delete, or reconfigure them individually through the [Datastore Settings](../../../managing-datastores/settings-overview.md) just like any other datastore.
+Yes. Each datastore created through the multi-schema flow is a regular source datastore. You can edit, delete, or reconfigure them individually through the [Datastore Settings](../../managing-datastores/settings-overview.md) just like any other datastore.
 
 ### Can I delete all datastores created in bulk at once?
 
-No. There is no bulk delete option tied to the multi-schema creation. Each datastore must be deleted individually through the [Delete Datastore](../../../managing-datastores/delete-datastore.md) settings.
+No. There is no bulk delete option tied to the multi-schema creation. Each datastore must be deleted individually through the [Delete Datastore](../../managing-datastores/delete-datastore.md) settings.
 
 ### Can I use multi-schema creation for enrichment datastores?
 
@@ -51,11 +51,11 @@ Users with the **Manager** or **Admin** role can use multi-schema creation. This
 No. All operations in the multi-schema flow — catalog discovery, schema discovery, validation, and bulk creation — require the same **Manager** role.
 
 !!! info "Full Permission Matrix"
-    For a complete overview of all permissions across all features, see the [Team Permissions](../../../../settings/security/team-permissions.md) page.
+    For a complete overview of all permissions across all features, see the [Team Permissions](../../../settings/security/team-permissions.md) page.
 
 ### Can I assign different teams to different schemas?
 
-No. In the multi-schema flow, all source datastores created in the batch are assigned to the same teams. If you need different team assignments, you can change them individually after creation through the [Edit Datastore](../../../managing-datastores/edit-datastore.md) settings.
+No. In the multi-schema flow, all source datastores created in the batch are assigned to the same teams. If you need different team assignments, you can change them individually after creation through the [Edit Datastore](../../managing-datastores/edit-datastore.md) settings.
 
 ## Schema Discovery
 
@@ -103,7 +103,7 @@ The creation will proceed and a new datastore with that name will be created. Qu
 
 ### Can I rename a datastore after it was created by multi-schema?
 
-Yes. You can rename any datastore through the [Edit Datastore](../../../managing-datastores/edit-datastore.md) settings, regardless of how it was created.
+Yes. You can rename any datastore through the [Edit Datastore](../../managing-datastores/edit-datastore.md) settings, regardless of how it was created.
 
 ## Enrichment
 
@@ -113,11 +113,11 @@ No. The enrichment linking step is optional. You can click **Finish** after the 
 
 ### Can I link different enrichment datastores to different schemas?
 
-No. In the multi-schema flow, all source datastores created in the batch are linked to the same enrichment datastore. If you need different enrichment datastores for different schemas, you can change the enrichment linking individually after creation through the [Link Enrichment](../../../managing-datastores/link-enrichment.md) settings.
+No. In the multi-schema flow, all source datastores created in the batch are linked to the same enrichment datastore. If you need different enrichment datastores for different schemas, you can change the enrichment linking individually after creation through the [Link Enrichment](../../managing-datastores/link-enrichment.md) settings.
 
 ### Can I change the enrichment datastore after creation?
 
-Yes. You can unlink and relink a different enrichment datastore for any individual source datastore through the [Link Enrichment](../../../managing-datastores/link-enrichment.md) and [Unlink Enrichment](../../../managing-datastores/unlink-enrichment.md) settings.
+Yes. You can unlink and relink a different enrichment datastore for any individual source datastore through the [Link Enrichment](../../managing-datastores/link-enrichment.md) and [Unlink Enrichment](../../managing-datastores/unlink-enrichment.md) settings.
 
 ### What is the enrichment prefix?
 
@@ -131,7 +131,7 @@ The prefix is auto-generated based on each datastore's name, so each datastore i
 
 ### Can I use multi-schema creation together with datastore grouping?
 
-Yes. You can assign all newly created datastores to a [datastore group](../../../managing-datastores/grouping/overview.md) during the creation flow by selecting a group in the form. All datastores in the batch will be assigned to the same group.
+Yes. You can assign all newly created datastores to a [datastore group](../../managing-datastores/grouping/overview.md) during the creation flow by selecting a group in the form. All datastores in the batch will be assigned to the same group.
 
 ### Can I add tags during multi-schema creation?
 

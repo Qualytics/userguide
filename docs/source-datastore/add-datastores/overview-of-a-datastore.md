@@ -172,7 +172,7 @@ Discover and onboard multiple schemas from a single connection at once — inclu
 
     Understand the multi-schema creation flow, schema discovery, and name templates.
 
-    [:octicons-arrow-right-24: How It Works](multi-schema/concepts/how-it-works.md)
+    [:octicons-arrow-right-24: How It Works](multi-schema/how-it-works.md)
 
 -   :material-database-outline:{ .lg .middle } **Supported Connectors**
 
@@ -180,7 +180,7 @@ Discover and onboard multiple schemas from a single connection at once — inclu
 
     See which connectors support multi-schema discovery and their catalog/schema mappings.
 
-    [:octicons-arrow-right-24: Supported Connectors](multi-schema/concepts/supported-connectors.md)
+    [:octicons-arrow-right-24: Supported Connectors](multi-schema/supported-connectors.md)
 
 -   :material-shield-lock-outline:{ .lg .middle } **Permissions**
 
@@ -188,7 +188,7 @@ Discover and onboard multiple schemas from a single connection at once — inclu
 
     Understand the roles and permissions required for multi-schema creation.
 
-    [:octicons-arrow-right-24: Permissions](multi-schema/concepts/multi-schema-permissions.md)
+    [:octicons-arrow-right-24: Permissions](multi-schema/permissions.md)
 
 -   :material-api:{ .lg .middle } **API**
 
@@ -196,7 +196,7 @@ Discover and onboard multiple schemas from a single connection at once — inclu
 
     API endpoints for bulk datastore creation, schema discovery, and validation.
 
-    [:octicons-arrow-right-24: API](multi-schema/concepts/multi-schema-api.md)
+    [:octicons-arrow-right-24: API](api.md#multi-schema-creation)
 
 -   :material-help-circle-outline:{ .lg .middle } **FAQ**
 
@@ -204,7 +204,7 @@ Discover and onboard multiple schemas from a single connection at once — inclu
 
     Answers to common questions about multi-schema source datastore creation.
 
-    [:octicons-arrow-right-24: FAQ](multi-schema/concepts/multi-schema-faq.md)
+    [:octicons-arrow-right-24: FAQ](multi-schema/faq.md)
 
 </div>
 

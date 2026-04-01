@@ -72,7 +72,7 @@ For example, with the template `production_{{schema}}` and schemas `public`, `st
 | Field | Required | Description |
 | :--- | :--- | :--- |
 | **Teams** | Yes | One or more teams to associate with all newly created datastores. |
-| **Group** | No | Assign all datastores to a [datastore group](../../../managing-datastores/grouping/overview.md). |
+| **Group** | No | Assign all datastores to a [datastore group](../../managing-datastores/grouping/overview.md). |
 | **Initiate Sync** | No | Automatically run a sync operation on each newly created datastore after creation. |
 
 ### Validation
@@ -91,7 +91,7 @@ You can:
 !!! info
     All source datastores created in the batch will be linked to the same enrichment datastore. The enrichment prefix is shared across all of them.
 
-For step-by-step instructions on adding a datastore, refer to the [Add Source Datastore](../../overview-of-a-jdbc-datastore.md) documentation.
+For step-by-step instructions on adding a datastore, refer to the [Add Source Datastore](../overview-of-a-jdbc-datastore.md) documentation.
 
 ## What Happens After Creation
 
