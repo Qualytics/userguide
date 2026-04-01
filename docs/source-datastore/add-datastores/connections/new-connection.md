@@ -40,7 +40,7 @@ The lower section of the **Add Source Datastores** modal contains fields common 
 
 **Step 1**: Log in to your Qualytics account and click on the **Add Source Datastore :material-plus:** button located at the top-right corner of the interface.
 
-![step-1-add-source-datastore](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-1-add-source-datastore.png)
+![step-1-add-source-datastore](../../../assets/source-datastores/datastore/managing/shared/step-1-add-source-datastore.png)
 
 **Step 2**: A modal window — **Add Source Datastores** — will appear. Ensure the **Add New Connection** toggle is turned **on** and select a connector from the dropdown list.
 
@@ -63,4 +63,4 @@ The lower section of the **Add Source Datastores** modal contains fields common 
 
 **Step 6**: A success message will appear indicating that your datastore has been successfully added.
 
-![step-6-success](../../../assets/source-datastores/datastore/managing/add-datastore-with-new-connection/step-6-success.png)
+![success](../../../assets/source-datastores/datastore/managing/shared/success.png)
