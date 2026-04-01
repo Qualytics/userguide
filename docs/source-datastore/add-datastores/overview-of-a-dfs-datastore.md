@@ -38,7 +38,7 @@ In DFS datastores, data is organized as:
     For the full list of supported DFS connectors, see the [Available Datastore Connectors](available-datastore-connectors.md){:target="_blank"} page.
 
 !!! info "Connections"
-    To learn how to configure connection details (access keys, service accounts, connection strings), see the [Connections Overview](connections/overview-of-a-connection.md){:target="_blank"} documentation.
+    To learn how to configure connection details (access keys, service accounts, connection strings), see the [Connections Overview](connections/introduction.md){:target="_blank"} documentation.
 
 ## Available Operations
 

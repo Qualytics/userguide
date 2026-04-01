@@ -1,10 +1,12 @@
-# Connections Overview
+# Connections Introduction
 
 In Qualytics, setting up datastore connections is simple and efficient. Enter the necessary details like datastore name, connector, and authentication credentials to connect your datastores. You can also enable **Secrets Management** for secure credential handling with HashiCorp Vault.
 
 Once verified, the **Reuse Connection** feature lets you use existing credentials for future datastores, saving time and ensuring consistency. Manage your connections easily by adding, editing, or deleting datastores as needed.
 
-## Getting Started
+## Managing
+
+Create a new datastore with a new or existing connection.
 
 <div class="grid cards" markdown>
 
@@ -25,9 +27,3 @@ Once verified, the **Reuse Connection** feature lets you use existing credential
     [:octicons-arrow-right-24: Reuse a Connection](existing-connection.md)
 
 </div>
-
-## Manage Connection
-
-You can effectively manage your connections by editing, deleting, and adding datastores to maintain accuracy and efficiency.
-
-For more information on managing connections, refer to the [Manage Connection section](../../../settings/connections/manage-connections.md#manage-connection).

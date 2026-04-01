@@ -148,7 +148,7 @@ Learn how to set up and manage connections to your datastores — create new con
 
     Set up new connections or reuse existing credentials to connect your datastores.
 
-    [:octicons-arrow-right-24: Connections Overview](connections/overview-of-a-connection.md)
+    [:octicons-arrow-right-24: Connections Overview](connections/introduction.md)
 
 </div>
 

@@ -46,7 +46,7 @@ Learn the fundamentals of source datastores — supported connectors, connection
 
     Set up new connections or reuse existing credentials to connect your datastores.
 
-    [:octicons-arrow-right-24: Connections Overview](add-datastores/connections/overview-of-a-connection.md)
+    [:octicons-arrow-right-24: Connections Overview](add-datastores/connections/introduction.md)
 
 -   :material-vector-combine:{ .lg .middle } **Multiple-Schema**
 
