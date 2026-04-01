@@ -58,13 +58,15 @@ nav:
             - source-datastore/add-datastores/amazon-s3.md
             - source-datastore/add-datastores/azure-datalake-storage.md
             - source-datastore/add-datastores/google-cloud-storage.md
-        - Connection: source-datastore/add-datastores/connections/overview-of-a-connection.md
+        - Connection:
+          - Introduction: source-datastore/add-datastores/connections/introduction.md
+          - How It Works: source-datastore/add-datastores/connections/how-it-works.md
         - Multiple-Schema:
           - Introduction: source-datastore/add-datastores/multi-schema/overview.md
-          - How It Works: source-datastore/add-datastores/multi-schema/concepts/how-it-works.md
-          - Supported Connectors: source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md
-          - Permissions: source-datastore/add-datastores/multi-schema/concepts/multi-schema-permissions.md
-          - FAQ: source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md
+          - How It Works: source-datastore/add-datastores/multi-schema/how-it-works.md
+          - Supported Connectors: source-datastore/add-datastores/multi-schema/supported-connectors.md
+          - Permissions: source-datastore/add-datastores/multi-schema/permissions.md
+          - FAQ: source-datastore/add-datastores/multi-schema/faq.md
         - Managing:
           - Add Datastore with new connection: source-datastore/add-datastores/connections/new-connection.md
           - Add Datastore with existing connection: source-datastore/add-datastores/connections/existing-connection.md
@@ -642,7 +644,13 @@ plugins:
         'add-datastores/amazon-s3.md': 'source-datastore/add-datastores/amazon-s3.md'
         'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
-        'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
+        'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/introduction.md'
+        'source-datastore/add-datastores/connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/introduction.md'
+        # Multi-schema concepts folder removed
+        'source-datastore/add-datastores/multi-schema/concepts/how-it-works.md': 'source-datastore/add-datastores/multi-schema/how-it-works.md'
+        'source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md': 'source-datastore/add-datastores/multi-schema/supported-connectors.md'
+        'source-datastore/add-datastores/multi-schema/concepts/multi-schema-permissions.md': 'source-datastore/add-datastores/multi-schema/permissions.md'
+        'source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md': 'source-datastore/add-datastores/multi-schema/faq.md'
         # Catalog to Sync redirect
         'source-datastore/sync.md': 'source-datastore/operations/sync.md'
         # AI integrations redirects
