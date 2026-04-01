@@ -48,7 +48,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     Understand the multi-schema creation flow, schema discovery, and name templates.
 
-    [:octicons-arrow-right-24: How It Works](concepts/how-it-works.md)
+    [:octicons-arrow-right-24: How It Works](how-it-works.md)
 
 -   :material-database-outline:{ .lg .middle } **Supported Connectors**
 
@@ -56,7 +56,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     See which connectors support multi-schema discovery and their catalog/schema mappings.
 
-    [:octicons-arrow-right-24: Supported Connectors](concepts/supported-connectors.md)
+    [:octicons-arrow-right-24: Supported Connectors](supported-connectors.md)
 
 </div>
 
@@ -70,6 +70,6 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     Answers to common questions about multi-schema source datastore creation.
 
-    [:octicons-arrow-right-24: FAQ](concepts/multi-schema-faq.md)
+    [:octicons-arrow-right-24: FAQ](faq.md)
 
 </div>
