@@ -1,144 +1,48 @@
-# Right Click Options
+# Datastore Right Click Options
 
-Once you add a source datastore, whether a **JDBC** or **DFS**, Qualytics provides right-click options on the following:  
+Qualytics provides right-click context menu options on **source datastores** across the platform. These options give you quick access to navigation and clipboard actions without needing to open a datastore first.
 
-- Added source datastore
-- Tables or files within the source datastore  
-- Fields within the tables
-- Checks within the source datastore  
-- Anomalies within the source datastore  
+!!! tip "Keyboard Shortcuts"
+    Prefer the keyboard? Many datastore actions are also available via shortcuts. See the [Keyboard Shortcuts](keyboard-shortcuts.md){:target="_blank"} page.
 
-Let’s get started 🚀
+## Available Options
 
-### Right Click Source Datastore
+The following options are available when right-clicking on a source datastore:
 
-Log in to your Qualytics account and right-click on the source datastore whether a **JDBC** or **DFS**. A dropdown list of options will appear:
+| Option | Icon | Description | Use Case |
+| :--- | :--- | :--- | :--- |
+| **Open in New Tab** | :material-tab: | Opens the datastore in a new browser tab. | Compare two datastores side by side or keep your current page open. |
+| **Copy Link** | :material-link-variant: | Copies the datastore URL to your clipboard. | Share a direct link with a teammate via Slack, email, or documentation. |
+| **Copy ID** | :material-pound-box: | Copies the datastore ID to your clipboard. | Use the ID in API calls, automation scripts, or support tickets. |
+| **Copy Name** | :material-content-copy: | Copies the datastore name to your clipboard. | Reference the datastore name in reports, tickets, or search queries. |
 
-- Open in New Tab.
+## Where It Works
 
-- Copy Link.
+The context menu is available in three locations. The **Tree View** and **Datastore Listing** provide all four options, while the **Breadcrumb** provides a reduced set.
 
-- Copy ID.
+### Tree View
 
-- Copy Name.
+Right-click on any source datastore in the left sidebar tree view:
 
-![add-datastore](../../assets/source-datastores/datastore/managing/right-click-options/step-1-source.png)
+![tree-view](../../assets/source-datastores/datastore/managing/right-click-options/tree-view.png)
 
-| No | Field | Description |
-| :---- | :---- | :---- |
-| 1 | Open in New Tab | Opens the selected source datastore in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc. |
-| 2 | Copy Link | Copy the unique URL of the selected source datastore to your clipboard. |
-| 3 | Copy ID | Copy the unique ID of the selected source datastore. |
-| 4 | Copy Name | Copy the name of the selected source datastore to your clipboard. |
+![tree-view-menu](../../assets/source-datastores/datastore/managing/right-click-options/tree-view-menu.png)
 
-Alternatively, you can access these right-click options by performing the direct right-click operation on a source datastore from the list.
+### Datastore Listing
 
-![add-datastore](../../assets/source-datastores/datastore/managing/right-click-options/step-2-source.png)
+Right-click on any datastore row in the Source Datastores listing page:
 
-### Right Click Tables & Files
+![datastore-listing](../../assets/source-datastores/datastore/managing/right-click-options/datastore-listing.png)
 
-Right-click on the specific table or file underlying a connected source datastore.
+![datastore-listing-menu](../../assets/source-datastores/datastore/managing/right-click-options/datastore-listing-menu.png)
 
-A dropdown list of options will appear:
+### Breadcrumb
 
-- Open in New Tab.
+Right-click on the datastore name in the breadcrumb (top-left corner of the datastore overview page):
 
-- Copy Link.
+![breadcrumb](../../assets/source-datastores/datastore/managing/right-click-options/breadcrumb.png)
 
-- Copy ID.
+![breadcrumb-menu](../../assets/source-datastores/datastore/managing/right-click-options/breadcrumb-menu.png)
 
-- Copy Name.
-
-![tables-files](../../assets/source-datastores/datastore/managing/right-click-options/step-3-tables-files.png)
-
-| No | Field | Description |
-| :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected table from the datastore in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
-| 2 | Copy Link | Copy the unique URL of the selected table to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected table. |
-| 4 | Copy Name | Copy the name of the selected table to your clipboard. |
-
-Alternatively, you can access these right-click options by opening the dedicated page of the source datastore, navigating to its **Tables** or files section, and performing the right-click operation on any table or file from the list.
-
-![tables-files](../../assets/source-datastores/datastore/managing/right-click-options/step-4-tables-files.png)
-
-### Right Click Fields
-
-Right-click on the specific field underlying within a table or file.
-
-A dropdown list of options will appear:
-
-- Open in New Tab.
-
-- Copy Link.
-
-- Copy ID.
-
-- Copy Name.
-
-![field](../../assets/source-datastores/datastore/managing/right-click-options/step-5-field.png)
-
-| No | Field | Description |
-| :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected field in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
-| 2 | Copy Link | Copy the unique URL of the selected field to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected field. |
-| 4 | Copy Name | Copy the name of the selected field to your clipboard. |
-
-Alternatively, you can access these right-click options by opening the dedicated page of the table, navigating to its **Fields** section, and performing the right-click operation on any field from the list.
-
-![field](../../assets/source-datastores/datastore/managing/right-click-options/step-6-field.png)
-
-### Right Click Checks
-
-Right-click on the specific check from **All, Active**, **Draft**, and **Archived** within a connected source datastore.
-
-A dropdown list of options will appear:
-
-- Open in New Tab.
-
-- Copy Link.
-
-- Copy ID.
-
-- Copy Name.
-
-![checks](../../assets/source-datastores/datastore/managing/right-click-options/step-7-checks.png)
-
-| No | Field | Description |
-| :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected check in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
-| 2 | Copy Link | Copy the unique URL of the selected check to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected check. |
-| 4 | Copy Name | Copy the name of the selected check to your clipboard. |
-
-Alternatively, you can access these right-click options by navigating to the Checks from the Explore section.
-
-![checks](../../assets/source-datastores/datastore/managing/right-click-options/step-8-checks.png)
-
-### Right Click Anomalies
-
-Right-click on the specific anomaly from **All, Active**, **Acknowledged**, and **Archived** within a connected source datastore.
-
-A dropdown list of options will appear:
-
-- Open in New Tab.
-
-- Copy Link.
-
-- Copy ID.
-
-- Copy Name.
-
-![anomalies](../../assets/source-datastores/datastore/managing/right-click-options/step-9-anomalies.png)
-
-| No | Field | Description |
-| :---- | :---- | :---- |
-| 1 | Open in New Tab | Open the selected anomaly in a new browser tab, where you can view its **quality score**, **sampling**, **completeness**, **active checks**, **active anomalies**, etc.|
-| 2 | Copy Link | Copy the unique URL of the selected anomaly to your clipboard. |
-| 3 | Copy ID | Copy the unique identifier (ID) of the selected anomaly. |
-| 4 | Copy Name | Copy the name of the selected anomaly to your clipboard. |
-
-Alternatively, you can access these right-click options by navigating to the Anomalies from the Explore section.
-
-![anomalies](../../assets/source-datastores/datastore/managing/right-click-options/step-10-anomalies.png)
+!!! note
+    The breadcrumb context menu only includes **Copy ID** and **Copy Name** — since you are already on the datastore page, **Open in New Tab** and **Copy Link** are not needed.
