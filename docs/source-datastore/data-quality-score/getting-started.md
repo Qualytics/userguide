@@ -2,11 +2,7 @@
 
 Data Quality Scores give you a quantified, at-a-glance measure (0–100) of how healthy your data is across every datastore, container, and field in Qualytics. Scores are calculated automatically after every Profile and Scan operation, recorded as time series, and composed of 8 quality dimensions — so you can track improvements, prioritize remediation, and report on data governance.
 
-In this section you will find everything about data quality scores in the context of source datastores — from understanding how scores are calculated and how they influence your datastores, to configuring settings, permissions, API reference, and frequently asked questions.
-
-## Deep Dive
-
-Understand how data quality scores work, the 8 quality dimensions, decay periods, dimension weights, and the permissions required.
+In this section you will learn how scores are calculated, how to configure scoring settings, and how to use scores to monitor data quality. Any user with the **Member** role can view scores; editing score settings requires the **Editor** team permission.
 
 <div class="grid cards" markdown>
 
@@ -14,7 +10,7 @@ Understand how data quality scores work, the 8 quality dimensions, decay periods
 
     ---
 
-    Learn how quality scores are calculated, the score hierarchy (field → container → datastore), and what triggers recalculations.
+    Learn how quality scores are calculated, the score hierarchy (field → container → datastore), the 8 dimensions, and what triggers recalculations.
 
     [:octicons-arrow-right-24: Introduction](introduction.md)
 
@@ -26,33 +22,27 @@ Understand how data quality scores work, the 8 quality dimensions, decay periods
 
     [:octicons-arrow-right-24: Permissions](permissions.md)
 
-</div>
-
-## Managing
-
-Configure quality score settings for your datastores — adjust the decay period and dimension weights to align with your governance priorities.
-
-<div class="grid cards" markdown>
-
--   :material-cog-outline:{ .lg .middle } **Settings**
+-   :material-tune:{ .lg .middle } **Settings**
 
     ---
 
-    Step-by-step guide to configure the decay period and dimension weights for a datastore.
+    Configure the decay period and dimension weights for a datastore.
 
     [:octicons-arrow-right-24: Settings](../managing-datastores/quality-score-settings.md)
 
-</div>
+-   :material-scale-balance:{ .lg .middle } **Weighting**
 
-## Resources
+    ---
 
-<div class="grid cards" markdown>
+    Understand how rule type, anomaly, and tag weights combine to determine check importance.
+
+    [:octicons-arrow-right-24: Weighting](../../weight/weighting.md)
 
 -   :material-api:{ .lg .middle } **API**
 
     ---
 
-    API endpoints to retrieve and update quality score settings and access historical score data.
+    Retrieve and update quality score settings and access historical score data via the API.
 
     [:octicons-arrow-right-24: API](api.md)
 
@@ -60,7 +50,7 @@ Configure quality score settings for your datastores — adjust the decay period
 
     ---
 
-    Answers to common questions about data quality scores on source datastores.
+    Troubleshooting, decay period behavior, dimension weights, independent settings, recalculations, and more.
 
     [:octicons-arrow-right-24: FAQ](faq.md)
 

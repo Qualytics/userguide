@@ -16,9 +16,13 @@ The datastore score is the **weighted average** of all container scores within t
 
 Each container score is calculated using a **multiplicative baseline model** starting from a baseline of 70. The 8 quality dimensions each contribute a multiplicative adjustment factor proportional to their configured weight, resulting in a final score between 0 and 100.
 
+### Why does the model start from a baseline of 70?
+
+The baseline of 70 represents a "neutral starting point" — a container with no anomalies and default profiles receives a score around 70. Each dimension can then pull the score down (if issues exist) or push it slightly up (if the dimension is exceptionally clean). This baseline is **not configurable** — it is a fixed constant in the scoring algorithm.
+
 ### What are the 8 quality dimensions?
 
-Completeness, Coverage, Conformity, Consistency, Precision, Timeliness, Volumetrics, and Accuracy. Each measures a different aspect of data quality and is scored independently on a 0–100 scale. See the [Introduction](introduction.md) page for details on each dimension.
+Completeness, Coverage, Conformity, Consistency, Precision, Timeliness, Volumetrics, and Accuracy. Each measures a different aspect of data quality and is scored independently on a 0–100 scale. See the [Introduction](introduction.md){:target="_blank"} page for details on each dimension.
 
 ### What does a score of 0 mean?
 
@@ -28,9 +32,23 @@ A score of 0 indicates severe data quality issues — for example, a container w
 
 A score of 100 indicates perfect data quality across all enabled dimensions — no anomalies detected, all checks passing, complete data with consistent types and volumes.
 
+### My datastore has no quality score — is this normal?
+
+Yes. A datastore will not have a quality score until at least one of its containers has been **scanned**. The recommended order is **Sync → Profile → Scan**. Containers that have been synced and profiled but never scanned are excluded from the datastore-level score. See the [Introduction](introduction.md){:target="_blank"} for more details.
+
 ### Why is my datastore score different from the average of my container scores?
 
 The datastore score is a **weighted** average, not a simple average. Containers with higher tag weight modifiers contribute more to the datastore score. Also, only scanned containers are included — unscanned containers are excluded from the calculation.
+
+## Settings
+
+### If I change settings on the datastore, does it affect my containers?
+
+No. Datastore and container quality score settings are **completely independent**. Changing the decay period or dimension weights on a datastore does not propagate to its containers, and vice versa. Each level must be configured separately. See the [Independent Settings per Level](introduction.md#independent-settings-per-level){:target="_blank"} section for details.
+
+### Can different datastores have different weights?
+
+Yes. Quality score settings are configured **per datastore**. Each datastore can have its own decay period and dimension weights tailored to its specific governance priorities.
 
 ## Decay Period
 
@@ -44,7 +62,7 @@ The decay period controls how far back in time Qualytics looks when calculating 
 
 ### Can I change the decay period?
 
-Yes. You can set it to any value between **7 and 180 days** through the Quality Score Settings or via the API. A shorter decay period gives a more real-time view; a longer one provides more historical context.
+Yes. You can set it to any value between **7 and 180 days** (in 7-day increments) through the [Quality Score Settings](../managing-datastores/quality-score-settings.md){:target="_blank"} or via the [API](api.md){:target="_blank"}.
 
 ### What happens when anomalies age out of the decay window?
 
@@ -66,15 +84,11 @@ The system default is **1.0** for all dimensions. A `null` value in the API also
 
 ### What happens if I set a weight to 0?
 
-The dimension is effectively **disabled** — it will not negatively impact the score. It receives the maximum possible boost factor, meaning it has no downward pull on the total score.
+The dimension is effectively **disabled** — it turns grey in the settings UI and will not negatively impact the score. It receives the maximum possible boost factor, meaning it has no downward pull on the total score.
 
 ### Can I set a weight higher than 1?
 
-Yes. Weights range from **0.0 to 2.0**. A weight of 2.0 doubles the dimension's impact compared to the default, making the total score more sensitive to that dimension.
-
-### Can different datastores have different weights?
-
-Yes. Quality score settings are configured **per datastore**. Each datastore can have its own decay period and dimension weights tailored to its specific governance priorities.
+Yes. Weights range from **0.0 to 2.0** (in 0.1 increments). A weight of 2.0 doubles the dimension's impact compared to the default, making the total score more sensitive to that dimension.
 
 ## Score Changes
 
@@ -82,8 +96,8 @@ Yes. Quality score settings are configured **per datastore**. Each datastore can
 
 Quality scores are automatically recalculated when:
 
-- A **Scan operation** completes (anomalies detected or clean scan).
-- A **Profile operation** completes (new field statistics).
+- A [**Scan operation**](../operations/scan.md){:target="_blank"} completes (anomalies detected or clean scan).
+- A [**Profile operation**](../operations/profile.md){:target="_blank"} completes (new field statistics).
 - An **anomaly status changes** (acknowledged, resolved, etc.).
 - A **quality check is deleted**.
 - An **anomaly is deleted**.
@@ -106,11 +120,23 @@ Several things can trigger a recalculation without a new scan:
 - Anomalies aging out of the decay window naturally improves the score.
 - Changing dimension weights or decay period recalculates all scores.
 
+## Troubleshooting
+
+### Why isn't my score improving after fixing issues?
+
+There are several possible reasons:
+
+- **Decay period** — If you fixed the data but haven't re-scanned, the old anomalies are still within the decay window. Run a new Scan to detect that the issues are resolved.
+- **Re-scan needed** — Qualytics doesn't know the data is fixed until a Scan confirms it. After fixing the source data, run a Scan to update the anomaly status.
+- **Other dimensions** — You may have fixed one dimension (e.g., Accuracy) but another dimension (e.g., Coverage or Completeness) is dragging the score down. Check the per-dimension breakdown on the container detail page.
+- **Debounce window** — If you just made changes, wait a few seconds for the 5-second debounce window to complete the recalculation.
+- **Weight configuration** — A dimension with a high weight that still has issues will dominate the score. Review your [dimension weights](../managing-datastores/quality-score-settings.md){:target="_blank"}.
+
 ## Tags and Weights
 
 ### How do tags affect quality scores?
 
-Tags assigned to datastores can have a **weight modifier** (-10 to 10) that influences how individual containers contribute to the datastore-level quality score. Containers with higher tag weights have more impact on the overall score.
+Tags assigned to datastores can have a **weight modifier** (-10 to 10) that influences how individual containers contribute to the datastore-level quality score. Containers with higher tag weights have more impact on the overall score. See the [Tags Introduction](../tags/introduction.md#quality-score-impact){:target="_blank"} for details.
 
 ### What happens when I add or remove a tag with a weight modifier?
 
@@ -134,19 +160,18 @@ New containers (discovered via Sync) are excluded from the datastore score until
 
 ### Who can view quality scores?
 
-Any user with at least **Reporter** team permission and **Member** role can view quality scores.
+Any user with at least **Member** user role and **Reporter** team permission can view quality scores. See the [Permissions](permissions.md){:target="_blank"} page for the full matrix.
 
 ### Who can change quality score settings?
 
-Users with **Editor** team permission on the datastore and at least **Member** role. See the [Permissions](permissions.md) page for the full matrix.
+Users with **Member** user role and **Editor** team permission on the datastore. See the [Permissions](permissions.md){:target="_blank"} page for the full matrix.
 
 ## API
 
 ### Is there an API to update quality score settings?
 
-Yes. Use `PUT /api/datastores/{id}/score-settings` to update the decay period and dimension weights. See the [API](api.md) page for examples.
+Yes. Use `PUT /api/datastores/{id}/score-settings` to update the decay period and dimension weights. See the [API](api.md){:target="_blank"} page for examples.
 
 ### Can I retrieve historical quality scores via the API?
 
-Yes. Use `GET /api/datastores/{id}/quality-scores` to retrieve the last 10 daily quality score snapshots. See the [API](api.md#get-historical-quality-scores) page for details.
-
+Yes. Use `GET /api/datastores/{id}/quality-scores` to retrieve the last 10 daily quality score snapshots. There is no pagination or date range parameter — the endpoint always returns the most recent 10. See the [API](api.md#get-historical-quality-scores){:target="_blank"} page for details.

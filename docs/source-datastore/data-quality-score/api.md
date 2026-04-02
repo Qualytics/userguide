@@ -5,194 +5,260 @@ The Data Quality Score API allows you to retrieve and update quality score setti
 !!! tip
     For complete API documentation, including request/response schemas, visit the [API docs](https://demo.qualytics.io/api/docs){:target="_blank"}.
 
+All endpoints use the base URL of your Qualytics deployment (e.g., `https://your-instance.qualytics.io/api`).
+
+---
+
 ## Get Quality Score Settings
 
 Retrieve the current quality score settings (decay period and dimension weights) for a datastore.
 
-### Request
+**Endpoint**: `GET /api/datastores/{datastore_id}/score-settings`
 
-```bash
-GET /api/datastores/{datastore_id}/score-settings
-```
+**Permission**: Member user role (no team permission required)
 
-### Example
+??? example "Example request and response"
 
-```bash
-curl -X GET "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
-  -H "Authorization: Bearer YOUR_API_TOKEN"
-```
+    **Request**:
 
-### Response
+    ```bash
+    curl -X GET "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
+      -H "Authorization: Bearer YOUR_TOKEN"
+    ```
 
-```json
-{
-  "decay_period_days": 180,
-  "completeness_weight": 1.0,
-  "coverage_weight": 1.0,
-  "conformity_weight": 1.0,
-  "consistency_weight": 1.0,
-  "precision_weight": 1.0,
-  "timeliness_weight": 1.0,
-  "volumetrics_weight": 1.0,
-  "accuracy_weight": 1.0
-}
-```
+    **Response**:
+
+    ```json
+    {
+      "decay_period_days": 180,
+      "completeness_weight": 1.0,
+      "coverage_weight": 1.0,
+      "conformity_weight": 1.0,
+      "consistency_weight": 1.0,
+      "precision_weight": 1.0,
+      "timeliness_weight": 1.0,
+      "volumetrics_weight": 1.0,
+      "accuracy_weight": 1.0
+    }
+    ```
+
+!!! note "null vs 1.0"
+    When a datastore has never had its settings explicitly configured, the GET endpoint returns `null` for all weight fields. A `null` weight means the system default (`1.0`) is used. Once you update any setting, subsequent GET calls return the explicitly set values.
+
+---
 
 ## Update Quality Score Settings
 
-Update the decay period and/or dimension weights for a datastore. You only need to include the fields you want to change — omitted fields remain unchanged.
+Update the decay period and/or dimension weights for a datastore. This endpoint uses **partial update semantics** — you only need to include the fields you want to change. Omitted fields remain unchanged.
 
-### Request
+**Endpoint**: `PUT /api/datastores/{datastore_id}/score-settings`
 
-```bash
-PUT /api/datastores/{datastore_id}/score-settings
-```
+**Permission**: Member user role + Editor team permission on the datastore
 
-### Request Schema
+**Request Body**:
 
 | Field | Type | Default | Range | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | `decay_period_days` | `integer` | `180` | 7–180 | The time frame in days over which historical data is evaluated for scoring. |
-| `completeness_weight` | `float` | `null` | 0.0–2.0 | Weight for the Completeness dimension. |
-| `coverage_weight` | `float` | `null` | 0.0–2.0 | Weight for the Coverage dimension. |
-| `conformity_weight` | `float` | `null` | 0.0–2.0 | Weight for the Conformity dimension. |
-| `consistency_weight` | `float` | `null` | 0.0–2.0 | Weight for the Consistency dimension. |
-| `precision_weight` | `float` | `null` | 0.0–2.0 | Weight for the Precision dimension. |
-| `timeliness_weight` | `float` | `null` | 0.0–2.0 | Weight for the Timeliness dimension. |
-| `volumetrics_weight` | `float` | `null` | 0.0–2.0 | Weight for the Volumetrics dimension. |
-| `accuracy_weight` | `float` | `null` | 0.0–2.0 | Weight for the Accuracy dimension. |
+| `completeness_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Completeness dimension. |
+| `coverage_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Coverage dimension. |
+| `conformity_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Conformity dimension. |
+| `consistency_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Consistency dimension. |
+| `precision_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Precision dimension. |
+| `timeliness_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Timeliness dimension. |
+| `volumetrics_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Volumetrics dimension. |
+| `accuracy_weight` | `float` | `null` (1.0) | 0.0–2.0 | Weight for the Accuracy dimension. |
 
 !!! note
     A weight of `null` uses the system default (1.0). A weight of `0.0` effectively disables the dimension — it will not negatively impact the score.
 
-### Example: Change Decay Period
+??? example "Change decay period"
 
-Shorten the decay period to 30 days for a more real-time quality view:
+    Shorten the decay period to 30 days for a more real-time quality view:
 
-```bash
-curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "decay_period_days": 30
-  }'
-```
+    **Request**:
 
-### Example: Prioritize Accuracy and Completeness
+    ```bash
+    curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
+      -H "Authorization: Bearer YOUR_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "decay_period_days": 30
+      }'
+    ```
 
-Increase the weight of Accuracy and Completeness while reducing Volumetrics:
+    **Response**:
 
-```bash
-curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "accuracy_weight": 2.0,
-    "completeness_weight": 1.5,
-    "volumetrics_weight": 0.3
-  }'
-```
+    ```json
+    {
+      "decay_period_days": 30,
+      "completeness_weight": 1.0,
+      "coverage_weight": 1.0,
+      "conformity_weight": 1.0,
+      "consistency_weight": 1.0,
+      "precision_weight": 1.0,
+      "timeliness_weight": 1.0,
+      "volumetrics_weight": 1.0,
+      "accuracy_weight": 1.0
+    }
+    ```
 
-### Example: Disable Timeliness and Volumetrics
+??? example "Prioritize Accuracy and Completeness"
 
-If timeliness and volumetrics are not relevant for your use case:
+    Increase Accuracy and Completeness while reducing Volumetrics:
 
-```bash
-curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "timeliness_weight": 0.0,
-    "volumetrics_weight": 0.0
-  }'
-```
+    **Request**:
 
-### Example: Reset All Weights to Default
+    ```bash
+    curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
+      -H "Authorization: Bearer YOUR_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "accuracy_weight": 2.0,
+        "completeness_weight": 1.5,
+        "volumetrics_weight": 0.3
+      }'
+    ```
 
-Set all weights to `null` to restore system defaults:
+    **Response**:
 
-```bash
-curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "decay_period_days": 180,
-    "completeness_weight": null,
-    "coverage_weight": null,
-    "conformity_weight": null,
-    "consistency_weight": null,
-    "precision_weight": null,
-    "timeliness_weight": null,
-    "volumetrics_weight": null,
-    "accuracy_weight": null
-  }'
-```
+    ```json
+    {
+      "decay_period_days": 30,
+      "completeness_weight": 1.5,
+      "coverage_weight": 1.0,
+      "conformity_weight": 1.0,
+      "consistency_weight": 1.0,
+      "precision_weight": 1.0,
+      "timeliness_weight": 1.0,
+      "volumetrics_weight": 0.3,
+      "accuracy_weight": 2.0
+    }
+    ```
 
-### Response
+??? example "Disable Timeliness and Volumetrics"
 
-Returns the updated settings:
+    **Request**:
 
-```json
-{
-  "decay_period_days": 180,
-  "completeness_weight": null,
-  "coverage_weight": null,
-  "conformity_weight": null,
-  "consistency_weight": null,
-  "precision_weight": null,
-  "timeliness_weight": null,
-  "volumetrics_weight": null,
-  "accuracy_weight": null
-}
-```
+    ```bash
+    curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
+      -H "Authorization: Bearer YOUR_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "timeliness_weight": 0.0,
+        "volumetrics_weight": 0.0
+      }'
+    ```
+
+    **Response**:
+
+    ```json
+    {
+      "decay_period_days": 30,
+      "completeness_weight": 1.5,
+      "coverage_weight": 1.0,
+      "conformity_weight": 1.0,
+      "consistency_weight": 1.0,
+      "precision_weight": 1.0,
+      "timeliness_weight": 0.0,
+      "volumetrics_weight": 0.0,
+      "accuracy_weight": 2.0
+    }
+    ```
+
+??? example "Reset all weights to default"
+
+    Set all weights to `null` to restore system defaults:
+
+    **Request**:
+
+    ```bash
+    curl -X PUT "https://your-instance.qualytics.io/api/datastores/42/score-settings" \
+      -H "Authorization: Bearer YOUR_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "decay_period_days": 180,
+        "completeness_weight": null,
+        "coverage_weight": null,
+        "conformity_weight": null,
+        "consistency_weight": null,
+        "precision_weight": null,
+        "timeliness_weight": null,
+        "volumetrics_weight": null,
+        "accuracy_weight": null
+      }'
+    ```
+
+    **Response**:
+
+    ```json
+    {
+      "decay_period_days": 180,
+      "completeness_weight": null,
+      "coverage_weight": null,
+      "conformity_weight": null,
+      "consistency_weight": null,
+      "precision_weight": null,
+      "timeliness_weight": null,
+      "volumetrics_weight": null,
+      "accuracy_weight": null
+    }
+    ```
+
+For the UI equivalent, see [Quality Score Settings](../managing-datastores/quality-score-settings.md){:target="_blank"}.
+
+---
 
 ## Get Historical Quality Scores
 
 Retrieve the last 10 quality score snapshots for a datastore, recorded as daily metrics.
 
-### Request
+**Endpoint**: `GET /api/datastores/{datastore_id}/quality-scores`
 
-```bash
-GET /api/datastores/{datastore_id}/quality-scores
-```
+**Permission**: Member user role + Reporter team permission on the datastore
 
-### Example
+!!! note "Limitation"
+    This endpoint returns a **fixed maximum of 10 snapshots**. There is no pagination or date range parameter — the response always contains the most recent 10 daily scores available.
 
-```bash
-curl -X GET "https://your-instance.qualytics.io/api/datastores/42/quality-scores" \
-  -H "Authorization: Bearer YOUR_API_TOKEN"
-```
+??? example "Example request and response"
 
-### Response
+    **Request**:
 
-```json
-[
-  {
-    "date": "2026-03-30",
-    "total": 87.4,
-    "completeness": 95.2,
-    "coverage": 72.0,
-    "conformity": 91.3,
-    "consistency": 88.7,
-    "precision": 94.1,
-    "timeliness": 82.5,
-    "volumetrics": 90.0,
-    "accuracy": 85.6
-  },
-  {
-    "date": "2026-03-29",
-    "total": 85.1,
-    "completeness": 94.8,
-    "coverage": 70.0,
-    "conformity": 89.2,
-    "consistency": 87.3,
-    "precision": 93.5,
-    "timeliness": 80.0,
-    "volumetrics": 88.5,
-    "accuracy": 84.2
-  }
-]
-```
+    ```bash
+    curl -X GET "https://your-instance.qualytics.io/api/datastores/42/quality-scores" \
+      -H "Authorization: Bearer YOUR_TOKEN"
+    ```
+
+    **Response**:
+
+    ```json
+    [
+      {
+        "date": "2026-03-30",
+        "total": 87.4,
+        "completeness": 95.2,
+        "coverage": 72.0,
+        "conformity": 91.3,
+        "consistency": 88.7,
+        "precision": 94.1,
+        "timeliness": 82.5,
+        "volumetrics": 90.0,
+        "accuracy": 85.6
+      },
+      {
+        "date": "2026-03-29",
+        "total": 85.1,
+        "completeness": 94.8,
+        "coverage": 70.0,
+        "conformity": 89.2,
+        "consistency": 87.3,
+        "precision": 93.5,
+        "timeliness": 80.0,
+        "volumetrics": 88.5,
+        "accuracy": 84.2
+      }
+    ]
+    ```
 
 ### Response Schema
 
@@ -209,10 +275,46 @@ curl -X GET "https://your-instance.qualytics.io/api/datastores/42/quality-scores
 | `volumetrics` | `float` | Volumetrics dimension score (0–100). |
 | `accuracy` | `float` | Accuracy dimension score (0–100). |
 
-## Important Notes
+---
+
+## Error Responses
+
+| Status Code | Description |
+| :--- | :--- |
+| `401 Unauthorized` | Missing or invalid API token. |
+| `403 Forbidden` | User does not have the required role or team permission. |
+| `404 Not Found` | Datastore with the specified ID does not exist, or no settings have been configured yet. |
+| `422 Unprocessable Entity` | Invalid request body (e.g., decay_period_days outside 7–180 range, weight outside 0–2.0). |
+
+??? example "Error response examples"
+
+    **403 Forbidden**:
+
+    ```json
+    { "detail": "You must have editor permission in at least one of these teams: ['Data Platform']" }
+    ```
+
+    **404 Not Found**:
+
+    ```json
+    { "detail": "No quality score settings found for datastore id: 999" }
+    ```
+
+    **422 Unprocessable Entity**:
+
+    ```json
+    { "detail": [{ "loc": ["body", "decay_period_days"], "msg": "ensure this value is greater than or equal to 7", "type": "value_error.number.not_ge" }] }
+    ```
+
+---
+
+## Permission Summary
+
+| Operation | Minimum Permission |
+| :--- | :--- |
+| Get quality score settings | Member user role |
+| Update quality score settings | Member user role + Editor team permission |
+| Get historical quality scores | Member user role + Reporter team permission |
 
 !!! note "Automatic Recalculation"
     After updating quality score settings, scores are automatically recalculated for all containers and fields in the datastore. There is no manual recalculation endpoint.
-
-!!! note "Permissions"
-    Retrieving settings requires at least **Member** role. Updating settings requires **Editor** team permission on the datastore. Retrieving historical scores requires **Reporter** team permission.
