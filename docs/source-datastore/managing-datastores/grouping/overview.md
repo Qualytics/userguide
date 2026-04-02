@@ -1,19 +1,15 @@
 # Getting Started with Datastore Grouping
 
-Datastore Grouping is a feature in Qualytics that allows you to organize your datastores into custom groups within the tree view. Instead of browsing a flat list of datastores, you can create meaningful categories — such as by environment, team, domain, or priority — making it easier to locate and manage your data sources.
+Datastore Grouping allows you to organize your datastores into custom groups within the tree view. Instead of browsing a flat list, you can create meaningful categories — such as by environment, team, domain, or priority — making it easier to locate and manage your data sources.
 
-## Why Datastore Grouping Matters
+Each datastore can belong to **one group at a time**. Ungrouped datastores appear in the default "Ungrouped" section of the tree view. The **Manager** role is required to create, edit, and delete groups; adding or removing datastores from groups requires the **Member** user role and **Editor** team permission — see the [Permissions](concepts/permissions.md){:target="_blank"} page for details.
 
-As the number of datastores in your workspace grows, finding the right datastore becomes increasingly difficult. Datastore Grouping solves this by letting you:
+You can also filter datastores by group on the Source Datastores listing page, making it easy to narrow down results when working with many datastores.
 
-- **Organize datastores visually**: Create groups that reflect your team's structure, data domains, or business units.
-- **Navigate faster**: Collapse and expand groups in the tree view to focus on the datastores you need.
-- **Customize with icons**: Assign distinct icons to each group for quick visual identification.
-- **Filter by group**: Use group-based filtering on the datastore listing page to narrow down results.
+In this section you will learn how grouping works, which roles can manage groups, and how to create, assign, and organize your datastores into groups.
 
-## Deep Dive
-
-Understand how grouping works, its role in datastore organization, and the permissions required.
+!!! info "Groups vs. Tags"
+    Groups and tags serve different purposes. A **group** organizes datastores visually in the tree view — each datastore can belong to only one group. A **tag** is a flexible label for categorization, filtering operations, and quality score weighting — a datastore can have multiple tags. Use groups for navigation structure and tags for classification.
 
 <div class="grid cards" markdown>
 
@@ -21,7 +17,7 @@ Understand how grouping works, its role in datastore organization, and the permi
 
     ---
 
-    Learn how grouping works, its role in datastore organization, and best practices.
+    Understand what groups are, how they appear in the tree view, and best practices for organizing datastores.
 
     [:octicons-arrow-right-24: Introduction](concepts/understanding-grouping.md)
 
@@ -29,19 +25,11 @@ Understand how grouping works, its role in datastore organization, and the permi
 
     ---
 
-    Understand who can create, edit, delete groups and assign datastores.
+    See which roles can create, edit, delete groups and add or remove datastores from groups.
 
     [:octicons-arrow-right-24: Permissions](concepts/permissions.md)
 
-</div>
-
-## Managing
-
-Create, edit, delete, assign, and unassign datastore groups.
-
-<div class="grid cards" markdown>
-
--   :material-bookmark-plus-outline:{ .lg .middle } **Create a Group**
+-   :material-plus-circle:{ .lg .middle } **Create a Group**
 
     ---
 
@@ -65,27 +53,29 @@ Create, edit, delete, assign, and unassign datastore groups.
 
     [:octicons-arrow-right-24: Delete](managing-groups/delete-a-group.md)
 
--   :material-bookmark-check-outline:{ .lg .middle } **Assign a Group**
+-   :material-bookmark-check-outline:{ .lg .middle } **Assign a Datastore to a Group**
 
     ---
 
-    Add a datastore to an existing group.
+    Add an existing datastore to a group from the tree view.
 
-    [:octicons-arrow-right-24: Assign](managing-groups/assign-a-datastore.md)
+    [:octicons-arrow-right-24: Assign to Group](managing-groups/assign-a-datastore.md)
 
--   :material-bookmark-remove-outline:{ .lg .middle } **Unassign a Group**
+-   :material-bookmark-remove-outline:{ .lg .middle } **Unassign a Datastore from a Group**
 
     ---
 
-    Remove a datastore from its current group.
+    Unassign a datastore from its current group. The datastore moves to Ungrouped.
 
-    [:octicons-arrow-right-24: Unassign](managing-groups/remove-a-datastore.md)
+    [:octicons-arrow-right-24: Unassign from Group](managing-groups/unassign-a-datastore.md)
 
-</div>
+-   :material-filter-outline:{ .lg .middle } **Filter by Group**
 
-## Resources
+    ---
 
-<div class="grid cards" markdown>
+    Filter the Source Datastores listing page to show only datastores in specific groups.
+
+    [:octicons-arrow-right-24: Filter by Group](managing-groups/filter-by-group.md)
 
 -   :material-api:{ .lg .middle } **API**
 

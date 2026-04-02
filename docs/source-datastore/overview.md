@@ -1,10 +1,20 @@
 # Source Datastores Overview
 
-Source Datastores are the foundation of data quality management in Qualytics. A source datastore represents a connection to your data — whether it's a relational database (JDBC), a distributed file system (DFS), or a cloud storage service. From here, you can connect your data sources, run quality operations, link enrichment datastores, manage data quality scores, and organize your datastores with groups and tags.
+Source Datastores are the foundation of data quality management in Qualytics. A source datastore represents a connection to your data — whether it's a relational database (JDBC), a distributed file system (DFS), or a cloud storage service.
+
+In this section you will find:
+
+- **Datastore** — Learn the fundamentals, browse supported connectors (JDBC and DFS), set up connections, and use multi-schema creation to onboard multiple schemas at once. Add, edit, and delete datastores.
+- **Operations** — Run Sync, Profile, and Scan operations to catalog your data, infer quality checks, and detect anomalies. Run External Scans against uploaded files.
+- **Enrichment Datastore** — Link an enrichment datastore to persist scan results, anomalies, source record examples, and remediation data to your own infrastructure.
+- **Data Quality Score** — Configure scoring weights, decay periods, and thresholds to measure and track the health of your data over time.
+- **Grouping** — Organize datastores into custom groups by environment, team, domain, or priority for easier navigation in the tree view.
+- **Tags** — Assign tags to datastores to categorize, filter operations, and streamline workflows across your data sources.
+- **Tips & Tricks** — Discover right-click options and keyboard shortcuts to navigate and manage datastores faster.
+
+---
 
 ## Datastore
-
-Learn the fundamentals of source datastores — supported connectors, connections, multi-schema creation, and how to add, edit, or delete datastores.
 
 <div class="grid cards" markdown>
 
@@ -16,6 +26,30 @@ Learn the fundamentals of source datastores — supported connectors, connection
 
     [:octicons-arrow-right-24: Getting Started](add-datastores/overview-of-a-datastore.md)
 
+-   :material-table:{ .lg .middle } **JDBC**
+
+    ---
+
+    Connect relational databases using JDBC connectors like PostgreSQL, Snowflake, Oracle, and more.
+
+    [:octicons-arrow-right-24: Understanding JDBC](add-datastores/overview-of-a-jdbc-datastore.md)
+
+-   :material-file-outline:{ .lg .middle } **DFS**
+
+    ---
+
+    Connect distributed file systems like Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
+
+    [:octicons-arrow-right-24: Understanding DFS](add-datastores/overview-of-a-dfs-datastore.md)
+
+-   :material-connection:{ .lg .middle } **Connection Introduction**
+
+    ---
+
+    Learn what connections are, their role in datastore setup, and key concepts.
+
+    [:octicons-arrow-right-24: Introduction](add-datastores/connections/introduction.md)
+
 -   :material-view-list:{ .lg .middle } **Available Connectors**
 
     ---
@@ -24,51 +58,107 @@ Learn the fundamentals of source datastores — supported connectors, connection
 
     [:octicons-arrow-right-24: View Connectors](add-datastores/available-datastore-connectors.md)
 
--   :material-database-marker-outline:{ .lg .middle } **JDBC**
+-   :material-information-outline:{ .lg .middle } **How Connections Work**
 
     ---
 
-    Connect relational databases using JDBC connectors like PostgreSQL, Snowflake, Oracle, and more.
+    Understand the connection lifecycle, authentication flow, and secrets management.
 
-    [:octicons-arrow-right-24: Understanding JDBC](add-datastores/overview-of-a-jdbc-datastore.md)
+    [:octicons-arrow-right-24: How It Works](add-datastores/connections/how-it-works.md)
 
--   :material-file-marker-outline:{ .lg .middle } **DFS**
-
-    ---
-
-    Connect distributed file systems like Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
-
-    [:octicons-arrow-right-24: Understanding DFS](add-datastores/overview-of-a-dfs-datastore.md)
-
--   :material-connection:{ .lg .middle } **Connection**
-
-    ---
-
-    Set up new connections or reuse existing credentials to connect your datastores.
-
-    [:octicons-arrow-right-24: Connections Overview](add-datastores/connections/introduction.md)
-
--   :material-vector-combine:{ .lg .middle } **Multiple-Schema**
+-   :material-layers-outline:{ .lg .middle } **Multiple-Schema Introduction**
 
     ---
 
     Discover and onboard multiple schemas from a single connection in one step.
 
-    [:octicons-arrow-right-24: Multiple-Schema](add-datastores/multi-schema/overview.md)
+    [:octicons-arrow-right-24: Introduction](add-datastores/multi-schema/overview.md)
 
--   :material-cog-outline:{ .lg .middle } **Managing**
+-   :material-information-outline:{ .lg .middle } **How Multi-Schema Works**
 
     ---
 
-    Add, edit, and delete datastores using new or existing connections.
+    Understand the multi-schema creation flow, schema discovery, and name templates.
 
-    [:octicons-arrow-right-24: Managing Datastores](add-datastores/connections/new-connection.md)
+    [:octicons-arrow-right-24: How It Works](add-datastores/multi-schema/how-it-works.md)
+
+-   :material-view-list:{ .lg .middle } **Supported Connectors (Multi-Schema)**
+
+    ---
+
+    See which connectors support multi-schema discovery and their catalog/schema mappings.
+
+    [:octicons-arrow-right-24: Supported Connectors](add-datastores/multi-schema/supported-connectors.md)
+
+-   :material-shield-lock-outline:{ .lg .middle } **Multi-Schema Permissions**
+
+    ---
+
+    Understand the roles and permissions required for multi-schema creation.
+
+    [:octicons-arrow-right-24: Permissions](add-datastores/multi-schema/permissions.md)
+
+-   :material-help-circle-outline:{ .lg .middle } **Multi-Schema FAQ**
+
+    ---
+
+    Answers to common questions about multi-schema source datastore creation.
+
+    [:octicons-arrow-right-24: FAQ](add-datastores/multi-schema/faq.md)
+
+-   :material-plus-circle:{ .lg .middle } **Add with New Connection**
+
+    ---
+
+    Create a new source datastore by setting up a new connection from scratch.
+
+    [:octicons-arrow-right-24: New Connection](add-datastores/connections/new-connection.md)
+
+-   :material-link-variant:{ .lg .middle } **Add with Existing Connection**
+
+    ---
+
+    Create a new source datastore by reusing credentials from an existing connection.
+
+    [:octicons-arrow-right-24: Existing Connection](add-datastores/connections/existing-connection.md)
+
+-   :material-pencil-outline:{ .lg .middle } **Edit Datastore**
+
+    ---
+
+    Modify your datastore's connection scope, teams, or other properties.
+
+    [:octicons-arrow-right-24: Edit](managing-datastores/edit-datastore.md)
+
+-   :material-trash-can-outline:{ .lg .middle } **Delete Datastore**
+
+    ---
+
+    Permanently remove a datastore and all its associated data.
+
+    [:octicons-arrow-right-24: Delete](managing-datastores/delete-datastore.md)
+
+-   :material-api:{ .lg .middle } **Datastore API**
+
+    ---
+
+    Manage datastores programmatically — create, update, delete, bulk create, and more.
+
+    [:octicons-arrow-right-24: API](add-datastores/api.md)
+
+-   :material-help-circle-outline:{ .lg .middle } **Datastore FAQ**
+
+    ---
+
+    Answers to common questions about source datastores.
+
+    [:octicons-arrow-right-24: FAQ](add-datastores/faq.md)
 
 </div>
 
-## Operations
+---
 
-Run sync, profile, and scan operations to catalog your data, infer quality checks, and detect anomalies across your datastores.
+## Operations
 
 <div class="grid cards" markdown>
 
@@ -106,9 +196,9 @@ Run sync, profile, and scan operations to catalog your data, infer quality check
 
 </div>
 
-## Enrichment Datastore
+---
 
-Link an enrichment datastore to persist scan results, anomalies, and remediation data for full data quality visibility.
+## Enrichment Datastore
 
 <div class="grid cards" markdown>
 
@@ -124,7 +214,7 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
     ---
 
-    Learn how to link an enrichment datastore to a source datastore.
+    Learn what enrichment datastores are and why they matter.
 
     [:octicons-arrow-right-24: Introduction](enrichment-datastore/introduction.md)
 
@@ -136,7 +226,7 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
     [:octicons-arrow-right-24: Permissions](enrichment-datastore/permissions.md)
 
--   :material-link-variant:{ .lg .middle } **Link**
+-   :material-link-variant:{ .lg .middle } **Link Enrichment Datastore**
 
     ---
 
@@ -144,7 +234,15 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
     [:octicons-arrow-right-24: Link](managing-datastores/link-enrichment.md)
 
--   :material-link-variant-off:{ .lg .middle } **Unlink**
+-   :material-link-plus:{ .lg .middle } **Link on Datastore Creation**
+
+    ---
+
+    Link an enrichment datastore during the datastore creation wizard.
+
+    [:octicons-arrow-right-24: Link on Creation](enrichment-datastore/link-during-creation.md)
+
+-   :material-link-variant-off:{ .lg .middle } **Unlink Enrichment Datastore**
 
     ---
 
@@ -152,7 +250,7 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
     [:octicons-arrow-right-24: Unlink](managing-datastores/unlink-enrichment.md)
 
--   :material-api:{ .lg .middle } **API**
+-   :material-api:{ .lg .middle } **Enrichment API**
 
     ---
 
@@ -160,7 +258,7 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
     [:octicons-arrow-right-24: API](enrichment-datastore/api.md)
 
--   :material-help-circle-outline:{ .lg .middle } **FAQ**
+-   :material-help-circle-outline:{ .lg .middle } **Enrichment FAQ**
 
     ---
 
@@ -170,9 +268,9 @@ Link an enrichment datastore to persist scan results, anomalies, and remediation
 
 </div>
 
-## Data Quality Score
+---
 
-Configure quality score settings, decay periods, and factor weights to measure and track the health of your data.
+## Data Quality Score
 
 <div class="grid cards" markdown>
 
@@ -200,7 +298,7 @@ Configure quality score settings, decay periods, and factor weights to measure a
 
     [:octicons-arrow-right-24: Permissions](data-quality-score/permissions.md)
 
--   :material-cog-outline:{ .lg .middle } **Settings**
+-   :material-tune:{ .lg .middle } **Settings**
 
     ---
 
@@ -208,7 +306,7 @@ Configure quality score settings, decay periods, and factor weights to measure a
 
     [:octicons-arrow-right-24: Settings](managing-datastores/quality-score-settings.md)
 
--   :material-api:{ .lg .middle } **API**
+-   :material-api:{ .lg .middle } **Quality Score API**
 
     ---
 
@@ -216,7 +314,7 @@ Configure quality score settings, decay periods, and factor weights to measure a
 
     [:octicons-arrow-right-24: API](data-quality-score/api.md)
 
--   :material-help-circle-outline:{ .lg .middle } **FAQ**
+-   :material-help-circle-outline:{ .lg .middle } **Quality Score FAQ**
 
     ---
 
@@ -226,9 +324,9 @@ Configure quality score settings, decay periods, and factor weights to measure a
 
 </div>
 
-## Grouping
+---
 
-Organize your datastores into custom groups by environment, team, domain, or priority for easier navigation and management.
+## Grouping
 
 <div class="grid cards" markdown>
 
@@ -256,11 +354,11 @@ Organize your datastores into custom groups by environment, team, domain, or pri
 
     [:octicons-arrow-right-24: Permissions](managing-datastores/grouping/concepts/permissions.md)
 
--   :material-bookmark-plus-outline:{ .lg .middle } **Create a Group**
+-   :material-plus-circle:{ .lg .middle } **Create a Group**
 
     ---
 
-    Create a new datastore group.
+    Create a new datastore group with a custom name and icon.
 
     [:octicons-arrow-right-24: Create](managing-datastores/grouping/managing-groups/create-a-group.md)
 
@@ -268,7 +366,7 @@ Organize your datastores into custom groups by environment, team, domain, or pri
 
     ---
 
-    Modify an existing datastore group.
+    Rename a group or change its icon.
 
     [:octicons-arrow-right-24: Edit](managing-datastores/grouping/managing-groups/edit-a-group.md)
 
@@ -276,27 +374,35 @@ Organize your datastores into custom groups by environment, team, domain, or pri
 
     ---
 
-    Remove a datastore group.
+    Remove a group — datastores in the group become ungrouped.
 
     [:octicons-arrow-right-24: Delete](managing-datastores/grouping/managing-groups/delete-a-group.md)
 
--   :material-bookmark-check-outline:{ .lg .middle } **Assign a Group**
+-   :material-bookmark-check-outline:{ .lg .middle } **Assign a Datastore to a Group**
 
     ---
 
-    Assign a datastore to a group.
+    Assign a datastore to an existing group from the tree view.
 
-    [:octicons-arrow-right-24: Assign](managing-datastores/grouping/managing-groups/assign-a-datastore.md)
+    [:octicons-arrow-right-24: Assign to Group](managing-datastores/grouping/managing-groups/assign-a-datastore.md)
 
--   :material-bookmark-remove-outline:{ .lg .middle } **Unassign a Group**
+-   :material-bookmark-remove-outline:{ .lg .middle } **Unassign a Datastore from a Group**
 
     ---
 
-    Remove a datastore from a group.
+    Unassign a datastore from its current group. The datastore moves to Ungrouped.
 
-    [:octicons-arrow-right-24: Unassign](managing-datastores/grouping/managing-groups/remove-a-datastore.md)
+    [:octicons-arrow-right-24: Unassign](managing-datastores/grouping/managing-groups/unassign-a-datastore.md)
 
--   :material-api:{ .lg .middle } **API**
+-   :material-filter-outline:{ .lg .middle } **Filter by Group**
+
+    ---
+
+    Filter the Source Datastores listing page to show only datastores in specific groups.
+
+    [:octicons-arrow-right-24: Filter by Group](managing-datastores/grouping/managing-groups/filter-by-group.md)
+
+-   :material-api:{ .lg .middle } **Grouping API**
 
     ---
 
@@ -304,7 +410,7 @@ Organize your datastores into custom groups by environment, team, domain, or pri
 
     [:octicons-arrow-right-24: API](managing-datastores/grouping/concepts/grouping-api.md)
 
--   :material-help-circle-outline:{ .lg .middle } **FAQ**
+-   :material-help-circle-outline:{ .lg .middle } **Grouping FAQ**
 
     ---
 
@@ -314,9 +420,9 @@ Organize your datastores into custom groups by environment, team, domain, or pri
 
 </div>
 
-## Tags
+---
 
-Assign tags to datastores and use them to filter operations, organize resources, and streamline workflows.
+## Tags
 
 <div class="grid cards" markdown>
 
@@ -360,7 +466,7 @@ Assign tags to datastores and use them to filter operations, organize resources,
 
     [:octicons-arrow-right-24: Unassign](tags/unassign-tags.md)
 
--   :material-api:{ .lg .middle } **API**
+-   :material-api:{ .lg .middle } **Tags API**
 
     ---
 
@@ -368,12 +474,36 @@ Assign tags to datastores and use them to filter operations, organize resources,
 
     [:octicons-arrow-right-24: API](tags/api.md)
 
--   :material-help-circle-outline:{ .lg .middle } **FAQ**
+-   :material-help-circle-outline:{ .lg .middle } **Tags FAQ**
 
     ---
 
     Answers to common questions about tags.
 
     [:octicons-arrow-right-24: FAQ](tags/faq.md)
+
+</div>
+
+---
+
+## Tips & Tricks
+
+<div class="grid cards" markdown>
+
+-   :material-mouse:{ .lg .middle } **Right Click Options**
+
+    ---
+
+    Quick actions available via right-click on datastores, tables, fields, checks, and anomalies.
+
+    [:octicons-arrow-right-24: Right Click Options](tips-and-tricks/right-click-options.md)
+
+-   :material-keyboard:{ .lg .middle } **Keyboard Shortcuts**
+
+    ---
+
+    Speed up common datastore actions with keyboard shortcuts.
+
+    [:octicons-arrow-right-24: Keyboard Shortcuts](tips-and-tricks/keyboard-shortcuts.md)
 
 </div>

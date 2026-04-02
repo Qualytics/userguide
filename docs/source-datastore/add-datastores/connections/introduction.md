@@ -26,4 +26,12 @@ Create a new datastore with a new or existing connection.
 
     [:octicons-arrow-right-24: Reuse a Connection](existing-connection.md)
 
+-   :material-view-list:{ .lg .middle } **Available Connectors**
+
+    ---
+
+    Browse the full list of supported JDBC and DFS connectors.
+
+    [:octicons-arrow-right-24: View Connectors](../available-datastore-connectors.md)
+
 </div>

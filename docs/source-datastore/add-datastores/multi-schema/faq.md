@@ -20,7 +20,7 @@ There is no hard limit on the number of schemas you can select for creation. How
 
 ### Can I edit the datastores created in bulk after creation?
 
-Yes. Each datastore created through the multi-schema flow is a regular source datastore. You can edit, delete, or reconfigure them individually through the [Datastore Settings](../../managing-datastores/settings-overview.md) just like any other datastore.
+Yes. Each datastore created through the multi-schema flow is a regular source datastore. You can edit, delete, or reconfigure them individually through the [Edit Datastore](../../managing-datastores/edit-datastore.md) just like any other datastore.
 
 ### Can I delete all datastores created in bulk at once?
 

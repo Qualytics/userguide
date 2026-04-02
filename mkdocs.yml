@@ -28,39 +28,38 @@ nav:
       - Overview: source-datastore/overview.md
       - Datastore:
         - Getting Started: source-datastore/add-datastores/overview-of-a-datastore.md
-        - Available Datastore Connectors: source-datastore/add-datastores/available-datastore-connectors.md
-        - Deep Dive:
-          - JDBC:
-            - Introduction: source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
-            - source-datastore/add-datastores/athena.md
-            - source-datastore/add-datastores/bigquery.md
-            - source-datastore/add-datastores/databricks.md
-            - source-datastore/add-datastores/db2.md
-            - source-datastore/add-datastores/fabric-analytics.md
-            - source-datastore/add-datastores/hive.md
-            - source-datastore/add-datastores/maria-db.md
-            - source-datastore/add-datastores/microsoft-sql-server.md
-            - source-datastore/add-datastores/mysql.md
-            - source-datastore/add-datastores/oracle.md
-            - source-datastore/add-datastores/postgresql.md
-            - source-datastore/add-datastores/presto.md
-            - source-datastore/add-datastores/redshift.md
-            - source-datastore/add-datastores/snowflake.md
-            - source-datastore/add-datastores/synapse.md
-            - source-datastore/add-datastores/teradata.md
-            - source-datastore/add-datastores/timescale-db.md
-            - source-datastore/add-datastores/trino.md
-            - source-datastore/add-datastores/dremio.md
-          - DFS:
-            - Introduction: source-datastore/add-datastores/overview-of-a-dfs-datastore.md
-            - Supported File Formats: source-datastore/add-datastores/dfs-supported-file-formats.md
-            - Filename Globbing: source-datastore/add-datastores/dfs-filename-globbing.md
-            - source-datastore/add-datastores/amazon-s3.md
-            - source-datastore/add-datastores/azure-datalake-storage.md
-            - source-datastore/add-datastores/google-cloud-storage.md
+        - JDBC:
+          - Introduction: source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
+          - source-datastore/add-datastores/athena.md
+          - source-datastore/add-datastores/bigquery.md
+          - source-datastore/add-datastores/databricks.md
+          - source-datastore/add-datastores/db2.md
+          - source-datastore/add-datastores/fabric-analytics.md
+          - source-datastore/add-datastores/hive.md
+          - source-datastore/add-datastores/maria-db.md
+          - source-datastore/add-datastores/microsoft-sql-server.md
+          - source-datastore/add-datastores/mysql.md
+          - source-datastore/add-datastores/oracle.md
+          - source-datastore/add-datastores/postgresql.md
+          - source-datastore/add-datastores/presto.md
+          - source-datastore/add-datastores/redshift.md
+          - source-datastore/add-datastores/snowflake.md
+          - source-datastore/add-datastores/synapse.md
+          - source-datastore/add-datastores/teradata.md
+          - source-datastore/add-datastores/timescale-db.md
+          - source-datastore/add-datastores/trino.md
+          - source-datastore/add-datastores/dremio.md
+        - DFS:
+          - Introduction: source-datastore/add-datastores/overview-of-a-dfs-datastore.md
+          - Supported File Formats: source-datastore/add-datastores/dfs-supported-file-formats.md
+          - Filename Globbing: source-datastore/add-datastores/dfs-filename-globbing.md
+          - source-datastore/add-datastores/amazon-s3.md
+          - source-datastore/add-datastores/azure-datalake-storage.md
+          - source-datastore/add-datastores/google-cloud-storage.md
         - Connection:
           - Introduction: source-datastore/add-datastores/connections/introduction.md
           - How It Works: source-datastore/add-datastores/connections/how-it-works.md
+          - Available Connectors: source-datastore/add-datastores/available-datastore-connectors.md
         - Multiple-Schema:
           - Introduction: source-datastore/add-datastores/multi-schema/overview.md
           - How It Works: source-datastore/add-datastores/multi-schema/how-it-works.md
@@ -109,7 +108,8 @@ nav:
           - Edit a Group: source-datastore/managing-datastores/grouping/managing-groups/edit-a-group.md
           - Delete a Group: source-datastore/managing-datastores/grouping/managing-groups/delete-a-group.md
           - Assign a Group: source-datastore/managing-datastores/grouping/managing-groups/assign-a-datastore.md
-          - Unassign a Group: source-datastore/managing-datastores/grouping/managing-groups/remove-a-datastore.md
+          - Unassign a Group: source-datastore/managing-datastores/grouping/managing-groups/unassign-a-datastore.md
+          - Filter by Group: source-datastore/managing-datastores/grouping/managing-groups/filter-by-group.md
         - API: source-datastore/managing-datastores/grouping/concepts/grouping-api.md
         - FAQ: source-datastore/managing-datastores/grouping/concepts/grouping-faq.md
       - Tags:
@@ -484,6 +484,7 @@ nav:
 
 extra_javascript:
   - javascripts/os-detect.js
+  - javascripts/card-filter.js
 
 extra_css:
   - stylesheets/extra.css
@@ -597,19 +598,19 @@ plugins:
         'source-datastore/profile.md': 'source-datastore/operations/profile.md'
         'source-datastore/scan.md': 'source-datastore/operations/scan.md'
         'source-datastore/external-scan.md': 'source-datastore/operations/external-scan.md'
-        'source-datastore/right-click-options.md': 'source-datastore/managing-datastores/right-click-options.md'
+        'source-datastore/right-click-options.md': 'source-datastore/tips-and-tricks/right-click-options.md'
         'source-datastore/assign-tags.md': 'source-datastore/tags/assign-tags.md'
-        'source-datastore/settings-overview.md': 'source-datastore/managing-datastores/settings-overview.md'
+        'source-datastore/settings-overview.md': 'source-datastore/managing-datastores/edit-datastore.md'
         'source-datastore/edit-datastore.md': 'source-datastore/managing-datastores/edit-datastore.md'
         'source-datastore/link-enrichment.md': 'source-datastore/managing-datastores/link-enrichment.md'
         'source-datastore/unlink-enrichment.md': 'source-datastore/managing-datastores/unlink-enrichment.md'
         'source-datastore/quality-score-settings.md': 'source-datastore/managing-datastores/quality-score-settings.md'
         'source-datastore/delete-datastore.md': 'source-datastore/managing-datastores/delete-datastore.md'
         # Old paths redirect to new managing-datastores location
-        'source-datastore/navigation-and-organization/right-click-options.md': 'source-datastore/managing-datastores/right-click-options.md'
+        'source-datastore/navigation-and-organization/right-click-options.md': 'source-datastore/tips-and-tricks/right-click-options.md'
         'source-datastore/navigation-and-organization/assign-tags.md': 'source-datastore/tags/assign-tags.md'
         'source-datastore/managing-datastores/assign-tags.md': 'source-datastore/tags/assign-tags.md'
-        'source-datastore/datastore-settings/settings-overview.md': 'source-datastore/managing-datastores/settings-overview.md'
+        'source-datastore/datastore-settings/settings-overview.md': 'source-datastore/managing-datastores/edit-datastore.md'
         'source-datastore/datastore-settings/edit-datastore.md': 'source-datastore/managing-datastores/edit-datastore.md'
         'source-datastore/datastore-settings/link-enrichment.md': 'source-datastore/managing-datastores/link-enrichment.md'
         'source-datastore/datastore-settings/unlink-enrichment.md': 'source-datastore/managing-datastores/unlink-enrichment.md'
