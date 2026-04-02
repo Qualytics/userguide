@@ -9,19 +9,20 @@ The table below shows which roles can perform tag-related actions on datastores:
 | Action | Viewer | Member | Editor | Manager | Admin |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | View tags on datastores | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
-| Assign tags to datastores | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
-| Unassign tags from datastores | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
-| Use tags to filter operations | :material-close-circle-outline:{ title="Not allowed" } | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
+| Assign tags to datastores | :material-close-circle-outline:{ title="Not allowed" } | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
+| Unassign tags from datastores | :material-close-circle-outline:{ title="Not allowed" } | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
+| Run operations filtered by tag | :material-close-circle-outline:{ title="Not allowed" } | :material-close-circle-outline:{ title="Not allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } | :material-check-circle:{ title="Allowed" } |
 
 ## Key Details
 
 - **Viewing tags** on datastores is available to all roles, including **Viewer**.
-- **Assigning and unassigning tags** to datastores requires at least the **Member** role in one of the teams the datastore is assigned to.
-- **Using tags to filter operations** (scoping Profile/Scan to tagged containers) requires the **Editor** role or above.
-- **Admin** users bypass all permission checks and can manage tags across all datastores regardless of team membership.
+- **Assigning and unassigning tags** requires the **Editor** role or above in at least one of the teams the datastore belongs to. This is a team-level permission — the user must be a member of a team that has Editor access to the datastore.
+- **Running operations filtered by tag** (scoping Profile/Scan to tagged containers) requires the **Editor** role or above. This is the same permission required to run any operation — the tag filter is part of the operation configuration, not a separate permission.
+- **Admin** users bypass all team-level permission checks and can manage tags across all datastores regardless of team membership.
 
-!!! info "Tag Management Permissions"
-    Creating, editing, and deleting tags are global actions not specific to datastores. For those permissions, see the [Tags](../../tags/overview.md){:target="_blank"} documentation.
+!!! info "Team Context"
+    Permissions for assign/unassign are evaluated against the datastore's **team assignments**. A user with the Editor role must be in at least one team that the datastore belongs to. For more details on how teams work, see the [Team Permissions](../../settings/security/team-permissions.md){:target="_blank"} page.
 
-!!! info "Full Permissions Reference"
-    For the complete permissions and roles matrix across all Qualytics features, see the [Team Permissions](../../settings/security/team-permissions.md){:target="_blank"} page.
+<!-- TODO: Update link to tags/overview-of-a-tag.md when the dedicated Tags overview page is created -->
+!!! info "Creating, Editing, or Deleting Tags"
+    Creating, editing, and deleting tags are global actions not specific to datastores. These actions require the **Admin** role. For those permissions, see the [Tags](../../tags/overview.md){:target="_blank"} documentation.
