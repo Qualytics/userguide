@@ -147,7 +147,6 @@ Quality scores are automatically recalculated when:
 - A **quality check is deleted**.
 - An **anomaly is deleted**.
 
-Recalculations are debounced (5-second window) to prevent redundant calculations during rapid state changes.
 
 ## Tag Weight Modifiers
 

@@ -105,7 +105,7 @@ Quality scores are automatically recalculated when:
 
 ### Are recalculations immediate?
 
-Recalculations are **debounced** with a 5-second window. The first event triggers an immediate calculation, but subsequent events within 5 seconds are batched — a final calculation runs after the window closes. This prevents redundant calculations during rapid state changes (e.g., bulk anomaly resolution).
+Recalculations happen automatically after qualifying events. When multiple events occur in rapid succession (e.g., bulk anomaly resolution), they are batched to prevent redundant calculations.
 
 ### Can I manually trigger a recalculation?
 
@@ -129,7 +129,6 @@ There are several possible reasons:
 - **Decay period** — If you fixed the data but haven't re-scanned, the old anomalies are still within the decay window. Run a new Scan to detect that the issues are resolved.
 - **Re-scan needed** — Qualytics doesn't know the data is fixed until a Scan confirms it. After fixing the source data, run a Scan to update the anomaly status.
 - **Other dimensions** — You may have fixed one dimension (e.g., Accuracy) but another dimension (e.g., Coverage or Completeness) is dragging the score down. Check the per-dimension breakdown on the container detail page.
-- **Debounce window** — If you just made changes, wait a few seconds for the 5-second debounce window to complete the recalculation.
 - **Weight configuration** — A dimension with a high weight that still has issues will dominate the score. Review your [dimension weights](../managing-datastores/quality-score-settings.md){:target="_blank"}.
 
 ## Tags and Weights
