@@ -12,8 +12,15 @@ edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2026 Qualytics
 
 validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
   links:
+    not_found: warn
+    anchors: warn
     absolute_links: relative_to_docs
+    unrecognized_links: warn
 
 # Page tree
 nav:
