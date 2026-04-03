@@ -291,21 +291,21 @@ nav:
         - Mark Check as Favorite: observability/mark-check.md
         - Observability Filter: observability/observability-filter.md
     - Anomalies:
-      - Overview: anomalies/anomalies.md
-      - Types: anomalies/anomaly-types.md
-      - Detection: anomalies/anomaly-detection.md
+      - Overview: anomalies/overview.md
+      - Types: anomalies/types.md
+      - Detection: anomalies/detection.md
       - Details:
-        - Insights: anomalies/anomaly-insights.md
-        - Source Record: anomalies/source-record.md
-      - Status: anomalies/anomaly-status.md
-      - Fingerprints: anomalies/anomaly-fingerprints.md
+        - Insights: anomalies/details/insights.md
+        - Source Record: anomalies/details/source-record.md
+      - Status: anomalies/status.md
+      - Fingerprints: anomalies/fingerprints.md
       - Manage Anomalies:
-        - Acknowledge Anomalies: anomalies/acknowledge-anomalies.md
-        - Archive Anomalies: anomalies/archive-anomalies.md
-        - Restore Anomalies: anomalies/restore-anomalies.md
-        - Edit Anomalies: anomalies/edit-anomalies.md
-        - Delete Anomalies: anomalies/delete-anomalies.md
-        - Filter & Sort: anomalies/filter-and-sort.md
+        - Acknowledge Anomalies: anomalies/manage-anomalies/acknowledge-anomalies.md
+        - Archive Anomalies: anomalies/manage-anomalies/archive-anomalies.md
+        - Restore Anomalies: anomalies/manage-anomalies/restore-anomalies.md
+        - Edit Anomalies: anomalies/manage-anomalies/edit-anomalies.md
+        - Delete Anomalies: anomalies/manage-anomalies/delete-anomalies.md
+        - Filter & Sort: anomalies/manage-anomalies/filter-and-sort.md
     - Explore:
       - Overview: explore/overview-of-explore.md
       - Insights: explore/insights.md
@@ -591,6 +591,20 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        # Anomalies reorganization
+        'anomalies/anomalies.md': 'anomalies/overview.md'
+        'anomalies/anomaly-types.md': 'anomalies/types.md'
+        'anomalies/anomaly-detection.md': 'anomalies/detection.md'
+        'anomalies/anomaly-insights.md': 'anomalies/details/insights.md'
+        'anomalies/source-record.md': 'anomalies/details/source-record.md'
+        'anomalies/anomaly-status.md': 'anomalies/status.md'
+        'anomalies/anomaly-fingerprints.md': 'anomalies/fingerprints.md'
+        'anomalies/acknowledge-anomalies.md': 'anomalies/manage-anomalies/acknowledge-anomalies.md'
+        'anomalies/archive-anomalies.md': 'anomalies/manage-anomalies/archive-anomalies.md'
+        'anomalies/restore-anomalies.md': 'anomalies/manage-anomalies/restore-anomalies.md'
+        'anomalies/edit-anomalies.md': 'anomalies/manage-anomalies/edit-anomalies.md'
+        'anomalies/delete-anomalies.md': 'anomalies/manage-anomalies/delete-anomalies.md'
+        'anomalies/filter-and-sort.md': 'anomalies/manage-anomalies/filter-and-sort.md'
         # Notifications restructure
         'flows/notification.md': 'flows/notifications/overview.md'
         'flows/notification-tokens.md': 'flows/notifications/message-variables.md'
@@ -669,7 +683,7 @@ plugins:
         'settings/integrations/ai-and-agents/managing/remove-llm-integration.md': 'settings/integrations/ai-and-agents/managing/remove-agent-q-integration.md'
         'settings/integrations/ai-and-agents/managing/how-to-use-agent-q.md': 'settings/integrations/ai-and-agents/overview.md'
         'flows/http.md': 'flows/workflow.md'
-        # Checks renamed to data-quality-checks (from main)
+        # Checks renamed to data-quality-checks
         'checks/overview-of-a-check.md': 'data-quality-checks/overview-of-a-check.md'
         'checks/authored-check.md': 'data-quality-checks/authored-check.md'
         'checks/inferred-check.md': 'data-quality-checks/inferred-check.md'
