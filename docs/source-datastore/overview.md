@@ -276,7 +276,7 @@ In this section you will find:
 
     Which connectors support enrichment and their write-back capabilities.
 
-    [:octicons-arrow-right-24: Supported Connectors](enrichment-support/supported-enrichment-datastores.md)
+    [:octicons-arrow-right-24: Supported Connectors](../enrichment-support/supported-enrichment-datastores.md)
 
 -   :material-api:{ .lg .middle } **Enrichment API**
 
