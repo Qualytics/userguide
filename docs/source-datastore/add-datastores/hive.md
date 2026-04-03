@@ -314,6 +314,23 @@ This section provides a sample payload for creating a datastore. Replace the pla
             "connection_id": connection_id
         }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type hive \
+        --name "your_connection_name" \
+        --host ${HIVE_HOST} \
+        --port 10000 \
+        --username ${HIVE_USER} \
+        --password ${HIVE_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --schema default
+    ```
 
 ### Linking Datastore to an Enrichment Datastore through API
 

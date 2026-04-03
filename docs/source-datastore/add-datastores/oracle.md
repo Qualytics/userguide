@@ -343,6 +343,23 @@ This section provides a sample payload for creating an Oracle datastore. Replace
         "connection_id": "connection-id"
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type oracle \
+        --name "your_connection_name" \
+        --host ${ORACLE_HOST} \
+        --port 1521 \
+        --username ${ORACLE_USER} \
+        --password ${ORACLE_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --schema your_schema
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 

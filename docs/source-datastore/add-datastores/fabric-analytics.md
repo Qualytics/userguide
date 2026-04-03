@@ -419,6 +419,25 @@ This section provides a sample payload for creating a Fabric Analytics datastore
         "connection_id": "connection-id"
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type fabric \
+        --name "your_connection_name" \
+        --host ${FABRIC_HOST} \
+        --port 1433 \
+        --username ${APPLICATION_CLIENT_ID} \
+        --password ${CLIENT_SECRET} \
+        --parameters '{"tenant_id": "azure-ad-tenant-id"}'
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema dbo
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 

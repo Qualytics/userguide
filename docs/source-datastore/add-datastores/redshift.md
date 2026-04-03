@@ -366,6 +366,24 @@ This section provides sample payloads for creating a Redshift datastore. Replace
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type redshift \
+        --name "your_connection_name" \
+        --host ${REDSHIFT_HOST} \
+        --port 5439 \
+        --username ${REDSHIFT_USER} \
+        --password ${REDSHIFT_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema public
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -402,6 +420,25 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "connection_id": connection-id
     }
     ``` 
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type redshift \
+        --name "your_connection_name" \
+        --host ${REDSHIFT_HOST} \
+        --port 5439 \
+        --username ${REDSHIFT_USER} \
+        --password ${REDSHIFT_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema your_enrichment_schema \
+        --enrichment-only
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 

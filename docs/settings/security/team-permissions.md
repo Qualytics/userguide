@@ -50,6 +50,7 @@ Legend:
 | Assign Tags in Flows         | ❌         | ❌       | ✅          | ✅        | ✅            |
 | View Datastore Groups        | ✅          | ✅        | ✅         | ✅        | ✅             |
 | Assign Datastore to Group    | ❌          | ❌        | ❌         | ❌        | ✅             |
+| Multi-Schema Datastore Creation | ❌       | ❌        | ❌         | ❌        | ❌             |
 | View Field Status                | ✅          | ✅        | ✅         | ✅        | ✅             |
 | Mask / Unmask Field              | ❌          | ❌        | ❌         | ❌        | ✅             |
 | Exclude Field                    | ❌          | ❌        | ❌         | ❌        | ✅             |
@@ -90,6 +91,7 @@ Editor role allows users to manage datastore functions comprehensively. They can
 | Feature                | Operation                   | Can View/Can Run   | Can Manage   |
 |:-----------------------|:----------------------------|:------------------|:-------------|
 | **Datastores**         | Add Datastore               | ❌                 | ✅            |
+|                        | Multi-Schema Datastore Creation | ❌             | ✅            |
 |                        | Edit Settings               | ❌                 | ✅            |
 | **Enrichment**         | Add Enrichment              | ❌                 | ✅            |
 |                        | Edit Enrichment             | ❌                 | ✅            |

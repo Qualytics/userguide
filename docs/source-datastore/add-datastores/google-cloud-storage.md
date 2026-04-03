@@ -421,6 +421,23 @@ This section provides sample payloads for creating the Google Cloud Storage data
             "connection_id": connection-id
         }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type gcs \
+        --name "your_connection_name" \
+        --uri "gs://<bucket_name>" \
+        --secret-key ${GCS_SERVICE_ACCOUNT_KEY}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /
+    ```
+
 ### Creating an Enrichment Datastore
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
 
@@ -453,6 +470,24 @@ This section provides sample payloads for creating an enrichment datastore. Repl
             "connection_id": connection-id
         }
     ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type gcs \
+        --name "your_connection_name" \
+        --uri "gs://<bucket_name>" \
+        --secret-key ${GCS_SERVICE_ACCOUNT_KEY}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /your_enrichment_path \
+        --enrichment-only
+    ```
+
 ### Link an Enrichment Datastore to a Source Datastore 
 Use the provided endpoint to link an enrichment datastore to a source datastore:
 

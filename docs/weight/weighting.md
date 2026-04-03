@@ -1,4 +1,6 @@
-# Weight Mechanism 
+# Weight Mechanism
+
+<!-- TODO: When refactoring the Tags section, merge this page's content into the Tags documentation (e.g., tags/weight-modifiers.md). Tag Weighting belongs under Tags, and Rule Type / Anomaly Weighting can remain here or move to a Quality Score section. -->
 
 Weight Mechanism for checks is designed to evaluate and prioritize checks based on three key factors: Rule Type Weighting, Anomaly Weighting, and Tag Weighting.
 

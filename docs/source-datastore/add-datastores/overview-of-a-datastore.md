@@ -1,34 +1,254 @@
-# Source Datastore
+# Getting Started with Datastores
 
-Qualytics connects to source datastores using "Datastores," a framework that enables organizations to:
+## What is a Datastore?
 
-* Connect with a wide range of source datastores through verified connectors.
+A **datastore** is a general term for any system or service that persists data — whether it's a relational database, a distributed file system, a data warehouse, or a cloud object storage bucket. The concept has evolved alongside the data landscape: from traditional on-premise databases in the 1970s–90s, through the rise of data warehouses and data lakes in the 2000s, to today's modern cloud-native platforms that span multiple engines and formats.
 
-* Support both traditional databases and modern object storage.
+!!! info "Learn more"
+    For a broader understanding of datastores and how they fit into the modern data stack, see [What is a Data Store?](https://aws.amazon.com/what-is/data-store/){:target="_blank"} by AWS.
 
-* Profile and monitor structured data across systems.
+## Datastores in Qualytics
 
-* Ensure secure and fast access to data.
+In Qualytics, a **Source Datastore** is a unified abstraction that represents any structured data source — regardless of the underlying storage engine. Rather than building separate integrations for each platform, Qualytics uses [Apache Spark](https://spark.apache.org/){:target="_blank"} to read and write **Fields** and **Records** across all supported connectors, providing a consistent data quality experience whether your data lives in a relational database, a distributed file system, or a cloud storage service.
 
-* Scale data quality operations across platforms.
+This abstraction enables organizations to:
 
-* Manage data quality centrally across all sources.
+* **Connect** with a wide range of source datastores through verified connectors.
+* **Support** both traditional databases and modern object storage.
+* **Profile** and monitor structured data across systems.
+* **Secure** fast and reliable access to data.
+* **Scale** data quality operations across platforms.
+* **Manage** data quality centrally across all sources.
 
 These source datastore integrations ensure comprehensive quality management across your entire data landscape, regardless of where your data resides.
 
-## Understanding Datastores
+### Datastore Lifecycle
 
-A Datastore in Qualytics represents any structured source datastore, such as:
+Every datastore in Qualytics follows a structured lifecycle — from initial creation through ongoing data quality operations.
 
-* Relational databases (RDBMS)
+<div style="text-align: center;">
 
-* Raw file formats like CSV, XLSX, JSON, Avro, or Parquet
+```mermaid
+graph TD
+    A["<b>Create</b><br/>Add datastore & test connection"] --> B["<b>Link Enrichment</b><br/>Connect enrichment datastore"]
+    B --> C["<b>Sync</b><br/>Discover tables, files & fields"]
+    C --> D["<b>Profile</b><br/>Analyze data & infer checks"]
+    D --> E["<b>Scan</b><br/>Run checks & detect anomalies"]
+    E -->|"Repeat"| C
+```
 
-* Cloud storage platforms like AWS S3, Azure Blob Storage, or GCP Cloud Storage
+</div>
 
-Qualytics integrates with these source datastores through a layered architecture:
+| Stage | Description |
+| :--- | :--- |
+| **Create** | Add a new source datastore by selecting a connector, providing connection credentials, and testing the connection. |
+| **Link Enrichment** | Optionally link an enrichment datastore to persist scan results, anomalies, and remediation data. |
+| **Sync** | Discover the schema — tables, files, views, and fields — from your source datastore. This is the first operation after creation. |
+| **Profile** | Analyze field patterns across records, detect data types, compute statistics, and automatically infer quality checks. |
+| **Scan** | Execute quality checks against the data, measure data quality metrics, and detect anomalies from failed checks. |
 
+!!! tip
+    The **Sync → Profile → Scan** cycle is repeatable. As your data evolves, re-running these operations keeps your quality checks and anomaly detection up to date.
+
+### Architecture
+
+The Qualytics Datastore framework is organized in four layers:
+
+| Layer | Description |
+| :--- | :--- |
+| **Qualytics I/O** | Spark-enabled reads and writes of Fields and Records — the common interface for all datastores. |
+| **Namespace** | How data is organized within the storage engine: **Tables in a Schema** (JDBC), **Files in a Folder** (DFS), or **Topics in a Broker** (Streaming). |
+| **Schema** | The data definition layer: **RDBMS DDL** for relational databases, **AVRO/Parquet/CSV/JSON** for file systems, or **AVRO/JSON/Protobuf** for streaming platforms. |
+| **Storage Engine** | The actual platform where data resides (see supported engines below). |
+
+### Supported Storage Engines
+
+!!! info "Supported Storage Engines"
+    For the full list of supported JDBC and DFS connectors, see the [Available Datastore Connectors](available-datastore-connectors.md){:target="_blank"} page.
+
+<!-- COMMENTED OUT: Original architecture image preserved for reference
 ![datastore](../../assets/source-datastores/add-datastores/what-is/datastore.png)
+END COMMENTED OUT -->
+
+### How It All Connects
+
+```mermaid
+graph LR
+    IO["<b>Qualytics I/O</b><br/>Spark-enabled reads and writes<br/>of Fields and Records"]
+
+    IO --> NS1["<b>Tables in a Schema</b>"]
+    IO --> NS2["<b>Files in a Folder</b>"]
+
+    NS1 --> SC1["<b>RDBMS DDL</b>"]
+    NS2 --> SC2["<b>AVRO, Parquet, CSV, JSON</b>"]
+
+    SC1 --> SE1["Oracle DB"]
+    SC1 --> SE2["PostgreSQL"]
+    SC1 --> SE3["MySQL"]
+    SC1 --> SE4["Snowflake"]
+    SC1 --> SE5["Redshift"]
+    SC1 --> SE6["...and more"]
+
+    SC2 --> SE7["Amazon S3"]
+    SC2 --> SE8["Azure Storage"]
+    SC2 --> SE9["GCS"]
+```
+
+The key insight is that **Qualytics treats all datastores uniformly at the I/O layer**. Whether you connect a PostgreSQL database or an S3 bucket, Qualytics reads and writes Fields and Records the same way — enabling consistent profiling, scanning, and anomaly detection across your entire data landscape.
+
+## Available Connectors
+
+Qualytics supports 19 JDBC relational database connectors and 3 DFS cloud storage connectors out of the box.
+
+<div class="grid cards" markdown>
+
+-   :material-view-list:{ .lg .middle } **All Connectors**
+
+    ---
+
+    See the complete list of supported connectors with links to their individual setup guides.
+
+    [:octicons-arrow-right-24: View Connectors](available-datastore-connectors.md)
+
+</div>
+
+## Deep Dive
+
+Explore the details of each datastore type — how JDBC and DFS connectors work, their configuration, and supported features.
+
+<div class="grid cards" markdown>
+
+-   :material-database-marker-outline:{ .lg .middle } **JDBC**
+
+    ---
+
+    Learn how to connect relational databases using JDBC connectors like PostgreSQL, Snowflake, Oracle, and more.
+
+    [:octicons-arrow-right-24: Understanding JDBC](overview-of-a-jdbc-datastore.md)
+
+-   :material-file-marker-outline:{ .lg .middle } **DFS**
+
+    ---
+
+    Learn how to connect distributed file systems like Amazon S3, Azure Data Lake Storage, and Google Cloud Storage.
+
+    [:octicons-arrow-right-24: Understanding DFS](overview-of-a-dfs-datastore.md)
+
+</div>
+
+## Connection
+
+Learn how to set up and manage connections to your datastores — create new connections from scratch or reuse existing credentials.
+
+<div class="grid cards" markdown>
+
+-   :material-connection:{ .lg .middle } **Connections Overview**
+
+    ---
+
+    Set up new connections or reuse existing credentials to connect your datastores.
+
+    [:octicons-arrow-right-24: Connections Overview](connections/introduction.md)
+
+</div>
+
+## Multiple-Schema
+
+Discover and onboard multiple schemas from a single connection at once — including schema discovery, name templates, supported connectors, and API reference.
+
+<div class="grid cards" markdown>
+
+-   :material-vector-combine:{ .lg .middle } **Introduction**
+
+    ---
+
+    Discover and onboard multiple schemas from a single connection in one step.
+
+    [:octicons-arrow-right-24: Getting Started](multi-schema/overview.md)
+
+-   :material-cog-outline:{ .lg .middle } **How It Works**
+
+    ---
+
+    Understand the multi-schema creation flow, schema discovery, and name templates.
+
+    [:octicons-arrow-right-24: How It Works](multi-schema/how-it-works.md)
+
+-   :material-database-outline:{ .lg .middle } **Supported Connectors**
+
+    ---
+
+    See which connectors support multi-schema discovery and their catalog/schema mappings.
+
+    [:octicons-arrow-right-24: Supported Connectors](multi-schema/supported-connectors.md)
+
+-   :material-shield-lock-outline:{ .lg .middle } **Permissions**
+
+    ---
+
+    Understand the roles and permissions required for multi-schema creation.
+
+    [:octicons-arrow-right-24: Permissions](multi-schema/permissions.md)
+
+-   :material-api:{ .lg .middle } **API**
+
+    ---
+
+    API endpoints for bulk datastore creation, schema discovery, and validation.
+
+    [:octicons-arrow-right-24: API](api.md#multi-schema-creation)
+
+-   :material-help-circle-outline:{ .lg .middle } **FAQ**
+
+    ---
+
+    Answers to common questions about multi-schema source datastore creation.
+
+    [:octicons-arrow-right-24: FAQ](multi-schema/faq.md)
+
+</div>
+
+## Managing
+
+Add, edit, and delete datastores — whether creating from scratch with a new connection or reusing an existing one.
+
+<div class="grid cards" markdown>
+
+-   :material-plus-circle:{ .lg .middle } **Add Datastore with new connection**
+
+    ---
+
+    Create a new source datastore by setting up a new connection from scratch.
+
+    [:octicons-arrow-right-24: New Connection](connections/new-connection.md)
+
+-   :material-link-variant:{ .lg .middle } **Add Datastore with existing connection**
+
+    ---
+
+    Create a new source datastore by reusing credentials from an existing connection.
+
+    [:octicons-arrow-right-24: Existing Connection](connections/existing-connection.md)
+
+-   :material-pencil-outline:{ .lg .middle } **Edit Datastore**
+
+    ---
+
+    Modify the settings and connection details of an existing datastore.
+
+    [:octicons-arrow-right-24: Edit Datastore](../managing-datastores/edit-datastore.md)
+
+-   :material-trash-can-outline:{ .lg .middle } **Delete Datastore**
+
+    ---
+
+    Remove a datastore and its associated configuration from Qualytics.
+
+    [:octicons-arrow-right-24: Delete Datastore](../managing-datastores/delete-datastore.md)
+
+</div>
+
+<!-- COMMENTED OUT: Content below is preserved but hidden pending restructuring
 
 ## Configuring Source Datastores
 
@@ -48,38 +268,17 @@ Configure your source datastores in Qualytics by connecting them through a new d
 | 2. | Toggle Button | Toggle **on** to create a new source datastore from scratch, or toggle **off** to reuse credentials from an existing connection. |
 | 3. | Connector | Select **Any source datastore** from the dropdown list. |
 
-## Available Datastore Connectors
+## Multi-Schema Source Datastore Creation
 
-Qualytics provides verified connectors for the following source datastores:
+For JDBC-based connectors, Qualytics supports creating multiple source datastores from a single connection in one step. This is useful when your database has multiple schemas that need to be onboarded simultaneously.
 
-!!! tip
-    Want to check which datastores have Enrichment support? 
-    See the [Supported Enrichment Datastores](../../enrichment-support/supported-enrichment-datastores.md) 
+With multi-schema creation, you can:
 
-| No. | Source Datastores|
-| :---- | :----|
-| 1. | [Amazon Redshift](../add-datastores/redshift.md)|
-| 2. | [Amazon S3](../add-datastores/amazon-s3.md)|
-| 3. | [Athena](../add-datastores/athena.md)|
-| 4. | [Azure Datalake Storage (ABFS)](../add-datastores/azure-datalake-storage.md)|
-| 5. | [Big Query](../add-datastores/bigquery.md)|
-| 6. | [Databricks](../add-datastores/databricks.md)|
-| 7. | [DB2](../add-datastores/db2.md)|
-| 8. | [Dremio](../add-datastores/dremio.md)|
-| 9. | [Fabric Analytics](../add-datastores/fabric-analytics.md)|
-| 10. | [Google Cloud Storage](../add-datastores/google-cloud-storage.md)|
-| 11. | [Hive](../add-datastores/hive.md)|
-| 12. | [MariaDB](../add-datastores/maria-db.md)|
-| 13. | [Microsoft SQL Server](../add-datastores/microsoft-sql-server.md)|
-| 14. | [MySQL](../add-datastores/mysql.md)|
-| 15. | [Oracle](../add-datastores/oracle.md)|
-| 16. | [PostgreSQL](../add-datastores/postgresql.md)|
-| 17. | [Presto](../add-datastores/presto.md)|
-| 18. | [Snowflake](../add-datastores/snowflake.md)|
-| 19. | [Synapse](../add-datastores/synapse.md)|
-| 20. | [Teradata](../add-datastores/teradata.md)|
-| 21. | [Timescale DB](../add-datastores/timescale-db.md)|
-| 22. | [Trino](../add-datastores/trino.md)|
+* Automatically discover available catalogs and schemas from a connection.
+* Select multiple schemas and create all corresponding datastores in a single operation.
+* Optionally link all newly created datastores to an enrichment datastore.
+
+For detailed instructions, refer to the [**Multi-Schema Source Datastore Creation**](../add-datastores/multi-schema/overview.md) documentation.
 
 ## Connection Management
 
@@ -136,3 +335,5 @@ Once the datastores are connected, you can run operations on the selected datast
 **Step 2:** After clicking on the datastore, select the "Activity" tab to view the ongoing operation.
 
 ![activity](../../assets/source-datastores/add-datastores/what-is/activity-6.png)
+
+END COMMENTED OUT -->

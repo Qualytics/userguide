@@ -375,6 +375,24 @@ This section provides sample payloads for creating a DB2 datastore. Replace the 
         "connection_id": connection_id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type db2 \
+        --name "your_connection_name" \
+        --host ${DB2_HOST} \
+        --port 50000 \
+        --username ${DB2_USER} \
+        --password ${DB2_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database DB2 \
+        --schema DB2INST1
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -414,6 +432,25 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "connection_id": connection_id
     }
     ``` 
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type db2 \
+        --name "your_connection_name" \
+        --host ${DB2_HOST} \
+        --port 50000 \
+        --username ${DB2_USER} \
+        --password ${DB2_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database DB2 \
+        --schema your_enrichment_schema \
+        --enrichment-only
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore: 
