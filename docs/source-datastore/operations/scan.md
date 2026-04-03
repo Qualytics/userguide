@@ -21,11 +21,11 @@ Let's get started! 🚀
 
 **Step 1:** Select a source datastore from the side menu on which you would like to perform the scan operation.
 
-![side-menu](../../assets/source-datastores/scan/side-menu.png)
+![side-menu](../../assets/source-datastores/operations/scan/step-1-side-menu.png)
 
 **Step 2:** Clicking on your preferred datastore will navigate you to the datastore details page. Within the overview tab (default view), click on the **Run** button under **Scan** to initiate the scan operation.
 
-![details-page](../../assets/source-datastores/scan/details-page.png)
+![details-page](../../assets/source-datastores/operations/scan/step-2-details-page.png)
 
 !!! note
     Scanning operation can be commenced once the sync operation and profile operation are completed.
@@ -34,7 +34,7 @@ Let's get started! 🚀
 
 **Step 1:** Click on the **Run** button to initiate the scan operation.
 
-![run](../../assets/source-datastores/scan/run.png)
+![run](../../assets/source-datastores/operations/scan/step-3-run.png)
 
 **Step 2:** Select tables (in your JDBC datastore) or file patterns (in your DFS datastore) and tags you would like to be scanned.
 
@@ -45,7 +45,7 @@ Let's get started! 🚀
 
 This option includes all tables or file patterns currently available for scanning in the datastore. It means that every table or file pattern recognized in your datastore will be subjected to the defined data quality checks. Use this when you want to perform a comprehensive scan covering all the available data without any exclusions.
 
-![all-operation](../../assets/source-datastores/scan/all-operation.png)
+![all-operation](../../assets/source-datastores/operations/scan/step-4-all-operation.png)
 
 **2. Specific Tables/File Patterns**
 
@@ -53,17 +53,17 @@ This option allows you to manually select the individual table(s) or file patter
 
 You can also search the tables/file patterns you want to scan directly using the search bar. Use this option when you need to target particular datasets or when you want to exclude certain files from the scan for focused analysis or testing purposes.
 
-![specific](../../assets/source-datastores/scan/specific.png)
+![specific](../../assets/source-datastores/operations/scan/step-5-specific.png)
 
 **3. Tag**
 
 This option enables you to automatically scan file patterns associated with the selected tags. Tags can be predefined or created to categorize and manage file patterns effectively.
 
-![tag](../../assets/source-datastores/scan/tag.png)
+![tag](../../assets/source-datastores/operations/scan/step-6-tag.png)
 
 **Step 3:** Click on the **Next** button to Configure **Select Check Categories**.
 
-![next](../../assets/source-datastores/scan/next.png)
+![next](../../assets/source-datastores/operations/scan/step-7-next.png)
 
 **Step 4:** Configure **Select Check Categories** Setting
 
@@ -73,11 +73,11 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Data Integrity**: Include checks that specify the expected values for the data stored in the table. It belongs to all rule types except volumetric.
 
-![select-check](../../assets/source-datastores/scan/select-check.png)
+![select-check](../../assets/source-datastores/operations/scan/step-8-select-check.png)
 
 **Step 5:** Click on the **Next** button to Configure the **Read Settings**.
 
-![next](../../assets/source-datastores/scan/nextt.png)
+![next](../../assets/source-datastores/operations/scan/step-9-nextt.png)
 
 **Step 6:** Configure Read Settings, Starting Threshold (Optional), and the Record Limit.
 
@@ -90,7 +90,7 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Full**: This strategy performs a comprehensive scan of all records within the specified data collections, regardless of any previous changes or scans. Every scan operation will include all records, ensuring a complete check each time. Suitable for periodic comprehensive checks or when incremental scanning is not feasible due to the nature of the data.
 
-![incremental](../../assets/source-datastores/scan/incremental.png)
+![incremental](../../assets/source-datastores/operations/scan/step-10-incremental.png)
 
 !!! warning
     If any selected tables do not have an incremental identifier, a full scan will be performed for those tables.
@@ -110,22 +110,22 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 * **Greater Than Batch:** This option applies to tables with an incremental batch strategy. Users can set a batch value, ensuring that only records with a batch identifier greater than the specified value are scanned.
 
-![starting-threshold](../../assets/source-datastores/scan/starting-threshold.png)
+![starting-threshold](../../assets/source-datastores/operations/scan/step-11-starting-threshold.png)
 
  3. Define the **Record Limit** - the maximum number of records to be scanned per table after any initial filtering. This is a crucial feature for managing large datasets.
 
-![record-limit-line](../../assets/source-datastores/scan/record-limit-line.png)
+![record-limit-line](../../assets/source-datastores/operations/scan/step-12-record-limit-line.png)
 
  You can manually enter a custom value in the text field or quickly select from a dropdown menu with commonly used limits such as 1M, 10M, 100M, and All.
 
- ![record-limit-options](../../assets/source-datastores/scan/record-limit-options.png)
+ ![record-limit-options](../../assets/source-datastores/operations/scan/step-13-record-limit-options.png)
 
 !!! note
     The number of records must be between 1 and 1,000,000,000.
 
 **Step 7:** Click on the **Next** button to Configure the **Scan Settings**.
 
-![next-button](../../assets/source-datastores/scan/next-button.png)
+![next-button](../../assets/source-datastores/operations/scan/step-14-next-button.png)
 
 **Step 8:** Configure the **Scan Settings**.
 
@@ -135,21 +135,21 @@ Users can choose one or more check categories when initiating a scan. This allow
 
 - **Reactivate Recurring Anomalies:** Enabling **Reactivate Recurring Anomalies** marks new anomalies as duplicates of archived ones, reactivates the original anomaly, and creates a [Fingerprint](../../enrichment/enrichment-tables.md#_failed_checks-table) column in the Enrichment Datastore.
 
-![anomaly-option](../../assets/source-datastores/scan/anomaly-option.png)
+![anomaly-option](../../assets/source-datastores/operations/scan/step-15-anomaly-option.png)
 
 **2. Maximum Record Anomalies per Check:** Set the maximum number of anomalies generated per check before they are merged into a single rolled-up anomaly. This helps manage anomaly volume and simplifies review.
 
-![anomaly-option](../../assets/source-datastores/scan/anomalyy.png)
+![anomaly-option](../../assets/source-datastores/operations/scan/step-16-anomalyy.png)
 
 **3. Maximum Source Examples per Anomaly:** This setting decides **how many source records are kept for each anomaly**. When the scan runs and finds an anomaly, only the specified number of records are kept. These are the **only records you can view or download later**.
 
-![source-record-limit](../../assets/source-datastores/scan/source-record-limit.png)
+![source-record-limit](../../assets/source-datastores/operations/scan/step-17-source-record-limit.png)
 
 For example, if this value is set to **10**, only **10 source records per anomaly** will be kept, even if more records caused the anomaly.
 
 If you need to **download more records**, increase this value **before running the scan**. Changes made after the scan finishes will not affect the results.
 
-![record-limit](../../assets/source-datastores/scan/record-limit.png)
+![record-limit](../../assets/source-datastores/operations/scan/step-18-record-limit.png)
 
 ## Field Masking and Scanning
 
@@ -167,31 +167,31 @@ For more details, see [Masked Fields in Source Records](../../anomalies/source-r
 
 Click on the **Run Now** button to perform the scan operation immediately.
 
-![run-now](../../assets/source-datastores/scan/run-now.png)
+![run-now](../../assets/source-datastores/operations/scan/step-19-run-now.png)
 
 ## Schedule
 
 **Step 1:** Click on the **Schedule** button to configure the available schedule options for your scan operation.
 
-![click-schedule](../../assets/source-datastores/scan/click-schedule.png)
+![click-schedule](../../assets/source-datastores/operations/scan/step-20-click-schedule.png)
 
 **Step 2:** Set the scheduling preferences for the scan operation.
 
 **1. Hourly:** This option allows you to schedule the scan to run every hour at a specified minute. You can define the frequency in hours and the exact minute within the hour the scan should start. Example: If set to **Every 1 hour(s) on minute 0,** the scan will run every hour at the top of the hour (e.g., 1:00, 2:00, 3:00).
 
-![hourly](../../assets/source-datastores/scan/hourly.png)
+![hourly](../../assets/source-datastores/operations/scan/step-21-hourly.png)
 
 **2. Daily:** This option schedules the scan to run once every day at a specific time. You specify the number of days between scans and the exact time of day in UTC. Example: If set to **Every 1 day(s) at 00:00 UTC,** the scan will run every day at midnight UTC.
 
-![daily](../../assets/source-datastores/scan/daily.png)
+![daily](../../assets/source-datastores/operations/scan/step-22-daily.png)
 
 **3. Weekly:** This option schedules the scan to run on specific days of the week at a set time. You select the days of the week and the exact time of day in UTC for the scan to run. Example: If configured to run on "Sunday" and "Friday" at 00:00 UTC, the scan will execute at midnight UTC on these days.
 
-![weekly](../../assets/source-datastores/scan/weekly.png)
+![weekly](../../assets/source-datastores/operations/scan/step-23-weekly.png)
 
 **4. Monthly:** This option schedules the scan to run once a month on a specific day at a set time. You specify the day of the month and the time of day in UTC. If set to "On the 1st day of every 1 month(s), at 00:00 UTC," the scan will run on the first day of each month at midnight UTC.
 
-![monthly](../../assets/source-datastores/scan/monthly.png)
+![monthly](../../assets/source-datastores/operations/scan/step-24-monthly.png)
 
 **5. Advanced:** The advanced section for scheduling operations allows users to set up more complex and custom scheduling using Cron expressions. This option is particularly useful for defining specific times and intervals for scan operations with precision.
 
@@ -221,15 +221,15 @@ Users can define other specific schedules by adjusting the Cron expression. For 
 
 To define a custom schedule, enter the appropriate Cron expression in the "Custom Cron Schedule (UTC)" field before specifying the schedule name. This will allow for precise control over the timing of the scan operation, ensuring it runs exactly when needed according to your specific requirements.
 
-![advanced](../../assets/source-datastores/scan/advanced.png)
+![advanced](../../assets/source-datastores/operations/scan/step-25-advanced.png)
 
 **Step 3:** Define the **Schedule Name** to identify the scheduled operation at the running time.
 
-![schedule-name](../../assets/source-datastores/scan/schedule-name.png)
+![schedule-name](../../assets/source-datastores/operations/scan/step-26-schedule-name.png)
 
 **Step 4:** Click on the **Schedule** button to schedule your scan operation.
 
-![schedule](../../assets/source-datastores/scan/schedule.png)
+![schedule](../../assets/source-datastores/operations/scan/step-27-schedule.png)
 
 !!! note
     You will receive a notification when the scan operation is completed.
@@ -290,7 +290,7 @@ When the scan operation is completed, you will receive the notification and can 
 -   Operation Status
 -   Table
 
-![activity-operation](../../assets/source-datastores/scan/activity-operation.png)
+![activity-operation](../../assets/source-datastores/operations/scan/step-28-activity-operation.png)
 
 ### Activity Heatmap
 
@@ -299,7 +299,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 !!! tip 
     You can click on any of the squares from the Activity Heatmap to filter operations.
 
-![activity](../../assets/source-datastores/scan/activity.png)
+![activity](../../assets/source-datastores/operations/scan/step-29-activity.png)
 
 ### Operation Detail
 
@@ -307,7 +307,7 @@ The activity heatmap shown in the snippet below represents activity levels over 
 
 This status indicates that the scan operation is still running at the moment and is yet to be completed. A scan operation having a **running** status reflects the following details and actions:
 
-![running](../../assets/source-datastores/scan/running.png)
+![running](../../assets/source-datastores/operations/scan/step-30-running.png)
 
 | No. | Parameter                  | Interpretation                                                                                               |
 | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -333,7 +333,7 @@ This status indicates that the scan operation is still running at the moment and
 
 This status indicates that the scan operation was manually stopped before it could be completed. A scan operation having an **aborted** status reflects the following details and actions:
 
-![aborted-operation](../../assets/source-datastores/scan/aborted-operation.png)
+![aborted-operation](../../assets/source-datastores/operations/scan/step-31-aborted-operation.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -361,7 +361,7 @@ This status indicates that the scan operation was manually stopped before it cou
 
 This status signals that the scan operation encountered some issues and displays the logs that facilitate improved tracking of the blockers and issue resolution. A scan operation having a **completed with warning** status reflects the following details and actions:
 
-![warning](../../assets/source-datastores/scan/warning.png)
+![warning](../../assets/source-datastores/operations/scan/step-32-warning.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -388,7 +388,7 @@ This status signals that the scan operation encountered some issues and displays
 
 The summary section provides an overview of the **scan** operation upon successful completion. It includes:
 
-![success](../../assets/source-datastores/scan/success-2.png)
+![success](../../assets/source-datastores/operations/scan/step-33-success.png)
 
 | **No.** | **Parameter**             | **Interpretation**                                                                 |
 |---------|---------------------------|------------------------------------------------------------------------------------|
@@ -414,17 +414,17 @@ The summary section provides an overview of the **scan** operation upon successf
 
 Users can now hover over abbreviated metrics to see the full value for better clarity. For demonstration purposes, we are hovering over the **Records Scanned** field to display the full value.
 
-![records-scan-operation](../../assets/source-datastores/scan/records-scan-operation.png)
+![records-scan-operation](../../assets/source-datastores/operations/scan/step-34-records-scan-operation.png)
 
 #### Post Operation Details
 
 **Step 1:** Click on any of the successful **Scan Operations** from the list and hit the **Results** button.
 
-![result-scan-operation](../../assets/source-datastores/scan/result-scan-operation.png)
+![result-scan-operation](../../assets/source-datastores/operations/scan/step-35-result-scan-operation.png)
 
 **Step 2:** The **Scan Results** modal demonstrates the highlighted anomalies (if any) identified in your datastore with the following properties:
 
-![result](../../assets/source-datastores/scan/result.png)
+![result](../../assets/source-datastores/operations/scan/step-36-result.png)
 
 | Ref. | Scan Properties | Description |
 |------|-----------------|------------------------|
@@ -439,7 +439,7 @@ Users can now hover over abbreviated metrics to see the full value for better cl
 
 **Step 3:** By clicking the **dropdown** button next to the **All** button, you can filter anomalies based on their status.
 
-![drop-down](../../assets/source-datastores/scan/drop-down.png)
+![drop-down](../../assets/source-datastores/operations/scan/step-37-drop-down.png)
 
 ## API Payload Examples
 

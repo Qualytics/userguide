@@ -4,3 +4,26 @@ repos:
     hooks:
       - id: typos
         args: ["--config", ".typos.toml"]
+  - repo: local
+    hooks:
+      - id: mkdocs-warnings
+        name: mkdocs build (check for warnings)
+        entry: bash scripts/check-mkdocs-warnings.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
+      - id: broken-images
+        name: check for broken image references
+        entry: bash scripts/check-broken-images.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
+      - id: anchor-changes
+        name: detect anchor and URL changes
+        entry: bash scripts/check-anchor-changes.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true

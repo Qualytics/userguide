@@ -185,7 +185,7 @@ In the next section, we'll walk through the steps to access the Qualytics integr
 
 **Step 1:** Log in to your Qualytics account and click the **"Settings"** button on the left side panel of the interface.
 
-![settings](../../../assets/integrations/alerting/slack/settings-light.png)
+![settings](../../../assets/integrations/settings.png)
 
 **Step 2:** By default, Connections tab will open. Click on the **Integrations** tab.
 

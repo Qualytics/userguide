@@ -2,7 +2,7 @@ site_name: User Guide
 ## DEPLOYMENT URL
 site_url: https://userguide.qualytics.io/
 ## LOCAL URL
-#site_url: http://localhost:8001/userguide/
+# site_url: http://localhost:8001/userguide/
 site_description: User Guide for the Qualytics data quality platform
 site_author: Qualytics Team
 
@@ -12,8 +12,15 @@ edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2026 Qualytics
 
 validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
   links:
+    not_found: warn
+    anchors: warn
     absolute_links: relative_to_docs
+    unrecognized_links: warn
 
 # Page tree
 nav:
@@ -25,62 +32,105 @@ nav:
     - web-app.md
     - keyboard-shortcuts.md
     - Source Datastores:
-      - source-datastore/add-datastores/overview-of-a-datastore.md
-      - JDBC Datastores:
-        - source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
-        - source-datastore/add-datastores/athena.md
-        - source-datastore/add-datastores/bigquery.md
-        - source-datastore/add-datastores/databricks.md
-        - source-datastore/add-datastores/db2.md
-        - source-datastore/add-datastores/fabric-analytics.md
-        - source-datastore/add-datastores/hive.md
-        - source-datastore/add-datastores/maria-db.md
-        - source-datastore/add-datastores/microsoft-sql-server.md
-        - source-datastore/add-datastores/mysql.md
-        - source-datastore/add-datastores/oracle.md
-        - source-datastore/add-datastores/postgresql.md
-        - source-datastore/add-datastores/presto.md
-        - source-datastore/add-datastores/redshift.md
-        - source-datastore/add-datastores/snowflake.md
-        - source-datastore/add-datastores/synapse.md
-        - source-datastore/add-datastores/teradata.md
-        - source-datastore/add-datastores/timescale-db.md
-        - source-datastore/add-datastores/trino.md
-        - source-datastore/add-datastores/dremio.md
-      - DFS Datastores:
-        - source-datastore/add-datastores/overview-of-a-dfs-datastore.md
-        - source-datastore/add-datastores/amazon-s3.md
-        - source-datastore/add-datastores/azure-datalake-storage.md
-        - source-datastore/add-datastores/google-cloud-storage.md
-      - source-datastore/add-datastores/connections/overview-of-a-connection.md
+      - Overview: source-datastore/overview.md
+      - Datastore:
+        - Getting Started: source-datastore/add-datastores/overview-of-a-datastore.md
+        - JDBC:
+          - Introduction: source-datastore/add-datastores/overview-of-a-jdbc-datastore.md
+          - source-datastore/add-datastores/athena.md
+          - source-datastore/add-datastores/bigquery.md
+          - source-datastore/add-datastores/databricks.md
+          - source-datastore/add-datastores/db2.md
+          - source-datastore/add-datastores/fabric-analytics.md
+          - source-datastore/add-datastores/hive.md
+          - source-datastore/add-datastores/maria-db.md
+          - source-datastore/add-datastores/microsoft-sql-server.md
+          - source-datastore/add-datastores/mysql.md
+          - source-datastore/add-datastores/oracle.md
+          - source-datastore/add-datastores/postgresql.md
+          - source-datastore/add-datastores/presto.md
+          - source-datastore/add-datastores/redshift.md
+          - source-datastore/add-datastores/snowflake.md
+          - source-datastore/add-datastores/synapse.md
+          - source-datastore/add-datastores/teradata.md
+          - source-datastore/add-datastores/timescale-db.md
+          - source-datastore/add-datastores/trino.md
+          - source-datastore/add-datastores/dremio.md
+        - DFS:
+          - Introduction: source-datastore/add-datastores/overview-of-a-dfs-datastore.md
+          - Supported File Formats: source-datastore/add-datastores/dfs-supported-file-formats.md
+          - Filename Globbing: source-datastore/add-datastores/dfs-filename-globbing.md
+          - source-datastore/add-datastores/amazon-s3.md
+          - source-datastore/add-datastores/azure-datalake-storage.md
+          - source-datastore/add-datastores/google-cloud-storage.md
+        - Connection:
+          - Introduction: source-datastore/add-datastores/connections/introduction.md
+          - How It Works: source-datastore/add-datastores/connections/how-it-works.md
+          - Available Connectors: source-datastore/add-datastores/available-datastore-connectors.md
+        - Multiple-Schema:
+          - Introduction: source-datastore/add-datastores/multi-schema/overview.md
+          - How It Works: source-datastore/add-datastores/multi-schema/how-it-works.md
+          - Supported Connectors: source-datastore/add-datastores/multi-schema/supported-connectors.md
+          - Permissions: source-datastore/add-datastores/multi-schema/permissions.md
+          - FAQ: source-datastore/add-datastores/multi-schema/faq.md
+        - Managing:
+          - Add Datastore with new connection: source-datastore/add-datastores/connections/new-connection.md
+          - Add Datastore with existing connection: source-datastore/add-datastores/connections/existing-connection.md
+          - Edit Datastore: source-datastore/managing-datastores/edit-datastore.md
+          - Delete Datastore: source-datastore/managing-datastores/delete-datastore.md
+        - API: source-datastore/add-datastores/api.md
+        - FAQ: source-datastore/add-datastores/faq.md
       - Operations:
         - Sync: source-datastore/operations/sync.md
         - Profile: source-datastore/operations/profile.md
         - Scan: source-datastore/operations/scan.md
         - External Scan: source-datastore/operations/external-scan.md
-      - Datastore Settings:
-        - Settings Overview: source-datastore/datastore-settings/settings-overview.md
-        - Edit Datastore: source-datastore/datastore-settings/edit-datastore.md
-        - Link Enrichment: source-datastore/datastore-settings/link-enrichment.md
-        - Unlink Enrichment: source-datastore/datastore-settings/unlink-enrichment.md
-        - Quality Score Settings: source-datastore/datastore-settings/quality-score-settings.md
-        - Delete Datastore: source-datastore/datastore-settings/delete-datastore.md
-      - Navigation & Organization:
-        - Right Click Options: source-datastore/navigation-and-organization/right-click-options.md
-        - Assign Tags: source-datastore/navigation-and-organization/assign-tags.md
-        - Grouping:
-          - Overview: source-datastore/navigation-and-organization/grouping/overview.md
-          - Deep Dive:
-            - Introduction: source-datastore/navigation-and-organization/grouping/concepts/understanding-grouping.md
-            - Permissions: source-datastore/navigation-and-organization/grouping/concepts/permissions.md
-          - Managing:
-            - Create a Group: source-datastore/navigation-and-organization/grouping/managing-groups/create-a-group.md
-            - Edit a Group: source-datastore/navigation-and-organization/grouping/managing-groups/edit-a-group.md
-            - Delete a Group: source-datastore/navigation-and-organization/grouping/managing-groups/delete-a-group.md
-            - Assign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/assign-a-datastore.md
-            - Unassign a Group: source-datastore/navigation-and-organization/grouping/managing-groups/remove-a-datastore.md
-          - API: source-datastore/navigation-and-organization/grouping/concepts/grouping-api.md
-          - FAQ: source-datastore/navigation-and-organization/grouping/concepts/grouping-faq.md
+      - Enrichment Datastore:
+        - Getting Started: source-datastore/enrichment-datastore/getting-started.md
+        - Deep Dive:
+          - Introduction: source-datastore/enrichment-datastore/introduction.md
+          - Permissions: source-datastore/enrichment-datastore/permissions.md
+        - Managing:
+          - Link Enrichment Datastore: source-datastore/managing-datastores/link-enrichment.md
+          - Link on Datastore Creation: source-datastore/enrichment-datastore/link-during-creation.md
+          - Unlink Enrichment Datastore: source-datastore/managing-datastores/unlink-enrichment.md
+        - API: source-datastore/enrichment-datastore/api.md
+        - FAQ: source-datastore/enrichment-datastore/faq.md
+      - Data Quality Score:
+        - Getting Started: source-datastore/data-quality-score/getting-started.md
+        - Deep Dive:
+          - Introduction: source-datastore/data-quality-score/introduction.md
+          - Permissions: source-datastore/data-quality-score/permissions.md
+        - Managing:
+          - Settings: source-datastore/managing-datastores/quality-score-settings.md
+        - API: source-datastore/data-quality-score/api.md
+        - FAQ: source-datastore/data-quality-score/faq.md
+      - Grouping:
+        - Getting Started: source-datastore/managing-datastores/grouping/overview.md
+        - Deep Dive:
+          - Introduction: source-datastore/managing-datastores/grouping/concepts/understanding-grouping.md
+          - Permissions: source-datastore/managing-datastores/grouping/concepts/permissions.md
+        - Managing:
+          - Create a Group: source-datastore/managing-datastores/grouping/managing-groups/create-a-group.md
+          - Edit a Group: source-datastore/managing-datastores/grouping/managing-groups/edit-a-group.md
+          - Delete a Group: source-datastore/managing-datastores/grouping/managing-groups/delete-a-group.md
+          - Assign a Group: source-datastore/managing-datastores/grouping/managing-groups/assign-a-datastore.md
+          - Unassign a Group: source-datastore/managing-datastores/grouping/managing-groups/unassign-a-datastore.md
+          - Filter by Group: source-datastore/managing-datastores/grouping/managing-groups/filter-by-group.md
+        - API: source-datastore/managing-datastores/grouping/concepts/grouping-api.md
+        - FAQ: source-datastore/managing-datastores/grouping/concepts/grouping-faq.md
+      - Tags:
+        - Getting Started: source-datastore/tags/getting-started.md
+        - Deep Dive:
+          - Introduction: source-datastore/tags/introduction.md
+          - Permissions: source-datastore/tags/permissions.md
+        - Managing:
+          - Assign a Tag: source-datastore/tags/assign-tags.md
+          - Unassign a Tag: source-datastore/tags/unassign-tags.md
+        - API: source-datastore/tags/api.md
+        - FAQ: source-datastore/tags/faq.md
+      - Right Click Options: source-datastore/tips-and-tricks/right-click-options.md
+      - Keyboard Shortcuts: source-datastore/tips-and-tricks/keyboard-shortcuts.md
     - Enrichment Datastores:
       - Overview: enrichment/overview-of-an-enrichment-datastore.md
       - Table Types:
@@ -276,8 +326,30 @@ nav:
         - Overview: flows/overview-action.md
         - Operations: flows/operations.md
         - Anomaly: flows/anomaly.md
-        - Notifications: flows/notification.md
-        - Notification Tokens: flows/notification-tokens.md
+        - Notifications:
+          - Overview: flows/notifications/overview.md
+          - Message Variables: flows/notifications/message-variables.md
+          - In App:
+            - Overview: flows/notifications/in-app/overview.md
+            - API: flows/notifications/in-app/api.md
+            - FAQ: flows/notifications/in-app/faq.md
+          - Email:
+            - Overview: flows/notifications/email/overview.md
+            - API: flows/notifications/email/api.md
+            - FAQ: flows/notifications/email/faq.md
+          - Slack:
+            - Overview: flows/notifications/slack/overview.md
+            - API: flows/notifications/slack/api.md
+            - FAQ: flows/notifications/slack/faq.md
+          - Microsoft Teams:
+            - Overview: flows/notifications/microsoft-teams/overview.md
+            - API: flows/notifications/microsoft-teams/api.md
+            - FAQ: flows/notifications/microsoft-teams/faq.md
+          - PagerDuty:
+            - Overview: flows/notifications/pagerduty/overview.md
+            - API: flows/notifications/pagerduty/api.md
+            - FAQ: flows/notifications/pagerduty/faq.md
+          - FAQ: flows/notifications/faq.md
         - Workflow: flows/workflow.md
         - Ticketing: flows/ticketing.md
       - View and Track Flow Executions: flows/view-created-flows.md
@@ -354,6 +426,15 @@ nav:
           - Overview: settings/integrations/alerting/overview.md
           - Slack: settings/integrations/alerting/slack.md
           - Microsoft Teams: settings/integrations/alerting/msft_teams.md
+          - PagerDuty:
+            - Overview: settings/integrations/alerting/pagerduty/overview.md
+            - Deep Dive: settings/integrations/alerting/pagerduty/deep-dive.md
+            - API: settings/integrations/alerting/pagerduty/pagerduty-api.md
+            - FAQ: settings/integrations/alerting/pagerduty/pagerduty-faq.md
+            - Managing PagerDuty:
+              - Add Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/add-integration.md
+              - Edit Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/edit-integration.md
+              - Remove Integration: settings/integrations/alerting/pagerduty/managing-pagerduty/remove-integration.md
         - Ticketing: 
           - Overview: settings/integrations/ticketing/ticketing.md
           - Jira: settings/integrations/ticketing/jira.md
@@ -411,6 +492,10 @@ nav:
     - changelog-2024.md
     - changelog-2023.md
 
+extra_javascript:
+  - javascripts/os-detect.js
+  - javascripts/card-filter.js
+
 extra_css:
   - stylesheets/extra.css
 
@@ -464,6 +549,7 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
+  - pymdownx.keys
   - pymdownx.snippets
   - attr_list
   - md_in_html
@@ -482,11 +568,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - search:
-      exclude:
-        - components/anomaly-support/*
-        - components/comparators/*
-        - components/general-props/*
+  - search
+  - exclude:
+      glob:
         - components/anomaly-support/*
         - components/comparators/*
         - components/general-props/*
@@ -510,20 +594,38 @@ plugins:
         'container/computed-fields/transformation-types.md': 'fields/computed-fields/transformation-types.md'
         'container/computed-fields/computed-fields-details.md': 'fields/computed-fields/computed-fields-details.md'
         'container/computed-fields/add-computed-fields.md': 'fields/computed-fields/add-computed-fields.md'
+        # Notifications restructure
+        'flows/notification.md': 'flows/notifications/overview.md'
+        'flows/notification-tokens.md': 'flows/notifications/message-variables.md'
+        'flows/notifications/in-app.md': 'flows/notifications/in-app/overview.md'
+        'flows/notifications/email.md': 'flows/notifications/email/overview.md'
+        'flows/notifications/slack.md': 'flows/notifications/slack/overview.md'
+        'flows/notifications/microsoft-teams.md': 'flows/notifications/microsoft-teams/overview.md'
+        'flows/notifications/pagerduty.md': 'flows/notifications/pagerduty/overview.md'
         # Source Datastore reorganization
         'source-datastore/catalog.md': 'source-datastore/operations/sync.md'
         'source-datastore/operations/catalog.md': 'source-datastore/operations/sync.md'
         'source-datastore/profile.md': 'source-datastore/operations/profile.md'
         'source-datastore/scan.md': 'source-datastore/operations/scan.md'
         'source-datastore/external-scan.md': 'source-datastore/operations/external-scan.md'
-        'source-datastore/right-click-options.md': 'source-datastore/navigation-and-organization/right-click-options.md'
-        'source-datastore/assign-tags.md': 'source-datastore/navigation-and-organization/assign-tags.md'
-        'source-datastore/settings-overview.md': 'source-datastore/datastore-settings/settings-overview.md'
-        'source-datastore/edit-datastore.md': 'source-datastore/datastore-settings/edit-datastore.md'
-        'source-datastore/link-enrichment.md': 'source-datastore/datastore-settings/link-enrichment.md'
-        'source-datastore/unlink-enrichment.md': 'source-datastore/datastore-settings/unlink-enrichment.md'
-        'source-datastore/quality-score-settings.md': 'source-datastore/datastore-settings/quality-score-settings.md'
-        'source-datastore/delete-datastore.md': 'source-datastore/datastore-settings/delete-datastore.md'
+        'source-datastore/right-click-options.md': 'source-datastore/tips-and-tricks/right-click-options.md'
+        'source-datastore/assign-tags.md': 'source-datastore/tags/assign-tags.md'
+        'source-datastore/settings-overview.md': 'source-datastore/managing-datastores/edit-datastore.md'
+        'source-datastore/edit-datastore.md': 'source-datastore/managing-datastores/edit-datastore.md'
+        'source-datastore/link-enrichment.md': 'source-datastore/managing-datastores/link-enrichment.md'
+        'source-datastore/unlink-enrichment.md': 'source-datastore/managing-datastores/unlink-enrichment.md'
+        'source-datastore/quality-score-settings.md': 'source-datastore/managing-datastores/quality-score-settings.md'
+        'source-datastore/delete-datastore.md': 'source-datastore/managing-datastores/delete-datastore.md'
+        # Old paths redirect to new managing-datastores location
+        'source-datastore/navigation-and-organization/right-click-options.md': 'source-datastore/tips-and-tricks/right-click-options.md'
+        'source-datastore/navigation-and-organization/assign-tags.md': 'source-datastore/tags/assign-tags.md'
+        'source-datastore/managing-datastores/assign-tags.md': 'source-datastore/tags/assign-tags.md'
+        'source-datastore/datastore-settings/settings-overview.md': 'source-datastore/managing-datastores/edit-datastore.md'
+        'source-datastore/datastore-settings/edit-datastore.md': 'source-datastore/managing-datastores/edit-datastore.md'
+        'source-datastore/datastore-settings/link-enrichment.md': 'source-datastore/managing-datastores/link-enrichment.md'
+        'source-datastore/datastore-settings/unlink-enrichment.md': 'source-datastore/managing-datastores/unlink-enrichment.md'
+        'source-datastore/datastore-settings/quality-score-settings.md': 'source-datastore/managing-datastores/quality-score-settings.md'
+        'source-datastore/datastore-settings/delete-datastore.md': 'source-datastore/managing-datastores/delete-datastore.md'
         # Container Operations reorganization
         'container/enrichment-operation/export-operation.md': 'container/operations/export-operation.md'
         'container/enrichment-operation/materialize-operation.md': 'container/operations/materialize-operation.md'
@@ -553,10 +655,16 @@ plugins:
         'add-datastores/amazon-s3.md': 'source-datastore/add-datastores/amazon-s3.md'
         'add-datastores/azure-datalake-storage.md': 'source-datastore/add-datastores/azure-datalake-storage.md'
         'add-datastores/google-cloud-storage.md': 'source-datastore/add-datastores/google-cloud-storage.md'
-        'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/overview-of-a-connection.md'
+        'connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/introduction.md'
+        'source-datastore/add-datastores/connections/overview-of-a-connection.md': 'source-datastore/add-datastores/connections/introduction.md'
+        # Multi-schema concepts folder removed
+        'source-datastore/add-datastores/multi-schema/concepts/how-it-works.md': 'source-datastore/add-datastores/multi-schema/how-it-works.md'
+        'source-datastore/add-datastores/multi-schema/concepts/supported-connectors.md': 'source-datastore/add-datastores/multi-schema/supported-connectors.md'
+        'source-datastore/add-datastores/multi-schema/concepts/multi-schema-permissions.md': 'source-datastore/add-datastores/multi-schema/permissions.md'
+        'source-datastore/add-datastores/multi-schema/concepts/multi-schema-faq.md': 'source-datastore/add-datastores/multi-schema/faq.md'
         # Catalog to Sync redirect
         'source-datastore/sync.md': 'source-datastore/operations/sync.md'
-        # AI integrations redirects (from main)
+        # AI integrations redirects
         'settings/integrations/ai/mcp.md': 'settings/integrations/ai-and-agents/deep-dive/mcp.md'
         'settings/integrations/ai/agentic.md': 'settings/integrations/ai-and-agents/deep-dive/agentic.md'
         'settings/integrations/ai/mcp-quickstart.md': 'settings/integrations/ai-and-agents/managing/add-agent-q-integration.md'

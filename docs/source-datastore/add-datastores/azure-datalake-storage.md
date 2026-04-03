@@ -500,6 +500,23 @@ This section provides sample payloads for creating the Azure Datalake Storage da
         "connection_id": "connection-id"
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type abfs \
+        --name "your_connection_name" \
+        --uri "abfss://<container>@<account_name>.dfs.core.windows.net" \
+        --access-key ${AZURE_ACCOUNT_NAME} \
+        --secret-key ${AZURE_ACCESS_KEY}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -555,6 +572,24 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": "connection-id"
     }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type abfs \
+        --name "your_connection_name" \
+        --uri "abfss://<container>@<account_name>.dfs.core.windows.net" \
+        --access-key ${AZURE_ACCOUNT_NAME} \
+        --secret-key ${AZURE_ACCESS_KEY}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /your_enrichment_path \
+        --enrichment-only
     ```
 
 ### Link an Enrichment Datastore to a Source Datastore

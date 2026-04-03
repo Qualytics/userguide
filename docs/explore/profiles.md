@@ -160,7 +160,7 @@ A modal window will appear, providing the options to create the tag. Enter the r
 
 ![create](../assets/explore/profiles/create-light.png)
 
-For more information on creating tags, refer to the [Add Tag section](../tags/overview-of-tag.md/#add-tag).
+For more information on creating tags, refer to the [Add Tag section](../tags/add-tag.md).
 
 ### Filter and Sort
 
