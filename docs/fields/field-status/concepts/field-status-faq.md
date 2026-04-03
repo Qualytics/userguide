@@ -42,6 +42,7 @@ Masked field values are automatically hidden at every stage of data processing:
 
 - **Data Preview** — values are obfuscated; users with Editor permission can reveal them with the "Show masked values" button
 - **Anomaly Source Records** — values are obfuscated by default; users with Editor permission can reveal them per anomaly (all source records for the anomaly are revealed together)
+- **Quality Check Dry Runs** — source record values are unconditionally obfuscated; there is no inline reveal
 - **Field Profile Histograms** — chart values are obfuscated for masked fields
 - **Anomaly Assertion Context** — values in anomaly check details are unconditionally obfuscated; there is no inline reveal
 - **Export Operation (Field Profiles)** — histogram bucket values are obfuscated in the `_field_profiles_export` file written to the enrichment datastore

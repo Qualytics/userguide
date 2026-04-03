@@ -184,10 +184,13 @@ nav:
           - Introduction: fields/field-status/concepts/understanding-field-status.md
           - Status Types: fields/field-status/concepts/field-status-types.md
           - Lifecycle: fields/field-status/concepts/field-status-lifecycle.md
+          - Field Masking: fields/field-status/concepts/field-masking.md
           - Merge Fields: fields/field-status/concepts/merge-fields.md
         - Managing:
           - Filtering by Status: fields/field-status/managing-field-status/filtering-by-status.md
           - Mask a Field: fields/field-status/managing-field-status/mask-a-field.md
+          - Unmask a Field: fields/field-status/managing-field-status/unmask-a-field.md
+          - Audit Log: fields/field-status/managing-field-status/masking-audit-log.md
           - Exclude a Field: fields/field-status/managing-field-status/exclude-a-field.md
           - Restore a Field: fields/field-status/managing-field-status/restore-a-field.md
           - Delete a Field: fields/field-status/managing-field-status/delete-a-field.md

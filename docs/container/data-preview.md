@@ -64,7 +64,7 @@ The **Download Records** feature in Qualytics allows users to easily export all 
 
 ## Masked Fields in Data Preview
 
-If a container contains [masked fields](../fields/field-status/managing-field-status/mask-a-field.md), their values are obfuscated in the data preview grid by default.
+If a container contains [masked fields](../fields/field-status/concepts/field-masking.md), their values are obfuscated in the data preview grid by default.
 
 Users with **Editor** permission can reveal all masked values for the current view by clicking the **Show masked values** button that appears in the toolbar when masked fields are present. Every reveal action is recorded in the **masking audit log** with the user identity, timestamp, IP address, and the specific fields accessed — this log is reviewable by Administrators.
 

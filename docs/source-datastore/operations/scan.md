@@ -151,6 +151,18 @@ If you need to **download more records**, increase this value **before running t
 
 ![record-limit](../../assets/source-datastores/operations/scan/step-18-record-limit.png)
 
+## Field Masking and Scanning
+
+Scan operations run normally on [masked fields](../../fields/field-status/concepts/field-masking.md) — masking does not affect anomaly detection or quality check execution. The platform evaluates all checks using the actual source data.
+
+However, when scan results are displayed, masked field values are obfuscated in the following surfaces:
+
+- **Anomaly Source Records** — values are hidden by default; users with Editor permission can reveal them per anomaly
+- **Anomaly Assertion Context** — values embedded in anomaly check details are unconditionally obfuscated
+- **Enrichment Datastore** — source record values written during a [Materialize operation](../../container/operations/materialize-operation.md#field-masking-and-materialize) are obfuscated for masked fields
+
+For more details, see [Masked Fields in Source Records](../../anomalies/source-record.md#masked-fields-in-source-records).
+
 ## Run Instantly
 
 Click on the **Run Now** button to perform the scan operation immediately.
