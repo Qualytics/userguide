@@ -328,6 +328,24 @@ This section provides a sample payload for creating a datastore. Replace the pla
             "connection_id": connection-id
         }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type trino \
+        --name "your_connection_name" \
+        --host ${TRINO_HOST} \
+        --port 8080 \
+        --username ${TRINO_USER} \
+        --password ${TRINO_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_catalog \
+        --schema default
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -369,6 +387,25 @@ This section provides a sample payload for creating an enrichment datastore. Rep
             "connection_id": connection-id
         }
     ``` 
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type trino \
+        --name "your_connection_name" \
+        --host ${TRINO_HOST} \
+        --port 8080 \
+        --username ${TRINO_USER} \
+        --password ${TRINO_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_catalog \
+        --schema your_enrichment_schema \
+        --enrichment-only
+    ```
 
 ### Linking Datastore to an Enrichment Datastore through API
 

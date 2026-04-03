@@ -389,6 +389,23 @@ This section provides sample payloads for creating the Amazon S3 datastore. Repl
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type s3 \
+        --name "your_connection_name" \
+        --uri "s3://<bucket_name>" \
+        --access-key ${AWS_ACCESS_KEY} \
+        --secret-key ${AWS_SECRET_KEY}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -423,6 +440,24 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": connection-id
     }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type s3 \
+        --name "your_connection_name" \
+        --uri "s3://<bucket_name>" \
+        --access-key ${AWS_ACCESS_KEY} \
+        --secret-key ${AWS_SECRET_KEY}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database . \
+        --schema /your_enrichment_path \
+        --enrichment-only
     ```
 
 ### Link an Enrichment Datastore to a Source Datastore

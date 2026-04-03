@@ -316,6 +316,24 @@ This section provides a sample payload for creating a datastore. Replace the pla
         "connection_id": connection_id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type teradata \
+        --name "your_connection_name" \
+        --host ${TERADATA_HOST} \
+        --port 1025 \
+        --username ${TERADATA_USER} \
+        --password ${TERADATA_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --schema dbc
+    ```
+
 ### Link an Enrichment Datastore to a Source Datastore
 
 **Endpoint Patch:**

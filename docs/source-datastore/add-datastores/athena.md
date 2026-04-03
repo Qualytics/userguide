@@ -406,6 +406,25 @@ This section provides a sample payload for creating an Athena datastore. Replace
         "connection": connection_id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type athena \
+        --name "your_connection_name" \
+        --host athena.us-east-1.amazonaws.com \
+        --port 443 \
+        --username ${ATHENA_USER} \
+        --password ${ATHENA_PASSWORD} \
+        --parameters '{"output": "s3://<bucket_name>"}'
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database AwsDataCatalog \
+        --schema athena_database
+    ```
 
 ### Link an Enrichment Datastore to a Source Datastore
 
