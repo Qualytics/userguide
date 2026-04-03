@@ -6,6 +6,7 @@ MyApp = "MyApp"
 OpenAPIv3 = "OpenAPIv3"
 AKS = "AKS"
 IST = "IST"
+BCBS = "BCBS"
 CREATEIN = "CREATEIN"
 ALTERIN = "ALTERIN"
 
