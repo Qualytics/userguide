@@ -13,7 +13,7 @@ All steps in the multi-schema workflow require the **Manager** role (or higher: 
 | Validate Schemas | Manager | Test connectivity for selected schemas before creation. |
 | Bulk Create Datastores | Manager | Create multiple datastores from selected schemas. |
 | Create Group (inline) | Manager | Create a new datastore group during the bulk creation flow. |
-| Link Enrichment (after creation) | Member | Link an enrichment datastore to each created datastore individually. |
+| Link Enrichment (after creation) | Member + Editor team permission | Link an enrichment datastore to each created datastore individually. |
 | Unlink Enrichment | Admin | Remove the enrichment link from a datastore. |
 
 ## Team Permissions
@@ -47,7 +47,17 @@ graph TD
     G -->|No| H[Creation fails:<br/>AuthUnauthorizedException]
     G -->|Yes| I[Datastores created successfully]
     I --> J{Link enrichment?}
-    J -->|Yes| K[Requires Member role]
-    J -->|No| L[Done]
-    K --> L
+    J -->|Yes| K{Member role +<br/>Editor team permission?}
+    K -->|No| M[Link fails:<br/>AuthUnauthorizedException]
+    K -->|Yes| L[Enrichment linked]
+    J -->|No| L
+    L --> N[Done]
 ```
+
+## UI Behavior Without Permission
+
+| Scenario | What the User Sees |
+| :--- | :--- |
+| User is below Manager role | The multi-schema options do not appear in the Add Source Datastore flow. The user can only create single datastores. |
+| User has Manager role but no Editor team permission | Bulk creation fails with an authorization error after clicking Finish. |
+| User has Manager role but is not in specified teams | Bulk creation fails — the user must be a member of at least one of the teams specified in the request. |

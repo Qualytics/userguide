@@ -1,8 +1,8 @@
 # Available Datastore Connectors
 
-Qualytics provides **22 verified connectors** to integrate with your data platforms — 19 JDBC connectors for relational databases and 3 DFS connectors for distributed file systems and cloud object storage.
+Qualytics provides verified connectors to integrate with your data platforms — JDBC connectors for relational databases and DFS connectors for distributed file systems and cloud object storage.
 
-Each connector page contains step-by-step instructions for adding a source datastore, configuring connection properties, and linking an enrichment datastore.
+Each connector page contains step-by-step instructions for adding a source datastore and configuring connection properties.
 
 !!! info "Enrichment Support"
     Want to check which connectors can be used as enrichment datastores? See the [Supported Enrichment Datastores](../../enrichment-support/supported-enrichment-datastores.md){:target="_blank"} page.
@@ -10,6 +10,9 @@ Each connector page contains step-by-step instructions for adding a source datas
 ## JDBC Connectors
 
 JDBC (Java Database Connectivity) connectors allow Qualytics to connect to relational databases. Data is organized as **Tables in a Schema** and accessed using standard SQL.
+
+!!! info "Multi-Schema Discovery"
+    The **Multi-Schema Discovery** column indicates whether the connector supports discovering and creating multiple datastores from different schemas in a single operation. See the [Multiple-Schema](multi-schema/overview.md){:target="_blank"} documentation for details.
 
 <div class="connector-table" markdown>
 
@@ -43,10 +46,10 @@ DFS (Distributed File System) connectors allow Qualytics to connect to cloud obj
 
 <div class="connector-table" markdown>
 
-| No. | Connector | Logo | Multi-Schema Discovery |
-| :--- | :--- | :---: | :---: |
-| 1. | [Amazon S3](amazon-s3.md) | ![S3](../../assets/shared/connector-logos/logo-s3.svg){ width="24" } | :material-close-circle-outline:{ .lg title="Not supported" } |
-| 2. | [Azure Datalake Storage (ABFS)](azure-datalake-storage.md) | ![ABFS](../../assets/shared/connector-logos/logo-abfs.svg){ width="24" } | :material-close-circle-outline:{ .lg title="Not supported" } |
-| 3. | [Google Cloud Storage](google-cloud-storage.md) | ![GCS](../../assets/shared/connector-logos/logo-gcs.svg){ width="24" } | :material-close-circle-outline:{ .lg title="Not supported" } |
+| No. | Connector | Logo |
+| :--- | :--- | :---: |
+| 1. | [Amazon S3](amazon-s3.md) | ![S3](../../assets/shared/connector-logos/logo-s3.svg){ width="24" } |
+| 2. | [Azure Datalake Storage (ABFS)](azure-datalake-storage.md) | ![ABFS](../../assets/shared/connector-logos/logo-abfs.svg){ width="24" } |
+| 3. | [Google Cloud Storage](google-cloud-storage.md) | ![GCS](../../assets/shared/connector-logos/logo-gcs.svg){ width="24" } |
 
 </div>

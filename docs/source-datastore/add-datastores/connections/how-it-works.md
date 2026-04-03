@@ -12,6 +12,9 @@ Qualytics supports three connection types, each designed for a different class o
 | **DFS** | Distributed file systems and cloud object storage. | Amazon S3, Azure Data Lake Storage (ABFS), Google Cloud Storage |
 | **Native** | Platform-native integrations that bypass JDBC for optimized access. | Databricks Unity Catalog |
 
+!!! note "Native vs. JDBC"
+    Databricks is available as both a **JDBC** and **Native** connector. The JDBC connector uses standard JDBC drivers to query data. The Native connector uses the Databricks Unity Catalog API directly, providing access to catalog metadata and schema discovery without going through JDBC — this is typically faster for schema operations and supports Unity Catalog-specific features.
+
 ## Connection vs. Datastore
 
 A connection and a datastore serve different roles:
@@ -62,22 +65,37 @@ No data is written to the database during this step. The connection and datastor
 
 ### Editing a Connection
 
-Connection properties can be updated through the **Settings** menu. When credentials change (e.g., password rotation), the update triggers a re-verification through the dataplane before persisting.
+Connection properties can be updated through the [Manage Connections](../../../settings/connections/manage-connections.md){:target="_blank"} page in Settings. When credentials change (e.g., password rotation), the update triggers a re-verification through the dataplane before persisting.
 
 !!! warning
     Editing a connection affects **all datastores** that share it. If you change the host or credentials, every datastore using that connection will use the updated values.
 
 ### Deleting a Connection
 
-Deleting a connection **cascades to all datastores** that use it. All associated datastores, containers, checks, and anomalies are permanently removed.
+A connection can only be deleted if it has **no datastores associated** with it. If any datastores still use the connection, the deletion will fail with a `409 Conflict` error — you must delete or reassign those datastores first.
+
+!!! note "Orphaned Connections"
+    Connections without any associated datastores remain in the system until explicitly deleted. They are visible in the [Manage Connections](../../../settings/connections/manage-connections.md){:target="_blank"} page and can be reused when creating new datastores.
+
+## Network Requirements
+
+Qualytics requires **direct network access** from the dataplane to your data infrastructure. Consider the following:
+
+- **Firewall rules** — The dataplane IP address must be allowed to connect to your database or storage endpoint. Contact your Qualytics administrator for the dataplane IP range.
+- **Private endpoints** — For databases in private VPCs, configure VPC peering, private endpoints, or a VPN tunnel between the dataplane and your network.
+- **IP whitelisting** — If your database requires IP whitelisting, add the dataplane IP addresses to the allowlist.
+- **Port access** — Ensure the required port is open (e.g., 5432 for PostgreSQL, 443 for Snowflake/BigQuery/S3).
 
 ## Secrets Management
 
-Qualytics supports integration with external secrets managers (such as HashiCorp Vault) to avoid storing credentials directly. Instead of entering a password, you configure a vault integration and reference secrets using the `${key}` syntax in any connection property.
+Qualytics supports integration with external secrets managers to avoid storing credentials directly. Instead of entering a password, you configure a secrets manager integration and reference secrets using the `${key}` syntax in any connection property.
+
+!!! note "Generic HTTP-Based Integration"
+    The secrets management integration is **not limited to HashiCorp Vault**. It works with any secrets manager that exposes a REST API with a login endpoint (POST), token-based authentication, and a secret retrieval endpoint (GET). HashiCorp Vault is the most common provider, but compatible alternatives include AWS Secrets Manager (via API Gateway), Azure Key Vault (via REST API), and CyberArk (via REST).
 
 ### How It Works
 
-1. **Authentication**: Qualytics sends a POST request to your vault's login URL with the provided credentials payload.
+1. **Authentication**: Qualytics sends a POST request to your secrets manager's login URL with the provided credentials payload.
 2. **Token extraction**: The authentication token is extracted from the response using a JSONPath expression.
 3. **Secret retrieval**: A GET request is sent to the secret URL with the token in the configured header.
 4. **Variable substitution**: The retrieved secrets are used to replace `${key}` references in connection properties at runtime.
@@ -98,11 +116,11 @@ Qualytics supports integration with external secrets managers (such as HashiCorp
 
 ## Authentication Methods
 
-Different connectors support different authentication methods:
+Different connectors support different authentication methods. **Basic** (username and password) is the default method available on all JDBC connectors. The other methods are additional options for specific connectors:
 
 | Method | Description | Connectors |
 | :--- | :--- | :--- |
-| **Basic** | Username and password. | All JDBC connectors |
+| **Basic** | Username and password. Default for all JDBC connectors. | All JDBC connectors |
 | **Keypair** | Private key authentication. | Snowflake |
 | **Service Principal** | Azure AD service principal with tenant ID and client secret. | Azure SQL, Synapse, Fabric, Azure Data Lake Storage |
 | **OAuth M2M** | Machine-to-machine OAuth flow. | Databricks |
@@ -111,4 +129,6 @@ Different connectors support different authentication methods:
 
 ## Credential Security
 
-All connection credentials are encrypted at rest using AES-GCM encryption. Sensitive fields (passwords, access keys, secret keys, vault credentials) are stored using encrypted column types and are only decrypted when needed for dataplane communication.
+All connection credentials are encrypted at rest using **AES-GCM encryption**. Sensitive fields (passwords, access keys, secret keys, vault credentials) are stored using encrypted column types in the controlplane database.
+
+Credentials are **decrypted only in the controlplane** when preparing a dataplane operation — they are then transmitted securely to the dataplane over an internal TLS-encrypted channel. The dataplane does not persist credentials; it uses them only for the duration of the operation (Sync, Profile, Scan, or Test Connection).

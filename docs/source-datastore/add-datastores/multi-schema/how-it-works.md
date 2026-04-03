@@ -83,15 +83,12 @@ Before creating the datastores, click **Test Connection** to validate connectivi
 
 After configuring the source datastores, an optional second step lets you link all newly created datastores to a single enrichment datastore. The enrichment datastore stores analyzed results, anomalies, and additional metadata.
 
-You can:
-
-- **Use an existing enrichment datastore**: Select a previously created enrichment datastore.
-- **Create a new enrichment datastore**: Configure a new enrichment datastore during the same flow.
+You can select an existing enrichment datastore from the dropdown to link all newly created datastores to it.
 
 !!! info
-    All source datastores created in the batch will be linked to the same enrichment datastore. The enrichment prefix is shared across all of them.
+    All source datastores created in the batch will be linked to the same enrichment datastore. Each datastore receives its own **unique enrichment prefix** derived from the name template (e.g., `_prod_public`, `_prod_sales`), so there are no table name conflicts in the enrichment target.
 
-For step-by-step instructions on adding a datastore, refer to the [Add Source Datastore](../overview-of-a-jdbc-datastore.md) documentation.
+For step-by-step instructions on adding a datastore, refer to the [Add Datastore with a New Connection](../connections/new-connection.md){:target="_blank"} documentation.
 
 ## What Happens After Creation
 

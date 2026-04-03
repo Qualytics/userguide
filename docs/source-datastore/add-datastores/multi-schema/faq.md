@@ -8,7 +8,7 @@ It is a feature that allows you to discover and select multiple schemas from a s
 
 ### Which connectors support multi-schema creation?
 
-All JDBC-based connectors support multi-schema creation. DFS-based datastores (Amazon S3, Azure Datalake Storage, Google Cloud Storage) do not support it because they do not use a catalog/schema hierarchy. See the full list in [Supported Connectors](supported-connectors.md).
+Most JDBC-based connectors support multi-schema creation. **Fabric Analytics**, **Presto**, and **Teradata** do not support it. DFS-based datastores (Amazon S3, Azure Datalake Storage, Google Cloud Storage) do not support it because they do not use a catalog/schema hierarchy. See the full list in [Supported Connectors](supported-connectors.md){:target="_blank"}.
 
 ### Can I use multi-schema creation with an existing connection?
 
@@ -28,7 +28,7 @@ No. There is no bulk delete option tied to the multi-schema creation. Each datas
 
 ### Can I use multi-schema creation for enrichment datastores?
 
-Yes. You can set `enrichment_only: true` in the bulk creation request to create enrichment datastores instead of source datastores. This is useful when you need to set up enrichment across multiple schemas from the same connection.
+Yes, through the API. You can set `enrichment_only: true` in the bulk creation request to create enrichment datastores instead of source datastores. This option is not available in the UI — only via the [Datastore API](../api.md#multi-schema-creation){:target="_blank"}.
 
 ### A new schema was added to my database. How do I add it to Qualytics?
 
@@ -207,4 +207,4 @@ This usually indicates a permissions issue. Verify that:
 
 ### What happens to the datastores if the connection is deleted?
 
-Deleting a connection does not delete the datastores that were created from it. The datastores will lose their connection reference and you will need to reconfigure a connection for them to remain operational.
+A connection can only be deleted if it has **no datastores associated** with it. If datastores still use the connection, the deletion will fail with a `409 Conflict` error. You must delete or reassign those datastores first.

@@ -4,17 +4,19 @@ Source Datastores are the foundation of data quality management in Qualytics. A 
 
 In this section you will find:
 
-- **Datastore** — Learn the fundamentals, browse supported connectors (JDBC and DFS), set up connections, and use multi-schema creation to onboard multiple schemas at once. Add, edit, and delete datastores.
-- **Operations** — Run Sync, Profile, and Scan operations to catalog your data, infer quality checks, and detect anomalies. Run External Scans against uploaded files.
+- **Datastore** — Learn the fundamentals (JDBC and DFS), set up connections, browse supported connectors, use multi-schema creation, and add, edit, or delete datastores.
+- **Operations** — Run Sync, Profile, Scan, and External Scan operations to catalog your data, infer quality checks, and detect anomalies.
 - **Enrichment Datastore** — Link an enrichment datastore to persist scan results, anomalies, source record examples, and remediation data to your own infrastructure.
 - **Data Quality Score** — Configure scoring weights, decay periods, and thresholds to measure and track the health of your data over time.
 - **Grouping** — Organize datastores into custom groups by environment, team, domain, or priority for easier navigation in the tree view.
-- **Tags** — Assign tags to datastores to categorize, filter operations, and streamline workflows across your data sources.
+- **Tags** — Assign tags to datastores to categorize, filter operations by tag, and influence quality score weighting.
 - **Tips & Tricks** — Discover right-click options and keyboard shortcuts to navigate and manage datastores faster.
 
 ---
 
 ## Datastore
+
+### Understanding
 
 <div class="grid cards" markdown>
 
@@ -42,6 +44,12 @@ In this section you will find:
 
     [:octicons-arrow-right-24: Understanding DFS](add-datastores/overview-of-a-dfs-datastore.md)
 
+</div>
+
+### Connections
+
+<div class="grid cards" markdown>
+
 -   :material-connection:{ .lg .middle } **Connection Introduction**
 
     ---
@@ -50,7 +58,15 @@ In this section you will find:
 
     [:octicons-arrow-right-24: Introduction](add-datastores/connections/introduction.md)
 
--   :material-view-list:{ .lg .middle } **Available Connectors**
+-   :material-cog-transfer-outline:{ .lg .middle } **How Connections Work**
+
+    ---
+
+    Connection lifecycle, authentication methods, secrets management, and network requirements.
+
+    [:octicons-arrow-right-24: How It Works](add-datastores/connections/how-it-works.md)
+
+-   :material-format-list-checks:{ .lg .middle } **Available Connectors**
 
     ---
 
@@ -58,13 +74,11 @@ In this section you will find:
 
     [:octicons-arrow-right-24: View Connectors](add-datastores/available-datastore-connectors.md)
 
--   :material-information-outline:{ .lg .middle } **How Connections Work**
+</div>
 
-    ---
+### Multiple-Schema
 
-    Understand the connection lifecycle, authentication flow, and secrets management.
-
-    [:octicons-arrow-right-24: How It Works](add-datastores/connections/how-it-works.md)
+<div class="grid cards" markdown>
 
 -   :material-layers-outline:{ .lg .middle } **Multiple-Schema Introduction**
 
@@ -74,19 +88,19 @@ In this section you will find:
 
     [:octicons-arrow-right-24: Introduction](add-datastores/multi-schema/overview.md)
 
--   :material-information-outline:{ .lg .middle } **How Multi-Schema Works**
+-   :material-sitemap-outline:{ .lg .middle } **How Multi-Schema Works**
 
     ---
 
-    Understand the multi-schema creation flow, schema discovery, and name templates.
+    Schema discovery flow, name templates, catalog/schema hierarchy, and validation.
 
     [:octicons-arrow-right-24: How It Works](add-datastores/multi-schema/how-it-works.md)
 
--   :material-view-list:{ .lg .middle } **Supported Connectors (Multi-Schema)**
+-   :material-database-check-outline:{ .lg .middle } **Supported Connectors (Multi-Schema)**
 
     ---
 
-    See which connectors support multi-schema discovery and their catalog/schema mappings.
+    Which connectors support multi-schema discovery and their catalog/schema mappings.
 
     [:octicons-arrow-right-24: Supported Connectors](add-datastores/multi-schema/supported-connectors.md)
 
@@ -94,7 +108,7 @@ In this section you will find:
 
     ---
 
-    Understand the roles and permissions required for multi-schema creation.
+    Roles and team permissions required for multi-schema creation and validation.
 
     [:octicons-arrow-right-24: Permissions](add-datastores/multi-schema/permissions.md)
 
@@ -102,9 +116,15 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about multi-schema source datastore creation.
+    Connectors, enrichment linking, naming, batch limits, and troubleshooting.
 
     [:octicons-arrow-right-24: FAQ](add-datastores/multi-schema/faq.md)
+
+</div>
+
+### Managing
+
+<div class="grid cards" markdown>
 
 -   :material-plus-circle:{ .lg .middle } **Add with New Connection**
 
@@ -142,7 +162,7 @@ In this section you will find:
 
     ---
 
-    Manage datastores programmatically — create, update, delete, bulk create, and more.
+    Create, update, delete, bulk create, link enrichment, and manage datastores programmatically.
 
     [:octicons-arrow-right-24: API](add-datastores/api.md)
 
@@ -150,7 +170,7 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about source datastores.
+    Connections, creating, managing, enrichment, operations, and troubleshooting.
 
     [:octicons-arrow-right-24: FAQ](add-datastores/faq.md)
 
@@ -206,7 +226,7 @@ In this section you will find:
 
     ---
 
-    Get started with enrichment datastores and understand their role in data quality.
+    Overview of enrichment datastores, supported connectors, and all managing pages.
 
     [:octicons-arrow-right-24: Getting Started](enrichment-datastore/getting-started.md)
 
@@ -214,7 +234,7 @@ In this section you will find:
 
     ---
 
-    Learn what enrichment datastores are and why they matter.
+    How enrichment works, settings, remediation strategies, side effects, and sharing.
 
     [:octicons-arrow-right-24: Introduction](enrichment-datastore/introduction.md)
 
@@ -222,7 +242,7 @@ In this section you will find:
 
     ---
 
-    Understand the roles and permissions required for enrichment datastores.
+    Roles and team permissions for linking, unlinking, and configuring enrichment.
 
     [:octicons-arrow-right-24: Permissions](enrichment-datastore/permissions.md)
 
@@ -230,7 +250,7 @@ In this section you will find:
 
     ---
 
-    Link a source datastore to an enrichment datastore.
+    Link a source datastore to an enrichment datastore through the Settings menu or tree footer.
 
     [:octicons-arrow-right-24: Link](managing-datastores/link-enrichment.md)
 
@@ -246,15 +266,23 @@ In this section you will find:
 
     ---
 
-    Remove the link between a source datastore and its enrichment datastore.
+    Remove the enrichment link from a source datastore.
 
     [:octicons-arrow-right-24: Unlink](managing-datastores/unlink-enrichment.md)
+
+-   :material-view-list:{ .lg .middle } **Supported Enrichment Datastores**
+
+    ---
+
+    Which connectors support enrichment and their write-back capabilities.
+
+    [:octicons-arrow-right-24: Supported Connectors](enrichment-support/supported-enrichment-datastores.md)
 
 -   :material-api:{ .lg .middle } **Enrichment API**
 
     ---
 
-    API endpoints for enrichment datastore operations.
+    Link, unlink, and update enrichment settings programmatically.
 
     [:octicons-arrow-right-24: API](enrichment-datastore/api.md)
 
@@ -262,7 +290,7 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about enrichment datastores.
+    Remediation strategies, prefix conflicts, storage, re-linking, and troubleshooting.
 
     [:octicons-arrow-right-24: FAQ](enrichment-datastore/faq.md)
 
@@ -278,7 +306,7 @@ In this section you will find:
 
     ---
 
-    Get started with data quality scores and understand how they are calculated.
+    Overview of quality scores, dimensions, settings, weighting, and all managing pages.
 
     [:octicons-arrow-right-24: Getting Started](data-quality-score/getting-started.md)
 
@@ -286,7 +314,7 @@ In this section you will find:
 
     ---
 
-    Understand the concepts behind data quality scoring in Qualytics.
+    Score hierarchy, the 8 dimensions, decay period, weights, independent settings, and recalculations.
 
     [:octicons-arrow-right-24: Introduction](data-quality-score/introduction.md)
 
@@ -294,7 +322,7 @@ In this section you will find:
 
     ---
 
-    Understand the roles and permissions required for quality score settings.
+    Roles and team permissions for viewing scores and editing settings.
 
     [:octicons-arrow-right-24: Permissions](data-quality-score/permissions.md)
 
@@ -302,7 +330,7 @@ In this section you will find:
 
     ---
 
-    Configure decay periods, factor weights, and scoring thresholds.
+    Configure decay period and dimension weights for your datastore.
 
     [:octicons-arrow-right-24: Settings](managing-datastores/quality-score-settings.md)
 
@@ -310,7 +338,7 @@ In this section you will find:
 
     ---
 
-    API endpoints for data quality score operations.
+    Retrieve and update score settings and access historical score snapshots.
 
     [:octicons-arrow-right-24: API](data-quality-score/api.md)
 
@@ -318,7 +346,7 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about data quality scores.
+    Baseline, dimensions, decay, independent settings, troubleshooting, and more.
 
     [:octicons-arrow-right-24: FAQ](data-quality-score/faq.md)
 
@@ -334,7 +362,7 @@ In this section you will find:
 
     ---
 
-    Get started with datastore grouping and understand how groups work.
+    Overview of datastore grouping, permissions, and all managing pages.
 
     [:octicons-arrow-right-24: Getting Started](managing-datastores/grouping/overview.md)
 
@@ -342,7 +370,7 @@ In this section you will find:
 
     ---
 
-    Understand the concepts behind datastore grouping in Qualytics.
+    How groups work, key characteristics, favorites interaction, and best practices.
 
     [:octicons-arrow-right-24: Introduction](managing-datastores/grouping/concepts/understanding-grouping.md)
 
@@ -350,7 +378,7 @@ In this section you will find:
 
     ---
 
-    Understand the roles and permissions required for group management.
+    Two permission layers for group management and datastore assignment.
 
     [:octicons-arrow-right-24: Permissions](managing-datastores/grouping/concepts/permissions.md)
 
@@ -406,7 +434,7 @@ In this section you will find:
 
     ---
 
-    API endpoints for datastore grouping operations.
+    Create, update, delete groups and assign/unassign datastores programmatically.
 
     [:octicons-arrow-right-24: API](managing-datastores/grouping/concepts/grouping-api.md)
 
@@ -414,7 +442,7 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about datastore grouping.
+    Groups vs tags, favorites, permissions, limits, filter behavior, and more.
 
     [:octicons-arrow-right-24: FAQ](managing-datastores/grouping/concepts/grouping-faq.md)
 
@@ -430,7 +458,7 @@ In this section you will find:
 
     ---
 
-    Get started with tags and understand how they work in Qualytics.
+    Overview of datastore tags, permissions, and all managing pages.
 
     [:octicons-arrow-right-24: Getting Started](tags/getting-started.md)
 
@@ -438,7 +466,7 @@ In this section you will find:
 
     ---
 
-    Understand the concepts behind tagging in Qualytics.
+    Tag inheritance, operation filtering, quality score impact, and weight modifiers.
 
     [:octicons-arrow-right-24: Introduction](tags/introduction.md)
 
@@ -446,7 +474,7 @@ In this section you will find:
 
     ---
 
-    Understand the roles and permissions required for tag management.
+    Roles and team permissions for viewing, assigning, and unassigning tags.
 
     [:octicons-arrow-right-24: Permissions](tags/permissions.md)
 
@@ -454,7 +482,7 @@ In this section you will find:
 
     ---
 
-    Assign a tag to a datastore.
+    Assign an existing tag to a source datastore from the tree view footer.
 
     [:octicons-arrow-right-24: Assign](tags/assign-tags.md)
 
@@ -462,7 +490,7 @@ In this section you will find:
 
     ---
 
-    Remove a tag from a datastore.
+    Remove a tag from a source datastore without deleting the tag itself.
 
     [:octicons-arrow-right-24: Unassign](tags/unassign-tags.md)
 
@@ -470,7 +498,7 @@ In this section you will find:
 
     ---
 
-    API endpoints for tag operations.
+    Assign, unassign, and query tags on datastores via the datastore update endpoint.
 
     [:octicons-arrow-right-24: API](tags/api.md)
 
@@ -478,7 +506,7 @@ In this section you will find:
 
     ---
 
-    Answers to common questions about tags.
+    Inheritance, permissions, weight modifiers, storage, re-linking, and troubleshooting.
 
     [:octicons-arrow-right-24: FAQ](tags/faq.md)
 
@@ -494,7 +522,7 @@ In this section you will find:
 
     ---
 
-    Quick actions available via right-click on datastores, tables, fields, checks, and anomalies.
+    Quick actions available via right-click on datastores in the tree view, listing, and breadcrumb.
 
     [:octicons-arrow-right-24: Right Click Options](tips-and-tricks/right-click-options.md)
 
@@ -502,7 +530,7 @@ In this section you will find:
 
     ---
 
-    Speed up common datastore actions with keyboard shortcuts.
+    Speed up common datastore actions with keyboard shortcuts and the Command Bar.
 
     [:octicons-arrow-right-24: Keyboard Shortcuts](tips-and-tricks/keyboard-shortcuts.md)
 

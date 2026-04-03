@@ -7,6 +7,9 @@ When you link an enrichment datastore to a source datastore, you are giving Qual
 !!! info "Enrichment Datastore Concepts"
     This page focuses on how enrichment datastores work **in the context of source datastores**. For a comprehensive overview of enrichment datastore concepts, supported connectors, table types, and schema details, see the [Enrichment Datastores](../../enrichment/overview-of-an-enrichment-datastore.md){:target="_blank"} documentation.
 
+!!! note "Permissions"
+    Linking an enrichment datastore requires the **Member** user role. Unlinking requires the **Admin** role. Configuring enrichment settings (prefix, source record limit, remediation strategy) requires the **Editor** team permission. See the [Permissions](permissions.md){:target="_blank"} page for details.
+
 ## Why Should I Link an Enrichment Datastore?
 
 Linking an enrichment datastore to your source datastore unlocks several capabilities:
@@ -27,11 +30,11 @@ Your datastore will still work — you can run **Sync**, **Profile**, and **Scan
 - **No Export or Materialize operations** — These require an enrichment datastore and will return an error if one is not linked.
 
 !!! tip
-    You can link an enrichment datastore **at any time** — during datastore creation or afterward. There is no deadline or penalty for linking later. See [Link Enrichment Datastore](../managing-datastores/link-enrichment.md) or [Link on Datastore Creation](link-during-creation.md).
+    You can link an enrichment datastore **at any time** — during datastore creation or afterward. There is no deadline or penalty for linking later. See [Link Enrichment Datastore](../managing-datastores/link-enrichment.md){:target="_blank"} or [Link on Datastore Creation](link-during-creation.md){:target="_blank"}.
 
 ## How It Works
 
-When an enrichment datastore is linked to a source datastore, the following happens during Scan operations:
+When an enrichment datastore is linked to a source datastore, the following happens during **Scan operations** (not Profile):
 
 1. **Quality checks are executed** against the source datastore containers (tables/files).
 2. **Anomalies are detected** from failed checks at the record and schema levels.
@@ -49,16 +52,43 @@ graph TD
 
 </div>
 
+!!! note "Scan Only"
+    The enrichment datastore is used **only during Scan operations**. Profile and Sync operations do not write to the enrichment datastore. This means you can Profile without an enrichment datastore linked — only Scan results need it.
+
+## Side Effects of Linking
+
+Once an enrichment datastore is linked, be aware of the following:
+
+- **Every Scan writes to the enrichment datastore** — Source record examples, check metrics, failed checks, and scan operation metadata are written automatically. This happens on every Scan, not just the first one.
+- **Append strategy accumulates data** — If you use the **Append** remediation strategy, anomalous source records are added to enrichment tables after each Scan without removing previous data. Over time, this can lead to significant storage growth — especially for large tables with recurring anomalies.
+- **Overwrite strategy replaces data** — The **Overwrite** strategy replaces enrichment table contents on each Scan, keeping storage bounded but losing historical data.
+- **Prefix must be unique** — Each source datastore sharing the same enrichment datastore must use a **unique prefix**. If two source datastores use the same prefix, their enrichment tables will collide and data will be mixed or overwritten.
+- **Unlinking requires Admin** — While linking requires only Member + Editor, unlinking requires the **Admin** role due to its destructive nature (stops all future enrichment writes).
+
 ## Enrichment Settings
 
 When linking an enrichment datastore, you configure the following settings on the source datastore:
 
-| Setting | Default | Description |
-| :--- | :---: | :--- |
-| **Prefix** | `_qualytics` | A prefix added to all enrichment table/file names to distinguish them from source tables. Each source datastore linked to the same enrichment datastore should have a unique prefix. |
-| **Maximum Source Examples per Anomaly** | `10` | How many source records are stored in the enrichment datastore as examples when a check fails. Range: 1–1,000,000,000. |
-| **Maximum Record Anomalies per Check** | `10` | How many individual anomalies can be created per check before they are grouped into one rolled-up anomaly. Range: 1–1,000. |
-| **Remediation Strategy** | `None` | Controls whether and how anomalous source tables are replicated to the enrichment datastore (see below). |
+| Setting | Default | Range | Description |
+| :--- | :---: | :---: | :--- |
+| **Prefix** | Auto-generated | Max 60 chars | A prefix added to all enrichment table names. See [Enrichment Prefix](#enrichment-prefix) below. |
+| **Maximum Source Examples per Anomaly** | `10` | 1–1,000,000,000 | How many source records are stored per anomaly. |
+| **Maximum Record Anomalies per Check** | `10` | 1–1,000 | How many individual anomalies per check before rollup. |
+| **Remediation Strategy** | `None` | — | Controls source table replication. See [Remediation Strategies](#remediation-strategies) below. |
+
+### Source Examples: Practical Recommendations
+
+The **Maximum Source Examples per Anomaly** setting controls how many source data rows are written to the enrichment datastore for each detected anomaly. Consider these trade-offs:
+
+| Value | Use Case | Storage Impact |
+| :---: | :--- | :--- |
+| `10` (default) | Quick investigation — enough to identify the pattern. | Minimal |
+| `100` | Root cause analysis — enough to see distribution of the issue. | Low |
+| `1,000` | Detailed audit — comprehensive sample for compliance reviews. | Moderate |
+| `1,000,000,000` (All) | Full replication — every anomalous record is stored. | High — can significantly increase enrichment storage usage. |
+
+!!! warning "Storage Impact"
+    Higher values mean more data written to your enrichment datastore on every Scan. For large tables with many anomalies, setting this to a high value can produce substantial storage growth. Start with the default (`10`) and increase as needed.
 
 ### Remediation Strategies
 
@@ -75,9 +105,22 @@ The remediation strategy determines what happens to anomalous source data during
 
 ### Enrichment Prefix
 
-The prefix is used to name the enrichment tables/files created in the enrichment datastore. It is automatically normalized to snake_case with a leading underscore (e.g., `Analytics Bronze` becomes `_analytics_bronze`).
+The prefix is used to name the enrichment tables created in the enrichment datastore. It is automatically normalized to snake_case with a leading underscore (e.g., `Analytics Bronze` becomes `_analytics_bronze`).
 
 Each source datastore linked to the same enrichment datastore **must have a unique prefix** to avoid table name conflicts.
+
+??? example "Enrichment Table Names"
+
+    For a source datastore with prefix `_healthcare_analytics` and a source table called `patients`, the enrichment datastore will contain:
+
+    | Enrichment Table | Description |
+    | :--- | :--- |
+    | `_healthcare_analytics_check_metrics` | Metrics for every quality check execution. |
+    | `_healthcare_analytics_failed_checks` | Details of each failed quality check. |
+    | `_healthcare_analytics_source_records` | Source record examples that triggered anomalies. |
+    | `_healthcare_analytics_scan_operations` | Metadata about each scan operation. |
+
+    For details on the columns in each table, see the [Enrichment Tables](../../enrichment/enrichment-tables.md){:target="_blank"} documentation.
 
 ## Sharing an Enrichment Datastore
 
@@ -105,7 +148,37 @@ When you unlink an enrichment datastore:
 
 - The remediation strategy is automatically reset to **None**.
 - No new enrichment data will be written during future Scans.
-- **Historical enrichment data is preserved** — existing tables in the enrichment datastore are not deleted.
+- **Historical enrichment data is preserved** — existing tables in the enrichment datastore are **not** deleted. They remain in your infrastructure and can still be queried.
+
+!!! note "Unlinking is Reversible"
+    Unlinking itself is **not** a destructive data operation — it only breaks the connection. You can **re-link** the same (or a different) enrichment datastore at any time. If you re-link the **same** enrichment datastore with the **same prefix**, future Scans will continue writing to the existing enrichment tables as if nothing changed.
+
+!!! note "Cleaning Up Enrichment Tables"
+    Qualytics does not automatically delete enrichment tables when you unlink. If you want to remove the historical data, you must **manually drop** the enrichment tables (e.g., `_healthcare_analytics_check_metrics`, `_healthcare_analytics_failed_checks`, etc.) directly in the enrichment datastore using your database tools.
 
 !!! warning
     You cannot unlink an enrichment datastore if the source datastore has active **Export** or **Materialize** operations in flows or scheduled operations. Remove those operations first.
+
+For the step-by-step unlink procedure, see the [Unlink Enrichment Datastore](../managing-datastores/unlink-enrichment.md){:target="_blank"} page.
+
+## Next Steps
+
+<div class="grid cards" markdown>
+
+-   :material-link-variant:{ .lg .middle } **Link Enrichment Datastore**
+
+    ---
+
+    Link an enrichment datastore to a source datastore through the Settings menu or tree footer.
+
+    [:octicons-arrow-right-24: Link](../managing-datastores/link-enrichment.md)
+
+-   :material-link-plus:{ .lg .middle } **Link on Datastore Creation**
+
+    ---
+
+    Link an enrichment datastore during the datastore creation wizard.
+
+    [:octicons-arrow-right-24: Link on Creation](link-during-creation.md)
+
+</div>

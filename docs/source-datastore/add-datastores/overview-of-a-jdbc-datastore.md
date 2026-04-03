@@ -4,21 +4,17 @@
 
 **JDBC (Java Database Connectivity)** is a standard Java API that provides a universal interface for connecting to relational databases. It acts as a bridge between applications and databases, allowing programs to execute SQL queries, retrieve results, and manage data — regardless of which database vendor is being used.
 
-JDBC has been the industry standard for database connectivity since its introduction in 1997 and is supported by virtually every relational database management system (RDBMS) available today.
-
-!!! info "Learn more"
-    For a deeper understanding of the JDBC standard, see the [JDBC Overview](https://docs.oracle.com/javase/tutorial/jdbc/overview/index.html){:target="_blank"} from Oracle's official Java documentation.
-
 ## How JDBC Works in Qualytics
 
 Qualytics uses JDBC connectors powered by [Apache Spark](https://spark.apache.org/){:target="_blank"} to connect to relational databases. When you add a JDBC datastore, Qualytics:
 
-1. **Establishes a secure connection** to your database using the credentials and connection properties you provide (host, port, username, password, database, schema).
+1. **Establishes a connection** to your database using the credentials and connection properties you provide (host, port, username, password, database, schema).
 2. **Discovers your schema** by reading the database catalog — tables, views, columns, and data types are automatically detected during the Sync operation.
 3. **Reads data through Spark** using optimized JDBC queries, enabling parallel reads across partitions for large datasets.
 4. **Writes enrichment data** (for connectors with enrichment support) back to the database to persist scan results, anomalies, and remediation records.
 
-Because Qualytics is built on Apache Spark, additional JDBC-accessible databases beyond the verified list may be technically compatible — contact us to evaluate feasibility for your specific datastore.
+!!! info "Connections and Security"
+    For details on connection configuration, authentication methods (Basic, Keypair, Service Principal, OAuth), and secrets management (HashiCorp Vault integration), see the [How Connections Work](connections/how-it-works.md){:target="_blank"} documentation.
 
 ### Data Organization
 
@@ -26,32 +22,59 @@ In JDBC datastores, data is organized as:
 
 - **Containers** — Tables and views in the database. Each container represents a structured dataset that Qualytics can profile, scan, and monitor.
 - **Fields** — Columns within each table/view. Qualytics detects field names, data types, and constraints automatically.
-- **Records** — Rows of data within each container, analyzed during profile and scan operations.
+- **Records** — Rows of data within each container, analyzed during Profile and Scan operations.
 
 !!! info "Containers"
     For a detailed understanding of how Qualytics manages containers in JDBC datastores, see the [Containers Overview](../../container/overview.md){:target="_blank"} documentation.
 
 ### Field Type Inference
 
-During the Sync operation, Qualytics employs **weighted histogram analysis** to automatically infer field types. This advanced method ensures accurate detection of data types within the JDBC datastore — including distinguishing between integers, decimals, dates, timestamps, and text fields — enhancing the precision of data profiling and quality checks.
+During the Sync operation, Qualytics uses **weighted histogram analysis** to infer field types automatically. This detects data types such as integers, decimals, dates, timestamps, and text fields based on actual data distribution — not just the declared database column type. Inferred types can be reviewed and overridden manually on each field.
 
 ### Multi-Schema Support
 
-JDBC datastores support **multi-schema creation**, allowing you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. This eliminates the need to add each schema individually.
+JDBC datastores support **multi-schema creation**, allowing you to discover and select multiple schemas from a single connection and create a separate source datastore for each selected schema in one step. This eliminates the need to add each schema individually.
 
 !!! info "Multiple-Schema"
     For detailed instructions on multi-schema creation, refer to the [Multiple-Schema](multi-schema/overview.md){:target="_blank"} documentation.
 
 ## Getting Started
 
-!!! info "Add a JDBC Datastore"
-    To add a new JDBC datastore, follow the step-by-step guide in the [Add Datastore with a New Connection](connections/new-connection.md){:target="_blank"} or [Add Datastore with an Existing Connection](connections/existing-connection.md){:target="_blank"} documentation.
+<div class="grid cards" markdown>
 
-!!! info "Available JDBC Connectors"
-    For the full list of supported JDBC connectors, see the [Available Datastore Connectors](available-datastore-connectors.md){:target="_blank"} page.
+-   :material-plus-circle:{ .lg .middle } **Add with New Connection**
 
-!!! info "Connections"
-    To learn how to configure connection details (host, port, credentials, secrets management), see the [Connections Overview](connections/introduction.md){:target="_blank"} documentation.
+    ---
+
+    Create a new JDBC datastore by setting up a new connection from scratch.
+
+    [:octicons-arrow-right-24: New Connection](connections/new-connection.md)
+
+-   :material-link-variant:{ .lg .middle } **Add with Existing Connection**
+
+    ---
+
+    Create a new JDBC datastore by reusing credentials from an existing connection.
+
+    [:octicons-arrow-right-24: Existing Connection](connections/existing-connection.md)
+
+-   :material-view-list:{ .lg .middle } **Available JDBC Connectors**
+
+    ---
+
+    Browse the full list of supported JDBC connectors and multi-schema support.
+
+    [:octicons-arrow-right-24: View Connectors](available-datastore-connectors.md)
+
+-   :material-connection:{ .lg .middle } **Connections**
+
+    ---
+
+    Configure connection details, authentication, and secrets management.
+
+    [:octicons-arrow-right-24: Connections](connections/introduction.md)
+
+</div>
 
 ## Available Operations
 

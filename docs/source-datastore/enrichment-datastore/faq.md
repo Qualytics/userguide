@@ -13,25 +13,29 @@ No. You can run **Sync**, **Profile**, and **Scan** operations without an enrich
 
 ### Can I link an enrichment datastore after creating my source datastore?
 
-Yes. You can link an enrichment datastore at any time — either during datastore creation or afterward through the [Link Enrichment Datastore](../managing-datastores/link-enrichment.md) flow.
+Yes. You can link an enrichment datastore at any time — either during datastore creation or afterward through the [Link Enrichment Datastore](../managing-datastores/link-enrichment.md){:target="_blank"} flow.
 
 ### Can multiple source datastores share the same enrichment datastore?
 
 Yes. Multiple source datastores can link to the same enrichment datastore. Each source datastore maintains its own settings (prefix, source record limit, remediation strategy), so there is no conflict — even when writing to the same enrichment target.
 
-### Do I need a unique prefix for each source datastore?
+### Which connectors support enrichment?
 
-Yes. Each source datastore linked to the same enrichment datastore **must have a unique prefix** to avoid table name conflicts in the enrichment target.
-
-### Can I link any datastore as an enrichment datastore?
-
-No. Only datastores created with `enrichment_only=true` can be used as enrichment targets. Additionally, the connector must support write-back capabilities. See the [Supported Enrichment Datastores](../../enrichment-support/supported-enrichment-datastores.md){:target="_blank"} page for the full list.
+Not all connectors can be used as enrichment datastores. Only datastores created with `enrichment_only=true` and a connector that supports write-back capabilities can be used as enrichment targets. See the [Supported Enrichment Datastores](../../enrichment-support/supported-enrichment-datastores.md){:target="_blank"} page for the full list.
 
 ## Settings
 
 ### What is the enrichment prefix?
 
 The prefix is added to all enrichment table/file names created for a source datastore. It is automatically normalized to snake_case with a leading underscore (e.g., `Analytics Bronze` becomes `_analytics_bronze`). Maximum length is 60 characters.
+
+### Do I need a unique prefix for each source datastore?
+
+Yes. Each source datastore linked to the same enrichment datastore **must have a unique prefix**. The system does **not** validate prefix uniqueness at link time — if two source datastores use the same prefix, their enrichment tables will collide and data will be mixed or overwritten silently. It is your responsibility to ensure prefixes are unique.
+
+### What happens if I change the prefix after linking?
+
+Qualytics will start writing to **new** enrichment tables using the updated prefix. The old tables (with the previous prefix) are **not renamed or deleted** — they remain in the enrichment datastore as orphaned tables. If you no longer need the old data, manually drop the old tables using your database tools.
 
 ### What does the remediation strategy control?
 
@@ -43,7 +47,7 @@ It controls whether and how anomalous source data is replicated to the enrichmen
 
 ### What is the "Maximum Source Examples per Anomaly"?
 
-It controls how many actual source data rows are written to the enrichment datastore when a quality check fails. Default is 10. Range: 1 to 1,000,000,000.
+It controls how many actual source data rows are written to the enrichment datastore when a quality check fails. Default is 10. Range: 1 to 1,000,000,000. For practical recommendations on which values to use, see the [Source Examples: Practical Recommendations](introduction.md#source-examples-practical-recommendations){:target="_blank"} section.
 
 ### What is the "Maximum Record Anomalies per Check"?
 
@@ -63,17 +67,41 @@ Three things happen:
 2. No new enrichment data will be written during future Scans.
 3. **Historical enrichment data is preserved** — existing tables in the enrichment datastore are not deleted.
 
+### Can I re-link the same enrichment datastore after unlinking?
+
+Yes. Unlinking only breaks the connection — it does not delete any data. If you re-link the **same** enrichment datastore with the **same prefix**, future Scans will continue writing to the existing enrichment tables as if nothing changed.
+
 ### Can I switch to a different enrichment datastore?
 
 Yes, but you must first **unlink** the current one and then **link** the new one. You cannot directly swap enrichment datastores.
+
+### How do I clean up enrichment tables after unlinking?
+
+Qualytics does not automatically delete enrichment tables when you unlink. If you want to remove the historical data, you must **manually drop** the enrichment tables (e.g., `_prefix_check_metrics`, `_prefix_failed_checks`, `_prefix_source_records`, `_prefix_scan_operations`) directly in the enrichment datastore using your database tools.
+
+### What happens to existing anomalies in Qualytics if I unlink?
+
+Anomalies tracked within Qualytics are **not affected** by unlinking. They remain visible in the UI and API. Only the enrichment datastore stops receiving new data — anomalies continue to be detected and tracked internally.
 
 ### Why can't I unlink my enrichment datastore?
 
 You cannot unlink if the source datastore has active **Export** or **Materialize** operations in flows or scheduled operations. Remove those operations first, then try unlinking again.
 
-### Who can unlink an enrichment datastore?
+## Storage
 
-Only users with the **Admin** role can unlink. See the [Permissions](permissions.md) page for the full matrix.
+### How much storage does enrichment use?
+
+Storage depends on your configuration. As a rough estimate:
+
+- **Default settings** (10 source examples, None remediation, daily scans) — Typically a few MB per scan for a moderate datastore (50 tables, ~100 anomalies per scan).
+- **High source examples** (1,000+ per anomaly, Append remediation) — Can grow to hundreds of MB or GB over months for large datastores with many recurring anomalies.
+- **Overwrite remediation** — Bounded storage since data is replaced each scan, typically similar in size to a single Append cycle.
+
+Start with the default settings and increase as needed. Monitor storage using your database tools.
+
+### How do I monitor how much storage my enrichment datastore is using?
+
+Qualytics does not provide built-in storage monitoring for enrichment datastores. Use your database or cloud provider's native tools to monitor table sizes (e.g., `pg_total_relation_size` for PostgreSQL, `INFORMATION_SCHEMA.TABLES` for Snowflake, S3 bucket metrics for DFS).
 
 ## Operations
 
@@ -96,20 +124,31 @@ No. The enrichment datastore is only used during **Scan** operations. Sync and P
 
 ## Permissions
 
-### Who can link an enrichment datastore?
+### What permissions do I need?
 
-Users with at least **Member** role and **Editor** team permission on the source datastore. See the [Permissions](permissions.md) page for details.
+- **Linking** and **editing settings** requires the **Member** user role and **Editor** team permission on the source datastore.
+- **Unlinking** requires the **Admin** user role (no team permission check).
+- **Viewing** enrichment info requires the **Member** user role and **Reporter** team permission.
 
-### Who can change enrichment settings?
+See the [Permissions](permissions.md){:target="_blank"} page for the full matrix.
 
-Users with at least **Member** role and **Editor** team permission on the source datastore.
+## Troubleshooting
+
+### My Scan failed with an enrichment error. What should I check?
+
+Common causes:
+
+- **No enrichment datastore linked** — If the remediation strategy is set to Append or Overwrite but no enrichment datastore is linked, the Scan will fail. Link an enrichment datastore or set the strategy to None.
+- **Prefix conflict** — If two source datastores use the same prefix on the same enrichment datastore, writes may fail or produce unexpected results. Ensure each prefix is unique.
+- **Write permissions** — The enrichment datastore credentials must have write (DDL) permissions on the target schema/bucket. Verify that the enrichment connection can create and write to tables.
+- **Enrichment datastore offline** — If the enrichment target is unreachable, the Scan may fail or complete with warnings. Check the enrichment datastore connection status.
+
+### My enrichment tables have a different schema than expected. What happened?
+
+Qualytics manages the enrichment table schema automatically. If the schema has changed between platform versions (e.g., new columns added to `_failed_checks`), Qualytics applies DDL changes automatically during the next Scan. If a table cannot be altered (e.g., due to permissions), the Scan may fail — ensure the enrichment connection has DDL permissions (CREATE, ALTER, INSERT).
 
 ## API
 
-### Is there an API to link an enrichment datastore?
+### Can I link and configure enrichment in a single API call?
 
-Yes. Use `PATCH /api/datastores/{id}/enrichment/{enrich_store_id}` to link. See the [API](api.md) page for examples.
-
-### Is there an API to update enrichment settings?
-
-Yes. Use `PUT /api/datastores/{id}` with the enrichment fields (prefix, source record limit, remediation strategy, rollup threshold). See the [API](api.md#update-enrichment-settings) page for examples.
+No. Linking uses `PATCH /api/datastores/{id}/enrichment/{enrich_id}` and configuring settings uses `PUT /api/datastores/{id}`. These are two separate endpoints — you need two requests. See the [API](api.md){:target="_blank"} page for examples of both.

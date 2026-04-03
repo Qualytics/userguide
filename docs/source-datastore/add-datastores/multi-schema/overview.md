@@ -2,47 +2,11 @@
 
 Multi-Schema Creation allows you to discover and select multiple schemas from a single connection and create all corresponding source datastores in one step. Instead of adding each schema individually, you can onboard multiple schemas at once, streamlining the setup process for organizations with many schemas across their data platforms.
 
-## Why Multi-Schema Creation Matters
-
-As organizations scale their data infrastructure, databases often contain dozens or even hundreds of schemas. Onboarding each schema individually is time-consuming and error-prone. Multi-Schema Creation solves this by letting you:
-
-- **Batch onboarding**: Create multiple source datastores from a single connection in one operation.
-- **Schema discovery**: Automatically discover available catalogs and schemas from your connection.
-- **Optional enrichment linking**: Link all newly created source datastores to a single enrichment datastore during the same flow.
-- **Name templates**: Use a naming pattern with a `{{schema}}` placeholder to generate consistent datastore names.
-
-!!! note "Permissions"
-    Multi-schema creation requires the **Manager** or **Admin** role. This is the same permission required to create a single datastore. For more details, see the [Team Permissions](../../../settings/security/team-permissions.md) page.
-
-## Getting Started
-
-To create multi-schema datastores, use the **Add Source Datastore** flow. The multi-schema options will appear automatically when you select a supported JDBC connector.
+In this section you will learn how multi-schema creation works, which connectors support it, and how to use it to onboard multiple schemas efficiently. Multi-schema creation requires the **Manager** role. See the [Permissions](permissions.md){:target="_blank"} page for details.
 
 <div class="grid cards" markdown>
 
--   :material-plus-circle:{ .lg .middle } **Add Datastore with a New Connection**
-
-    ---
-
-    Create multiple source datastores by setting up a new connection from scratch.
-
-    [:octicons-arrow-right-24: Setup a Connection](../connections/new-connection.md)
-
--   :material-link-variant:{ .lg .middle } **Add Datastore with an Existing Connection**
-
-    ---
-
-    Create multiple source datastores by reusing credentials from a connection that already exists.
-
-    [:octicons-arrow-right-24: Reuse a Connection](../connections/existing-connection.md)
-
-</div>
-
-## Deep Dive
-
-<div class="grid cards" markdown>
-
--   :material-cog-outline:{ .lg .middle } **How It Works**
+-   :material-information-outline:{ .lg .middle } **How It Works**
 
     ---
 
@@ -50,7 +14,7 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     [:octicons-arrow-right-24: How It Works](how-it-works.md)
 
--   :material-database-outline:{ .lg .middle } **Supported Connectors**
+-   :material-view-list:{ .lg .middle } **Supported Connectors**
 
     ---
 
@@ -58,17 +22,35 @@ To create multi-schema datastores, use the **Add Source Datastore** flow. The mu
 
     [:octicons-arrow-right-24: Supported Connectors](supported-connectors.md)
 
-</div>
+-   :material-shield-lock-outline:{ .lg .middle } **Permissions**
 
-## Resources
+    ---
 
-<div class="grid cards" markdown>
+    Roles and team permissions required for multi-schema creation, validation, and enrichment linking.
+
+    [:octicons-arrow-right-24: Permissions](permissions.md)
+
+-   :material-plus-circle:{ .lg .middle } **Add with New Connection**
+
+    ---
+
+    Create multiple source datastores by setting up a new connection from scratch.
+
+    [:octicons-arrow-right-24: New Connection](../connections/new-connection.md)
+
+-   :material-link-variant:{ .lg .middle } **Add with Existing Connection**
+
+    ---
+
+    Create multiple source datastores by reusing credentials from an existing connection.
+
+    [:octicons-arrow-right-24: Existing Connection](../connections/existing-connection.md)
 
 -   :material-help-circle-outline:{ .lg .middle } **FAQ**
 
     ---
 
-    Answers to common questions about multi-schema source datastore creation.
+    Connectors, enrichment, naming, permissions, troubleshooting, and more.
 
     [:octicons-arrow-right-24: FAQ](faq.md)
 
