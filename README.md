@@ -87,7 +87,10 @@ pip install -r requirements.txt
 
 ### Pre-Commit Setup
 
-This repository uses [pre-commit](https://pre-commit.com/) to automatically check for spelling errors using [typos](https://github.com/crate-ci/typos).
+This repository uses [pre-commit](https://pre-commit.com/) hooks to catch issues before they reach the repository. Two hooks are configured:
+
+1. **typos** - Spell checking across all documentation files using [typos](https://github.com/crate-ci/typos). Custom word allowances are defined in `.typos.toml`.
+2. **mkdocs-warnings** - Runs `mkdocs build` and reports any `WARNING` lines (broken links, missing nav entries, etc.). This hook reports warnings without failing the build to avoid blocking commits on acceptable warnings.
 
 #### Install Pre-Commit
 
@@ -101,13 +104,31 @@ pip install pre-commit
 pre-commit install
 ```
 
-#### Run Typos Manually
+#### Run Hooks Manually
 
-To run the pre-commit checks manually:
+To run all pre-commit checks manually:
 
 ```bash
 pre-commit run --all-files
 ```
+
+#### MkDocs Validation
+
+The `mkdocs.yml` file includes a `validation` section that controls which link and reference issues produce warnings during the build. This can be expanded to catch more issues:
+
+```yaml
+# Example: expanded validation config
+validation:
+  nav:
+    omitted_files: info
+    absolute_links: warn
+  links:
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+```
+
+To enforce stricter checks, the hook can be updated to use `mkdocs build --strict` (turns warnings into errors) or to filter out known acceptable warnings while failing on the rest.
 
 ## Run on Save (Opctional)
 

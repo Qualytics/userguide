@@ -311,6 +311,24 @@ This section provides a sample payload for creating a TimescaleDB datastore. Rep
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type timescale \
+        --name "your_connection_name" \
+        --host ${TIMESCALE_HOST} \
+        --port 5432 \
+        --username ${TIMESCALE_USER} \
+        --password ${TIMESCALE_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema public
+    ```
 ### Link an Enrichment Datastore to a Source Datastore
 
 **Endpoint Details:** ```/api/datastores/{datastore-id}/enrichment/{enrichment-id} (patch)```

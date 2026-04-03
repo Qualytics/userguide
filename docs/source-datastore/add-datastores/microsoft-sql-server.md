@@ -350,6 +350,24 @@ This section provides sample payloads for creating a Microsoft SQL Server datast
         "connection_id": connection_id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type sqlserver \
+        --name "your_connection_name" \
+        --host ${SQLSERVER_HOST} \
+        --port 1433 \
+        --username ${SQLSERVER_USER} \
+        --password ${SQLSERVER_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema dbo
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -385,6 +403,25 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": connection_id
     }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type sqlserver \
+        --name "your_connection_name" \
+        --host ${SQLSERVER_HOST} \
+        --port 1433 \
+        --username ${SQLSERVER_USER} \
+        --password ${SQLSERVER_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema your_enrichment_schema \
+        --enrichment-only
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 Use the provided endpoint to link an enrichment datastore to a source datastore:

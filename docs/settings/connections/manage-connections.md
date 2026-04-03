@@ -74,7 +74,7 @@ You can add new or existing datastores and enrichment datastores directly from t
 
 ![add-datastore](../../assets/connections/add-datastore-light-10.png)
 
-A modal window labeled **Add Datastore** will appear, giving you options to connect a datastore. For more information on adding a datastore, please refer to the [Configuring Source Datastores](../../source-datastore/add-datastores/overview-of-a-datastore.md#configuring-source-datastores) section.
+A modal window labeled **Add Datastore** will appear, giving you options to connect a datastore. For more information on adding a datastore, please refer to the [Adding a Source Datastore](../../source-datastore/add-datastores/connections/new-connection.md){:target="_blank"} section.
 
 Once you have successfully added a datastore to the connection, a success message will appear.
 
