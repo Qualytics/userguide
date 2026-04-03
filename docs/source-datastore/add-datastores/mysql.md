@@ -363,6 +363,24 @@ This section provides sample payloads for creating a MySQL datastore. Replace th
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type mysql \
+        --name "your_connection_name" \
+        --host ${DB_HOST} \
+        --port 3306 \
+        --username ${DB_USER} \
+        --password ${DB_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema your_database
+    ```
 ### Creating an Enrichment Datastore
 
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
@@ -396,6 +414,25 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "connection_id": connection-id
     }
     ``` 
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type mysql \
+        --name "your_connection_name" \
+        --host ${DB_HOST} \
+        --port 3306 \
+        --username ${DB_USER} \
+        --password ${DB_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_enrichment_database \
+        --schema your_enrichment_database \
+        --enrichment-only
+    ```
 ### Link an Enrichment Datastore to a Source Datastore
 
 Use the provided endpoint to link an enrichment datastore to a source datastore:

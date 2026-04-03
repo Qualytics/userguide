@@ -75,3 +75,45 @@ When documenting a quality check rule, follow `contributing/check-content-templa
 ### Spell Checking
 
 The repository uses `typos` via pre-commit for spell checking. Custom word allowances are in `.typos.toml`. Files in `docs/assets/`, `venv/`, and dotfiles are excluded.
+
+## Pre-Commit Hooks
+
+The repository uses two pre-commit hooks (configured in `.pre-commit-config.yaml`):
+
+1. **typos** - Spell checking across all docs (custom words in `.typos.toml`)
+2. **mkdocs-warnings** - Runs `mkdocs build` and surfaces any `WARNING` lines (broken links, missing nav entries, etc.)
+
+Run all hooks manually:
+
+```bash
+pre-commit run --all-files
+```
+
+### MkDocs Validation
+
+The `mkdocs.yml` has a `validation` section that controls which link/reference issues produce warnings during build. The current pre-commit hook runs `mkdocs build` in non-strict mode and reports warnings without failing the build — this is intentional to avoid blocking commits on acceptable warnings.
+
+If stricter validation is needed in the future:
+
+- **Granular control:** Expand the `validation` section in `mkdocs.yml` to enable/disable specific checks (anchors, absolute links, unrecognized links, omitted nav files)
+- **Strict mode:** Change the hook to use `mkdocs build --strict` to turn all warnings into errors (only do this after resolving or filtering out all existing warnings)
+- **Filtered strict mode:** Keep non-strict but update the hook's grep to exclude known acceptable warning patterns and fail on the rest
+
+```yaml
+# Example: expanded validation config in mkdocs.yml
+validation:
+  nav:
+    omitted_files: info
+    absolute_links: warn
+  links:
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+```
+
+### Adding New Pre-Commit Checks
+
+Additional tools that can be added to `.pre-commit-config.yaml` for catching more issues:
+
+- **markdownlint-cli2** - Catches malformed tables, inconsistent list formatting, missing blank lines around fences
+- **lychee** - Validates all links including images, anchors, and external URLs

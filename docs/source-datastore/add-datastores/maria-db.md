@@ -331,6 +331,24 @@ This section provides a sample payload for creating a datastore. Replace the pla
             "connection_id": connection-id
         }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type mariadb \
+        --name "your_connection_name" \
+        --host ${DB_HOST} \
+        --port 3306 \
+        --username ${DB_USER} \
+        --password ${DB_PASSWORD}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_database \
+        --schema your_database
+    ```
 
 ### Creating an Enrichment Datastore
 
@@ -366,6 +384,25 @@ This section provides a sample payload for creating an enrichment datastore. Rep
             "enrich_only": true,
             "connection_id": connection-id
         }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type mariadb \
+        --name "your_connection_name" \
+        --host ${DB_HOST} \
+        --port 3306 \
+        --username ${DB_USER} \
+        --password ${DB_PASSWORD}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_enrichment_database \
+        --schema your_enrichment_database \
+        --enrichment-only
     ```
 
 ### Linking Datastore to an Enrichment Datastore through API

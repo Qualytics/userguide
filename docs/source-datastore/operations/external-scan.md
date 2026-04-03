@@ -8,35 +8,35 @@ Let’s get started 🚀
 
 **Step 1:** Select a source datastore from the side menu to perform the external scan operation.
 
-![datastore](../../assets/source-datastores/operations/external-scan/datastore-1.png)
+![step-1-datastore](../../assets/source-datastores/operations/external-scan/step-1-datastore.png)
 
 **Step 2:** After selecting your preferred source datastore, you will be taken to the details page. From there, click on **"Tables"** and select the table you want to perform the external scan operation on.
 
 !!! note
 	This example is based on a JDBC table, but the same steps apply to a DFS as well. For DFS source datastores, you will need to click on **"File Patterns"** and select a File Pattern to run the external scan.
 
-![tables](../../assets/source-datastores/operations/external-scan/tables-2.png)
+![step-2-tables](../../assets/source-datastores/operations/external-scan/step-2-tables.png)
 
 For demonstration purposes, we have selected the **“CUSTOMER”** table.
 
-![container](../../assets/source-datastores/operations/external-scan/container-3.png)
+![step-3-container](../../assets/source-datastores/operations/external-scan/step-3-container.png)
 
 ## External Scan Configuration
 
 **Step 1:** Click on the **“Run”** button and select the **“External Scan”** option. 
 
-![external-scan](../../assets/source-datastores/operations/external-scan/external-scan-4.png)
+![step-4-external-scan](../../assets/source-datastores/operations/external-scan/step-4-external-scan.png)
 
 **Step 2:** After selecting the **"External Scan"** option, a modal window will appear with an input for uploading your external file. After uploading the file, click the **“Run”** button to start the operation.
 
-![external-file](../../assets/source-datastores/operations/external-scan/external-file-5.png)
+![step-5-external-file](../../assets/source-datastores/operations/external-scan/step-5-external-file.png)
 
 !!! note
 	An External Scan operation supports the following file formats: CSV, XLSX, and XLS.
 
 **Step 3:** After clicking the **"Run"** button, the external scan operation will begin, and you will receive a confirmation message if the operation is successfully triggered.
 
-![success](../../assets/source-datastores/operations/external-scan/success-6.png)
+![step-6-success](../../assets/source-datastores/operations/external-scan/step-6-success.png)
 
 ## Supported File Formats
 

@@ -1,4 +1,118 @@
+/* OS-specific shortcut display */
+
+/* Card filter search bar */
+.card-filter-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-filter-wrapper:focus-within {
+  border-color: var(--q-brick);
+  box-shadow: 0 2px 6px rgba(184, 50, 0, 0.15);
+}
+
+
+.card-filter-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+.card-filter-icon svg {
+  fill: var(--q-primary);
+}
+
+.card-filter {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Light mode: white bg, black text, gray placeholder */
+[data-md-color-scheme="default"] .card-filter-wrapper {
+  background: var(--q-white);
+}
+
+[data-md-color-scheme="default"] .card-filter {
+  color: var(--q-black);
+}
+
+[data-md-color-scheme="default"] .card-filter::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode: black bg, white text, gray placeholder */
+[data-md-color-scheme="slate"] .card-filter-wrapper {
+  background: var(--q-black);
+}
+
+[data-md-color-scheme="slate"] .card-filter {
+  color: var(--q-white);
+}
+
+[data-md-color-scheme="slate"] .card-filter::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 /* ===== LIGHT MODE ===== */
+/* Icon Tables - fixed column widths (global, theme-independent) */
+.icon-table table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.icon-table table th:nth-child(1),
+.icon-table table td:nth-child(1) {
+  width: 5%;
+}
+
+.icon-table table th:nth-child(2),
+.icon-table table td:nth-child(2) {
+  width: 15%;
+}
+
+.icon-table table th:nth-child(3),
+.icon-table table td:nth-child(3) {
+  width: 80%;
+}
+
+/* Connector Tables - fixed column widths (global, theme-independent) */
+.connector-table table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.connector-table table th:nth-child(1),
+.connector-table table td:nth-child(1) {
+  width: 5%;
+}
+
+.connector-table table th:nth-child(2),
+.connector-table table td:nth-child(2) {
+  width: 45%;
+}
+
+.connector-table table th:nth-child(3),
+.connector-table table td:nth-child(3) {
+  width: 15%;
+}
+
+.connector-table table th:nth-child(4),
+.connector-table table td:nth-child(4) {
+  width: 35%;
+}
+
 [data-md-color-scheme="default"] {
   /* Brand Colors */
   --q-primary: #FF9933;
@@ -246,6 +360,63 @@
 
   .md-typeset table:not([class]) td {
     background-color: var(--q-white);
+  }
+
+  /* Grid Cards */
+  .md-typeset .grid.cards > ul > li {
+    background-color: var(--q-white);
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+  }
+
+  .md-typeset .grid.cards > ul > li:hover {
+    border-color: var(--q-brick);
+    box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
+  }
+
+  .md-typeset .grid.cards > ul > li:hover > :first-child {
+    color: var(--q-brick);
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child .twemoji,
+  .md-typeset .grid.cards > ul > li > :first-child .emojione {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child .twemoji svg,
+  .md-typeset .grid.cards > ul > li > :first-child .emojione svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child {
+    margin-top: auto;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
   }
 
   /* Admonitions (Example boxes) */
@@ -556,6 +727,63 @@
 
   .md-typeset table:not([class]) td {
     background-color: var(--q-black);
+  }
+
+  /* Grid Cards */
+  .md-typeset .grid.cards > ul > li {
+    background-color: var(--q-black);
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+  }
+
+  .md-typeset .grid.cards > ul > li:hover {
+    border-color: var(--q-brick);
+    box-shadow: 0 2px 8px rgba(184, 50, 0, 0.25);
+  }
+
+  .md-typeset .grid.cards > ul > li:hover > :first-child {
+    color: var(--q-brick);
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child .twemoji,
+  .md-typeset .grid.cards > ul > li > :first-child .emojione {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .md-typeset .grid.cards > ul > li > :first-child .twemoji svg,
+  .md-typeset .grid.cards > ul > li > :first-child .emojione svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child {
+    margin-top: auto;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .md-typeset .grid.cards > ul > li > p:last-child a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
   }
 
   /* Admonitions (Example boxes) */
@@ -1201,4 +1429,17 @@ pre,
 div.highlight {
   scrollbar-width: thin !important;
   scrollbar-color: var(--q-primary) transparent !important;
+}
+
+/* Permission & Connector Table Icons - Positive/Negative Colors */
+.md-typeset span.twemoji[title="Allowed"] svg,
+.md-typeset span.twemoji[title="Supported"] svg {
+  color: #21BA45 !important;
+  fill: #21BA45 !important;
+}
+
+.md-typeset span.twemoji[title="Not allowed"] svg,
+.md-typeset span.twemoji[title="Not supported"] svg {
+  color: #E91E63 !important;
+  fill: #E91E63 !important;
 }

@@ -4,8 +4,11 @@ Agent Q requires an LLM (Large Language Model) provider to power its AI capabili
 
 ## Prerequisites
 
-- A Qualytics account with **Member** role or higher.
+- A Qualytics account with **Admin** role to configure the LLM integration.
 - An API key from a [supported LLM provider](#supported-llm-providers).
+
+!!! note
+    Only **Admin** users can configure the LLM integration. Once configured, all users with **Member** role or higher can use Agent Q.
 
 ## Integration
 
@@ -74,9 +77,9 @@ Once saved, Agent Q is ready to use. See [How to Use Agent Q](../overview.md){:t
 
 Once saved, Agent Q is ready to use. See [How to Use Agent Q](../overview.md){:target="_blank"} for next steps.
 
-## LLM Configuration per User
+## How It Works
 
-Each Qualytics user configures their own LLM provider independently. One user can use OpenAI while another uses Anthropic — both will have Agent Q available simultaneously using their respective configurations and API keys. Your API costs are your own responsibility.
+The LLM configuration is a single, deployment-wide setting — not per-user. An **Admin** configures the LLM provider and API key once, and Agent Q becomes available to all users with **Member** role or higher. There is only one active LLM configuration at a time, shared across the entire deployment.
 
 ## Supported LLM Providers
 
@@ -101,7 +104,7 @@ Each Qualytics user configures their own LLM provider independently. One user ca
 | **Cerebras** | llama-3.3-70b, llama-3.1-8b |
 
 !!! note
-    You must provide your own API key for the selected provider. Qualytics does not supply LLM API keys — you control your provider choice and associated costs.
+    Qualytics does not supply LLM API keys. The Admin who configures the integration provides the API key and controls the provider choice and associated costs for the deployment.
 
 ## What's Next?
 

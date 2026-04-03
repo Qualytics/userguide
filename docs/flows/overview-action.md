@@ -36,12 +36,12 @@ A panel will appear on the right-hand side displaying the list of available acti
 ## Notifications
 
 !!! note
-    For more detailed information, review the [notifications documentation](../flows/notification.md){target="_blank"}.
+    For more detailed information, review the [notifications documentation](../flows/notifications/overview.md){target="_blank"}.
 
 ## Notification Message Variables
 
 !!! note
-    For more detailed information, review the [notification tokens documentation](../flows/notification-tokens.md){target="_blank"}.
+    For more detailed information, review the [message variables documentation](../flows/notifications/message-variables.md){target="_blank"}.
 
 ## Workflow
 

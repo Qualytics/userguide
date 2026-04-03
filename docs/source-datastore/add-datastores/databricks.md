@@ -493,6 +493,23 @@ This section provides sample payloads for creating a Databricks datastore. Repla
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type databricks \
+        --name "your_connection_name" \
+        --host ${DATABRICKS_HOST} \
+        --password ${DATABRICKS_TOKEN} \
+        --parameters '{"path": "databricks_http_path"}'
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database hive_metastore \
+        --schema default
+    ```
 ### Creating an Enrichment Datastore
 
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
@@ -528,6 +545,24 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": connection-id
     }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type databricks \
+        --name "your_connection_name" \
+        --host ${DATABRICKS_HOST} \
+        --password ${DATABRICKS_TOKEN} \
+        --parameters '{"path": "databricks_http_path"}'
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database hive_metastore \
+        --schema your_enrichment_schema \
+        --enrichment-only
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 

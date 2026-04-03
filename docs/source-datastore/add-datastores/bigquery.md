@@ -381,6 +381,21 @@ This section provides sample payloads for creating a BigQuery datastore. Replace
         "connection_id": connection-id
     }
     ```
+=== "Create a Source Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type bigquery \
+        --name "your_connection_name" \
+        --password ${BIGQUERY_SERVICE_ACCOUNT_KEY}
+
+    # Step 2: Create a Source Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_project_id \
+        --schema your_dataset_id
+    ```
 ### Creating an Enrichment Datastore
 
 This section provides sample payloads for creating an enrichment datastore. Replace the placeholder values with actual data relevant to your setup.
@@ -412,6 +427,22 @@ This section provides sample payloads for creating an enrichment datastore. Repl
         "enrich_only": true,
         "connection_id": connection-id
     }
+    ```
+=== "Create an Enrichment Datastore using the CLI"
+    ```bash
+    # Step 1: Create a Connection
+    qualytics connections create \
+        --type bigquery \
+        --name "your_connection_name" \
+        --password ${BIGQUERY_SERVICE_ACCOUNT_KEY}
+
+    # Step 2: Create an Enrichment Datastore
+    qualytics datastores create \
+        --name "your_datastore_name" \
+        --connection-name "your_connection_name" \
+        --database your_project_id \
+        --schema your_enrichment_dataset_id \
+        --enrichment-only
     ```
 ### Link an Enrichment Datastore to a Source Datastore
 
