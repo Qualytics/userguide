@@ -185,6 +185,7 @@ Creates a single source datastore with either a new or existing connection.
 | `database` | string | No | `null` | Database name (JDBC only). |
 | `schema` | string | No | `null` | Schema name (JDBC and Native only). |
 | `root_path` | string | Conditional | — | Base directory path (DFS only, required for DFS). |
+| `folder_globbing_enabled` | boolean | No | `false` | Enable folder-level globbing for DFS datastores (DFS only). |
 | `description` | string | No | `null` | Description for the datastore (max 255 characters). |
 | `teams` | list[string] | No | `null` | Team names to assign. |
 | `tags` | list[string] | No | `null` | Tag names to assign. |
@@ -898,7 +899,8 @@ Creates multiple source datastores from selected schemas in a single operation.
 | Property | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `connection` | object | Yes (new only) | — | Connection details to create before bulk creation. |
-| `schemas` | list[string] | Yes | — | List of schema names to create datastores for. |
+| `schemas` | list[string] | Conditional | — | List of schema names to create JDBC/Native datastores for. Required if `root_paths` is not provided. |
+| `root_paths` | list[string] | Conditional | — | List of root paths to create DFS datastores for. Required if `schemas` is not provided. Mutually exclusive with `schemas`. |
 | `database` | string | No | `null` | Database/catalog name (for connectors with catalog hierarchy). |
 | `name_template` | string | No | `{connection_name}_{{schema}}` | Naming pattern with `{{schema}}` placeholder. |
 | `description` | string | No | `null` | Description applied to all created datastores. |
@@ -915,6 +917,9 @@ Creates multiple source datastores from selected schemas in a single operation.
 
 !!! warning
     `group_id` and `group` are mutually exclusive — provide only one.
+
+!!! note
+    `schemas` and `root_paths` are mutually exclusive — provide one or the other. Use `schemas` for JDBC/Native connectors and `root_paths` for DFS connectors.
 
 ---
 

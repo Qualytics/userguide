@@ -34,9 +34,9 @@ During the Sync operation, Qualytics infers field types automatically based on t
 - **Schema-aware formats** (Parquet, AVRO, ORC, Delta, Iceberg) — Field types are read directly from the file's embedded schema.
 - **Schema-less formats** (CSV, JSON) — Qualytics uses **weighted histogram analysis** to infer field types from actual data values, detecting integers, decimals, dates, timestamps, and text fields. Inferred types can be reviewed and overridden manually on each field.
 
-### Multi-Schema Equivalent
+### Bulk Creation
 
-DFS datastores do **not** support the multi-schema creation flow (which is designed for JDBC connectors with catalog/schema hierarchy). Each DFS datastore represents a single root path. To monitor multiple buckets or prefixes, create a separate DFS datastore for each one.
+DFS datastores do **not** support the multi-schema creation flow (which is designed for JDBC connectors with catalog/schema hierarchy). However, you can bulk-create multiple DFS datastores via the API by providing a list of `root_paths` in the bulk creation request. Each root path creates a separate DFS datastore. See the [Datastore API](api.md#multi-schema-creation){:target="_blank"} for details.
 
 ## Getting Started
 
